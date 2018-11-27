@@ -1,0 +1,170 @@
+\documentclass[11pt]{article}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Common preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAGE
+\newcommand{\tuta}{\emph{T.~absoluta}}
+\newcommand{\infest}{\rho}
+\newcommand{\totinf}{\rho_{\mathrm{T}}}
+\newcommand{\suitable}{\epsilon}
+%% \usepackage{fullpage} % uncomment this when changing to jour/conf style
+%% % FONTS
+%% \usepackage{lmodern} % enhanced version of computer modern
+%% \usepackage[T1]{fontenc} % for hyphenated characters and textsc in section title
+%% \usepackage{xr}
+%% \externaldocument{supplementary}
+\usepackage{microtype} % some compression
+\usepackage{times}
+\usepackage{setspace} % For double line spacing
+\doublespacing
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\usepackage[pagewise]{lineno}
+\usepackage{marvosym}
+%\linenumbers
+% MATH
+\usepackage{amssymb}
+\usepackage{mathtools} % contains amsmath which comes with align
+\usepackage{amsthm} % newtheorem stuff
+\usepackage{bm} % for bold math (use $\boldsymbol{}$)
+% COLOR
+\usepackage[usenames,dvipsnames]{color}
+%%
+% REFERENCING
+% JM: Below is for affiliations
+\usepackage{authblk}
+% BIBLIOGRAPHY
+\usepackage[square,sort&compress,numbers]{natbib} %sorts bibs when they are collectively cited
+\usepackage[colorlinks=true,pdfborder={0 0 0},citecolor=RoyalBlue,linkcolor=black,urlcolor=Magenta]{hyperref}
+\usepackage{cleveref} %%% IMPORTANT: cleveref comes before \newtheorem commands
+   \crefname{figure}{Figure}{Figures}
+   \crefname{table}{Table}{Tables}
+   \crefname{theorem}{Theorem}{Theorems}
+   \crefname{lemma}{Lemma}{Lemmas}
+   \crefname{claim}{Claim}{Claims}
+   \crefname{section}{Section}{Sections}
+   \crefname{observation}{Observation}{Observations}
+   \crefname{note}{Note}{Notes}
+%%
+% TABLES
+\usepackage{multirow}
+%% \usepackage{ctable} % provides toprule, bottomrule, midrule
+\usepackage{array} % new implementation of tabular & array with lots of enhancements
+%%
+% FIGURES
+\usepackage{graphicx}
+\graphicspath{./figs}
+\usepackage{grffile} % to set right names of files
+%%
+% CAPTIONS
+\usepackage{caption}
+\usepackage{subcaption} % supersedes subfigure & subfloat. try using options
+%%
+% LISTS
+\usepackage{enumitem} %\begin{itemize}[leftmargin=*]
+%% inline
+\newlist{inline}{enumerate*}{1}
+\setlist[inline]{before=\unskip{: }, itemjoin={{; }}, itemjoin*={{; and }}, label={(\roman*)}}
+% ALGO
+\usepackage[ruled,linesnumbered]{algorithm2e}
+%% comments & todo
+\newcommand{\reportingCells}{\mathcal{C}_R}
+\newcommand{\likelihood}{\mathcal{L}}
+\newcommand{\aacomment}[1]{({\color{magenta}AA: #1})}
+\newcommand{\mmcomment}[1]{({\color{green}MM: #1})}
+\newcommand{\tbcomment}[1]{({\color{blue}TB: #1})}
+\newcommand{\mrccomment}[1]{({\color{red}MRC: #1})}
+\usepackage[colorinlistoftodos]{todonotes}
+\newcommand{\TODO}[1]{\todo[inline,color=red!10,size=\small]{#1}}
+%% COMMANDS
+\newcommand{\comp}[1]{\overline{#1}}  %{\widetilde{#1}}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\bigo}{O}
+\DeclareMathOperator{\bigom}{\Omega}
+\DeclareMathOperator{\davg}{d_{avg}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmim}{arg\,min}
+% Note: \deg is already defined
+\newcommand{\expect}{\mathbb{E}}
+%
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+%
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\field}{\mathbb{F}}
+\newcommand{\integers}{\mathbb{Z}}
+%
+\newtheorem{theorem}{Theorem}[]{\bfseries}{\itshape} 
+\newtheorem{lemma}[theorem]{Lemma}{\bfseries}{\itshape}
+\newtheorem{claim}[theorem]{Claim}{\bfseries}{\itshape}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition} % {\bfseries}{\itshape}
+\newtheorem{observation}[theorem]{Observation} % {\bfseries}
+\newtheorem{condition}[theorem]{Condition} % {\bfseries}{\itshape}
+\newtheorem{note}[theorem]{Note} % {\bfseries}{\itshape}
+% ROMAN NUMERALS
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\begin{document}
+\section{Notes}
+\begin{itemize}
+\item 1. Rapid spread of the invasive yellow‐legged hornet in France: the role of human‐mediated dispersal and the effects of control measures \\
+
+Reaction diffusion model. Nest density $N$
+$$\dfrac{\partial N}{\partial t} = D \Big( \dfrac{\partial^2 N}{\partial x^2} + \dfrac{\partial^2 N}{\partial y^2} \Big) + rN \Big( 1 - \dfrac{N}{K} \Big)$$
+
+ Growth rate in year $i$: $r_i$
+$$r_i = \ln{\dfrac{n_i}{n_{i-1}}}$$
+\item 2. Framework for Modelling Economic Impacts of Invasive Species, Applied to Pine Wood Nematode in Europe\\
+
+Nothing I could find.
+\item 3. A Suite of Models to Support the Quantitative Assessment of Spread in Pest Risk Analysis\\
+
+Logistic growth model. Number of invaded cells at time $t$, $n_t$
+$$n_t = \dfrac{n_0\text{exp}(rt)}{1+n_0(\text{exp}(rt)-1)/100}$$
+
+\item 4. Human-mediated long-distance jumps of the pine processionary moth in Europe\\
+
+Nothing I could find.
+\item 5. Mathematical epidemiology of infectious diseases//
+
+Pg 14. There is an $\ln(s) = r_0...$
+Then even better is a probability 
+$$F (t) = 1-e^{\int_{t_0}^t \lambda(\tau) d\tau}$$
+%6. Equation 11 \\
+\item 6. Modeling Infectious Diseases in Humans and Animals\\
+Integrating S from -Rt...
+\item 7. Effects of Insect-Vector Preference for Healthy or Infected Plants on Pathogen Spread: Insights from a Model\\
+$1-(1-f)^{p_i}$
+\item 8. SPREAD OF AN INVASIVE PATHOGEN OVER A VARIABLE LANDSCAPE: A NONNATIVE ROOT ROT ON PORT ORFORD CEDAR\\
+Probability that it escapes infection. $H(t,x) = h_0(t)\text{exp}(B'x)$
+\item 9. Stochastic spread of Wolbachia\\
+Eq 1.2, similar I think
+\item 10. Modeling malware spreading dynamics\\
+Some stuff that looks similar
+\item 11. SAS Survival Analysis Techniques for Medical Research\\
+Gives survival probability as similar.
+\item 14. Mathematical models of infectious disease transmission\\
+Gives something for final proportion which are infected as a similar form
+\item 15. A THOUSAND AND ONE EPIDEMIC MODELS\\
+Gives waiting times as $e^{-\varepsilon t}$, still being exposed after $t$ time steps. $\varepsilon$ has to do with transfer rate. Says 18 showed it was exponential.
+\end{itemize}
+
+\section{Summary}
+Our function structure is $p=\alpha \epsilon (1-\text{exp}(\text{infectivity}))$. This is an exponential probability distribution. This form of the infection probability function has been seen before in epidemiological models \cite{5,11,14,15}, both continuous and discrete time models. In 5, we see an SI model being investigated mathematically. They consider a continuous time model, and define the probability that an individual will not be infected as:
+$$F (t) = e^{\int_{t_0}^t \lambda(\tau) d\tau}\;,$$
+where $\lambda$ is the "force of infection". This directly correlates to our probability of leaving the susceptible state. \par
+
+In 11, we see more complexity, but we also see some derivation of this function form from the "proportional hazards model". They similarly consider a continuous time model and an exponential probability function of remaining susceptible. \par 
+
+In 15, we see a discrete time version of this function form, with the probability of still being exposed after $t$ time steps as:
+$P(t) = e^{-\epsilon t}$, where $\epsilon$ relates to the "transfer rate". This was shown to be the case when considering traditional SIR models mathematically in 18.
+
+\par 
+
+
+
+\end{document}
