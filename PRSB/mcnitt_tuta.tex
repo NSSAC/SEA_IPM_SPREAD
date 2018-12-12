@@ -21,9 +21,9 @@
 \doublespacing
 \usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
 \usepackage[pagewise]{lineno}
+\linenumbers
 \usepackage{marvosym}
 %% \newcommand\wordcount{\immediate\write18{texcount -sub=section \jobname.tex  | grep ``Section'' | sed -e 's/+.*//' | sed -n \thesection p > 'count.txt'} (\input{count.txt}words)}
-%% \linenumbers
 % MATH
 \usepackage{amssymb}
 \usepackage{mathtools} % contains amsmath which comes with align
@@ -67,6 +67,9 @@
 %% inline
 \newlist{inline}{enumerate*}{1}
 \setlist[inline]{before=\unskip{: }, itemjoin={{; }}, itemjoin*={{; and }}, label={(\roman*)}}
+\usepackage{silence}
+\WarningFilter{ctable}{Transparency disabled:}
+\WarningFilter{xcolor}{Incompatible color}
 % ALGO
 \usepackage[ruled,linesnumbered]{algorithm2e}
 %% comments & todo
@@ -134,23 +137,26 @@
 \renewcommand\AB@affilsepx{, \protect\Affilfont}
 \makeatother
 % Title on edge of suggested length
-\title{A Multi-pathway Model to Assess the Threat of Invasive Agricultural
-Pests: Case Study of \emph{Tuta~absoluta} in Asia}
+\title{Assessing the Multi-pathway Threat from Invasive Agricultural
+Pests: Study of \emph{Tuta~absoluta} in Asia}
+%% \title{A Multi-pathway Model to Assess the Threat of Invasive Agricultural
+%% Pests: Case Study of \emph{Tuta~absoluta} in Asia}
 \author[1]{Joseph~McNitt}
-\author[1]{Young~Yun~Chungbaek}
-\author[1]{Henning~Mortveit}
-\author[1]{Madhav~Marathe}
-\author[2]{Mateus~Ribeiro~de~Campos}
-\author[2]{Nicolas~Desneux}
-\author[3,4,5]{Thierry~Br\'{e}vault}
-\author[6]{Rangaswamy Muniappan}
-\author[1]{Abhijin~Adiga}
-\affil[1]{Biocomplexity Institute of Virginia Tech}
-\affil[2]{French National Institute for Agricultural Research}
-\affil[3]{BIOPASS, CIRAD-IRD-ISRA-UCAD, Dakar, Senegal}
-\affil[4]{CIRAD, UPR AIDA, F-34398 Montpellier, France}
-\affil[5]{Universit\'{e} de Montpellier, CIRAD, Montpellier, France}
-\affil[6]{Feed the Future Integrated Pest Management Innovation Lab}
+\author[2]{Young~Yun~Chungbaek}
+\author[2]{Henning~Mortveit}
+\author[2]{Madhav~Marathe}
+\author[3]{Mateus~Ribeiro~de~Campos}
+\author[3]{Nicolas~Desneux}
+\author[4,5,6]{Thierry~Br\'{e}vault}
+\author[7]{Rangaswamy Muniappan}
+\author[2]{Abhijin~Adiga}
+\affil[1]{Department of Mathematics, Virginia Tech}
+\affil[2]{Biocomplexity Institute \& Initiative, University of Virginia}
+\affil[3]{French National Institute for Agricultural Research}
+\affil[4]{BIOPASS, CIRAD-IRD-ISRA-UCAD, Dakar, Senegal}
+\affil[5]{CIRAD, UPR AIDA, F-34398 Montpellier, France}
+\affil[6]{Universit\'{e} de Montpellier, CIRAD, Montpellier, France}
+\affil[7]{Feed the Future Integrated Pest Management Innovation Lab}
 \date{}
 \setcounter{Maxaffil}{0}
 \renewcommand\Affilfont{\itshape\small}
@@ -159,62 +165,104 @@ Pests: Case Study of \emph{Tuta~absoluta} in Asia}
 \maketitle
 
 \begin{abstract}
-\emph{Tuta absoluta} is a devastating pest of tomato which has spread in
-Europe, Africa, and South and Central Asia over the last decade. There is
-strong evidence of both natural and human-assisted pathways for its rapid
-range expansion. We developed a data-driven epidemiological model to study
-this spread accounting for biology, seasonal production, trade and
-demographic information. We applied it to study the dynamics of \tuta{}
-spread in South and Southeast Asia -- a region at the frontier of its
-current range.  Our analysis of spread in Bangladesh suggests that both
-natural spread and city-to-city vegetable trade are significant pathways of
-spread. We assessed the possible routes of introduction and predicted the
-spread pattern in the rest of the study region. There is a strong chance
-that within five to seven years \tuta{} will invade all major vegetable
-growing areas of Mainland Southeast Asia if no steps are taken to mitigate
-the spread. Further, we showed that monitoring and effective interventions
-in major production areas could greatly reduce the speed of the spread.
+Modern food systems facilitate rapid spread of pests and pathogens.
+Understanding their dynamics is critical to better prepare for emerging
+invasions. We modeled the multi-pathway spread of an invasive species as a
+propagation process over a time-varying network that accounts for
+biology, seasonal production, trade and demographic information. This
+generic data-driven approach was applied to study the spread of a
+devastating pest of tomato \emph{Tuta absoluta}, in South and Southeast
+Asia -- a region at the frontier of its current range. Analysis with
+respect to historical invasion records in Bangladesh suggests that even
+with modest self-mediated spread capabilities, the pest can quickly expand
+its range through domestic city-to-city vegetable trade. Tomato imports and
+exports in the region were analyzed to  assess the possible routes of
+introduction, and we predicted the spread pattern in the rest of the study
+region. There is a strong chance that within five to seven years \tuta{}
+will invade all major vegetable growing areas of Mainland Southeast Asia if
+no steps are taken to mitigate the spread. Further, we showed that
+monitoring and effective interventions in major production areas could
+greatly reduce the speed of the spread.
 \end{abstract}
 %%
 \section{Introduction}
-The world is witnessing a rapid increase in trade and
-travel~\cite{ercsey2012complexity}. Due to this increased connectivity,
-both international and domestic, no region is spared of the threat from
-exotic species invasion~\cite{hulme2009trade}.  Climate change and
-detrimental impact of intensive agriculture on natural resources are likely
-to further aggravate the problem. As a result, global food security, human
-health and social welfare will be adversely impacted. The South American
-Tomato leafminer, or \emph{Tuta absoluta}, is a representative example of
-biological invasion that has significantly affected food production
-worldwide in the last decade.  Indigenous to South America, \tuta{} was
-accidentally introduced to Spain in~2006, and since then it has rapidly
-spread throughout Europe, Africa, Western and Central Asia, the Indian
-subcontinent, and parts of Central
+
+somewhere say that it is not clear what its flying capacity is
+
+say modeling multiple countries requires lot more data
+
+make sure intro has challenges
+
+%%  which has invaded more than 60\% of
+%% tomato producing land over the last decade.
+
+As international trade intensifies, no region is spared from the threat of
+exotic species invasions~\cite{hulme2009trade}. Once introduced, with few
+restrictions in place, domestic trade facilitates their rapid spread within
+a country~\cite{}. Climate change and detrimental impact of intensive
+agriculture on natural resources are likely to further aggravate this
+problem~\cite{early2016global}.  Models play an important role in
+(i)~discerning the roles of different pathways from one
+another~\cite{13challenges}; (ii)~predicting the spatio-temporal spread
+under different scenarios of introduction and intervention strategies; and
+(iii)~exposing gaps in data and understanding of the phenomenon. However,
+impending invasions of agricultural pests present difficult hurdles.
+Accounting for multiple drivers of dispersal (ecological suitability,
+production, trade, etc.) tends to make the model complex and demands
+multi-disciplinary research. At the same time, we are presented with the
+challenge of data inadequacy, which makes it nearly impossible to calibrate
+and validate these models. Few and often inaccurate incidence reports, lack
+of production and trade data, and limited understanding of the pest's
+biology are some examples. This problem is acute when the study region is
+data poor. Further, if the region is comprised of multiple countries, one
+has to account for the heterogeneity of data; multiple sources, different
+formats and resolution. There is an urgent need for robust methods that can
+provide useful models with limited data.
+
+Pest risk maps have evolved ... long-term establishment. 
+ We developed a 
+
+%% The world is witnessing a rapid increase in trade and
+%% travel~\cite{ercsey2012complexity}. Due to this increased connectivity,
+%% both international and domestic, no region is spared of the threat from
+%% exotic species invasion~\cite{hulme2009trade}.   As a result, global food
+%% security, human health and social welfare will be adversely impacted.
+
+The South American Tomato leafminer, or \emph{Tuta absoluta}, a pest of the
+tomato crop, is a representative among the recent biological invasions that
+have significantly perturbed global food production. Indigenous to South
+America, \tuta{} was accidentally introduced to Spain in~2006, and since
+then it has rapidly spread throughout Europe, Africa, Western and Central
+Asia, the Indian subcontinent, and parts of Central
 America~\cite{desneux2010biological,biondi2017}. With tomato being a
 commercially important crop, this invasion has had significant global
-impact~\cite{campos2017western}. For example, in the Netherlands and Turkey
-alone, the annual estimated intervention cost are \EURdig4 million and
-\EURdig167 million per year, respectively. Due to extensive insecticide
-treatment in Europe, insecticidal resistance has been recently observed in
-populations~\cite{guedes2013tomato}.
+impact~\cite{campos2017western}. In the Netherlands and Turkey alone, the
+annual estimated intervention cost are \EURdig4 million and \EURdig167
+million per year~\cite{}, respectively. It is well accepted that trade
+played a critical role in \tuta{}'s rapid spread. On multiple occasions it
+has been discovered in packaging stations and its spread pattern is
+correlated with prime trade routes~\cite{karadjova2013tuta}. The Animal and
+Plant Health Inspection Service of the United States Department of
+Agriculture (USDA-APHIS) has instituted quarantine regulations for imports
+from regions where the pest is present~\cite{USDA2012}.
+
+%% The wide-spread
+%% adoption  of green houses and tunnel farming have allowed it to overwinter
+%% as well as survive the wet season. 
+%% There is a great need to understand the
+%% dynamics of this pest in order to predict its future invasion pattern, and
+%% design effective prevention and mitigation policies.
+
+%% Due to extensive insecticide
+%% treatment in Europe, insecticidal resistance has been recently observed in
+%% populations~\cite{guedes2013tomato}. 
 %% Overall,
 %% lack of effective indigenous predators has made integrated pest management
 %% (IPM) a challenging task.
 %%~\cite{potting2013tuta,oztemiz2014tuta}
 
-Since tomato is among the top two traded vegetables in the
-world\footnote{\url{http://www.fao.org}}, it is strongly suspected that
-trade played a critical role in \tuta{}'s rapid spread. Indeed, on multiple
-occasions it has been discovered in packaging stations and its spread
-pattern is correlated with prime trade routes~\cite{karadjova2013tuta}.
-The Animal and Plant Health Inspection Service of the United States
-Department of Agriculture (USDA-APHIS) has instituted quarantine
-regulations for imports from regions where the pest is
-present~\cite{USDA2012}. Rapid increase in protected cultivation methods
-such as green houses and tunnel farming have allowed it to overwinter as
-well as survive the wet season. There is a great need to understand the
-dynamics of this pest in order to predict its future invasion pattern, and
-design effective prevention and mitigation policies.
+%% Since tomato is among the top two traded vegetables in the
+%% world\footnote{\url{http://www.fao.org}}, 
 
 %% Faced with the challenging task of preparing for the invasion of pests and
 %% pathogens, and responding effectively to mitigate such incursions should
@@ -234,16 +282,15 @@ design effective prevention and mitigation policies.
 %% health, and so on. 
 
 We describe a multi-pathway propagation model 
-to study the possible spread of \tuta{} in the region of South
+to study the spread of \tuta{} in the region of South
 and Southeast Asia comprising of 10 countries: members of the Association
 of Southeast Asian Nations (ASEAN) and Bangladesh. To develop this model,
 we identified, analyzed, and fused disparate datasets corresponding to
-natural factors, 
+ecology,  
 %% (temperature, precipitation, elevation, vegetation, host
 %% plant presence), 
-biology, 
 %% (host preference, suitability, population growth),
-production seasons, trade dynamics, 
+production, trade 
 %% (imports, exports, domestic trade, city locations, city to city distances), 
 and demographic factors. 
 %% (per capita consumption and population). 
@@ -283,6 +330,9 @@ neighbors.
 %% Southeast Asia region, particularly in the context of agricultural crops.
 
 \paragraph{Summary of results.} 
+
+consumption areas
+
 %% We studied \tuta{} invasion of Bangladesh using the proposed model. 
 Our analysis with respect to historical invasion records indicate two
 possibilities of spread of \tuta{} in Bangladesh, one where trade is the
@@ -1185,6 +1235,22 @@ all Class~B instances with Moore range~$\mooreRange=1$. \label{fig:intervene}}
 
 %%
 \section{Discussion}
+
+need to say take away points
+\begin{enumerate}
+    \item need sample flows for calibration. need to study heterogeneity
+    \item need function for relation between flow and pest spread
+    \item what is enough for modeling trade? at minimum what is
+    required?
+\end{enumerate}
+other stuff
+\begin{enumerate}
+    \item bias in sampling
+    \item feedback not accounted for
+    \item new climex papers to be added (vaddi also)
+    \item others have only considered smaller area
+\end{enumerate}
+
 Traditionally, crops such as tomato and eggplant have been grown in the
 winter during the dry season. However, over the past decade, due to rising
 demand and opportunities to export, there has been a thrust towards
@@ -1619,3 +1685,4 @@ Pending
 ============================================================
 *if possible, talk about networks and how having regional production
 information greatly improves the credibility of the models
+*line numbers
