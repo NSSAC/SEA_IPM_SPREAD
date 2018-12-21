@@ -1,0 +1,33 @@
+***************************************************************************
+Created: AA 2018-12-20
+Modified: AA 
+***************************************************************************
+
+The following are major steps:
+1. Extract relevant files from the simulation output folder.
+2. Obtain ordering of cells for each file.
+3. Cluster them.
+
+Folder structure:
+*****************
+All scripts are in ./scripts folder. They are always executed in ./work
+folder. The results are stored in ./results. Intermediate files will be in
+./obj.
+
+Summary:
+********
+Currently, the entire pipeline is captured by scripts/rank_cluster.sh
+Step 1 is accomplished using bash scripts; 2 by python; and 3 by R.
+
+Step 1: Extract files
+*********************
+This was accomplished using extract_files() function in RANK_CLUSTER. The
+files were extracted from ../cellular_automata/sim_out_files and copied to
+./work/results_BGD_6. "6" denotes all instances with similarity score >*6.
+Details are in extract_files(). Later, this folder needs to be moved to obj
+or elsewhere I guess. zip and commit it to repo if required.
+
+Step 2
+********
+Step 3
+********
