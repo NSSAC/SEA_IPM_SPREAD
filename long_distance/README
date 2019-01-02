@@ -1,0 +1,19 @@
+===========================================================================
+Summary:
+---------------------------------------------------------------------------
+This folder contains the implementation of flow computation required for
+long-distance dispersal of the pest. We use the gravity model to generate
+the flows. The inputs to the gravity model are the total inflow and total
+outflow for each city and time taken between the cities. The inflows and
+outflows are computed per month. The final out for one set of parameters is
+12 directed, edge weighted network of flows.
+
+This is validated using a variety of datasets.
+
+An example is in ./scripts/master_create_networks.sh
+===========================================================================
+Computing distances:
+---------------------------------------------------------------------------
+See ../distance_matrix/README
+===========================================================================
+

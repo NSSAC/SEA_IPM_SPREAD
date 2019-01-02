@@ -1,0 +1,5043 @@
+Bien Hoa,Bien Hoa,681.484658436,10
+Buon Me Thuot,Bien Hoa,1200.08238011,10
+Buon Me Thuot,Buon Me Thuot,1187.63393296,10
+Buon Me Thuot,Ca Mau,157.268796848,10
+Buon Me Thuot,Can Tho,834.32630712,10
+Buon Me Thuot,Da Nang,14.1363738967,10
+Buon Me Thuot,Ho Chi Minh City,1510.39548977,10
+Buon Me Thuot,Hue,3.20011143607,10
+Buon Me Thuot,Long Xuyen,160.738968063,10
+Buon Me Thuot,Qui Nhon,38.6248642364,10
+Ca Mau,Ca Mau,408.400153267,10
+Can Tho,Can Tho,1359.07749664,10
+Da Nang,Da Nang,7.18977377361,10
+Haiphong,Bien Hoa,193.351681018,10
+Haiphong,Ca Mau,121.211565995,10
+Haiphong,Can Tho,545.333840464,10
+Haiphong,Da Nang,580.901185424,10
+Haiphong,Haiphong,3845.69327275,10
+Haiphong,Ho Chi Minh City,1007.88994565,10
+Haiphong,Hue,352.815106551,10
+Haiphong,Long Xuyen,147.408853295,10
+Haiphong,Qui Nhon,88.5557249033,10
+Haiphong,Thai Nguyen,5.61231799395,10
+Haiphong,Vinh,850.396827907,10
+Hanoi,Bien Hoa,124.41474641,10
+Hanoi,Ca Mau,77.877452155,10
+Hanoi,Can Tho,351.355940315,10
+Hanoi,Da Nang,378.314670385,10
+Hanoi,Hanoi,4375.60971587,10
+Hanoi,Ho Chi Minh City,655.52641375,10
+Hanoi,Hue,238.44574597,10
+Hanoi,Long Xuyen,94.9941310735,10
+Hanoi,Qui Nhon,57.80724263,10
+Hanoi,Thai Nguyen,5.84990421973,10
+Hanoi,Viet Tri,1.09738958605,10
+Hanoi,Vinh,624.588339433,10
+Ho Chi Minh City,Ho Chi Minh City,1393.92431398,10
+Hue,Hue,12.9678633846,10
+Long Xuyen,Long Xuyen,1231.60743654,10
+Qui Nhon,Qui Nhon,909.207348787,10
+Rach Gia,Bien Hoa,16.2267953824,10
+Rach Gia,Ca Mau,67.7985579166,10
+Rach Gia,Can Tho,178.272200362,10
+Rach Gia,Ho Chi Minh City,32.5735480535,10
+Rach Gia,Long Xuyen,77.6794234205,10
+Rach Gia,Rach Gia,996.147356727,10
+Thai Nguyen,Bien Hoa,1.87886150912,10
+Thai Nguyen,Ca Mau,1.17736348379,10
+Thai Nguyen,Can Tho,5.61767979175,10
+Thai Nguyen,Da Nang,5.75565606992,10
+Thai Nguyen,Ho Chi Minh City,9.88992842458,10
+Thai Nguyen,Hue,3.5712915791,10
+Thai Nguyen,Long Xuyen,1.43856231947,10
+Thai Nguyen,Thai Nguyen,1172.14759688,10
+Thai Nguyen,Vinh,8.82570828634,10
+Viet Tri,Bien Hoa,13.2008292768,10
+Viet Tri,Ca Mau,8.66400747528,10
+Viet Tri,Can Tho,39.4507940866,10
+Viet Tri,Da Nang,39.966055072,10
+Viet Tri,Ho Chi Minh City,69.3429211116,10
+Viet Tri,Hue,24.721308454,10
+Viet Tri,Long Xuyen,10.220412624,10
+Viet Tri,Qui Nhon,6.19386823776,10
+Viet Tri,Viet Tri,1797.32905489,10
+Viet Tri,Vinh,59.5353050951,10
+Vinh,Vinh,243.420330814,10
+Balikpapan,Balikpapan,116.873736712,10
+Banda Aceh,Banda Aceh,144.766326521,10
+Bandar Lampung,Bandar Lampung,663.410476612,10
+Bandjarmasin,Bandjarmasin,198.963080334,10
+Bandung,Bandar Lampung,16.6267619384,10
+Bandung,Bandjarmasin,16.8380796606,10
+Bandung,Bandung,2113.11722668,10
+Bandung,Cilacap,104.32971371,10
+Bandung,Jakarta,550.595822084,10
+Bandung,Kupang,2.70636786174,10
+Bandung,Malang,13.9648360645,10
+Bandung,Pakalongan,107.161359794,10
+Bandung,Pontianak,23.8401965265,10
+Bandung,Surabaya,26.1390907896,10
+Bandung,Ujungpandang,1.24723408267,10
+Bandung,Yogyakarta,17.7544039341,10
+Bengkulu,Bandar Lampung,135.986960341,10
+Bengkulu,Bandjarmasin,12.4941949976,10
+Bengkulu,Bengkulu,321.250686236,10
+Bengkulu,Cilacap,20.9814461357,10
+Bengkulu,Jakarta,121.579087797,10
+Bengkulu,Kupang,1.29467902406,10
+Bengkulu,Malang,6.60814694523,10
+Bengkulu,Pakalongan,11.9780775367,10
+Bengkulu,Palembang,68.8939019976,10
+Bengkulu,Pontianak,30.7266917359,10
+Bengkulu,Surabaya,11.774573861,10
+Bengkulu,Yogyakarta,6.48789717138,10
+Bogor,Bandar Lampung,2.56262625025,10
+Bogor,Bandjarmasin,1.12468317007,10
+Bogor,Bogor,2488.74104732,10
+Bogor,Cilacap,4.86271438553,10
+Bogor,Jakarta,166.65574222,10
+Bogor,Pakalongan,3.13981061019,10
+Bogor,Pontianak,2.75776644503,10
+Bogor,Surabaya,1.66671197408,10
+Bogor,Yogyakarta,1.15966378841,10
+Bukittinggi,Bandar Lampung,30.9113841393,10
+Bukittinggi,Bandjarmasin,4.67336443115,10
+Bukittinggi,Bukittinggi,354.97214281,10
+Bukittinggi,Cilacap,6.22300196963,10
+Bukittinggi,Jakarta,33.9210313996,10
+Bukittinggi,Malang,2.20229512956,10
+Bukittinggi,Padang,51.381865076,10
+Bukittinggi,Pakalongan,3.47630400764,10
+Bukittinggi,Palembang,38.0698171554,10
+Bukittinggi,Pekanbaru,32.2060256623,10
+Bukittinggi,Pontianak,11.3689332744,10
+Bukittinggi,Surabaya,3.86953409419,10
+Bukittinggi,Yogyakarta,1.9695707771,10
+Cilacap,Cilacap,567.549287952,10
+Cirebon,Bandar Lampung,23.7486169346,10
+Cirebon,Bandjarmasin,46.5346258169,10
+Cirebon,Bogor,1.09003936494,10
+Cirebon,Cilacap,325.622985813,10
+Cirebon,Cirebon,1265.89838212,10
+Cirebon,Jakarta,611.818683126,10
+Cirebon,Kupang,4.2161169386,10
+Cirebon,Malang,42.7326482136,10
+Cirebon,Mataram,2.37175882491,10
+Cirebon,Pakalongan,108.433037847,10
+Cirebon,Pontianak,34.2320778841,10
+Cirebon,Surabaya,81.4801750685,10
+Cirebon,Ujungpandang,3.36553583842,10
+Cirebon,Yogyakarta,62.6662017573,10
+Denpasar,Bandjarmasin,7.14972509271,10
+Denpasar,Denpasar,736.729546202,10
+Denpasar,Kupang,110.101753318,10
+Denpasar,Malang,23.8189124853,10
+Denpasar,Mataram,204.41467252,10
+Denpasar,Pontianak,1.29835891608,10
+Denpasar,Surabaya,29.0368779575,10
+Denpasar,Ujungpandang,58.7645382441,10
+Gorontalo,Balikpapan,1.75295792586,10
+Gorontalo,Bandjarmasin,5.81856842836,10
+Gorontalo,Gorontalo,207.033969749,10
+Gorontalo,Manado,52.1814754394,10
+Gorontalo,Palu,119.317116317,10
+Gorontalo,Ujungpandang,111.78035282,10
+Jakarta,Jakarta,1015.25762083,10
+Jambi,Bandar Lampung,19.3367529385,10
+Jambi,Bandjarmasin,2.53201065808,10
+Jambi,Cilacap,3.67817916342,10
+Jambi,Jakarta,20.9613604161,10
+Jambi,Jambi,306.539420931,10
+Jambi,Malang,1.26181762661,10
+Jambi,Padang,1.36826832644,10
+Jambi,Pakalongan,2.07508873575,10
+Jambi,Palembang,43.0102740241,10
+Jambi,Pekanbaru,2.19334928875,10
+Jambi,Pontianak,5.78595082114,10
+Jambi,Surabaya,2.22767440829,10
+Jambi,Yogyakarta,1.15507519917,10
+Jember,Bandjarmasin,28.6769050571,10
+Jember,Cilacap,1.55994684768,10
+Jember,Jember,1168.29849947,10
+Jember,Kupang,26.7005662038,10
+Jember,Malang,182.913423097,10
+Jember,Mataram,26.1990090629,10
+Jember,Pontianak,5.08757211147,10
+Jember,Surabaya,222.440196653,10
+Jember,Ujungpandang,13.5014164177,10
+Jember,Yogyakarta,3.89630091809,10
+Kupang,Kupang,40.7011748123,10
+Malang,Malang,1472.75432814,10
+Manado,Manado,230.805639377,10
+Mataram,Mataram,338.223971734,10
+Medan,Banda Aceh,12.7233665253,10
+Medan,Bandar Lampung,7.54164680273,10
+Medan,Bandjarmasin,1.93761652053,10
+Medan,Cilacap,2.1348197267,10
+Medan,Jakarta,13.0498586325,10
+Medan,Medan,1116.66101413,10
+Medan,Padang,2.51616003891,10
+Medan,Pakalongan,1.18961749401,10
+Medan,Palembang,14.3635435223,10
+Medan,Pekanbaru,19.3319942583,10
+Medan,Pontianak,4.35783410873,10
+Medan,Surabaya,1.68107483148,10
+Padang,Padang,232.318294064,10
+Pakalongan,Pakalongan,558.379632255,10
+Palembang,Palembang,146.562547989,10
+Palu,Palu,76.3688628867,10
+Pekanbaru,Pekanbaru,77.074915101,10
+Pematangsiantar,Banda Aceh,72.5400993526,10
+Pematangsiantar,Bandar Lampung,145.234466635,10
+Pematangsiantar,Bandjarmasin,35.8335621799,10
+Pematangsiantar,Cilacap,35.7032808088,10
+Pematangsiantar,Jakarta,209.086503245,10
+Pematangsiantar,Kupang,4.03831347608,10
+Pematangsiantar,Malang,15.2587107068,10
+Pematangsiantar,Mataram,1.18407199039,10
+Pematangsiantar,Padang,64.5073935076,10
+Pematangsiantar,Pakalongan,19.9113773864,10
+Pematangsiantar,Palembang,276.081459033,10
+Pematangsiantar,Pekanbaru,360.082875309,10
+Pematangsiantar,Pematangsiantar,593.81383154,10
+Pematangsiantar,Pontianak,85.9906901445,10
+Pematangsiantar,Surabaya,26.7017265966,10
+Pematangsiantar,Ujungpandang,2.84416045678,10
+Pematangsiantar,Yogyakarta,13.1553252364,10
+Pontianak,Pontianak,48.569059379,10
+Samarinda,Balikpapan,13.1660548772,10
+Samarinda,Bandjarmasin,9.18751601416,10
+Samarinda,Samarinda,309.705687026,10
+Semarang,Bandjarmasin,7.38033009745,10
+Semarang,Cilacap,6.33045714074,10
+Semarang,Jakarta,4.75524771267,10
+Semarang,Kupang,1.0678754962,10
+Semarang,Malang,9.15477087532,10
+Semarang,Pontianak,1.36445437999,10
+Semarang,Semarang,1339.10158472,10
+Semarang,Surabaya,19.8190154891,10
+Semarang,Yogyakarta,17.5462510609,10
+Sukabumi,Bandar Lampung,11.8055795804,10
+Sukabumi,Bandjarmasin,8.34230414068,10
+Sukabumi,Cilacap,36.995750321,10
+Sukabumi,Jakarta,310.79926721,10
+Sukabumi,Malang,6.34082790259,10
+Sukabumi,Pakalongan,30.458809758,10
+Sukabumi,Pontianak,16.5322431394,10
+Sukabumi,Sukabumi,863.07209414,10
+Sukabumi,Surabaya,11.7364466207,10
+Sukabumi,Yogyakarta,7.47960840931,10
+Surabaya,Surabaya,415.999879014,10
+Surakarta,Bandar Lampung,1.07767214501,10
+Surakarta,Bandjarmasin,31.0422306238,10
+Surakarta,Cilacap,36.030335167,10
+Surakarta,Jakarta,16.2603133462,10
+Surakarta,Kupang,5.51839356321,10
+Surakarta,Malang,97.5184675466,10
+Surakarta,Mataram,3.56675303609,10
+Surakarta,Pakalongan,5.03343268646,10
+Surakarta,Pontianak,5.52248926304,10
+Surakarta,Surabaya,209.194767396,10
+Surakarta,Surakarta,2313.75235366,10
+Surakarta,Ujungpandang,4.54352946437,10
+Surakarta,Yogyakarta,220.014524109,10
+Tasikmalaya,Bandar Lampung,3.33778339874,10
+Tasikmalaya,Bandjarmasin,6.457225615,10
+Tasikmalaya,Cilacap,145.834006178,10
+Tasikmalaya,Jakarta,65.5573104373,10
+Tasikmalaya,Malang,6.59320900066,10
+Tasikmalaya,Pakalongan,188.380063917,10
+Tasikmalaya,Pontianak,5.79219535188,10
+Tasikmalaya,Surabaya,11.6231506243,10
+Tasikmalaya,Tasikmalaya,1245.38871969,10
+Tasikmalaya,Yogyakarta,17.9271249394,10
+Ujungpandang,Ujungpandang,559.062933387,10
+Yogyakarta,Yogyakarta,836.355608311,10
+Alor Setar,Alor Setar,26.3436155946,10
+George Town,George Town,104.358156438,10
+Ipoh,Ipoh,165.822407125,10
+Kota Baharu,Kota Baharu,53.4838080195,10
+Kota Kinabalu,Kota Kinabalu,112.403973273,10
+Kota Kinabalu,Sandakan,6.33511112193,10
+Kuala Lumpur,Alor Setar,6.01513827,10
+Kuala Lumpur,George Town,3.88728372189,10
+Kuala Lumpur,Kota Baharu,8.53905863278,10
+Kuala Lumpur,Kuala Lumpur,571.048407778,10
+Kuala Lumpur,Kuala Terengganu,2.67395061842,10
+Kuala Lumpur,Kuching,2.55030319645,10
+Kuala Lumpur,Sandakan,1.65465964905,10
+Kuala Lumpur,Singapore,17.0281163759,10
+Kuala Lumpur,Sungai Petani,3.15603687089,10
+Kuala Terengganu,Kuala Terengganu,6.22762974413,10
+Kuantan,Alor Setar,4.58572026126,10
+Kuantan,George Town,2.90220808509,10
+Kuantan,Kota Baharu,32.6361882131,10
+Kuantan,Kuala Terengganu,13.8004758189,10
+Kuantan,Kuantan,72.9572578212,10
+Kuantan,Kuching,3.92289593823,10
+Kuantan,Sandakan,2.34629346739,10
+Kuantan,Singapore,10.3247495117,10
+Kuantan,Sungai Petani,2.28192484886,10
+Kuching,Kuching,11.1389381444,10
+Malacca,Alor Setar,52.9533459945,10
+Malacca,George Town,32.2770284375,10
+Malacca,Ipoh,3.88672220279,10
+Malacca,Kota Baharu,85.9119164558,10
+Malacca,Kuala Terengganu,27.1398236692,10
+Malacca,Kuching,54.3986234745,10
+Malacca,Malacca,141.400971484,10
+Malacca,Sandakan,32.3452276131,10
+Malacca,Singapore,447.491261961,10
+Malacca,Sungai Petani,26.5874719416,10
+Sandakan,Sandakan,5.27236556148,10
+Seremban,Alor Setar,15.6504496348,10
+Seremban,George Town,9.82453824797,10
+Seremban,Ipoh,1.29673015535,10
+Seremban,Kota Baharu,23.072570915,10
+Seremban,Kuala Terengganu,6.7598885357,10
+Seremban,Kuching,10.6688047588,10
+Seremban,Sandakan,6.36720930709,10
+Seremban,Seremban,103.117375912,10
+Seremban,Singapore,81.7736177194,10
+Seremban,Sungai Petani,8.01340865233,10
+Singapore,Singapore,219.235745101,10
+Sungai Petani,Sungai Petani,11.7509943623,10
+Tawau,Sandakan,3.46241952618,10
+Tawau,Tawau,56.4418458289,10
+Chittagong,Chittagong,3992.08472691,10
+Chittagong,Comilla,42.8429716186,10
+Chittagong,Dhaka,70.8709120948,10
+Chittagong,Mymensingh,3.94109215266,10
+Comilla,Comilla,4888.50570009,10
+Dhaka,Dhaka,4914.6840951,10
+Khulna,Khulna,6284.44609008,10
+Mymensingh,Dhaka,1.50942269429,10
+Mymensingh,Mymensingh,5845.39108062,10
+Rajshahi,Comilla,317.21303913,10
+Rajshahi,Dhaka,3432.80548126,10
+Rajshahi,Khulna,158.812053791,10
+Rajshahi,Mymensingh,630.209572751,10
+Rajshahi,Rajshahi,6507.56564191,10
+Rangpur,Comilla,338.457083333,10
+Rangpur,Dhaka,3476.06104896,10
+Rangpur,Khulna,104.664378434,10
+Rangpur,Mymensingh,608.328365723,10
+Rangpur,Rangpur,5159.79443711,10
+Angeles,Angeles,921.947885011,10
+Angeles,Bacolod,1.62117328661,10
+Angeles,Batangas,73.6347460483,10
+Angeles,Iloilo,2.41330555685,10
+Angeles,Legazpi,17.9331171884,10
+Angeles,Manila,227.81452979,10
+Angeles,Naga,30.2155603757,10
+Angeles,Quezon City,410.967664212,10
+Bacolod,Bacolod,125.958262129,10
+Baguio City,Bacolod,16.5588275847,10
+Baguio City,Baguio City,1089.46638907,10
+Baguio City,Batangas,456.732919667,10
+Baguio City,Cebu,7.43045159691,10
+Baguio City,Iloilo,24.2728472219,10
+Baguio City,Legazpi,170.842987659,10
+Baguio City,Manila,1026.94861996,10
+Baguio City,Naga,278.443956709,10
+Baguio City,Quezon City,1658.19680768,10
+Batangas,Batangas,499.407268582,10
+Cagayan de Oro,Bacolod,483.656804759,10
+Cagayan de Oro,Batangas,3.55575305698,10
+Cagayan de Oro,Cagayan de Oro,503.707613214,10
+Cagayan de Oro,Cebu,759.585138889,10
+Cagayan de Oro,Davao,280.609650872,10
+Cagayan de Oro,General Santos,155.933612639,10
+Cagayan de Oro,Iligan,233.604702088,10
+Cagayan de Oro,Iloilo,167.842712201,10
+Cagayan de Oro,Legazpi,225.628726151,10
+Cagayan de Oro,Manila,3.27042528863,10
+Cagayan de Oro,Naga,122.580788673,10
+Cagayan de Oro,Quezon City,4.43235121847,10
+Cagayan de Oro,Zamboanga,172.304137846,10
+Cebu,Cebu,232.818051556,10
+Davao,Davao,688.301359368,10
+General Santos,General Santos,307.281424358,10
+Iligan,Iligan,388.482182648,10
+Iloilo,Iloilo,418.634720903,10
+Legazpi,Legazpi,32.4193285467,10
+Manila,Manila,212.846709416,10
+Naga,Naga,98.8528892169,10
+Olongapo,Batangas,23.878570148,10
+Olongapo,Legazpi,6.92042699058,10
+Olongapo,Manila,62.667295739,10
+Olongapo,Naga,11.3330308604,10
+Olongapo,Olongapo,286.855131046,10
+Olongapo,Quezon City,102.45784231,10
+Quezon City,Quezon City,101.939011375,10
+Zamboanga,Zamboanga,112.859781736,10
+Bangkok,Bangkok,188.113437056,10
+Chiang Mai,Bangkok,618.8560615,10
+Chiang Mai,Chiang Mai,217.300203816,10
+Chiang Mai,Hat Yai,217.592550861,10
+Chiang Mai,Nakhon Ratchasima,87.9134492727,10
+Chiang Mai,Nonthaburi,603.497595653,10
+Hat Yai,Hat Yai,12.2673783929,10
+Nakhon Ratchasima,Nakhon Ratchasima,247.487986715,10
+Nonthaburi,Nonthaburi,405.080165621,10
+Bago,Bago,1229.67848933,10
+Bago,Mandalay,4.52969148576,10
+Bago,Rangoon,260.30987908,10
+Mandalay,Mandalay,2076.5627525,10
+Naypyidaw,Mandalay,240.061815433,10
+Naypyidaw,Naypyidaw,1161.17926001,10
+Naypyidaw,Rangoon,562.479561632,10
+Rangoon,Rangoon,2592.6723248,10
+Bien Hoa,Bien Hoa,681.484798622,11
+Buon Me Thuot,Bien Hoa,1200.08251355,11
+Buon Me Thuot,Buon Me Thuot,1187.63393297,11
+Buon Me Thuot,Ca Mau,157.268823701,11
+Buon Me Thuot,Can Tho,834.326545558,11
+Buon Me Thuot,Da Nang,14.1363875474,11
+Buon Me Thuot,Ho Chi Minh City,1510.39613766,11
+Buon Me Thuot,Hue,3.20011455855,11
+Buon Me Thuot,Long Xuyen,160.738944565,11
+Buon Me Thuot,Qui Nhon,38.6248540977,11
+Ca Mau,Ca Mau,408.400236187,11
+Can Tho,Can Tho,1359.07776558,11
+Da Nang,Da Nang,7.18977497589,11
+Haiphong,Bien Hoa,193.351627451,11
+Haiphong,Ca Mau,121.211539632,11
+Haiphong,Can Tho,545.333784594,11
+Haiphong,Da Nang,580.90152084,11
+Haiphong,Haiphong,3845.6932729,11
+Haiphong,Ho Chi Minh City,1007.88998669,11
+Haiphong,Hue,352.815313831,11
+Haiphong,Long Xuyen,147.408774517,11
+Haiphong,Qui Nhon,88.5556672775,11
+Haiphong,Thai Nguyen,5.61295679692,11
+Haiphong,Vinh,850.397308853,11
+Hanoi,Bien Hoa,124.414715298,11
+Hanoi,Ca Mau,77.8774373181,11
+Hanoi,Can Tho,351.355913796,11
+Hanoi,Da Nang,378.314899032,11
+Hanoi,Hanoi,4375.60971663,11
+Hanoi,Ho Chi Minh City,655.526458125,11
+Hanoi,Hue,238.44589249,11
+Hanoi,Long Xuyen,94.9940828692,11
+Hanoi,Qui Nhon,57.8072065727,11
+Hanoi,Thai Nguyen,5.85057022297,11
+Hanoi,Viet Tri,1.09738806758,11
+Hanoi,Vinh,624.588709522,11
+Ho Chi Minh City,Ho Chi Minh City,1393.92458087,11
+Hue,Hue,12.9678655474,11
+Long Xuyen,Long Xuyen,1231.60770391,11
+Qui Nhon,Qui Nhon,909.207550827,11
+Rach Gia,Bien Hoa,16.226807982,11
+Rach Gia,Ca Mau,67.7986145978,11
+Rach Gia,Can Tho,178.272369911,11
+Rach Gia,Ho Chi Minh City,32.5735836965,11
+Rach Gia,Long Xuyen,77.6794637434,11
+Rach Gia,Rach Gia,996.147357007,11
+Thai Nguyen,Bien Hoa,1.87864494246,11
+Thai Nguyen,Ca Mau,1.1772278453,11
+Thai Nguyen,Can Tho,5.61703325153,11
+Thai Nguyen,Da Nang,5.75499756255,11
+Thai Nguyen,Ho Chi Minh City,9.88879160591,11
+Thai Nguyen,Hue,3.57088302198,11
+Thai Nguyen,Long Xuyen,1.43839613362,11
+Thai Nguyen,Thai Nguyen,1172.14621455,11
+Thai Nguyen,Vinh,8.82469842824,11
+Viet Tri,Bien Hoa,13.2008442775,11
+Viet Tri,Ca Mau,8.66401783655,11
+Viet Tri,Can Tho,39.4508458043,11
+Viet Tri,Da Nang,39.9661346364,11
+Viet Tri,Ho Chi Minh City,69.3430219436,11
+Viet Tri,Hue,24.7213579188,11
+Viet Tri,Long Xuyen,10.2204216075,11
+Viet Tri,Qui Nhon,6.19387296158,11
+Viet Tri,Viet Tri,1797.32905973,11
+Viet Tri,Vinh,59.5354229123,11
+Vinh,Vinh,243.420371652,11
+Balikpapan,Balikpapan,116.876550677,11
+Banda Aceh,Banda Aceh,144.766192898,11
+Bandar Lampung,Bandar Lampung,663.410040489,11
+Bandjarmasin,Bandjarmasin,198.963215457,11
+Bandung,Bandar Lampung,16.626791166,11
+Bandung,Bandjarmasin,16.837325101,11
+Bandung,Bandung,2113.11722645,11
+Bandung,Cilacap,104.329546207,11
+Bandung,Jakarta,550.595997413,11
+Bandung,Kupang,2.70630620371,11
+Bandung,Malang,13.9646726147,11
+Bandung,Pakalongan,107.161345539,11
+Bandung,Pontianak,23.8401830496,11
+Bandung,Surabaya,26.1387993916,11
+Bandung,Ujungpandang,1.24716746191,11
+Bandung,Yogyakarta,17.7542568125,11
+Bengkulu,Bandar Lampung,135.987260483,11
+Bengkulu,Bandjarmasin,12.4936407122,11
+Bengkulu,Bengkulu,321.250686245,11
+Bengkulu,Cilacap,20.9814218759,11
+Bengkulu,Jakarta,121.579181134,11
+Bengkulu,Kupang,1.29465010958,11
+Bengkulu,Malang,6.60807256971,11
+Bengkulu,Pakalongan,11.9780813247,11
+Bengkulu,Palembang,68.8940553198,11
+Bengkulu,Pontianak,30.7266881704,11
+Bengkulu,Surabaya,11.7744478881,11
+Bengkulu,Yogyakarta,6.48784632429,11
+Bogor,Bandar Lampung,2.5626055902,11
+Bogor,Bandjarmasin,1.12462172621,11
+Bogor,Bogor,2488.741007,11
+Bogor,Cilacap,4.86265882702,11
+Bogor,Jakarta,166.654158744,11
+Bogor,Pakalongan,3.13977935986,11
+Bogor,Pontianak,2.75773780505,11
+Bogor,Surabaya,1.66667702684,11
+Bogor,Yogyakarta,1.15964279117,11
+Bukittinggi,Bandar Lampung,30.9113874692,11
+Bukittinggi,Bandjarmasin,4.67314729379,11
+Bukittinggi,Bukittinggi,354.972142809,11
+Bukittinggi,Cilacap,6.22298170971,11
+Bukittinggi,Jakarta,33.9209862268,11
+Bukittinggi,Malang,2.202265719,11
+Bukittinggi,Padang,51.3819369546,11
+Bukittinggi,Pakalongan,3.47629780883,11
+Bukittinggi,Palembang,38.0698219551,11
+Bukittinggi,Pekanbaru,32.2060411104,11
+Bukittinggi,Pontianak,11.3689080872,11
+Bukittinggi,Surabaya,3.86948457152,11
+Bukittinggi,Yogyakarta,1.96955120625,11
+Cilacap,Cilacap,567.549018915,11
+Cirebon,Bandar Lampung,23.7487233871,11
+Cirebon,Bandjarmasin,46.532667258,11
+Cirebon,Bogor,1.09005302143,11
+Cirebon,Cilacap,325.623350211,11
+Cirebon,Cirebon,1265.89838225,11
+Cirebon,Jakarta,611.820544914,11
+Cirebon,Kupang,4.21603237158,11
+Cirebon,Malang,42.7322644823,11
+Cirebon,Mataram,2.37170414935,11
+Cirebon,Pakalongan,108.43331886,11
+Cirebon,Pontianak,34.2321518014,11
+Cirebon,Surabaya,81.4794887281,11
+Cirebon,Ujungpandang,3.36536523827,11
+Cirebon,Yogyakarta,62.6658532139,11
+Denpasar,Bandjarmasin,7.14960336853,11
+Denpasar,Denpasar,736.729546285,11
+Denpasar,Kupang,110.102304455,11
+Denpasar,Malang,23.8192955936,11
+Denpasar,Mataram,204.415083581,11
+Denpasar,Pontianak,1.29839426208,11
+Denpasar,Surabaya,29.0373611494,11
+Denpasar,Ujungpandang,58.7630322638,11
+Gorontalo,Balikpapan,1.75142578481,11
+Gorontalo,Bandjarmasin,5.81873778833,11
+Gorontalo,Gorontalo,207.033969749,11
+Gorontalo,Manado,52.1811872556,11
+Gorontalo,Palu,119.317018283,11
+Gorontalo,Ujungpandang,111.782644772,11
+Jakarta,Jakarta,1015.25706714,11
+Jambi,Bandar Lampung,19.3367525156,11
+Jambi,Bandjarmasin,2.53189268578,11
+Jambi,Cilacap,3.67816671187,11
+Jambi,Jakarta,20.9613297853,11
+Jambi,Jambi,306.539420938,11
+Jambi,Malang,1.26180061213,11
+Jambi,Padang,1.3682700632,11
+Jambi,Pakalongan,2.07508476661,11
+Jambi,Palembang,43.0102738726,11
+Jambi,Pekanbaru,2.19335005658,11
+Jambi,Pontianak,5.78593725287,11
+Jambi,Surabaya,2.2276456096,11
+Jambi,Yogyakarta,1.15506357195,11
+Jember,Bandjarmasin,28.6760663618,11
+Jember,Cilacap,1.55996862685,11
+Jember,Jember,1168.29849947,11
+Jember,Kupang,26.7003735349,11
+Jember,Malang,182.914129591,11
+Jember,Mataram,26.1987415536,11
+Jember,Pontianak,5.08764843373,11
+Jember,Surabaya,222.441179586,11
+Jember,Ujungpandang,13.5009054079,11
+Jember,Yogyakarta,3.89632928474,11
+Kupang,Kupang,40.7011787794,11
+Malang,Malang,1472.7541483,11
+Manado,Manado,230.805927542,11
+Mataram,Mataram,338.224030081,11
+Medan,Banda Aceh,12.7230730915,11
+Medan,Bandar Lampung,7.54143755722,11
+Medan,Bandjarmasin,1.93747252751,11
+Medan,Cilacap,2.13475331541,11
+Medan,Jakarta,13.049477776,11
+Medan,Medan,1116.66100326,11
+Medan,Padang,2.51609347595,11
+Medan,Pakalongan,1.1895822383,11
+Medan,Palembang,14.3631452646,11
+Medan,Pekanbaru,19.3314650759,11
+Medan,Pontianak,4.35770307547,11
+Medan,Surabaya,1.68100649445,11
+Padang,Padang,232.318124818,11
+Pakalongan,Pakalongan,558.379340934,11
+Palembang,Palembang,146.562447798,11
+Palu,Palu,76.3689540717,11
+Pekanbaru,Pekanbaru,77.0748603913,11
+Pematangsiantar,Banda Aceh,72.5405261884,11
+Pematangsiantar,Bandar Lampung,145.2346411,11
+Pematangsiantar,Bandjarmasin,35.8319364376,11
+Pematangsiantar,Cilacap,35.7032036141,11
+Pematangsiantar,Jakarta,209.086453448,11
+Pematangsiantar,Kupang,4.03821922522,11
+Pematangsiantar,Malang,15.2585236201,11
+Pematangsiantar,Mataram,1.18404080919,11
+Pematangsiantar,Padang,64.5075542891,11
+Pematangsiantar,Pakalongan,19.911363655,11
+Pematangsiantar,Palembang,276.081795746,11
+Pematangsiantar,Pekanbaru,360.083441794,11
+Pematangsiantar,Pematangsiantar,593.813831583,11
+Pematangsiantar,Pontianak,85.9905936712,11
+Pematangsiantar,Surabaya,26.7014140643,11
+Pematangsiantar,Ujungpandang,2.84400695355,11
+Pematangsiantar,Yogyakarta,13.1552089028,11
+Pontianak,Pontianak,48.5690320203,11
+Samarinda,Balikpapan,13.1654157167,11
+Samarinda,Bandjarmasin,9.19537445258,11
+Samarinda,Samarinda,309.705688002,11
+Semarang,Bandjarmasin,7.38027239704,11
+Semarang,Cilacap,6.33068117964,11
+Semarang,Jakarta,4.75542515311,11
+Semarang,Kupang,1.0678906737,11
+Semarang,Malang,9.15500241222,11
+Semarang,Pontianak,1.36450408827,11
+Semarang,Semarang,1339.10161177,11
+Semarang,Surabaya,19.8195277675,11
+Semarang,Yogyakarta,17.5467548035,11
+Sukabumi,Bandar Lampung,11.8056001898,11
+Sukabumi,Bandjarmasin,8.34193019843,11
+Sukabumi,Cilacap,36.9956904749,11
+Sukabumi,Jakarta,310.799362409,11
+Sukabumi,Malang,6.34075361018,11
+Sukabumi,Pakalongan,30.4588053368,11
+Sukabumi,Pontianak,16.5322335931,11
+Sukabumi,Sukabumi,863.072094115,11
+Sukabumi,Surabaya,11.7363156407,11
+Sukabumi,Yogyakarta,7.47954633892,11
+Surabaya,Surabaya,415.999817655,11
+Surakarta,Bandar Lampung,1.07768573734,11
+Surakarta,Bandjarmasin,31.04117648,11
+Surakarta,Cilacap,36.030668421,11
+Surakarta,Jakarta,16.2604950265,11
+Surakarta,Kupang,5.51832773966,11
+Surakarta,Malang,97.5183846835,11
+Surakarta,Mataram,3.56669981026,11
+Surakarta,Pakalongan,5.03348665377,11
+Surakarta,Pontianak,5.52254608661,11
+Surakarta,Surabaya,209.194706038,11
+Surakarta,Surakarta,2313.75235393,11
+Surakarta,Ujungpandang,4.54333608911,11
+Surakarta,Yogyakarta,220.015089155,11
+Tasikmalaya,Bandar Lampung,3.3377900851,11
+Tasikmalaya,Bandjarmasin,6.45693783369,11
+Tasikmalaya,Cilacap,145.833807822,11
+Tasikmalaya,Jakarta,65.5573473986,11
+Tasikmalaya,Malang,6.59313344893,11
+Tasikmalaya,Pakalongan,188.380085081,11
+Tasikmalaya,Pontianak,5.79219349875,11
+Tasikmalaya,Surabaya,11.6230239016,11
+Tasikmalaya,Tasikmalaya,1245.38871941,11
+Tasikmalaya,Yogyakarta,17.9269807852,11
+Ujungpandang,Ujungpandang,559.06334481,11
+Yogyakarta,Yogyakarta,836.355445114,11
+Alor Setar,Alor Setar,26.3438238404,11
+George Town,George Town,104.359033687,11
+Ipoh,Ipoh,165.797139614,11
+Kota Baharu,Kota Baharu,53.4842351449,11
+Kota Kinabalu,Kota Kinabalu,112.403983428,11
+Kota Kinabalu,Sandakan,6.33756085604,11
+Kuala Lumpur,Alor Setar,6.01643803553,11
+Kuala Lumpur,George Town,3.88806890124,11
+Kuala Lumpur,Kota Baharu,8.54087243125,11
+Kuala Lumpur,Kuala Lumpur,571.048614804,11
+Kuala Lumpur,Kuala Terengganu,2.67451569946,11
+Kuala Lumpur,Kuching,2.55085571682,11
+Kuala Lumpur,Sandakan,1.65487640846,11
+Kuala Lumpur,Singapore,17.031789171,11
+Kuala Lumpur,Sungai Petani,3.15672329803,11
+Kuala Terengganu,Kuala Terengganu,6.22767973703,11
+Kuantan,Alor Setar,4.58573217981,11
+Kuantan,George Town,2.90217472796,11
+Kuantan,Kota Baharu,32.6361532738,11
+Kuantan,Kuala Terengganu,13.8004460902,11
+Kuantan,Kuantan,72.9572577284,11
+Kuantan,Kuching,3.92290835589,11
+Kuantan,Sandakan,2.34609997844,11
+Kuantan,Singapore,10.3247722961,11
+Kuantan,Sungai Petani,2.281934006,11
+Kuching,Kuching,11.1390241585,11
+Malacca,Alor Setar,52.9529417824,11
+Malacca,George Town,32.2763271875,11
+Malacca,Ipoh,3.90278442369,11
+Malacca,Kota Baharu,85.9109453977,11
+Malacca,Kuala Terengganu,27.1394875003,11
+Malacca,Kuching,54.3982390397,11
+Malacca,Malacca,141.400971416,11
+Malacca,Sandakan,32.3422292965,11
+Malacca,Singapore,447.487670558,11
+Malacca,Sungai Petani,26.58730658,11
+Sandakan,Sandakan,5.27242060574,11
+Seremban,Alor Setar,15.6501898778,11
+Seremban,George Town,9.82423673385,11
+Seremban,Ipoh,1.30207733455,11
+Seremban,Kota Baharu,23.072103304,11
+Seremban,Kuala Terengganu,6.75974420831,11
+Seremban,Kuching,10.6686337267,11
+Seremban,Sandakan,6.3665620126,11
+Seremban,Seremban,103.117374589,11
+Seremban,Singapore,81.7722284115,11
+Seremban,Sungai Petani,8.01328698001,11
+Singapore,Singapore,219.237438898,11
+Sungai Petani,Sungai Petani,11.7510866091,11
+Tawau,Sandakan,3.46359614769,11
+Tawau,Tawau,56.4418489894,11
+Chittagong,Chittagong,3992.08470301,11
+Chittagong,Comilla,42.8419596418,11
+Chittagong,Dhaka,70.869185317,11
+Chittagong,Mymensingh,3.94099335944,11
+Comilla,Comilla,4888.50610635,11
+Dhaka,Dhaka,4914.68458481,11
+Khulna,Khulna,6284.44523209,11
+Mymensingh,Dhaka,1.50942394739,11
+Mymensingh,Mymensingh,5845.39182774,11
+Rajshahi,Comilla,317.213331513,11
+Rajshahi,Dhaka,3432.80608954,11
+Rajshahi,Khulna,158.812578023,11
+Rajshahi,Mymensingh,630.209241776,11
+Rajshahi,Rajshahi,6507.56564191,11
+Rangpur,Comilla,338.457396583,11
+Rangpur,Dhaka,3476.06167812,11
+Rangpur,Khulna,104.664724325,11
+Rangpur,Mymensingh,608.328048552,11
+Rangpur,Rangpur,5159.79443711,11
+Angeles,Angeles,921.947886455,11
+Angeles,Bacolod,1.62123242902,11
+Angeles,Batangas,73.6348256629,11
+Angeles,Iloilo,2.41339176261,11
+Angeles,Legazpi,17.9334946757,11
+Angeles,Manila,227.814940769,11
+Angeles,Naga,30.2159171772,11
+Angeles,Quezon City,410.968441908,11
+Bacolod,Bacolod,125.958059907,11
+Baguio City,Bacolod,16.5593911957,11
+Baguio City,Baguio City,1089.46638907,11
+Baguio City,Batangas,456.732297114,11
+Baguio City,Cebu,7.43071226643,11
+Baguio City,Iloilo,24.2736549416,11
+Baguio City,Legazpi,170.846166263,11
+Baguio City,Manila,1026.94796245,11
+Baguio City,Naga,278.446564125,11
+Baguio City,Quezon City,1658.1958925,11
+Batangas,Batangas,499.407920827,11
+Cagayan de Oro,Bacolod,483.656360295,11
+Cagayan de Oro,Batangas,3.5556239203,11
+Cagayan de Oro,Cagayan de Oro,503.707613214,11
+Cagayan de Oro,Cebu,759.585234108,11
+Cagayan de Oro,Davao,280.611099369,11
+Cagayan de Oro,General Santos,155.934228649,11
+Cagayan de Oro,Iligan,233.605457286,11
+Cagayan de Oro,Iloilo,167.842430368,11
+Cagayan de Oro,Legazpi,225.625037143,11
+Cagayan de Oro,Manila,3.27030887816,11
+Cagayan de Oro,Naga,122.577651739,11
+Cagayan de Oro,Quezon City,4.43219384092,11
+Cagayan de Oro,Zamboanga,172.304337444,11
+Cebu,Cebu,232.817657824,11
+Davao,Davao,688.299910305,11
+General Santos,General Santos,307.28080801,11
+Iligan,Iligan,388.48142735,11
+Iloilo,Iloilo,418.634074584,11
+Legazpi,Legazpi,32.4193176272,11
+Manila,Manila,212.846974897,11
+Naga,Naga,98.8529310237,11
+Olongapo,Batangas,23.8785899847,11
+Olongapo,Legazpi,6.92057093025,11
+Olongapo,Manila,62.6673930946,11
+Olongapo,Naga,11.3331618481,11
+Olongapo,Olongapo,286.855131613,11
+Olongapo,Quezon City,102.458010533,11
+Quezon City,Quezon City,101.939137801,11
+Zamboanga,Zamboanga,112.85958128,11
+Bangkok,Bangkok,188.114452215,11
+Chiang Mai,Bangkok,618.85504899,11
+Chiang Mai,Chiang Mai,217.300203816,11
+Chiang Mai,Hat Yai,217.592492036,11
+Chiang Mai,Nakhon Ratchasima,87.9230496149,11
+Chiang Mai,Nonthaburi,603.494992179,11
+Hat Yai,Hat Yai,12.2674379588,11
+Nakhon Ratchasima,Nakhon Ratchasima,247.478385946,11
+Nonthaburi,Nonthaburi,405.0827734,11
+Bago,Bago,1229.67842117,11
+Bago,Mandalay,4.52915520432,11
+Bago,Rangoon,260.255352623,11
+Mandalay,Mandalay,2076.53809226,11
+Naypyidaw,Mandalay,240.087011682,11
+Naypyidaw,Naypyidaw,1161.17926038,11
+Naypyidaw,Rangoon,562.487358716,11
+Rangoon,Rangoon,2592.71905797,11
+Bien Hoa,Bien Hoa,681.484576758,12
+Buon Me Thuot,Bien Hoa,1200.08230235,12
+Buon Me Thuot,Buon Me Thuot,1187.63393295,12
+Buon Me Thuot,Ca Mau,157.268781261,12
+Buon Me Thuot,Can Tho,834.3261683,12
+Buon Me Thuot,Da Nang,14.1363659408,12
+Buon Me Thuot,Ho Chi Minh City,1510.39511198,12
+Buon Me Thuot,Hue,3.20010961626,12
+Buon Me Thuot,Long Xuyen,160.738982022,12
+Buon Me Thuot,Qui Nhon,38.6248703558,12
+Ca Mau,Ca Mau,408.400104949,12
+Can Tho,Can Tho,1359.07734011,12
+Da Nang,Da Nang,7.18977307844,12
+Haiphong,Bien Hoa,193.351712069,12
+Haiphong,Ca Mau,121.211581301,12
+Haiphong,Can Tho,545.333872636,12
+Haiphong,Da Nang,580.900989419,12
+Haiphong,Haiphong,3845.69327265,12
+Haiphong,Ho Chi Minh City,1007.88992071,12
+Haiphong,Hue,352.814985432,12
+Haiphong,Long Xuyen,147.40889932,12
+Haiphong,Qui Nhon,88.555758892,12
+Haiphong,Thai Nguyen,5.61195040461,12
+Haiphong,Vinh,850.396546916,12
+Hanoi,Bien Hoa,124.414764332,12
+Hanoi,Ca Mau,77.8774607003,12
+Hanoi,Can Tho,351.35595523,12
+Hanoi,Da Nang,378.314536476,12
+Hanoi,Hanoi,4375.60971542,12
+Hanoi,Ho Chi Minh City,655.526386682,12
+Hanoi,Hue,238.445660168,12
+Hanoi,Long Xuyen,94.9941591615,12
+Hanoi,Qui Nhon,57.8072638607,12
+Hanoi,Thai Nguyen,5.84952097245,12
+Hanoi,Viet Tri,1.09739030502,12
+Hanoi,Vinh,624.58812272,12
+Ho Chi Minh City,Ho Chi Minh City,1393.9241589,12
+Hue,Hue,12.9678621341,12
+Long Xuyen,Long Xuyen,1231.60728016,12
+Qui Nhon,Qui Nhon,909.207229985,12
+Rach Gia,Bien Hoa,16.2267879782,12
+Rach Gia,Ca Mau,67.7985246541,12
+Rach Gia,Can Tho,178.272100907,12
+Rach Gia,Ho Chi Minh City,32.5735271534,12
+Rach Gia,Long Xuyen,77.6793997551,12
+Rach Gia,Rach Gia,996.147356563,12
+Thai Nguyen,Bien Hoa,1.87898615347,12
+Thai Nguyen,Ca Mau,1.17744155011,12
+Thai Nguyen,Can Tho,5.6180518999,12
+Thai Nguyen,Da Nang,5.75603503569,12
+Thai Nguyen,Ho Chi Minh City,9.89058269293,12
+Thai Nguyen,Hue,3.57152670025,12
+Thai Nguyen,Long Xuyen,1.43865797237,12
+Thai Nguyen,Thai Nguyen,1172.14839224,12
+Thai Nguyen,Vinh,8.8262894532,12
+Viet Tri,Bien Hoa,13.2008225111,12
+Viet Tri,Ca Mau,8.66400273752,12
+Viet Tri,Can Tho,39.4507698595,12
+Viet Tri,Da Nang,39.9660146855,12
+Viet Tri,Ho Chi Minh City,69.3428727204,12
+Viet Tri,Hue,24.7212833273,12
+Viet Tri,Long Xuyen,10.2204089357,12
+Viet Tri,Qui Nhon,6.19386644591,12
+Viet Tri,Viet Tri,1797.32905238,12
+Viet Tri,Vinh,59.5352453496,12
+Vinh,Vinh,243.420307195,12
+Balikpapan,Balikpapan,116.873731792,12
+Banda Aceh,Banda Aceh,144.766279447,12
+Bandar Lampung,Bandar Lampung,663.410415563,12
+Bandjarmasin,Bandjarmasin,198.963083453,12
+Bandung,Bandar Lampung,16.6267966912,12
+Bandung,Bandjarmasin,16.8380909621,12
+Bandung,Bandung,2113.11722674,12
+Bandung,Cilacap,104.329705303,12
+Bandung,Jakarta,550.595898062,12
+Bandung,Kupang,2.70637863137,12
+Bandung,Malang,13.964831516,12
+Bandung,Pakalongan,107.161358976,12
+Bandung,Pontianak,23.8402311148,12
+Bandung,Surabaya,26.139080253,12
+Bandung,Ujungpandang,1.24725058543,12
+Bandung,Yogyakarta,17.7543738573,12
+Bengkulu,Bandar Lampung,135.987062764,12
+Bengkulu,Bandjarmasin,12.4941866789,12
+Bengkulu,Bengkulu,321.250686242,12
+Bengkulu,Cilacap,20.9814163929,12
+Bengkulu,Jakarta,121.578942024,12
+Bengkulu,Kupang,1.29468244509,12
+Bengkulu,Malang,6.60813595784,12
+Bengkulu,Pakalongan,11.9780614308,12
+Bengkulu,Palembang,68.894001548,12
+Bengkulu,Pontianak,30.726695234,12
+Bengkulu,Surabaya,11.7745533722,12
+Bengkulu,Yogyakarta,6.48787750634,12
+Bogor,Bandar Lampung,2.5626409175,12
+Bogor,Bandjarmasin,1.1246880113,12
+Bogor,Bogor,2488.74106306,12
+Bogor,Cilacap,4.86273166156,12
+Bogor,Jakarta,166.656370734,12
+Bogor,Pakalongan,3.13982199425,12
+Bogor,Pontianak,2.75778046603,12
+Bogor,Surabaya,1.66671735796,12
+Bogor,Yogyakarta,1.15966603733,12
+Bukittinggi,Bandar Lampung,30.9113774676,12
+Bukittinggi,Bandjarmasin,4.67335679105,12
+Bukittinggi,Bukittinggi,354.97214283,12
+Bukittinggi,Cilacap,6.2229871179,12
+Bukittinggi,Jakarta,33.9209578585,12
+Bukittinggi,Malang,2.20228933375,12
+Bukittinggi,Padang,51.3819004436,12
+Bukittinggi,Pakalongan,3.47629596477,12
+Bukittinggi,Palembang,38.0698352755,12
+Bukittinggi,Pekanbaru,32.2060548291,12
+Bukittinggi,Pontianak,11.368923552,12
+Bukittinggi,Surabaya,3.86952361125,12
+Bukittinggi,Yogyakarta,1.96956289873,12
+Cilacap,Cilacap,567.549315703,12
+Cirebon,Bandar Lampung,23.7486668652,12
+Cirebon,Bandjarmasin,46.5346576221,12
+Cirebon,Bogor,1.09003542476,12
+Cirebon,Cilacap,325.622963574,12
+Cirebon,Cirebon,1265.89838213,12
+Cirebon,Jakarta,611.818775073,12
+Cirebon,Kupang,4.2161337679,12
+Cirebon,Malang,42.7326348202,12
+Cirebon,Mataram,2.37177060683,12
+Cirebon,Pakalongan,108.433038353,12
+Cirebon,Pontianak,34.2321279701,12
+Cirebon,Surabaya,81.4801432255,12
+Cirebon,Ujungpandang,3.36558041084,12
+Cirebon,Yogyakarta,62.6660963681,12
+Denpasar,Bandjarmasin,7.14969016784,12
+Denpasar,Denpasar,736.72954617,12
+Denpasar,Kupang,110.101579729,12
+Denpasar,Malang,23.8187723902,12
+Denpasar,Mataram,204.414549728,12
+Denpasar,Pontianak,1.29835358614,12
+Denpasar,Surabaya,29.0367049249,12
+Denpasar,Ujungpandang,58.7649892883,12
+Gorontalo,Balikpapan,1.75293384226,12
+Gorontalo,Bandjarmasin,5.818468122,12
+Gorontalo,Gorontalo,207.033969749,12
+Gorontalo,Manado,52.1817029368,12
+Gorontalo,Palu,119.317176798,12
+Gorontalo,Ujungpandang,111.779829808,12
+Jakarta,Jakarta,1015.25765798,12
+Jambi,Bandar Lampung,19.3367534291,12
+Jambi,Bandjarmasin,2.53200712944,12
+Jambi,Cilacap,3.67817127232,12
+Jambi,Jakarta,20.9613200277,12
+Jambi,Jambi,306.539420966,12
+Jambi,Malang,1.26181461022,12
+Jambi,Padang,1.36826959829,12
+Jambi,Pakalongan,2.0750844353,12
+Jambi,Palembang,43.0103048699,12
+Jambi,Pekanbaru,2.19335180417,12
+Jambi,Pontianak,5.78594726879,12
+Jambi,Surabaya,2.22766891063,12
+Jambi,Yogyakarta,1.15507085743,12
+Jember,Bandjarmasin,28.6769128543,12
+Jember,Cilacap,1.55994609912,12
+Jember,Jember,1168.29849949,12
+Jember,Kupang,26.7006617941,12
+Jember,Malang,182.913290485,12
+Jember,Mataram,26.1991284258,12
+Jember,Pontianak,5.08757746133,12
+Jember,Surabaya,222.440018171,12
+Jember,Ujungpandang,13.5015896706,12
+Jember,Yogyakarta,3.89629276185,12
+Kupang,Kupang,40.7011701174,12
+Malang,Malang,1472.75445364,12
+Manado,Manado,230.805411876,12
+Mataram,Mataram,338.223919613,12
+Medan,Banda Aceh,12.7231808551,12
+Medan,Bandar Lampung,7.54151055729,12
+Medan,Bandjarmasin,1.93757876666,12
+Medan,Cilacap,2.13477652551,12
+Medan,Jakarta,13.0495974019,12
+Medan,Medan,1116.66100744,12
+Medan,Padang,2.51611685759,12
+Medan,Pakalongan,1.18959350716,12
+Medan,Palembang,14.3632939708,12
+Medan,Pekanbaru,19.3316666913,12
+Medan,Pontianak,4.35775259517,12
+Medan,Surabaya,1.68104027033,12
+Padang,Padang,232.318258805,12
+Pakalongan,Pakalongan,558.379657678,12
+Palembang,Palembang,146.562527806,12
+Palu,Palu,76.3688017948,12
+Pekanbaru,Pekanbaru,77.0749022718,12
+Pematangsiantar,Banda Aceh,72.540331946,12
+Pematangsiantar,Bandar Lampung,145.234427925,12
+Pematangsiantar,Bandjarmasin,35.8335017816,12
+Pematangsiantar,Cilacap,35.7031937894,12
+Pematangsiantar,Jakarta,209.086039342,12
+Pematangsiantar,Kupang,4.03832002885,12
+Pematangsiantar,Malang,15.2586697766,12
+Pematangsiantar,Mataram,1.18407506729,12
+Pematangsiantar,Padang,64.507434639,12
+Pematangsiantar,Pakalongan,19.9113303093,12
+Pematangsiantar,Palembang,276.08157644,12
+Pematangsiantar,Pekanbaru,360.083183153,12
+Pematangsiantar,Pematangsiantar,593.813831567,12
+Pematangsiantar,Pontianak,85.990612248,12
+Pematangsiantar,Surabaya,26.7016529051,12
+Pematangsiantar,Ujungpandang,2.84419138631,12
+Pematangsiantar,Yogyakarta,13.1552719474,12
+Pontianak,Pontianak,48.5690569613,12
+Samarinda,Balikpapan,13.1660812154,12
+Samarinda,Bandjarmasin,9.18750223498,12
+Samarinda,Samarinda,309.705687036,12
+Semarang,Bandjarmasin,7.38047181273,12
+Semarang,Cilacap,6.33057393748,12
+Semarang,Jakarta,4.75533648626,12
+Semarang,Kupang,1.06789953408,12
+Semarang,Malang,9.15493753643,12
+Semarang,Pontianak,1.36448164373,12
+Semarang,Semarang,1339.10160045,12
+Semarang,Surabaya,19.8193747573,12
+Semarang,Yogyakarta,17.5465464779,12
+Sukabumi,Bandar Lampung,11.8056033567,12
+Sukabumi,Bandjarmasin,8.34230910435,12
+Sukabumi,Cilacap,36.9957445212,12
+Sukabumi,Jakarta,310.79928642,12
+Sukabumi,Malang,6.34082535423,12
+Sukabumi,Pakalongan,30.4588072053,12
+Sukabumi,Pontianak,16.5322658655,12
+Sukabumi,Sukabumi,863.072094156,12
+Sukabumi,Surabaya,11.7364409956,12
+Sukabumi,Yogyakarta,7.47959516868,12
+Surabaya,Surabaya,415.999912902,12
+Surakarta,Bandar Lampung,1.07767559242,12
+Surakarta,Bandjarmasin,31.0422858776,12
+Surakarta,Cilacap,36.0303722128,12
+Surakarta,Jakarta,16.260333619,12
+Surakarta,Kupang,5.51842164158,12
+Surakarta,Malang,97.5185439092,12
+Surakarta,Mataram,3.56677466513,12
+Surakarta,Pakalongan,5.033438229,12
+Surakarta,Pontianak,5.52250339846,12
+Surakarta,Surabaya,209.194915019,12
+Surakarta,Surakarta,2313.75235351,12
+Surakarta,Ujungpandang,4.54359461983,12
+Surakarta,Yogyakarta,220.014395339,12
+Tasikmalaya,Bandar Lampung,3.33779116158,12
+Tasikmalaya,Bandjarmasin,6.45723147014,12
+Tasikmalaya,Cilacap,145.834028781,12
+Tasikmalaya,Jakarta,65.5573349274,12
+Tasikmalaya,Malang,6.59320840635,12
+Tasikmalaya,Pakalongan,188.380106858,12
+Tasikmalaya,Pontianak,5.79220511992,12
+Tasikmalaya,Surabaya,11.6231486772,12
+Tasikmalaya,Tasikmalaya,1245.38871979,12
+Tasikmalaya,Yogyakarta,17.9270987931,12
+Ujungpandang,Ujungpandang,559.062624043,12
+Yogyakarta,Yogyakarta,836.355728106,12
+Alor Setar,Alor Setar,26.3438624836,12
+George Town,George Town,104.359190254,12
+Ipoh,Ipoh,165.782197869,12
+Kota Baharu,Kota Baharu,53.4843237237,12
+Kota Kinabalu,Kota Kinabalu,112.404022543,12
+Kota Kinabalu,Sandakan,6.34705025095,12
+Kuala Lumpur,Alor Setar,6.01632760512,12
+Kuala Lumpur,George Town,3.88799198333,12
+Kuala Lumpur,Kota Baharu,8.54068105248,12
+Kuala Lumpur,Kuala Lumpur,571.04859275,12
+Kuala Lumpur,Kuala Terengganu,2.67445157868,12
+Kuala Lumpur,Kuching,2.550791149,12
+Kuala Lumpur,Sandakan,1.65429365474,12
+Kuala Lumpur,Singapore,17.0313411962,12
+Kuala Lumpur,Sungai Petani,3.1566690648,12
+Kuala Terengganu,Kuala Terengganu,6.22769048064,12
+Kuantan,Alor Setar,4.58576824961,12
+Kuantan,George Town,2.90219341025,12
+Kuantan,Kota Baharu,32.6362777133,12
+Kuantan,Kuala Terengganu,13.8004770801,12
+Kuantan,Kuantan,72.9572577825,12
+Kuantan,Kuching,3.92291191804,12
+Kuantan,Sandakan,2.34533531019,12
+Kuantan,Singapore,10.324771449,12
+Kuantan,Sungai Petani,2.28195463524,12
+Kuching,Kuching,11.1390443576,12
+Malacca,Alor Setar,52.9534598405,12
+Malacca,George Town,32.2765968578,12
+Malacca,Ipoh,3.91234628175,12
+Malacca,Kota Baharu,85.9114377219,12
+Malacca,Kuala Terengganu,27.1396004893,12
+Malacca,Kuching,54.3983927547,12
+Malacca,Malacca,141.400971458,12
+Malacca,Sandakan,32.3317499425,12
+Malacca,Singapore,447.48849199,12
+Malacca,Sungai Petani,26.5875979225,12
+Sandakan,Sandakan,5.27251345796,12
+Seremban,Alor Setar,15.6502109701,12
+Seremban,George Town,9.8242359423,12
+Seremban,Ipoh,1.30525642545,12
+Seremban,Kota Baharu,23.0720408948,12
+Seremban,Kuala Terengganu,6.75971532855,12
+Seremban,Kuching,10.6685738773,12
+Seremban,Sandakan,6.36444546559,12
+Seremban,Seremban,103.117374273,12
+Seremban,Singapore,81.771688722,12
+Seremban,Sungai Petani,8.01330719202,12
+Singapore,Singapore,219.237847022,12
+Sungai Petani,Sungai Petani,11.7511031807,12
+Tawau,Sandakan,3.46799615879,12
+Tawau,Tawau,56.4418608067,12
+Chittagong,Chittagong,3992.0847279,12
+Chittagong,Comilla,42.8431382155,12
+Chittagong,Dhaka,70.8709977649,12
+Chittagong,Mymensingh,3.94110327152,12
+Comilla,Comilla,4888.50364675,12
+Dhaka,Dhaka,4914.68261168,12
+Khulna,Khulna,6284.45742339,12
+Mymensingh,Dhaka,1.50941967546,12
+Mymensingh,Mymensingh,5845.38881524,12
+Rajshahi,Comilla,317.214030552,12
+Rajshahi,Dhaka,3432.80701122,12
+Rajshahi,Khulna,158.805268144,12
+Rajshahi,Mymensingh,630.210869805,12
+Rajshahi,Rajshahi,6507.56564197,12
+Rangpur,Comilla,338.457976356,12
+Rangpur,Dhaka,3476.06090571,12
+Rangpur,Khulna,104.659855425,12
+Rangpur,Mymensingh,608.329321547,12
+Rangpur,Rangpur,5159.7944371,12
+Angeles,Angeles,921.947885448,12
+Angeles,Bacolod,1.62119118277,12
+Angeles,Batangas,73.6347701397,12
+Angeles,Iloilo,2.41333164229,12
+Angeles,Legazpi,17.9332314152,12
+Angeles,Manila,227.814654152,12
+Angeles,Naga,30.2156683436,12
+Angeles,Quezon City,410.967899542,12
+Bacolod,Bacolod,125.958200937,12
+Baguio City,Bacolod,16.5589981304,12
+Baguio City,Baguio City,1089.46638907,12
+Baguio City,Batangas,456.732731284,12
+Baguio City,Cebu,7.43053047408,12
+Baguio City,Iloilo,24.2730916341,12
+Baguio City,Legazpi,170.843949498,12
+Baguio City,Manila,1026.948421,12
+Baguio City,Naga,278.444745713,12
+Baguio City,Quezon City,1658.19653075,12
+Batangas,Batangas,499.40746595,12
+Cagayan de Oro,Bacolod,483.656670267,12
+Cagayan de Oro,Batangas,3.55571397997,12
+Cagayan de Oro,Cagayan de Oro,503.707613214,12
+Cagayan de Oro,Cebu,759.585167703,12
+Cagayan de Oro,Davao,280.610089184,12
+Cagayan de Oro,General Santos,155.933799042,12
+Cagayan de Oro,Iligan,233.604930609,12
+Cagayan de Oro,Iloilo,167.842626923,12
+Cagayan de Oro,Legazpi,225.627609865,12
+Cagayan de Oro,Manila,3.2703900626,12
+Cagayan de Oro,Naga,122.579839438,12
+Cagayan de Oro,Quezon City,4.43230359572,12
+Cagayan de Oro,Zamboanga,172.304198244,12
+Cebu,Cebu,232.817932414,12
+Davao,Davao,688.300920884,12
+General Santos,General Santos,307.281237852,12
+Iligan,Iligan,388.481954097,12
+Iloilo,Iloilo,418.634525326,12
+Legazpi,Legazpi,32.4193252423,12
+Manila,Manila,212.84678975,12
+Naga,Naga,98.8529018672,12
+Olongapo,Batangas,23.8785761506,12
+Olongapo,Legazpi,6.92047054638,12
+Olongapo,Manila,62.6673251987,12
+Olongapo,Naga,11.3330704972,12
+Olongapo,Olongapo,286.855131217,12
+Olongapo,Quezon City,102.457893214,12
+Quezon City,Quezon City,101.939049631,12
+Zamboanga,Zamboanga,112.859721078,12
+Bangkok,Bangkok,188.109064214,12
+Chiang Mai,Bangkok,618.860422913,12
+Chiang Mai,Chiang Mai,217.300203816,12
+Chiang Mai,Hat Yai,217.592804281,12
+Chiang Mai,Nakhon Ratchasima,87.872092606,12
+Chiang Mai,Nonthaburi,603.508805962,12
+Hat Yai,Hat Yai,12.2671217808,12
+Nakhon Ratchasima,Nakhon Ratchasima,247.529345221,12
+Nonthaburi,Nonthaburi,405.068936755,12
+Bago,Bago,1229.67852619,12
+Bago,Mandalay,4.53086107535,12
+Bago,Rangoon,260.325943328,12
+Mandalay,Mandalay,2076.52860649,12
+Naypyidaw,Mandalay,240.094791339,12
+Naypyidaw,Naypyidaw,1161.17925981,12
+Naypyidaw,Rangoon,562.446316193,12
+Rangoon,Rangoon,2592.68951384,12
+Bien Hoa,Bien Hoa,1906.23348959,1
+Buon Me Thuot,Bien Hoa,2730.34306537,1
+Buon Me Thuot,Buon Me Thuot,2618.37584128,1
+Buon Me Thuot,Ca Mau,35.5828772474,1
+Buon Me Thuot,Can Tho,1339.11086569,1
+Buon Me Thuot,Da Nang,1240.98268273,1
+Buon Me Thuot,Ho Chi Minh City,5370.69354077,1
+Buon Me Thuot,Hue,785.087039661,1
+Buon Me Thuot,Long Xuyen,2.06887210601,1
+Buon Me Thuot,Thai Nguyen,20.763872478,1
+Buon Me Thuot,Viet Tri,21.7325943435,1
+Buon Me Thuot,Vinh,1015.99205297,1
+Ca Mau,Ca Mau,1736.11162669,1
+Can Tho,Can Tho,4237.85155371,1
+Da Nang,Da Nang,349.965488407,1
+Haiphong,Da Nang,13.8598084933,1
+Haiphong,Haiphong,8478.71581736,1
+Haiphong,Hanoi,3.58578509646,1
+Haiphong,Hue,23.5248654038,1
+Haiphong,Thai Nguyen,875.792206078,1
+Haiphong,Viet Tri,770.143434392,1
+Haiphong,Vinh,1333.19128689,1
+Hanoi,Da Nang,2.7932721149,1
+Hanoi,Hanoi,9644.37465528,1
+Hanoi,Hue,4.92010816142,1
+Hanoi,Thai Nguyen,282.496230726,1
+Hanoi,Viet Tri,297.182860873,1
+Hanoi,Vinh,303.018960084,1
+Ho Chi Minh City,Ho Chi Minh City,4134.03189463,1
+Hue,Hue,212.221722772,1
+Long Xuyen,Bien Hoa,12.8237342202,1
+Long Xuyen,Ca Mau,1.76201484237,1
+Long Xuyen,Can Tho,142.010620299,1
+Long Xuyen,Ho Chi Minh City,41.7875295305,1
+Long Xuyen,Long Xuyen,3793.65376343,1
+Qui Nhon,Bien Hoa,69.318708274,1
+Qui Nhon,Ca Mau,1.18671917228,1
+Qui Nhon,Can Tho,43.4113599842,1
+Qui Nhon,Da Nang,651.85898472,1
+Qui Nhon,Ho Chi Minh City,144.320724612,1
+Qui Nhon,Hue,373.650881257,1
+Qui Nhon,Qui Nhon,2427.87792858,1
+Qui Nhon,Thai Nguyen,7.8420935256,1
+Qui Nhon,Viet Tri,8.14986068183,1
+Qui Nhon,Vinh,402.602102047,1
+Rach Gia,Bien Hoa,199.0420812,1
+Rach Gia,Ca Mau,82.7036999074,1
+Rach Gia,Can Tho,1542.65995382,1
+Rach Gia,Da Nang,2.99963711729,1
+Rach Gia,Ho Chi Minh City,624.468796435,1
+Rach Gia,Hue,2.04047054859,1
+Rach Gia,Long Xuyen,5.39044285148,1
+Rach Gia,Rach Gia,2196.63512536,1
+Rach Gia,Vinh,12.3431611507,1
+Thai Nguyen,Thai Nguyen,1423.58223602,1
+Viet Tri,Viet Tri,2869.28881049,1
+Vinh,Vinh,871.513020469,1
+Balikpapan,Balikpapan,85.5621597309,1
+Banda Aceh,Banda Aceh,177.323303976,1
+Banda Aceh,Bandar Lampung,3.18156382042,1
+Banda Aceh,Bogor,2.18156460407,1
+Banda Aceh,Cilacap,2.11702042838,1
+Banda Aceh,Cirebon,1.21492755321,1
+Banda Aceh,Jakarta,8.5691957841,1
+Banda Aceh,Jember,1.27071258088,1
+Banda Aceh,Malang,4.48495626376,1
+Banda Aceh,Mataram,1.46788788306,1
+Banda Aceh,Pakalongan,2.42929211739,1
+Banda Aceh,Palembang,1.41893342574,1
+Banda Aceh,Semarang,2.35735402064,1
+Banda Aceh,Surabaya,3.1788056759,1
+Banda Aceh,Surakarta,1.81168386095,1
+Banda Aceh,Yogyakarta,2.66067084908,1
+Bandar Lampung,Bandar Lampung,265.020368989,1
+Bandjarmasin,Bandjarmasin,115.549645636,1
+Bandung,Bandung,1519.36102181,1
+Bengkulu,Bandar Lampung,63.8367175846,1
+Bengkulu,Bandjarmasin,6.94501185703,1
+Bengkulu,Bandung,5.83873078604,1
+Bengkulu,Bengkulu,247.58438852,1
+Bengkulu,Bogor,33.0638358457,1
+Bengkulu,Cilacap,27.2543321977,1
+Bengkulu,Cirebon,17.0905281515,1
+Bengkulu,Denpasar,8.70291521872,1
+Bengkulu,Jakarta,127.722138573,1
+Bengkulu,Jember,12.7639493574,1
+Bengkulu,Kupang,4.94543272151,1
+Bengkulu,Malang,46.3041962249,1
+Bengkulu,Mataram,13.5504433541,1
+Bengkulu,Pakalongan,32.1739080059,1
+Bengkulu,Palembang,11.9102679303,1
+Bengkulu,Pontianak,5.90493448928,1
+Bengkulu,Semarang,28.27099509,1
+Bengkulu,Surabaya,33.7045173043,1
+Bengkulu,Surakarta,20.8761004574,1
+Bengkulu,Ujungpandang,7.3011984751,1
+Bengkulu,Yogyakarta,31.8943598704,1
+Bogor,Bogor,1393.82784052,1
+Bukittinggi,Bandar Lampung,35.3829768779,1
+Bukittinggi,Bandjarmasin,6.33427618501,1
+Bukittinggi,Bandung,4.13077676378,1
+Bukittinggi,Bogor,22.1618581016,1
+Bukittinggi,Bukittinggi,273.557780256,1
+Bukittinggi,Cilacap,19.7107295904,1
+Bukittinggi,Cirebon,12.0274823444,1
+Bukittinggi,Denpasar,6.26769538266,1
+Bukittinggi,Jakarta,86.8918382001,1
+Bukittinggi,Jember,10.5312812537,1
+Bukittinggi,Kupang,4.72207177801,1
+Bukittinggi,Malang,37.6286650504,1
+Bukittinggi,Mataram,10.292221309,1
+Bukittinggi,Pakalongan,22.7686394294,1
+Bukittinggi,Palembang,16.048120408,1
+Bukittinggi,Pekanbaru,8.63569118208,1
+Bukittinggi,Pontianak,5.32747760487,1
+Bukittinggi,Semarang,21.4373295405,1
+Bukittinggi,Surabaya,27.0087338843,1
+Bukittinggi,Surakarta,16.1337397103,1
+Bukittinggi,Ujungpandang,6.77713838615,1
+Bukittinggi,Yogyakarta,23.6093569785,1
+Cilacap,Cilacap,539.387071985,1
+Cirebon,Cirebon,703.036214199,1
+Denpasar,Denpasar,419.535278392,1
+Gorontalo,Gorontalo,159.566037741,1
+Gorontalo,Manado,52.641282862,1
+Gorontalo,Palu,76.3376822771,1
+Gorontalo,Ujungpandang,182.349956491,1
+Jakarta,Jakarta,401.361991424,1
+Jambi,Bandar Lampung,29.6619005936,1
+Jambi,Bandjarmasin,4.59909506092,1
+Jambi,Bandung,3.37714262422,1
+Jambi,Bogor,17.980723855,1
+Jambi,Cilacap,15.6125970709,1
+Jambi,Cirebon,9.53474908903,1
+Jambi,Denpasar,5.35390515648,1
+Jambi,Jakarta,71.9563145592,1
+Jambi,Jambi,236.24172108,1
+Jambi,Jember,7.9391470567,1
+Jambi,Kupang,3.34443005569,1
+Jambi,Malang,28.8921188685,1
+Jambi,Mataram,8.39256746871,1
+Jambi,Pakalongan,18.21358822,1
+Jambi,Palembang,24.2971370302,1
+Jambi,Pontianak,3.63342469354,1
+Jambi,Semarang,16.9944591155,1
+Jambi,Surabaya,20.837075926,1
+Jambi,Surakarta,12.6798239457,1
+Jambi,Ujungpandang,4.87752213534,1
+Jambi,Yogyakarta,18.5550588602,1
+Jember,Jember,670.097939533,1
+Kupang,Kupang,14.1598373828,1
+Malang,Malang,623.517674988,1
+Manado,Manado,165.461686153,1
+Mataram,Mataram,207.795341431,1
+Medan,Bandar Lampung,154.611799432,1
+Medan,Bandjarmasin,47.0365764599,1
+Medan,Bandung,29.2806261299,1
+Medan,Bogor,128.128527498,1
+Medan,Cilacap,121.105675858,1
+Medan,Cirebon,70.4278421932,1
+Medan,Denpasar,49.2080426359,1
+Medan,Jakarta,598.709669005,1
+Medan,Jember,70.153151826,1
+Medan,Kupang,62.9497428723,1
+Medan,Malang,253.683985993,1
+Medan,Mataram,79.3200467119,1
+Medan,Medan,860.902253047,1
+Medan,Pakalongan,139.549151927,1
+Medan,Palembang,108.443994637,1
+Medan,Pekanbaru,92.840432527,1
+Medan,Pontianak,36.5740570448,1
+Medan,Semarang,138.202363714,1
+Medan,Surabaya,210.15180441,1
+Medan,Surakarta,105.923566269,1
+Medan,Ujungpandang,52.0267428852,1
+Medan,Yogyakarta,150.550846133,1
+Padang,Bandar Lampung,9.95104769088,1
+Padang,Bandjarmasin,1.87511323862,1
+Padang,Bandung,1.23031902587,1
+Padang,Bogor,6.20518764473,1
+Padang,Cilacap,5.55949202478,1
+Padang,Cirebon,3.34134648712,1
+Padang,Denpasar,2.02862608752,1
+Padang,Jakarta,25.9011325158,1
+Padang,Jember,2.96856967673,1
+Padang,Kupang,2.30651769087,1
+Padang,Malang,10.8460880066,1
+Padang,Mataram,3.19777569977,1
+Padang,Padang,271.53885056,1
+Padang,Pakalongan,6.4717525887,1
+Padang,Palembang,4.81966048236,1
+Padang,Pekanbaru,1.04262132337,1
+Padang,Pontianak,1.41265961565,1
+Padang,Semarang,6.37522875447,1
+Padang,Surabaya,8.05089218975,1
+Padang,Surakarta,4.72420453272,1
+Padang,Ujungpandang,2.0123191582,1
+Padang,Yogyakarta,6.73336124045,1
+Pakalongan,Pakalongan,158.185529274,1
+Palembang,Palembang,110.119912211,1
+Palu,Palu,74.097257053,1
+Pekanbaru,Pekanbaru,128.254413681,1
+Pematangsiantar,Bandar Lampung,251.797015806,1
+Pematangsiantar,Bandjarmasin,73.5634854211,1
+Pematangsiantar,Bandung,39.4588293291,1
+Pematangsiantar,Bogor,208.124944553,1
+Pematangsiantar,Cilacap,171.283628803,1
+Pematangsiantar,Cirebon,115.811352952,1
+Pematangsiantar,Denpasar,68.9792698052,1
+Pematangsiantar,Jakarta,811.224210849,1
+Pematangsiantar,Jember,111.820906875,1
+Pematangsiantar,Kupang,56.970471974,1
+Pematangsiantar,Malang,394.880874839,1
+Pematangsiantar,Mataram,111.007486733,1
+Pematangsiantar,Pakalongan,197.526606365,1
+Pematangsiantar,Palembang,176.272917582,1
+Pematangsiantar,Pekanbaru,146.240412909,1
+Pematangsiantar,Pematangsiantar,457.654174012,1
+Pematangsiantar,Pontianak,61.0321006146,1
+Pematangsiantar,Semarang,214.057699559,1
+Pematangsiantar,Surabaya,282.286338879,1
+Pematangsiantar,Surakarta,163.816584993,1
+Pematangsiantar,Ujungpandang,80.0425895494,1
+Pematangsiantar,Yogyakarta,238.846633626,1
+Pontianak,Pontianak,100.718571585,1
+Samarinda,Balikpapan,16.4130413604,1
+Samarinda,Bandjarmasin,65.1338584288,1
+Samarinda,Samarinda,238.698432364,1
+Samarinda,Ujungpandang,7.79565548758,1
+Semarang,Semarang,563.24495777,1
+Sukabumi,Bandar Lampung,4.51296112543,1
+Sukabumi,Bandjarmasin,3.77617166149,1
+Sukabumi,Bandung,21.6922589659,1
+Sukabumi,Bogor,104.051247216,1
+Sukabumi,Cilacap,39.1338849857,1
+Sukabumi,Cirebon,30.2384232221,1
+Sukabumi,Denpasar,4.84964051219,1
+Sukabumi,Jakarta,265.881600936,1
+Sukabumi,Jember,9.36629865887,1
+Sukabumi,Kupang,2.44629657456,1
+Sukabumi,Malang,36.1815878251,1
+Sukabumi,Mataram,8.22389405297,1
+Sukabumi,Pakalongan,66.6239874681,1
+Sukabumi,Pontianak,2.58721226858,1
+Sukabumi,Semarang,31.0029432344,1
+Sukabumi,Sukabumi,665.19089683,1
+Sukabumi,Surabaya,27.3577602389,1
+Sukabumi,Surakarta,20.5586037151,1
+Sukabumi,Ujungpandang,3.8051300039,1
+Sukabumi,Yogyakarta,29.942619476,1
+Surabaya,Surabaya,205.692598687,1
+Surakarta,Surakarta,1426.31731554,1
+Tasikmalaya,Bandjarmasin,1.11968995022,1
+Tasikmalaya,Bandung,3.97655809365,1
+Tasikmalaya,Bogor,5.17057818115,1
+Tasikmalaya,Cilacap,59.0943609632,1
+Tasikmalaya,Cirebon,12.7943975428,1
+Tasikmalaya,Denpasar,1.93883101064,1
+Tasikmalaya,Jakarta,21.4840194323,1
+Tasikmalaya,Jember,3.45291077787,1
+Tasikmalaya,Malang,14.4120117788,1
+Tasikmalaya,Mataram,2.7942234315,1
+Tasikmalaya,Pakalongan,157.847876256,1
+Tasikmalaya,Semarang,10.5358546275,1
+Tasikmalaya,Surabaya,10.3789611627,1
+Tasikmalaya,Surakarta,10.3192372497,1
+Tasikmalaya,Tasikmalaya,959.727963598,1
+Tasikmalaya,Ujungpandang,1.29207461641,1
+Tasikmalaya,Yogyakarta,27.4920854367,1
+Ujungpandang,Ujungpandang,235.398913504,1
+Yogyakarta,Yogyakarta,401.168116742,1
+Alor Setar,Alor Setar,88.9263212363,1
+George Town,George Town,304.989145385,1
+Ipoh,Alor Setar,3.11871413819,1
+Ipoh,Ipoh,377.261504627,1
+Ipoh,Singapore,3.4825166977,1
+Ipoh,Sungai Petani,1.71004937819,1
+Kota Baharu,Alor Setar,34.3999019134,1
+Kota Baharu,George Town,6.55374307734,1
+Kota Baharu,Kota Baharu,448.901089298,1
+Kota Baharu,Kota Kinabalu,1.71605803757,1
+Kota Baharu,Kuala Terengganu,13.0914063285,1
+Kota Baharu,Kuching,12.4262513893,1
+Kota Baharu,Sandakan,9.01756471643,1
+Kota Baharu,Singapore,45.3236216926,1
+Kota Baharu,Sungai Petani,16.5164414548,1
+Kota Baharu,Tawau,2.19378717194,1
+Kota Kinabalu,Kota Kinabalu,224.186584786,1
+Kuala Lumpur,Alor Setar,7.72947015753,1
+Kuala Lumpur,George Town,1.91564350622,1
+Kuala Lumpur,Kuala Lumpur,1257.58039759,1
+Kuala Lumpur,Kuching,5.59752330435,1
+Kuala Lumpur,Sandakan,4.39771404723,1
+Kuala Lumpur,Singapore,51.1996506851,1
+Kuala Lumpur,Sungai Petani,3.79895867074,1
+Kuala Lumpur,Tawau,1.14605007607,1
+Kuala Terengganu,Kuala Terengganu,79.7822294395,1
+Kuantan,Alor Setar,34.9337252736,1
+Kuantan,George Town,8.47871880209,1
+Kuantan,Kota Kinabalu,7.04385858781,1
+Kuantan,Kuala Terengganu,23.9101076076,1
+Kuantan,Kuantan,160.711156529,1
+Kuantan,Kuching,51.0439312877,1
+Kuantan,Sandakan,36.9686740772,1
+Kuantan,Singapore,184.040389943,1
+Kuantan,Sungai Petani,16.2838491512,1
+Kuantan,Tawau,8.99258914266,1
+Kuching,Kuching,12.3808817747,1
+Malacca,Alor Setar,43.9295601384,1
+Malacca,George Town,10.2688387551,1
+Malacca,Kota Kinabalu,10.580356622,1
+Malacca,Kuala Terengganu,5.12059699554,1
+Malacca,Kuching,77.0817104239,1
+Malacca,Malacca,311.406932262,1
+Malacca,Sandakan,55.4993452714,1
+Malacca,Singapore,868.648922522,1
+Malacca,Sungai Petani,20.6613589475,1
+Malacca,Tawau,13.4994096073,1
+Sandakan,Sandakan,4.30031493104,1
+Seremban,Alor Setar,19.757371887,1
+Seremban,George Town,4.75640519938,1
+Seremban,Kota Kinabalu,3.16923692148,1
+Seremban,Kuala Terengganu,1.94085020645,1
+Seremban,Kuching,23.0047812559,1
+Seremban,Sandakan,16.6251542143,1
+Seremban,Seremban,227.122773776,1
+Seremban,Singapore,241.55267171,1
+Seremban,Sungai Petani,9.47628331766,1
+Seremban,Tawau,4.04384944809,1
+Singapore,Singapore,314.621497113,1
+Sungai Petani,Sungai Petani,45.8076170721,1
+Tawau,Tawau,94.3339464331,1
+Chittagong,Chittagong,5154.01830551,1
+Chittagong,Comilla,993.318261,1
+Chittagong,Dhaka,781.899279935,1
+Chittagong,Khulna,39.2023162605,1
+Chittagong,Mymensingh,18.6548557459,1
+Comilla,Comilla,4659.42126237,1
+Dhaka,Dhaka,6806.62680282,1
+Khulna,Khulna,6675.60932725,1
+Mymensingh,Dhaka,5.13810319344,1
+Mymensingh,Mymensingh,8536.85753081,1
+Rajshahi,Comilla,560.121778091,1
+Rajshahi,Dhaka,2884.39398145,1
+Rajshahi,Khulna,827.195414901,1
+Rajshahi,Mymensingh,227.186695974,1
+Rajshahi,Rajshahi,8399.70130778,1
+Rangpur,Comilla,998.101509146,1
+Rangpur,Dhaka,4877.89511264,1
+Rangpur,Khulna,910.464950339,1
+Rangpur,Mymensingh,366.248322451,1
+Rangpur,Rangpur,6660.15790771,1
+Angeles,Angeles,1960.45170011,1
+Angeles,Bacolod,45.4360169022,1
+Angeles,Batangas,41.2246895342,1
+Angeles,Cebu,52.6223114313,1
+Angeles,Legazpi,79.3658434239,1
+Angeles,Manila,492.972836676,1
+Angeles,Naga,55.078093442,1
+Angeles,Quezon City,850.475048563,1
+Bacolod,Bacolod,414.540377918,1
+Baguio City,Angeles,1.1801998288,1
+Baguio City,Bacolod,448.320361981,1
+Baguio City,Baguio City,2316.613028,1
+Baguio City,Batangas,247.015941513,1
+Baguio City,Cebu,521.661164486,1
+Baguio City,Davao,2.532052079,1
+Baguio City,General Santos,1.97648710456,1
+Baguio City,Legazpi,730.403883427,1
+Baguio City,Manila,2146.73458245,1
+Baguio City,Naga,490.313790705,1
+Baguio City,Quezon City,3314.95827192,1
+Baguio City,Zamboanga,2.73443048653,1
+Batangas,Batangas,1946.72026318,1
+Cagayan de Oro,Bacolod,250.76388985,1
+Cagayan de Oro,Cagayan de Oro,1071.07078533,1
+Cagayan de Oro,Cebu,1021.21826035,1
+Cagayan de Oro,Davao,1089.31476507,1
+Cagayan de Oro,General Santos,606.442194499,1
+Cagayan de Oro,Iligan,437.524791778,1
+Cagayan de Oro,Legazpi,18.472646646,1
+Cagayan de Oro,Naga,4.13359134064,1
+Cagayan de Oro,Zamboanga,377.40933819,1
+Cebu,Cebu,470.301673448,1
+Davao,Davao,968.006859805,1
+General Santos,General Santos,376.202886019,1
+Iligan,Iligan,884.987240909,1
+Iloilo,Bacolod,158.906347474,1
+Iloilo,Cebu,41.5586075065,1
+Iloilo,Iloilo,1305.7822407,1
+Legazpi,Legazpi,106.064714357,1
+Manila,Manila,488.108438342,1
+Naga,Naga,581.332284577,1
+Olongapo,Bacolod,18.3718689572,1
+Olongapo,Batangas,13.0346012128,1
+Olongapo,Cebu,20.6563174843,1
+Olongapo,Legazpi,29.8624593403,1
+Olongapo,Manila,132.220061635,1
+Olongapo,Naga,20.1423040601,1
+Olongapo,Olongapo,609.963792766,1
+Olongapo,Quezon City,206.734977508,1
+Quezon City,Quezon City,470.717017785,1
+Zamboanga,Zamboanga,225.572236284,1
+Bangkok,Bangkok,310.68263516,1
+Chiang Mai,Bangkok,900.661711955,1
+Chiang Mai,Chiang Mai,326.203276964,1
+Chiang Mai,Hat Yai,280.501181859,1
+Chiang Mai,Nakhon Ratchasima,179.159574186,1
+Chiang Mai,Nonthaburi,819.709349476,1
+Hat Yai,Hat Yai,64.5594190774,1
+Nakhon Ratchasima,Nakhon Ratchasima,324.329439631,1
+Nonthaburi,Nonthaburi,694.347173129,1
+Bago,Bago,2128.56381008,1
+Bago,Mandalay,50.2859650262,1
+Bago,Rangoon,583.860752113,1
+Mandalay,Mandalay,3174.52046083,1
+Naypyidaw,Mandalay,792.373419541,1
+Naypyidaw,Naypyidaw,2009.63508345,1
+Naypyidaw,Rangoon,375.106012492,1
+Rangoon,Rangoon,4952.19250399,1
+Bien Hoa,Bien Hoa,1906.23218999,2
+Buon Me Thuot,Bien Hoa,2730.34352606,2
+Buon Me Thuot,Buon Me Thuot,2618.37584127,2
+Buon Me Thuot,Ca Mau,35.5900838374,2
+Buon Me Thuot,Can Tho,1339.10666398,2
+Buon Me Thuot,Da Nang,1240.98186024,2
+Buon Me Thuot,Ho Chi Minh City,5370.6937046,2
+Buon Me Thuot,Hue,785.086325249,2
+Buon Me Thuot,Long Xuyen,2.06855479761,2
+Buon Me Thuot,Thai Nguyen,20.7634593559,2
+Buon Me Thuot,Viet Tri,21.7321349684,2
+Buon Me Thuot,Vinh,1015.9814648,2
+Ca Mau,Ca Mau,1736.08732912,2
+Can Tho,Can Tho,4237.8493717,2
+Da Nang,Da Nang,349.965270309,2
+Haiphong,Da Nang,13.8600368901,2
+Haiphong,Haiphong,8478.71581674,2
+Haiphong,Hanoi,3.58574713037,2
+Haiphong,Hue,23.5252472562,2
+Haiphong,Thai Nguyen,875.789793549,2
+Haiphong,Viet Tri,770.140356812,2
+Haiphong,Vinh,1333.20024616,2
+Hanoi,Da Nang,2.79334773307,2
+Hanoi,Hanoi,9644.37469613,2
+Hanoi,Hue,4.92024014,2
+Hanoi,Thai Nguyen,282.498444813,2
+Hanoi,Viet Tri,297.184821131,2
+Hanoi,Vinh,303.024206109,2
+Ho Chi Minh City,Ho Chi Minh City,4134.02910048,2
+Hue,Hue,212.221593615,2
+Long Xuyen,Bien Hoa,12.8257075165,2
+Long Xuyen,Ca Mau,1.76264259636,2
+Long Xuyen,Can Tho,142.032003055,2
+Long Xuyen,Ho Chi Minh City,41.7939539539,2
+Long Xuyen,Long Xuyen,3793.65495261,2
+Qui Nhon,Bien Hoa,69.3188438671,2
+Qui Nhon,Ca Mau,1.18696163969,2
+Qui Nhon,Can Tho,43.411301364,2
+Qui Nhon,Da Nang,651.859717785,2
+Qui Nhon,Ho Chi Minh City,144.320986966,2
+Qui Nhon,Hue,373.651209088,2
+Qui Nhon,Qui Nhon,2427.87792883,2
+Qui Nhon,Thai Nguyen,7.84195151406,2
+Qui Nhon,Viet Tri,8.14970297964,2
+Qui Nhon,Vinh,402.59862591,2
+Rach Gia,Bien Hoa,199.040832412,2
+Rach Gia,Ca Mau,82.7199169195,2
+Rach Gia,Can Tho,1542.64517454,2
+Rach Gia,Da Nang,2.9996158034,2
+Rach Gia,Ho Chi Minh City,624.464792207,2
+Rach Gia,Hue,2.04045554563,2
+Rach Gia,Long Xuyen,5.38958138117,2
+Rach Gia,Rach Gia,2196.63512433,2
+Rach Gia,Vinh,12.3429529936,2
+Thai Nguyen,Thai Nguyen,1423.58299467,2
+Viet Tri,Viet Tri,2869.29055119,2
+Vinh,Vinh,871.512988952,2
+Balikpapan,Balikpapan,85.579412065,2
+Banda Aceh,Banda Aceh,177.32330394,2
+Banda Aceh,Bandar Lampung,3.18149440943,2
+Banda Aceh,Bogor,2.1815300503,2
+Banda Aceh,Cilacap,2.11698042792,2
+Banda Aceh,Cirebon,1.21490896498,2
+Banda Aceh,Jakarta,8.56899784899,2
+Banda Aceh,Jember,1.27069487211,2
+Banda Aceh,Malang,4.48486101707,2
+Banda Aceh,Mataram,1.46785718418,2
+Banda Aceh,Pakalongan,2.42924281197,2
+Banda Aceh,Palembang,1.41890169254,2
+Banda Aceh,Semarang,2.35730681481,2
+Banda Aceh,Surabaya,3.17873461302,2
+Banda Aceh,Surakarta,1.81166807874,2
+Banda Aceh,Yogyakarta,2.6606153085,2
+Bandar Lampung,Bandar Lampung,265.019716952,2
+Bandjarmasin,Bandjarmasin,115.55267167,2
+Bandung,Bandung,1519.39469697,2
+Bengkulu,Bandar Lampung,63.8367478314,2
+Bengkulu,Bandjarmasin,6.9432264692,2
+Bengkulu,Bandung,5.83692748258,2
+Bengkulu,Bengkulu,247.584388511,2
+Bengkulu,Bogor,33.06404916,2
+Bengkulu,Cilacap,27.2544247482,2
+Bengkulu,Cirebon,17.0906476266,2
+Bengkulu,Denpasar,8.70298547322,2
+Bengkulu,Jakarta,127.722035369,2
+Bengkulu,Jember,12.7640559941,2
+Bengkulu,Kupang,4.94543363218,2
+Bengkulu,Malang,46.3042450077,2
+Bengkulu,Mataram,13.5504620106,2
+Bengkulu,Pakalongan,32.1739721693,2
+Bengkulu,Palembang,11.9102670526,2
+Bengkulu,Pontianak,5.90493537479,2
+Bengkulu,Semarang,28.2710591397,2
+Bengkulu,Surabaya,33.7045151207,2
+Bengkulu,Surakarta,20.8763839421,2
+Bengkulu,Ujungpandang,7.30199249119,2
+Bengkulu,Yogyakarta,31.8944050267,2
+Bogor,Bogor,1393.82365595,2
+Bukittinggi,Bandar Lampung,35.3829829808,2
+Bukittinggi,Bandjarmasin,6.33264589373,2
+Bukittinggi,Bandung,4.12949972092,2
+Bukittinggi,Bogor,22.1619944026,2
+Bukittinggi,Bukittinggi,273.557780203,2
+Bukittinggi,Cilacap,19.7107905847,2
+Bukittinggi,Cirebon,12.0275628009,2
+Bukittinggi,Denpasar,6.26774409012,2
+Bukittinggi,Jakarta,86.8917418053,2
+Bukittinggi,Jember,10.5313660641,2
+Bukittinggi,Kupang,4.72207122464,2
+Bukittinggi,Malang,37.6286933545,2
+Bukittinggi,Mataram,10.2922323781,2
+Bukittinggi,Pakalongan,22.7686779752,2
+Bukittinggi,Palembang,16.0481143896,2
+Bukittinggi,Pekanbaru,8.63568965867,2
+Bukittinggi,Pontianak,5.32747679845,2
+Bukittinggi,Semarang,21.4373716483,2
+Bukittinggi,Surabaya,27.0087239959,2
+Bukittinggi,Surakarta,16.1339539349,2
+Bukittinggi,Ujungpandang,6.77787336753,2
+Bukittinggi,Yogyakarta,23.6093832906,2
+Cilacap,Cilacap,539.385599001,2
+Cirebon,Cirebon,703.034073785,2
+Denpasar,Denpasar,419.533959121,2
+Gorontalo,Gorontalo,159.566037741,2
+Gorontalo,Manado,52.6487156829,2
+Gorontalo,Palu,76.3395970272,2
+Gorontalo,Ujungpandang,182.329079102,2
+Jakarta,Jakarta,401.361046062,2
+Jambi,Bandar Lampung,29.6618972905,2
+Jambi,Bandjarmasin,4.5979100587,2
+Jambi,Bandung,3.37609761149,2
+Jambi,Bogor,17.9808293373,2
+Jambi,Cilacap,15.6126409521,2
+Jambi,Cirebon,9.53481016424,2
+Jambi,Denpasar,5.35394524302,2
+Jambi,Jakarta,71.9562143091,2
+Jambi,Jambi,236.241721023,2
+Jambi,Jember,7.93920873863,2
+Jambi,Kupang,3.34442871447,2
+Jambi,Malang,28.8921324002,2
+Jambi,Mataram,8.39257411261,2
+Jambi,Pakalongan,18.2136138846,2
+Jambi,Palembang,24.2971210217,2
+Jambi,Pontianak,3.63342311223,2
+Jambi,Semarang,16.9944876728,2
+Jambi,Surabaya,20.8370623827,2
+Jambi,Surakarta,12.6799887099,2
+Jambi,Ujungpandang,4.87804971855,2
+Jambi,Yogyakarta,18.5550742727,2
+Jember,Jember,670.095817585,2
+Kupang,Kupang,14.1598025794,2
+Malang,Malang,623.516106118,2
+Manado,Manado,165.454251061,2
+Mataram,Mataram,207.794812379,2
+Medan,Bandar Lampung,154.612047365,2
+Medan,Bandjarmasin,47.024537666,2
+Medan,Bandung,29.2716158211,2
+Medan,Bogor,128.129498886,2
+Medan,Cilacap,121.10622393,2
+Medan,Cirebon,70.4284141017,2
+Medan,Denpasar,49.208495463,2
+Medan,Jakarta,598.709861627,2
+Medan,Jember,70.153817179,2
+Medan,Kupang,62.9498255824,2
+Medan,Malang,253.68453986,2
+Medan,Mataram,79.3202455341,2
+Medan,Medan,860.902253045,2
+Medan,Pakalongan,139.549587884,2
+Medan,Palembang,108.444109162,2
+Medan,Pekanbaru,92.8405490127,2
+Medan,Pontianak,36.5741038496,2
+Medan,Semarang,138.202832956,2
+Medan,Surabaya,210.152028217,2
+Medan,Surakarta,105.925124316,2
+Medan,Ujungpandang,52.0324596544,2
+Medan,Yogyakarta,150.551229372,2
+Padang,Bandar Lampung,9.95100139518,2
+Padang,Bandjarmasin,1.87462158452,2
+Padang,Bandung,1.22993273457,2
+Padang,Bogor,6.20519586907,2
+Padang,Cilacap,5.55948240481,2
+Padang,Cirebon,3.34135271715,2
+Padang,Denpasar,2.02863206452,2
+Padang,Jakarta,25.9009788137,2
+Padang,Jember,2.96857926022,2
+Padang,Kupang,2.30650629202,2
+Padang,Malang,10.8460438344,2
+Padang,Mataram,3.1977637102,2
+Padang,Padang,271.53884975,2
+Padang,Pakalongan,6.47173231982,2
+Padang,Palembang,4.81963542087,2
+Padang,Pekanbaru,1.04261610898,2
+Padang,Pontianak,1.41265258598,2
+Padang,Semarang,6.37521051744,2
+Padang,Surabaya,8.05085039802,2
+Padang,Surakarta,4.72424446717,2
+Padang,Ujungpandang,2.01252768428,2
+Padang,Yogyakarta,6.73333625728,2
+Pakalongan,Pakalongan,158.185116564,2
+Palembang,Palembang,110.119647198,2
+Palu,Palu,74.0949301808,2
+Pekanbaru,Pekanbaru,128.254103132,2
+Pematangsiantar,Bandar Lampung,251.797482306,2
+Pematangsiantar,Bandjarmasin,73.5446755079,2
+Pematangsiantar,Bandung,39.4466967839,2
+Pematangsiantar,Bogor,208.126574268,2
+Pematangsiantar,Cilacap,171.284446627,2
+Pematangsiantar,Cirebon,115.812322246,2
+Pematangsiantar,Denpasar,68.9799217562,2
+Pematangsiantar,Jakarta,811.224673922,2
+Pematangsiantar,Jember,111.821995272,2
+Pematangsiantar,Kupang,56.9705610195,2
+Pematangsiantar,Malang,394.881835346,2
+Pematangsiantar,Mataram,111.007792635,2
+Pematangsiantar,Pakalongan,197.527272649,2
+Pematangsiantar,Palembang,176.27314765,2
+Pematangsiantar,Pekanbaru,146.240632824,2
+Pematangsiantar,Pematangsiantar,457.654174017,2
+Pematangsiantar,Pontianak,61.0321939222,2
+Pematangsiantar,Semarang,214.058479678,2
+Pematangsiantar,Surabaya,282.286709826,2
+Pematangsiantar,Surakarta,163.819035406,2
+Pematangsiantar,Ujungpandang,80.051404679,2
+Pematangsiantar,Yogyakarta,238.847301125,2
+Pontianak,Pontianak,100.718328906,2
+Samarinda,Balikpapan,16.3960277914,2
+Samarinda,Bandjarmasin,65.1685675899,2
+Samarinda,Samarinda,238.698432398,2
+Samarinda,Ujungpandang,7.80266382132,2
+Semarang,Semarang,563.243478115,2
+Sukabumi,Bandar Lampung,4.51298293779,2
+Sukabumi,Bandjarmasin,3.77521736056,2
+Sukabumi,Bandung,21.6856538064,2
+Sukabumi,Bogor,104.052372121,2
+Sukabumi,Cilacap,39.1341884797,2
+Sukabumi,Cirebon,30.2387664343,2
+Sukabumi,Denpasar,4.84970080298,2
+Sukabumi,Jakarta,265.882545192,2
+Sukabumi,Jember,9.36641774207,2
+Sukabumi,Kupang,2.44630768955,2
+Sukabumi,Malang,36.1817836755,2
+Sukabumi,Mataram,8.22394122749,2
+Sukabumi,Pakalongan,66.6244107788,2
+Sukabumi,Pontianak,2.58722393539,2
+Sukabumi,Semarang,31.0031486296,2
+Sukabumi,Sukabumi,665.19089705,2
+Sukabumi,Surabaya,27.3578777313,2
+Sukabumi,Surakarta,20.5589725138,2
+Sukabumi,Ujungpandang,3.80556040747,2
+Sukabumi,Yogyakarta,29.9427924026,2
+Surabaya,Surabaya,205.692101854,2
+Surakarta,Surakarta,1426.31218925,2
+Tasikmalaya,Bandjarmasin,1.1193907098,2
+Tasikmalaya,Bandung,3.97528945422,2
+Tasikmalaya,Bogor,5.17055889911,2
+Tasikmalaya,Cilacap,59.0939600119,2
+Tasikmalaya,Cirebon,12.7943567279,2
+Tasikmalaya,Denpasar,1.93882692307,2
+Tasikmalaya,Jakarta,21.4837833502,2
+Tasikmalaya,Jember,3.45290447192,2
+Tasikmalaya,Malang,14.4118802376,2
+Tasikmalaya,Mataram,2.79419883143,2
+Tasikmalaya,Pakalongan,157.846584041,2
+Tasikmalaya,Semarang,10.5357712344,2
+Tasikmalaya,Surabaya,10.3788548251,2
+Tasikmalaya,Surakarta,10.31927232,2
+Tasikmalaya,Tasikmalaya,959.72795994,2
+Tasikmalaya,Ujungpandang,1.29220197577,2
+Tasikmalaya,Yogyakarta,27.491844471,2
+Ujungpandang,Ujungpandang,235.395328722,2
+Yogyakarta,Yogyakarta,401.167093582,2
+Alor Setar,Alor Setar,88.9269997934,2
+George Town,George Town,304.990578607,2
+Ipoh,Alor Setar,3.12112155066,2
+Ipoh,Ipoh,377.262606717,2
+Ipoh,Singapore,3.48525594174,2
+Ipoh,Sungai Petani,1.71136743043,2
+Kota Baharu,Alor Setar,34.4021970526,2
+Kota Baharu,George Town,6.55394239766,2
+Kota Baharu,Kota Baharu,448.901090221,2
+Kota Baharu,Kota Kinabalu,1.71395942066,2
+Kota Baharu,Kuala Terengganu,13.091686195,2
+Kota Baharu,Kuching,12.4271485784,2
+Kota Baharu,Sandakan,9.01823963594,2
+Kota Baharu,Singapore,45.3273089772,2
+Kota Baharu,Sungai Petani,16.5175243387,2
+Kota Baharu,Tawau,2.19388986608,2
+Kota Kinabalu,Kota Kinabalu,224.216970518,2
+Kuala Lumpur,Alor Setar,7.72202667645,2
+Kuala Lumpur,George Town,1.91372926317,2
+Kuala Lumpur,Kuala Lumpur,1257.57834346,2
+Kuala Lumpur,Kuching,5.59216354112,2
+Kuala Lumpur,Sandakan,4.39351474528,2
+Kuala Lumpur,Singapore,51.1510939602,2
+Kuala Lumpur,Sungai Petani,3.79529588826,2
+Kuala Lumpur,Tawau,1.14492363757,2
+Kuala Terengganu,Kuala Terengganu,79.7831624478,2
+Kuantan,Alor Setar,34.9349270902,2
+Kuantan,George Town,8.47870267373,2
+Kuantan,Kota Kinabalu,7.03501710984,2
+Kuantan,Kuala Terengganu,23.9098460968,2
+Kuantan,Kuantan,160.711157104,2
+Kuantan,Kuching,51.0459671412,2
+Kuantan,Sandakan,36.9702462859,2
+Kuantan,Singapore,184.049414828,2
+Kuantan,Sungai Petani,16.2843905475,2
+Kuantan,Tawau,8.99271949385,2
+Kuching,Kuching,12.3809835488,2
+Malacca,Alor Setar,43.9300911551,2
+Malacca,George Town,10.2685900823,2
+Malacca,Kota Kinabalu,10.5668403237,2
+Malacca,Kuala Terengganu,5.12042673013,2
+Malacca,Kuching,77.083064701,2
+Malacca,Malacca,311.406933452,2
+Malacca,Sandakan,55.5004670854,2
+Malacca,Singapore,868.672134862,2
+Malacca,Sungai Petani,20.6615848303,2
+Malacca,Tawau,13.4993040554,2
+Sandakan,Sandakan,4.30034948603,2
+Seremban,Alor Setar,19.7576958066,2
+Seremban,George Town,4.75631050196,2
+Seremban,Kota Kinabalu,3.16520188563,2
+Seremban,Kuala Terengganu,1.94079402985,2
+Seremban,Kuching,23.0052845167,2
+Seremban,Sandakan,16.6255618647,2
+Seremban,Seremban,227.122782004,2
+Seremban,Singapore,241.560166938,2
+Seremban,Sungai Petani,9.47642773219,2
+Seremban,Tawau,4.04383524557,2
+Singapore,Singapore,314.623891331,2
+Sungai Petani,Sungai Petani,45.8079635695,2
+Tawau,Tawau,94.3348724147,2
+Chittagong,Chittagong,5154.01830598,2
+Chittagong,Comilla,993.31943919,2
+Chittagong,Dhaka,781.901607292,2
+Chittagong,Khulna,39.2023720233,2
+Chittagong,Mymensingh,18.6556070669,2
+Comilla,Comilla,4659.42391902,2
+Dhaka,Dhaka,6806.62967855,2
+Khulna,Khulna,6675.61300667,2
+Mymensingh,Dhaka,5.13789801269,2
+Mymensingh,Mymensingh,8536.83502344,2
+Rajshahi,Comilla,560.120591743,2
+Rajshahi,Dhaka,2884.39303653,2
+Rajshahi,Khulna,827.193858369,2
+Rajshahi,Mymensingh,227.195095192,2
+Rajshahi,Rajshahi,8399.70130792,2
+Rangpur,Comilla,998.09889264,2
+Rangpur,Dhaka,4877.89105881,2
+Rangpur,Khulna,910.462778731,2
+Rangpur,Mymensingh,366.261678455,2
+Rangpur,Rangpur,6660.15790769,2
+Angeles,Angeles,1960.45170243,2
+Angeles,Bacolod,45.4365087431,2
+Angeles,Batangas,41.2244049036,2
+Angeles,Cebu,52.6233066768,2
+Angeles,Legazpi,79.3660174689,2
+Angeles,Manila,492.973511294,2
+Angeles,Naga,55.0781456071,2
+Angeles,Quezon City,850.476237093,2
+Bacolod,Bacolod,414.540343886,2
+Baguio City,Angeles,1.18019752635,2
+Baguio City,Bacolod,448.324339841,2
+Baguio City,Baguio City,2316.61302798,2
+Baguio City,Batangas,247.01375383,2
+Baguio City,Cebu,521.670012314,2
+Baguio City,Davao,2.53212502835,2
+Baguio City,General Santos,1.97654264404,2
+Baguio City,Legazpi,730.40405935,2
+Baguio City,Manila,2146.73332957,2
+Baguio City,Naga,490.313297952,2
+Baguio City,Quezon City,3314.95643345,2
+Baguio City,Zamboanga,2.73450676665,2
+Batangas,Batangas,1946.72283058,2
+Cagayan de Oro,Bacolod,250.759395178,2
+Cagayan de Oro,Cagayan de Oro,1071.07078533,2
+Cagayan de Oro,Cebu,1021.20821558,2
+Cagayan de Oro,Davao,1089.31695798,2
+Cagayan de Oro,General Santos,606.442984606,2
+Cagayan de Oro,Iligan,437.527215671,2
+Cagayan de Oro,Legazpi,18.4721560931,2
+Cagayan de Oro,Naga,4.13347642086,2
+Cagayan de Oro,Zamboanga,377.409752936,2
+Cebu,Cebu,470.301185603,2
+Davao,Davao,968.004582559,2
+General Santos,General Santos,376.202030981,2
+Iligan,Iligan,884.984807958,2
+Iloilo,Bacolod,158.90621074,2
+Iloilo,Cebu,41.5589078722,2
+Iloilo,Iloilo,1305.78223962,2
+Legazpi,Legazpi,106.064797865,2
+Manila,Manila,488.108867368,2
+Naga,Naga,581.332825765,2
+Olongapo,Bacolod,18.3720629931,2
+Olongapo,Batangas,13.0345077846,2
+Olongapo,Cebu,20.6567027174,2
+Olongapo,Legazpi,29.8625169631,2
+Olongapo,Manila,132.220207756,2
+Olongapo,Naga,20.1423178329,2
+Olongapo,Olongapo,609.96379365,2
+Olongapo,Quezon City,206.735211977,2
+Quezon City,Quezon City,470.717429929,2
+Zamboanga,Zamboanga,225.571728764,2
+Bangkok,Bangkok,310.695478581,2
+Chiang Mai,Bangkok,900.648864727,2
+Chiang Mai,Chiang Mai,326.203276964,2
+Chiang Mai,Hat Yai,280.498837868,2
+Chiang Mai,Nakhon Ratchasima,179.252730228,2
+Chiang Mai,Nonthaburi,819.676335711,2
+Hat Yai,Hat Yai,64.5617659717,2
+Nakhon Ratchasima,Nakhon Ratchasima,324.236278197,2
+Nonthaburi,Nonthaburi,694.380207089,2
+Bago,Bago,2128.56381321,2
+Bago,Mandalay,50.2871870856,2
+Bago,Rangoon,583.86263275,2
+Mandalay,Mandalay,3174.51577937,2
+Naypyidaw,Mandalay,792.376878416,2
+Naypyidaw,Naypyidaw,2009.63508326,2
+Naypyidaw,Rangoon,375.099742396,2
+Rangoon,Rangoon,4952.19689371,2
+Bien Hoa,Bien Hoa,1906.23269249,3
+Buon Me Thuot,Bien Hoa,2730.34386025,3
+Buon Me Thuot,Buon Me Thuot,2618.37584127,3
+Buon Me Thuot,Ca Mau,35.5873941105,3
+Buon Me Thuot,Can Tho,1339.11111269,3
+Buon Me Thuot,Da Nang,1240.9815651,3
+Buon Me Thuot,Ho Chi Minh City,5370.69531283,3
+Buon Me Thuot,Hue,785.086162209,3
+Buon Me Thuot,Long Xuyen,2.06873006028,3
+Buon Me Thuot,Thai Nguyen,20.7634776421,3
+Buon Me Thuot,Viet Tri,21.7321564681,3
+Buon Me Thuot,Vinh,1015.98179696,3
+Ca Mau,Ca Mau,1736.09657384,3
+Can Tho,Can Tho,4237.84984775,3
+Da Nang,Da Nang,349.965363493,3
+Haiphong,Da Nang,13.8600270239,3
+Haiphong,Haiphong,8478.71581687,3
+Haiphong,Hanoi,3.58575342144,3
+Haiphong,Hue,23.5252312192,3
+Haiphong,Thai Nguyen,875.79014971,3
+Haiphong,Viet Tri,770.140753654,3
+Haiphong,Vinh,1333.20005006,3
+Hanoi,Da Nang,2.79334084191,3
+Hanoi,Hanoi,9644.37468959,3
+Hanoi,Hue,4.92022815021,3
+Hanoi,Thai Nguyen,282.498063873,3
+Hanoi,Viet Tri,297.184452665,3
+Hanoi,Vinh,303.023629688,3
+Ho Chi Minh City,Ho Chi Minh City,4134.03015814,3
+Hue,Hue,212.221649269,3
+Long Xuyen,Bien Hoa,12.8246203219,3
+Long Xuyen,Ca Mau,1.76235976628,3
+Long Xuyen,Can Tho,142.02041788,3
+Long Xuyen,Ho Chi Minh City,41.7904186116,3
+Long Xuyen,Long Xuyen,3793.65431034,3
+Qui Nhon,Bien Hoa,69.3188933752,3
+Qui Nhon,Ca Mau,1.18687263726,3
+Qui Nhon,Can Tho,43.4114712742,3
+Qui Nhon,Da Nang,651.859948532,3
+Qui Nhon,Ho Chi Minh City,144.321115593,3
+Qui Nhon,Hue,373.651352622,3
+Qui Nhon,Qui Nhon,2427.87792892,3
+Qui Nhon,Thai Nguyen,7.84196306139,3
+Qui Nhon,Viet Tri,8.14971586528,3
+Qui Nhon,Vinh,402.598995795,3
+Rach Gia,Bien Hoa,199.041024656,3
+Rach Gia,Ca Mau,82.7137351127,3
+Rach Gia,Can Tho,1542.6516006,3
+Rach Gia,Da Nang,2.99961762005,3
+Rach Gia,Ho Chi Minh City,624.46550591,3
+Rach Gia,Hue,2.04045684293,3
+Rach Gia,Long Xuyen,5.39004257111,3
+Rach Gia,Rach Gia,2196.63512479,3
+Rach Gia,Vinh,12.3429674397,3
+Thai Nguyen,Thai Nguyen,1423.58299044,3
+Viet Tri,Viet Tri,2869.29048922,3
+Vinh,Vinh,871.513102029,3
+Balikpapan,Balikpapan,85.5591535063,3
+Banda Aceh,Banda Aceh,177.323304056,3
+Banda Aceh,Bandar Lampung,3.18171306485,3
+Banda Aceh,Bogor,2.18163323969,3
+Banda Aceh,Cilacap,2.11710554478,3
+Banda Aceh,Cirebon,1.21496216642,3
+Banda Aceh,Jakarta,8.5696527591,3
+Banda Aceh,Jember,1.27074058872,3
+Banda Aceh,Malang,4.48516122811,3
+Banda Aceh,Mataram,1.46795313123,3
+Banda Aceh,Pakalongan,2.42940429663,3
+Banda Aceh,Palembang,1.41900198674,3
+Banda Aceh,Semarang,2.35745373551,3
+Banda Aceh,Surabaya,3.17896256253,3
+Banda Aceh,Surakarta,1.8116935616,3
+Banda Aceh,Yogyakarta,2.6607909679,3
+Bandar Lampung,Bandar Lampung,265.02251182,3
+Bandjarmasin,Bandjarmasin,115.549868061,3
+Bandung,Bandung,1519.20127696,3
+Bengkulu,Bandar Lampung,63.836514895,3
+Bengkulu,Bandjarmasin,6.94526808554,3
+Bengkulu,Bandung,5.84728572848,3
+Bengkulu,Bengkulu,247.58438852,3
+Bengkulu,Bogor,33.0632201361,3
+Bengkulu,Cilacap,27.2540629746,3
+Bengkulu,Cirebon,17.0901591088,3
+Bengkulu,Denpasar,8.70267815798,3
+Bengkulu,Jakarta,127.722552783,3
+Bengkulu,Jember,12.7635914311,3
+Bengkulu,Kupang,4.94543740681,3
+Bengkulu,Malang,46.3039932368,3
+Bengkulu,Mataram,13.550367014,3
+Bengkulu,Pakalongan,32.1737823192,3
+Bengkulu,Palembang,11.9102469009,3
+Bengkulu,Pontianak,5.90490231433,3
+Bengkulu,Semarang,28.2707750131,3
+Bengkulu,Surabaya,33.7044926853,3
+Bengkulu,Surakarta,20.8751667176,3
+Bengkulu,Ujungpandang,7.30151660782,3
+Bengkulu,Yogyakarta,31.8942023724,3
+Bogor,Bogor,1393.84106022,3
+Bukittinggi,Bandar Lampung,35.3829531681,3
+Bukittinggi,Bandjarmasin,6.33452574934,3
+Bukittinggi,Bandung,4.13683956496,3
+Bukittinggi,Bogor,22.1615009223,3
+Bukittinggi,Bukittinggi,273.5577804,3
+Bukittinggi,Cilacap,19.7105842601,3
+Bukittinggi,Cirebon,12.0272527588,3
+Bukittinggi,Denpasar,6.26754035588,3
+Bukittinggi,Jakarta,86.8923376637,3
+Bukittinggi,Jember,10.5310123165,3
+Bukittinggi,Kupang,4.72208808072,3
+Bukittinggi,Malang,37.6285943551,3
+Bukittinggi,Mataram,10.2921891074,3
+Bukittinggi,Pakalongan,22.7686075205,3
+Bukittinggi,Palembang,16.0481322738,3
+Bukittinggi,Pekanbaru,8.63568990494,3
+Bukittinggi,Pontianak,5.32746192189,3
+Bukittinggi,Semarang,21.4372163617,3
+Bukittinggi,Surabaya,27.0087818142,3
+Bukittinggi,Surakarta,16.1330584992,3
+Bukittinggi,Ujungpandang,6.77745066195,3
+Bukittinggi,Yogyakarta,23.609299535,3
+Cilacap,Cilacap,539.391779907,3
+Cirebon,Cirebon,703.043044731,3
+Denpasar,Denpasar,419.539546287,3
+Gorontalo,Gorontalo,159.566037741,3
+Gorontalo,Manado,52.6438143627,3
+Gorontalo,Palu,76.3383472271,3
+Gorontalo,Ujungpandang,182.344044945,3
+Jakarta,Jakarta,401.365036113,3
+Jambi,Bandar Lampung,29.6618879584,3
+Jambi,Bandjarmasin,4.59927738353,3
+Jambi,Bandung,3.38210013122,3
+Jambi,Bogor,17.9804384517,3
+Jambi,Cilacap,15.6124857679,3
+Jambi,Cirebon,9.53456941327,3
+Jambi,Denpasar,5.35377403853,3
+Jambi,Jakarta,71.9567457372,3
+Jambi,Jambi,236.241721213,3
+Jambi,Jember,7.93894625273,3
+Jambi,Kupang,3.34444241858,3
+Jambi,Malang,28.8920716401,3
+Jambi,Mataram,8.39254325929,3
+Jambi,Pakalongan,18.2135671408,3
+Jambi,Palembang,24.2971609265,3
+Jambi,Pontianak,3.63341488445,3
+Jambi,Semarang,16.9943735414,3
+Jambi,Surabaya,20.8371179902,3
+Jambi,Surakarta,12.6792916637,3
+Jambi,Ujungpandang,4.87774807167,3
+Jambi,Yogyakarta,18.5550182437,3
+Jember,Jember,670.104804715,3
+Kupang,Kupang,14.1599464779,3
+Malang,Malang,623.522792832,3
+Manado,Manado,165.459154619,3
+Mataram,Mataram,207.797068305,3
+Medan,Bandar Lampung,154.610992843,3
+Medan,Bandjarmasin,47.0382157819,3
+Medan,Bandung,29.3234684031,3
+Medan,Bogor,128.125879907,3
+Medan,Cilacap,121.104232289,3
+Medan,Cirebon,70.4261776233,3
+Medan,Denpasar,49.2066017788,3
+Medan,Jakarta,598.710388234,3
+Medan,Jember,70.1510413624,3
+Medan,Kupang,62.9496739832,3
+Medan,Malang,253.682355938,3
+Medan,Mataram,79.3194378905,3
+Medan,Medan,860.902253032,3
+Medan,Pakalongan,139.548321858,3
+Medan,Palembang,108.443581748,3
+Medan,Pekanbaru,92.8399966716,3
+Medan,Pontianak,36.5737830846,3
+Medan,Semarang,138.201005699,3
+Medan,Surabaya,210.151221831,3
+Medan,Surakarta,105.918612293,3
+Medan,Ujungpandang,52.0289035992,3
+Medan,Yogyakarta,150.549795311,3
+Padang,Bandar Lampung,9.95119752916,3
+Padang,Bandjarmasin,1.87521660852,3
+Padang,Bandung,1.23214416143,3
+Padang,Bogor,6.20518522805,3
+Padang,Cilacap,5.5595384708,3
+Padang,Cirebon,3.3413352566,3
+Padang,Denpasar,2.02860781567,3
+Padang,Jakarta,25.9016887643,3
+Padang,Jember,2.96854055578,3
+Padang,Kupang,2.3065619302,3
+Padang,Malang,10.8462382124,3
+Padang,Mataram,3.19781598808,3
+Padang,Padang,271.538853132,3
+Padang,Pakalongan,6.47184530414,3
+Padang,Palembang,4.8197398479,3
+Padang,Pekanbaru,1.04263756714,3
+Padang,Pontianak,1.41267767481,3
+Padang,Semarang,6.37529536307,3
+Padang,Surabaya,8.05103309866,3
+Padang,Surakarta,4.7240793612,3
+Padang,Ujungpandang,2.01244353197,3
+Padang,Yogyakarta,6.73345075723,3
+Pakalongan,Pakalongan,158.186833772,3
+Palembang,Palembang,110.120788236,3
+Palu,Palu,74.0966034865,3
+Pekanbaru,Pekanbaru,128.255442563,3
+Pematangsiantar,Bandar Lampung,251.795768466,3
+Pematangsiantar,Bandjarmasin,73.5660686171,3
+Pematangsiantar,Bandung,39.5165743507,3
+Pematangsiantar,Bogor,208.120698712,3
+Pematangsiantar,Cilacap,171.281632185,3
+Pematangsiantar,Cirebon,115.808646209,3
+Pematangsiantar,Denpasar,68.9772681774,3
+Pematangsiantar,Jakarta,811.225398818,3
+Pematangsiantar,Jember,111.817572314,3
+Pematangsiantar,Kupang,56.9704246182,3
+Pematangsiantar,Malang,394.878441418,3
+Pematangsiantar,Mataram,111.006663902,3
+Pematangsiantar,Pakalongan,197.525483406,3
+Pematangsiantar,Palembang,176.272292822,3
+Pematangsiantar,Pekanbaru,146.239764837,3
+Pematangsiantar,Pematangsiantar,457.654174013,3
+Pematangsiantar,Pontianak,61.0316595084,3
+Pematangsiantar,Semarang,214.05565249,3
+Pematangsiantar,Surabaya,282.285630603,3
+Pematangsiantar,Surakarta,163.808966499,3
+Pematangsiantar,Ujungpandang,80.0459348463,3
+Pematangsiantar,Yogyakarta,238.845029356,3
+Pontianak,Pontianak,100.719404859,3
+Samarinda,Balikpapan,16.4160125577,3
+Samarinda,Bandjarmasin,65.128496095,3
+Samarinda,Samarinda,238.69843236,3
+Samarinda,Ujungpandang,7.79506574691,3
+Semarang,Semarang,563.249752935,3
+Sukabumi,Bandar Lampung,4.51281665529,3
+Sukabumi,Bandjarmasin,3.77620208078,3
+Sukabumi,Bandung,21.7234161291,3
+Sukabumi,Bogor,104.046309095,3
+Sukabumi,Cilacap,39.1323699123,3
+Sukabumi,Cirebon,30.2368982978,3
+Sukabumi,Denpasar,4.84936856527,3
+Sukabumi,Jakarta,265.874795888,3
+Sukabumi,Jember,9.3657659188,3
+Sukabumi,Kupang,2.44622834768,3
+Sukabumi,Malang,36.18038584,3
+Sukabumi,Mataram,8.22361056841,3
+Sukabumi,Pakalongan,66.6218059586,3
+Sukabumi,Pontianak,2.58712356366,3
+Sukabumi,Semarang,31.0018078583,3
+Sukabumi,Sukabumi,665.190895147,3
+Sukabumi,Surabaya,27.3569513342,3
+Sukabumi,Surakarta,20.5570913493,3
+Sukabumi,Ujungpandang,3.80518606936,3
+Sukabumi,Yogyakarta,29.9416081578,3
+Surabaya,Surabaya,205.694222713,3
+Surakarta,Surakarta,1426.33399078,3
+Tasikmalaya,Bandjarmasin,1.11975956548,3
+Tasikmalaya,Bandung,3.98248523997,3
+Tasikmalaya,Bogor,5.17061259939,3
+Tasikmalaya,Cilacap,59.0952710425,3
+Tasikmalaya,Cirebon,12.7944446891,3
+Tasikmalaya,Denpasar,1.93882720849,3
+Tasikmalaya,Jakarta,21.4846321996,3
+Tasikmalaya,Jember,3.45290123469,3
+Tasikmalaya,Malang,14.4123129172,3
+Tasikmalaya,Mataram,2.7942783239,3
+Tasikmalaya,Pakalongan,157.851249827,3
+Tasikmalaya,Semarang,10.536038943,3
+Tasikmalaya,Surabaya,10.3792159497,3
+Tasikmalaya,Surakarta,10.319036541,3
+Tasikmalaya,Tasikmalaya,959.727973295,3
+Tasikmalaya,Ujungpandang,1.29216357917,3
+Tasikmalaya,Yogyakarta,27.492644643,3
+Ujungpandang,Ujungpandang,235.398709093,3
+Yogyakarta,Yogyakarta,401.171435113,3
+Alor Setar,Alor Setar,88.9271944747,3
+George Town,George Town,304.990758893,3
+Ipoh,Alor Setar,3.11937710545,3
+Ipoh,Ipoh,377.261852231,3
+Ipoh,Singapore,3.48326909288,3
+Ipoh,Sungai Petani,1.71041458344,3
+Kota Baharu,Alor Setar,34.403055444,3
+Kota Baharu,George Town,6.55410381075,3
+Kota Baharu,Kota Baharu,448.901090438,3
+Kota Baharu,Kota Kinabalu,1.71340196017,3
+Kota Baharu,Kuala Terengganu,13.0917062661,3
+Kota Baharu,Kuching,12.4273139088,3
+Kota Baharu,Sandakan,9.01836381963,3
+Kota Baharu,Singapore,45.3279339813,3
+Kota Baharu,Sungai Petani,16.5179718614,3
+Kota Baharu,Tawau,2.1939000077,3
+Kota Kinabalu,Kota Kinabalu,224.224900359,3
+Kuala Lumpur,Alor Setar,7.72088555166,3
+Kuala Lumpur,George Town,1.91344584276,3
+Kuala Lumpur,Kuala Lumpur,1257.57800333,3
+Kuala Lumpur,Kuching,5.59127203302,3
+Kuala Lumpur,Sandakan,4.39281637532,3
+Kuala Lumpur,Singapore,51.1429641932,3
+Kuala Lumpur,Sungai Petani,3.79474316603,3
+Kuala Lumpur,Tawau,1.14473117503,3
+Kuala Terengganu,Kuala Terengganu,79.7834347216,3
+Kuantan,Alor Setar,34.9356492143,3
+Kuantan,George Town,8.47887519245,3
+Kuantan,Kota Kinabalu,7.03269888326,3
+Kuantan,Kuala Terengganu,23.9097803954,3
+Kuantan,Kuantan,160.711157225,3
+Kuantan,Kuching,51.0464277249,3
+Kuantan,Sandakan,36.9705971051,3
+Kuantan,Singapore,184.051164703,3
+Kuantan,Sungai Petani,16.2847620385,3
+Kuantan,Tawau,8.99272256629,3
+Kuching,Kuching,12.3810175831,3
+Malacca,Alor Setar,43.9308494013,3
+Malacca,George Town,10.2687640019,3
+Malacca,Kota Kinabalu,10.5633222438,3
+Malacca,Kuala Terengganu,5.12039519826,3
+Malacca,Kuching,77.0834973455,3
+Malacca,Malacca,311.406933716,3
+Malacca,Sandakan,55.5008044735,3
+Malacca,Singapore,868.677431521,3
+Malacca,Sungai Petani,20.6619857156,3
+Malacca,Tawau,13.4992626325,3
+Sandakan,Sandakan,4.30036116557,3
+Seremban,Alor Setar,19.7580476989,3
+Seremban,George Town,4.75639367627,3
+Seremban,Kota Kinabalu,3.16414981702,3
+Seremban,Kuala Terengganu,1.94078314595,3
+Seremban,Kuching,23.0054262936,3
+Seremban,Sandakan,16.6256720774,3
+Seremban,Seremban,227.122783606,3
+Seremban,Singapore,241.561772712,3
+Seremban,Sungai Petani,9.47661681103,3
+Seremban,Tawau,4.04382506142,3
+Singapore,Singapore,314.624730758,3
+Sungai Petani,Sungai Petani,45.8080598103,3
+Tawau,Tawau,94.3351627643,3
+Chittagong,Chittagong,5154.01830579,3
+Chittagong,Comilla,993.318944415,3
+Chittagong,Dhaka,781.90062973,3
+Chittagong,Khulna,39.2023487479,3
+Chittagong,Mymensingh,18.6552908376,3
+Comilla,Comilla,4659.42280233,3
+Dhaka,Dhaka,6806.62846792,3
+Khulna,Khulna,6675.61145413,3
+Mymensingh,Dhaka,5.13798438505,3
+Mymensingh,Mymensingh,8536.8444984,3
+Rajshahi,Comilla,560.12108998,3
+Rajshahi,Dhaka,2884.3934328,3
+Rajshahi,Khulna,827.194515076,3
+Rajshahi,Mymensingh,227.191559287,3
+Rajshahi,Rajshahi,8399.70130786,3
+Rangpur,Comilla,998.099992403,3
+Rangpur,Dhaka,4877.89276472,3
+Rangpur,Khulna,910.463694872,3
+Rangpur,Mymensingh,366.256055985,3
+Rangpur,Rangpur,6660.1579077,3
+Angeles,Angeles,1960.45170045,3
+Angeles,Bacolod,45.4359953525,3
+Angeles,Batangas,41.2248901406,3
+Angeles,Cebu,52.622428746,3
+Angeles,Legazpi,79.3658678729,3
+Angeles,Manila,492.972934342,3
+Angeles,Naga,55.0780984389,3
+Angeles,Quezon City,850.47522228,3
+Bacolod,Bacolod,414.540474504,3
+Baguio City,Angeles,1.18019948705,3
+Baguio City,Bacolod,448.32001945,3
+Baguio City,Baguio City,2316.61302799,3
+Baguio City,Batangas,247.017071963,3
+Baguio City,Cebu,521.662176312,3
+Baguio City,Davao,2.53206182033,3
+Baguio City,General Santos,1.9764944456,3
+Baguio City,Legazpi,730.4038968,3
+Baguio City,Manila,2146.73438574,3
+Baguio City,Naga,490.313693122,3
+Baguio City,Quezon City,3314.95798853,3
+Baguio City,Zamboanga,2.73444053832,3
+Batangas,Batangas,1946.71886864,3
+Cagayan de Oro,Bacolod,250.762827155,3
+Cagayan de Oro,Cagayan de Oro,1071.07078533,3
+Cagayan de Oro,Cebu,1021.21669361,3
+Cagayan de Oro,Davao,1089.31517181,3
+Cagayan de Oro,General Santos,606.44234027,3
+Cagayan de Oro,Iligan,437.525266635,3
+Cagayan de Oro,Legazpi,18.4725828138,3
+Cagayan de Oro,Naga,4.13357615868,3
+Cagayan de Oro,Zamboanga,377.409414501,3
+Cebu,Cebu,470.301603117,3
+Davao,Davao,968.006441155,3
+General Santos,General Santos,376.202730712,3
+Iligan,Iligan,884.986764546,3
+Iloilo,Bacolod,158.907687821,3
+Iloilo,Cebu,41.5590704073,3
+Iloilo,Iloilo,1305.78224214,3
+Legazpi,Legazpi,106.064729697,3
+Manila,Manila,488.108517593,3
+Naga,Naga,581.332390896,3
+Olongapo,Bacolod,18.3718599115,3
+Olongapo,Batangas,13.0346644057,3
+Olongapo,Cebu,20.6563631613,3
+Olongapo,Legazpi,29.8624679995,3
+Olongapo,Manila,132.220085439,3
+Olongapo,Naga,20.1423055233,3
+Olongapo,Olongapo,609.963792912,3
+Olongapo,Quezon City,206.735015997,3
+Quezon City,Quezon City,470.717093704,3
+Zamboanga,Zamboanga,225.572144427,3
+Bangkok,Bangkok,310.698630296,3
+Chiang Mai,Bangkok,900.645707996,3
+Chiang Mai,Chiang Mai,326.203276964,3
+Chiang Mai,Hat Yai,280.498207196,3
+Chiang Mai,Nakhon Ratchasima,179.285501094,3
+Chiang Mai,Nonthaburi,819.661525017,3
+Hat Yai,Hat Yai,64.5623976037,3
+Nakhon Ratchasima,Nakhon Ratchasima,324.203505389,3
+Nonthaburi,Nonthaburi,694.395026027,3
+Bago,Bago,2128.56421356,3
+Bago,Mandalay,50.4439454583,3
+Bago,Rangoon,584.100521442,3
+Mandalay,Mandalay,3173.91535515,3
+Naypyidaw,Mandalay,792.820476744,3
+Naypyidaw,Naypyidaw,2009.63505885,3
+Naypyidaw,Rangoon,374.295872865,3
+Rangoon,Rangoon,4952.76290744,3
+Bien Hoa,Bien Hoa,457.408272551,4
+Buon Me Thuot,Bien Hoa,993.574937263,4
+Buon Me Thuot,Buon Me Thuot,858.651307371,4
+Buon Me Thuot,Ca Mau,67.2283711249,4
+Buon Me Thuot,Can Tho,383.247014078,4
+Buon Me Thuot,Da Nang,175.580825448,4
+Buon Me Thuot,Ho Chi Minh City,1736.91418772,4
+Buon Me Thuot,Hue,92.1409279181,4
+Buon Me Thuot,Vinh,38.6260241706,4
+Ca Mau,Ca Mau,419.211108989,4
+Can Tho,Can Tho,1511.20513248,4
+Da Nang,Da Nang,188.155828085,4
+Haiphong,Da Nang,28.646594264,4
+Haiphong,Haiphong,2780.4772756,4
+Haiphong,Hanoi,4.90199858872,4
+Haiphong,Ho Chi Minh City,4.6018500867,4
+Haiphong,Hue,40.3335383479,4
+Haiphong,Thai Nguyen,376.090986707,4
+Haiphong,Viet Tri,387.865845817,4
+Haiphong,Vinh,740.434363107,4
+Hanoi,Da Nang,1.3832995624,4
+Hanoi,Hanoi,3159.00434574,4
+Hanoi,Hue,2.0211616639,4
+Hanoi,Thai Nguyen,29.0664326137,4
+Hanoi,Viet Tri,35.8608770432,4
+Hanoi,Vinh,40.3228415171,4
+Ho Chi Minh City,Ho Chi Minh City,1279.39974776,4
+Hue,Hue,159.512074785,4
+Long Xuyen,Bien Hoa,19.6511777004,4
+Long Xuyen,Ca Mau,14.0188295239,4
+Long Xuyen,Can Tho,171.148751763,4
+Long Xuyen,Ho Chi Minh City,56.9095764292,4
+Long Xuyen,Long Xuyen,1246.08431693,4
+Qui Nhon,Bien Hoa,95.1384448196,4
+Qui Nhon,Ca Mau,8.45632494972,4
+Qui Nhon,Can Tho,46.8584388554,4
+Qui Nhon,Da Nang,347.846148544,4
+Qui Nhon,Ho Chi Minh City,176.034937215,4
+Qui Nhon,Hue,165.395223166,4
+Qui Nhon,Qui Nhon,796.216335779,4
+Qui Nhon,Viet Tri,1.0596876718,4
+Qui Nhon,Vinh,57.7281862937,4
+Rach Gia,Bien Hoa,46.3281672116,4
+Rach Gia,Ca Mau,99.943204922,4
+Rach Gia,Can Tho,282.389964156,4
+Rach Gia,Ho Chi Minh City,129.174128441,4
+Rach Gia,Rach Gia,720.332944474,4
+Thai Nguyen,Thai Nguyen,449.529139214,4
+Viet Tri,Viet Tri,875.302185277,4
+Vinh,Vinh,414.315854553,4
+Balikpapan,Balikpapan,92.028807102,4
+Banda Aceh,Banda Aceh,323.17479597,4
+Bandar Lampung,Bandar Lampung,986.616118285,4
+Bandjarmasin,Bandjarmasin,313.505267749,4
+Bandung,Balikpapan,12.4583046907,4
+Bandung,Bandar Lampung,33.6416993535,4
+Bandung,Bandjarmasin,38.8537940046,4
+Bandung,Bandung,4006.76095543,4
+Bandung,Bogor,117.920008957,4
+Bandung,Cilacap,65.6275080743,4
+Bandung,Jakarta,956.667998701,4
+Bandung,Kupang,16.6911607379,4
+Bandung,Malang,43.2598438823,4
+Bandung,Manado,11.0035375935,4
+Bandung,Mataram,7.05769448713,4
+Bandung,Pakalongan,74.6896693557,4
+Bandung,Palu,13.5025853232,4
+Bandung,Pontianak,35.5649596725,4
+Bandung,Samarinda,22.1301369745,4
+Bandung,Surabaya,81.293603958,4
+Bandung,Ujungpandang,33.5408293266,4
+Bandung,Yogyakarta,28.770291557,4
+Bengkulu,Balikpapan,14.3894125635,4
+Bengkulu,Bandar Lampung,408.444634379,4
+Bengkulu,Bandjarmasin,42.7971486706,4
+Bengkulu,Bengkulu,609.172959663,4
+Bengkulu,Bogor,50.3696090426,4
+Bengkulu,Cilacap,19.592010239,4
+Bengkulu,Jakarta,313.583279601,4
+Bengkulu,Kupang,11.8529787534,4
+Bengkulu,Malang,30.3874655878,4
+Bengkulu,Manado,14.4787776431,4
+Bengkulu,Mataram,6.8424925347,4
+Bengkulu,Pakalongan,12.39296215,4
+Bengkulu,Palembang,170.796323854,4
+Bengkulu,Palu,17.1409769389,4
+Bengkulu,Pekanbaru,1.0815205811,4
+Bengkulu,Pontianak,68.0446485073,4
+Bengkulu,Samarinda,26.5823250939,4
+Bengkulu,Surabaya,54.3596661369,4
+Bengkulu,Ujungpandang,38.2495411464,4
+Bengkulu,Yogyakarta,15.6065822983,4
+Bogor,Bogor,3956.52199956,4
+Bogor,Jakarta,3.31416443168,4
+Bukittinggi,Balikpapan,3.95865908123,4
+Bukittinggi,Bandar Lampung,67.2295188604,4
+Bukittinggi,Bandjarmasin,11.5915583723,4
+Bukittinggi,Bogor,10.025926142,4
+Bukittinggi,Bukittinggi,673.110835771,4
+Bukittinggi,Cilacap,4.20774236992,4
+Bukittinggi,Jakarta,63.3532192599,4
+Bukittinggi,Kupang,3.36092467721,4
+Bukittinggi,Malang,7.33324050495,4
+Bukittinggi,Manado,3.98632803466,4
+Bukittinggi,Mataram,1.54338022194,4
+Bukittinggi,Padang,24.0787174345,4
+Bukittinggi,Pakalongan,2.60442211475,4
+Bukittinggi,Palembang,68.3414437009,4
+Bukittinggi,Palu,4.48248367361,4
+Bukittinggi,Pekanbaru,54.549004497,4
+Bukittinggi,Pontianak,18.2307069991,4
+Bukittinggi,Samarinda,6.71383012338,4
+Bukittinggi,Surabaya,12.9358771352,4
+Bukittinggi,Ujungpandang,10.5434177946,4
+Bukittinggi,Yogyakarta,3.43068673135,4
+Cilacap,Cilacap,1727.49379952,4
+Cirebon,Balikpapan,34.2612672441,4
+Cirebon,Bandar Lampung,48.0477695435,4
+Cirebon,Bandjarmasin,107.369705599,4
+Cirebon,Bogor,151.396307846,4
+Cirebon,Cilacap,204.813045494,4
+Cirebon,Cirebon,2400.39502907,4
+Cirebon,Jakarta,1062.95708912,4
+Cirebon,Kupang,26.0002199934,4
+Cirebon,Malang,132.365125671,4
+Cirebon,Manado,29.8338482701,4
+Cirebon,Mataram,20.4784410484,4
+Cirebon,Pakalongan,75.5698584661,4
+Cirebon,Palu,36.9937647464,4
+Cirebon,Pontianak,51.0634805685,4
+Cirebon,Samarinda,60.995983973,4
+Cirebon,Surabaya,253.38594203,4
+Cirebon,Ujungpandang,90.4991934866,4
+Cirebon,Yogyakarta,101.539776227,4
+Denpasar,Bandjarmasin,1.93247694359,4
+Denpasar,Denpasar,1396.98052894,4
+Denpasar,Kupang,79.5386198731,4
+Denpasar,Malang,8.64281344465,4
+Denpasar,Manado,50.1344021803,4
+Denpasar,Mataram,206.755882124,4
+Denpasar,Palu,64.3908340721,4
+Denpasar,Samarinda,1.03862111203,4
+Denpasar,Surabaya,10.5779113622,4
+Denpasar,Ujungpandang,185.108029883,4
+Gorontalo,Gorontalo,392.530830465,4
+Gorontalo,Manado,27.2485334801,4
+Jakarta,Jakarta,1392.86739542,4
+Jambi,Bandar Lampung,15.417452789,4
+Jambi,Bandjarmasin,2.3023176083,4
+Jambi,Bogor,2.22522289643,4
+Jambi,Jakarta,14.3518085588,4
+Jambi,Jambi,581.129872838,4
+Jambi,Malang,1.5402972072,4
+Jambi,Palembang,28.3049958382,4
+Jambi,Pekanbaru,1.36189937516,4
+Jambi,Pontianak,3.40130877463,4
+Jambi,Samarinda,1.39292222249,4
+Jambi,Surabaya,2.73008675481,4
+Jambi,Ujungpandang,2.07578480721,4
+Jember,Balikpapan,8.97135890673,4
+Jember,Bandjarmasin,28.6747104123,4
+Jember,Jember,2215.37304757,4
+Jember,Kupang,71.3585590295,4
+Jember,Malang,245.539050454,4
+Jember,Manado,48.882709413,4
+Jember,Mataram,98.0330372554,4
+Jember,Palu,63.0159436719,4
+Jember,Pontianak,3.28888702928,4
+Jember,Samarinda,15.029971224,4
+Jember,Surabaya,299.781659379,4
+Jember,Ujungpandang,157.337066082,4
+Jember,Yogyakarta,2.73600285452,4
+Kupang,Kupang,82.0497626885,4
+Malang,Malang,2722.3402982,4
+Manado,Manado,259.655854038,4
+Mataram,Mataram,703.608689811,4
+Medan,Balikpapan,6.14034388856,4
+Medan,Banda Aceh,44.7131218743,4
+Medan,Bandar Lampung,60.5351499489,4
+Medan,Bandjarmasin,17.736988674,4
+Medan,Bogor,11.9443774668,4
+Medan,Cilacap,5.32733849253,4
+Medan,Jakarta,89.9508618105,4
+Medan,Kupang,9.23250409545,4
+Medan,Malang,10.1875446137,4
+Medan,Manado,6.5150329353,4
+Medan,Mataram,2.45101590287,4
+Medan,Medan,2117.98779588,4
+Medan,Padang,4.35172686207,4
+Medan,Pakalongan,3.28928004009,4
+Medan,Palembang,95.1622791573,4
+Medan,Palu,7.44080887669,4
+Medan,Pekanbaru,120.844317806,4
+Medan,Pontianak,25.7901797884,4
+Medan,Samarinda,11.0503639517,4
+Medan,Surabaya,20.74073453,4
+Medan,Ujungpandang,16.6786560866,4
+Medan,Yogyakarta,4.50795381539,4
+Padang,Padang,609.579790876,4
+Pakalongan,Pakalongan,1252.10493112,4
+Palembang,Palembang,259.507156116,4
+Palu,Palu,63.219343803,4
+Pekanbaru,Pekanbaru,150.369898929,4
+Pematangsiantar,Balikpapan,30.380595351,4
+Pematangsiantar,Banda Aceh,68.3496478762,4
+Pematangsiantar,Bandar Lampung,312.562093896,4
+Pematangsiantar,Bandjarmasin,87.9482542697,4
+Pematangsiantar,Bogor,61.5123842265,4
+Pematangsiantar,Cilacap,23.8881430391,4
+Pematangsiantar,Jakarta,386.412085809,4
+Pematangsiantar,Kupang,26.4908630167,4
+Pematangsiantar,Malang,50.2763003427,4
+Pematangsiantar,Manado,31.8241168437,4
+Pematangsiantar,Mataram,10.8751731157,4
+Pematangsiantar,Padang,29.9128671727,4
+Pematangsiantar,Pakalongan,14.7611431368,4
+Pematangsiantar,Palembang,490.41716445,4
+Pematangsiantar,Palu,35.1940658793,4
+Pematangsiantar,Pekanbaru,603.499931243,4
+Pematangsiantar,Pematangsiantar,1126.0107875,4
+Pematangsiantar,Pontianak,136.445837289,4
+Pematangsiantar,Samarinda,51.6799878758,4
+Pematangsiantar,Surabaya,88.3286538485,4
+Pematangsiantar,Ujungpandang,81.3535085048,4
+Pematangsiantar,Yogyakarta,22.6744166638,4
+Pontianak,Pontianak,100.778905466,4
+Samarinda,Samarinda,307.562820556,4
+Semarang,Balikpapan,3.55045877318,4
+Semarang,Bandjarmasin,11.8156810667,4
+Semarang,Cilacap,2.76283577446,4
+Semarang,Jakarta,5.73249361877,4
+Semarang,Kupang,4.5694342505,4
+Semarang,Malang,19.6760847651,4
+Semarang,Manado,3.00780867503,4
+Semarang,Mataram,2.33875140692,4
+Semarang,Palu,3.78461540569,4
+Semarang,Pontianak,1.412256586,4
+Semarang,Samarinda,6.27898673043,4
+Semarang,Semarang,2538.64990939,4
+Semarang,Surabaya,42.765157597,4
+Semarang,Ujungpandang,9.81223132947,4
+Semarang,Yogyakarta,19.7271617436,4
+Sukabumi,Balikpapan,14.1200938512,4
+Sukabumi,Bandar Lampung,54.3140948273,4
+Sukabumi,Bandjarmasin,43.7705374233,4
+Sukabumi,Bogor,298.161071542,4
+Sukabumi,Cilacap,52.915721811,4
+Sukabumi,Jakarta,1227.90087152,4
+Sukabumi,Kupang,11.0286059942,4
+Sukabumi,Malang,44.6632228889,4
+Sukabumi,Manado,12.5445496096,4
+Sukabumi,Mataram,7.81135976408,4
+Sukabumi,Pakalongan,48.2714379095,4
+Sukabumi,Palu,14.8874353577,4
+Sukabumi,Pontianak,56.0788707309,4
+Sukabumi,Samarinda,23.7023545498,4
+Sukabumi,Sukabumi,1636.67281599,4
+Sukabumi,Surabaya,82.9960673477,4
+Sukabumi,Ujungpandang,37.4964265332,4
+Sukabumi,Yogyakarta,27.5595431617,4
+Surabaya,Surabaya,571.076903566,4
+Surakarta,Balikpapan,11.7715199898,4
+Surakarta,Bandar Lampung,1.28703434417,4
+Surakarta,Bandjarmasin,42.2792258238,4
+Surakarta,Bogor,2.38783113619,4
+Surakarta,Cilacap,13.3776377706,4
+Surakarta,Jakarta,16.6759458901,4
+Surakarta,Kupang,20.0884123345,4
+Surakarta,Malang,178.307333619,4
+Surakarta,Manado,20.2937602899,4
+Surakarta,Mataram,18.1789156983,4
+Surakarta,Pakalongan,2.07071256035,4
+Surakarta,Palu,25.6236707773,4
+Surakarta,Pontianak,4.8627349826,4
+Surakarta,Samarinda,20.8472991804,4
+Surakarta,Surabaya,384.016556731,4
+Surakarta,Surakarta,4387.27170191,4
+Surakarta,Ujungpandang,72.119450174,4
+Surakarta,Yogyakarta,210.437313974,4
+Tasikmalaya,Balikpapan,17.7417824104,4
+Tasikmalaya,Bandar Lampung,25.0437712423,4
+Tasikmalaya,Bandjarmasin,55.2532928987,4
+Tasikmalaya,Bogor,63.0772853694,4
+Tasikmalaya,Cilacap,340.179419718,4
+Tasikmalaya,Jakarta,422.396969884,4
+Tasikmalaya,Kupang,15.7957322525,4
+Tasikmalaya,Malang,75.7386012039,4
+Tasikmalaya,Manado,16.3917466221,4
+Tasikmalaya,Mataram,11.2990127536,4
+Tasikmalaya,Pakalongan,486.887463219,4
+Tasikmalaya,Palu,20.1729924049,4
+Tasikmalaya,Pontianak,32.0425463598,4
+Tasikmalaya,Samarinda,32.211915824,4
+Tasikmalaya,Surabaya,134.048234126,4
+Tasikmalaya,Tasikmalaya,2361.89049652,4
+Tasikmalaya,Ujungpandang,54.2048580175,4
+Tasikmalaya,Yogyakarta,107.72590296,4
+Ujungpandang,Ujungpandang,649.423091424,4
+Yogyakarta,Yogyakarta,1746.87821053,4
+Alor Setar,Alor Setar,36.9390829543,4
+George Town,George Town,168.863901078,4
+Ipoh,Ipoh,319.891266452,4
+Kota Baharu,Alor Setar,41.8569809211,4
+Kota Baharu,George Town,26.9533421236,4
+Kota Baharu,Ipoh,1.86734249369,4
+Kota Baharu,Kota Baharu,396.88706363,4
+Kota Baharu,Kota Kinabalu,4.88654239668,4
+Kota Baharu,Kuala Terengganu,1.13815948267,4
+Kota Baharu,Kuching,9.204026807,4
+Kota Baharu,Sandakan,7.03758393485,4
+Kota Baharu,Singapore,42.9881039903,4
+Kota Baharu,Sungai Petani,20.6214497774,4
+Kota Baharu,Tawau,3.2587643275,4
+Kota Kinabalu,Kota Kinabalu,152.508478403,4
+Kuala Lumpur,Alor Setar,2.92075447101,4
+Kuala Lumpur,George Town,2.44665386699,4
+Kuala Lumpur,Kuala Lumpur,1107.92830278,4
+Kuala Lumpur,Kuching,1.28756238124,4
+Kuala Lumpur,Sandakan,1.06584962334,4
+Kuala Lumpur,Singapore,15.0808323607,4
+Kuala Lumpur,Sungai Petani,1.47299716468,4
+Kuala Terengganu,Kuala Terengganu,105.670366964,4
+Kuantan,Alor Setar,59.8356872887,4
+Kuantan,George Town,49.086055193,4
+Kuantan,Ipoh,5.8325656694,4
+Kuantan,Kota Kinabalu,28.2348194735,4
+Kuantan,Kuala Lumpur,2.24424035988,4
+Kuantan,Kuala Terengganu,2.92619346803,4
+Kuantan,Kuantan,142.092868869,4
+Kuantan,Kuching,53.221430356,4
+Kuantan,Sandakan,40.6137303959,4
+Kuantan,Singapore,245.720571657,4
+Kuantan,Sungai Petani,28.6196600264,4
+Kuantan,Tawau,18.8038985731,4
+Kuching,Kuching,35.6832555126,4
+Malacca,Alor Setar,45.0720195034,4
+Malacca,George Town,35.6109872049,4
+Malacca,Ipoh,4.57847943008,4
+Malacca,Kota Kinabalu,25.4044310276,4
+Malacca,Kuala Lumpur,1.95233320022,4
+Malacca,Kuching,48.1424900621,4
+Malacca,Malacca,275.324095301,4
+Malacca,Sandakan,36.5225966005,4
+Malacca,Singapore,694.716217308,4
+Malacca,Sungai Petani,21.7520935404,4
+Malacca,Tawau,16.9087967213,4
+Sandakan,Sandakan,17.0115637135,4
+Seremban,Alor Setar,18.9429519374,4
+Seremban,George Town,15.4138044189,4
+Seremban,Ipoh,2.17217396673,4
+Seremban,Kota Kinabalu,7.11102479841,4
+Seremban,Kuala Lumpur,1.41484299792,4
+Seremban,Kuching,13.4265253002,4
+Seremban,Sandakan,10.2236927483,4
+Seremban,Seremban,200.796013415,4
+Seremban,Singapore,180.527478904,4
+Seremban,Sungai Petani,9.32284655178,4
+Seremban,Tawau,4.73326943068,4
+Singapore,Singapore,331.368626271,4
+Sungai Petani,Sungai Petani,19.0991845783,4
+Tawau,Tawau,65.6552257072,4
+Chittagong,Chittagong,483.471782241,4
+Comilla,Comilla,1085.31546814,4
+Dhaka,Dhaka,1213.18932438,4
+Khulna,Chittagong,134.325616012,4
+Khulna,Comilla,65.3732115053,4
+Khulna,Dhaka,344.477650406,4
+Khulna,Khulna,1555.72697186,4
+Khulna,Mymensingh,76.2803658724,4
+Mymensingh,Mymensingh,996.906375305,4
+Rajshahi,Chittagong,317.2333389,4
+Rajshahi,Comilla,169.772092175,4
+Rajshahi,Dhaka,1221.56285461,4
+Rajshahi,Mymensingh,589.100292302,4
+Rajshahi,Rajshahi,1546.04124379,4
+Rangpur,Chittagong,13.4452860065,4
+Rangpur,Comilla,6.8757850885,4
+Rangpur,Dhaka,46.9523609042,4
+Rangpur,Mymensingh,21.5846855661,4
+Rangpur,Rangpur,1225.63571035,4
+Angeles,Angeles,777.870040785,4
+Angeles,Manila,76.0628816332,4
+Angeles,Olongapo,5.92274653929,4
+Angeles,Quezon City,136.711392968,4
+Bacolod,Bacolod,242.448818564,4
+Baguio City,Baguio City,919.744008137,4
+Baguio City,Manila,451.224506207,4
+Baguio City,Olongapo,32.1565716783,4
+Baguio City,Quezon City,725.914946777,4
+Batangas,Batangas,889.768667638,4
+Batangas,Manila,27.0104806013,4
+Batangas,Quezon City,33.3922765338,4
+Cagayan de Oro,Bacolod,237.220302288,4
+Cagayan de Oro,Batangas,1.64824155597,4
+Cagayan de Oro,Cagayan de Oro,425.239110228,4
+Cagayan de Oro,Cebu,411.667953722,4
+Cagayan de Oro,Davao,156.622937454,4
+Cagayan de Oro,General Santos,110.05037156,4
+Cagayan de Oro,Legazpi,197.121380139,4
+Cagayan de Oro,Manila,469.092282785,4
+Cagayan de Oro,Olongapo,16.5546713015,4
+Cagayan de Oro,Quezon City,633.423138377,4
+Cagayan de Oro,Zamboanga,105.477325958,4
+Cebu,Cebu,406.954364092,4
+Davao,Davao,648.860485012,4
+General Santos,General Santos,271.010141677,4
+Iligan,Bacolod,46.7213178509,4
+Iligan,Cebu,25.6498467382,4
+Iligan,Davao,12.5190424693,4
+Iligan,General Santos,10.0044066809,4
+Iligan,Iligan,524.970301483,4
+Iligan,Legazpi,16.0265324852,4
+Iligan,Manila,39.3154016678,4
+Iligan,Olongapo,1.39212116617,4
+Iligan,Quezon City,53.3142636332,4
+Iligan,Zamboanga,24.9040656966,4
+Iloilo,Bacolod,4.12031435744,4
+Iloilo,Iloilo,518.219755737,4
+Iloilo,Manila,4.42127120056,4
+Iloilo,Quezon City,6.16560674663,4
+Legazpi,Legazpi,144.969199047,4
+Manila,Manila,170.252638142,4
+Naga,Legazpi,24.3312089916,4
+Naga,Manila,57.1142321135,4
+Naga,Naga,457.01193629,4
+Naga,Olongapo,1.70914304362,4
+Naga,Quezon City,74.8330966353,4
+Olongapo,Olongapo,184.104296763,4
+Quezon City,Quezon City,259.162714525,4
+Zamboanga,Zamboanga,110.403546526,4
+Bangkok,Bangkok,121.022805885,4
+Chiang Mai,Bangkok,397.362248963,4
+Chiang Mai,Chiang Mai,139.600819425,4
+Chiang Mai,Hat Yai,114.72072866,4
+Chiang Mai,Nakhon Ratchasima,71.0925653478,4
+Chiang Mai,Nonthaburi,340.061554689,4
+Hat Yai,Hat Yai,32.950187166,4
+Nakhon Ratchasima,Nakhon Ratchasima,144.379034911,4
+Nonthaburi,Nonthaburi,307.89439756,4
+Bago,Bago,218.397704783,4
+Mandalay,Bago,137.241627327,4
+Mandalay,Mandalay,1057.26655953,4
+Mandalay,Rangoon,407.899740571,4
+Naypyidaw,Bago,204.602518173,4
+Naypyidaw,Naypyidaw,528.88676693,4
+Naypyidaw,Rangoon,571.301065878,4
+Rangoon,Rangoon,576.475340101,4
+Bien Hoa,Bien Hoa,457.408521527,5
+Buon Me Thuot,Bien Hoa,993.575015318,5
+Buon Me Thuot,Buon Me Thuot,858.651307387,5
+Buon Me Thuot,Ca Mau,67.2281505811,5
+Buon Me Thuot,Can Tho,383.24590525,5
+Buon Me Thuot,Da Nang,175.581923654,5
+Buon Me Thuot,Ho Chi Minh City,1736.91404477,5
+Buon Me Thuot,Hue,92.1418346274,5
+Buon Me Thuot,Vinh,38.6276687532,5
+Ca Mau,Ca Mau,419.21136879,5
+Can Tho,Can Tho,1511.20605588,5
+Da Nang,Da Nang,188.155904263,5
+Haiphong,Da Nang,28.6454748642,5
+Haiphong,Haiphong,2780.47727579,5
+Haiphong,Hanoi,4.90217400336,5
+Haiphong,Ho Chi Minh City,4.60164110329,5
+Haiphong,Hue,40.3321068865,5
+Haiphong,Thai Nguyen,376.092118039,5
+Haiphong,Viet Tri,387.867398182,5
+Haiphong,Vinh,740.432322854,5
+Hanoi,Da Nang,1.38319593421,5
+Hanoi,Hanoi,3159.00416897,5
+Hanoi,Hue,2.02101749784,5
+Hanoi,Thai Nguyen,29.0654783348,5
+Hanoi,Viet Tri,35.8597353474,5
+Hanoi,Vinh,40.3212852824,5
+Ho Chi Minh City,Ho Chi Minh City,1279.40044873,5
+Hue,Hue,159.51212654,5
+Long Xuyen,Bien Hoa,19.6512944967,5
+Long Xuyen,Ca Mau,14.0188657539,5
+Long Xuyen,Can Tho,171.149260357,5
+Long Xuyen,Ho Chi Minh City,56.9099055153,5
+Long Xuyen,Long Xuyen,1246.08431879,5
+Qui Nhon,Bien Hoa,95.1378695542,5
+Qui Nhon,Ca Mau,8.45624541232,5
+Qui Nhon,Can Tho,46.8580162671,5
+Qui Nhon,Da Nang,347.846193588,5
+Qui Nhon,Ho Chi Minh City,176.033844483,5
+Qui Nhon,Hue,165.395837647,5
+Qui Nhon,Qui Nhon,796.216335709,5
+Qui Nhon,Viet Tri,1.05973346059,5
+Qui Nhon,Vinh,57.73029058,5
+Rach Gia,Bien Hoa,46.3283297321,5
+Rach Gia,Ca Mau,99.9432198076,5
+Rach Gia,Can Tho,282.390115577,5
+Rach Gia,Ho Chi Minh City,129.174560808,5
+Rach Gia,Rach Gia,720.332944531,5
+Thai Nguyen,Thai Nguyen,449.528895647,5
+Viet Tri,Viet Tri,875.301691347,5
+Vinh,Vinh,414.315683675,5
+Balikpapan,Balikpapan,92.0288012021,5
+Banda Aceh,Banda Aceh,323.174812999,5
+Bandar Lampung,Bandar Lampung,986.616238218,5
+Bandjarmasin,Bandjarmasin,313.505241815,5
+Bandung,Balikpapan,12.4583794931,5
+Bandung,Bandar Lampung,33.6417343975,5
+Bandung,Bandjarmasin,38.8540436244,5
+Bandung,Bandung,4006.76095611,5
+Bandung,Bogor,117.919950329,5
+Bandung,Cilacap,65.6275799574,5
+Bandung,Jakarta,956.668793483,5
+Bandung,Kupang,16.6911517579,5
+Bandung,Malang,43.2600567343,5
+Bandung,Manado,11.002591027,5
+Bandung,Mataram,7.05763598579,5
+Bandung,Pakalongan,74.6896967012,5
+Bandung,Palu,13.5025710123,5
+Bandung,Pontianak,35.5650183123,5
+Bandung,Samarinda,22.130271706,5
+Bandung,Surabaya,81.2941937579,5
+Bandung,Ujungpandang,33.5408049611,5
+Bandung,Yogyakarta,28.770599758,5
+Bengkulu,Balikpapan,14.3894927498,5
+Bengkulu,Bandar Lampung,408.444883553,5
+Bengkulu,Bandjarmasin,42.7974051522,5
+Bengkulu,Bengkulu,609.172959672,5
+Bengkulu,Bogor,50.3695622587,5
+Bengkulu,Cilacap,19.592023242,5
+Bengkulu,Jakarta,313.583404768,5
+Bengkulu,Kupang,11.8529672602,5
+Bengkulu,Malang,30.3876019874,5
+Bengkulu,Manado,14.4775258743,5
+Bengkulu,Mataram,6.84243286378,5
+Bengkulu,Pakalongan,12.3929613382,5
+Bengkulu,Palembang,170.796500096,5
+Bengkulu,Palu,17.1409513732,5
+Bengkulu,Pekanbaru,1.08152147242,5
+Bengkulu,Pontianak,68.0447313298,5
+Bengkulu,Samarinda,26.5824754572,5
+Bengkulu,Surabaya,54.3600370628,5
+Bengkulu,Ujungpandang,38.2494968507,5
+Bengkulu,Yogyakarta,15.6067427471,5
+Bogor,Bogor,3956.52302214,5
+Bogor,Jakarta,3.31416968933,5
+Bukittinggi,Balikpapan,3.95866420535,5
+Bukittinggi,Bandar Lampung,67.2292722558,5
+Bukittinggi,Bandjarmasin,11.5915782493,5
+Bukittinggi,Bogor,10.0258739374,5
+Bukittinggi,Bukittinggi,673.110835556,5
+Bukittinggi,Cilacap,4.20772716118,5
+Bukittinggi,Jakarta,63.3529735126,5
+Bukittinggi,Kupang,3.36090703979,5
+Bukittinggi,Malang,7.33324204868,5
+Bukittinggi,Manado,3.98596634234,5
+Bukittinggi,Mataram,1.54336015992,5
+Bukittinggi,Padang,24.0799253386,5
+Bukittinggi,Pakalongan,2.60441080203,5
+Bukittinggi,Palembang,68.3412218457,5
+Bukittinggi,Palu,4.4824578113,5
+Bukittinggi,Pekanbaru,54.5488160835,5
+Bukittinggi,Pontianak,18.2306511953,5
+Bukittinggi,Samarinda,6.71383937731,5
+Bukittinggi,Surabaya,12.9359100617,5
+Bukittinggi,Ujungpandang,10.5433604783,5
+Bukittinggi,Yogyakarta,3.43070732454,5
+Cilacap,Cilacap,1727.49421199,5
+Cirebon,Balikpapan,34.2614432633,5
+Cirebon,Bandar Lampung,48.0477779534,5
+Cirebon,Bandjarmasin,107.370302353,5
+Cirebon,Bogor,151.396101367,5
+Cirebon,Cilacap,204.813092328,5
+Cirebon,Cirebon,2400.39502923,5
+Cirebon,Jakarta,1062.95705099,5
+Cirebon,Kupang,26.0001834718,5
+Cirebon,Malang,132.365662234,5
+Cirebon,Manado,29.8312559949,5
+Cirebon,Mataram,20.4782535548,5
+Cirebon,Pakalongan,75.569820641,5
+Cirebon,Palu,36.9936934773,5
+Cirebon,Pontianak,51.063520508,5
+Cirebon,Samarinda,60.9963024628,5
+Cirebon,Surabaya,253.387560792,5
+Cirebon,Ujungpandang,90.4990493129,5
+Cirebon,Yogyakarta,101.540775968,5
+Denpasar,Bandjarmasin,1.93251669906,5
+Denpasar,Denpasar,1396.98052974,5
+Denpasar,Kupang,79.5397023605,5
+Denpasar,Malang,8.6429782457,5
+Denpasar,Manado,50.1307986476,5
+Denpasar,Mataram,206.757093397,5
+Denpasar,Palu,64.3916768015,5
+Denpasar,Samarinda,1.0386421294,5
+Denpasar,Surabaya,10.57813776,5
+Denpasar,Ujungpandang,185.110514245,5
+Gorontalo,Gorontalo,392.53087714,5
+Gorontalo,Manado,27.2685333441,5
+Jakarta,Jakarta,1392.86770095,5
+Jambi,Bandar Lampung,15.4173168555,5
+Jambi,Bandjarmasin,2.30230970213,5
+Jambi,Bogor,2.22519985266,5
+Jambi,Jakarta,14.3516789941,5
+Jambi,Jambi,581.129871123,5
+Jambi,Malang,1.5402896008,5
+Jambi,Palembang,28.3047582167,5
+Jambi,Pekanbaru,1.36188765903,5
+Jambi,Pontianak,3.40128085076,5
+Jambi,Samarinda,1.39291697055,5
+Jambi,Surabaya,2.73007964724,5
+Jambi,Ujungpandang,2.07576283509,5
+Jember,Balikpapan,8.9714423418,5
+Jember,Bandjarmasin,28.6749891458,5
+Jember,Jember,2215.37304794,5
+Jember,Kupang,71.35875583,5
+Jember,Malang,245.541067865,5
+Jember,Manado,48.8786654349,5
+Jember,Mataram,98.0325477648,5
+Jember,Palu,63.0160845791,5
+Jember,Pontianak,3.28890329197,5
+Jember,Samarinda,15.0301122666,5
+Jember,Surabaya,299.784822414,5
+Jember,Ujungpandang,157.337470356,5
+Jember,Yogyakarta,2.73604118163,5
+Kupang,Kupang,82.0497971655,5
+Malang,Malang,2722.34066216,5
+Manado,Manado,259.65734643,5
+Mataram,Mataram,703.609367905,5
+Medan,Balikpapan,6.14037710394,5
+Medan,Banda Aceh,44.713128247,5
+Medan,Bandar Lampung,60.5351769984,5
+Medan,Bandjarmasin,17.7370920761,5
+Medan,Bogor,11.9443644233,5
+Medan,Cilacap,5.32734115873,5
+Medan,Jakarta,89.9508830332,5
+Medan,Kupang,9.23249363635,5
+Medan,Malang,10.1875886796,5
+Medan,Manado,6.51446861212,5
+Medan,Mataram,2.4509941284,5
+Medan,Medan,2117.98779597,5
+Medan,Padang,4.35196307363,5
+Medan,Pakalongan,3.28927928776,5
+Medan,Palembang,95.1623618215,5
+Medan,Palu,7.44079656433,5
+Medan,Pekanbaru,120.844397674,5
+Medan,Pontianak,25.7902069704,5
+Medan,Samarinda,11.0504246546,5
+Medan,Surabaya,20.7408726703,5
+Medan,Ujungpandang,16.6786340494,5
+Medan,Yogyakarta,4.50799942517,5
+Padang,Padang,609.576712716,5
+Pakalongan,Pakalongan,1252.10528496,5
+Palembang,Palembang,259.507170572,5
+Palu,Palu,63.2193712692,5
+Pekanbaru,Pekanbaru,150.369911855,5
+Pematangsiantar,Balikpapan,30.3807450354,5
+Pematangsiantar,Banda Aceh,68.3496246463,5
+Pematangsiantar,Bandar Lampung,312.562082783,5
+Pematangsiantar,Bandjarmasin,87.9487245595,5
+Pematangsiantar,Bogor,61.5122873802,5
+Pematangsiantar,Cilacap,23.888143471,5
+Pematangsiantar,Jakarta,386.411990575,5
+Pematangsiantar,Kupang,26.4908202274,5
+Pematangsiantar,Malang,50.2764935581,5
+Pematangsiantar,Manado,31.8213449321,5
+Pematangsiantar,Mataram,10.8750712562,5
+Pematangsiantar,Padang,29.9144764113,5
+Pematangsiantar,Pakalongan,14.7611326399,5
+Pematangsiantar,Palembang,490.417353884,5
+Pematangsiantar,Palu,35.1939906661,5
+Pematangsiantar,Pekanbaru,603.500038983,5
+Pematangsiantar,Pematangsiantar,1126.0107875,5
+Pematangsiantar,Pontianak,136.445915277,5
+Pematangsiantar,Samarinda,51.6802468392,5
+Pematangsiantar,Surabaya,88.3291995375,5
+Pematangsiantar,Ujungpandang,81.3533617693,5
+Pematangsiantar,Yogyakarta,22.6746351369,5
+Pontianak,Pontianak,100.778918367,5
+Samarinda,Samarinda,307.562798859,5
+Semarang,Balikpapan,3.54964370288,5
+Semarang,Bandjarmasin,11.812973535,5
+Semarang,Cilacap,2.7621879576,5
+Semarang,Jakarta,5.73114797427,5
+Semarang,Kupang,4.5683553692,5
+Semarang,Malang,19.6715464516,5
+Semarang,Manado,3.00684144205,5
+Semarang,Mataram,2.33818108493,5
+Semarang,Palu,3.78371985208,5
+Semarang,Pontianak,1.41192622814,5
+Semarang,Samarinda,6.27754580537,5
+Semarang,Semarang,2538.64938212,5
+Semarang,Surabaya,42.7553935875,5
+Semarang,Ujungpandang,9.80991273184,5
+Semarang,Yogyakarta,19.7227258851,5
+Sukabumi,Balikpapan,14.1201740054,5
+Sukabumi,Bandar Lampung,54.3141336116,5
+Sukabumi,Bandjarmasin,43.7708042914,5
+Sukabumi,Bogor,298.160825621,5
+Sukabumi,Cilacap,52.9157624349,5
+Sukabumi,Jakarta,1227.90148936,5
+Sukabumi,Kupang,11.0285964476,5
+Sukabumi,Malang,44.6634280138,5
+Sukabumi,Manado,12.54346637,5
+Sukabumi,Mataram,7.81129245655,5
+Sukabumi,Pakalongan,48.2714397685,5
+Sukabumi,Palu,14.8874147018,5
+Sukabumi,Pontianak,56.0789448222,5
+Sukabumi,Samarinda,23.702491088,5
+Sukabumi,Sukabumi,1636.67281604,5
+Sukabumi,Surabaya,82.9966423089,5
+Sukabumi,Ujungpandang,37.49638701,5
+Sukabumi,Yogyakarta,27.5598293637,5
+Surabaya,Surabaya,571.07688057,5
+Surakarta,Balikpapan,11.7715563291,5
+Surakarta,Bandar Lampung,1.28703193038,5
+Surakarta,Bandjarmasin,42.2793741152,5
+Surakarta,Bogor,2.38782298336,5
+Surakarta,Cilacap,13.3776133989,5
+Surakarta,Jakarta,16.675911098,5
+Surakarta,Kupang,20.0883429259,5
+Surakarta,Malang,178.307690796,5
+Surakarta,Manado,20.2919553482,5
+Surakarta,Mataram,18.178711983,5
+Surakarta,Pakalongan,2.07070727792,5
+Surakarta,Palu,25.6235688719,5
+Surakarta,Pontianak,4.862728815,5
+Surakarta,Samarinda,20.8473652869,5
+Surakarta,Surabaya,384.018222603,5
+Surakarta,Surakarta,4387.27170957,5
+Surakarta,Ujungpandang,72.1191874008,5
+Surakarta,Yogyakarta,210.438954396,5
+Tasikmalaya,Balikpapan,17.7418750073,5
+Tasikmalaya,Bandar Lampung,25.0437776689,5
+Tasikmalaya,Bandjarmasin,55.2536045006,5
+Tasikmalaya,Bogor,63.0772044885,5
+Tasikmalaya,Cilacap,340.179525259,5
+Tasikmalaya,Jakarta,422.396989193,5
+Tasikmalaya,Kupang,15.7957113534,5
+Tasikmalaya,Malang,75.7389144013,5
+Tasikmalaya,Manado,16.3903236737,5
+Tasikmalaya,Mataram,11.2989102254,5
+Tasikmalaya,Pakalongan,486.887259239,5
+Tasikmalaya,Palu,20.1729551871,5
+Tasikmalaya,Pontianak,32.0425740362,5
+Tasikmalaya,Samarinda,32.2120866461,5
+Tasikmalaya,Surabaya,134.049101433,5
+Tasikmalaya,Tasikmalaya,2361.89049657,5
+Tasikmalaya,Ujungpandang,54.2047760863,5
+Tasikmalaya,Yogyakarta,107.726972398,5
+Ujungpandang,Ujungpandang,649.423367121,5
+Yogyakarta,Yogyakarta,1746.87785427,5
+Alor Setar,Alor Setar,36.9390052491,5
+George Town,George Town,168.863536104,5
+Ipoh,Ipoh,319.889629179,5
+Kota Baharu,Alor Setar,41.856538817,5
+Kota Baharu,George Town,26.9530998741,5
+Kota Baharu,Ipoh,1.86752029461,5
+Kota Baharu,Kota Baharu,396.887063485,5
+Kota Baharu,Kota Kinabalu,4.88651751335,5
+Kota Baharu,Kuala Terengganu,1.1382914262,5
+Kota Baharu,Kuching,9.20393891684,5
+Kota Baharu,Sandakan,7.03751305452,5
+Kota Baharu,Singapore,42.9876346247,5
+Kota Baharu,Sungai Petani,20.6212290036,5
+Kota Baharu,Tawau,3.2587401359,5
+Kota Kinabalu,Kota Kinabalu,152.508127497,5
+Kuala Lumpur,Alor Setar,2.92171710692,5
+Kuala Lumpur,George Town,2.44746410022,5
+Kuala Lumpur,Kuala Lumpur,1107.93021861,5
+Kuala Lumpur,Kuching,1.28798804702,5
+Kuala Lumpur,Sandakan,1.06620143409,5
+Kuala Lumpur,Singapore,15.0857973976,5
+Kuala Lumpur,Sungai Petani,1.47348243012,5
+Kuala Terengganu,Kuala Terengganu,105.669803208,5
+Kuantan,Alor Setar,59.8354656953,5
+Kuantan,George Town,49.0859506968,5
+Kuantan,Ipoh,5.83316103222,5
+Kuantan,Kota Kinabalu,28.2348693562,5
+Kuantan,Kuala Lumpur,2.24349650728,5
+Kuantan,Kuala Terengganu,2.92655276611,5
+Kuantan,Kuantan,142.092868837,5
+Kuantan,Kuching,53.2212871795,5
+Kuantan,Sandakan,40.6135999123,5
+Kuantan,Singapore,245.719574126,5
+Kuantan,Sungai Petani,28.6195499225,5
+Kuantan,Tawau,18.8038879556,5
+Kuching,Kuching,35.6831791802,5
+Malacca,Alor Setar,45.0718976146,5
+Malacca,George Town,35.6109469724,5
+Malacca,Ipoh,4.5789513559,5
+Malacca,Kota Kinabalu,25.4045012904,5
+Malacca,Kuala Lumpur,1.95168804998,5
+Malacca,Kuching,48.142408646,5
+Malacca,Malacca,275.324095158,5
+Malacca,Sandakan,36.522515749,5
+Malacca,Singapore,694.714091087,5
+Malacca,Sungai Petani,21.7520315885,5
+Malacca,Tawau,16.9088040668,5
+Sandakan,Sandakan,17.0115276387,5
+Seremban,Alor Setar,18.9428941564,5
+Seremban,George Town,15.4137816722,5
+Seremban,Ipoh,2.17239711156,5
+Seremban,Kota Kinabalu,7.11104200575,5
+Seremban,Kuala Lumpur,1.41437497249,5
+Seremban,Kuching,13.426497949,5
+Seremban,Sandakan,10.2236665788,5
+Seremban,Seremban,200.796012418,5
+Seremban,Singapore,180.526863934,5
+Seremban,Sungai Petani,9.32281677421,5
+Seremban,Tawau,4.73326984939,5
+Singapore,Singapore,331.367932827,5
+Sungai Petani,Sungai Petani,19.0991444826,5
+Tawau,Tawau,65.6550801512,5
+Chittagong,Chittagong,483.47219991,5
+Comilla,Comilla,1085.3168081,5
+Dhaka,Dhaka,1213.19032438,5
+Khulna,Chittagong,134.326155813,5
+Khulna,Comilla,65.3731706668,5
+Khulna,Dhaka,344.47920379,5
+Khulna,Khulna,1555.72697194,5
+Khulna,Mymensingh,76.2807039952,5
+Mymensingh,Mymensingh,996.907203565,5
+Rajshahi,Chittagong,317.233811923,5
+Rajshahi,Comilla,169.77155702,5
+Rajshahi,Dhaka,1221.5652756,5
+Rajshahi,Mymensingh,589.10141461,5
+Rajshahi,Rajshahi,1546.04124391,5
+Rangpur,Chittagong,13.4438547367,5
+Rangpur,Comilla,6.87502122867,5
+Rangpur,Dhaka,46.9473858002,5
+Rangpur,Mymensingh,21.5823967816,5
+Rangpur,Rangpur,1225.63568944,5
+Angeles,Angeles,777.87003754,5
+Angeles,Manila,76.0626236952,5
+Angeles,Olongapo,5.92274146769,5
+Angeles,Quezon City,136.710938658,5
+Bacolod,Bacolod,242.448706523,5
+Baguio City,Baguio City,919.744008105,5
+Baguio City,Manila,451.223924495,5
+Baguio City,Olongapo,32.1566117339,5
+Baguio City,Quezon City,725.914060289,5
+Batangas,Batangas,889.768603128,5
+Batangas,Manila,27.0098955458,5
+Batangas,Quezon City,33.3915555167,5
+Cagayan de Oro,Bacolod,237.218710853,5
+Cagayan de Oro,Batangas,1.64827555543,5
+Cagayan de Oro,Cagayan de Oro,425.23911023,5
+Cagayan de Oro,Cebu,411.668010866,5
+Cagayan de Oro,Davao,156.623395486,5
+Cagayan de Oro,General Santos,110.050555839,5
+Cagayan de Oro,Legazpi,197.121469155,5
+Cagayan de Oro,Manila,469.091832202,5
+Cagayan de Oro,Olongapo,16.5546973633,5
+Cagayan de Oro,Quezon City,633.42257301,5
+Cagayan de Oro,Zamboanga,105.477401448,5
+Cebu,Cebu,406.954091069,5
+Davao,Davao,648.859999581,5
+General Santos,General Santos,271.009947936,5
+Iligan,Bacolod,46.7209695494,5
+Iligan,Cebu,25.6498311588,5
+Iligan,Davao,12.5190697386,5
+Iligan,General Santos,10.0044159679,5
+Iligan,Iligan,524.970301324,5
+Iligan,Legazpi,16.0265277635,5
+Iligan,Manila,39.3153345666,5
+Iligan,Olongapo,1.39212231897,5
+Iligan,Quezon City,53.3141762642,5
+Iligan,Zamboanga,24.9040649369,5
+Iloilo,Bacolod,4.12236723851,5
+Iloilo,Iloilo,518.219891024,5
+Iloilo,Manila,4.4234994555,5
+Iloilo,Quezon City,6.16871454013,5
+Legazpi,Legazpi,144.969100345,5
+Manila,Manila,170.252528219,5
+Naga,Legazpi,24.3311686422,5
+Naga,Manila,57.1140567468,5
+Naga,Naga,457.011936049,5
+Naga,Olongapo,1.70914212815,5
+Naga,Quezon City,74.832871951,5
+Olongapo,Olongapo,184.104165978,5
+Quezon City,Quezon City,259.162546845,5
+Zamboanga,Zamboanga,110.403470569,5
+Bangkok,Bangkok,121.051272571,5
+Chiang Mai,Bangkok,397.333579923,5
+Chiang Mai,Chiang Mai,139.600819425,5
+Chiang Mai,Hat Yai,114.712687909,5
+Chiang Mai,Nakhon Ratchasima,71.7716329571,5
+Chiang Mai,Nonthaburi,339.674008899,5
+Hat Yai,Hat Yai,32.958248917,5
+Nakhon Ratchasima,Nakhon Ratchasima,143.699925172,5
+Nonthaburi,Nonthaburi,308.282158593,5
+Bago,Bago,218.407572848,5
+Mandalay,Bago,137.207841083,5
+Mandalay,Mandalay,1057.26655545,5
+Mandalay,Rangoon,407.805125674,5
+Naypyidaw,Bago,204.626436135,5
+Naypyidaw,Naypyidaw,528.886776573,5
+Naypyidaw,Rangoon,571.375980176,5
+Rangoon,Rangoon,576.49503654,5
+Bien Hoa,Bien Hoa,457.408635679,6
+Buon Me Thuot,Bien Hoa,993.575051053,6
+Buon Me Thuot,Buon Me Thuot,858.651307394,6
+Buon Me Thuot,Ca Mau,67.2280496243,6
+Buon Me Thuot,Can Tho,383.245397741,6
+Buon Me Thuot,Da Nang,175.582426746,6
+Buon Me Thuot,Ho Chi Minh City,1736.91397931,6
+Buon Me Thuot,Hue,92.1422500641,6
+Buon Me Thuot,Vinh,38.6284225281,6
+Ca Mau,Ca Mau,419.211487742,6
+Can Tho,Can Tho,1511.20647871,6
+Da Nang,Da Nang,188.155939299,6
+Haiphong,Da Nang,28.6449620504,6
+Haiphong,Haiphong,2780.47727589,6
+Haiphong,Hanoi,4.90225544618,6
+Haiphong,Ho Chi Minh City,4.60154536614,6
+Haiphong,Hue,40.3314511371,6
+Haiphong,Thai Nguyen,376.092640805,6
+Haiphong,Viet Tri,387.868113682,6
+Haiphong,Vinh,740.431394454,6
+Hanoi,Da Nang,1.38314815709,6
+Hanoi,Hanoi,3159.00408689,6
+Hanoi,Hue,2.02095101083,6
+Hanoi,Thai Nguyen,29.0650351052,6
+Hanoi,Viet Tri,35.8592048153,6
+Hanoi,Vinh,40.3205638073,6
+Ho Chi Minh City,Ho Chi Minh City,1279.40077009,6
+Hue,Hue,159.512150407,6
+Long Xuyen,Bien Hoa,19.6513479357,6
+Long Xuyen,Ca Mau,14.0188823198,6
+Long Xuyen,Can Tho,171.149492975,6
+Long Xuyen,Ho Chi Minh City,56.9100560822,6
+Long Xuyen,Long Xuyen,1246.08431965,6
+Qui Nhon,Bien Hoa,95.1376060723,6
+Qui Nhon,Ca Mau,8.4562089901,6
+Qui Nhon,Can Tho,46.8578227588,6
+Qui Nhon,Da Nang,347.846214403,6
+Qui Nhon,Ho Chi Minh City,176.033343996,6
+Qui Nhon,Hue,165.396119351,6
+Qui Nhon,Qui Nhon,796.216335676,6
+Qui Nhon,Viet Tri,1.05975445071,6
+Qui Nhon,Vinh,57.7312551588,6
+Rach Gia,Bien Hoa,46.3284041345,6
+Rach Gia,Ca Mau,99.9432266348,6
+Rach Gia,Can Tho,282.390184982,6
+Rach Gia,Ho Chi Minh City,129.174758746,6
+Rach Gia,Rach Gia,720.332944556,6
+Thai Nguyen,Thai Nguyen,449.528785619,6
+Viet Tri,Viet Tri,875.301468214,6
+Vinh,Vinh,414.315606719,6
+Balikpapan,Balikpapan,92.0288450867,6
+Banda Aceh,Banda Aceh,323.175744174,6
+Bandar Lampung,Bandar Lampung,986.620092729,6
+Bandjarmasin,Bandjarmasin,313.505294407,6
+Bandung,Balikpapan,12.4596213539,6
+Bandung,Bandar Lampung,33.6422464831,6
+Bandung,Bandjarmasin,38.8581827413,6
+Bandung,Bandung,4006.76096904,6
+Bandung,Bogor,117.918030094,6
+Bandung,Cilacap,65.6287262488,6
+Bandung,Jakarta,956.683113804,6
+Bandung,Kupang,16.6914895652,6
+Bandung,Malang,43.2639865852,6
+Bandung,Manado,10.9914948385,6
+Bandung,Mataram,7.0570460587,6
+Bandung,Pakalongan,74.6901698271,6
+Bandung,Palu,13.5027159624,6
+Bandung,Pontianak,35.5659948648,6
+Bandung,Samarinda,22.1324869936,6
+Bandung,Surabaya,81.3046021532,6
+Bandung,Ujungpandang,33.5412722048,6
+Bandung,Yogyakarta,28.7755712193,6
+Bengkulu,Balikpapan,14.3907723659,6
+Bengkulu,Bandar Lampung,408.446708891,6
+Bengkulu,Bandjarmasin,42.8015041236,6
+Bengkulu,Bengkulu,609.172959763,6
+Bengkulu,Bogor,50.3682004355,6
+Bengkulu,Cilacap,19.5921547799,6
+Bengkulu,Jakarta,313.584726901,6
+Bengkulu,Kupang,11.8530796964,6
+Bengkulu,Malang,30.3900356979,6
+Bengkulu,Manado,14.4627696764,6
+Bengkulu,Mataram,6.84178735726,6
+Bengkulu,Pakalongan,12.3929065849,6
+Bengkulu,Palembang,170.79819717,6
+Bengkulu,Palu,17.14095107,6
+Bengkulu,Pekanbaru,1.08153132301,6
+Bengkulu,Pontianak,68.0458680415,6
+Bengkulu,Samarinda,26.5848505613,6
+Bengkulu,Surabaya,54.3664123934,6
+Bengkulu,Ujungpandang,38.2496184029,6
+Bengkulu,Yogyakarta,15.6092716972,6
+Bogor,Bogor,3956.54738644,6
+Bogor,Jakarta,3.31429367865,6
+Bukittinggi,Balikpapan,3.95880433627,6
+Bukittinggi,Bandar Lampung,67.2259743193,6
+Bukittinggi,Bandjarmasin,11.5920679613,6
+Bukittinggi,Bogor,10.0250662629,6
+Bukittinggi,Bukittinggi,673.110832823,6
+Bukittinggi,Cilacap,4.20753019606,6
+Bukittinggi,Jakarta,63.3498497141,6
+Bukittinggi,Kupang,3.36075903074,6
+Bukittinggi,Malang,7.33343682557,6
+Bukittinggi,Manado,3.98169052505,6
+Bukittinggi,Mataram,1.54313196251,6
+Bukittinggi,Padang,24.0958837863,6
+Bukittinggi,Pakalongan,2.60425989809,6
+Bukittinggi,Palembang,68.3382429803,6
+Bukittinggi,Palu,4.48221781371,6
+Bukittinggi,Pekanbaru,54.5463932311,6
+Bukittinggi,Pontianak,18.2299799544,6
+Bukittinggi,Samarinda,6.71407986626,6
+Bukittinggi,Surabaya,12.9367347212,6
+Bukittinggi,Ujungpandang,10.542829661,6
+Bukittinggi,Yogyakarta,3.43107958939,6
+Cilacap,Cilacap,1727.50355796,6
+Cirebon,Balikpapan,34.2641591766,6
+Cirebon,Bandar Lampung,48.0475287269,6
+Cirebon,Bandjarmasin,107.379549001,6
+Cirebon,Bogor,151.390546284,6
+Cirebon,Cilacap,204.812489721,6
+Cirebon,Cirebon,2400.39503087,6
+Cirebon,Jakarta,1062.95126867,6
+Cirebon,Kupang,26.0001790469,6
+Cirebon,Malang,132.374985031,6
+Cirebon,Manado,29.8005627719,6
+Cirebon,Mataram,20.4761239425,6
+Cirebon,Pakalongan,75.5687570671,6
+Cirebon,Palu,36.9933356114,6
+Cirebon,Pontianak,51.0638804645,6
+Cirebon,Samarinda,61.001163357,6
+Cirebon,Surabaya,253.414831018,6
+Cirebon,Ujungpandang,90.4984630453,6
+Cirebon,Yogyakarta,101.556249216,6
+Denpasar,Bandjarmasin,1.93302546024,6
+Denpasar,Denpasar,1396.98054021,6
+Denpasar,Kupang,79.553777613,6
+Denpasar,Malang,8.64511801953,6
+Denpasar,Manado,50.088089816,6
+Denpasar,Mataram,206.772210812,6
+Denpasar,Palu,64.4024594217,6
+Denpasar,Samarinda,1.03890888882,6
+Denpasar,Surabaya,10.5811501038,6
+Denpasar,Ujungpandang,185.142103306,6
+Gorontalo,Gorontalo,392.531430423,6
+Gorontalo,Manado,27.5078066002,6
+Jakarta,Jakarta,1392.87477759,6
+Jambi,Bandar Lampung,15.4163952574,6
+Jambi,Bandjarmasin,2.30238228128,6
+Jambi,Bogor,2.2249967355,6
+Jambi,Jakarta,14.3508174688,6
+Jambi,Jambi,581.129861112,6
+Jambi,Malang,1.54031399631,6
+Jambi,Palembang,28.3032209875,6
+Jambi,Pekanbaru,1.36181256725,6
+Jambi,Pontianak,3.40111914967,6
+Jambi,Samarinda,1.39295192891,6
+Jambi,Surabaya,2.7302244143,6
+Jambi,Ujungpandang,2.07563607272,6
+Jember,Balikpapan,8.97247250864,6
+Jember,Bandjarmasin,28.6784782199,6
+Jember,Jember,2215.37305287,6
+Jember,Kupang,71.3612807932,6
+Jember,Malang,245.567092496,6
+Jember,Manado,48.8301104893,6
+Jember,Mataram,98.0258380964,6
+Jember,Palu,63.0177154493,6
+Jember,Pontianak,3.28904341144,6
+Jember,Samarinda,15.0318444678,6
+Jember,Surabaya,299.827745811,6
+Jember,Ujungpandang,157.342045081,6
+Jember,Yogyakarta,2.73655540486,6
+Kupang,Kupang,82.0503454318,6
+Malang,Malang,2722.34902062,6
+Manado,Manado,259.675825381,6
+Mataram,Mataram,703.6193312,6
+Medan,Balikpapan,6.14095521646,6
+Medan,Banda Aceh,44.7131354781,6
+Medan,Bandar Lampung,60.5357636318,6
+Medan,Bandjarmasin,17.7388834946,6
+Medan,Bogor,11.9441038569,6
+Medan,Cilacap,5.327404744,6
+Medan,Jakarta,89.9517319891,6
+Medan,Kupang,9.23262942533,6
+Medan,Malang,10.1884577941,6
+Medan,Manado,6.50786273151,6
+Medan,Mataram,2.45077570201,6
+Medan,Medan,2117.98779862,6
+Medan,Padang,4.35510308444,6
+Medan,Pakalongan,3.28928193119,6
+Medan,Palembang,95.1638042976,6
+Medan,Palu,7.44083528678,6
+Medan,Pekanbaru,120.846129363,6
+Medan,Pontianak,25.7907724777,6
+Medan,Samarinda,11.0514697013,6
+Medan,Surabaya,20.743413471,6
+Medan,Ujungpandang,16.6787741442,6
+Medan,Yogyakarta,4.50875345461,6
+Padang,Padang,609.536104811,6
+Pakalongan,Pakalongan,1252.11289059,6
+Palembang,Palembang,259.507965948,6
+Palu,Palu,63.2198126459,6
+Pekanbaru,Pekanbaru,150.370398528,6
+Pematangsiantar,Balikpapan,30.3831844148,6
+Pematangsiantar,Banda Aceh,68.3486887538,6
+Pematangsiantar,Bandar Lampung,312.560781339,6
+Pematangsiantar,Bandjarmasin,87.9563886391,6
+Pematangsiantar,Bogor,61.5100932894,6
+Pematangsiantar,Cilacap,23.8880976305,6
+Pematangsiantar,Jakarta,386.410283955,6
+Pematangsiantar,Kupang,26.4908428261,6
+Pematangsiantar,Malang,50.2800860893,6
+Pematangsiantar,Manado,31.7886366453,6
+Pematangsiantar,Mataram,10.8739514427,6
+Pematangsiantar,Padang,29.935645436,6
+Pematangsiantar,Pakalongan,14.7609399953,6
+Pematangsiantar,Palembang,490.417993093,6
+Pematangsiantar,Palu,35.1936862224,6
+Pematangsiantar,Pekanbaru,603.500325802,6
+Pematangsiantar,Pematangsiantar,1126.01078735,6
+Pematangsiantar,Pontianak,136.447016732,6
+Pematangsiantar,Samarinda,51.6844182087,6
+Pematangsiantar,Surabaya,88.338796149,6
+Pematangsiantar,Ujungpandang,81.3529179946,6
+Pematangsiantar,Yogyakarta,22.6781136073,6
+Pontianak,Pontianak,100.779297743,6
+Samarinda,Samarinda,307.562930242,6
+Semarang,Balikpapan,3.53674079838,6
+Semarang,Bandjarmasin,11.7701141501,6
+Semarang,Cilacap,2.75192120063,6
+Semarang,Jakarta,5.70983164969,6
+Semarang,Kupang,4.55138789792,6
+Semarang,Malang,19.5998674458,6
+Semarang,Manado,2.9925919148,6
+Semarang,Mataram,2.32925491668,6
+Semarang,Palu,3.76963079499,6
+Semarang,Pontianak,1.40669230424,6
+Semarang,Samarinda,6.25472965077,6
+Semarang,Semarang,2538.64100775,6
+Semarang,Surabaya,42.6011860518,6
+Semarang,Ujungpandang,9.7734157779,6
+Semarang,Yogyakarta,19.6524707145,6
+Sukabumi,Balikpapan,14.1214892874,6
+Sukabumi,Bandar Lampung,54.314605637,6
+Sukabumi,Bandjarmasin,43.7751812936,6
+Sukabumi,Bogor,298.154023051,6
+Sukabumi,Cilacap,52.9163410961,6
+Sukabumi,Jakarta,1227.91185023,6
+Sukabumi,Kupang,11.0287476231,6
+Sukabumi,Malang,44.6671936279,6
+Sukabumi,Manado,12.5307343596,6
+Sukabumi,Mataram,7.81058852239,6
+Sukabumi,Pakalongan,48.2714302847,6
+Sukabumi,Palu,14.8874772877,6
+Sukabumi,Pontianak,56.0801183903,6
+Sukabumi,Samarinda,23.7047089422,6
+Sukabumi,Sukabumi,1636.67281692,6
+Sukabumi,Surabaya,83.006726556,6
+Sukabumi,Ujungpandang,37.4966644657,6
+Sukabumi,Yogyakarta,27.5644115842,6
+Surabaya,Surabaya,571.077055156,6
+Surakarta,Balikpapan,11.772014621,6
+Surakarta,Bandar Lampung,1.28697334242,6
+Surakarta,Bandjarmasin,42.2813097005,6
+Surakarta,Bogor,2.38763905935,6
+Surakarta,Cilacap,13.3770344555,6
+Surakarta,Jakarta,16.6751477658,6
+Surakarta,Kupang,20.0875292456,6
+Surakarta,Malang,178.313056857,6
+Surakarta,Manado,20.2702594295,6
+Surakarta,Mataram,18.1760883483,6
+Surakarta,Pakalongan,2.07059461403,6
+Surakarta,Palu,25.6222874825,6
+Surakarta,Pontianak,4.86256695415,6
+Surakarta,Samarinda,20.8481857034,6
+Surakarta,Surabaya,384.044060628,6
+Surakarta,Surakarta,4387.27182712,6
+Surakarta,Ujungpandang,72.1158112983,6
+Surakarta,Yogyakarta,210.462532715,6
+Tasikmalaya,Balikpapan,17.7433577618,6
+Tasikmalaya,Bandar Lampung,25.0437555314,6
+Tasikmalaya,Bandjarmasin,55.2586006825,6
+Tasikmalaya,Bogor,63.0751614553,6
+Tasikmalaya,Cilacap,340.179988205,6
+Tasikmalaya,Jakarta,422.396509038,6
+Tasikmalaya,Kupang,15.7957766361,6
+Tasikmalaya,Malang,75.7445747927,6
+Tasikmalaya,Manado,16.3735302126,6
+Tasikmalaya,Mataram,11.2977838239,6
+Tasikmalaya,Pakalongan,486.882501868,6
+Tasikmalaya,Palu,20.1728468459,6
+Tasikmalaya,Pontianak,32.0429377946,6
+Tasikmalaya,Samarinda,32.2147923032,6
+Tasikmalaya,Surabaya,134.064105037,6
+Tasikmalaya,Tasikmalaya,2361.89049721,6
+Tasikmalaya,Ujungpandang,54.2046581875,6
+Tasikmalaya,Yogyakarta,107.74385196,6
+Ujungpandang,Ujungpandang,649.427882397,6
+Yogyakarta,Yogyakarta,1746.87484822,6
+Alor Setar,Alor Setar,36.938987667,6
+George Town,George Town,168.863454754,6
+Ipoh,Ipoh,319.888615168,6
+Kota Baharu,Alor Setar,41.8564029645,6
+Kota Baharu,George Town,26.9530202731,6
+Kota Baharu,Ipoh,1.86763907689,6
+Kota Baharu,Kota Baharu,396.887063445,6
+Kota Baharu,Kota Kinabalu,4.88650761803,6
+Kota Baharu,Kuala Terengganu,1.13837789227,6
+Kota Baharu,Kuching,9.20391148289,6
+Kota Baharu,Sandakan,7.0374910616,6
+Kota Baharu,Singapore,42.9874832061,6
+Kota Baharu,Sungai Petani,20.6211612293,6
+Kota Baharu,Tawau,3.25873178093,6
+Kota Kinabalu,Kota Kinabalu,152.508050316,6
+Kuala Lumpur,Alor Setar,2.92202331786,6
+Kuala Lumpur,George Town,2.44772132262,6
+Kuala Lumpur,Kuala Lumpur,1107.93082762,6
+Kuala Lumpur,Kuching,1.28812337611,6
+Kuala Lumpur,Sandakan,1.06631330603,6
+Kuala Lumpur,Singapore,15.0873742918,6
+Kuala Lumpur,Sungai Petani,1.47363679828,6
+Kuala Terengganu,Kuala Terengganu,105.6694452,6
+Kuantan,Alor Setar,59.8353822418,6
+Kuantan,George Town,49.0858965865,6
+Kuantan,Ipoh,5.83354284385,6
+Kuantan,Kota Kinabalu,28.2348644414,6
+Kuantan,Kuala Lumpur,2.24325950636,6
+Kuantan,Kuala Terengganu,2.92678048815,6
+Kuantan,Kuantan,142.092868827,6
+Kuantan,Kuching,53.2212270543,6
+Kuantan,Sandakan,40.6135481647,6
+Kuantan,Singapore,245.719163424,6
+Kuantan,Sungai Petani,28.6195088342,6
+Kuantan,Tawau,18.8038745501,6
+Kuching,Kuching,35.6831619303,6
+Malacca,Alor Setar,45.0718691184,6
+Malacca,George Town,35.6109348688,6
+Malacca,Ipoh,4.57925456436,6
+Malacca,Kota Kinabalu,25.4045162386,6
+Malacca,Kuala Lumpur,1.9514833634,6
+Malacca,Kuching,48.1423909659,6
+Malacca,Malacca,275.324095117,6
+Malacca,Sandakan,36.5224970616,6
+Malacca,Singapore,694.713459629,6
+Malacca,Sungai Petani,21.7520169451,6
+Malacca,Tawau,16.9088049049,6
+Sandakan,Sandakan,17.0115194894,6
+Seremban,Alor Setar,18.9428794807,6
+Seremban,George Town,15.4137742369,6
+Seremban,Ipoh,2.17254065352,6
+Seremban,Kota Kinabalu,7.11104517667,6
+Seremban,Kuala Lumpur,1.414226436,6
+Seremban,Kuching,13.426491105,6
+Seremban,Sandakan,10.2236598908,6
+Seremban,Seremban,200.796012112,6
+Seremban,Singapore,180.526674121,6
+Seremban,Sungai Petani,9.32280916969,6
+Seremban,Tawau,4.73326940953,6
+Singapore,Singapore,331.367779261,6
+Sungai Petani,Sungai Petani,19.0991354091,6
+Tawau,Tawau,65.6550478346,6
+Chittagong,Chittagong,483.472020647,6
+Comilla,Comilla,1085.31623271,6
+Dhaka,Dhaka,1213.18989517,6
+Khulna,Chittagong,134.325924109,6
+Khulna,Comilla,65.3731882603,6
+Khulna,Dhaka,344.478537021,6
+Khulna,Khulna,1555.72697191,6
+Khulna,Mymensingh,76.2805588587,6
+Mymensingh,Mymensingh,996.906848079,6
+Rajshahi,Chittagong,317.233608868,6
+Rajshahi,Comilla,169.771786888,6
+Rajshahi,Dhaka,1221.56423638,6
+Rajshahi,Mymensingh,589.100932837,6
+Rajshahi,Rajshahi,1546.04124386,6
+Rangpur,Chittagong,13.4444690931,6
+Rangpur,Comilla,6.87534911276,6
+Rangpur,Dhaka,46.9495213086,6
+Rangpur,Mymensingh,21.5833792164,6
+Rangpur,Rangpur,1225.63569842,6
+Angeles,Angeles,777.870034482,6
+Angeles,Manila,76.0623187536,6
+Angeles,Olongapo,5.9227422684,6
+Angeles,Quezon City,136.710438595,6
+Bacolod,Bacolod,242.448497306,6
+Baguio City,Baguio City,919.744008105,6
+Baguio City,Manila,451.223282475,6
+Baguio City,Olongapo,32.1566992465,6
+Baguio City,Quezon City,725.913282423,6
+Batangas,Batangas,889.768868133,6
+Batangas,Manila,27.0124282447,6
+Batangas,Quezon City,33.3946983501,6
+Cagayan de Oro,Bacolod,237.218550585,6
+Cagayan de Oro,Batangas,1.64811597174,6
+Cagayan de Oro,Cagayan de Oro,425.239110236,6
+Cagayan de Oro,Cebu,411.668360548,6
+Cagayan de Oro,Davao,156.624128218,6
+Cagayan de Oro,General Santos,110.050830473,6
+Cagayan de Oro,Legazpi,197.121601814,6
+Cagayan de Oro,Manila,469.090257841,6
+Cagayan de Oro,Olongapo,16.5547104099,6
+Cagayan de Oro,Quezon City,633.420669628,6
+Cagayan de Oro,Zamboanga,105.477530163,6
+Cebu,Cebu,406.953720264,6
+Davao,Davao,648.859236542,6
+General Santos,General Santos,271.009670992,6
+Iligan,Bacolod,46.7208323694,6
+Iligan,Cebu,25.649794964,6
+Iligan,Davao,12.5191000066,6
+Iligan,General Santos,10.0044183188,6
+Iligan,Iligan,524.970300843,6
+Iligan,Legazpi,16.0265023204,6
+Iligan,Manila,39.3151137434,6
+Iligan,Olongapo,1.39212026914,6
+Iligan,Quezon City,53.3138955411,6
+Iligan,Zamboanga,24.904039031,6
+Iloilo,Bacolod,4.12287388894,6
+Iloilo,Iloilo,518.219924215,6
+Iloilo,Manila,4.42403125695,6
+Iloilo,Quezon City,6.16945832179,6
+Legazpi,Legazpi,144.968970726,6
+Manila,Manila,170.252426034,6
+Naga,Legazpi,24.3311732967,6
+Naga,Manila,57.1138375502,6
+Naga,Naga,457.011936003,6
+Naga,Olongapo,1.70914265184,6
+Naga,Quezon City,74.8326110387,6
+Olongapo,Olongapo,184.104003315,6
+Quezon City,Quezon City,259.162384553,6
+Zamboanga,Zamboanga,110.403367465,6
+Bangkok,Bangkok,121.014946309,6
+Chiang Mai,Bangkok,397.370115367,6
+Chiang Mai,Chiang Mai,139.600819425,6
+Chiang Mai,Hat Yai,114.722840401,6
+Chiang Mai,Nakhon Ratchasima,71.0139854796,6
+Chiang Mai,Nonthaburi,340.092980839,6
+Hat Yai,Hat Yai,32.948072654,6
+Nakhon Ratchasima,Nakhon Ratchasima,144.457619442,6
+Nonthaburi,Nonthaburi,307.862950196,6
+Bago,Bago,218.393793083,6
+Mandalay,Bago,137.255159721,6
+Mandalay,Mandalay,1057.26656116,6
+Mandalay,Rangoon,407.937701032,6
+Naypyidaw,Bago,204.592897569,6
+Naypyidaw,Naypyidaw,528.886763062,6
+Naypyidaw,Rangoon,571.271038512,6
+Rangoon,Rangoon,576.467408648,6
+Bien Hoa,Bien Hoa,156.698447453,7
+Buon Me Thuot,Bien Hoa,523.002450141,7
+Buon Me Thuot,Buon Me Thuot,413.50728999,7
+Buon Me Thuot,Ca Mau,37.3392351492,7
+Buon Me Thuot,Can Tho,154.305421285,7
+Buon Me Thuot,Da Nang,85.0147255826,7
+Buon Me Thuot,Ho Chi Minh City,836.497290651,7
+Buon Me Thuot,Hue,53.361628556,7
+Buon Me Thuot,Vinh,40.5993364094,7
+Ca Mau,Ca Mau,182.190757678,7
+Can Tho,Can Tho,726.258394737,7
+Da Nang,Da Nang,91.0492011156,7
+Haiphong,Da Nang,5.97005026889,7
+Haiphong,Haiphong,1339.01160405,7
+Haiphong,Hue,10.0538114717,7
+Haiphong,Thai Nguyen,95.6483580448,7
+Haiphong,Viet Tri,122.593064456,7
+Haiphong,Vinh,334.975784765,7
+Hanoi,Hanoi,1522.67511515,7
+Hanoi,Hue,1.2003079404,7
+Hanoi,Thai Nguyen,17.6117916773,7
+Hanoi,Viet Tri,27.0042725233,7
+Hanoi,Vinh,43.461547828,7
+Ho Chi Minh City,Ho Chi Minh City,587.124133051,7
+Hue,Hue,57.3986882457,7
+Long Xuyen,Bien Hoa,21.9674144841,7
+Long Xuyen,Ca Mau,16.5352912704,7
+Long Xuyen,Can Tho,146.340120008,7
+Long Xuyen,Ho Chi Minh City,58.204799202,7
+Long Xuyen,Long Xuyen,600.20451804,7
+Qui Nhon,Bien Hoa,51.8499361494,7
+Qui Nhon,Ca Mau,4.8627682731,7
+Qui Nhon,Can Tho,19.5334656284,7
+Qui Nhon,Da Nang,174.378666601,7
+Qui Nhon,Ho Chi Minh City,87.7756649596,7
+Qui Nhon,Hue,99.1718782999,7
+Qui Nhon,Qui Nhon,383.440272673,7
+Qui Nhon,Vinh,62.8226023803,7
+Rach Gia,Bien Hoa,22.9899522073,7
+Rach Gia,Ca Mau,52.3306289446,7
+Rach Gia,Can Tho,107.186852085,7
+Rach Gia,Ho Chi Minh City,58.6477789412,7
+Rach Gia,Rach Gia,346.889119278,7
+Thai Nguyen,Thai Nguyen,298.158349843,7
+Viet Tri,Viet Tri,475.4819027,7
+Vinh,Vinh,139.67164681,7
+Balikpapan,Balikpapan,161.269102688,7
+Banda Aceh,Banda Aceh,398.998027706,7
+Bandar Lampung,Bandar Lampung,1644.23742377,7
+Bandjarmasin,Bandjarmasin,705.578438445,7
+Bandung,Balikpapan,41.6514050474,7
+Bandung,Banda Aceh,60.0096878304,7
+Bandung,Bandar Lampung,488.263431137,7
+Bandung,Bandjarmasin,107.650596948,7
+Bandung,Bandung,7836.92421423,7
+Bandung,Bogor,255.671530831,7
+Bandung,Bukittinggi,13.1078891842,7
+Bandung,Cilacap,30.1556669742,7
+Bandung,Gorontalo,1.67250667468,7
+Bandung,Jakarta,2452.04112923,7
+Bandung,Jambi,17.4230462314,7
+Bandung,Kupang,71.5973832517,7
+Bandung,Malang,60.694074629,7
+Bandung,Manado,37.728245532,7
+Bandung,Mataram,42.489686403,7
+Bandung,Medan,246.925915276,7
+Bandung,Padang,77.8229859284,7
+Bandung,Pakalongan,59.9231434838,7
+Bandung,Palembang,332.479502067,7
+Bandung,Palu,54.7678212356,7
+Bandung,Pekanbaru,227.069324396,7
+Bandung,Pontianak,183.126953986,7
+Bandung,Samarinda,79.8108495032,7
+Bandung,Surabaya,205.426484098,7
+Bandung,Ujungpandang,77.2070856727,7
+Bandung,Yogyakarta,38.0041867034,7
+Bengkulu,Banda Aceh,125.806489933,7
+Bengkulu,Bandar Lampung,4.9401909425,7
+Bengkulu,Bengkulu,1191.46788165,7
+Bengkulu,Bukittinggi,43.3482741014,7
+Bengkulu,Jambi,72.3498677653,7
+Bengkulu,Medan,388.768113248,7
+Bengkulu,Padang,358.3780636,7
+Bengkulu,Palembang,78.3471649413,7
+Bengkulu,Pekanbaru,557.459324514,7
+Bogor,Bogor,7962.80119926,7
+Bogor,Jakarta,7.88493242828,7
+Bukittinggi,Bukittinggi,1209.11997717,7
+Cilacap,Cilacap,4473.88803243,7
+Cirebon,Balikpapan,113.551066195,7
+Cirebon,Banda Aceh,82.8026411577,7
+Cirebon,Bandar Lampung,691.30005429,7
+Cirebon,Bandjarmasin,294.904810788,7
+Cirebon,Bogor,325.407260055,7
+Cirebon,Bukittinggi,18.3613927081,7
+Cirebon,Cilacap,93.294861793,7
+Cirebon,Cirebon,4694.92918111,7
+Cirebon,Gorontalo,4.49236753557,7
+Cirebon,Jakarta,2700.842894,7
+Cirebon,Jambi,23.6653979109,7
+Cirebon,Kupang,110.56170284,7
+Cirebon,Malang,184.099245523,7
+Cirebon,Manado,101.405296844,7
+Cirebon,Mataram,122.217852696,7
+Cirebon,Medan,285.73309855,7
+Cirebon,Padang,101.681400246,7
+Cirebon,Pakalongan,60.1034975929,7
+Cirebon,Palembang,445.731817924,7
+Cirebon,Palu,148.749032694,7
+Cirebon,Pekanbaru,318.098528502,7
+Cirebon,Pontianak,260.649832769,7
+Cirebon,Samarinda,218.070118165,7
+Cirebon,Semarang,1.36369036902,7
+Cirebon,Surabaya,634.745539979,7
+Cirebon,Ujungpandang,206.511935692,7
+Cirebon,Yogyakarta,132.965958247,7
+Denpasar,Bandjarmasin,1.02561301226,7
+Denpasar,Denpasar,2732.10389015,7
+Denpasar,Gorontalo,1.52336094633,7
+Denpasar,Kupang,65.3544032583,7
+Denpasar,Malang,2.3227511161,7
+Denpasar,Manado,32.9273144336,7
+Denpasar,Mataram,238.432107214,7
+Denpasar,Palu,50.0286491785,7
+Denpasar,Surabaya,5.12019111193,7
+Denpasar,Ujungpandang,81.619666038,7
+Gorontalo,Gorontalo,747.919402519,7
+Jakarta,Jakarta,2548.62821569,7
+Jambi,Jambi,982.978380119,7
+Jember,Balikpapan,15.3533995609,7
+Jember,Bandjarmasin,40.6684539464,7
+Jember,Gorontalo,3.69241824687,7
+Jember,Jember,4332.97596042,7
+Jember,Kupang,156.686758071,7
+Jember,Malang,176.3427184,7
+Jember,Manado,85.7956285894,7
+Jember,Mataram,302.11253288,7
+Jember,Palu,130.838209131,7
+Jember,Pontianak,8.6687109085,7
+Jember,Samarinda,27.746716278,7
+Jember,Surabaya,387.775822633,7
+Jember,Ujungpandang,185.391587391,7
+Jember,Yogyakarta,1.85003241937,7
+Kupang,Kupang,116.519616609,7
+Malang,Malang,6123.19013889,7
+Manado,Manado,613.758058613,7
+Mataram,Mataram,1206.13070039,7
+Medan,Medan,2011.42345474,7
+Padang,Padang,593.262279433,7
+Pakalongan,Pakalongan,3231.04120734,7
+Palembang,Palembang,574.701849981,7
+Palu,Palu,81.9392336388,7
+Pekanbaru,Pekanbaru,196.525289183,7
+Pematangsiantar,Banda Aceh,40.5209345523,7
+Pematangsiantar,Medan,710.773150653,7
+Pematangsiantar,Pematangsiantar,2202.16726411,7
+Pontianak,Pontianak,130.729428716,7
+Samarinda,Samarinda,518.749459587,7
+Semarang,Balikpapan,12.4619293961,7
+Semarang,Banda Aceh,1.05818235963,7
+Semarang,Bandar Lampung,5.55434038371,7
+Semarang,Bandjarmasin,34.3693938713,7
+Semarang,Bogor,1.83555897071,7
+Semarang,Cilacap,1.33280986754,7
+Semarang,Jakarta,15.4255333108,7
+Semarang,Kupang,20.5779992616,7
+Semarang,Malang,28.9821190144,7
+Semarang,Manado,10.8271608795,7
+Semarang,Mataram,14.7820557873,7
+Semarang,Medan,3.69295095505,7
+Semarang,Padang,1.27778468501,7
+Semarang,Palembang,4.9387485359,7
+Semarang,Palu,16.1161162345,7
+Semarang,Pekanbaru,3.72250017619,7
+Semarang,Pontianak,7.63437808234,7
+Semarang,Samarinda,23.7737395671,7
+Semarang,Semarang,4966.08585436,7
+Semarang,Surabaya,113.454110912,7
+Semarang,Ujungpandang,23.7127130209,7
+Semarang,Yogyakarta,27.3578453045,7
+Sukabumi,Balikpapan,38.4908971129,7
+Sukabumi,Banda Aceh,76.1701424827,7
+Sukabumi,Bandar Lampung,642.744784781,7
+Sukabumi,Bandjarmasin,98.8814053207,7
+Sukabumi,Bogor,527.103076144,7
+Sukabumi,Bukittinggi,17.7038558065,7
+Sukabumi,Cilacap,19.8251960615,7
+Sukabumi,Gorontalo,1.56783119656,7
+Sukabumi,Jakarta,2566.13531449,7
+Sukabumi,Jambi,21.7920717488,7
+Sukabumi,Kupang,38.572782987,7
+Sukabumi,Malang,51.0929697963,7
+Sukabumi,Manado,35.0702687107,7
+Sukabumi,Mataram,38.3439679814,7
+Sukabumi,Medan,262.8983232,7
+Sukabumi,Padang,93.6029249549,7
+Sukabumi,Pakalongan,31.5772298692,7
+Sukabumi,Palembang,410.896666992,7
+Sukabumi,Palu,49.2354786852,7
+Sukabumi,Pekanbaru,263.899790491,7
+Sukabumi,Pontianak,235.439297163,7
+Sukabumi,Samarinda,69.6977989872,7
+Sukabumi,Sukabumi,3201.13780654,7
+Sukabumi,Surabaya,171.004410669,7
+Sukabumi,Ujungpandang,70.3757417819,7
+Sukabumi,Yogyakarta,29.6830781933,7
+Surabaya,Surabaya,1177.42028889,7
+Surakarta,Balikpapan,35.6593773321,7
+Surakarta,Banda Aceh,3.20727274813,7
+Surakarta,Bandar Lampung,16.9253209299,7
+Surakarta,Bandjarmasin,106.140355608,7
+Surakarta,Bogor,4.69103833552,7
+Surakarta,Cilacap,5.56971482703,7
+Surakarta,Gorontalo,3.14075577898,7
+Surakarta,Jakarta,38.7282152968,7
+Surakarta,Kupang,78.0776489449,7
+Surakarta,Malang,226.673658982,7
+Surakarta,Manado,63.0474182607,7
+Surakarta,Mataram,99.1651674577,7
+Surakarta,Medan,11.1626789215,7
+Surakarta,Padang,3.73429280301,7
+Surakarta,Pakalongan,1.50530454044,7
+Surakarta,Palembang,14.2138337728,7
+Surakarta,Palu,94.1716939529,7
+Surakarta,Pekanbaru,11.0929891076,7
+Surakarta,Pontianak,22.6872081333,7
+Surakarta,Samarinda,68.1236851906,7
+Surakarta,Semarang,1.00560057692,7
+Surakarta,Surabaya,879.266461591,7
+Surakarta,Surakarta,8581.01861167,7
+Surakarta,Ujungpandang,150.420238428,7
+Surakarta,Yogyakarta,251.872314294,7
+Tasikmalaya,Balikpapan,72.2577437552,7
+Tasikmalaya,Banda Aceh,64.334940344,7
+Tasikmalaya,Bandar Lampung,442.784532297,7
+Tasikmalaya,Bandjarmasin,186.49088697,7
+Tasikmalaya,Bogor,166.603569753,7
+Tasikmalaya,Bukittinggi,14.0294702145,7
+Tasikmalaya,Cilacap,190.417781169,7
+Tasikmalaya,Gorontalo,3.34884762613,7
+Tasikmalaya,Jakarta,1318.87530882,7
+Tasikmalaya,Jambi,17.6564803087,7
+Tasikmalaya,Kupang,82.5404465099,7
+Tasikmalaya,Malang,129.447916987,7
+Tasikmalaya,Manado,68.4661567957,7
+Tasikmalaya,Mataram,82.8662354711,7
+Tasikmalaya,Medan,220.225506844,7
+Tasikmalaya,Padang,76.8032189647,7
+Tasikmalaya,Pakalongan,475.859871372,7
+Tasikmalaya,Palembang,319.030053515,7
+Tasikmalaya,Palu,99.6770781176,7
+Tasikmalaya,Pekanbaru,242.19228477,7
+Tasikmalaya,Pontianak,200.989519665,7
+Tasikmalaya,Samarinda,141.517721239,7
+Tasikmalaya,Surabaya,412.645955589,7
+Tasikmalaya,Tasikmalaya,4619.66467179,7
+Tasikmalaya,Ujungpandang,151.998049104,7
+Tasikmalaya,Yogyakarta,173.349966808,7
+Ujungpandang,Ujungpandang,1865.89200287,7
+Yogyakarta,Yogyakarta,3828.43542901,7
+Alor Setar,Alor Setar,29.8675963615,7
+George Town,George Town,160.685776957,7
+Ipoh,Alor Setar,6.52885328563,7
+Ipoh,George Town,6.23135877761,7
+Ipoh,Ipoh,352.356644418,7
+Ipoh,Kota Baharu,1.24918440334,7
+Ipoh,Singapore,4.23533405369,7
+Ipoh,Sungai Petani,3.63303654964,7
+Kota Baharu,Kota Baharu,290.62035786,7
+Kota Kinabalu,Kota Kinabalu,158.437315291,7
+Kuala Lumpur,Alor Setar,31.1673684568,7
+Kuala Lumpur,George Town,26.3729983272,7
+Kuala Lumpur,Kota Baharu,9.45432585497,7
+Kuala Lumpur,Kota Kinabalu,6.85994963326,7
+Kuala Lumpur,Kuala Lumpur,1174.68857854,7
+Kuala Lumpur,Kuala Terengganu,2.8740332443,7
+Kuala Lumpur,Kuching,11.9909993711,7
+Kuala Lumpur,Sandakan,10.518057812,7
+Kuala Lumpur,Singapore,119.936267957,7
+Kuala Lumpur,Sungai Petani,15.5458600989,7
+Kuala Lumpur,Tawau,4.98040167505,7
+Kuala Terengganu,Kuala Terengganu,68.5362470195,7
+Kuantan,Alor Setar,56.6628649884,7
+Kuantan,George Town,46.9546130724,7
+Kuantan,Kota Baharu,86.1700710631,7
+Kuantan,Kota Kinabalu,23.6724539698,7
+Kuantan,Kuala Terengganu,35.3727574519,7
+Kuantan,Kuantan,149.960965168,7
+Kuantan,Kuching,43.985223572,7
+Kuantan,Sandakan,35.5668709988,7
+Kuantan,Singapore,173.420285236,7
+Kuantan,Sungai Petani,26.804670646,7
+Kuantan,Tawau,15.7198626234,7
+Kuching,Kuching,35.4727030809,7
+Malacca,Alor Setar,64.5801437675,7
+Malacca,George Town,51.5415995359,7
+Malacca,Kota Baharu,22.3885031263,7
+Malacca,Kota Kinabalu,32.2271189682,7
+Malacca,Kuala Terengganu,6.86588470563,7
+Malacca,Kuching,60.2008405542,7
+Malacca,Malacca,290.572627799,7
+Malacca,Sandakan,48.3936265626,7
+Malacca,Singapore,741.855909353,7
+Malacca,Sungai Petani,30.824838598,7
+Malacca,Tawau,21.3878580817,7
+Sandakan,Sandakan,9.51073798111,7
+Seremban,Alor Setar,28.5200809116,7
+Seremban,George Town,23.4420090344,7
+Seremban,Kota Baharu,8.98433576915,7
+Seremban,Kota Kinabalu,9.4788425369,7
+Seremban,Kuala Terengganu,2.55533211645,7
+Seremban,Kuching,17.6420377175,7
+Seremban,Sandakan,14.2346049115,7
+Seremban,Seremban,211.913163337,7
+Seremban,Singapore,202.565997321,7
+Seremban,Sungai Petani,13.882234975,7
+Seremban,Tawau,6.29110484509,7
+Singapore,Singapore,352.576164907,7
+Sungai Petani,Sungai Petani,15.9897480382,7
+Tawau,Tawau,67.3846236914,7
+Chittagong,Chittagong,144.320543168,7
+Comilla,Chittagong,427.101788384,7
+Comilla,Comilla,1162.57730614,7
+Comilla,Dhaka,532.378539828,7
+Comilla,Mymensingh,133.515986925,7
+Comilla,Rangpur,12.8505569895,7
+Dhaka,Dhaka,620.954989722,7
+Khulna,Chittagong,151.876793383,7
+Khulna,Dhaka,640.700071449,7
+Khulna,Khulna,1362.65123892,7
+Khulna,Mymensingh,266.943879257,7
+Khulna,Rangpur,105.620250263,7
+Mymensingh,Mymensingh,456.025302542,7
+Rajshahi,Chittagong,107.593824312,7
+Rajshahi,Dhaka,681.530794918,7
+Rajshahi,Mymensingh,618.40413097,7
+Rajshahi,Rajshahi,1354.152314,7
+Rajshahi,Rangpur,448.83878513,7
+Rangpur,Rangpur,506.376870331,7
+Angeles,Angeles,184.068409372,7
+Bacolod,Bacolod,137.361247897,7
+Baguio City,Baguio City,285.491741166,7
+Batangas,Batangas,313.791770873,7
+Cagayan de Oro,Angeles,115.431327874,7
+Cagayan de Oro,Bacolod,66.1473303447,7
+Cagayan de Oro,Baguio City,90.2015224665,7
+Cagayan de Oro,Batangas,60.4265787657,7
+Cagayan de Oro,Cagayan de Oro,191.671322899,7
+Cagayan de Oro,Cebu,116.61242993,7
+Cagayan de Oro,Iloilo,29.252504175,7
+Cagayan de Oro,Legazpi,61.0531929711,7
+Cagayan de Oro,Manila,385.529591117,7
+Cagayan de Oro,Olongapo,66.7462131742,7
+Cagayan de Oro,Quezon City,551.865642499,7
+Cagayan de Oro,Zamboanga,20.6097815481,7
+Cebu,Cebu,239.998184484,7
+Davao,Angeles,15.576861946,7
+Davao,Bacolod,5.20896028235,7
+Davao,Baguio City,12.0288795027,7
+Davao,Batangas,8.11571042167,7
+Davao,Cebu,6.87135571898,7
+Davao,Davao,368.678631912,7
+Davao,Iloilo,2.28800006394,7
+Davao,Legazpi,8.00138346759,7
+Davao,Manila,50.3405022278,7
+Davao,Olongapo,8.98383562222,7
+Davao,Quezon City,74.3384934386,7
+Davao,Zamboanga,1.9639307398,7
+General Santos,Angeles,7.18701625366,7
+General Santos,Bacolod,4.54071677816,7
+General Santos,Baguio City,5.55173772618,7
+General Santos,Batangas,3.72352287318,7
+General Santos,Cebu,2.89378636361,7
+General Santos,General Santos,176.270935896,7
+General Santos,Iloilo,1.97216258758,7
+General Santos,Legazpi,3.55482771543,7
+General Santos,Manila,23.4378697951,7
+General Santos,Olongapo,4.15125821475,7
+General Santos,Quezon City,34.0963260885,7
+General Santos,Zamboanga,1.73792077585,7
+Iligan,Angeles,19.5709951403,7
+Iligan,Bacolod,25.8993658783,7
+Iligan,Baguio City,15.1099896778,7
+Iligan,Batangas,10.199756712,7
+Iligan,Cebu,14.444288013,7
+Iligan,Iligan,236.671945647,7
+Iligan,Iloilo,10.6152000746,7
+Iligan,Legazpi,9.86796951667,7
+Iligan,Manila,64.2355914164,7
+Iligan,Olongapo,11.1582653833,7
+Iligan,Quezon City,92.3413945594,7
+Iligan,Zamboanga,9.67382242971,7
+Iloilo,Iloilo,189.560516424,7
+Legazpi,Legazpi,84.8735020906,7
+Manila,Manila,26.5754472221,7
+Naga,Angeles,9.16872804553,7
+Naga,Baguio City,6.15433884419,7
+Naga,Batangas,6.03681578084,7
+Naga,Legazpi,5.3227625143,7
+Naga,Manila,33.1545029768,7
+Naga,Naga,205.960430189,7
+Naga,Olongapo,4.86724526045,7
+Naga,Quezon City,46.0502402562,7
+Olongapo,Olongapo,13.3303235515,7
+Quezon City,Quezon City,67.7691099813,7
+Zamboanga,Zamboanga,74.5489662453,7
+Bangkok,Bangkok,72.0723028644,7
+Chiang Mai,Bangkok,238.658444019,7
+Chiang Mai,Chiang Mai,83.6828859328,7
+Chiang Mai,Hat Yai,61.4588126421,7
+Chiang Mai,Nakhon Ratchasima,41.0316927226,7
+Chiang Mai,Nonthaburi,193.605881556,7
+Hat Yai,Hat Yai,27.0617979381,7
+Nakhon Ratchasima,Nakhon Ratchasima,88.1313832226,7
+Nonthaburi,Nonthaburi,194.808810588,7
+Bago,Bago,27.613857458,7
+Mandalay,Bago,157.421483668,7
+Mandalay,Mandalay,575.53828068,7
+Mandalay,Rangoon,434.563304344,7
+Naypyidaw,Bago,119.942661163,7
+Naypyidaw,Naypyidaw,287.891804837,7
+Naypyidaw,Rangoon,311.063618235,7
+Rangoon,Rangoon,101.253298085,7
+Bien Hoa,Bien Hoa,156.698379779,8
+Buon Me Thuot,Bien Hoa,523.00242755,8
+Buon Me Thuot,Buon Me Thuot,413.507289985,8
+Buon Me Thuot,Ca Mau,37.3393315274,8
+Buon Me Thuot,Can Tho,154.305830284,8
+Buon Me Thuot,Da Nang,85.0144168645,8
+Buon Me Thuot,Ho Chi Minh City,836.497459597,8
+Buon Me Thuot,Hue,53.3613783102,8
+Buon Me Thuot,Vinh,40.5983722833,8
+Ca Mau,Ca Mau,182.190663664,8
+Can Tho,Can Tho,726.258018385,8
+Da Nang,Da Nang,91.0491722833,8
+Haiphong,Da Nang,5.97019372567,8
+Haiphong,Haiphong,1339.01160396,8
+Haiphong,Hue,10.0540424189,8
+Haiphong,Thai Nguyen,95.648013923,8
+Haiphong,Viet Tri,122.592535589,8
+Haiphong,Vinh,334.97709548,8
+Hanoi,Hanoi,1522.67513042,8
+Hanoi,Hue,1.20035360375,8
+Hanoi,Thai Nguyen,17.6119937503,8
+Hanoi,Viet Tri,27.0045630218,8
+Hanoi,Vinh,43.4623729236,8
+Ho Chi Minh City,Ho Chi Minh City,587.12387492,8
+Hue,Hue,57.3986720004,8
+Long Xuyen,Bien Hoa,21.9673337726,8
+Long Xuyen,Ca Mau,16.5352739115,8
+Long Xuyen,Can Tho,146.339976539,8
+Long Xuyen,Ho Chi Minh City,58.2045996187,8
+Long Xuyen,Long Xuyen,600.204517831,8
+Qui Nhon,Bien Hoa,51.8501723688,8
+Qui Nhon,Ca Mau,4.86280318868,8
+Qui Nhon,Can Tho,19.5336072385,8
+Qui Nhon,Da Nang,174.37883534,8
+Qui Nhon,Ho Chi Minh City,87.7760863698,8
+Qui Nhon,Hue,99.171869313,8
+Qui Nhon,Qui Nhon,383.440272699,8
+Qui Nhon,Vinh,62.8213994265,8
+Rach Gia,Bien Hoa,22.9898823589,8
+Rach Gia,Ca Mau,52.3306072861,8
+Rach Gia,Can Tho,107.186815165,8
+Rach Gia,Ho Chi Minh City,58.6476151348,8
+Rach Gia,Rach Gia,346.88911925,8
+Thai Nguyen,Thai Nguyen,298.158517502,8
+Viet Tri,Viet Tri,475.482181017,8
+Vinh,Vinh,139.671691912,8
+Balikpapan,Balikpapan,161.269096474,8
+Banda Aceh,Banda Aceh,398.998010261,8
+Bandar Lampung,Bandar Lampung,1644.23735679,8
+Bandjarmasin,Bandjarmasin,705.578411061,8
+Bandung,Balikpapan,41.6514003459,8
+Bandung,Banda Aceh,60.0096929278,8
+Bandung,Bandar Lampung,488.26341661,8
+Bandung,Bandjarmasin,107.650585769,8
+Bandung,Bandung,7836.92421415,8
+Bandung,Bogor,255.671594013,8
+Bandung,Bukittinggi,13.1078984352,8
+Bandung,Cilacap,30.1556870094,8
+Bandung,Gorontalo,1.67212116214,8
+Bandung,Jakarta,2452.04102613,8
+Bandung,Jambi,17.4230529589,8
+Bandung,Kupang,71.5973565225,8
+Bandung,Malang,60.694075198,8
+Bandung,Manado,37.7282295349,8
+Bandung,Mataram,42.4896632672,8
+Bandung,Medan,246.925957235,8
+Bandung,Padang,77.8229939933,8
+Bandung,Pakalongan,59.9231526142,8
+Bandung,Palembang,332.479491026,8
+Bandung,Palu,54.7678032705,8
+Bandung,Pekanbaru,227.069331278,8
+Bandung,Pontianak,183.126941923,8
+Bandung,Samarinda,79.8108416492,8
+Bandung,Surabaya,205.426435147,8
+Bandung,Ujungpandang,77.2070648881,8
+Bandung,Yogyakarta,38.0041895401,8
+Bengkulu,Banda Aceh,125.806476404,8
+Bengkulu,Bandar Lampung,4.94018984463,8
+Bengkulu,Bengkulu,1191.46788165,8
+Bengkulu,Bukittinggi,43.3482963513,8
+Bengkulu,Jambi,72.3498817756,8
+Bengkulu,Medan,388.768104481,8
+Bengkulu,Padang,358.37803176,8
+Bengkulu,Palembang,78.3471472592,8
+Bengkulu,Pekanbaru,557.45923411,8
+Bogor,Bogor,7962.80082078,8
+Bogor,Jakarta,7.88492977346,8
+Bukittinggi,Bukittinggi,1209.11990576,8
+Cilacap,Cilacap,4473.88777566,8
+Cirebon,Balikpapan,113.551067427,8
+Cirebon,Banda Aceh,82.8026584358,8
+Cirebon,Bandar Lampung,691.300119251,8
+Cirebon,Bandjarmasin,294.90481665,8
+Cirebon,Bogor,325.40738073,8
+Cirebon,Bukittinggi,18.3614079385,8
+Cirebon,Cilacap,93.2949353199,8
+Cirebon,Cirebon,4694.92918113,8
+Cirebon,Gorontalo,4.49133260119,8
+Cirebon,Jakarta,2700.8431146,8
+Cirebon,Jambi,23.6654099766,8
+Cirebon,Kupang,110.561675243,8
+Cirebon,Malang,184.099270026,8
+Cirebon,Manado,101.405266393,8
+Cirebon,Mataram,122.217801269,8
+Cirebon,Medan,285.733182456,8
+Cirebon,Padang,101.681423363,8
+Cirebon,Pakalongan,60.1035141869,8
+Cirebon,Palembang,445.731858268,8
+Cirebon,Palu,148.749002305,8
+Cirebon,Pekanbaru,318.098577498,8
+Cirebon,Pontianak,260.649847848,8
+Cirebon,Samarinda,218.070123686,8
+Cirebon,Semarang,1.3636907684,8
+Cirebon,Surabaya,634.745467257,8
+Cirebon,Ujungpandang,206.511905648,8
+Cirebon,Yogyakarta,132.965984622,8
+Denpasar,Bandjarmasin,1.02561400889,8
+Denpasar,Denpasar,2732.10389035,8
+Denpasar,Gorontalo,1.52301145,8
+Denpasar,Kupang,65.3544491545,8
+Denpasar,Malang,2.32275363622,8
+Denpasar,Manado,32.9273358886,8
+Denpasar,Mataram,238.432233843,8
+Denpasar,Palu,50.0286865784,8
+Denpasar,Surabaya,5.12019539907,8
+Denpasar,Ujungpandang,81.619731855,8
+Gorontalo,Gorontalo,747.923991411,8
+Jakarta,Jakarta,2548.62811269,8
+Jambi,Jambi,982.978329598,8
+Jember,Balikpapan,15.3534097088,8
+Jember,Bandjarmasin,40.6684811936,8
+Jember,Gorontalo,3.69157000166,8
+Jember,Jember,4332.97596048,8
+Jember,Kupang,156.686820825,8
+Jember,Malang,176.342856513,8
+Jember,Manado,85.7956586026,8
+Jember,Mataram,302.112602163,8
+Jember,Palu,130.83826746,8
+Jember,Pontianak,8.66871704561,8
+Jember,Samarinda,27.7467350187,8
+Jember,Surabaya,387.776030302,8
+Jember,Ujungpandang,185.391680944,8
+Jember,Yogyakarta,1.85003398907,8
+Kupang,Kupang,116.5196129,8
+Malang,Malang,6123.18988254,8
+Manado,Manado,613.758040035,8
+Mataram,Mataram,1206.13066731,8
+Medan,Medan,2011.42336235,8
+Padang,Padang,593.262253204,8
+Pakalongan,Pakalongan,3231.04106122,8
+Palembang,Palembang,574.701826624,8
+Palu,Palu,81.9392309426,8
+Pekanbaru,Pekanbaru,196.525280871,8
+Pematangsiantar,Banda Aceh,40.5209234125,8
+Pematangsiantar,Medan,710.773015654,8
+Pematangsiantar,Pematangsiantar,2202.16726404,8
+Pontianak,Pontianak,130.729423515,8
+Samarinda,Samarinda,518.749439379,8
+Semarang,Balikpapan,12.4619258786,8
+Semarang,Banda Aceh,1.05818227028,8
+Semarang,Bandar Lampung,5.55433927764,8
+Semarang,Bandjarmasin,34.3693844805,8
+Semarang,Bogor,1.83555911341,8
+Semarang,Cilacap,1.33281052729,8
+Semarang,Jakarta,15.4255300494,8
+Semarang,Kupang,20.5779880937,8
+Semarang,Malang,28.982114377,8
+Semarang,Manado,10.8271544547,8
+Semarang,Mataram,14.7820452346,8
+Semarang,Medan,3.69295095706,8
+Semarang,Padang,1.27778460099,8
+Semarang,Palembang,4.93874753534,8
+Semarang,Palu,16.1161082183,8
+Semarang,Pekanbaru,3.72249965847,8
+Semarang,Pontianak,7.63437628633,8
+Semarang,Samarinda,23.7737332006,8
+Semarang,Semarang,4966.08585317,8
+Semarang,Surabaya,113.45406466,8
+Semarang,Ujungpandang,23.7127026207,8
+Semarang,Yogyakarta,27.3578427125,8
+Sukabumi,Balikpapan,38.4908931633,8
+Sukabumi,Banda Aceh,76.1701497348,8
+Sukabumi,Bandar Lampung,642.744772256,8
+Sukabumi,Bandjarmasin,98.8813960673,8
+Sukabumi,Bogor,527.103211813,8
+Sukabumi,Bukittinggi,17.7038684829,8
+Sukabumi,Cilacap,19.8252094366,8
+Sukabumi,Gorontalo,1.56746982779,8
+Sukabumi,Jakarta,2566.13523294,8
+Sukabumi,Jambi,21.792080387,8
+Sukabumi,Kupang,38.5727689827,8
+Sukabumi,Malang,51.0929707998,8
+Sukabumi,Manado,35.0702542006,8
+Sukabumi,Mataram,38.3439474966,8
+Sukabumi,Medan,262.898370572,8
+Sukabumi,Padang,93.602935616,8
+Sukabumi,Pakalongan,31.5772350048,8
+Sukabumi,Palembang,410.896657564,8
+Sukabumi,Palu,49.2354630403,8
+Sukabumi,Pekanbaru,263.899801198,8
+Sukabumi,Pontianak,235.439284072,8
+Sukabumi,Samarinda,69.6977928438,8
+Sukabumi,Sukabumi,3201.13780653,8
+Sukabumi,Surabaya,171.004371676,8
+Sukabumi,Ujungpandang,70.3757235588,8
+Sukabumi,Yogyakarta,29.6830807136,8
+Surabaya,Surabaya,1177.4202473,8
+Surakarta,Balikpapan,35.65938584,8
+Surakarta,Banda Aceh,3.20727414781,8
+Surakarta,Bandar Lampung,16.9253263749,8
+Surakarta,Bandjarmasin,106.14038189,8
+Surakarta,Bogor,4.69104114351,8
+Surakarta,Cilacap,5.56972048506,8
+Surakarta,Gorontalo,3.14003293885,8
+Surakarta,Jakarta,38.7282272801,8
+Surakarta,Kupang,78.0776472379,8
+Surakarta,Malang,226.673740775,8
+Surakarta,Manado,63.0474136869,8
+Surakarta,Mataram,99.1651483149,8
+Surakarta,Medan,11.1626847416,8
+Surakarta,Padang,3.73429450247,8
+Surakarta,Pakalongan,1.50530529887,8
+Surakarta,Palembang,14.2138382964,8
+Surakarta,Palu,94.1716961605,8
+Surakarta,Pekanbaru,11.0929933425,8
+Surakarta,Pontianak,22.6872146127,8
+Surakarta,Samarinda,68.1237024298,8
+Surakarta,Semarang,1.00560110045,8
+Surakarta,Surabaya,879.2665611,8
+Surakarta,Surakarta,8581.01861186,8
+Surakarta,Ujungpandang,150.420250801,8
+Surakarta,Yogyakarta,251.872421618,8
+Tasikmalaya,Balikpapan,72.2577419781,8
+Tasikmalaya,Banda Aceh,64.3349514885,8
+Tasikmalaya,Bandar Lampung,442.784558213,8
+Tasikmalaya,Bandjarmasin,186.490884067,8
+Tasikmalaya,Bogor,166.603625632,8
+Tasikmalaya,Bukittinggi,14.0294813544,8
+Tasikmalaya,Cilacap,190.417924491,8
+Tasikmalaya,Gorontalo,3.34807601282,8
+Tasikmalaya,Jakarta,1318.87536981,8
+Tasikmalaya,Jambi,17.656488685,8
+Tasikmalaya,Kupang,82.5404229822,8
+Tasikmalaya,Malang,129.447929629,8
+Tasikmalaya,Manado,68.4661338098,8
+Tasikmalaya,Mataram,82.8661976657,8
+Tasikmalaya,Medan,220.225563709,8
+Tasikmalaya,Padang,76.8032337044,8
+Tasikmalaya,Pakalongan,475.859985888,8
+Tasikmalaya,Palembang,319.030071085,8
+Tasikmalaya,Palu,99.677054221,8
+Tasikmalaya,Pekanbaru,242.192313491,8
+Tasikmalaya,Pontianak,200.989524169,8
+Tasikmalaya,Samarinda,141.517719806,8
+Tasikmalaya,Surabaya,412.645893689,8
+Tasikmalaya,Tasikmalaya,4619.6646718,8
+Tasikmalaya,Ujungpandang,151.998021604,8
+Tasikmalaya,Yogyakarta,173.349995051,8
+Ujungpandang,Ujungpandang,1865.8919384,8
+Yogyakarta,Yogyakarta,3828.43526289,8
+Alor Setar,Alor Setar,29.8676069602,8
+George Town,George Town,160.685827697,8
+Ipoh,Alor Setar,6.52787605005,8
+Ipoh,George Town,6.23042957912,8
+Ipoh,Ipoh,352.356502219,8
+Ipoh,Kota Baharu,1.2489913221,8
+Ipoh,Singapore,4.23467956589,8
+Ipoh,Sungai Petani,3.63249563098,8
+Kota Baharu,Kota Baharu,290.620562451,8
+Kota Kinabalu,Kota Kinabalu,158.437439707,8
+Kuala Lumpur,Alor Setar,31.1676315778,8
+Kuala Lumpur,George Town,26.3732358235,8
+Kuala Lumpur,Kota Baharu,9.45435946594,8
+Kuala Lumpur,Kota Kinabalu,6.85996629226,8
+Kuala Lumpur,Kuala Lumpur,1174.68858193,8
+Kuala Lumpur,Kuala Terengganu,2.87404250351,8
+Kuala Lumpur,Kuching,11.9910471525,8
+Kuala Lumpur,Sandakan,10.5181006852,8
+Kuala Lumpur,Singapore,119.936698595,8
+Kuala Lumpur,Sungai Petani,15.5460036334,8
+Kuala Lumpur,Tawau,4.98041701752,8
+Kuala Terengganu,Kuala Terengganu,68.5362969319,8
+Kuantan,Alor Setar,56.6631118086,8
+Kuantan,George Town,46.9548440435,8
+Kuantan,Kota Baharu,86.1700252946,8
+Kuantan,Kota Kinabalu,23.672414726,8
+Kuantan,Kuala Terengganu,35.3727268704,8
+Kuantan,Kuantan,149.960965167,8
+Kuantan,Kuching,43.9852191092,8
+Kuantan,Sandakan,35.5668706402,8
+Kuantan,Singapore,173.420199276,8
+Kuantan,Sungai Petani,26.8048086022,8
+Kuantan,Tawau,15.7198468146,8
+Kuching,Kuching,35.4727270446,8
+Malacca,Alor Setar,64.5804630873,8
+Malacca,George Town,51.5418834084,8
+Malacca,Kota Baharu,22.3885044129,8
+Malacca,Kota Kinabalu,32.2270845117,8
+Malacca,Kuala Terengganu,6.86588281101,8
+Malacca,Kuching,60.2008698808,8
+Malacca,Malacca,290.572627807,8
+Malacca,Sandakan,48.3936545594,8
+Malacca,Singapore,741.855978295,8
+Malacca,Sungai Petani,30.8250153887,8
+Malacca,Tawau,21.3878491618,8
+Sandakan,Sandakan,9.51074434402,8
+Seremban,Alor Setar,28.5202182449,8
+Seremban,George Town,23.442135115,8
+Seremban,Kota Baharu,8.98433512436,8
+Seremban,Kota Kinabalu,9.47883117737,8
+Seremban,Kuala Terengganu,2.55533108109,8
+Seremban,Kuching,17.6420440318,8
+Seremban,Sandakan,14.234611307,8
+Seremban,Seremban,211.913163318,8
+Seremban,Singapore,202.565989968,8
+Seremban,Sungai Petani,13.8823128001,8
+Seremban,Tawau,6.29110140833,8
+Singapore,Singapore,352.576413136,8
+Sungai Petani,Sungai Petani,15.9897528133,8
+Tawau,Tawau,67.3846735649,8
+Chittagong,Chittagong,144.314387447,8
+Comilla,Chittagong,427.081968805,8
+Comilla,Comilla,1162.57729978,8
+Comilla,Dhaka,532.321659268,8
+Comilla,Mymensingh,133.49557513,8
+Comilla,Rangpur,12.8477031303,8
+Dhaka,Dhaka,620.949891767,8
+Khulna,Chittagong,151.887489102,8
+Khulna,Dhaka,640.706465049,8
+Khulna,Khulna,1362.65123869,8
+Khulna,Mymensingh,266.934252459,8
+Khulna,Rangpur,105.60913134,8
+Mymensingh,Mymensingh,456.033381607,8
+Rajshahi,Chittagong,107.609103153,8
+Rajshahi,Dhaka,681.586377784,8
+Rajshahi,Mymensingh,618.426090828,8
+Rajshahi,Rajshahi,1354.15231483,8
+Rajshahi,Rangpur,448.823657437,8
+Rangpur,Rangpur,506.40597101,8
+Angeles,Angeles,184.072037213,8
+Bacolod,Bacolod,137.366843004,8
+Baguio City,Baguio City,285.476963356,8
+Batangas,Batangas,313.536933116,8
+Cagayan de Oro,Angeles,115.428221701,8
+Cagayan de Oro,Bacolod,66.1402656431,8
+Cagayan de Oro,Baguio City,90.2111406035,8
+Cagayan de Oro,Batangas,60.6004795839,8
+Cagayan de Oro,Cagayan de Oro,191.671322464,8
+Cagayan de Oro,Cebu,116.603479821,8
+Cagayan de Oro,Iloilo,29.0987921027,8
+Cagayan de Oro,Legazpi,61.0520771081,8
+Cagayan de Oro,Manila,385.528402182,8
+Cagayan de Oro,Olongapo,66.7456989763,8
+Cagayan de Oro,Quezon City,551.863381488,8
+Cagayan de Oro,Zamboanga,20.6042733059,8
+Cebu,Cebu,240.006253819,8
+Davao,Angeles,15.5754583014,8
+Davao,Bacolod,5.20807476397,8
+Davao,Baguio City,12.0294017893,8
+Davao,Batangas,8.13855209701,8
+Davao,Cebu,6.87039407724,8
+Davao,Davao,368.678627807,8
+Davao,Iloilo,2.27583354375,8
+Davao,Legazpi,8.00073152256,8
+Davao,Manila,50.3371653068,8
+Davao,Olongapo,8.98319860913,8
+Davao,Quezon City,74.3334904529,8
+Davao,Zamboanga,1.96328175909,8
+General Santos,Angeles,7.18819892716,8
+General Santos,Bacolod,4.54110114262,8
+General Santos,Baguio City,5.55339281706,8
+General Santos,Batangas,3.73495374819,8
+General Santos,Cebu,2.89411829765,8
+General Santos,General Santos,176.270938443,8
+General Santos,Iloilo,1.96217516486,8
+General Santos,Legazpi,3.55544337954,8
+General Santos,Manila,23.4422851825,8
+General Santos,Olongapo,4.15202107541,8
+General Santos,Quezon City,34.1027148387,8
+General Santos,Zamboanga,1.73778896623,8
+Iligan,Angeles,19.5740382192,8
+Iligan,Bacolod,25.9013233889,8
+Iligan,Baguio City,15.1143572549,8
+Iligan,Batangas,10.2309762759,8
+Iligan,Cebu,14.4458138861,8
+Iligan,Iligan,236.6719548,8
+Iligan,Iloilo,10.5613468423,8
+Iligan,Legazpi,9.86958907919,8
+Iligan,Manila,64.2471100749,8
+Iligan,Olongapo,11.1602147125,8
+Iligan,Quezon City,92.35785955,8
+Iligan,Zamboanga,9.67300103673,8
+Iloilo,Iloilo,189.790322094,8
+Legazpi,Legazpi,84.87485949,8
+Manila,Manila,26.5756218756,8
+Naga,Angeles,9.16550488045,8
+Naga,Baguio City,6.15299693,8
+Naga,Batangas,6.05222362744,8
+Naga,Legazpi,5.32093728911,8
+Naga,Manila,33.1436375395,8
+Naga,Naga,205.960402672,8
+Naga,Olongapo,4.86562768167,8
+Naga,Quezon City,46.0351019711,8
+Olongapo,Olongapo,13.3304322386,8
+Quezon City,Quezon City,67.769587442,8
+Zamboanga,Zamboanga,74.5560766916,8
+Bangkok,Bangkok,72.0856160758,8
+Chiang Mai,Bangkok,238.645112361,8
+Chiang Mai,Chiang Mai,83.6828859328,8
+Chiang Mai,Hat Yai,61.4534379455,8
+Chiang Mai,Nakhon Ratchasima,41.1724848943,8
+Chiang Mai,Nonthaburi,193.547018719,8
+Hat Yai,Hat Yai,27.0671774474,8
+Nakhon Ratchasima,Nakhon Ratchasima,87.9905819589,8
+Nonthaburi,Nonthaburi,194.867713196,8
+Bago,Bago,27.6140897786,8
+Mandalay,Bago,157.412722554,8
+Mandalay,Mandalay,575.538280284,8
+Mandalay,Rangoon,434.539972237,8
+Naypyidaw,Bago,119.951189948,8
+Naypyidaw,Naypyidaw,287.891808423,8
+Naypyidaw,Rangoon,311.086347768,8
+Rangoon,Rangoon,101.253900573,8
+Bien Hoa,Bien Hoa,156.698399384,9
+Buon Me Thuot,Bien Hoa,523.002434091,9
+Buon Me Thuot,Buon Me Thuot,413.507289986,9
+Buon Me Thuot,Ca Mau,37.3393036878,9
+Buon Me Thuot,Can Tho,154.305712155,9
+Buon Me Thuot,Da Nang,85.0145061337,9
+Buon Me Thuot,Ho Chi Minh City,836.497410751,9
+Buon Me Thuot,Hue,53.3614506939,9
+Buon Me Thuot,Vinh,40.5986513914,9
+Ca Mau,Ca Mau,182.190690827,9
+Can Tho,Can Tho,726.258127112,9
+Da Nang,Da Nang,91.049180676,9
+Haiphong,Da Nang,5.97015225265,9
+Haiphong,Haiphong,1339.01160399,9
+Haiphong,Hue,10.0539756576,9
+Haiphong,Thai Nguyen,95.6481143551,9
+Haiphong,Viet Tri,122.592689879,9
+Haiphong,Vinh,334.976719665,9
+Hanoi,Hanoi,1522.6751259,9
+Hanoi,Hue,1.2003402722,9
+Hanoi,Thai Nguyen,17.6119335856,9
+Hanoi,Viet Tri,27.0044764024,9
+Hanoi,Vinh,43.4621300539,9
+Ho Chi Minh City,Ho Chi Minh City,587.123949683,9
+Hue,Hue,57.3986767368,9
+Long Xuyen,Bien Hoa,21.9673570828,9
+Long Xuyen,Ca Mau,16.5352789223,9
+Long Xuyen,Can Tho,146.340017963,9
+Long Xuyen,Ho Chi Minh City,58.2046572545,9
+Long Xuyen,Long Xuyen,600.204517891,9
+Qui Nhon,Bien Hoa,51.8501040667,9
+Qui Nhon,Ca Mau,4.86279309648,9
+Qui Nhon,Can Tho,19.5335663087,9
+Qui Nhon,Da Nang,174.378786556,9
+Qui Nhon,Ho Chi Minh City,87.7759645194,9
+Qui Nhon,Hue,99.1718719585,9
+Qui Nhon,Qui Nhon,383.440272691,9
+Qui Nhon,Vinh,62.8217477741,9
+Rach Gia,Bien Hoa,22.9899025377,9
+Rach Gia,Ca Mau,52.3306135465,9
+Rach Gia,Can Tho,107.186825847,9
+Rach Gia,Ho Chi Minh City,58.6476624531,9
+Rach Gia,Rach Gia,346.889119258,9
+Thai Nguyen,Thai Nguyen,298.158469822,9
+Viet Tri,Viet Tri,475.482101782,9
+Vinh,Vinh,139.671679138,9
+Balikpapan,Balikpapan,161.269093354,9
+Banda Aceh,Banda Aceh,398.998001504,9
+Bandar Lampung,Bandar Lampung,1644.23732317,9
+Bandjarmasin,Bandjarmasin,705.578397315,9
+Bandung,Balikpapan,41.6513979848,9
+Bandung,Banda Aceh,60.0096954869,9
+Bandung,Bandar Lampung,488.263409316,9
+Bandung,Bandjarmasin,107.650580155,9
+Bandung,Bandung,7836.92421411,9
+Bandung,Bogor,255.671625731,9
+Bandung,Bukittinggi,13.1079030807,9
+Bandung,Cilacap,30.1556970711,9
+Bandung,Gorontalo,1.67192763602,9
+Bandung,Jakarta,2452.04097438,9
+Bandung,Jambi,17.4230563363,9
+Bandung,Kupang,71.597343103,9
+Bandung,Malang,60.6940754809,9
+Bandung,Manado,37.7282215028,9
+Bandung,Mataram,42.4896516529,9
+Bandung,Medan,246.9259783,9
+Bandung,Padang,77.8229980422,9
+Bandung,Pakalongan,59.9231571982,9
+Bandung,Palembang,332.479485482,9
+Bandung,Palu,54.7677942511,9
+Bandung,Pekanbaru,227.069334732,9
+Bandung,Pontianak,183.126935867,9
+Bandung,Samarinda,79.8108377044,9
+Bandung,Surabaya,205.426410567,9
+Bandung,Ujungpandang,77.2070544529,9
+Bandung,Yogyakarta,38.0041909623,9
+Bengkulu,Banda Aceh,125.806469612,9
+Bengkulu,Bandar Lampung,4.94018929345,9
+Bengkulu,Bengkulu,1191.46788165,9
+Bengkulu,Bukittinggi,43.3483075255,9
+Bengkulu,Jambi,72.3498888089,9
+Bengkulu,Medan,388.768100078,9
+Bengkulu,Padang,358.378015774,9
+Bengkulu,Palembang,78.347138382,9
+Bengkulu,Pekanbaru,557.459188722,9
+Bogor,Bogor,7962.80063078,9
+Bogor,Jakarta,7.88492844068,9
+Bukittinggi,Bukittinggi,1209.1198699,9
+Cilacap,Cilacap,4473.88764672,9
+Cirebon,Balikpapan,113.551068043,9
+Cirebon,Banda Aceh,82.8026671099,9
+Cirebon,Bandar Lampung,691.300151863,9
+Cirebon,Bandjarmasin,294.904819586,9
+Cirebon,Bogor,325.407441312,9
+Cirebon,Bukittinggi,18.3614155865,9
+Cirebon,Cilacap,93.2949722433,9
+Cirebon,Cirebon,4694.92918114,9
+Cirebon,Gorontalo,4.49081306722,9
+Cirebon,Jakarta,2700.84322535,9
+Cirebon,Jambi,23.6654160339,9
+Cirebon,Kupang,110.561661388,9
+Cirebon,Malang,184.099282319,9
+Cirebon,Manado,101.405251103,9
+Cirebon,Mataram,122.217775453,9
+Cirebon,Medan,285.733224578,9
+Cirebon,Padang,101.681434969,9
+Cirebon,Pakalongan,60.1035225178,9
+Cirebon,Palembang,445.731878522,9
+Cirebon,Palu,148.748987047,9
+Cirebon,Pekanbaru,318.098602096,9
+Cirebon,Pontianak,260.649855417,9
+Cirebon,Samarinda,218.070126452,9
+Cirebon,Semarang,1.36369096815,9
+Cirebon,Surabaya,634.745430732,9
+Cirebon,Ujungpandang,206.511890563,9
+Cirebon,Yogyakarta,132.965997857,9
+Denpasar,Bandjarmasin,1.02561450915,9
+Denpasar,Denpasar,2732.10389045,9
+Denpasar,Gorontalo,1.52283600358,9
+Denpasar,Kupang,65.354472191,9
+Denpasar,Malang,2.32275490113,9
+Denpasar,Manado,32.9273466565,9
+Denpasar,Mataram,238.432297402,9
+Denpasar,Palu,50.0287053507,9
+Denpasar,Surabaya,5.12019755089,9
+Denpasar,Ujungpandang,81.6197648913,9
+Gorontalo,Gorontalo,747.926295022,9
+Jakarta,Jakarta,2548.62806099,9
+Jambi,Jambi,982.978304235,9
+Jember,Balikpapan,15.3534148028,9
+Jember,Bandjarmasin,40.6684948711,9
+Jember,Gorontalo,3.6911441847,9
+Jember,Jember,4332.97596051,9
+Jember,Kupang,156.686852325,9
+Jember,Malang,176.342925839,9
+Jember,Manado,85.7956736665,9
+Jember,Mataram,302.112636945,9
+Jember,Palu,130.83829674,9
+Jember,Pontianak,8.66872012647,9
+Jember,Samarinda,27.7467444262,9
+Jember,Surabaya,387.776134543,9
+Jember,Ujungpandang,185.391727906,9
+Jember,Yogyakarta,1.85003477699,9
+Kupang,Kupang,116.519611038,9
+Malang,Malang,6123.18975387,9
+Manado,Manado,613.758030709,9
+Mataram,Mataram,1206.1306507,9
+Medan,Medan,2011.42331597,9
+Padang,Padang,593.262240036,9
+Pakalongan,Pakalongan,3231.04098786,9
+Palembang,Palembang,574.701814898,9
+Palu,Palu,81.939229589,9
+Pekanbaru,Pekanbaru,196.525276699,9
+Pematangsiantar,Banda Aceh,40.5209178202,9
+Pematangsiantar,Medan,710.772947882,9
+Pematangsiantar,Pematangsiantar,2202.167264,9
+Pontianak,Pontianak,130.729420904,9
+Samarinda,Samarinda,518.749429235,9
+Semarang,Balikpapan,12.4619241193,9
+Semarang,Banda Aceh,1.058182226,9
+Semarang,Bandar Lampung,5.55433872539,9
+Semarang,Bandjarmasin,34.3693797841,9
+Semarang,Bogor,1.83555918604,9
+Semarang,Cilacap,1.33281085938,9
+Semarang,Jakarta,15.4255284205,9
+Semarang,Kupang,20.5779824982,9
+Semarang,Malang,28.9821120634,9
+Semarang,Manado,10.8271512349,9
+Semarang,Mataram,14.7820399451,9
+Semarang,Medan,3.69295096008,9
+Semarang,Padang,1.27778455951,9
+Semarang,Palembang,4.93874703573,9
+Semarang,Palu,16.1161042026,9
+Semarang,Pekanbaru,3.7224994006,9
+Semarang,Pontianak,7.63437538882,9
+Semarang,Samarinda,23.773730017,9
+Semarang,Semarang,4966.08585257,9
+Semarang,Surabaya,113.454041499,9
+Semarang,Ujungpandang,23.7126974123,9
+Semarang,Yogyakarta,27.3578414249,9
+Sukabumi,Balikpapan,38.4908911797,9
+Sukabumi,Banda Aceh,76.1701533756,9
+Sukabumi,Bandar Lampung,642.744765967,9
+Sukabumi,Bandjarmasin,98.8813914195,9
+Sukabumi,Bogor,527.103279921,9
+Sukabumi,Bukittinggi,17.7038748486,9
+Sukabumi,Cilacap,19.8252161536,9
+Sukabumi,Gorontalo,1.56728842177,9
+Sukabumi,Jakarta,2566.135192,9
+Sukabumi,Jambi,21.7920847236,9
+Sukabumi,Kupang,38.5727619517,9
+Sukabumi,Malang,51.0929713012,9
+Sukabumi,Manado,35.0702469151,9
+Sukabumi,Mataram,38.3439372131,9
+Sukabumi,Medan,262.898394354,9
+Sukabumi,Padang,93.6029409683,9
+Sukabumi,Pakalongan,31.5772375831,9
+Sukabumi,Palembang,410.896652831,9
+Sukabumi,Palu,49.2354551857,9
+Sukabumi,Pekanbaru,263.899806573,9
+Sukabumi,Pontianak,235.439277498,9
+Sukabumi,Samarinda,69.6977897582,9
+Sukabumi,Sukabumi,3201.13780653,9
+Sukabumi,Surabaya,171.004352096,9
+Sukabumi,Ujungpandang,70.3757144097,9
+Sukabumi,Yogyakarta,29.6830819773,9
+Surabaya,Surabaya,1177.42022642,9
+Surakarta,Balikpapan,35.659390111,9
+Surakarta,Banda Aceh,3.20727485054,9
+Surakarta,Bandar Lampung,16.9253291088,9
+Surakarta,Bandjarmasin,106.140395084,9
+Surakarta,Bogor,4.69104255326,9
+Surakarta,Cilacap,5.56972332627,9
+Surakarta,Gorontalo,3.1396700752,9
+Surakarta,Jakarta,38.7282332966,9
+Surakarta,Kupang,78.0776463814,9
+Surakarta,Malang,226.67378183,9
+Surakarta,Manado,63.0474113899,9
+Surakarta,Mataram,99.1651387074,9
+Surakarta,Medan,11.1626876637,9
+Surakarta,Padang,3.73429535571,9
+Surakarta,Pakalongan,1.50530567965,9
+Surakarta,Palembang,14.2138405676,9
+Surakarta,Palu,94.1716972694,9
+Surakarta,Pekanbaru,11.0929954688,9
+Surakarta,Pontianak,22.6872178658,9
+Surakarta,Samarinda,68.1237110838,9
+Surakarta,Semarang,1.00560136274,9
+Surakarta,Surabaya,879.266611048,9
+Surakarta,Surakarta,8581.01861196,9
+Surakarta,Ujungpandang,150.420257014,9
+Surakarta,Yogyakarta,251.872475489,9
+Tasikmalaya,Balikpapan,72.2577410842,9
+Tasikmalaya,Banda Aceh,64.3349570832,9
+Tasikmalaya,Bandar Lampung,442.784571222,9
+Tasikmalaya,Bandjarmasin,186.490882605,9
+Tasikmalaya,Bogor,166.603653684,9
+Tasikmalaya,Bukittinggi,14.0294869484,9
+Tasikmalaya,Cilacap,190.417996465,9
+Tasikmalaya,Gorontalo,3.34768866524,9
+Tasikmalaya,Jakarta,1318.87540042,9
+Tasikmalaya,Jambi,17.6564928901,9
+Tasikmalaya,Kupang,82.5404111695,9
+Tasikmalaya,Malang,129.447935969,9
+Tasikmalaya,Manado,68.466122268,9
+Tasikmalaya,Mataram,82.8661786872,9
+Tasikmalaya,Medan,220.225592255,9
+Tasikmalaya,Padang,76.8032411039,9
+Tasikmalaya,Pakalongan,475.860043379,9
+Tasikmalaya,Palembang,319.030079904,9
+Tasikmalaya,Palu,99.6770422231,9
+Tasikmalaya,Pekanbaru,242.192327909,9
+Tasikmalaya,Pontianak,200.989526429,9
+Tasikmalaya,Samarinda,141.517719083,9
+Tasikmalaya,Surabaya,412.645862601,9
+Tasikmalaya,Tasikmalaya,4619.6646718,9
+Tasikmalaya,Ujungpandang,151.998007797,9
+Tasikmalaya,Yogyakarta,173.35000922,9
+Ujungpandang,Ujungpandang,1865.89190603,9
+Yogyakarta,Yogyakarta,3828.43517951,9
+Alor Setar,Alor Setar,29.8675699093,9
+George Town,George Town,160.685649826,9
+Ipoh,Alor Setar,6.53126727892,9
+Ipoh,George Town,6.23365415389,9
+Ipoh,Ipoh,352.356995482,9
+Ipoh,Kota Baharu,1.24966158828,9
+Ipoh,Singapore,4.23695093903,9
+Ipoh,Sungai Petani,3.63437272782,9
+Kota Baharu,Kota Baharu,290.619836132,9
+Kota Kinabalu,Kota Kinabalu,158.437000999,9
+Kuala Lumpur,Alor Setar,31.1667298022,9
+Kuala Lumpur,George Town,26.3724214434,9
+Kuala Lumpur,Kota Baharu,9.45424794161,9
+Kuala Lumpur,Kota Kinabalu,6.85991184157,9
+Kuala Lumpur,Kuala Lumpur,1174.6885705,9
+Kuala Lumpur,Kuala Terengganu,2.87401175109,9
+Kuala Lumpur,Kuching,11.9908861559,9
+Kuala Lumpur,Sandakan,10.5179560588,9
+Kuala Lumpur,Singapore,119.935251241,9
+Kuala Lumpur,Sungai Petani,15.5455111383,9
+Kuala Lumpur,Tawau,4.98036590849,9
+Kuala Terengganu,Kuala Terengganu,68.5361209421,9
+Kuantan,Alor Setar,56.6622500378,9
+Kuantan,George Town,46.9540385493,9
+Kuantan,Kota Baharu,86.1701914792,9
+Kuantan,Kota Kinabalu,23.6725517239,9
+Kuantan,Kuala Terengganu,35.3728338586,9
+Kuantan,Kuantan,149.96096517,9
+Kuantan,Kuching,43.9852322265,9
+Kuantan,Sandakan,35.5668697287,9
+Kuantan,Singapore,173.420486631,9
+Kuantan,Sungai Petani,26.8043273089,9
+Kuantan,Tawau,15.7199012471,9
+Kuching,Kuching,35.4726431741,9
+Malacca,Alor Setar,64.5793511571,9
+Malacca,George Town,51.5408956738,9
+Malacca,Kota Baharu,22.3885026096,9
+Malacca,Kota Kinabalu,32.2272062695,9
+Malacca,Kuala Terengganu,6.86588978323,9
+Malacca,Kuching,60.200766884,9
+Malacca,Malacca,290.572627778,9
+Malacca,Sandakan,48.3935560914,9
+Malacca,Singapore,741.855717074,9
+Malacca,Sungai Petani,30.824399981,9
+Malacca,Tawau,21.3878802502,9
+Sandakan,Sandakan,9.5107220897,9
+Seremban,Alor Setar,28.5197396933,9
+Seremban,George Town,23.4416961526,9
+Seremban,Kota Baharu,8.98433833928,9
+Seremban,Kota Kinabalu,9.47887114486,9
+Seremban,Kuala Terengganu,2.5553347962,9
+Seremban,Kuching,17.6420215822,9
+Seremban,Sandakan,14.2345885835,9
+Seremban,Seremban,211.913163373,9
+Seremban,Singapore,202.566007441,9
+Seremban,Sungai Petani,13.8820417315,9
+Seremban,Tawau,6.29111331066,9
+Singapore,Singapore,352.575545485,9
+Sungai Petani,Sungai Petani,15.9897361107,9
+Tawau,Tawau,67.3844986605,9
+Chittagong,Chittagong,144.320789865,9
+Comilla,Chittagong,427.108454945,9
+Comilla,Comilla,1162.57730782,9
+Comilla,Dhaka,532.391173565,9
+Comilla,Mymensingh,133.51602401,9
+Comilla,Rangpur,12.8499057061,9
+Dhaka,Dhaka,620.948651891,9
+Khulna,Chittagong,151.864147695,9
+Khulna,Dhaka,640.651928154,9
+Khulna,Khulna,1362.65123836,9
+Khulna,Mymensingh,266.917560627,9
+Khulna,Rangpur,105.604455132,9
+Mymensingh,Mymensingh,456.028117997,9
+Rajshahi,Chittagong,107.599556698,9
+Rajshahi,Dhaka,681.572641062,9
+Rajshahi,Mymensingh,618.427597155,9
+Rajshahi,Rajshahi,1354.15231534,9
+Rajshahi,Rangpur,448.832943648,9
+Rangpur,Rangpur,506.399158374,9
+Angeles,Angeles,184.06644686,9
+Bacolod,Bacolod,137.361959452,9
+Baguio City,Baguio City,285.47992845,9
+Batangas,Batangas,313.61886058,9
+Cagayan de Oro,Angeles,115.433476618,9
+Cagayan de Oro,Bacolod,66.1443422097,9
+Cagayan de Oro,Baguio City,90.2101668024,9
+Cagayan de Oro,Batangas,60.545276622,9
+Cagayan de Oro,Cagayan de Oro,191.671322563,9
+Cagayan de Oro,Cebu,116.612159269,9
+Cagayan de Oro,Iloilo,29.0992400319,9
+Cagayan de Oro,Legazpi,61.0544461781,9
+Cagayan de Oro,Manila,385.533199477,9
+Cagayan de Oro,Olongapo,66.7466910483,9
+Cagayan de Oro,Quezon City,551.870792223,9
+Cagayan de Oro,Zamboanga,20.6078708504,9
+Cebu,Cebu,239.996805938,9
+Davao,Angeles,15.5752823013,9
+Davao,Bacolod,5.20809980966,9
+Davao,Baguio City,12.0285884005,9
+Davao,Batangas,8.13067639042,9
+Davao,Cebu,6.87051505592,9
+Davao,Davao,368.678626874,9
+Davao,Iloilo,2.27573925565,9
+Davao,Legazpi,8.00058734316,9
+Davao,Manila,50.3349313465,9
+Davao,Olongapo,8.98282167372,9
+Davao,Quezon City,74.3302647621,9
+Davao,Zamboanga,1.96351297337,9
+General Santos,Angeles,7.18781700101,9
+General Santos,Bacolod,4.54093301192,9
+General Santos,Baguio City,5.55278501527,9
+General Santos,Batangas,3.73118332659,9
+General Santos,Cebu,2.89404818744,9
+General Santos,General Santos,176.27093761,9
+General Santos,Iloilo,1.96201179135,9
+General Santos,Legazpi,3.55523057542,9
+General Santos,Manila,23.4402641972,9
+General Santos,Olongapo,4.15167317211,9
+General Santos,Quezon City,34.0998083986,9
+General Santos,Zamboanga,1.73792091886,9
+Iligan,Angeles,19.5744400101,9
+Iligan,Bacolod,25.9022723118,9
+Iligan,Baguio City,15.1138162823,9
+Iligan,Batangas,10.2214010281,9
+Iligan,Cebu,14.4465280318,9
+Iligan,Iligan,236.671953674,9
+Iligan,Iloilo,10.5612454054,9
+Iligan,Legazpi,9.86972533446,9
+Iligan,Manila,64.2463034889,9
+Iligan,Olongapo,11.1601016097,9
+Iligan,Quezon City,92.3567910327,9
+Iligan,Zamboanga,9.67444811717,9
+Iloilo,Iloilo,189.79023341,9
+Legazpi,Legazpi,84.8724882629,9
+Manila,Manila,26.5751235266,9
+Naga,Angeles,9.16595036979,9
+Naga,Baguio City,6.15294945792,9
+Naga,Batangas,6.0467290792,9
+Naga,Legazpi,5.32116014938,9
+Naga,Manila,33.1441520252,9
+Naga,Naga,205.960403929,9
+Naga,Olongapo,4.86571498538,9
+Naga,Quezon City,46.0358619211,9
+Olongapo,Olongapo,13.3301713639,9
+Quezon City,Quezon City,67.768293201,9
+Zamboanga,Zamboanga,74.5506688906,9
+Bangkok,Bangkok,72.083989369,9
+Chiang Mai,Bangkok,238.646739717,9
+Chiang Mai,Chiang Mai,83.6828859328,9
+Chiang Mai,Hat Yai,61.4540616858,9
+Chiang Mai,Nakhon Ratchasima,41.1585290752,9
+Chiang Mai,Nonthaburi,193.551970579,9
+Hat Yai,Hat Yai,27.0665532107,9
+Nakhon Ratchasima,Nakhon Ratchasima,88.0045386652,9
+Nonthaburi,Nonthaburi,194.862757661,9
+Bago,Bago,27.6099595273,9
+Mandalay,Bago,157.569851563,9
+Mandalay,Mandalay,575.538287373,9
+Mandalay,Rangoon,434.958348873,9
+Naypyidaw,Bago,119.798191332,9
+Naypyidaw,Naypyidaw,287.891744029,9
+Naypyidaw,Rangoon,310.678569263,9
+Rangoon,Rangoon,101.243303964,9

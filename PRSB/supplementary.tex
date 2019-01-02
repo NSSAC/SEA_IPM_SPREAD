@@ -123,10 +123,26 @@
 %% preamble ends
 %% from now on, draft specific
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{authblk}
 %% \RequirePackage[l2tabu, orthodox]{nag}
-\title{Supplementary material: A Multi-pathway Model to Assess the Threat
-of Invasive Agricultural Pests; Case Study of \emph{Tuta~absoluta} in Asia}
-\author{}
+\title{Supplementary material: Assessing the Multi-pathway Threat from
+Invasive Agricultural Pests: Study of \emph{Tuta~absoluta} in Asia}
+\author[1]{Joseph~McNitt}
+\author[2]{Young~Yun~Chungbaek}
+\author[2]{Henning~Mortveit}
+\author[2]{Madhav~Marathe}
+\author[3]{Mateus~Ribeiro~de~Campos}
+\author[3]{Nicolas~Desneux}
+\author[4,5,6]{Thierry~Br\'{e}vault}
+\author[7]{Rangaswamy Muniappan}
+\author[2]{Abhijin~Adiga}
+\affil[1]{Department of Mathematics, Virginia Tech}
+\affil[2]{Biocomplexity Institute \& Initiative, University of Virginia}
+\affil[3]{French National Institute for Agricultural Research}
+\affil[4]{BIOPASS, CIRAD-IRD-ISRA-UCAD, Dakar, Senegal}
+\affil[5]{CIRAD, UPR AIDA, F-34398 Montpellier, France}
+\affil[6]{Universit\'{e} de Montpellier, CIRAD, Montpellier, France}
+\affil[7]{Feed the Future Integrated Pest Management Innovation Lab}
 \date{}
 
 \newcommand{\mooreRange}{r_\mathrm{M}}
@@ -144,10 +160,11 @@ Table~\ref{tab:bgdData} provides incidence reports from Bangladesh.
 \rowcolors{2}{white}{gray!15} % For this to work, put \PassOptionsToPackage{table}{xcolor} before \documentclass
 \newcommand{\mrow}[1]{\multirow{2}{*}{\parbox{1cm}{#1}}}
 \begin{table}[ht]
-    \caption{Datasets used. \label{tab:data}}
+    \caption{Global data sets used for model construction. \label{tab:data}}
+    \centering
 \begin{tabular}{ccc}
     \hline
- \textbf{Data} & \textbf{Source} &  \textbf{Notes} \\\hline
+ {Data} & {Source} &  {Spatial or temporal resolution} \\\hline
 Temperature &
 WorldClim~\cite{hijmans2005very} &
 2.5 arc min., monthly.  \\
@@ -194,8 +211,8 @@ resolution\\\hline
     %% $^\dagger$The appropriate references are provided in the Supplementary
     %% Information.
 \begin{table}[!h]
-\caption{Data on different aspects of the model for different countries
-obtained from reports, peer-reviewed articles and experts' inputs.
+\caption{Country-specific data obtained from reports, peer-reviewed
+articles and experts' inputs.
 \label{tab:countryData}}
 \centering
 \rowcolors{3}{gray!15}{white} % For this to work, put \PassOptionsToPackage{table}{xcolor} before \documentclass
@@ -363,18 +380,40 @@ Patengali, Jessore district & $23.09 ^\circ$ N, $89.10 ^\circ$ E & March 2017 \\
 %%
 \section{Multi-pathway Model}
 \subsection{Locality construction}\label{sec:locality}
-First, we identified cities with population greater than a certain
-population threshold (as per~\cite{maxmind}) in the entire study region to
-determine localities in the model.  We considered a range of threshold
-values, and chose~$250,000$ as the threshold for the model with the main
-criterion for the choice being coverage of population and
-knowledge of major wholesale markets. In addition, we added
-major production centers if their population did not meet the
-threshold. The locality radius was chosen to be~$100$kms since local
-production in an urban area was within 50--60kms from the city center for
-several countries in this region~\cite{buntong2013,sokhen2004vegetable,wijk2007}. To
-obtain long distance trade flows, the travel times between pairs of cities
-were computed using Google API~\cite{googleapi}.
+In the model, \emph{localities} are centers of consumption or production.
+From the perspective of consumption, we selected cities with population
+greater than a certain population threshold (as per~\cite{maxmind}) in the
+entire study region. The number and size of localities is controlled by
+population threshold and locality radius parameters. We considered a range of threshold values, and
+chose~$250,000$ as the threshold for the model with the main criterion for
+the choice being coverage of population and knowledge of major wholesale
+markets (Figure~\ref{fig:localityConstruction}. Then, we added major production centers if their population did
+not meet the threshold. The locality radius was chosen to be~$100$kms since
+local production in an urban area was within 50--60kms from the city center
+for several countries in this
+region~\cite{buntong2013,sokhen2004vegetable,wijk2007}. To obtain long
+distance trade flows, the travel times between pairs of cities were
+computed using Google API~\cite{googleapi}.
+%%
+\begin{figure}[t]
+\centering
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../cellular_automata/results/cities/concentration_with_popthresh.pdf}
+\caption{}
+\end{subfigure}
+%%
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../cellular_automata/results/cities/concentration_with_radius.pdf}
+\caption{}
+\end{subfigure}
+\caption{\textbf{Locality construction.} The number of localitites and the
+locality area is controlled by population threshold and locality radius. We
+analyzed the effect of these parameters on the amount of production and
+population captured in the region. Setting a threshold of 250,000 and
+radius of 100kms, 80\% of the production and population is covered by
+localities. \label{fig:localityConstruction}}
+\end{figure}
+%%
 %% 
 %% \begin{table}[!ht]
 %% \caption{Market distances\label{tab:marketDist}}
@@ -395,21 +434,27 @@ were computed using Google API~\cite{googleapi}.
 
 \subsection{Seasonal production}\label{sec:prod} 
 We estimated monthly production volume of tomato, eggplant and potato for
-each cell. This was accomplished in two steps. First, we estimated annual
-production in each cell. Then, this value was disaggregated to monthly
-production. The annual production was estimated as follows. From
-SPAM~\cite{spam}, we obtained annual production estimates for each cell.
-However,
-there are several issues with directly using this data. Firstly, these are
-estimates for the year~$2005$, and secondly, tomato and eggplant production
-estimates are not available. Instead, total vegetable production volume is
-available. Also, for countries where data was available, we did not find
-any correlation between reported tomato (eggplant) production and total
-SPAM vegetable production for that region. Therefore, for each country, we
-obtained the most recent production data available (2013 or later) at the
-highest spatial resolution (region/province/country) (Table~S1). The
-production of a particular vegetable type at a cell was computed as
-follows:
+each cell using production data available at the country/state/province
+level and the Spatial Production Allocation Model~\cite{spam}. The latter
+uses a generalized cross-entropy approach to allocate crop production in
+administrative units into individual pixels, through judicious
+interpretation of all accessible evidence such as production statistics,
+farming systems, satellite image, crop biophysical suitability, crop price,
+local market access and prior knowledge. The monthly production volume was
+estimated in two steps: (i)~Estimation of cell-level annual production, and
+(ii)~disaggregation of annual production to monthly production.
+
+\paragraph{Annual production.} From SPAM~\cite{spam}, we obtained annual
+production estimates for each cell.  However, there are several issues with
+directly using this data. Firstly, these are estimates for the year~$2005$,
+and secondly, tomato and eggplant production estimates are not available.
+Instead, total vegetable production volume is available. Also, for
+countries where data was available, we did not find any correlation between
+reported tomato (eggplant) production and total SPAM vegetable production
+for that region. Therefore, for each country, we obtained the most recent
+production data available (2013 or later) at the highest spatial resolution
+(region/province/country) (Table~S1). The production of a particular
+vegetable type at a cell was computed as follows:
 %%
 \[\frac{\text{Total production in the region}}{\text{Total SPAM production
     for cells in the region}}\times \text{SPAM production in the cell} \;.\]
@@ -423,7 +468,7 @@ available, we computed the ratio of total tomato production and total SPAM
 vegetable production for the country. The median value ($\approx0.05$) was
 used as the scaling factor. The same procedure was used for eggplant. 
 
-Broadly, in this region, the cropping pattern depends on two factors:
+\paragraph{Monthly production.} Broadly, in this region, the cropping pattern depends on two factors:
 seasons--dry and wet, and elevation--highland (upland) and lowland. In order to estimate the seasonal production rates of tomatoes, we
 considered quarterly production data from Philippines~\cite{psa2017} for the 16
 regions of the country and studied its relationship between precipitation,
@@ -448,7 +493,7 @@ results with both variables included gave a slightly stronger correlation,
 in the validation step, the regression function corresponding to
 precipitation was a better match for the rest of the study region. Thus we
 decided to use only precipitation as a predictor for seasonality of tomato
-production. See Table~\ref{fig:regression} for more information on these
+production. Table~\ref{fig:regression} provides information on these
 regression results.
 
 \begin{table}[!ht]
@@ -476,7 +521,7 @@ Table~\ref{tab:countryData}, column ``Seasons''. In some cases seasonal
 production data is available at the country level. For example, for
 Bangladesh, eggplant production volume is available by season. Similar
 information is available for Cambodia. In Figure~\ref{fig:seasonalProd}, we
-have plotted seasonal production by region or country and compared it with available
+have compared seasonal production predicted by the regression model with available
 qualitative and quantitative information. We note that the precipitation
 based regression function captures the general trend of seasonal production
 in the different regions considered.
@@ -564,7 +609,10 @@ in the different regions considered.
     information~\cite{psa2017}: Regions with mismatch.}
 \end{subfigure}
 \caption{Comparing relative production as per the regression model with
-quantitative/qualitative reports for different regions.
+quantitative/qualitative reports for different regions. For the plots
+corresponding to the
+regression model we chose representative cells for each administrative
+region.
 \label{fig:seasonalProd}}
 \end{figure}
 %%
@@ -746,19 +794,18 @@ traditional SIR models mathematically in \cite{hethcote1989periodicity}.
 \section{Parameterization and simulation}
 \label{sec:cart}
 For each parameter setting, we evaluated the model output by comparing it
-with historical invasion data from Bangladesh using the maximum likelihood
-estimation method for comparison as defined in the main document (see
-definition of likelihood in equation~(\ref{M:eqn:likelihood})). Simulations
+with historical invasion data from Bangladesh using a similarity score
+as defined in the main document (equation~(\ref{M:eqn:similarity})). Simulations
 were run with 100 repetitions. From the output we computed the empirical
 probability that a cell is in state~$I$ at time~$t$, which in turn was used
-to compute likelihood.  We applied Classification and Regression
+to compute similarity scores.  We applied Classification and Regression
 Trees~(CART) to guide parameter space exploration. Initially, the parameter
 space was coarsely sampled. The parameter values are listed in
-Table~\ref{M:tab:param}. For each of these samples, simulations were run
-and the likelihood computed. With the model parameters as independent
-variables and likelihood as the dependent variable, we analyzed the results
+Table~\ref{M:tab:param} in the main document. For each of these samples, simulations were run
+and the similarity scores computed. With the model parameters as independent
+variables and similarity score as the dependent variable, we analyzed the results
 using CART (see Figure~\ref{fig:cart}). We chose parameter subspaces with
-high likelihood (5.5 or more) and rejected those with lower values.  For
+high similarity score (5.5 or more) and rejected those with lower values.  For
 each chosen parameter subspace, the process was repeated.
 %%
 \begin{figure}[!ht]
@@ -799,24 +846,24 @@ each chosen parameter subspace, the process was repeated.
 \caption{$\mooreRange=3$, $\ell=3$}
     \end{subfigure}
     \caption{CART analysis of the parameter space: The models with
-        likelihood~$\ge5.5$ were partitioned based on the Moore
+        similarity score~$\ge5.5$ were partitioned based on the Moore
     range~$\mooreRange$ and latency period~$\ell$ tuple and analyzed. For
  the case~$(\mooreRange=3$, $\ell=1)$, there were no instances with
- likelihood~$\ge5.5$ among the sampled instances. 
+ similarity score~$\ge5.5$ among the sampled instances. 
     \label{fig:cart}}
 \end{figure}
 
 We recall that the emergent outcome of the model can be classified into two
 classes: Class~A and Class~B. In Figure~\ref{fig:cart}, we show the results
-of CART analysis on the parameter sets which yielded a likelihood of
+of CART analysis on the parameter sets which yielded a similarity score of
 $\ge5.5$. The chosen set is partitioned by Moore range~$\mooreRange$ and
 latency period~$\ell$. For $(\mooreRange,\ell)$ values that permit rapid
 range expansion through short-distance spread over the contiguous
 landscape, including long-distance spread leads to faster spread than
-observed leading to lower likelihood values. Hence, for those regimes, we
+observed leading to lower score. Hence, for those regimes, we
 observe only Class~A spread. The corresponding~$(\mooreRange,\ell)$ values
 are~$(1,1)$, $(2,1)$, $(2,2)$ and $(3,1)$. For the regime~$(3,1)$ we did
-not observe any instance with likelihood~$>5.5$.
+not observe any instance with score~$>5.5$.
 
 \subsection{Seeding scenarios}
 \label{tab:seeds}
@@ -866,7 +913,7 @@ both Class~A and Class~B models.
         Bangladesh 1 & Parameterization phase: The cell corresponding to the location of first
         report was seeded. \\
         Bangladesh 2 & Parameterization phase: The cells corresponding to the location of first
-        report and its adjacent cells were seeded. \\
+        report and its adjacent cells (Moore neighborhood~1) were seeded. \\
     	\hline
 	Bangladesh and Northeastern Myanmar & This seeding is the estimated
 	current range of \tuta{} in the study region. It is used to study
@@ -892,7 +939,7 @@ SQlite.  Statistical analysis was done using Python, R~3.4.3 and SPSS~24.0.
 The experiments were run using Discovery, a high performance computing
 cluster with 232 nodes (16-core Sandy Bridge-EP E5-2670 2.60GHz (3.30GHz
 Turbo) Dual Processor (8 Cores per Processor) nodes with 32 GB of Memory
-and 500 GB Internal Hard Drive).
+and 500 GB Internal Hard Drive) in the Biocomplexity Institute of Virginia~Tech.
 
 
 \begin{figure}[!ht]
@@ -1163,12 +1210,12 @@ range is~3.
 
 
 \begin{figure}[ht]
-\begin{subfigure}[b]{.47\textwidth}
+    \begin{subfigure}[b]{.48\textwidth}
 \centering
 \includegraphics[width=\textwidth]{figs/plot_Myanmar2.pdf}
 \caption{Moore neighborhood of 2}
 \end{subfigure}
-\begin{subfigure}[b]{.47\textwidth}
+\begin{subfigure}[b]{.48\textwidth}
 \centering
 \includegraphics[width=\textwidth]{figs/plot_Myanmar3.pdf}
 \caption{Moore neighborhood of 3, baseline model}

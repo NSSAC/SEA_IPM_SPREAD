@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{../scripts/tikz-network}
+\begin{document}
+\begin{tikzpicture}
+\Vertex[x=15.875, y=-14.2324, size=0.6615, color={245.,145.,70}, label=Bago, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{0}
+\Vertex[x=0.0, y=-0.0, size=0.6615, color={245.,145.,70}, label=Mandalay, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{1}
+\Vertex[x=1.2402, y=-6.7442, size=0.6615, color={245.,145.,70}, label=Naypyidaw, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{2}
+\Vertex[x=3.0147, y=-15.875, size=0.6615, color={245.,145.,70}, label=Rangoon, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{3}
+\Edge[lw=3.0825, color={178.,200.,92}, opacity=0.9, bend=-8.531, distance=0.8, fontcolor={0.,0.,0}, fontscale=3.75, Direct, RGB](2)(3)
+\Edge[lw=2.4494, color={178.,200.,92}, opacity=0.9, bend=-8.531, distance=0.8, fontcolor={0.,0.,0}, fontscale=3.75, Direct, RGB](2)(1)
+\Edge[lw=1.2698, color={178.,200.,92}, opacity=0.9, bend=-8.531, distance=0.8, fontcolor={0.,0.,0}, fontscale=3.75, Direct, RGB](2)(0)
+\Edge[lw=2.1888, color={178.,200.,92}, opacity=0.9, bend=-8.531, distance=0.8, fontcolor={0.,0.,0}, fontscale=3.75, Direct, RGB](1)(3)
+\Edge[lw=1.1422, color={178.,200.,92}, opacity=0.9, bend=-8.531, distance=0.8, fontcolor={0.,0.,0}, fontscale=3.75, Direct, RGB](1)(0)
+\Edge[lw=2.2261, color={178.,200.,92}, opacity=0.9, bend=-8.531, distance=0.8, fontcolor={0.,0.,0}, fontscale=3.75, Direct, RGB](0)(3)
+\end{tikzpicture}
+\end{document}

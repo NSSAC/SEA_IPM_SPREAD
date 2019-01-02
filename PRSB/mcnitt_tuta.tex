@@ -100,6 +100,22 @@
 \newcommand{\reals}{\mathbb{R}}
 \newcommand{\field}{\mathbb{F}}
 \newcommand{\integers}{\mathbb{Z}}
+\newcommand{\pshort}{p_s}
+\newcommand{\plocal}{p_{\ell}}
+\newcommand{\pld}{p_{\ell d}}
+\newcommand{\asd}{\alpha_s}
+\newcommand{\afm}{\alpha_{\ell}}
+\newcommand{\ald}{\alpha_{\ell d}}
+\newcommand{\produce}{\mathrm{Prod}}
+\newcommand{\veg}{\mathrm{V}}
+\newcommand{\temp}{\mathrm{T}}
+\newcommand{\consume}{\mathrm{Pop}}
+\newcommand{\locality}{\mathrm{L}}
+\newcommand{\export}{\mathrm{Export}}
+\newcommand{\import}{\mathrm{Import}}
+\newcommand{\process}{\mathrm{Proc}}
+\newcommand{\moore}{\mathrm{M}}
+\newcommand{\mooreRange}{r_\mathrm{M}}
 %
 \newtheorem{theorem}{Theorem}[]{\bfseries}{\itshape} 
 \newtheorem{lemma}[theorem]{Lemma}{\bfseries}{\itshape}
@@ -350,30 +366,64 @@ predict pest movement between countries. We also demonstrated the efficacy
 of intervening at the trade level; quarantining few key production areas
 can contain the spread or significantly reduce the spread rate.
 
-\section{Results}
 %%
-\newcommand{\pshort}{p_s}
-\newcommand{\plocal}{p_{\ell}}
-\newcommand{\pld}{p_{\ell d}}
-\newcommand{\asd}{\alpha_s}
-\newcommand{\afm}{\alpha_{\ell}}
-\newcommand{\ald}{\alpha_{\ell d}}
-\newcommand{\produce}{\mathrm{Prod}}
-\newcommand{\veg}{\mathrm{V}}
-\newcommand{\temp}{\mathrm{T}}
-\newcommand{\consume}{\mathrm{Pop}}
-\newcommand{\locality}{\mathrm{L}}
-\newcommand{\export}{\mathrm{Export}}
-\newcommand{\import}{\mathrm{Import}}
-\newcommand{\process}{\mathrm{Proc}}
-\newcommand{\moore}{\mathrm{M}}
-\newcommand{\mooreRange}{r_\mathrm{M}}
+\section{Methods}
 %%
-%% This section is organized as follows. We first describe the multi-pathway
-%% model--our methodological contribution.  This is followed by our results in
-%% the context of \tuta{} spread which are summarized as follows: (i)~We
-%% identified possible routes by which \tuta{} can invade each country in the
-%% region by analysis of current distribution of the pest and its.
+\paragraph{Data.} The global datasets used in the model and for analysis are
+described in Table~\ref{S:tab:data} of SI. Country specific data on
+seasonal production, consumption, processing and trade was
+obtained from websites of agriculture ministries, research articles and technical
+reports (Table~\ref{S:tab:countryData} in SI). Almost
+all the datasets used are openly available. Some information was
+provided by local contacts in Bangladesh (for e.g., \tuta{} incidence
+reports in Table~\ref{S:tab:bgdData}), Vietnam and Cambodia.
+%%
+\paragraph{\tuta{} biology.}
+The tomato leafminer exhibits a short life cycle of about 24--38 days
+(temperature at $25\pm3^\circ$C), from egg to adult, as it is a
+multivoltine species with overlapping generations in the
+field~\cite{guedes2012tomato}. This species causes serious damage to
+numerous solanaceae crops such as eggplants, potatoes, and especially
+tomato crops~\cite{sylla2018}. It penetrates into tomato leaves, stems, or
+fruits, wherein it feeds and develops by creating conspicuous mines as well
+as galleries. \tuta{} additionally restricts tomato plant growth by feeding
+on the growing tips. Considering the warm weather throughout the year,
+particularly in the dry season, the study region presents ideal conditions
+for rapid development and spread of \tuta{}. Pest risk
+analysis~\cite{tonnang2015identification} shows that the Ecoclimatic Index
+for this region is above~$50$ (highly suitable). Spatial distribution
+assessment survey of \tuta{} eggs has shown its high dispersive capacity in
+tomato producing areas~\cite{martins2018assessing}. The dispersion in a
+tomato cultivation starts mainly at the periphery and
+the pest is able to migrate between tomato farms to generate egg aggregation at the
+crop edges. The pest spread behavior among seasonal crop resources
+is often non-random and directional~\cite{martins2018assessing}.
+Sylla~et~al.~\cite{sylla2018} analyzed host preference of~\tuta{} in France
+and Senegal. While the highest preference is for tomato, it can survive
+well on eggplant and potato, which happen to be major vegetable crops in
+the study region. However, since \tuta{} primarily attacks leaves of
+eggplant and potato, the chance of the pest spreading through trade of
+these crops seems to be low.
+%%
+%% Each cell~$v$ has the following time varying attributes: \aacomment{these
+%% are not necessary: NDVI~$\veg(v,t)$,
+%% temperature~$\temp(v,t)$,} monthly production of preferred host crops and
+%% consumption~$\consume(v,t)$, where~$t$ corresponds to a month.
+%% \aacomment{This should get into Tonnang discussion: Since NDVI
+%% data is available at a much finer resolution (see Table~\ref{tab:data}),
+%% for each cell, we assign the maximum of the NDVI data points that fall in
+%% this cell for that month.} For production, we consider the following
+%% vegetables: tomato, potato, eggplant in metric tonnes (see
+%% Section~\ref{sec:biology} on choice of host crops). Annual country-level
+%% production data (in volume) is spatially disaggregated using SPAM data
+%% on spatial distribution of vegetable production. \aacomment{needs
+%% explanation. statistical analysis should come here}. Further, for each cell,
+%% this production was distributed temporally-- one value for each month of
+%% the year. We observed that precipitation is a primary driver of production
+%% in the study area; during wet months, the amount of production is
+%% considerably less. \aacomment{statistical analysis should come here} (See Supplementary Information).
+%% \aacomment{pending: consumption, import/export}
+
 %%
 \paragraph{Multi-pathway spread model.} We developed a stochastic
 propagation model to simulate the multi-pathway spread of~\tuta{}. Key
@@ -607,6 +657,187 @@ $\ald$ & Long distance spread scaling factor & In the interval $[0,500]$.\\
 \hline
 \end{tabular}
 \end{table}
+\paragraph{Seasonal production.} We estimated monthly production volume of
+tomato, eggplant and potato for each cell. This was accomplished in two
+steps. First, we estimated annual production in each cell followed by
+disaggregation to monthly production. The annual production was estimated
+using the vegetable production available at the highest resolution for each
+country (at the level of province to just one value for the entire country)
+and a synthetic dataset called Spatial Production Allocation Model
+(SPAM)\footnote{\url{http://mapspam.info}}. Gathering qualitative data from
+multiple sources, we inferred that the cropping pattern in this region
+depends primarily on two factors: seasons--dry and wet, and
+elevation--highland (upland) and lowland. Also, barring few exceptions, the
+production of the considered host crops peaks in the winter and is lowest
+during the rainy season (monsoon).  To predict seasonal production, we used
+linear regression to model the production rate as a function of
+precipitation, temperature, and elevation. Regional tomato and eggplant
+production data is available for Philippines.
+%% For each region, we obtained the product rate by
+%% normalizing quarterly production values with respect to maximum value among
+%% these. We used production rate instead of production values since there are
+%% several factors that determine a region's production: climate, vegetable
+%% preference, demand, etc.  Therefore, it may not be meaningful to compare
+%% production across regions.  
+%% We conducted a linear regression with the
+%% product rate as a dependent variable and precipitation and temperature and
+%% elevation as independent variables.  To control elevation, we classified
+%% the elevations into two groups, high and low, using $k$-means clustering
+%% (SPSS~24.0). Due to the small sample size, we excluded the samples in the
+%% high-elevation group and conducted a linear regression analysis for the
+%% group of low elevation~($< 235$ masl). 
+The regression results showed that
+precipitation was a statistically significant
+predictor ($p <0.001$). For validation, the regression function was
+applied to locations of different countries where this information is
+available and visually compared. More details on the methods and validation are
+provided in Section~\ref{S:sec:prod}. 
+%% There is very little data
+%% available for validation. Most of the data is qualitative, just providing
+%% information on growing and harvesting months. The regression function was
+%% applied to locations of different countries where this information is
+%% available and visually compared.  More details of the methods, country
+%% specific data and challenges in this regard are covered in
+%% Section~\ref{S:sec:prod}. The infectiousness of cell~$v$ at
+%% time~$t$,~$\infest(v,t)$ is the production at~$t$, while its
+%% suitability,~$\epsilon(v,t)$ is~$0$ if~$\infest(v,t)=0$ and~$1$ otherwise.
+%% on data availability. The first method was used if only seasonal
+%% production is available for a region or country. In this case, we first
+%% estimated seasonal production in each cell and then disaggregated it
+%% to obtain monthly production. Here, due to unavailability of data for tomato and eggplant, we used SPAM's total
+%% vegetable production as surrogate. To disaggregate into monthly production,
+%% we studied the relationship between production, precipitation, and elevation.
+%% For lowland areas, %(elevation less than ???) 
+%% production is negatively
+%% correlated with precipitation ($r<-0.75$).
+
+%% \paragraph{Network structure.} The resulting network consists of~$8,010$
+%% cells and~$109$ localities.  
+%%
+%%
+%% \begin{table}[t]
+%%     \caption{Model parameters and variables, their ranges and references.\label{tab:data}}
+%%     \centering
+%% 	\small
+%%     \begin{tabular}{l p{4cm} p{3cm} p{5cm}}
+%%     %{cp{.25\textwidth}p{.25\textwidth}lr}
+%% 		\hline		
+%% 		Parameter & Description & Range/values & Source \\
+%% \hline		
+%% \hline
+%% $\mooreRange$ & Range of Moore neighborhood & 1,2,3 &
+%% \cite{guimapi2016modeling}\\
+%% $\ell$ & Latency period to transition from $E$ to $I$& 1,2,3 & \\
+%% \hline
+%% $\beta, \kappa$ & Gravity model parameters & 300--500,2 &
+%% \cite{venkatramanan2017towards}\\
+%% -- & Locality population threshold and radius & 250,000, 100kms &
+%% population of cities~\cite{citypop} and reports\\
+%% \hline
+%% $\suitable$ & Suitability threshold & 0\\
+%% $\infest$ & Infectivity of a cell based on amount of production & & Host
+%% production (SPAM), host preference~\cite{sylla2018}, precipitation and
+%% elevation \\
+%% \hline
+%% Scenarios & Seeding simulations: time and cells to infect & 4 cases:
+%% Bangladesh (B1 and B2), Malaysia (M1) and Philippines (P1) & \tuta{} incidence
+%% reports in Bangladesh, FAOSTAT for international trade and migration
+%% reports.\\
+%% Start month & & March, April, May & Based on incidence reports\\
+%% \hline
+%% $\asd$ & Short-distance spread scaling factor & 0--500\\
+%% $\afm$ & Local human-mediated dispersal scaling factor & 0--500\\
+%% $\ald$ & Long distance spread scaling factor & 0--500 \\
+%% \hline
+%% \end{tabular}
+%% \end{table}
+%%
+\paragraph{Domestic trade flows.}
+We modeled the flow of fresh tomato crop between markets based on the following
+assumptions: (i)~The total outflow from a city depends on the amount of
+produce in its surrounding regions and imports from countries outside the
+focus region at time~$t$, and (ii)~the total inflow depends on total
+consumption, processing demand, and exports from the city to countries
+outside the focus region. While there is strong evidence of tomato trade as
+a possible pathway of \tuta{} spread~\cite{biondi2017}, there is no
+evidence of a similar role of eggplant or potato trade. Hence, we modeled
+only tomato trade. For each country, the domestic flow is estimated using a
+doubly constrained gravity
+model~\cite{kaluza2010complex}. For a city~$i$,
+let~$O_i$ and~$I_i$ denote total outflow and total inflow respectively, and
+$\locality(i)$ denotes all cells which are assigned to it.
+The flow~$F_{ij}$ from city~$i$ to city~$j$ is given by
+%%
+\(
+   F_{ij}(t)=a_i(t)b_j(t)O_i(t)I_j(t)f(d_{ij}),
+\)
+%%
+where, $d_{ij}$ is the time to travel from~$i$ to~$j$, and $f(\cdot)$ is
+the \emph{distance deterrence function}:
+$d_{ij}^{-\beta}\exp(-d_{ij}/\kappa)$, where~$\beta$ and~$\kappa$ are
+tunable parameters. The
+coefficients~$a_i$ and~$b_j$ are computed through an iterative process such
+that the total outflow and total inflow at each node agree with the input
+values~\cite{kaluza2010complex}. Overall, we have~12 networks
+representing flows for each month. The outflows and inflows are calculated
+as follows:
+%%
+\begin{align}\label{eqn:flow}
+    O_i(t)&=\produce(i,t)+\import(i,t)-\export(i,t)-\process(i,t),\\
+    I_i(t)&=\consume(i)\,.
+\end{align}
+%%
+Here,~$\produce(i,t)$ is the monthly production and~$\consume(i)$ is the
+population of the locality as a surrogate to consumption. The latter is the
+sum total of population in every cell that belong to the locality.
+$\export$ and ~$\import$ are the monthly total export to and import from
+outside the country respectively. $\process(i,t)$ is the tomato produced
+for processing. Since for this purpose tomato is typically cultivated and
+consumed locally, we subtract this volume from the outflow.
+Country-specific details of how locality attributes were estimated is in
+Section~\ref{S:sec:locAttrib}.
+%% We did not incorporate international trade as the volume is negligible compared to
+%% domestic production with the exception of trade between Malaysia and Singapore. 
+%% More details in this regard are provided in Section~\ref{S:sec:locAttrib}.
+Since no data is available on volume of trade between markets, to validate
+the modeled trade networks, we gathered
+qualitative information from reports and research articles which show
+evidence of tomato or vegetable flow between market pairs. The results of
+this analysis is in Section~\ref{S:sec:tradeFlows}.
+%% Since
+%% there is lot of interaction between the two countries, weMalaysia and Singapore
+%% was included Malaysian
+
+\paragraph{Parameterization and experiment design.}
+%% %%
+Parameter space exploration was conducted in multiple iterations.  First,
+we coarsely sampled the space. The range or values of model parameters are
+in Table~\ref{tab:param}. With model parameters as independent
+variables and the goodness of fit measure defined in~\eqref{eqn:similarity}
+as the dependent variable, we used Classification and Regression Trees
+(CART) approach to identify subspaces for which similarity was high and
+rejected subspaces for which similarity was low. Based on this, in the
+subsequent phases, we refined our search to improve the parameterization.
+More details of the CART analysis is presented in Section~\ref{S:sec:cart}.
+Simulations were performed on more than~$500,000$ parameter combinations
+using a high performance computing cluster. 
+
+%% In the second phase,
+%% we applied the select models from the previous phase to the rest of the
+%% region to study how various conditions affect the nature and rate of
+%% spread: different pest introduction scenarios, seasonality of production
+%% and trade, and interventions or the lack thereof.
+%% 
+%%
+
+\section{Results}
+%%
+%%
+%% This section is organized as follows. We first describe the multi-pathway
+%% model--our methodological contribution.  This is followed by our results in
+%% the context of \tuta{} spread which are summarized as follows: (i)~We
+%% identified possible routes by which \tuta{} can invade each country in the
+%% region by analysis of current distribution of the pest and its.
 %%
 \paragraph{Assessing the role of each pathway in the spread of \tuta{} in
 Bangladesh.} The goodness of fit of a parameter instance was determined by
@@ -1238,6 +1469,8 @@ all Class~B instances with Moore range~$\mooreRange=1$. \label{fig:intervene}}
 
 need to say take away points
 \begin{enumerate}
+    \item flying capability is important to consider given class A and
+    class B models
     \item need sample flows for calibration. need to study heterogeneity
     \item need function for relation between flow and pest spread
     \item what is enough for modeling trade? at minimum what is
@@ -1415,233 +1648,6 @@ flows.
 %% high-resolution accurate datasets and a better knowledge of the processes,
 %% individual modules can be replaced with more sophisticated modeling
 %% approaches.  
-%%
-\section{Methods}
-%%
-\paragraph{Data.} All the datasets used in the model and for analysis are
-described in Section~\ref{S:sec:data}. Almost
-all the datasets are openly available. The remaining information was
-provided by local contacts in Bangladesh, Vietnam and Cambodia.
-%%
-\paragraph{\tuta{} biology.}
-The tomato leafminer exhibits a short life cycle of about 24--38 days
-(temperature at $25\pm3^\circ$C), from egg to adult, as it is a
-multivoltine species with overlapping generations in the
-field~\cite{guedes2012tomato}. This species causes serious damage to
-numerous solanaceae crops such as eggplants, potatoes, and especially
-tomato crops~\cite{sylla2018}. It penetrates into tomato leaves, stems, or
-fruits, wherein it feeds and develops by creating conspicuous mines as well
-as galleries. \tuta{} additionally restricts tomato plant growth by feeding
-on the growing tips. Considering the warm weather throughout the year,
-particularly in the dry season, the study region presents ideal conditions
-for rapid development and spread of \tuta{}. Pest risk
-analysis~\cite{tonnang2015identification} shows that the Ecoclimatic Index
-for this region is above~$50$ (highly suitable). Spatial distribution
-assessment survey of \tuta{} eggs has shown its high dispersive capacity in
-tomato producing areas~\cite{martins2018assessing}. The dispersion in a
-tomato cultivation starts mainly at the periphery and
-the pest is able to migrate between tomato farms to generate egg aggregation at the
-crop edges. The pest spread behavior among seasonal crop resources
-is often non-random and directional~\cite{martins2018assessing}.
-Sylla~et~al.~\cite{sylla2018} analyzed host preference of~\tuta{} in France
-and Senegal. While the highest preference is for tomato, it can survive
-well on eggplant and potato, which happen to be major vegetable crops in
-the study region. However, since \tuta{} primarily attacks leaves of
-eggplant and potato, the chance of the pest spreading through trade of
-these crops seems to be low.
-%%
-%% Each cell~$v$ has the following time varying attributes: \aacomment{these
-%% are not necessary: NDVI~$\veg(v,t)$,
-%% temperature~$\temp(v,t)$,} monthly production of preferred host crops and
-%% consumption~$\consume(v,t)$, where~$t$ corresponds to a month.
-%% \aacomment{This should get into Tonnang discussion: Since NDVI
-%% data is available at a much finer resolution (see Table~\ref{tab:data}),
-%% for each cell, we assign the maximum of the NDVI data points that fall in
-%% this cell for that month.} For production, we consider the following
-%% vegetables: tomato, potato, eggplant in metric tonnes (see
-%% Section~\ref{sec:biology} on choice of host crops). Annual country-level
-%% production data (in volume) is spatially disaggregated using SPAM data
-%% on spatial distribution of vegetable production. \aacomment{needs
-%% explanation. statistical analysis should come here}. Further, for each cell,
-%% this production was distributed temporally-- one value for each month of
-%% the year. We observed that precipitation is a primary driver of production
-%% in the study area; during wet months, the amount of production is
-%% considerably less. \aacomment{statistical analysis should come here} (See Supplementary Information).
-%% \aacomment{pending: consumption, import/export}
-
-\paragraph{Seasonal production.} We estimated monthly production volume of
-tomato, eggplant and potato for each cell. This was accomplished in two
-steps. First, we estimated annual production in each cell followed by
-disaggregation to monthly production. The annual production was estimated
-using the vegetable production available at the highest resolution for each
-country (at the level of province to just one value for the entire country)
-and a synthetic dataset called Spatial Production Allocation Model
-(SPAM)\footnote{\url{http://mapspam.info}}. Gathering qualitative data from
-multiple sources, we inferred that the cropping pattern in this region
-depends primarily on two factors: seasons--dry and wet, and
-elevation--highland (upland) and lowland. Also, barring few exceptions, the
-production of the considered host crops peaks in the winter and is lowest
-during the rainy season (monsoon).  To predict seasonal production, we used
-linear regression to model the production rate as a function of
-precipitation, temperature, and elevation. Regional tomato and eggplant
-production data is available for Philippines.
-%% For each region, we obtained the product rate by
-%% normalizing quarterly production values with respect to maximum value among
-%% these. We used production rate instead of production values since there are
-%% several factors that determine a region's production: climate, vegetable
-%% preference, demand, etc.  Therefore, it may not be meaningful to compare
-%% production across regions.  
-%% We conducted a linear regression with the
-%% product rate as a dependent variable and precipitation and temperature and
-%% elevation as independent variables.  To control elevation, we classified
-%% the elevations into two groups, high and low, using $k$-means clustering
-%% (SPSS~24.0). Due to the small sample size, we excluded the samples in the
-%% high-elevation group and conducted a linear regression analysis for the
-%% group of low elevation~($< 235$ masl). 
-The regression results showed that
-precipitation was a statistically significant
-predictor ($p <0.001$). For validation, the regression function was
-applied to locations of different countries where this information is
-available and visually compared. More details on the methods and validation are
-provided in Section~\ref{S:sec:prod}. 
-%% There is very little data
-%% available for validation. Most of the data is qualitative, just providing
-%% information on growing and harvesting months. The regression function was
-%% applied to locations of different countries where this information is
-%% available and visually compared.  More details of the methods, country
-%% specific data and challenges in this regard are covered in
-%% Section~\ref{S:sec:prod}. The infectiousness of cell~$v$ at
-%% time~$t$,~$\infest(v,t)$ is the production at~$t$, while its
-%% suitability,~$\epsilon(v,t)$ is~$0$ if~$\infest(v,t)=0$ and~$1$ otherwise.
-%% on data availability. The first method was used if only seasonal
-%% production is available for a region or country. In this case, we first
-%% estimated seasonal production in each cell and then disaggregated it
-%% to obtain monthly production. Here, due to unavailability of data for tomato and eggplant, we used SPAM's total
-%% vegetable production as surrogate. To disaggregate into monthly production,
-%% we studied the relationship between production, precipitation, and elevation.
-%% For lowland areas, %(elevation less than ???) 
-%% production is negatively
-%% correlated with precipitation ($r<-0.75$).
-
-%% \paragraph{Network structure.} The resulting network consists of~$8,010$
-%% cells and~$109$ localities.  
-%%
-%%
-%% \begin{table}[t]
-%%     \caption{Model parameters and variables, their ranges and references.\label{tab:data}}
-%%     \centering
-%% 	\small
-%%     \begin{tabular}{l p{4cm} p{3cm} p{5cm}}
-%%     %{cp{.25\textwidth}p{.25\textwidth}lr}
-%% 		\hline		
-%% 		Parameter & Description & Range/values & Source \\
-%% \hline		
-%% \hline
-%% $\mooreRange$ & Range of Moore neighborhood & 1,2,3 &
-%% \cite{guimapi2016modeling}\\
-%% $\ell$ & Latency period to transition from $E$ to $I$& 1,2,3 & \\
-%% \hline
-%% $\beta, \kappa$ & Gravity model parameters & 300--500,2 &
-%% \cite{venkatramanan2017towards}\\
-%% -- & Locality population threshold and radius & 250,000, 100kms &
-%% population of cities~\cite{citypop} and reports\\
-%% \hline
-%% $\suitable$ & Suitability threshold & 0\\
-%% $\infest$ & Infectivity of a cell based on amount of production & & Host
-%% production (SPAM), host preference~\cite{sylla2018}, precipitation and
-%% elevation \\
-%% \hline
-%% Scenarios & Seeding simulations: time and cells to infect & 4 cases:
-%% Bangladesh (B1 and B2), Malaysia (M1) and Philippines (P1) & \tuta{} incidence
-%% reports in Bangladesh, FAOSTAT for international trade and migration
-%% reports.\\
-%% Start month & & March, April, May & Based on incidence reports\\
-%% \hline
-%% $\asd$ & Short-distance spread scaling factor & 0--500\\
-%% $\afm$ & Local human-mediated dispersal scaling factor & 0--500\\
-%% $\ald$ & Long distance spread scaling factor & 0--500 \\
-%% \hline
-%% \end{tabular}
-%% \end{table}
-%%
-\paragraph{Domestic trade flows.}
-We modeled the flow of fresh tomato crop between markets based on the following
-assumptions: (i)~The total outflow from a city depends on the amount of
-produce in its surrounding regions and imports from countries outside the
-focus region at time~$t$, and (ii)~the total inflow depends on total
-consumption, processing demand, and exports from the city to countries
-outside the focus region. While there is strong evidence of tomato trade as
-a possible pathway of \tuta{} spread~\cite{biondi2017}, there is no
-evidence of a similar role of eggplant or potato trade. Hence, we modeled
-only tomato trade. For each country, the domestic flow is estimated using a
-doubly constrained gravity
-model~\cite{kaluza2010complex}. For a city~$i$,
-let~$O_i$ and~$I_i$ denote total outflow and total inflow respectively, and
-$\locality(i)$ denotes all cells which are assigned to it.
-The flow~$F_{ij}$ from city~$i$ to city~$j$ is given by
-%%
-\(
-   F_{ij}(t)=a_i(t)b_j(t)O_i(t)I_j(t)f(d_{ij}),
-\)
-%%
-where, $d_{ij}$ is the time to travel from~$i$ to~$j$, and $f(\cdot)$ is
-the \emph{distance deterrence function}:
-$d_{ij}^{-\beta}\exp(-d_{ij}/\kappa)$, where~$\beta$ and~$\kappa$ are
-tunable parameters. The
-coefficients~$a_i$ and~$b_j$ are computed through an iterative process such
-that the total outflow and total inflow at each node agree with the input
-values~\cite{kaluza2010complex}. Overall, we have~12 networks
-representing flows for each month. The outflows and inflows are calculated
-as follows:
-%%
-\begin{align}\label{eqn:flow}
-    O_i(t)&=\produce(i,t)+\import(i,t)-\export(i,t)-\process(i,t),\\
-    I_i(t)&=\consume(i)\,.
-\end{align}
-%%
-Here,~$\produce(i,t)$ is the monthly production and~$\consume(i)$ is the
-population of the locality as a surrogate to consumption. The latter is the
-sum total of population in every cell that belong to the locality.
-$\export$ and ~$\import$ are the monthly total export to and import from
-outside the country respectively. $\process(i,t)$ is the tomato produced
-for processing. Since for this purpose tomato is typically cultivated and
-consumed locally, we subtract this volume from the outflow.
-Country-specific details of how locality attributes were estimated is in
-Section~\ref{S:sec:locAttrib}.
-%% We did not incorporate international trade as the volume is negligible compared to
-%% domestic production with the exception of trade between Malaysia and Singapore. 
-%% More details in this regard are provided in Section~\ref{S:sec:locAttrib}.
-Since no data is available on volume of trade between markets, to validate
-the modeled trade networks, we gathered
-qualitative information from reports and research articles which show
-evidence of tomato or vegetable flow between market pairs. The results of
-this analysis is in Section~\ref{S:sec:tradeFlows}.
-%% Since
-%% there is lot of interaction between the two countries, weMalaysia and Singapore
-%% was included Malaysian
-
-\paragraph{Parameterization and experiment design.}
-%% %%
-Parameter space exploration was conducted in multiple iterations.  First,
-we coarsely sampled the space. The range or values of model parameters are
-in Table~\ref{tab:param}. With model parameters as independent
-variables and the goodness of fit measure defined in~\eqref{eqn:similarity}
-as the dependent variable, we used Classification and Regression Trees
-(CART) approach to identify subspaces for which similarity was high and
-rejected subspaces for which similarity was low. Based on this, in the
-subsequent phases, we refined our search to improve the parameterization.
-More details of the CART analysis is presented in Section~\ref{S:sec:cart}.
-Simulations were performed on more than~$500,000$ parameter combinations
-using a high performance computing cluster. 
-
-%% In the second phase,
-%% we applied the select models from the previous phase to the rest of the
-%% region to study how various conditions affect the nature and rate of
-%% spread: different pest introduction scenarios, seasonality of production
-%% and trade, and interventions or the lack thereof.
-%% 
-%%
-
 \paragraph{Data availability.} The authors declare that the data supporting the
 findings of this study are available within the paper and its Supplementary
 Information file, or from the authors upon reasonable request.
