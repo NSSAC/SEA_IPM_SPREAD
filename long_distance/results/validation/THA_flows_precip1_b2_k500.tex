@@ -1,0 +1,15 @@
+\documentclass{standalone}
+\usepackage{../scripts/tikz-network}
+\begin{document}
+\begin{tikzpicture}
+\Vertex[x=7.6489, y=-6.6793, size=0.6615, color={245.,145.,70}, label=Nonthaburi, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{0}
+\Vertex[x=7.5884, y=-15.875, size=0.6615, color={245.,145.,70}, label=Hat Yai, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{1}
+\Vertex[x=0.0, y=-0.0, size=0.6615, color={245.,145.,70}, label=Chiang Mai, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{2}
+\Vertex[x=15.875, y=-5.1107, size=0.6615, color={245.,145.,70}, label=Nakhon Ratchasima, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{3}
+\Vertex[x=7.8185, y=-6.7919, size=0.6615, color={245.,145.,70}, label=Bangkok, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{4}
+\Edge[lw=1.381, color={178.,200.,92}, opacity=0.9, bend=-8.531, label=6, distance=0.8, fontcolor={0.,0.,0}, fontscale=3.75, Direct, RGB](2)(3)
+\Edge[lw=1.9369, color={178.,200.,92}, opacity=0.9, bend=-8.531, label=6, distance=0.8, fontcolor={0.,0.,0}, fontscale=3.75, Direct, RGB](2)(1)
+\Edge[lw=3.2124, color={178.,200.,92}, opacity=0.9, bend=-8.531, distance=0.8, fontcolor={0.,0.,0}, fontscale=3.75, Direct, RGB](2)(0)
+\Edge[lw=3.3449, color={178.,200.,92}, opacity=0.9, bend=-8.531, label=6, distance=0.8, fontcolor={0.,0.,0}, fontscale=3.75, Direct, RGB](2)(4)
+\end{tikzpicture}
+\end{document}

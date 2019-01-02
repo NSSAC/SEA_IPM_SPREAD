@@ -16,7 +16,7 @@ folder. The results are stored in ./results. Intermediate files will be in
 
 Summary:
 ********
-Currently, the entire pipeline is captured by scripts/rank_cluster.sh
+Currently, the entire pipeline is captured by scripts/master_cluster_cells.sh
 Step 1 is accomplished using bash scripts; 2 by python; and 3 by R.
 
 Step 1: Extract files
