@@ -1,0 +1,30 @@
+
+    ### find expected time for each cell
+    ## startTime = int(infectionTimeline.columns[1])
+
+    ## for index, row in infectionTimeline.iterrows():
+    ##     cell_id = int(row["cell_id"])
+    ##     t = startTime
+    ##     totProb=0
+    ##     for column in row:
+    ##         if column > 1:
+    ##             continue
+    ##         expectedTimes[cell_id]+=t * column
+    ##         totProb+=column
+    ##         t += 1
+    ##     # Taking care of cells that never got infected with probability 1 
+    ##     # in the simulation time span.
+    ##     expectedTimes[cell_id]+=(1-totProb)*t
+
+    ## #print sorted_dict
+    ## for key, value in sorted_dict:
+    ##     startTime = int(df.columns[1])
+    ##     for i in range(int(len(df.columns)/step_size)):
+    ##         if value >= startTime and value < (startTime + step_size):
+    ##             try: bin_dict[startTime] += [key]
+    ##             except: bin_dict[startTime] = [key]
+    ##         startTime += step_size
+    ## output_df = pd.DataFrame()
+    ## output_df = output_df.append(bin_dict, ignore_index=True)
+    ## output_df.to_csv(out_file, index = False)
+            

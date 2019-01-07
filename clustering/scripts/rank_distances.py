@@ -10,9 +10,10 @@ import sys
 import argparse
 import pandas as pd
 
-#RANKS_FILE="../obj/cell_rank_BD_model_params.csv"
-RANKS_FILE="../obj/expected_time_BD.csv"
-SAMPLE_SIZE=1000
+#SIM_FILE="../obj/cell_rank_BD_model_params.csv"
+#SIM_FILE="../obj/expected_time_BD.csv"
+SIM_FILE="../obj/infection_vector_BD.csv"
+SAMPLE_SIZE=10000
 CELL_START_IND=11
 LOCALITY_CELLS="../../cellular_automata/obj/locality_cells.csv"
 REPORTING_CELLS=[651957, 651965, 656282, 659158, 659166, 663477, 663489, 669234]
@@ -27,11 +28,10 @@ def sample_rank_distances(rankList1,rankList2,sampleSize):
     for i in xrange(SAMPLE_SIZE):
         rank1=rankList1.sample().ix[:,CELL_START_IND:]
         rank2=rankList2.sample().ix[:,CELL_START_IND:]
+        pdb.set_trace()
         #difference[i]=stats.kendalltau(rank1.values[0],rank2.values[0])[0]
         #difference[i]=stats.spearmanr(rank1.values[0],rank2.values[0])[0]
         difference[i]=stats.pearsonr(rank1.values[0],rank2.values[0])[0]
-        ## if difference[i]<.1:
-        ##     pdb.set_trace()
     return np.mean(difference),np.var(difference)
 
 if __name__=="__main__":
@@ -44,7 +44,7 @@ if __name__=="__main__":
     args=parser.parse_args()
 
     # read ranks
-    rankList = pd.read_csv(RANKS_FILE)
+    rankList = pd.read_csv(SIM_FILE)
 
     # select only cells belonging to localities
     if args.locality_cells:

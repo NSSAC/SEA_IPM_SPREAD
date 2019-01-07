@@ -32,13 +32,13 @@ likelihood>=6
 query_to_filenames ../../cellular_automata/sim_out_files/results_BGD_2018-06-18 .to_be_deleted.exp.csv
 }
 
-function sorted_cells(){
+function process_sim(){
 count=1
 for f in `ls -1 results_BGD_6`
 do
 echo -ne "\r\033[K$count: $f"
-outPrefix=rank_BD/`echo $f | sed -e "s/.csv$//"`
-python ../scripts/sort_cells.py \
+outPrefix=rank_time_inf_BD/`echo $f | sed -e "s/.csv$//"`
+python ../scripts/post_process_simfile.py \
     results_BGD_6/$f \
     -o $outPrefix -c BD
 ((count+=1))
@@ -50,6 +50,15 @@ rm -f cell_ranks_BD.csv
 for f in `ls -1 rank_BD`
 do
 cat rank_BD/$f >> cell_ranks_BD.csv
+done
+}
+
+function concat_inf(){
+colNum=`seq 1 3376 | awk '{printf(",%d",$1)}END{print "\n"}'`
+echo "season,beta,kappa,seed,start_month,moore,start_time,latency_period,a_sd,a_local,a_long$colNum" > infection_vector_BD.csv
+for f in `find rank_time_inf_BD -iname *infvec.csv`
+do
+cat $f >> infection_vector_BD.csv
 done
 }
 

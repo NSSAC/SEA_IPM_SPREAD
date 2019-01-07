@@ -1,14 +1,15 @@
+# tags: argparse pandas csv pandas python map
 import argparse
-import csv
 import pandas as pd
 import pdb
 import os
 
 DESC="""description: 
 This function does the following given a simulation output file (format
-given below):
+given below). In each case, a different output file is generated.
 1. Computes expected time of infection for each cell.
 2. Sorts cells in ascending order by their expected time of infection.
+3. Concatenates infection probabilities into one vector ordered by cell id.
 In addition, it can also filter cells by country/region and output a subset
 of relevant cells.
 """
@@ -50,8 +51,13 @@ def sortByInfected(infectionTimeline):
 
     ### sort
     sortedCells=expectedTimes.sort_values(by=['t'])
-    return expectedTimes.sort_index(), sortedCells.index.tolist()
-            
+
+    ### concat
+    dim=infectionTimeline.shape
+    timelineVec=infectionTimeline.sort_index().values.reshape((1,dim[0]*dim[1]))[0]
+
+    return expectedTimes.sort_index(), sortedCells.index.tolist(), timelineVec
+
 if __name__ == "__main__":
     parser=argparse.ArgumentParser(description=DESC,
     formatter_class=argparse.RawTextHelpFormatter)
@@ -68,7 +74,7 @@ its prefix in the admin_id\"admin_id\" field of %s.""" %CELL_COUNTRY_MAP)
 
     args=parser.parse_args()
     selectedCells=filterCells(args.input_sim_file,args.country_filter)
-    [expectedTimes,sortedCells]=sortByInfected(selectedCells)
+    [expectedTimes,sortedCells,infVec]=sortByInfected(selectedCells)
     
     # expected times file
     with open(args.out_prefix+"_time.csv",'w') as f:
@@ -86,4 +92,11 @@ its prefix in the admin_id\"admin_id\" field of %s.""" %CELL_COUNTRY_MAP)
         f.write(os.path.basename(args.input_sim_file).lstrip("res_").rstrip(".csv")) # This step should ideally come as input.
         for e in sortedCells:
             f.write(",%d" %e)
+        f.write("\n")
+
+    # infection vector file
+    with open(args.out_prefix+"_infvec.csv",'w') as f:
+        f.write(os.path.basename(args.input_sim_file).lstrip("res_").rstrip(".csv").replace('_',',').replace('-',',').replace('a,','')) # This step should ideally come as input.
+        for e in infVec:
+            f.write(",%g" %e)
         f.write("\n")
