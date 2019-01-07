@@ -1,0 +1,3 @@
+Generating networks:
+See scripts/import_trade_matrix.sh. It works only after removing the first
+line of the input file.

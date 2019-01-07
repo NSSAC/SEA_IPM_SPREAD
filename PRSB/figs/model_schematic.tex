@@ -43,8 +43,6 @@
 \newcommand*{\arrowopacity}{1}%
 \newcommand*{\radcolor}{white}%
 
-
-
 \def\MooreNbd#1#2#3#4#5{
     \newcommand*{\xycolor}{#1}%
     \newcommand*{\xMin}{#2}%
@@ -200,10 +198,10 @@ dedge/.style={ultra thick, black!60, >=latex', shorten >=.5pt, shorten <=.5pt}]
         \draw[-latex,thick,black](4.5,0.8)to(4.5,1.3)to node[above=1mm]{$\rho (t)$}(4.5,2.5);
         
         %sei
-        \draw[-latex,thick,black](5.6,-0.3)to node[below=8mm,block,fill=yellow] (E){E} (5.6, -2.5);
-        \node[block,fill=\suscolor] at (3, -3.3)(S){S};
+        \draw[-latex,thick,black](5.6,-0.3)to node[below=8mm,block,fill=yellow] (E){E} (5.6, -2);
+        \node[block,fill=\suscolor] at (3, -3)(S){S};
         
-        \node[block,fill=\infcolor] at (8,-3.3) (I){I};
+        \node[block,fill=\infcolor] at (8,-3) (I){I};
        
        \draw[->,dedge] ($(S.north east)+(0,-1.3)$) -- ($(E.north west)+(0,-1.3)$) 
 node[midway,above=-3.8mm,black,text width=2.5cm,align=center](ald){$\ald$};
@@ -215,7 +213,6 @@ node[midway,above=-3.8mm,black,text width=2.5cm,align=center](asd){$\asd$};
 %,$\afm$,$\ald$};
 %\node[above=-2mm] at (weights) {Weights};
 
-        %\draw[->,dedge] (S) -- (E);
         \draw[->,dedge] (E) -- (I) node[midway,above=-3.5mm,black] (latency){$\ell$};
         
         %\node[above=-2mm] at (latency) {Latency};
@@ -315,13 +312,15 @@ node[midway,above=-3.8mm,black,text width=2.5cm,align=center](asd){$\asd$};
         \draw[-latex,thick,black](-5.3,-1.7)node[left]{Locality}
          to (-2.7,-0.5);  
          
-         \draw[-latex,thick](1,6)node[right,black](loc){Long distance spread}
+         \draw[-latex,thick](1,6)node[text width=4cm,right,black](loc){Long distance
+         human-mediated spread}
          to (-0.5,5.6);
          
-         \draw[-latex,thick](2.2,4.5)node[above right=-3mm,black](loc){Farm to market spread}
-         to (1,2.2);
+         \draw[-latex,thick](1.5,4.2)node[text width=5cm,anchor=west,black](loc){Short distance human-mediated spread (Farm
+         to market spread)} to (1,2.2);
          
-         \draw[-latex,thick](-1.5,-2.8)node[below left=-3mm,black](loc){Short distance spread}
+         \draw[-latex,thick](-1.5,-3.4)node[text width=5cm,anchor=east
+         ,black](loc){Short-distance or natural spread}
          to (-0.5,-2);
 	
 \node at (-1,6){$F_{ij}(t)$};

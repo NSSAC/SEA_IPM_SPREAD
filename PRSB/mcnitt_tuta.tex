@@ -11,6 +11,7 @@
 \newcommand{\suitable}{\epsilon}
 %% \usepackage{fullpage} % uncomment this when changing to jour/conf style
 % FONTS
+\usepackage{textcomp}
 \usepackage{lmodern} % enhanced version of computer modern
 \usepackage[T1]{fontenc} % for hyphenated characters and textsc in section title
 \usepackage{xr}
@@ -426,9 +427,11 @@ these crops seems to be low.
 
 %%
 \paragraph{Multi-pathway spread model.} We developed a stochastic
-propagation model to simulate the multi-pathway spread of~\tuta{}. Key
-concepts are illustrated in Figure~\ref{fig:modelConcept}. The study region
-is divided into cells by overlaying a grid. Each cell is in one of the
+propagation model to simulate the multi-pathway spread of~\tuta{}.  Key
+concepts are illustrated in Figure~\ref{fig:concept}.
+The study region is
+divided into cells by overlaying a grid
+(0.25\textdegree~$\times$~0.25\textdegree). Each cell is in one of the
 three states: susceptible ($S$) denoting pest free state, exposed ($E$)
 denoting that the pest has been introduced but the population has not yet
 built up to influence other cells, and infectious ($I$) denoting that the
@@ -440,53 +443,63 @@ establish at that time step~$\suitable(v,t)$ and (ii)~influence of
 ``neighboring'' cells in state~$I$ depending on the pathway. An exposed
 cell transitions to state~$I$ after a latency period of~$\ell$ time steps.
 This is the time required for the population to build up to infect other
-cells. Once the pest has established in a cell, the cell remains infected
+cells.  Once the pest has established in a cell, the cell remains infected
 forever, a fair assumption considering that, historically, eradication of
 \tuta{} has not been successful\footnote{The only exception is United
 Kingdom where the pest was detected early and
-eradicated~(\url{https://gd.eppo.int/reporting/article-340}).}. The
+eradicated~(\url{https://gd.eppo.int/reporting/article-340}).}.  The
 infectiousness of a cell~$\infest(v,t)$ is modeled as a linear function of
 host presence at time~$t$, for which we use the weighted sum of production
 volume of tomato, eggplant, and potato in that cell at time~$t$. The
 weights correspond to relative carrying capacity of \tuta{} on the three
 hosts~\cite{sylla2018}.
+
 %%
 \begin{figure}[t]
-    \centering
-    \includegraphics[width=.8\textwidth]{figs/model_schematic.pdf}
-\caption{\textbf{Outline of the multi-pathway model.}
-The focus region is overlayed with a grid of cell size~$0.25$ arc degree
-$\times 0.25$ arc degree, which is
-approximately~$27.8\mathrm{km}\times\mathrm{27.8km}$ at the equator. 
+\centering
+\begin{subfigure}[b]{.4\textwidth}
+    \includegraphics[width=1.1\textwidth]{figs/model_schematic.pdf}
+\caption{\label{fig:concept}}
+\end{subfigure}
+%%
+\begin{subfigure}[b]{.56\textwidth}
+    \includegraphics[width=1.05\textwidth]{figs/pipeline.pdf}
+\caption{\label{fig:pipeline}}
+\end{subfigure}
+\caption{\textbf{The multi-pathway model.} (a)~The network structure,
+pathways and dynamics are captured in the illustration.
+%% , which is
+%% approximately~$27.8\mathrm{km}\times\mathrm{27.8km}$ at the equator. 
 %% These
 %% dimensions are comparable to that used in the cellular automata model of
-%% Guimapi~et.~al.~\cite{guimapi2016modeling} ($25\mathrm{km}\times25\mathrm{km}$). 
-We identified major urban centers and production centers in the study
-region. A locality corresponding to each such center consists of all grid
-cells for which this is the nearest city and the distance is at most the
-\emph{locality radius} (in kilometers), with the additional constraint that
-each cell belongs to the same country as this city. Local human-mediated
-dispersal is modeled as the interaction between cells belonging to a city.
-Long distance human-mediated dispersal is modeled as trade flows of
-considered host crops from one city to another.  Details of locality
-construction are in Section~\ref{S:sec:locality}. The three pathways of
-spread are illustrated. Also shown are the states and factors that
-influence state transitions: infectiousness of a neighbor, suitability of
-the cell for pest establishment, pathway parameters and latency period.
-\label{fig:modelConcept}}
+%% Guimapi~et.~al.~\cite{guimapi2016modeling} ($25\mathrm{km}\times25\mathrm{km}$). Details of locality construction are in Section~\ref{S:sec:locality}. 
+%% Long distance human-mediated dispersal is modeled
+%%las the spread between localities through. 
+Also shown are the states and factors
+that influence state transitions: infectiousness of a neighbor, suitability
+of the cell for pest establishment, pathway parameters and latency period.
+\label{fig:modelConcept}
+(b)~\textbf{Pipeline.} The process of constructing the spatio-temporal
+network of cells is outlined. Key modules are highlighted along with 
+input data.}
 \end{figure}
 %%
+
 There are three pathways by which a cell can become infected:
 short-distance dispersal, local human-mediated dispersal and long-distance
 dispersal. Short-distance dispersal captures the spread through natural
 means; from an infested cell to cells in its Moore neighborhood of
-range~$\mooreRange$. 
+range~$\mooreRange$.
 The probability that a susceptible cell gets exposed (E) at time step~$t$
 through short-distance spread is as follows:
+%%
+\begin{linenomath}
 \begin{align}\label{eqn:pshort}
     \pshort(v,t)=\suitable(v,t)\bigg(1-
     \exp\Big(-\asd\sum_{v'\in\moore_v(\mooreRange)}\infest(v',t)\Big)\bigg),
 \end{align}
+\end{linenomath}
+%%
 The probability depends on the suitability of the cell~$\suitable(v,t)$,
 infestation level of each neighboring cell in the Moore neighborhood with 
 range~$\mooreRange$,~$\infest(v',t)$ and the scaling factor,~$\asd$, which is the transmission rate for this pathway. The
@@ -496,21 +509,23 @@ For human-assisted spread we identified large urban areas in the region
 which we refer to as {\it localities} (Figure~\ref{fig:modelConcept}) and
 considered 
 interactions within and between localities. These areas act as attractors
-of vegetable flows due to high consumption and house the necessary
+of vegetable flows due to high consumption or production and house the necessary
 infrastructure: wholesale markets, traders and distributors.
 %% Also, since horticultural products are less
 %% durable, owing to lack of good storage and transport
 %% infrastructure~\cite{ali2001}, typically, much of the major producing
 %% regions are close to cities~\cite{buckmaster2014going}. Only a cell
 %% belonging to a locality is affected by the human-mediated pathways. 
-Local human-mediated dispersal captures the spread due to ``local'' or
-farm--city--farm interactions, where the pest can spread from infested
-cells in a locality to other cells in the same locality. 
+Each
+\emph{locality} consists of all grid cells which are within a certain
+distance (determined by \emph{locality radius}) from its corresponding center. Local
+human-mediated dispersal is modeled as the spread between cells
+belonging to a locality.
 %% Since local
 %% farm--market dynamics are hard to model~\cite{rebaudo2011}, we used a
 %% simple approach.
-For a cell in a locality (say~$L$), its neighbors are all cells that belong
-to the locality.  
+%% For a cell in a locality (say~$L$), its neighbors are all cells that belong
+%% to the locality.  
 %% The objective is to cell's state is influenced by the infected cells in
 %% its locality through the marketing chain.  In general, it is hard to model
 %% the local dynamics as there are several actors in bringing the commodities
@@ -529,22 +544,15 @@ instead of the Moore neighborhood.
     \exp\Big(-\afm\sum_{v'\in\locality}\infest(v',t)\Big)\bigg),
 \end{align}
 %%
-where~$\afm$ is the scaling factor for this pathway. 
+where~$\afm$ is the scaling factor. The details of
+locality construction are provided in Section~\ref{S:sec:locality} of SI.
 
 Long-distance human-mediated dispersal corresponds to spread through trade
 between localities. For this purpose, we considered only tomato trade as
 there is not much evidence of \tuta{} spreading through trade of other
 hosts. We modeled domestic trade using a gravity model approach accounting
 for tomato production, processing, imports and exports in each locality and
-the travel time between localities (details are in Methods). The imports
-and exports correspond to those outside the focus region. Trade between
-countries in the study region was accounted for only in one case --
-Malaysia to Singapore -- by including the latter as a locality of Malaysia
-and applying the gravity model. While most of the other flows were minor in
-comparison to domestic flows, major flows that were ignored were from
-Thailand and Vietnam to Malaysia as there is no adequate information on
-ports of entry or monthly flow volumes. Figure~\ref{fig:tomnet} shows the
-annual tomato trade for the study region.
+the travel time between localities. 
 %% However, this information was accounted for in experiment
 %% design to identify possible starting locations or ``seeds'' for each
 %% country.  
@@ -584,42 +592,18 @@ flow~$F_{ij}$ from one locality ($i$) to another ($j$).
 Suppose cell~$v$ belongs to locality~$i$. Then, the probability of cell~$v$
 transitioning from~$S$ to~$E$ due to long-distance dispersal is given by:
 %%
+\begin{linenomath}
 \begin{align}\label{eqn:plocal}
     \pld(v,t)=\suitable(v,t)\bigg(1-
     \exp\Big(-\ald\sum_{j\ne i}\sum_{v'\in\locality(j)}F_{ji}\infest(v',t)\Big)\bigg),
 \end{align}
+\end{linenomath}
 %%
-where~$\ald$ is the scaling factor for this pathway.
-%%
-\begin{figure}[t]
-\centering
-%%
-\includegraphics[width=.6\textwidth]{../international_trade/results/network_plots/sea_2013_tomato.pdf}
-\caption{\textbf{The trade of tomato in the focus region (2013).} The
-network was constructed using data from FAOSTAT Trade matrix
-(Table~\ref{S:tab:data}).  The trade within the focus region is represented
-by green edges. Imports from \tuta{} affected countries categorized by
-region is represented by red edges, and the blue edges correspond to
-exports from the focus region to countries yet to report the presence of
-the pest. The edge thickness is a function of the trade volume. We note
-that with the exception of Philippines, there is considerable trade
-activity among countries in the focus region. However, the majority of
-trading happens between neighboring countries and except for a few flows,
-the volume is negligible compared to production within. Most significant
-flow is from Malaysia to Singapore ($\approx30,000$ tonnes), India to
-Bangladesh ($\approx20,000$ tonnes), and Thailand and Vietnam to Malaysia
-(between $1000$ to $2,000$ tonnes). Philippines does not report any fresh
-tomato trade with other countries.  We also analyzed how the network
-structure evolved across years. While we did not observe much variation in
-the network structure, there is some change in the countries importing to
-and exporting from this region
-(Figure~\ref{S:fig:tradeYears}).\label{fig:tomnet}}
-\end{figure}
-%%
+where~$\ald$ is the scaling factor.
 The model parameters and their values are summarized in
 Table~\ref{tab:param}. 
 %%
-\begin{table}[ht]
+\begin{table}[t]
 \caption{Model parameters and their values.\label{tab:param}}
     \centering
 	\small
@@ -657,22 +641,24 @@ $\ald$ & Long distance spread scaling factor & In the interval $[0,500]$.\\
 \hline
 \end{tabular}
 \end{table}
-\paragraph{Seasonal production.} We estimated monthly production volume of
-tomato, eggplant and potato for each cell. This was accomplished in two
-steps. First, we estimated annual production in each cell followed by
-disaggregation to monthly production. The annual production was estimated
-using the vegetable production available at the highest resolution for each
-country (at the level of province to just one value for the entire country)
-and a synthetic dataset called Spatial Production Allocation Model
-(SPAM)\footnote{\url{http://mapspam.info}}. Gathering qualitative data from
-multiple sources, we inferred that the cropping pattern in this region
-depends primarily on two factors: seasons--dry and wet, and
-elevation--highland (upland) and lowland. Also, barring few exceptions, the
-production of the considered host crops peaks in the winter and is lowest
-during the rainy season (monsoon).  To predict seasonal production, we used
-linear regression to model the production rate as a function of
-precipitation, temperature, and elevation. Regional tomato and eggplant
-production data is available for Philippines.
+%%
+\paragraph{Network construction.} 
+Figure~\ref{fig:pipeline} provides a schematic of the network construction.
+The first step was to estimate monthly production volume of tomato,
+eggplant and potato for each cell. First, we estimated annual production in
+each cell followed by disaggregation to monthly production. The annual
+production was estimated using the vegetable production available at the
+highest resolution for each country (at the level of province to just one
+value for the entire country) and a synthetic dataset called Spatial
+Production Allocation Model (SPAM)~\cite{spam}.
+Gathering qualitative data from multiple sources, we inferred that the
+cropping pattern in this region depends primarily on two factors:
+seasons--dry and wet, and elevation--highland (upland) and lowland. Also,
+barring few exceptions, the production of the considered host crops peaks
+in the winter and is lowest during the rainy season (monsoon).  To predict
+seasonal production, we used linear regression to model the production rate
+as a function of precipitation, temperature, and elevation. Regional tomato
+and eggplant production data is available for Philippines.
 %% For each region, we obtained the product rate by
 %% normalizing quarterly production values with respect to maximum value among
 %% these. We used production rate instead of production values since there are
@@ -752,7 +738,7 @@ provided in Section~\ref{S:sec:prod}.
 %% \end{tabular}
 %% \end{table}
 %%
-\paragraph{Domestic trade flows.}
+
 We modeled the flow of fresh tomato crop between markets based on the following
 assumptions: (i)~The total outflow from a city depends on the amount of
 produce in its surrounding regions and imports from countries outside the
@@ -804,18 +790,29 @@ the modeled trade networks, we gathered
 qualitative information from reports and research articles which show
 evidence of tomato or vegetable flow between market pairs. The results of
 this analysis is in Section~\ref{S:sec:tradeFlows}.
+
+Trade between countries of the focus region was not modeled as there is no
+adequate information on ports of entry or monthly flow volumes. However,
+they were accounted for to determine possible routes of entries and in
+turn, to seed the simulations. However, there is one exception. We included
+Singapore as a locality of Malaysia while applying the gravity model due to
+high trade and mobility between the two countries.  case -- Malaysia to
+Singapore -- by including the latter as a locality of Malaysia and applying
+the gravity model. While most of the other flows were minor in comparison
+to domestic flows, major flows that were ignored were from Thailand and
+Vietnam to Malaysia.
 %% Since
 %% there is lot of interaction between the two countries, weMalaysia and Singapore
 %% was included Malaysian
 
 \paragraph{Parameterization and experiment design.}
 %% %%
-Parameter space exploration was conducted in multiple iterations.  First,
-we coarsely sampled the space. The range or values of model parameters are
-in Table~\ref{tab:param}. With model parameters as independent
+The range or values of model parameters are
+in Table~\ref{tab:param}. Parameter space exploration was conducted in multiple iterations.  First,
+we coarsely sampled the space. With model parameters as independent
 variables and the goodness of fit measure defined in~\eqref{eqn:similarity}
 as the dependent variable, we used Classification and Regression Trees
-(CART) approach to identify subspaces for which similarity was high and
+(CART) approach to identify subspaces for which similarity score was high and
 rejected subspaces for which similarity was low. Based on this, in the
 subsequent phases, we refined our search to improve the parameterization.
 More details of the CART analysis is presented in Section~\ref{S:sec:cart}.
@@ -831,6 +828,34 @@ using a high performance computing cluster.
 %%
 
 \section{Results}
+ Figure~\ref{fig:tomnet} shows the
+annual tomato trade for the study region.
+%%
+\begin{figure}[t]
+\centering
+%%
+\includegraphics[width=.6\textwidth]{../international_trade/results/network_plots/sea_2013_tomato.pdf}
+\caption{\textbf{The trade of tomato in the focus region (2013).} The
+network was constructed using data from FAOSTAT Trade matrix
+(Table~\ref{S:tab:data}).  The trade within the focus region is represented
+by green edges. Imports from \tuta{} affected countries categorized by
+region is represented by red edges, and the blue edges correspond to
+exports from the focus region to countries yet to report the presence of
+the pest. The edge thickness is a function of the trade volume. We note
+that with the exception of Philippines, there is considerable trade
+activity among countries in the focus region. However, the majority of
+trading happens between neighboring countries and except for a few flows,
+the volume is negligible compared to production within. Most significant
+flow is from Malaysia to Singapore ($\approx30,000$ tonnes), India to
+Bangladesh ($\approx20,000$ tonnes), and Thailand and Vietnam to Malaysia
+(between $1000$ to $2,000$ tonnes). Philippines does not report any fresh
+tomato trade with other countries.  We also analyzed how the network
+structure evolved across years. While we did not observe much variation in
+the network structure, there is some change in the countries importing to
+and exporting from this region
+(Figure~\ref{S:fig:tradeYears}).\label{fig:tomnet}}
+\end{figure}
+%%
 %%
 %%
 %% This section is organized as follows. We first describe the multi-pathway
@@ -843,9 +868,9 @@ using a high performance computing cluster.
 Bangladesh.} The goodness of fit of a parameter instance was determined by
 comparing the
 simulation output with \tuta{} incidence reports from Bangladesh. The spread was simulated with infestation starting from
-the location of first report (Panchagarh, Bangladesh) and 100 repetitions.
+the location of first report (Panchagarh, Bangladesh).
 For each cell, empirical probability that it is in state~$I$ at time~$t$
-was computed. The output was compared with ground truth using a similarity
+was computed (averaged over 100 repetitions). The output was compared with ground truth using a similarity
 function adapted from~\cite{carrasco2010unveiling}.  Let~$v$ be a
 reporting cell and~$t_v$ denote the month of actual report of pest
 presence.  To account for uncertainty in reporting, we consider a time
@@ -856,10 +881,12 @@ to ground truth,  and ~$p(v,t)$ is the empirical probability that cell~$v$ is
 infected at time~$t$ in the model, then, the
 similarity~$\similarity$ is given by,
 %%
+\begin{linenomath}
 \begin{align}\label{eqn:similarity}
     \similarity=\sum_{v\in\reportingCells} \Big(\sum_{t\in U_\tau}p(v,t)
     + \sum_{t\notin U_\tau}\big(1-p(v,t)\big) \Big)\,.
 \end{align}
+\end{linenomath}
 %%
 We have incidence information from eight locations in Bangladesh where
 pheromone traps were installed (Figure~\ref{fig:bgdClassA} and
@@ -886,11 +913,11 @@ neighbors with jumps from one locality to another.
     \centering
 \begin{subfigure}[b]{.47\textwidth}
     \includegraphics[width=\textwidth]{../cellular_automata/results/contour/BGD_model-A.pdf}
-    \caption{Class~A\label{fig:bgdClassA}}
+    \caption{Class~A ($\ald=0$) \label{fig:bgdClassA}}
 \end{subfigure}\hspace{.5cm}
 \begin{subfigure}[b]{.47\textwidth}
     \includegraphics[width=\textwidth]{../cellular_automata/results/contour/BGD_model-B_m1_l3.pdf}
-    \caption{Class~B\label{fig:bgdClassB1}}
+    \caption{Class~B ($\ald>0$) \label{fig:bgdClassB1}}
 \end{subfigure}
 \caption{\textbf{Spread in Bangladesh.} The contour plots show the
 simulated spread starting from the location of first report in Panchagarh
@@ -978,10 +1005,10 @@ simulation than Class~B models. The main reason why it is not at all
 critical in the latter class is because the pest was reported just before
 the rainy season; subsequent months have lean trade flows, and as a result
 it does not affect the spread much. Also, we observe that seasonal
-production is very important in Class~B models as it influences long
-distance jumps. However, it does not seem to have much effect on the radial
-spread component as is the case with Class~A models. In both cases, the
-spread is very sensitive to the local human-mediated pathway
+production is very important in Class~B models as it influences trade flows
+and long distance jumps. However, it does not seem to have much effect on
+the radial spread component as is the case with Class~A models. In both
+cases, the spread is very sensitive to the local human-mediated pathway
 parameter~$\afm$. In the case of Class~A models, this pathway leads to
 faster spread within localities. In Class~B models, higher the value, the
 greater the chance of long-distance spread as it quickly leads to infection
@@ -1058,15 +1085,15 @@ for the rest of the region.
 \end{subfigure}
 \caption{\textbf{Parameter importance.} Random Forest
 (RF)~\cite{breiman2001random} method was applied to study parameter
-importance. With similarity~($\similarity$) as the dependent variable,
-the analysis was performed on the set of model instances which yielded
-a similarity~$\similarity\ge5.5$ ($\approx80$\% match with ground
-truth), a total of $17,000$ samples from the
-parameter space . The results for the entire set (Plot~(a))
-and separately for Class~A (Plot~(b)) and Class~B models (Plot~(c)) are
-shown. The parameters are ordered by their importance based on percentage
-increase in mean square error from permuting the variable--higher, the more
-important. \label{fig:sensitivity}}
+importance. With similarity~($\similarity$) as the dependent variable, the
+analysis was performed on the set of model instances which yielded a
+similarity~$\similarity\ge5.5$ ($\approx80$\% match with ground truth). The
+results for the entire set (Plot~(a)) and separately for Class~A (Plot~(b))
+and Class~B models (Plot~(c)) are shown. The parameters are ordered by
+their importance based on percentage increase in mean square error from
+permuting the variable--higher, the more important.
+\label{fig:sensitivity}}
+%% a total of $17,000$ samples from the parameter space
 \end{figure}
 %%
 %% \begin{figure}[ht]

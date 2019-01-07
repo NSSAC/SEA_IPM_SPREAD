@@ -1,0 +1,82 @@
+\documentclass{standalone}
+\usepackage{../scripts/tikz-network}
+\begin{document}
+\begin{tikzpicture}
+\Vertex[x=1.3662, y=-0.0, size=0.6615, color={245.,145.,70}, label=BGD, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{0}
+\Vertex[x=3.6456, y=-1.1488, size=0.6615, color={245.,145.,70}, label=MMR, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{1}
+\Vertex[x=11.2866, y=-12.4213, size=0.6615, color={245.,145.,70}, label=BRN, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{2}
+\Vertex[x=10.9584, y=-15.875, size=0.6615, color={245.,145.,70}, label=IDN, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{3}
+\Vertex[x=7.3232, y=-7.2124, size=0.6615, color={245.,145.,70}, label=KHM, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{4}
+\Vertex[x=6.3075, y=-2.4835, size=0.6615, color={245.,145.,70}, label=LAO, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{5}
+\Vertex[x=6.0959, y=-12.632, size=0.6615, color={245.,145.,70}, label=MYS, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{6}
+\Vertex[x=14.1548, y=-7.0087, size=0.6615, color={245.,145.,70}, label=PHL, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{7}
+\Vertex[x=5.6957, y=-5.0691, size=0.6615, color={245.,145.,70}, label=THA, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{8}
+\Vertex[x=8.6609, y=-6.2442, size=0.6615, color={245.,145.,70}, label=VNM, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{9}
+\Vertex[x=6.8465, y=-14.486, size=0.6615, color={245.,145.,70}, label=SGP, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{10}
+\Vertex[x=0.0, y=-1.7416, size=0.6615, color={208.,78.,86}, label={\parbox{1.2cm}{\textbf{Africa}\\EGY\\ZAF}}, position=left, distance=0.0397, fontscale=2.679, shape=rectangle, RGB]{11}
+\Vertex[x=0.0, y=-5.6334, size=0.6615, color={208.,78.,86}, label={\parbox{1.2cm}{\textbf{Americas}\\ARG}}, position=left, distance=0.0397, fontscale=2.679, shape=rectangle, RGB]{12}
+\Vertex[x=0.0, y=-9.5253, size=0.6615, color={208.,78.,86}, label={\parbox{1.2cm}{\textbf{Asia}\\IND\\TUR}}, position=left, distance=0.0397, fontscale=2.679, shape=rectangle, RGB]{13}
+\Vertex[x=0.0, y=-13.4171, size=0.6615, color={208.,78.,86}, label={\parbox{1.2cm}{\textbf{Europe}\\BEL\\BGR\\BRA\\CHE\\DEU\\ESP\\FRA\\NLD}}, position=left, distance=0.0397, fontscale=2.679, shape=rectangle, RGB]{14}
+\Vertex[x=11.3974, y=-2.3902, size=0.6615, color={120.,166.,190}, label={\parbox{1.2cm}{\textbf{}\\AUS\\GBR\\HKG\\JPN\\LKA\\MDV\\NZL\\TLS}}, position=right, distance=0.0397, fontscale=2.679, shape=rectangle, RGB]{15}
+\Vertex[x=13.8397, y=-12.1198, size=0.0, color={255.,255.,255}, label=10, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{16}
+\Vertex[x=15.875, y=-12.1198, size=0.0, color={255.,255.,255}, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{17}
+\Vertex[x=13.8397, y=-13.0928, size=0.0, color={255.,255.,255}, label=100, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{18}
+\Vertex[x=15.875, y=-13.0928, size=0.0, color={255.,255.,255}, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{19}
+\Vertex[x=13.8397, y=-14.0658, size=0.0, color={255.,255.,255}, label=1K, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{20}
+\Vertex[x=15.875, y=-14.0658, size=0.0, color={255.,255.,255}, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{21}
+\Vertex[x=13.8397, y=-15.0387, size=0.0, color={255.,255.,255}, label=10K, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{22}
+\Vertex[x=15.875, y=-15.0387, size=0.0, color={255.,255.,255}, position=left, distance=0.0397, fontscale=2.679, shape=circle, RGB]{23}
+\Edge[lw=4.1052, color={120.,166.,190}, opacity=0.9, bend=-8.531, Direct, RGB](3)(15)
+\Edge[lw=1.9699, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](14)(4)
+\Edge[lw=6.4259, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](10)(6)
+\Edge[lw=1.3446, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](8)(5)
+\Edge[lw=4.4459, color={120.,166.,190}, opacity=0.9, bend=-8.531, Direct, RGB](10)(15)
+\Edge[lw=4.3738, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](2)(6)
+\Edge[lw=12.9703, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](0)(10)
+\Edge[lw=3.4571, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](9)(6)
+\Edge[lw=4.1843, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](14)(9)
+\Edge[lw=7.5079, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](10)(3)
+\Edge[lw=0.75, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](8)(2)
+\Edge[lw=1.3446, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](11)(10)
+\Edge[lw=2.6478, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](6)(7)
+\Edge[lw=10.4898, color={120.,166.,190}, opacity=0.9, bend=-8.531, Direct, RGB](0)(15)
+\Edge[lw=1.723, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](10)(7)
+\Edge[lw=3.1218, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](12)(9)
+\Edge[lw=9.3751, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](3)(10)
+\Edge[lw=8.7808, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](6)(10)
+\Edge[lw=2.1012, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](8)(10)
+\Edge[lw=5.5987, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](6)(3)
+\Edge[lw=2.3957, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](14)(1)
+\Edge[lw=7.488, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](3)(6)
+\Edge[lw=0.75, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](10)(0)
+\Edge[lw=1.3446, color={120.,166.,190}, opacity=0.9, bend=-8.531, Direct, RGB](6)(15)
+\Edge[lw=2.038, color={120.,166.,190}, opacity=0.9, bend=-8.531, Direct, RGB](8)(15)
+\Edge[lw=3.6537, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](14)(10)
+\Edge[lw=3.6704, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](9)(10)
+\Edge[lw=1.3446, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](10)(4)
+\Edge[lw=10.3815, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](14)(6)
+\Edge[lw=11.0604, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](13)(6)
+\Edge[lw=0.75, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](10)(1)
+\Edge[lw=4.0794, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](13)(10)
+\Edge[lw=2.7056, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](13)(1)
+\Edge[lw=2.1012, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](8)(1)
+\Edge[lw=7.1451, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](6)(8)
+\Edge[lw=1.9212, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](9)(2)
+\Edge[lw=9.377, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](14)(7)
+\Edge[lw=9.6259, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](11)(3)
+\Edge[lw=3.2451, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](0)(2)
+\Edge[lw=16.266, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](0)(6)
+\Edge[lw=2.8832, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](1)(8)
+\Edge[lw=3.2002, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](6)(2)
+\Edge[lw=11.2099, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](14)(3)
+\Edge[lw=7.0968, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](13)(9)
+\Edge[lw=3.4185, color={178.,200.,92}, opacity=0.9, bend=-8.531, Direct, RGB](10)(2)
+\Edge[lw=12.9778, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](14)(8)
+\Edge[lw=7.5141, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](11)(6)
+\Edge[lw=6.4364, color={208.,78.,86}, opacity=0.9, bend=-8.531, Direct, RGB](14)(0)
+\Edge[lw=1.4964, color={208.,78.,86}, opacity=0.9, Direct, RGB](16)(17)
+\Edge[lw=2.9858, color={208.,78.,86}, opacity=0.9, Direct, RGB](18)(19)
+\Edge[lw=5.9575, color={208.,78.,86}, opacity=0.9, Direct, RGB](20)(21)
+\Edge[lw=11.8867, color={208.,78.,86}, opacity=0.9, Direct, RGB](22)(23)
+\end{tikzpicture}
+\end{document}
