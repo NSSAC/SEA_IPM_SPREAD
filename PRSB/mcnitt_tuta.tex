@@ -864,22 +864,25 @@ and exporting from this region
 %% identified possible routes by which \tuta{} can invade each country in the
 %% region by analysis of current distribution of the pest and its.
 %%
-\paragraph{Assessing the role of each pathway in the spread of \tuta{} in
-Bangladesh.} The goodness of fit of a parameter instance was determined by
-comparing the
-simulation output with \tuta{} incidence reports from Bangladesh. The spread was simulated with infestation starting from
-the location of first report (Panchagarh, Bangladesh).
-For each cell, empirical probability that it is in state~$I$ at time~$t$
-was computed (averaged over 100 repetitions). The output was compared with ground truth using a similarity
-function adapted from~\cite{carrasco2010unveiling}.  Let~$v$ be a
-reporting cell and~$t_v$ denote the month of actual report of pest
-presence.  To account for uncertainty in reporting, we consider a time
+%% \paragraph{Assessing the role of each pathway in the spread of \tuta{} in
+%% Bangladesh.} 
+\paragraph{Evaluating different scenarios of spread: \tuta{} in
+Bangladesh.} 
+The goodness of fit of a parameter instance was determined by comparing the
+simulation output with \tuta{} incidence reports from Bangladesh. The
+spread was simulated with infestation starting from the location of first
+report (Panchagarh, Bangladesh).  For each cell, empirical probability that
+it is in state~$I$ at time~$t$ was computed (averaged over 100
+repetitions). The output was compared with ground truth using a similarity
+function adapted from~\cite{carrasco2010unveiling}.  Let~$v$ be a reporting
+cell and~$t_v$ denote the month of actual report of pest presence.  To
+account for uncertainty in reporting, we consider a time
 window~$U_\tau=[t_v-\tau,t_v+\tau]$ during comparison, where~$\tau$ is the
 uncertainty parameter. We set~$\tau=2$, i.e., error within $\pm2$ months is
 tolerated.  Supposing~$\reportingCells$ is the set of cells corresponding
-to ground truth,  and ~$p(v,t)$ is the empirical probability that cell~$v$ is
-infected at time~$t$ in the model, then, the
-similarity~$\similarity$ is given by,
+to ground truth,  and ~$p(v,t)$ is the empirical probability that cell~$v$
+is infected at time~$t$ in the model, then, the similarity~$\similarity$ is
+given by,
 %%
 \begin{linenomath}
 \begin{align}\label{eqn:similarity}
