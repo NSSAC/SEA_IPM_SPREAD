@@ -1,6 +1,6 @@
 ###########################################################################
-# Given two rank lists, finds sample average and mean of distances of two
-# ranks, one from each list.
+# Given two clusters, finds sample average and mean of distances of two
+# vectors, one from each list.
 # Created: AA 2018-12-25
 ###########################################################################
 import scipy.stats as stats
@@ -9,11 +9,12 @@ import pdb
 import sys
 import argparse
 import pandas as pd
+from sklearn.cluster import KMeans
 
 #SIM_FILE="../obj/cell_rank_BD_model_params.csv"
 SIM_FILE="../obj/expected_time_BD.csv"
 #SIM_FILE="../obj/infection_vector_BD.csv"
-SAMPLE_SIZE=1000
+SAMPLE_SIZE=10000
 CELL_START_IND=11
 LOCALITY_CELLS="../../cellular_automata/obj/locality_cells.csv"
 REPORTING_CELLS=[651957, 651965, 656282, 659158, 659166, 663477, 663489, 669234]
@@ -23,14 +24,15 @@ between different classes of models. Modes:
 - Only cells belonging to a locality are considered;
 - Only reporting cells are considered."""
 
-def sample_rank_distances(rankList1,rankList2,sampleSize):
+def sample_vector_distances(vectorList1,vectorList2,sampleSize):
     difference=np.zeros(SAMPLE_SIZE)
     for i in xrange(SAMPLE_SIZE):
-        rank1=rankList1.sample().ix[:,CELL_START_IND:]
-        rank2=rankList2.sample().ix[:,CELL_START_IND:]
-        #difference[i]=stats.kendalltau(rank1.values[0],rank2.values[0])[0]
-        #difference[i]=stats.spearmanr(rank1.values[0],rank2.values[0])[0]
-        difference[i]=stats.pearsonr(rank1.values[0],rank2.values[0])[0]
+        vector1=vectorList1.sample().ix[:,CELL_START_IND:]
+        vector2=vectorList2.sample().ix[:,CELL_START_IND:]
+        #difference[i]=stats.kendalltau(vector1.values[0],vector2.values[0])[0]
+        #difference[i]=stats.spearmanr(vector1.values[0],vector2.values[0])[0]
+        #difference[i]=stats.pearsonr(vector1.values[0],vector2.values[0])[0]
+        difference[i]=np.linalg.norm(vector1.values[0]-vector2.values[0])
     return np.mean(difference),np.var(difference)
 
 if __name__=="__main__":
