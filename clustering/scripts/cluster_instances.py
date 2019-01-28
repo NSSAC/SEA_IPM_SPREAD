@@ -2,18 +2,22 @@
 # Given two clusters, finds sample average and mean of distances of two
 # vectors, one from each list.
 # Created: AA 2018-12-25
+# https://www.nltk.org/api/nltk.cluster.html
+# http://ai.intelligentonlinetools.com/ml/tag/k-means-clustering-example/
+# tags: numpy argparse sys pandas nltk kmeans csv
 ###########################################################################
-import scipy.stats as stats
 import numpy as np
 import pdb
-import sys
 import argparse
 import pandas as pd
-from sklearn.cluster import KMeans
+import logging
+import time
+from nltk.cluster.kmeans import KMeansClusterer
+from nltk.cluster.util import euclidean_distance
 
 #SIM_FILE="../obj/cell_rank_BD_model_params.csv"
-SIM_FILE="../obj/expected_time_BD.csv"
-#SIM_FILE="../obj/infection_vector_BD.csv"
+#SIM_FILE="../obj/expected_time_BD.csv"
+SIM_FILE="../obj/infection_vector_BD.csv"
 SAMPLE_SIZE=10000
 CELL_START_IND=11
 LOCALITY_CELLS="../../cellular_automata/obj/locality_cells.csv"
@@ -24,16 +28,30 @@ between different classes of models. Modes:
 - Only cells belonging to a locality are considered;
 - Only reporting cells are considered."""
 
-def sample_vector_distances(vectorList1,vectorList2,sampleSize):
-    difference=np.zeros(SAMPLE_SIZE)
-    for i in xrange(SAMPLE_SIZE):
-        vector1=vectorList1.sample().ix[:,CELL_START_IND:]
-        vector2=vectorList2.sample().ix[:,CELL_START_IND:]
-        #difference[i]=stats.kendalltau(vector1.values[0],vector2.values[0])[0]
-        #difference[i]=stats.spearmanr(vector1.values[0],vector2.values[0])[0]
-        #difference[i]=stats.pearsonr(vector1.values[0],vector2.values[0])[0]
-        difference[i]=np.linalg.norm(vector1.values[0]-vector2.values[0])
-    return np.mean(difference),np.var(difference)
+
+def clusterSimulationData(simulationData,numClusters):
+    # Prepare data (clipping to remove model parameters)
+    selectedColumns=simulationData.columns.tolist()[CELL_START_IND:]
+    simulationData=simulationData.loc[:,selectedColumns]
+
+    logging.info("Clustering ...")
+    start=time.time()
+
+    # Cluster
+    ## initialization
+    kclusterer = KMeansClusterer(numClusters, distance=euclidean_distance, repeats=100)
+    ## cluster
+    assignedClusters = kclusterer.cluster(simulationData.values, assign_clusters=True)
+    logging.info("done. %g minutes" %((time.time()-start)/60))
+
+    # Find average distance
+    # Can be used to find BIC
+    means=kclusterer.means()
+    simulationData["cluster"]=np.asarray(assignedClusters)
+    simulationData["dist"]=simulationData.apply(lambda row: euclidean_distance(row[:-1],means[int(row[-1])]),axis=1)
+    # BIC=simulationData["dist_squared"].sum()+.5*numClusters*
+
+    return assignedClusters,simulationData["dist"].mean()
 
 if __name__=="__main__":
     parser=argparse.ArgumentParser(description=DESC,
@@ -41,41 +59,23 @@ if __name__=="__main__":
 
     parser.add_argument("--locality_cells",help="Only cells belonging to localities will be considered.",action="store_true")
     parser.add_argument("--reporting_cells",help="Only reporting cells will be considered.",action="store_true")
+    parser.add_argument("-k","--num_clusters",type=int,help="number of clusters",action="store")
 
     args=parser.parse_args()
 
-    # read ranks
-    rankList = pd.read_csv(SIM_FILE)
+    logging.basicConfig(level=logging.INFO)
 
-    # select only cells belonging to localities
-    if args.locality_cells:
-        localityCells = set(map(str,pd.read_csv(LOCALITY_CELLS,header=None)[0].tolist()))
-        cellsInRankList=set(rankList.columns.tolist()[CELL_START_IND:])
-        selectedCells=cellsInRankList.intersection(localityCells)
-        selectedColumns=rankList.columns.tolist()[:CELL_START_IND]+sorted(list(selectedCells))
-        rankList=rankList.loc[:,selectedColumns]
+    # read simulation outputs
+    simData = pd.read_csv(SIM_FILE)
 
-    # select only reporting cells
-    if args.reporting_cells:
-        reportingCells = set(map(str,REPORTING_CELLS))
-        cellsInRankList=set(rankList.columns.tolist()[CELL_START_IND:])
-        selectedCells=cellsInRankList.intersection(reportingCells)
-        selectedColumns=rankList.columns.tolist()[:CELL_START_IND]+sorted(list(selectedCells))
-        rankList=rankList.loc[:,selectedColumns]
+    # cluster
+    [clusters,avgDistance]=clusterSimulationData(simData,args.num_clusters)
 
-    # filter ranks by class and choose only columns corresponding to cells
-    classA=rankList[rankList["a_long"]==0]
-    classB=rankList[rankList["a_long"]!=0]
-    #classB=rankList[(rankList["a_long"]!=0) & (rankList["moore"]=="m3")].ix[:,CELL_START_IND:]
+    # write outputt
+    selectedColumns=simData.columns.tolist()[:CELL_START_IND]
+    simData=simData.loc[:,selectedColumns]
+    simData["cluster"]=np.asarray(clusters)
     
-    # distance within class A
-    [avg,var]=sample_rank_distances(classA,classA,SAMPLE_SIZE)
-    print "A,A:",avg,var
-
-    # distance within class B
-    [avg,var]=sample_rank_distances(classB,classB,SAMPLE_SIZE)
-    print "B,B:",avg,var
-
-    # distance between class A & B
-    [avg,var]=sample_rank_distances(classA,classB,SAMPLE_SIZE)
-    print "A,B:",avg,var
+    simData.to_csv("instance_cluster_%d.csv" %args.num_clusters,index=False,float_format="%g")
+    print "Number of clusters: %d" %args.num_clusters
+    print "Average distance: %g" %avgDistance
