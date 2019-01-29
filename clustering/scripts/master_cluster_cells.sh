@@ -71,9 +71,26 @@ done
 }
 
 function cluster(){
-Rscript ../scripts/cluster_ranked_cells.R \
-    -i ../obj/cell_ranks_BD.csv
+for k in `seq 7 10`
+do
+python ../scripts/kmeans_instances.py -k $k
+done
 }
+
+function cart(){
+for f in `find ../results -name "instance_cluster*csv"`
+do
+k=`basename $f | sed -e 's/instance_cluster_//' -e 's/.csv//'`
+echo $k
+Rscript ../scripts/cart_cluster.R -f $f -o cc$k.pdf
+done
+}
+
+## # old attempt with R
+## function cluster(){
+## Rscript ../scripts/cluster_ranked_cells.R \
+##     -i ../obj/cell_ranks_BD.csv
+## }
 
 if [[ $# == 0 ]]; then
    echo "Here are the options:"
