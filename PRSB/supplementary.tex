@@ -867,38 +867,6 @@ observe only Class~A spread. The corresponding~$(\mooreRange,\ell)$ values
 are~$(1,1)$, $(2,1)$, $(2,2)$ and $(3,1)$. For the regime~$(3,1)$ we did
 not observe any instance with score~$>5.5$.
 
-\section{CART analysis of the spread pattern}
-\begin{figure}[ht]
-\begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc2.pdf}
-\caption{$k=2$}
-\end{subfigure}
-%%
-\begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc3.pdf}
-\caption{$k=3$}
-\end{subfigure}
-%%
-\begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc4.pdf}
-\caption{$k=4$}
-\end{subfigure}
-%%
-\begin{subfigure}[b]{.45\textwidth}
-\includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc5.pdf}
-\caption{$k=5$}
-\end{subfigure}
-%%
-\begin{subfigure}[b]{.45\textwidth}
-\includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc6.pdf}
-\caption{$k=6$}
-\end{subfigure}
-%%
-\caption{CART analysis of spread pattern. 
-\label{fig:cartSpread}}
-\end{figure}
-
-
 \subsection{Seeding scenarios}
 \label{tab:seeds}
 During the model evaluation phase, to account for both spatial and temporal
@@ -1155,6 +1123,57 @@ origin\label{fig:vnmBContourBox}}
     Figure~\ref{M:fig:intervene} from the main document. The results of intervention for three
     other countries are shown. \label{fig:intervene}}
 \end{figure}
+
+
+\section{Clustering analysis of the spread pattern}
+\label{sec:cluster}
+We recall that each simulation output has the following format: Suppose,
+the simulations were run for $T$ time steps. For every~$v$,~$p(v,t)$ is the
+empirical probability  that cell $v$ is infected at time~$t$. Each
+simulation output can be viewed as a matrix of size~$n\times T$, where~$n$
+is the number of cells. To normalize each matrix, we introduced an extra
+index~$T+1$ which carries the residual probability, i.e.,
+$p(v,T+1)=\sum_{t=1}^Tp(v,t)$. The simulation outputs for models with similarity $\similarity\ge6$ were
+thus processed and clustered using X-means
+algorithm~\cite{pelleg2000x,andrei_novikov_2018_1491324}. It is an
+extension of the K-means algorithm. It uses Bayesian Information Criterion
+(BIC) to decide the number of clusters required. 
+
+For the X-means algorithm, the initial centers were determined using
+K-means++ algorithm. Tolerance was set to $0.001$. The algorithm takes as
+input $k_\max$, the maximum number of clusters to be allocated. We
+considered~$k_\max=1,2,\ldots,10$ and a very large value of~$2000$. For the
+latter case, $545$ clusters were allocated.
+%%
+%% \begin{figure}[ht]
+%% \begin{subfigure}[b]{.32\textwidth}
+%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc2.pdf}
+%% \caption{$k=2$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc3.pdf}
+%% \caption{$k=3$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc4.pdf}
+%% \caption{$k=4$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.45\textwidth}
+%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc5.pdf}
+%% \caption{$k=5$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.45\textwidth}
+%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc6.pdf}
+%% \caption{$k=6$}
+%% \end{subfigure}
+%% %%
+%% \caption{CART analysis of spread pattern. 
+%% \label{fig:cartSpread}}
+%% \end{figure}
 
 
 %%

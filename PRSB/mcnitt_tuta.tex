@@ -806,72 +806,12 @@ Vietnam to Malaysia.
 %% was included Malaysian
 
 \paragraph{Parameterization and experiment design.}
-%% %%
-The range or values of model parameters are
-in Table~\ref{tab:param}. Parameter space exploration was conducted in multiple iterations.  First,
-we coarsely sampled the space. With model parameters as independent
-variables and the goodness of fit measure defined in~\eqref{eqn:similarity}
-as the dependent variable, we used Classification and Regression Trees
-(CART) approach to identify subspaces for which similarity score was high and
-rejected subspaces for which similarity was low. Based on this, in the
-subsequent phases, we refined our search to improve the parameterization.
-More details of the CART analysis is presented in Section~\ref{S:sec:cart}.
-Simulations were performed on more than~$500,000$ parameter combinations
-using a high performance computing cluster. 
-
-%% In the second phase,
-%% we applied the select models from the previous phase to the rest of the
-%% region to study how various conditions affect the nature and rate of
-%% spread: different pest introduction scenarios, seasonality of production
-%% and trade, and interventions or the lack thereof.
-%% 
-%%
-
-\section{Results}
- Figure~\ref{fig:tomnet} shows the
-annual tomato trade for the study region.
-%%
-\begin{figure}[t]
-\centering
-%%
-\includegraphics[width=.6\textwidth]{../international_trade/results/network_plots/sea_2013_tomato.pdf}
-\caption{\textbf{The trade of tomato in the focus region (2013).} The
-network was constructed using data from FAOSTAT Trade matrix
-(Table~\ref{S:tab:data}).  The trade within the focus region is represented
-by green edges. Imports from \tuta{} affected countries categorized by
-region is represented by red edges, and the blue edges correspond to
-exports from the focus region to countries yet to report the presence of
-the pest. The edge thickness is a function of the trade volume. We note
-that with the exception of Philippines, there is considerable trade
-activity among countries in the focus region. However, the majority of
-trading happens between neighboring countries and except for a few flows,
-the volume is negligible compared to production within. Most significant
-flow is from Malaysia to Singapore ($\approx30,000$ tonnes), India to
-Bangladesh ($\approx20,000$ tonnes), and Thailand and Vietnam to Malaysia
-(between $1000$ to $2,000$ tonnes). Philippines does not report any fresh
-tomato trade with other countries.  We also analyzed how the network
-structure evolved across years. While we did not observe much variation in
-the network structure, there is some change in the countries importing to
-and exporting from this region
-(Figure~\ref{S:fig:tradeYears}).\label{fig:tomnet}}
-\end{figure}
-%%
-%%
-%%
-%% This section is organized as follows. We first describe the multi-pathway
-%% model--our methodological contribution.  This is followed by our results in
-%% the context of \tuta{} spread which are summarized as follows: (i)~We
-%% identified possible routes by which \tuta{} can invade each country in the
-%% region by analysis of current distribution of the pest and its.
-%%
-%% \paragraph{Assessing the role of each pathway in the spread of \tuta{} in
-%% Bangladesh.} 
-\paragraph{Evaluating different scenarios of spread: \tuta{} in
-Bangladesh.} 
 The goodness of fit of a parameter instance was determined by comparing the
-simulation output with \tuta{} incidence reports from Bangladesh. The
+simulation output with \tuta{} incidence reports. We have incidence
+information from eight locations in Bangladesh where pheromone traps were
+installed (Figure~\ref{fig:bgdClassA} and Table~\ref{S:tab:bgdData}). The
 spread was simulated with infestation starting from the location of first
-report (Panchagarh, Bangladesh).  For each cell, empirical probability that
+report (Panchagarh, Bangladesh). For each cell, empirical probability that
 it is in state~$I$ at time~$t$ was computed (averaged over 100
 repetitions). The output was compared with ground truth using a similarity
 function adapted from~\cite{carrasco2010unveiling}.  Let~$v$ be a reporting
@@ -891,81 +831,107 @@ given by,
 \end{align}
 \end{linenomath}
 %%
-We have incidence information from eight locations in Bangladesh where
-pheromone traps were installed (Figure~\ref{fig:bgdClassA} and
-Table~\ref{S:tab:bgdData}).  Therefore, the maximum possible value
+Therefore, the maximum possible value
 of~$\similarity$ is~$8$ (exact match with ground truth) and minimum is~$0$.
-Details of parameter space exploration and experiment design are in
-Methods.
 
+The range or values of model parameters are in Table~\ref{tab:param}.
+Parameter space exploration was conducted in multiple iterations.  First,
+we coarsely sampled the space. With model parameters as independent
+variables and the goodness of fit measure defined in~\eqref{eqn:similarity}
+as the dependent variable, we used Classification and Regression Trees
+(CART) approach to identify subspaces for which similarity score was high
+and rejected subspaces for which similarity was low. Based on this, in the
+subsequent phases, we refined our search to improve the parameterization.
+More details of the CART analysis is presented in Section~\ref{S:sec:cart}.
+Simulations were performed on more than~$500,000$ parameter combinations
+using a high performance computing cluster.
+
+%% In the second phase,
+%% we applied the select models from the previous phase to the rest of the
+%% region to study how various conditions affect the nature and rate of
+%% spread: different pest introduction scenarios, seasonality of production
+%% and trade, and interventions or the lack thereof.
+%% 
+%% re
+
+\section{Results}
+In the first part of this section, we present results from the analysis of
+the spread in Bangladesh. We present how accounting for different pathways
+affects the rate as well as pattern of spread. In the second part, we
+focus on threat and possible spread in the rest of the study region. The
+last part focuses on monitoring and control.
 %%
-The ensuing discussion will focus on instances with similarity
-$\similarity\ge6$. We observed two distinct spread patterns determined by
-the presence or absence of the long-distance spread component. In the first
-class of models (Figure~\ref{fig:bgdClassA}) which we refer to as Class~A,
-the pathway parameter~$\ald$ is negligible. It is characterized by brisk
-spread between geographically adjacent cells.  %% It is characterized by %%
-a combination of Moore range ($\mooreRange$), latency period ($\ell$) and
-%% pathway parameters~$\asd$ and~$\afm$ that lead to rapid spread between
-%% adjacent cells.  In contrast, in Class~B the long-distance
-pathway~($\ald$) plays a significant role (Figure~\ref{fig:bgdClassB1}) and
-is characterized by relatively slow spread between geographically adjacent
-neighbors with jumps from one locality to another.
+%%
+%% This section is organized as follows. We first describe the multi-pathway
+%% model--our methodological contribution.  This is followed by our results in
+%% the context of \tuta{} spread which are summarized as follows: (i)~We
+%% identified possible routes by which \tuta{} can invade each country in the
+%% region by analysis of current distribution of the pest and its.
+%%
+%% \paragraph{Assessing the role of each pathway in the spread of \tuta{} in
+%% Bangladesh.} 
+\paragraph{The multi-pathway spread in Bangladesh: More than one
+possibility.} As described in Methods, the goodness of fit of a model was
+evaluated by comparing the corresponding simulation output with ground
+truth using the similarity score in~\eqref{eqn:similarity}. The ensuing
+discussion will focus on instances with high similarity score
+($\similarity\ge6$).  We observed that even though each of these models are
+a close match to the ground truth, two spread patterns can be very
+different from each other. To analyze the spread patterns, the simulation
+outputs were clustered using X-means
+algorithm~\cite{pelleg2000x,andrei_novikov_2018_1491324}, an extension of
+the popular K-means algorithm. To discover the relationship between spread
+pattern and model parameters, clusters were further analyzed using
+CART with model parameters as independent variables and the cluster index
+as the dependent variable. Note that model parameters played no role in
+clustering process. Figure~\ref{fig:clusterOutline} outlines the
+entire process and details of the clustering analysis is in the supplement.
+
+We observed two distinct spread patterns determined by the presence or
+absence of the long-distance spread component. In the first class of models
+(Figure~\ref{fig:bgdClassA}) which we refer to as Class~A, the pathway
+parameter~$\ald$ is negligible. It is characterized by brisk spread between
+geographically adjacent cells.
+%% %% It is characterized by %%
+%% a combination of Moore range ($\mooreRange$), latency period ($\ell$) and
+%% %% pathway parameters~$\asd$ and~$\afm$ that lead to rapid spread between
+%% %% adjacent cells.  
+In contrast, in Class~B the long-distance pathway~($\ald$) plays a
+significant role (Figure~\ref{fig:bgdClassB1}) and is characterized by
+relatively slow spread between geographically adjacent neighbors with jumps
+from one locality to another.
 %%
 \begin{figure}[!ht]
     \centering
-\begin{subfigure}[b]{.47\textwidth}
+\begin{subfigure}[b]{.8\textwidth}
+    \includegraphics[width=\textwidth]{figs/spread_analysis.pdf}
+    \caption{\label{fig:clusterOutline}}
+\end{subfigure}
+\begin{subfigure}[b]{.4\textwidth}
     \includegraphics[width=\textwidth]{../cellular_automata/results/contour/BGD_model-A.pdf}
     \caption{Class~A ($\ald=0$) \label{fig:bgdClassA}}
 \end{subfigure}\hspace{.5cm}
-\begin{subfigure}[b]{.47\textwidth}
+\begin{subfigure}[b]{.4\textwidth}
     \includegraphics[width=\textwidth]{../cellular_automata/results/contour/BGD_model-B_m1_l3.pdf}
     \caption{Class~B ($\ald>0$) \label{fig:bgdClassB1}}
 \end{subfigure}
-\caption{\textbf{Spread in Bangladesh.} The contour plots show the
-simulated spread starting from the location of first report in Panchagarh
-district for 12 months. For the purpose of plotting, the time of infection
-for a cell is the minimum time step~$t$ such that the empirical probability
-that the cell is infected by time~$t$ is $\ge0.8$. Also highlighted are the
-eight monitored locations and the localities applied in the model. The
-colors of the monitored locations correspond to the month of report
-relative to the first report (Panchagarh). These are representative spreads
-observed for each class. The similarity ($\similarity$) in each case was $>6.5$.
-(a)~\textbf{Class~A.} Spread pattern long-distance component playing a
-negligible role. We
-observe a steady radial spread.  (b)~\textbf{Class~B.} Spread pattern with
-long-distance jumps. Here, the radial spread is much slower. But, the
-long-distance jumps aid in the range expansion, particularly between the
-6th and 8th time steps.}
+\caption{\textbf{Spread in Bangladesh.} (a)~Outline of multi-pathway spread
+analysis. The contour plots in (b) and (c) show the simulated spread
+starting from the location of first report in Panchagarh district for 12
+months. For the purpose of plotting, the time of infection for a cell is
+the minimum time step~$t$ such that the empirical probability that the cell
+is infected by time~$t$ is $\ge0.8$. Also highlighted are the eight
+monitored locations and the localities applied in the model. The colors of
+the monitored locations correspond to the month of report relative to the
+first report (Panchagarh). Two distinct spread patterns emerged from the
+cluster analysis. (b) and (c) show representative spreads observed for
+each class. The similarity ($\similarity$) in each case was $>6.5$.}
+%% (a)~\textbf{Class~A.} Spread pattern long-distance component playing a
+%% negligible role. We
+%% observe a steady radial spread.  (b)~\textbf{Class~B.} Spread pattern with
+%% long-distance jumps. Here, the radial spread is much slower.}
 \end{figure}
-%Uncomment
-%\begin{figure}[ht]
-%    \centering
-%\begin{subfigure}[b]{.47\textwidth}
-%    \includegraphics[width=\textwidth,trim={4cm 4cm 4cm 4cm},clip]{figs/spread2_BGD.png}
-%    \caption{Class~A\label{fig:bgdRadial}}
-%\end{subfigure}
-%\begin{subfigure}[b]{.47\textwidth}
-%    \includegraphics[width=\textwidth,trim={4cm 4cm 4cm 4cm},clip]{figs/spread1_BGD.png}
-%    \caption{Class~B\label{fig:bgdLD}}
-%\end{subfigure}
-%\caption{Two different models that explain the spread in Bangladesh. Also
-%    highlighted are the eight monitored locations. (a)~Spread
-%    pattern without long-distance component. This is observed mainly for
-%    ($\mooreRange,\ell$) values of (1,1), (2,1) and (3,2), which correspond
-%    to aggressive self-mediated range expansion. (b)~Spread pattern with
-%    long-distance jumps. Here, self-mediated range expansion is much
-%    slower: ($\mooreRange,\ell$) values of (1,2), (1,3) and (2,3).
-%    \aacomment{rectify intervals,change 1st figure to pure short-distance}}
-%\end{figure}
-
-%% If we consider the
-%% case where the human-influence was turned off ($\afm=0$ and~$\ald=0$), the
-%% highest similarity was~$5$. Also, we observed an interesting pattern with
-%% respect to Moore range ($\mooreRange$) and latency period ($\ell$). When
-%% only natural spread is considered, the rate of expansion is higher
-%% ($\mooreRange=2$) and latency period ($1$) is lower than when we account
-%% for human-mediated spread ($\mooreRange=1,\ell=2$).
+%%
 Class~A spread pattern does not capture the gap between the time of first
 report (Panchagarh) and the report in Gaibandha district
 (Figure~\ref{fig:bgdClassA}). Even though the distance between the two
@@ -992,8 +958,8 @@ our models (see Section~\ref{S:sec:guimapi} for model details and results).
 
 
 \paragraph{Importance of model parameters.} 
-Calibration and sensitivity analysis of large-scale, high-resolution models such as
-the one proposed is a challenging task. Methods based on machine learning
+Calibration and sensitivity analysis of large-scale, high-resolution models
+isa challenging task. Methods based on machine learning
 surrogates are being increasingly used to accomplish this efficiently for
 complex agent-based models~\cite{lamperti2018agent}. Motivated by this, we
 studied parameter importance by applying Random Forest learning method on
@@ -1123,6 +1089,34 @@ permuting the variable--higher, the more important.
 %%     of the nine cases are shown. The complete set is in
 %%     Figure~\ref{S:fig:cart}.}
 %% \end{figure}
+ Figure~\ref{fig:tomnet} shows the
+annual tomato trade for the study region.
+%%
+\begin{figure}[t]
+\centering
+%%
+\includegraphics[width=.6\textwidth]{../international_trade/results/network_plots/sea_2013_tomato.pdf}
+\caption{\textbf{The trade of tomato in the focus region (2013).} The
+network was constructed using data from FAOSTAT Trade matrix
+(Table~\ref{S:tab:data}).  The trade within the focus region is represented
+by green edges. Imports from \tuta{} affected countries categorized by
+region is represented by red edges, and the blue edges correspond to
+exports from the focus region to countries yet to report the presence of
+the pest. The edge thickness is a function of the trade volume. We note
+that with the exception of Philippines, there is considerable trade
+activity among countries in the focus region. However, the majority of
+trading happens between neighboring countries and except for a few flows,
+the volume is negligible compared to production within. Most significant
+flow is from Malaysia to Singapore ($\approx30,000$ tonnes), India to
+Bangladesh ($\approx20,000$ tonnes), and Thailand and Vietnam to Malaysia
+(between $1000$ to $2,000$ tonnes). Philippines does not report any fresh
+tomato trade with other countries.  We also analyzed how the network
+structure evolved across years. While we did not observe much variation in
+the network structure, there is some change in the countries importing to
+and exporting from this region
+(Figure~\ref{S:fig:tradeYears}).\label{fig:tomnet}}
+\end{figure}
+%%
 \paragraph{Predicted spread in Mainland Southeast Asia.}
 We applied both model classes to simulate the spread in the rest of the
 study region. Given that more than two years have passed since the time of
@@ -1497,10 +1491,12 @@ all Class~B instances with Moore range~$\mooreRange=1$. \label{fig:intervene}}
 %%
 \section{Discussion}
 
+
 need to say take away points
 \begin{enumerate}
     \item flying capability is important to consider given class A and
     class B models
+    \item model uncertainty
     \item need sample flows for calibration. need to study heterogeneity
     \item need function for relation between flow and pest spread
     \item what is enough for modeling trade? at minimum what is

@@ -70,7 +70,7 @@ tail -1 rank_time_BD/$f >> expected_time_BD.csv
 done
 }
 
-function cluster(){
+function kmeans(){
 for k in `seq 7 10`
 do
 python ../scripts/kmeans_instances.py -k $k
@@ -83,6 +83,16 @@ do
 k=`basename $f | sed -e 's/instance_cluster_//' -e 's/.csv//'`
 echo $k
 Rscript ../scripts/cart_cluster.R -f $f -o cc$k.pdf
+done
+}
+
+function xmeans(){
+for kmax in `seq 2 10`
+do
+clustersFile=clusters_$kmax.csv
+cartFile=cart_clusters_$kmax.pdf
+python ../scripts/xmeans_instances.py -k $kmax -o $clustersFile
+Rscript ../scripts/cart_cluster.R -f $clustersFile -o $cartFile
 done
 }
 
