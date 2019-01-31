@@ -28,23 +28,23 @@ node distance=3cm]
 
 %% grid
 \node[blk] (explore) {\textbf{\large Explore\\ parameter space}};
-\node[alg,left of=explore,shift={(0,1)}] (abm) {Agent-based model};
+\node[alg,left of=explore,shift={(0,1)}] (abm) {Multi-pathway model};
 \draw[datedge,->] (abm.east) -- +(.3,0) |- ($(explore.west)+(0,.5)$);
-\node[measure,left of=explore,shift={(0,-1)}] (score) {Likelihood or similarity score};
+\node[measure,left of=explore,shift={(0,-1)}] (score) {Similarity score};
 \draw[datedge,->] (score.east) -- +(.3,0) |- ($(explore.west)+(0,-.5)$);
 \node[above of=explore,dat,shift={(0,-.5)}] (gt) {Ground truth};
 \draw[datedge,->] (gt) -- (explore);
 %%
 \node[blk,right of=explore,shift={(1,0)}] (cluster) {\textbf{\large Cluster \\simulation outputs}};
 \draw[blkedge,->] (explore) -- (cluster);
-\node[alg,above of=cluster,shift={(-1,-.5)}] (xmeans) {Clustering algorithm};
+\node[alg,above of=cluster,shift={(-1,-.5)}] (xmeans) {X-means clustering algorithm};
 \draw[datedge,->] (xmeans.south) -- +(0,-.3) -| ($(cluster.north)+(-.5,0)$);
 \node[measure,above of=cluster,shift={(1,-.5)}] (dist) {Distance measure};
 \draw[datedge,->] (dist.south) -- +(0,-.3) -| ($(cluster.north)+(.5,0)$);
 %%
 \node[blk,right of=cluster,shift={(1,0)}] (analyze) {\textbf{\large Analyze clusters}};
 \draw[blkedge,->] (cluster) -- (analyze);
-\node[alg,above of=analyze,shift={(0,-.5)}] (cart) {Supervised learning};
+\node[alg,above of=analyze,shift={(0,-.5)}] (cart) {CART};
 \draw[datedge,->] (cart) -- (analyze);
 \node[anchor=west,text width=1.9cm,align=left,right of=analyze,inner sep=2pt] (rel) {Relationship between parameters and clusters};
 \draw [datedge] ($(analyze.east)+(.1,0)$) -- (rel) -|
@@ -52,14 +52,14 @@ node distance=3cm]
 \draw [datedge] (rel) -| (rel.south west) -- +(.3,0);
 %% lower part
 \node[desc,below of=explore,anchor=north,shift={(1.9,1.2)}] (fit)
-{Parameters and corresponding simulation output of models that closely
+{Simulation output of models that closely
 match the ground truth};
 \draw [datedge,shorten >=0pt,shorten <=0pt] (fit.north) -- +(0,1.5);
 \draw [datedge,shorten >=0pt,shorten <=0pt] (fit.north) -| ($(fit.north west)+(0,-.3)$);
 \draw [datedge,shorten >=0pt,shorten <=0pt] (fit.north) -| ($(fit.north east)+(0,-.3)$);
 %%
 \node[desc,text width=2.5cm,below of=cluster,anchor=north,shift={(1.9,1.2)}] (clustered)
-{Parameters and corresponding cluster index};
+{Model parameters and corresponding cluster index};
 \draw [datedge,shorten >=0pt,shorten <=0pt] (clustered.north) -- +(0,1.5);
 \draw [datedge,shorten >=0pt,shorten <=0pt] (clustered.north) -| ($(clustered.north west)+(0,-.3)$);
 \draw [datedge,shorten >=0pt,shorten <=0pt] (clustered.north) -| ($(clustered.north east)+(0,-.3)$);

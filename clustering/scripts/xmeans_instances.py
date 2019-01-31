@@ -67,7 +67,7 @@ def clusterSimulationData(simulationData,kmax):
     ## simulationData["dist"]=simulationData.apply(lambda row: euclidean_distance(row[:-1],means[int(row[-1])]),axis=1)
     ## # BIC=simulationData["dist_squared"].sum()+.5*numClusters*
 
-    rmeturn assignedClusters #,simulationData["dist"].mean()
+    return assignedClusters #,simulationData["dist"].mean()
 
 if __name__=="__main__":
     parser=argparse.ArgumentParser(description=DESC,
