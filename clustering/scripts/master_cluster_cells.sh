@@ -96,6 +96,54 @@ Rscript ../scripts/cart_cluster.R -f $clustersFile -o $cartFile
 done
 }
 
+function formatVar(){
+awk 'NR>1' $1 | sed  -e 's/"//g' \
+    -e 's/a_ld/\\$\\\\alpha_{\\\\ell d}\\$/' \
+    -e 's/latency_period/\\$\\\\ell\\$/' \
+    -e 's/moore/\\$r_\\\\textrm{M}\\$/' \
+    -e 's/start_month/\\$t_s\\$/' \
+    -e 's/a_l/\\$\\\\alpha_{\\\\ell}\\$/' \
+    -e 's/a_s/\\$\\\\alpha_{s}\\$/' \
+    -e 's/beta/\\$\\\\beta\\$/' \
+    -e 's/kappa/\\$\\\\kappa\\$/' \
+    > $2
+}
+
+function plotRF(){
+../../cellular_automata/scripts/plot.sh -o $2 \
+   -c mathematica \
+   -T hist \
+   -x "\\\%IncMSE (\\$\\\times 10^3\\$)" \
+   -f "all:18" \
+   -a "unset title; \
+       set ytics textcolor 'black' offset .5,0; \
+       set xtics font \",15\"; \
+       set style data points; \
+       set format x \"%.1s\"; \
+       set nokey;" \
+       -p "plot '< gsort -t, -k2,2 -n -r $1' u 2:(-\$0):yticlabel(1) ls $3 pt 7"
+}
+
+function rf(){
+# Partitioning to A and B models
+head -n1 ../results/clusters_all.csv > clusters_all_A.csv
+cp clusters_all_A.csv clusters_all_B.csv
+awk -F, 'NR>1{if ($11==0) print}' ../results/clusters_all.csv >> clusters_all_A.csv
+awk -F, 'NR>1{if ($11>0) print}' ../results/clusters_all.csv >> clusters_all_B.csv
+# RF
+Rscript ../scripts/random_forest_cluster.R -f ../results/clusters_all.csv -o rf_importance_cluster_all_original.csv
+Rscript ../scripts/random_forest_cluster.R -f clusters_all_A.csv -o rf_importance_cluster_all_A_original.csv
+Rscript ../scripts/random_forest_cluster.R -f clusters_all_B.csv -o rf_importance_cluster_all_B_original.csv
+# Format variable names
+formatVar rf_importance_cluster_all_original.csv rf_importance_cluster_all.csv
+formatVar rf_importance_cluster_all_A_original.csv rf_importance_cluster_all_A.csv
+formatVar rf_importance_cluster_all_B_original.csv rf_importance_cluster_all_B.csv
+# Plot
+plotRF rf_importance_cluster_all.csv rf_importance_cluster_mse_all 1
+plotRF rf_importance_cluster_all_A.csv rf_importance_cluster_mse_A 2
+plotRF rf_importance_cluster_all_B.csv rf_importance_cluster_mse_B 3
+}
+
 ## # old attempt with R
 ## function cluster(){
 ## Rscript ../scripts/cluster_ranked_cells.R \

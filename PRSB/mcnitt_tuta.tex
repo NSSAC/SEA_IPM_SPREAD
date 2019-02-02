@@ -210,6 +210,8 @@ say modeling multiple countries requires lot more data
 
 make sure intro has challenges
 
+talk about Douma et al.
+
 %%  which has invaded more than 60\% of
 %% tomato producing land over the last decade.
 
@@ -371,7 +373,7 @@ can contain the spread or significantly reduce the spread rate.
 \section{Methods}
 %%
 \paragraph{Data.} The global datasets used in the model and for analysis are
-described in Table~\ref{S:tab:data} of SI. Country specific data on
+described in Table~\ref{S:tab:data} of the supplement. Country specific data on
 seasonal production, consumption, processing and trade was
 obtained from websites of agriculture ministries, research articles and technical
 reports (Table~\ref{S:tab:countryData} in SI). Almost
@@ -855,11 +857,11 @@ using a high performance computing cluster.
 %% re
 
 \section{Results}
-In the first part of this section, we present results from the analysis of
-the spread in Bangladesh. We present how accounting for different pathways
-affects the rate as well as pattern of spread. In the second part, we
-focus on threat and possible spread in the rest of the study region. The
-last part focuses on monitoring and control.
+%% In the first part of this section, we present results from the analysis of
+%% the spread of \tuta{} in Bangladesh. We demonstrate how accounting for
+%% different pathways affects the rate as well as pattern of spread. In the
+%% second part, we focus on threat and possible spread in the rest of the
+%% study region. The last part focuses on monitoring and control.
 %%
 %%
 %% This section is organized as follows. We first describe the multi-pathway
@@ -870,8 +872,7 @@ last part focuses on monitoring and control.
 %%
 %% \paragraph{Assessing the role of each pathway in the spread of \tuta{} in
 %% Bangladesh.} 
-\paragraph{The multi-pathway spread in Bangladesh: More than one
-possibility.} As described in Methods, the goodness of fit of a model was
+\paragraph{The multi-pathway spread in Bangladesh: Multiple possibilities.} As described in Methods, the goodness of fit of a model was
 evaluated by comparing the corresponding simulation output with ground
 truth using the similarity score in~\eqref{eqn:similarity}. The ensuing
 discussion will focus on instances with high similarity score
@@ -880,12 +881,14 @@ a close match to the ground truth, two spread patterns can be very
 different from each other. To analyze the spread patterns, the simulation
 outputs were clustered using X-means
 algorithm~\cite{pelleg2000x,andrei_novikov_2018_1491324}, an extension of
-the popular K-means algorithm. To discover the relationship between spread
+the popular K-means algorithm. It uses Bayesian information criterion to
+estimate the optimal number of clusters. To discover the relationship between spread
 pattern and model parameters, clusters were further analyzed using
 CART with model parameters as independent variables and the cluster index
 as the dependent variable. Note that model parameters played no role in
 clustering process. Figure~\ref{fig:clusterOutline} outlines the
-entire process and details of the clustering analysis is in the supplement.
+entire process and details of the clustering analysis is in
+Section~\ref{S:sec:cluster} of the supplement.
 
 We observed two distinct spread patterns determined by the presence or
 absence of the long-distance spread component. In the first class of models
@@ -964,7 +967,7 @@ surrogates are being increasingly used to accomplish this efficiently for
 complex agent-based models~\cite{lamperti2018agent}. Motivated by this, we
 studied parameter importance by applying Random Forest learning method on
 the simulation outputs. Among the sampled parameter instances, we analyzed
-the set of instances with similarity~$\similarity>5.5$. The results are in
+the set of instances with similarity~$\similarity>6$. The results are in
 Figure~\ref{fig:sensitivity}. 
 
 The long distance pathway parameter~$\ald$ is by far the most important
@@ -1038,29 +1041,38 @@ for the rest of the region.
 %%
 \begin{figure}[t]
 \centering
-\begin{subfigure}[b]{.32\textwidth}
-    \includegraphics[width=1.1\textwidth]{../cellular_automata/results/rf/rf_importance_all_mse.pdf}
-\caption{All\label{fig:rfAll}}
-\end{subfigure}\hspace{2mm}
-%%
-\begin{subfigure}[b]{.32\textwidth}
-    \includegraphics[width=1.1\textwidth]{../cellular_automata/results/rf/rf_importance_short_mse.pdf}
-\caption{Class A\label{fig:rfShort}}
+\begin{subfigure}[b]{.45\textwidth}
+    \includegraphics[width=1\textwidth]{../cellular_automata/results/rf/rf_importance_all_mse.pdf}
+    \caption{Similarity score $\similarity$ sensitivity \label{fig:rfAll}}
 \end{subfigure}
 %%
-\begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=1.1\textwidth]{../cellular_automata/results/rf/rf_importance_long_mse.pdf}
-\caption{Class B\label{fig:rfLong}}
+\begin{subfigure}[b]{.45\textwidth}
+    \includegraphics[width=1\textwidth]{../clustering/results/rf_importance_cluster_mse.pdf}
+    \caption{Spread pattern (or cluster membership) sensitivity\label{fig:rfAllCluster}}
 \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%%     \includegraphics[width=1.1\textwidth]{../cellular_automata/results/rf/rf_importance_short_mse.pdf}
+%% \caption{Class A\label{fig:rfShort}}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%% \includegraphics[width=1.1\textwidth]{../cellular_automata/results/rf/rf_importance_long_mse.pdf}
+%% \caption{Class B\label{fig:rfLong}}
+%% \end{subfigure}
 \caption{\textbf{Parameter importance.} Random Forest
 (RF)~\cite{breiman2001random} method was applied to study parameter
-importance. With similarity~($\similarity$) as the dependent variable, the
+importance. (a)~With similarity~($\similarity$) as the dependent variable, the
 analysis was performed on the set of model instances which yielded a
-similarity~$\similarity\ge5.5$ ($\approx80$\% match with ground truth). The
-results for the entire set (Plot~(a)) and separately for Class~A (Plot~(b))
-and Class~B models (Plot~(c)) are shown. The parameters are ordered by
-their importance based on percentage increase in mean square error from
-permuting the variable--higher, the more important.
+similarity~$\similarity\ge5.5$ ($\approx80$\% match with ground truth). 
+(b)~The sensitivity of the spread pattern to parameters was analyzed by
+repeating the same process, but with cluster index as the dependent
+variable.
+%% The
+%% results for the entire set (Plot~(a)) and separately for Class~A (Plot~(b))
+%% and Class~B models (Plot~(c)) are shown. The parameters are ordered by
+%% their importance based on percentage increase in mean square error from
+%% permuting the variable--higher, the more important.
 \label{fig:sensitivity}}
 %% a total of $17,000$ samples from the parameter space
 \end{figure}
@@ -1089,166 +1101,8 @@ permuting the variable--higher, the more important.
 %%     of the nine cases are shown. The complete set is in
 %%     Figure~\ref{S:fig:cart}.}
 %% \end{figure}
- Figure~\ref{fig:tomnet} shows the
-annual tomato trade for the study region.
 %%
-\begin{figure}[t]
-\centering
-%%
-\includegraphics[width=.6\textwidth]{../international_trade/results/network_plots/sea_2013_tomato.pdf}
-\caption{\textbf{The trade of tomato in the focus region (2013).} The
-network was constructed using data from FAOSTAT Trade matrix
-(Table~\ref{S:tab:data}).  The trade within the focus region is represented
-by green edges. Imports from \tuta{} affected countries categorized by
-region is represented by red edges, and the blue edges correspond to
-exports from the focus region to countries yet to report the presence of
-the pest. The edge thickness is a function of the trade volume. We note
-that with the exception of Philippines, there is considerable trade
-activity among countries in the focus region. However, the majority of
-trading happens between neighboring countries and except for a few flows,
-the volume is negligible compared to production within. Most significant
-flow is from Malaysia to Singapore ($\approx30,000$ tonnes), India to
-Bangladesh ($\approx20,000$ tonnes), and Thailand and Vietnam to Malaysia
-(between $1000$ to $2,000$ tonnes). Philippines does not report any fresh
-tomato trade with other countries.  We also analyzed how the network
-structure evolved across years. While we did not observe much variation in
-the network structure, there is some change in the countries importing to
-and exporting from this region
-(Figure~\ref{S:fig:tradeYears}).\label{fig:tomnet}}
-\end{figure}
-%%
-\paragraph{Predicted spread in Mainland Southeast Asia.}
-We applied both model classes to simulate the spread in the rest of the
-study region. Given that more than two years have passed since the time of
-first report in Bangladesh and unofficial reports of \tuta{} presence in
-Myanmar\footnote{The Wikipedia entry on \tuta{}
-    (\url{https://en.wikipedia.org/wiki/Tuta_absoluta}) indicates
-that it is present in the northern region of Myanmar since
-April~2017. No official confirmation is available yet.}, cells in northern Myanmar bordering India and Bangladesh were
-seeded (Methods). Representative simulation outputs are shown for Mainland
-Southeast Asia in Figure~\ref{fig:msaClassAB}. We note that in the case of
-Class~A models, the eastward spread is faster than southward spread. This
-is mainly because the Moore neighborhood is smaller at the narrow region in
-the south of Myanmar and Thailand bordering Malaysia. However, in
-the case of Class~B, the spread is much faster in the same region aided by domestic
-trade flows from northern and central Thailand to the southern region. Both models indicate that the pest will enter
-Thailand from Myanmar, and subsequently move to Laos and Vietnam as it
-spreads eastwards and to China when it spreads northwards.
-%%
-%Changed B to A
-\begin{figure}[ht]
-    \centering
-\begin{subfigure}[b]{.47\textwidth}
-    \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-A_m2_l1.pdf}
-    \caption{Class~A\label{fig:msaClassA}}
-\end{subfigure}\hspace{.5cm}
-\begin{subfigure}[b]{.47\textwidth}
-    \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-B_m1_l3.pdf}
-    \caption{Class~B\label{fig:msaClassB}}
-\end{subfigure}
-\caption{\textbf{Predicted spread pattern in Mainland Southeast Asia.} The
-contour plots show the simulated spread starting from northern Myanmar for
-120 time steps or 10 years. Representative simulation outputs for Class~A
-and Class~B models are shown. With {Class~A}, spread is faster eastward
-than southward and the other way round in the case of
-Class~B.\label{fig:msaClassAB} }
-\end{figure}
-%%
-
-Class~A spread pattern predicts that within the next 4-5 years much of
-the northern part of Mainland Southeast Asia will be invaded. Class~B
-spread pattern predicts that in the same period \tuta{} will spread all
-over Malaysia and Singapore. 
-However, the rate of spread observed is slower than that observed in Bangladesh for
-both classes. Also, even though the models exhibited similar rate of spread
-for Bangladesh, we observed high variance in intensity of infestation as
-well range expansion for the rest of the region. The results are in
-Figure~\ref{fig:spreadRate}. The reason for slow spread is as follows.
-Bangladesh has the highest tomato volume per country surface area
-($\approx2.5$tonnes/km$^2$).  The next country is Vietnam
-($\approx1.5$tonnes/km$^2$). Therefore, in the case of Bangladesh, not only
-is the extent of infestation in a cell~$\infest(\cdot)$ typically high, but
-also, since it is a densely populated country, most cells have vegetable
-production. Hence, the rate of spread is much higher for relatively lower
-values of pathway parameters and Moore range. Also, we observed a strong
-dependence on Moore range (Figure~\ref{fig:spreadRateB}). In countries with
-larger area, the production is scattered. Therefore, lower the Moore range,
-the slower the spread.
-%%   
-%\begin{figure}[!ht]
-%%% \begin{subfigure}[b]{.47\textwidth}
-%%%     \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_B_moore.pdf}
-%%%     \caption{Model~A\label{fig:spreadRateMooreA}}
-%%% \end{subfigure}
-%%% %%
-%%% \begin{subfigure}[b]{.47\textwidth}
-%%%     \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_B_moore.pdf}
-%%%     \caption{Model~B\label{fig:spreadRateMooreB}}
-%%% \end{subfigure}
-%%% %%
-%\begin{subfigure}[b]{.47\textwidth}
-%    \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_A_box.pdf}
-%    \caption{Class~A\label{fig:spreadRateA}}
-%\end{subfigure}
-%%%
-%\begin{subfigure}[b]{.47\textwidth}
-%    \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_B_box.pdf}
-%    \caption{Class~B\label{fig:spreadRateB}}
-%\end{subfigure}
-%\caption{\textbf{Spread in Mainland Southeast Asia with respect to distance
-%from origin.} The cells are binned based on their distance from the origin
-%of infection (Northern Myanmar). Given time step~$t$ (60 or five years from
-%   time of start in
-%this case), let $\Pr(v,\le t)$ be the probability that cell~$v$ is in
-%state~$I$ by time~$t$. For each parameter instance, we computed the ``total
-%infection'' for every bin at time~$t$ by aggregating~$\Pr(v,\le t)$ for
-%each~$v$ in the bin.  Parameter instances were grouped by model class and
-%Moore range ($\mooreRange$). The average total infection for each group are
-%plotted.  The red points referred to as ``max'' correspond to the total
-%number of cells in each bin, which is also the maximum possible accumulated
-%probability for that bin. We observe that even though the models exhibit
-%similar spread for Bangladesh, there is high variance in spread rate in
-%both classes for spread in in the case of he spread rate when applied to
-%the rest of the region. Also, the range of expansion is influenced by
-%Moore range~$\mooreRange$.
-%\label{fig:spreadRate}
-%}
-%\end{figure}
-%%
-
-%% To account for possible increase in production and trade, we boosted the
-%% pathway parameters by (i)~25\% and (ii)~50\%. The results in
-%% Figure~\ref{fig:spreadRate} show the increase in intensity of infection,
-%% but not an appreciable increase in range.
-
-%%
-\paragraph{Alternate scenarios of invasion.}
-From the analysis of the international trade network
-(Figure~\ref{fig:tomnet}), we observe that Malaysia and Singapore are
-important hubs with tomato imports from \tuta{} infested regions. There is
-a possibility that \tuta{} is directly introduced to these regions. However,
-as mentioned earlier, the import volume is very low. Also, the introduction
-risk depends on the preventive measure taken by the exporting countries.
-Nevertheless, we considered the scenario in which \tuta{} establishes in the region
-between Kuala Lumpur and Singapore. The simulations suggest that the pest
-will spread to most localities in Malaysia and Sumatra, Indonesia within an
-year.
-
-The second scenario we considered is the introduction of \tuta{} to
-Philippines. Since Philippines does not share its borders with any country in the region
-and there is no evidence of tomato trade with rest of the countries, there
-is a low chance that the pest will be introduced through natural spread or
-trade.  However, human mobility is a possible pathway. The Middle East is
-the top destination for Filipino workers~\cite{rodriguez2011philippine}.
-Therefore, there is a possibility of introduction through travel. We
-considered two hypothetical scenarios: (i)~\tuta{} is introduced to the Palawan region
-from Malaysian Borneo and (ii)~it is introduced to the high production area
-of Northern Mindanao. While in the first case we did not observe spread
-beyond the Palawan region, in the second case, within two years, almost all
-localities were invaded. The latter case is shown in
-Figure~\ref{fig:phlBContour}.
-%%
-\paragraph{Role of trade in spread within and between countries.}
+\paragraph{Domestic trade and and spread within a country.}
 Here, we focus on long-distance dispersal, and therefore, restrict our
 discussion to Class~B models. We observed the following common spread
 pattern.  When the pest is introduced to a country, dispersal is slow until
@@ -1395,6 +1249,135 @@ address the data gaps concerning international trade.
 %% ($\approx200$K tonnes each). However, alternate data sources (pers.
 %% comm.) indicate that Vietnam is a large producer ($\approx400$K)
 %% too.
+%%
+%% \paragraph{Predicted spread in Mainland Southeast Asia.}
+%% We applied both model classes to simulate the spread in the rest of the
+%% study region. Given that more than two years have passed since the time of
+%% first report in Bangladesh and unofficial reports of \tuta{} presence in
+%% Myanmar\footnote{The Wikipedia entry on \tuta{}
+%%     (\url{https://en.wikipedia.org/wiki/Tuta_absoluta}) indicates
+%% that it is present in the northern region of Myanmar since
+%% April~2017. No official confirmation is available yet.}, cells in northern Myanmar bordering India and Bangladesh were
+%% seeded (Methods). Representative simulation outputs are shown for Mainland
+%% Southeast Asia in Figure~\ref{fig:msaClassAB}. We note that in the case of
+%% Class~A models, the eastward spread is faster than southward spread. This
+%% is mainly because the Moore neighborhood is smaller at the narrow region in
+%% the south of Myanmar and Thailand bordering Malaysia. However, in
+%% the case of Class~B, the spread is much faster in the same region aided by domestic
+%% trade flows from northern and central Thailand to the southern region. Both models indicate that the pest will enter
+%% Thailand from Myanmar, and subsequently move to Laos and Vietnam as it
+%% spreads eastwards and to China when it spreads northwards.
+%% %%
+%% %Changed B to A
+%% \begin{figure}[ht]
+%%     \centering
+%% \begin{subfigure}[b]{.47\textwidth}
+%%     \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-A_m2_l1.pdf}
+%%     \caption{Class~A\label{fig:msaClassA}}
+%% \end{subfigure}\hspace{.5cm}
+%% \begin{subfigure}[b]{.47\textwidth}
+%%     \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-B_m1_l3.pdf}
+%%     \caption{Class~B\label{fig:msaClassB}}
+%% \end{subfigure}
+%% \caption{\textbf{Predicted spread pattern in Mainland Southeast Asia.} The
+%% contour plots show the simulated spread starting from northern Myanmar for
+%% 120 time steps or 10 years. Representative simulation outputs for Class~A
+%% and Class~B models are shown. With {Class~A}, spread is faster eastward
+%% than southward and the other way round in the case of
+%% Class~B.\label{fig:msaClassAB} }
+%% \end{figure}
+%% %%
+%% 
+%% Class~A spread pattern predicts that within the next 4-5 years much of the
+%% northern part of Mainland Southeast Asia will be invaded. Class~B spread
+%% pattern predicts that in the same period \tuta{} will spread all over
+%% Malaysia and Singapore.  However, the rate of spread observed is slower
+%% than that observed in Bangladesh for both classes. Also, even though the
+%% models exhibited similar rate of spread for Bangladesh, we observed high
+%% variance in intensity of infestation as well range expansion for the rest
+%% of the region. The results are in Figure~\ref{fig:spreadRate}. The reason
+%% for slow spread is as follows.  Bangladesh has the highest tomato volume
+%% per country surface area ($\approx2.5$tonnes/km$^2$).  The next country is
+%% Vietnam ($\approx1.5$tonnes/km$^2$). Therefore, in the case of Bangladesh,
+%% not only is the extent of infestation in a cell~$\infest(\cdot)$ typically
+%% high, but also, since it is a densely populated country, most cells have
+%% vegetable production. Hence, the rate of spread is much higher for
+%% relatively lower values of pathway parameters and Moore range. Also, we
+%% observed a strong dependence on Moore range (Figure~\ref{fig:spreadRateB}).
+%% In countries with larger area, the production is scattered. Therefore,
+%% lower the Moore range, the slower the spread.
+%% %%   
+%% \begin{figure}[!ht]
+%% %% \begin{subfigure}[b]{.47\textwidth}
+%% %%     \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_B_moore.pdf}
+%% %%     \caption{Model~A\label{fig:spreadRateMooreA}}
+%% %% \end{subfigure}
+%% %% %%
+%% %% \begin{subfigure}[b]{.47\textwidth}
+%% %%     \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_B_moore.pdf}
+%% %%     \caption{Model~B\label{fig:spreadRateMooreB}}
+%% %% \end{subfigure}
+%% %% %%
+%% \begin{subfigure}[b]{.47\textwidth}
+%%     \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_A_box.pdf}
+%%     \caption{Class~A\label{fig:spreadRateA}}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.47\textwidth}
+%%     \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_B_box.pdf}
+%%     \caption{Class~B\label{fig:spreadRateB}}
+%% \end{subfigure}
+%% \caption{\textbf{Spread in Mainland Southeast Asia with respect to distance
+%% from origin.} The cells are binned based on their distance from the origin
+%% of infection (Northern Myanmar). Given time step~$t$ (60 or five years from
+%% time of start in this case), let $\Pr(v,\le t)$ be the probability that
+%% cell~$v$ is in state~$I$ by time~$t$. For each parameter instance, we
+%% computed the ``total infection'' for every bin at time~$t$ by
+%% aggregating~$\Pr(v,\le t)$ for each~$v$ in the bin.  Parameter instances
+%% were grouped by model class and Moore range ($\mooreRange$). The average
+%% total infection for each group are plotted.  The red points referred to as
+%% ``max'' correspond to the total number of cells in each bin, which is also
+%% the maximum possible accumulated probability for that bin. We observe that
+%% even though the models exhibit similar spread for Bangladesh, there is high
+%% variance in spread rate in both classes for spread in in the case of he
+%% spread rate when applied to the rest of the region. Also, the range of
+%% expansion is influenced by Moore range~$\mooreRange$.
+%% \label{fig:spreadRate}
+%% }
+%% \end{figure}
+%%
+
+%% To account for possible increase in production and trade, we boosted the
+%% pathway parameters by (i)~25\% and (ii)~50\%. The results in
+%% Figure~\ref{fig:spreadRate} show the increase in intensity of infection,
+%% but not an appreciable increase in range.
+
+%%
+\paragraph{Alternate scenarios of invasion.}
+From the analysis of the international trade network
+(Figure~\ref{fig:tomnet}), we observe that Malaysia and Singapore are
+important hubs with tomato imports from \tuta{} infested regions. There is
+a possibility that \tuta{} is directly introduced to these regions. However,
+as mentioned earlier, the import volume is very low. Also, the introduction
+risk depends on the preventive measure taken by the exporting countries.
+Nevertheless, we considered the scenario in which \tuta{} establishes in the region
+between Kuala Lumpur and Singapore. The simulations suggest that the pest
+will spread to most localities in Malaysia and Sumatra, Indonesia within an
+year.
+
+The second scenario we considered is the introduction of \tuta{} to
+Philippines. Since Philippines does not share its borders with any country in the region
+and there is no evidence of tomato trade with rest of the countries, there
+is a low chance that the pest will be introduced through natural spread or
+trade.  However, human mobility is a possible pathway. The Middle East is
+the top destination for Filipino workers~\cite{rodriguez2011philippine}.
+Therefore, there is a possibility of introduction through travel. We
+considered two hypothetical scenarios: (i)~\tuta{} is introduced to the Palawan region
+from Malaysian Borneo and (ii)~it is introduced to the high production area
+of Northern Mindanao. While in the first case we did not observe spread
+beyond the Palawan region, in the second case, within two years, almost all
+localities were invaded. The latter case is shown in
+Figure~\ref{fig:phlBContour}.
 %%
 \paragraph{Interventions at the trade level.}
 Given the importance of the long-distance human-mediated pathway, we
