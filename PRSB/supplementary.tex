@@ -63,6 +63,12 @@
 \renewcommand*{\thesubsection}{S\arabic{section}.\arabic{subsection}}
 \renewcommand*{\thefigure}{S\arabic{figure}}    
 \renewcommand*{\thetable}{S\arabic{table}}    
+\newcommand{\asd}{\alpha_s}
+\newcommand{\afm}{\alpha_{\ell}}
+\newcommand{\ald}{\alpha_{\ell d}}
+\newcommand{\mooreRange}{r_\mathrm{M}}
+\newcommand{\similarity}{\mathcal{S}}
+\newcommand{\kmax}{k_{\max}}
 \newcommand{\infest}{\rho}
 \usepackage{xr}
 \externaldocument[M:]{mcnitt_tuta}
@@ -145,7 +151,6 @@ Invasive Agricultural Pests: Study of \emph{Tuta~absoluta} in Asia}
 \affil[7]{Feed the Future Integrated Pest Management Innovation Lab}
 \date{}
 
-\newcommand{\mooreRange}{r_\mathrm{M}}
 \begin{document}
 \maketitle
 \section{Data}
@@ -764,6 +769,34 @@ production information.
 and regions north of Manila. These are captured by our network
 (Figure~\ref{fig:phlFlow}).
 
+\subsection{International trade}
+Figure~\ref{fig:tomnet} shows the annual tomato trade for the study region. The
+network was constructed using data from FAOSTAT Trade matrix
+(Table~\ref{tab:data}).  The trade within the focus region is represented
+by green edges. Imports from \tuta{} affected countries categorized by
+region is represented by red edges, and the blue edges correspond to
+exports from the focus region to countries yet to report the presence of
+the pest. The edge thickness is a function of the trade volume. We note
+that with the exception of Philippines, there is considerable trade
+activity among countries in the focus region. However, the majority of
+trading happens between neighboring countries and except for a few flows,
+the volume is negligible compared to production within. Most significant
+flow is from Malaysia to Singapore ($\approx30,000$ tonnes), India to
+Bangladesh ($\approx20,000$ tonnes), and Thailand and Vietnam to Malaysia
+(between $1000$ to $2,000$ tonnes). Philippines does not report any fresh
+tomato trade with other countries.  We also analyzed how the network
+structure evolved across years. While we did not observe much variation in
+the network structure, there is some change in the countries importing to
+and exporting from this region
+%%
+\begin{figure}[t]
+\centering
+%%
+\includegraphics[width=.6\textwidth]{../international_trade/results/network_plots/sea_2013_tomato.pdf}
+\caption{\textbf{The trade of tomato in the focus region
+(2013).}(Figure~\ref{S:fig:tradeYears}).\label{fig:tomnet}}
+\end{figure}
+
 \subsection{Transmission probability}\label{trans}
 At any given time~$t$, for a cell~$v$ and its neighbor~$v'$ corresponding
 to the considered pathway, let $\infest(v',t)$ be the strength of
@@ -1141,39 +1174,32 @@ extension of the K-means algorithm. It uses Bayesian Information Criterion
 
 For the X-means algorithm, the initial centers were determined using
 K-means++ algorithm. Tolerance was set to $0.001$. The algorithm takes as
-input $k_\max$, the maximum number of clusters to be allocated. We
-considered~$k_\max=1,2,\ldots,10$ and a very large value of~$2000$. For the
-latter case, $545$ clusters were allocated.
+input $\kmax$, the maximum number of clusters to be allocated. We
+considered~$\kmax=1,2,\ldots,10$ and a very large value of~$2000$. For the
+latter case, $545$ clusters were allocated. For each case, the output of
+the clustering algorithm was fed to CART algorithm to analyze the
+relationship between parameters and clusters. The results for $\kmax=2$
+and $\kmax=2000$ are in Figure~\ref{fig:cartSpread}. In each case, we note
+that $\ald$ has a significant influence on the spread pattern.
 %%
-%% \begin{figure}[ht]
-%% \begin{subfigure}[b]{.32\textwidth}
-%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc2.pdf}
-%% \caption{$k=2$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.32\textwidth}
-%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc3.pdf}
-%% \caption{$k=3$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.32\textwidth}
-%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc4.pdf}
-%% \caption{$k=4$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.45\textwidth}
-%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc5.pdf}
-%% \caption{$k=5$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.45\textwidth}
-%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../clustering/results/cc6.pdf}
-%% \caption{$k=6$}
-%% \end{subfigure}
-%% %%
-%% \caption{CART analysis of spread pattern. 
-%% \label{fig:cartSpread}}
-%% \end{figure}
+\begin{figure}[ht]
+    \centering
+\begin{subfigure}[b]{.7\textwidth}
+\includegraphics[width=\textwidth,trim={1cm 1cm 1cm
+0cm},clip]{../clustering/results/cart_clusters_2.pdf}
+\caption{$k=2$}
+\end{subfigure}
+
+\begin{subfigure}[b]{.7\textwidth}
+\includegraphics[width=\textwidth,trim={1cm 1cm 1cm
+0cm},clip]{../clustering/results/cart_clusters_all.pdf}
+\caption{$k=2000$ (545 clusters were allocated)}
+\end{subfigure}
+%%
+\caption{CART analysis of spread pattern. ``a\_long'' corresponds to
+    $\ald$ and ``moore'' is $\mooreRange$.
+\label{fig:cartSpread}}
+\end{figure}
 
 
 %%
