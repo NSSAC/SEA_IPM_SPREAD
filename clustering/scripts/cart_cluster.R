@@ -19,6 +19,7 @@ opt = parse_args(opt_parser);
 
 #************* Start of Main ************************
 dt <- fread(input=opt$cluster_file, header=TRUE)
+dt$cluster=as.factor(dt$cluster)
 
 DV <- data.matrix(dt[, list(cluster)])
 df <- data.frame(dt)
