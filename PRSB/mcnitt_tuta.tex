@@ -210,7 +210,7 @@ say modeling multiple countries requires lot more data
 
 make sure intro has challenges
 
-talk about Douma et al.
+model, data uncertainty, pathway models, talk about Douma et al.
 
 %%  which has invaded more than 60\% of
 %% tomato producing land over the last decade.
@@ -633,7 +633,7 @@ of travel time. \\
 Seed & Location and time of initial infestation & Scenarios based on
 countries (Table~\ref{S:tab:seed})\\
 Locality radius & Determines cells assigned to a locality & 100kms \\\hline
-Start month & Time step of initial infestation & $\{3,4,5\}$ corresponding
+$t_s$ & Time step of initial infestation & $\{3,4,5\}$ corresponding
 to March, April and May respectively based on first report in
 Bangladesh~\cite{hossain2016first}. \\
 %% $\infest$ & Infectivity of a cell based on amount of production & \\
@@ -856,6 +856,26 @@ using a high performance computing cluster.
 %% 
 %% re
 
+\paragraph{Analysis of spread pattern}
+To analyze the spread patterns of selected models from the parameterization
+phase, the simulation outputs were clustered using X-means
+algorithm~\cite{pelleg2000x,andrei_novikov_2018_1491324}, an extension of
+the classical K-means algorithm. It uses Bayesian information criterion to
+estimate the optimal number of clusters. The simulation outputs (time and
+cell indexed empirical probabilities) were clustered based on Euclidean
+distance. To discover the relationship between spread pattern and model
+parameters, clusters were further analyzed using CART with model parameters
+as independent variables and the cluster index as the dependent variable.
+Note that model parameters played no role in clustering process.
+Figure~\ref{fig:clusterOutline} outlines the entire process.
+%%
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=.8\textwidth]{figs/spread_analysis.pdf}
+    \caption{Outline of multi-pathway spread
+analysis. \label{fig:clusterOutline}}
+\end{figure}
+%%
 \section{Results}
 %% In the first part of this section, we present results from the analysis of
 %% the spread of \tuta{} in Bangladesh. We demonstrate how accounting for
@@ -872,44 +892,34 @@ using a high performance computing cluster.
 %%
 %% \paragraph{Assessing the role of each pathway in the spread of \tuta{} in
 %% Bangladesh.} 
-\paragraph{The multi-pathway spread in Bangladesh: Multiple possibilities.} As described in Methods, the goodness of fit of a model was
-evaluated by comparing the corresponding simulation output with ground
-truth using the similarity score in~\eqref{eqn:similarity}. The ensuing
-discussion will focus on instances with high similarity score
-($\similarity\ge6$).  We observed that even though each of these models are
-a close match to the ground truth, two spread patterns can be very
-different from each other. To analyze the spread patterns, the simulation
-outputs were clustered using X-means
-algorithm~\cite{pelleg2000x,andrei_novikov_2018_1491324}, an extension of
-the popular K-means algorithm. It uses Bayesian information criterion to
-estimate the optimal number of clusters. To discover the relationship between spread
-pattern and model parameters, clusters were further analyzed using
-CART with model parameters as independent variables and the cluster index
-as the dependent variable. Note that model parameters played no role in
-clustering process. Figure~\ref{fig:clusterOutline} outlines the
-entire process and details of the clustering analysis is in
-Section~\ref{S:sec:cluster} of the supplement.
-
-We observed two distinct spread patterns determined by the presence or
-absence of the long-distance spread component. In the first class of models
+\paragraph{The multi-pathway spread in Bangladesh: Multiple possibilities.}
+As described in Methods, the goodness of fit of a model was evaluated by
+comparing the corresponding simulation output with ground truth using the
+similarity score in~\eqref{eqn:similarity}. The ensuing discussion will
+focus on instances with high similarity score ($\similarity\ge6$ and
+approximately 8000 models). The clustering analysis described in Methods
+(outlined in Figure~\ref{fig:clusterOutline}) yielded more than 500
+clusters, which were further analyzed using CART. The details are in
+Section~\ref{S:sec:cluster} of the supplement. We observed that even though
+each of these models are a close match to the ground truth, two spread
+patterns can be very different from each other. In particular, we observed
+two distinct spread patterns determined by the presence or absence of the
+long-distance spread component. In the first class of models
 (Figure~\ref{fig:bgdClassA}) which we refer to as Class~A, the pathway
-parameter~$\ald$ is negligible. It is characterized by brisk spread between
-geographically adjacent cells.
+parameter~$\ald$ is negligible.  It is characterized by brisk spread
+between geographically adjacent cells.  In contrast, in Class~B the
+long-distance pathway~($\ald$) plays a significant role
+(Figure~\ref{fig:bgdClassB1}) and is characterized by relatively slow
+spread between geographically adjacent neighbors with jumps from one
+locality to another.
+
 %% %% It is characterized by %%
 %% a combination of Moore range ($\mooreRange$), latency period ($\ell$) and
 %% %% pathway parameters~$\asd$ and~$\afm$ that lead to rapid spread between
 %% %% adjacent cells.  
-In contrast, in Class~B the long-distance pathway~($\ald$) plays a
-significant role (Figure~\ref{fig:bgdClassB1}) and is characterized by
-relatively slow spread between geographically adjacent neighbors with jumps
-from one locality to another.
 %%
 \begin{figure}[!ht]
     \centering
-\begin{subfigure}[b]{.8\textwidth}
-    \includegraphics[width=\textwidth]{figs/spread_analysis.pdf}
-    \caption{\label{fig:clusterOutline}}
-\end{subfigure}
 \begin{subfigure}[b]{.4\textwidth}
     \includegraphics[width=\textwidth]{../cellular_automata/results/contour/BGD_model-A.pdf}
     \caption{Class~A ($\ald=0$) \label{fig:bgdClassA}}
@@ -918,17 +928,17 @@ from one locality to another.
     \includegraphics[width=\textwidth]{../cellular_automata/results/contour/BGD_model-B_m1_l3.pdf}
     \caption{Class~B ($\ald>0$) \label{fig:bgdClassB1}}
 \end{subfigure}
-\caption{\textbf{Spread in Bangladesh.} (a)~Outline of multi-pathway spread
-analysis. The contour plots in (b) and (c) show the simulated spread
-starting from the location of first report in Panchagarh district for 12
-months. For the purpose of plotting, the time of infection for a cell is
-the minimum time step~$t$ such that the empirical probability that the cell
-is infected by time~$t$ is $\ge0.8$. Also highlighted are the eight
-monitored locations and the localities applied in the model. The colors of
-the monitored locations correspond to the month of report relative to the
-first report (Panchagarh). Two distinct spread patterns emerged from the
-cluster analysis. (b) and (c) show representative spreads observed for
-each class. The similarity ($\similarity$) in each case was $>6.5$.}
+\caption{\textbf{Spread in Bangladesh.}The contour plots show the simulated
+spread starting from the location of first report in Panchagarh district
+for 12 months. For the purpose of plotting, the time of infection for a
+cell is the minimum time step~$t$ such that the empirical probability that
+the cell is infected by time~$t$ is $\ge0.8$. Also highlighted are the
+eight monitored locations and the localities applied in the model. The
+colors of the monitored locations correspond to the month of report
+relative to the first report (Panchagarh). Two distinct spread patterns
+emerged from the cluster analysis. (a) and (b) show representative spreads
+observed for each class. The similarity ($\similarity$) in each case was
+$>6.5$.}
 %% (a)~\textbf{Class~A.} Spread pattern long-distance component playing a
 %% negligible role. We
 %% observe a steady radial spread.  (b)~\textbf{Class~B.} Spread pattern with
@@ -962,93 +972,30 @@ our models (see Section~\ref{S:sec:guimapi} for model details and results).
 
 \paragraph{Importance of model parameters.} 
 Calibration and sensitivity analysis of large-scale, high-resolution models
-isa challenging task. Methods based on machine learning
-surrogates are being increasingly used to accomplish this efficiently for
-complex agent-based models~\cite{lamperti2018agent}. Motivated by this, we
-studied parameter importance by applying Random Forest learning method on
-the simulation outputs. Among the sampled parameter instances, we analyzed
-the set of instances with similarity~$\similarity>6$. The results are in
-Figure~\ref{fig:sensitivity}. 
-
-The long distance pathway parameter~$\ald$ is by far the most important
-parameter (Figure~\ref{fig:rfAll}); both spread rate and pattern critically
-depend on it. Class~A models show more sensitivity to start time step of
-simulation than Class~B models. The main reason why it is not at all
-critical in the latter class is because the pest was reported just before
-the rainy season; subsequent months have lean trade flows, and as a result
-it does not affect the spread much. Also, we observe that seasonal
-production is very important in Class~B models as it influences trade flows
-and long distance jumps. However, it does not seem to have much effect on
-the radial spread component as is the case with Class~A models. In both
-cases, the spread is very sensitive to the local human-mediated pathway
-parameter~$\afm$. In the case of Class~A models, this pathway leads to
-faster spread within localities. In Class~B models, higher the value, the
-greater the chance of long-distance spread as it quickly leads to infection
-of large portions of the localities, and therefore their total
-infectiousness. Moore range ($\mooreRange$) is an important parameter in
-the both cases. Later, we will discuss on how it influences the spread rate
-for the rest of the region.
-
-%% .  the start
-%% time step of simulation plays an important role (Figure~\ref{fig:rfShort})
-%% as the spread pattern is mostly radial.
-%% This is mainly because the spread pattern is radial in turn is
-%% dictated by scaling factors $\asd$ and $\afm$, and start month for the
-%% simulation. The gravity model parameters $\beta$ and $\kappa$ do not
-%% influence this model as there is no long-distance spread. We also note that
-%% the monthly production template (uniform or seasonal) does not affect the
-%% spread behavior. This is mainly because the values of short-distance
-%% scaling factors~$\asd$ or (and)~$\afm$ are relatively high to negate the
-%% effect of heterogeneity in monthly production.
-%% 
-%% For the remaining ranges of~$(\mooreRange,\ell)$, we observe a richer set of
-%% emergent behaviors. While for very high values of~$\ald$ and~$\afm$, we
-%% again see Class~A spread pattern, Class~B dominates and is strongly
-%% influenced by monthly production template, \jmcomment{and?} start month. While~$\beta$ is a
-%% significant factor in the spread, the outcome is not highly sensitive
-%% to~$\kappa$.
-
-
-%% Our analysis strongly indicates that both short distance spread and trade
-%% are important pathways in the spread dynamics. For the parameter set with
-%% the best fit, the similarity was close to~$6$, i.e., on an average,
-%% simulation output matched six out of eight locations.   This is in some sense
-%% expected due to long distance jumps facilitated by human-assisted spread.
-%% It also means that \tuta{} can achieve the same (or greater) range
-%% expansion with considerably less flying capacity and population growth.
-
-%% While our results highlight the role of human-mediated spread, it is
-%% possible that this pathway is more important for the spread than it
-%% appears.  First of all, vegetable production data for Bangladesh~\cite{spam}
-%% indicates that almost all cells have non-zero production of hosts of
-%% \tuta{}. Therefore, there is a contiguous landscape of suitable areas for
-%% the pest to spread naturally. But in general this may not be the case; the
-%% only way two locations can be connected is by trade or travel pathways. One
-%% obvious example is two land masses separated by sea.  
-
-%%
-%%\paragraph{Sensitivity analysis.} 
-%%We assessed the role of the model
-%%parameters (Table~\ref{tab:parameters}) by restricting our attention.
-%%\begin{itemize}
-%%    \item machine learning surrogates
-%%    \item CART something, default settings
-%%\item If we focus on all
-%%instances of parameters for which similarity is greater than~$12$ ($75\%$
-%%match),
-%%\end{itemize}
-%%
+is a challenging task. Methods based on machine learning surrogates are
+being increasingly used to accomplish this efficiently for complex
+agent-based models~\cite{lamperti2018agent}. We studied sensitivity of the
+spread pattern to model parameters by applying Random Forest learning
+method. Since the clustering captures the variations in spread patterns,
+the algorithm was applied with model parameters as independent variables
+and cluster index as the dependent variable. The results are in
+Figure~\ref{fig:sensitivity}.
 %%
 \begin{figure}[t]
 \centering
-\begin{subfigure}[b]{.45\textwidth}
-    \includegraphics[width=1\textwidth]{../cellular_automata/results/rf/rf_importance_all_mse.pdf}
-    \caption{Similarity score $\similarity$ sensitivity \label{fig:rfAll}}
+\begin{subfigure}[b]{.32\textwidth}
+    \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_all.pdf}
+    \caption{All \label{fig:rfAll}}
 \end{subfigure}
 %%
-\begin{subfigure}[b]{.45\textwidth}
-    \includegraphics[width=1\textwidth]{../clustering/results/rf_importance_cluster_mse.pdf}
-    \caption{Spread pattern (or cluster membership) sensitivity\label{fig:rfAllCluster}}
+\begin{subfigure}[b]{.32\textwidth}
+    \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_A.pdf}
+    \caption{Class A\label{fig:rfA}}
+\end{subfigure}
+%%
+\begin{subfigure}[b]{.32\textwidth}
+    \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_B.pdf}
+    \caption{Class B\label{fig:rfB}}
 \end{subfigure}
 %% %%
 %% \begin{subfigure}[b]{.32\textwidth}
@@ -1060,23 +1007,51 @@ for the rest of the region.
 %% \includegraphics[width=1.1\textwidth]{../cellular_automata/results/rf/rf_importance_long_mse.pdf}
 %% \caption{Class B\label{fig:rfLong}}
 %% \end{subfigure}
-\caption{\textbf{Parameter importance.} Random Forest
-(RF)~\cite{breiman2001random} method was applied to study parameter
-importance. (a)~With similarity~($\similarity$) as the dependent variable, the
-analysis was performed on the set of model instances which yielded a
-similarity~$\similarity\ge5.5$ ($\approx80$\% match with ground truth). 
-(b)~The sensitivity of the spread pattern to parameters was analyzed by
-repeating the same process, but with cluster index as the dependent
-variable.
-%% The
-%% results for the entire set (Plot~(a)) and separately for Class~A (Plot~(b))
-%% and Class~B models (Plot~(c)) are shown. The parameters are ordered by
-%% their importance based on percentage increase in mean square error from
-%% permuting the variable--higher, the more important.
+\caption{\textbf{Parameter importance.} Random
+Forest~\cite{breiman2001random} method was applied to study parameter
+importance. (a)~With cluster index as the dependent variable,
+the analysis was performed on the set of model instances which yielded a
+similarity~$\similarity\ge6$.
+%% (b)~The sensitivity of the spread pattern to parameters was analyzed by
+%% repeating the same process, but with cluster index as the dependent
+%% variable.
+The results for the entire set (a) and separately for Class~A (b) and
+Class~B models (c) are shown. The parameters are ordered by their
+importance based on percentage increase in mean square error from permuting
+the variable--higher, the more important.
 \label{fig:sensitivity}}
 %% a total of $17,000$ samples from the parameter space
 \end{figure}
 %%
+
+The long distance pathway parameter~$\ald$ is by far the most important
+parameter (Figure~\ref{fig:rfAll}); both spread rate and pattern critically
+depend on it. Moore range ($\mooreRange$) and latency period ($\ell$) are
+important as they affect the rate of radial spread. The start month ($t_s$)
+is also important due to two reasons. Firstly, the distance between two
+time shifted simulation outputs can be large. Secondly, outputs are
+sensitive to seasonal variations or temporality of the network. Focussing
+on Class~A models, the main drivers of the spread pattern are latency
+period and Moore range (Figure~\ref{fig:rfA}). Since the simulation
+duration represents more than one year of spread, seasonality (season) does
+not have much effect on the spread. The distance parameters~$\beta$
+and~$\kappa$ do not influece the spread as~$\ald=0$. Seasonal production on
+the other hand is very important in Class~B models as it influences trade
+flows.
+
+Class~B models show more sensitivity to start time step of simulation than
+Class~B models. The main reason why it is not at all critical in the latter
+class is because the pest was reported just before the rainy season;
+subsequent months have lean trade flows, and as a result it does not affect
+the spread much. However, it does not seem to have much effect on the
+radial spread component as is the case with Class~A models. In both cases,
+the spread is very sensitive to the local human-mediated pathway
+parameter~$\afm$. In the case of Class~A models, this pathway leads to
+faster spread within localities. In Class~B models, higher the value, the
+greater the chance of long-distance spread as it quickly leads to infection
+of large portions of the localities, and therefore their total
+infectiousness. Later, we will discuss on how it influences the spread rate
+for the rest of the region.
 %% \begin{figure}[ht]
 %%     \centering
 %%     \begin{subfigure}[b]{.48\textwidth}
@@ -1102,7 +1077,7 @@ variable.
 %%     Figure~\ref{S:fig:cart}.}
 %% \end{figure}
 %%
-\paragraph{Domestic trade and and spread within a country.}
+\paragraph{Domestic trade and spread within a country.}
 Here, we focus on long-distance dispersal, and therefore, restrict our
 discussion to Class~B models. We observed the following common spread
 pattern.  When the pest is introduced to a country, dispersal is slow until
@@ -1696,3 +1671,54 @@ VN starting cells not true to radial spread
 
 
 Random Forest (RF), proposed by Breiman(2001), is a nonparametric ensemble learning method for classification and regression. This method overcomes decision trees’ problem of overfitting by constructing a multitude of decision trees. In order to allow chances to multiple strong predictors to split the trees, each tree uses only a subset of the predictors. In regression, RF predicts the response variable by averaging the predicted values from all trees. Overall, RF provides more advantages over other decision trees such as CART and Bagging, especially for accuracy and robustness.
+
+%% .  the start
+%% time step of simulation plays an important role (Figure~\ref{fig:rfShort})
+%% as the spread pattern is mostly radial.
+%% This is mainly because the spread pattern is radial in turn is
+%% dictated by scaling factors $\asd$ and $\afm$, and start month for the
+%% simulation. The gravity model parameters $\beta$ and $\kappa$ do not
+%% influence this model as there is no long-distance spread. We also note that
+%% the monthly production template (uniform or seasonal) does not affect the
+%% spread behavior. This is mainly because the values of short-distance
+%% scaling factors~$\asd$ or (and)~$\afm$ are relatively high to negate the
+%% effect of heterogeneity in monthly production.
+%% 
+%% For the remaining ranges of~$(\mooreRange,\ell)$, we observe a richer set of
+%% emergent behaviors. While for very high values of~$\ald$ and~$\afm$, we
+%% again see Class~A spread pattern, Class~B dominates and is strongly
+%% influenced by monthly production template, \jmcomment{and?} start month. While~$\beta$ is a
+%% significant factor in the spread, the outcome is not highly sensitive
+%% to~$\kappa$.
+
+
+%% Our analysis strongly indicates that both short distance spread and trade
+%% are important pathways in the spread dynamics. For the parameter set with
+%% the best fit, the similarity was close to~$6$, i.e., on an average,
+%% simulation output matched six out of eight locations.   This is in some sense
+%% expected due to long distance jumps facilitated by human-assisted spread.
+%% It also means that \tuta{} can achieve the same (or greater) range
+%% expansion with considerably less flying capacity and population growth.
+
+%% While our results highlight the role of human-mediated spread, it is
+%% possible that this pathway is more important for the spread than it
+%% appears.  First of all, vegetable production data for Bangladesh~\cite{spam}
+%% indicates that almost all cells have non-zero production of hosts of
+%% \tuta{}. Therefore, there is a contiguous landscape of suitable areas for
+%% the pest to spread naturally. But in general this may not be the case; the
+%% only way two locations can be connected is by trade or travel pathways. One
+%% obvious example is two land masses separated by sea.  
+
+%%
+%%\paragraph{Sensitivity analysis.} 
+%%We assessed the role of the model
+%%parameters (Table~\ref{tab:parameters}) by restricting our attention.
+%%\begin{itemize}
+%%    \item machine learning surrogates
+%%    \item CART something, default settings
+%%\item If we focus on all
+%%instances of parameters for which similarity is greater than~$12$ ($75\%$
+%%match),
+%%\end{itemize}
+%%
+%%

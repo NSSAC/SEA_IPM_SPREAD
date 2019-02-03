@@ -77,14 +77,14 @@ python ../scripts/kmeans_instances.py -k $k
 done
 }
 
-function cart(){
-for f in `find ../results -name "instance_cluster*csv"`
-do
-k=`basename $f | sed -e 's/instance_cluster_//' -e 's/.csv//'`
-echo $k
-Rscript ../scripts/cart_cluster.R -f $f -o cc$k.pdf
-done
-}
+## function cart(){
+## for f in `find ../results -name "instance_cluster*csv"`
+## do
+## k=`basename $f | sed -e 's/instance_cluster_//' -e 's/.csv//'`
+## echo $k
+## Rscript ../scripts/cart_cluster.R -f $f -o cc$k.pdf
+## done
+## }
 
 function xmeans(){
 for kmax in `seq 2 10`
