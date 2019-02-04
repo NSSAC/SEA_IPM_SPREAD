@@ -1473,20 +1473,16 @@ Traditionally, crops such as tomato and eggplant have been grown in the
 winter during the dry season. However, over the past decade, due to rising
 demand and opportunities to export, there has been a thrust towards
 year-round production using protected cultivation methods and resilient
-varieties~\cite{ali2001}. Our analysis of the FAO data on
-tomato production and trade shows a steady increase in production and
-internal trade. In comparison, the export of tomato to outside of the focus
-region has risen steeply in the recent years (after 2011), while the
-imports generally indicate a downward trend (See
-Figure~\ref{S:fig:trends}). Also the food industry is gradually
-restructuring: supermarkets are replacing traditional food chains, and
-there is a steady increase in processing industries. Therefore, invasions
-from pests such as \tuta{} can have a huge negative impact on the
-socioeconomic fabric of this region.
-
+varieties~\cite{ali2001}. FAO data on tomato production and trade shows a
+steady increase in production and internal trade. In comparison, the export
+of tomato to outside of the focus region has risen steeply in the recent
+years (after 2011), while the imports generally indicate a downward trend
+(See Figure~\ref{S:fig:trends} in supplement). Therefore, invasions from
+pests such as \tuta{} can have a huge negative impact on the socioeconomic
+fabric of this region.  
 Although there is a general consensus that vegetable and seedling trade is a
 primary driver of \tuta{} spread, previous modeling efforts have
-exclusively focused on ecological aspects. Two
+exclusively focused on ecological aspects. Several 
 studies~\cite{desneux2010biological,tonnang2015identification} provide risk
 maps using CLIMEX and take additional factors into account.
 Guimapi~et~al.~\cite{guimapi2016modeling} used a
@@ -1510,27 +1506,26 @@ spread of \tuta{} in Nepal using gravity model and network dynamics.
 
 %% In recent years, there has been a thrust towards integrated modeling
 %% approaches to understand invasive species dynamics. 
-Multi-pathway models
-have been analyzed to study the role of human-mediated
-dispersal~\cite{robinet2009role,robinet2012human,carrasco2010unveiling}.
+Multi-pathway models are being increasingly used to study the role of invasive
+species dispersal. Douma~et~al.~\cite{douma2016pathway} survey the
+literature categorizing various efforts into flow-based pathway models and
+agent-based models.
 Robinet~et~al.~\cite{robinet2009role} show that the distribution and spread
 pattern of the pinewood nematode in China is strongly correlated with
 density of human population and infrastructure such as railways and river
-ports. A similar approach was applied to the pine processionary
-moth~\cite{robinet2012human}.  Carrasco~et~al.~\cite{carrasco2010unveiling}
+ports. Carrasco~et~al.~\cite{carrasco2010unveiling}
 combine spatially explicit models with a phenology model to incorporate
 population dynamics of the pest (western corn rootworm). Two types of
 long-distance dispersals are considered -- domestic and international. The
 domestic mode is modeled as a flow network between cities using a gravity
-model approach. 
-%% The flow between two cities is a function of human population of these cities and the distance between them.
+model approach.  
 Nopsa~et~al.~\cite{nopsa2015ecological} use a network science approach to
 studying the role of transport and storage infrastructure in the spread of
 pests and pathogens of wheat. Sutrave~et~al.~\cite{sutrave2012identifying}
 use a time-varying network model to study the spread of Soybean rust.
 However, in all these cases, there was more information available on the
-incidence of the pest or pathogen under study enabling rigorous validation of the
-developed models.
+incidence of the pest or pathogen under study enabling rigorous validation
+of the developed models.
 
 Our model is in part motivated by the hybrid approaches used in the study
 of infectious diseases of humans and livestock.
@@ -1571,32 +1566,30 @@ available only for a few countries.
 %% the availability of quality data as well as a good understanding of the
 %% processes involved. 
 Scarcity of data has forced us to greatly simplify or ignore some of the
-processes that might significantly influence the spread. 
-%% population growth,
-%% international trade, heterogeneity in consumption, etc.
-
-Our model uses monthly production as a surrogate for infectiousness of a
-cell. Complex phenology models can be used instead to model accurately the
-growth of the pest under specific conditions including the tritrophic
-interactions concerning the pest, host, and its indigenous predators (like,
-for example, the work by Carrasco~et~al.~\cite{carrasco2010unveiling}).
-However, as cautioned by Robinet~et~al.~\cite{robinet2012suite}, this would
-add to the complexity of the model making it near impossible to verify and
-validate.
+processes that might significantly influence the spread.  For example, our
+model uses monthly production as a surrogate for infectiousness of a cell.
+Complex phenology models can be used instead to model accurately the growth
+of the pest under specific conditions including the tritrophic interactions
+concerning the pest, host, and its indigenous predators (as in
+Carrasco~et~al.~\cite{carrasco2010unveiling}).  However, as cautioned by
+Robinet~et~al.~\cite{robinet2012suite}, this would add to the complexity of
+the model making it near impossible to verify and validate.
 
 The farm--market-consumer interactions (local human-mediated spread) are
 well understood at a conceptual level. More or less the structure remains
 the same in all the countries of the focus region. It involves various
 actors such as farmers, wholesalers, retailers, wet markets, supermarkets,
 etc. Nevertheless, it is is a complex infrasturcture, and modeling it is a
-challenge in itself. Rebaudo~et~al.~\cite{rebaudo2011}, for example, use a complex
-agent-based model to study just the interaction between farmers of two
-villages in the context of the potato moth in Ecuador. Similarly, given
-data on actual flow of vegetables, the gravity model can be improved or
-replaced by more sophisticated approaches. Also, the relationship between
-long-distance invasion risk and trade volume is hard to determine. While
-a direct relationship between volume and risk is plausible, whether
-the relation is linear (as assumed by our model) is not clear.
+challenge in itself. 
+%% Rebaudo~et~al.~\cite{rebaudo2011}, for example, use a complex
+%% agent-based model to study just the interaction between farmers of two
+%% villages in the context of the potato moth in Ecuador. 
+Similarly, given data on actual flow of vegetables, the gravity model can
+be improved or replaced by more sophisticated approaches. Also, the
+relationship between long-distance invasion risk and trade volume is hard
+to determine. While a direct relationship between volume and risk is
+plausible, whether the relation is linear (as assumed by our model) is not
+clear.
 
 It is important to account for heterogeneity in production, consumption,
 awareness, cultural factors, etc. both within and between countries. Some

@@ -1,0 +1,45 @@
+\PassOptionsToPackage{usenames,dvipsnames}{xcolor}
+\documentclass[tikz,border=2]{standalone}
+%% \usepackage{gillius2}
+%% \renewcommand{\familydefault}{\sfdefault}
+\usepackage{lmodern} % enhanced version of computer modern
+\usepackage[T1]{fontenc} % for hyphenated characters and textsc in section title
+\usepackage{amssymb}
+\usepackage{microtype} % some compression
+\usepackage[skins]{tcolorbox}
+\usepackage{grffile}
+%%%%%%%%%%
+%%
+\usetikzlibrary{shadows,arrows,shapes,positioning,calc,backgrounds,
+fit,automata,decorations.markings,
+decorations.pathreplacing,decorations.pathmorphing}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\newcommand{\cplot}[3]{\node[] at (#2,#3) {\includegraphics[width=1cm]{#1}};}
+\begin{tikzpicture}
+[scale=1,auto, transform shape,
+dedge/.style={>=latex', shorten >=.0pt, shorten <=.0pt},
+axis/.style={ultra thin,black!60,dedge},
+tic/.style={ultra thin,font=\tiny,black!60},
+]
+\cplot{../results/cities//localities_50_cities_100000.png}{0}{0}
+\cplot{../results/cities//localities_75_cities_100000.png}{0}{1}
+\cplot{../results/cities//localities_100_cities_100000.png}{0}{2}
+\cplot{../results/cities//localities_50_cities_250000.png}{1}{0}
+\cplot{../results/cities//localities_75_cities_250000.png}{1}{1}
+\cplot{../results/cities//localities_100_cities_250000.png}{1}{2}
+\cplot{../results/cities//localities_50_cities_500000.png}{2}{0}
+\cplot{../results/cities//localities_75_cities_500000.png}{2}{1}
+\cplot{../results/cities//localities_100_cities_500000.png}{2}{2}
+\draw[tic] (0,-.5) -- (0,-.55) node[shift={(0,-.1cm)},tic] {$100000$};
+\draw[tic] (1,-.5) -- (1,-.55) node[shift={(0,-.1cm)},tic] {$250000$};
+\draw[tic] (2,-.5) -- (2,-.55) node[shift={(0,-.1cm)},tic] {$500000$};
+\draw[tic] (-.5,0) -- (-.55,0) node[shift={(.1cm,0)},tic,anchor=east] {$50$};
+\draw[tic] (-.5,1) -- (-.55,1) node[shift={(.1cm,0)},tic,anchor=east] {$75$};
+\draw[tic] (-.5,2) -- (-.55,2) node[shift={(.1cm,0)},tic,anchor=east] {$100$};
+\draw[axis,->] (-.6,-.5) -- ($(3,-.5)+(-.5,0)$) node[font=\small,black,midway,below=.2] {pop. thresh. $\rightarrow$};
+\draw[axis,->] (-.5,-.6) -- ($(-.5,3)+(0,-.5)$) node[font=\small,black,midway,shift={(-.5,.6)},rotate=90] {radius $\rightarrow$};
+\node [font=\small,shift={(0,.2cm)}] at (current bounding box.north) {};
+\end{tikzpicture}
+\end{document}
