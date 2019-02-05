@@ -11,8 +11,6 @@ import pandas as pd
 import logging
 import time
 from pyclustering.cluster.xmeans import xmeans
-from pyclustering.cluster.agglomerative import agglomerative
-from pyclustering.cluster.agglomerative import type_link
 from pyclustering.cluster.center_initializer import kmeans_plusplus_initializer
 #from nltk.cluster.util import euclidean_distance
 
@@ -21,7 +19,7 @@ from pyclustering.cluster.center_initializer import kmeans_plusplus_initializer
 SIM_FILE="../obj/infection_vector_BD.csv"
 CELL_START_IND=11
 START_NUM_CENTERS=2
-DEFAULT_K=20
+KMAX=20
 LOCALITY_CELLS="../../cellular_automata/obj/locality_cells.csv"
 REPORTING_CELLS=[651957, 651965, 656282, 659158, 659166, 663477, 663489, 669234]
 DESC="""Find average correlation (sample Pearson correlation coefficient)
@@ -30,7 +28,7 @@ between different classes of models. Modes:
 - Only cells belonging to a locality are considered;
 - Only reporting cells are considered."""
 
-def clusterSimulationData(clusteringAlgo,simulationData,numClusters):
+def clusterSimulationData(simulationData,kmax):
     # Prepare data (clipping to remove model parameters)
     selectedColumns=simulationData.columns.tolist()[CELL_START_IND:]
     simulationData=simulationData.loc[:,selectedColumns]
@@ -38,13 +36,10 @@ def clusterSimulationData(clusteringAlgo,simulationData,numClusters):
     logging.info("Clustering ...")
     start=time.time()
 
-    if clusteringAlgo=="xmeans":
-        # Cluster
-        ## initialization
-        initialCenters = kmeans_plusplus_initializer(simulationData.values.tolist(),START_NUM_CENTERS).initialize()
-        clusterInstance = xmeans(simulationData.values.tolist(),tolerance=.001,initial_centers=initialCenters,kmax=numClusters)
-    elif clusteringAlgo=="agglomerative":
-        clusterInstance=agglomerative(simulationData.values.tolist(),numClusters,type_link.CENTROID_LINK)
+    # Cluster
+    ## initialization
+    initialCenters = kmeans_plusplus_initializer(simulationData.values.tolist(),START_NUM_CENTERS).initialize()
+    clusterInstance = xmeans(simulationData.values.tolist(),tolerance=.001,initial_centers=initialCenters,kmax=kmax)
 
     ## cluster
     clusterInstance.process()
@@ -78,8 +73,7 @@ if __name__=="__main__":
     parser=argparse.ArgumentParser(description=DESC,
     formatter_class=argparse.RawTextHelpFormatter)
 
-    parser.add_argument("-a","--algorithm",default="xmeans",help="xmeans/agglomerative",action="store")
-    parser.add_argument("-k","--number_of_clusters",type=int,default=DEFAULT_K,help="max. number of clusters",action="store")
+    parser.add_argument("-k","--kmax",type=int,default=KMAX,help="max. number of clusters",action="store")
     parser.add_argument("-o","--output_file",default="clusters.csv",help="output file of cluster assignments",action="store")
 
     args=parser.parse_args()
@@ -95,7 +89,7 @@ if __name__=="__main__":
     logging.info(simData.shape)
 
     # cluster
-    clusters=clusterSimulationData(args.algorithm,simData,args.number_of_clusters)
+    clusters=clusterSimulationData(simData,args.kmax)
 
     # write outputt
     selectedColumns=simData.columns.tolist()[:CELL_START_IND]

@@ -96,17 +96,6 @@ Rscript ../scripts/cart_cluster.R -f $clustersFile -o $cartFile
 done
 }
 
-function agglomerative(){
-for k in `seq 2 10`
-do
-clustersFile=clusters_$k.csv
-cartFile=cart_clusters_$k.pdf
-python ../scripts/xmeans_instances.py -k $k -o $clustersFile -a agglomerative
-Rscript ../scripts/cart_cluster.R -f $clustersFile -o $cartFile
-done
-}
-
-
 function formatVar(){
 awk 'NR>1' $1 | sed  -e 's/"//g' \
     -e 's/a_ld/\\$\\\\alpha_{\\\\ell d}\\$/' \
