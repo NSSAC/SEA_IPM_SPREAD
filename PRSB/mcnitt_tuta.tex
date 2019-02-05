@@ -1385,35 +1385,57 @@ resembles those of Class~A models, but with much less intensity.
 %%
 \begin{figure}[ht]
 \begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/PH_model-B_precip1_m1_l3.pdf}
-\caption{\label{fig:phlBContour}}
+\includegraphics[width=\textwidth]{../cellular_automata/results/contour/TH_model-B_precip1_m1_l3.pdf}
+\caption{Thailand without intervention\label{fig:thlBContour}}
 \end{subfigure}
 \begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/PH_model-B_precip1-out-100_m1_l3.pdf}
-\caption{\label{fig:phlBContourInt}}
+\includegraphics[width=\textwidth]{../cellular_automata/results/contour/TH_model-B_precip1-out-100_m1_l3.pdf}
+\caption{Thailand with intervention\label{fig:thlBContourInt}}
 \end{subfigure}
 \begin{subfigure}[b]{.43\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/PH_dist_prob_B_box.pdf}
-\caption{\label{fig:phlBContourBox}}
+\includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/TH_dist_prob_B_box.pdf}
+\caption{Thailand: range of expansion (all Class B models)\label{fig:thlBContourBox}}
 \end{subfigure}
-\caption{\textbf{Interventions.} The effect of
-reducing outflows from major production regions is shown for Class~B
-models. These are representative results for Philippines. Plots for other
-countries are in Figure~\ref{S:fig:intervene}. In the simulations, a high
-production region (Northern Mindanao) was seeded. (a)~\textbf{Without
-intervention.} Simulations indicate that for the given initial conditions,
-there is a high chance that all major production areas of Philippines will
-be affected within 24 months.  The colors indicate the time interval at
-which there is at least a 50\% chance that a location will be infected.
-(b)~\textbf{With market level intervention.} The spread without the
-influence of long-distance flows from localities corresponding to high
-production areas (Northern Mindanao and Central Luzon). We observe a delay
-of more than two years in the introduction to the northern part due to this
-intervention.  (c)~\textbf{Spread with respect to origin of infection.}
-We compare the effect of reducing the long-distance flow the
-above-mentioned regions by 50\% and 100\%. The results shown correspond to
-all Class~B instances with Moore range~$\mooreRange=1$. \label{fig:intervene}}
+\begin{subfigure}[b]{.28\textwidth}
+\includegraphics[width=\textwidth]{../cellular_automata/results/contour/VN_model-B_precip1_m1_l3.pdf}
+\caption{Vietnam without intervention\label{fig:vnmBContour}}
+\end{subfigure}
+\begin{subfigure}[b]{.28\textwidth}
+\includegraphics[width=\textwidth]{../cellular_automata/results/contour/VN_model-B_precip1-out-100_m1_l3.pdf}
+\caption{Vietnam with intervention\label{fig:vnmBContourInt}}
+\end{subfigure}
+\begin{subfigure}[b]{.43\textwidth}
+\includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/VN_dist_prob_B_box.pdf}
+\caption{Vietnam range of expansion (all Class B models)\label{fig:vnmBContourBox}}
+\end{subfigure}
+\caption{\textbf{Rate and pattern of spread with and without intervention.}
+Representative spread dynamics of Class~B models ($\mooreRange=1, \ell=3$)
+for two countries. More plots are in Figure~\ref{S:fig:intervene}. In each
+case, a cell close to a high production region was seeded. The first column
+corresponds to spread for 48 months after introduction. The colors indicate
+the time interval at which there is at least a 50\% chance that a location
+will be infected.The second column corresponds to spread after cutting off
+flows from chosen localities. The third column shows average spread with
+respect to origin of infection for all Class~B models.
+\label{fig:spread}}
 \end{figure}
+%%     \textbf{Interventions.} The effect of
+%% reducing outflows from major production regions is shown for Class~B
+%% models. These are representative results for Philippines. Plots for other
+%% countries are in Figure~\ref{S:fig:intervene}. In the simulations, a high
+%% production region (Northern Mindanao) was seeded. (a)~\textbf{Without
+%% intervention.} Simulations indicate that for the given initial conditions,
+%% there is a high chance that all major production areas of Philippines will
+%% be affected within 24 months.  The colors indicate the time interval at
+%% which there is at least a 50\% chance that a location will be infected.
+%% (b)~\textbf{With market level intervention.} The spread without the
+%% influence of long-distance flows from localities corresponding to high
+%% production areas (Northern Mindanao and Central Luzon). We observe a delay
+%% of more than two years in the introduction to the northern part due to this
+%% intervention.  (c)~\textbf{Spread with respect to origin of infection.}
+%% We compare the effect of reducing the long-distance flow the
+%% above-mentioned regions by 50\% and 100\%. The results shown correspond to
+%% all Class~B instances with Moore range~$\mooreRange=1$. \label{fig:intervene}}
 %% Under the assumption that appropriate control
 %% measures are taken, we reduce the incoming and outgoing edge weights
 %% by~$50\%$ of their original value. The resulting model was compared with
