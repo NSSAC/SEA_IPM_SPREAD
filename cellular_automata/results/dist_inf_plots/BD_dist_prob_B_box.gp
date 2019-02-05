@@ -76,6 +76,6 @@ set ylabel "Accumulated probabilities at $t=48$" offset -2,0 font ",15"
 
 unset title;        set key r t width 8;        set xlabel offset 0,.7;        set style line 1 lw 7;        set style line 2 lw 7;        set style data boxplot;        set style boxplot nooutliers;        set xtics offset 0,-.4;
 
-plot    'model-B_s2_48.csv' u (1.0):2:(.5):1 ls 1 fill solid .4 ti 'No interv.',    'model-B_s5_48.csv' u (1.0):2:(.2):1 ls 2 fill solid .4 ti 'Interv.',    '.cell_count_rep.csv' u (1.0):2:(.1):1 ls 4 fill solid .4 ti 'max'
+plot    'model-B_s2_48.csv' u (1.0):2:(.5):1 ls 1 fill solid .4 ti 'No interv.',    'model-B_s5_48.csv' u (1.0):2:(.1):1 ls 2 fill solid .4 ti 'Interv.',    '.cell_count_rep.csv' u (1.0):2:(.1):1 ls 4 fill solid .4 ti 'max'
 
 #set term x11 reset;
