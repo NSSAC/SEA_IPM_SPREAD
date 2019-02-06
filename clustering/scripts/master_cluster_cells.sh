@@ -4,7 +4,7 @@
 ###########################################################################
 DB="../../cellular_automata/results/results.db"
 
-function query_to_filenames(){
+function query_to_filenames(){ # extract simulation outputs from zip folders
 rootDir=$1
 queryResult=$2  #csv file
     
@@ -18,7 +18,7 @@ wc -l .to_be_deleted.mov.sh
 bash .to_be_deleted.mov.sh
 }
 
-function extract_files(){
+function extract_files(){ # extract simulation outputs for parameter sets chosen by a query
 rm -f .to_be_deleted.exp.csv
 sqlite3 ../../cellular_automata/results/results.db <<! >> .to_be_deleted.exp.csv
 .mode csv
@@ -70,10 +70,10 @@ tail -1 rank_time_BD/$f >> expected_time_BD.csv
 done
 }
 
-function cluster(){
+function cluster(){ # cluster simulation output using different algorithms
 algo=$1
 echo "#!/bin/bash" > run
-for k in `seq 2 10`
+for k in `seq 2 30`
 do
 clustersFile=cluster_${algo}_$k.csv
 logFile=cluster_${algo}_$k.log

@@ -4,7 +4,7 @@
 ###########################################################################
 DB="../../cellular_automata/results/results.db"
 
-function formatVar(){
+function formatVar(){ #IGNORE
 awk 'NR>1' $1 | sed  -e 's/"//g' \
     -e 's/a_long/\\$\\\\alpha_{\\\\ell d}\\$/' \
     -e 's/latency_period/\\$\\\\ell\\$/' \
@@ -17,7 +17,7 @@ awk 'NR>1' $1 | sed  -e 's/"//g' \
     > $2
 }
 
-function plotRF(){
+function plotRF(){ #IGNORE
 ../../cellular_automata/scripts/plot.sh -o $2 \
    -c mathematica \
    -T hist \
@@ -32,7 +32,7 @@ function plotRF(){
        -p "plot '< gsort -t, -k2,2 -n -r $1' u 2:(-\$0):yticlabel(1) ls $3 pt 7"
 }
 
-function cartAndRF(){
+function cartAndRF(){ # CART and RF analysis of clusters
 for f in `ls -1 cluster_*csv`
 do
 echo $f
@@ -53,7 +53,7 @@ plotRF $f $plotFile 1
 done
 }
 
-function createParFile(){
+function createParFile(){ #IGNORE
 grep "$1" par_all.csv | awk -F, 'NR==1{print $2}' > $2.csv
 grep "$1" par_all.csv >> $2.csv
 }

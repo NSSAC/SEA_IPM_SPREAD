@@ -1,5 +1,0 @@
-INFO:root:Shape of data:
-INFO:root:(7062, 3387)
-INFO:root:Clustering (kmeans) ...
-INFO:root:done. 0.301757 minutes
-INFO:root:(Number of clusters,Minimum distance between centroids): 10,7.45383
