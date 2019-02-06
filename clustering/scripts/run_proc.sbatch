@@ -40,7 +40,7 @@
 
 # Set the time, which is the maximum time your job can run in HH:MM:SS
 
-#SBATCH --time=10:00:00
+#SBATCH --time=48:00:00
 
 
 # Set the number of nodes, and the number of tasks per node (up to 16 per node)
