@@ -70,40 +70,30 @@ tail -1 rank_time_BD/$f >> expected_time_BD.csv
 done
 }
 
-function kmeans(){
-for k in `seq 7 10`
+function cluster(){
+algo=$1
+echo "#!/bin/bash" > run
+for k in `seq 2 10`
 do
-python ../scripts/kmeans_instances.py -k $k
-done
-}
-
-## function cart(){
-## for f in `find ../results -name "instance_cluster*csv"`
-## do
-## k=`basename $f | sed -e 's/instance_cluster_//' -e 's/.csv//'`
-## echo $k
-## Rscript ../scripts/cart_cluster.R -f $f -o cc$k.pdf
-## done
-## }
-
-function xmeans(){
-for kmax in `seq 2 10`
-do
-clustersFile=clusters_$kmax.csv
-cartFile=cart_clusters_$kmax.pdf
-python ../scripts/xmeans_instances.py -k $kmax -o $clustersFile
-Rscript ../scripts/cart_cluster.R -f $clustersFile -o $cartFile
+clustersFile=cluster_${algo}_$k.csv
+logFile=cluster_${algo}_$k.log
+cat << EOF >> run
+sbatch -o $logFile \
+--export=command="python ../scripts/cluster_instances.py -a $algo -k $k -o $clustersFile" \
+../scripts/run_proc.sbatch
+EOF
+chmod +x run
 done
 }
 
 function formatVar(){
 awk 'NR>1' $1 | sed  -e 's/"//g' \
-    -e 's/a_ld/\\$\\\\alpha_{\\\\ell d}\\$/' \
+    -e 's/a_long/\\$\\\\alpha_{\\\\ell d}\\$/' \
     -e 's/latency_period/\\$\\\\ell\\$/' \
     -e 's/moore/\\$r_\\\\textrm{M}\\$/' \
     -e 's/start_month/\\$t_s\\$/' \
-    -e 's/a_l/\\$\\\\alpha_{\\\\ell}\\$/' \
-    -e 's/a_s/\\$\\\\alpha_{s}\\$/' \
+    -e 's/a_local/\\$\\\\alpha_{\\\\ell}\\$/' \
+    -e 's/a_sd/\\$\\\\alpha_{s}\\$/' \
     -e 's/beta/\\$\\\\beta\\$/' \
     -e 's/kappa/\\$\\\\kappa\\$/' \
     > $2
@@ -122,6 +112,24 @@ function plotRF(){
        set format x \"%.1s\"; \
        set nokey;" \
        -p "plot '< gsort -t, -k2,2 -n -r $1' u 2:(-\$0):yticlabel(1) ls $3 pt 7"
+}
+
+function cart_and_rf(){
+for f in `ls -1 cluster_*csv`
+do
+echo $f
+cartFile=`echo $f | sed -e 's/cluster/cart/' -e 's/csv/pdf/'`
+Rscript ../scripts/cart_cluster.R -f $f -o $cartFile
+rfFile=`echo $f | sed -e 's/cluster/rf/' -e 's/.csv/_original.csv/'`
+rfFileFormatted=`echo $rfFile | sed -e 's/_original//'`
+Rscript ../scripts/random_forest_cluster.R -f $f -o $rfFile
+formatVar $rfFile $rfFileFormatted
+plotFile=`echo $rfFile | sed -e 's/csv$/pdf/'`
+done
+}
+
+function rf_plot(){
+plotRF $rfFileFormatted $plotFile 1
 }
 
 function rf(){

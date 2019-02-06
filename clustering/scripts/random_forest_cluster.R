@@ -17,9 +17,10 @@ opt = parse_args(opt_parser);
 dt <- fread(input=opt$cluster_file, header=TRUE)
 dt$cluster=as.factor(dt$cluster)
 
-reg=randomForest(cluster~season+beta+kappa+seed+start_month+moore+latency_period+a_s+a_l+a_ld, ntree = 500, nodesize=5, importance=TRUE, data=dt)
+reg=randomForest(cluster~season+beta+kappa+seed+start_month+moore+latency_period+a_sd+a_local+a_long, ntree = 500, nodesize=5, importance=TRUE, data=dt)
 
 imp <- data.table(var=rownames(reg$importance) , reg$importance)
-imp <- imp[order(-imp[,-2]),]  # sort in descending 
+imp=imp[,c("var","MeanDecreaseAccuracy","MeanDecreaseGini")]
+imp <- imp[order(-imp[,3]),]  # sort in descending 
 
 write.csv(imp, file=opt$out_file, row.names=FALSE)		
