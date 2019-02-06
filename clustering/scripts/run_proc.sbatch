@@ -1,8 +1,12 @@
 #!/bin/bash
 
-# Example Slurm sbatch script for simple serial jobs in the discovery cluster
-# discovery_q partition.
-
+# Example
+# cat << EOF >> run
+# sbatch -o $logFile \
+# --export=command="python ../scripts/cluster_instances.py -o $clustersFile" \
+# --job-name="test" \
+# ../scripts/run_proc.sbatch
+# EOF
 #
 # SLURM JOB SCRIPT OPTIONS:
 #
