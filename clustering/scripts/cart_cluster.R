@@ -32,6 +32,6 @@ fit
 # pdf(file=outfile, width=7, height=3)
 pdf(file=opt$out_file,width=6,height=5)
 #fancyRpartPlot(fit,palettes="OrRd",node.fun=test_fun)
-fancyRpartPlot(fit,palettes="Pastel2",sub="",labels=c(1,2,3))
+fancyRpartPlot(fit,palettes="Pastel2",sub="")
 #plot(pr,drop_terminal=TRUE,type="extended")
 dev.off()

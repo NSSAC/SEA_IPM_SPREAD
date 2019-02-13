@@ -60,8 +60,8 @@ do
 echo $f
 cartFile=`basename $f | sed -e 's/^/cart_/' -e 's/csv$/pdf/'`
 Rscript ../scripts/cart_cluster.R -f $f -o $cartFile
-exit
 done
+exit
 
 awk -F, '{printf "%s",$1; for(i=2;i<13;i++) printf ",%s",$i; printf "\n"}' ../results/agglomerative/clusters_agglomerative.csv | sed -e 's/CLU10/cluster' > for_rf.csv
 Rscript ../scripts/random_forest_cluster.R -f for_rf.csv -o $rfFile
