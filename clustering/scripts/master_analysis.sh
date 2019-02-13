@@ -32,18 +32,19 @@ function plotRF(){ #IGNORE
        -p "plot '< gsort -t, -k2,2 -n -r $1' u 2:(-\$0):yticlabel(1) ls $3 pt 7"
 }
 
-function cartAndRF(){ # CART and RF analysis of clusters
-for f in `ls -1 cluster_*csv`
+function cartAndRF(){ # CART and RF analysis of clusters for kmeans
+for f in `find ../results/clusters -iname cluster_*csv`
 do
 echo $f
-cartFile=`echo $f | sed -e 's/cluster/cart/' -e 's/csv/pdf/'`
+cartFile=`basename $f | sed -e 's/cluster/cart/' -e 's/csv/pdf/'`
 Rscript ../scripts/cart_cluster.R -f $f -o $cartFile
-rfFile=`echo $f | sed -e 's/cluster/rf/' -e 's/.csv/_original.csv/'`
+rfFile=`basename $f | sed -e 's/cluster/rf/' -e 's/.csv/_original.csv/'`
 rfFileFormatted=`echo $rfFile | sed -e 's/_original//'`
 Rscript ../scripts/random_forest_cluster.R -f $f -o $rfFile
 formatVar $rfFile $rfFileFormatted
 plotFile=`echo $rfFile | sed -e 's/csv$/pdf/'`
 done
+exit
 
 for f in `ls -1 ../results/rf_*means_*csv`
 do
@@ -53,19 +54,34 @@ plotRF $f $plotFile 1
 done
 }
 
+function agglomerative(){ # CART and RF for agglomerative from Hannah
+for f in `find ../results/agglomerative -iname c*_agg.csv`
+do
+echo $f
+cartFile=`basename $f | sed -e 's/^/cart_/' -e 's/csv$/pdf/'`
+Rscript ../scripts/cart_cluster.R -f $f -o $cartFile
+exit
+done
+
+awk -F, '{printf "%s",$1; for(i=2;i<13;i++) printf ",%s",$i; printf "\n"}' ../results/agglomerative/clusters_agglomerative.csv | sed -e 's/CLU10/cluster' > for_rf.csv
+Rscript ../scripts/random_forest_cluster.R -f for_rf.csv -o $rfFile
+}
+
 function createParFile(){ #IGNORE
 grep "$1" par_all.csv | awk -F, 'NR==1{print $2}' > $2.csv
 grep "$1" par_all.csv >> $2.csv
 }
 
-function rfClusterSize(){
+function rfClusterSize(){ # parameter importance vs. cluster size
 algo=$1
+t=$2
 # make files per variable with normalized 4th column
 rm -f par_*.csv
 for k in `seq 2 10`
 do
-inFile=../results/rf_${algo}_$k.csv
-awk -F, -v OFS=, 'FNR==NR{max=($3>max)?$3:max;next}{print $1,$2,$3/max}' $inFile $inFile > .temp_rf_clustersize
+inFile=../results/rf/rf_${algo}_${k}_t$t.csv
+#awk -F, -v OFS=, 'FNR==NR{max=($3>max)?$3:max;next}{print $1,$2,$3/max}' $inFile $inFile > .temp_rf_clustersize
+awk -F, -v OFS=, 'FNR==NR{x+=1;next}{print $1,$2,x-FNR+1}' $inFile $inFile > .temp_rf_clustersize
 sed -e "s/^/$k,/" .temp_rf_clustersize >> par_all.csv
 done
 
@@ -81,25 +97,26 @@ createParFile "alpha.*ell...," par_local
 createParFile "alpha..s" par_short
 
 # plot
-../../cellular_automata/scripts/plot.sh -o rf_k_$algo \
+../../cellular_automata/scripts/plot.sh -o rf_k_${algo}_t${t} \
    -c mathematica \
    -m lines \
-   -x "\\\%Normalized mean decrease accuracy" \
+   -y "rank" \
+   -x "cluster size" \
    -f "all:18" \
    -a "unset title; \
        set key out Right spacing 2.3 t r; \
-       set ytics textcolor 'black' offset .5,0; \
+       set ytics textcolor 'black' offset 0,0; \
        set xtics font \",15\";" \
    -p "plot 'par_ald.csv' u 1:4 ls 1 t columnheader(1), \
             'par_l.csv' u 1:4 ls 2 t columnheader(1), \
             'par_moore.csv' u 1:4 ls 3 t columnheader(1), \
             'par_start.csv' u 1:4 ls 4 t columnheader(1), \
+            'par_local.csv' u 1:4 ls 5 t columnheader(1), \
+            'par_seed.csv' u 1:4 ls 6 t columnheader(1), \
             'par_season.csv' u 1:4 ls 1 dt 7 t columnheader(1), \
-            'par_local.csv' u 1:4 ls 2 dt 7 t columnheader(1), \
-            'par_seed.csv' u 1:4 ls 3 dt 7 t columnheader(1), \
-            'par_short.csv' u 1:4 ls 4 dt 7 t columnheader(1), \
-            'par_beta.csv' u 1:4 ls 5 dt 7 t columnheader(1), \
-            'par_kappa.csv' u 1:4 ls 6 dt 7 t columnheader(1) \
+            'par_short.csv' u 1:4 ls 2 dt 7 t columnheader(1), \
+            'par_beta.csv' u 1:4 ls 3 dt 7 t columnheader(1), \
+            'par_kappa.csv' u 1:4 ls 4 dt 7 t columnheader(1) \
             "
 }
 
@@ -132,5 +149,5 @@ if [[ $# == 0 ]]; then
    echo "Here are the options:"
    grep "^function" $BASH_SOURCE | sed -e 's/function/  /' -e 's/[(){]//g' -e '/IGNORE/d'
 else 
-   eval $1 $2
+   eval $1 $2 $3
 fi

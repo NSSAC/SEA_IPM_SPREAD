@@ -981,22 +981,22 @@ the algorithm was applied with model parameters as independent variables
 and cluster index as the dependent variable. The results are in
 Figure~\ref{fig:sensitivity}.
 %%
-\begin{figure}[t]
-\centering
-\begin{subfigure}[b]{.32\textwidth}
-    \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_all.pdf}
-    \caption{All \label{fig:rfAll}}
-\end{subfigure}
-%%
-\begin{subfigure}[b]{.32\textwidth}
-    \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_A.pdf}
-    \caption{Class A\label{fig:rfA}}
-\end{subfigure}
-%%
-\begin{subfigure}[b]{.32\textwidth}
-    \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_B.pdf}
-    \caption{Class B\label{fig:rfB}}
-\end{subfigure}
+%% \begin{figure}[t]
+%% \centering
+%% \begin{subfigure}[b]{.32\textwidth}
+%%     \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_all.pdf}
+%%     \caption{All \label{fig:rfAll}}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%%     \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_A.pdf}
+%%     \caption{Class A\label{fig:rfA}}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%%     \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_B.pdf}
+%%     \caption{Class B\label{fig:rfB}}
+%% \end{subfigure}
 %% %%
 %% \begin{subfigure}[b]{.32\textwidth}
 %%     \includegraphics[width=1.1\textwidth]{../cellular_automata/results/rf/rf_importance_short_mse.pdf}
@@ -1007,21 +1007,21 @@ Figure~\ref{fig:sensitivity}.
 %% \includegraphics[width=1.1\textwidth]{../cellular_automata/results/rf/rf_importance_long_mse.pdf}
 %% \caption{Class B\label{fig:rfLong}}
 %% \end{subfigure}
-\caption{\textbf{Parameter importance.} Random
-Forest~\cite{breiman2001random} method was applied to study parameter
-importance. (a)~With cluster index as the dependent variable,
-the analysis was performed on the set of model instances which yielded a
-similarity~$\similarity\ge6$.
-%% (b)~The sensitivity of the spread pattern to parameters was analyzed by
-%% repeating the same process, but with cluster index as the dependent
-%% variable.
-The results for the entire set (a) and separately for Class~A (b) and
-Class~B models (c) are shown. The parameters are ordered by their
-importance based on percentage increase in mean square error from permuting
-the variable--higher, the more important.
-\label{fig:sensitivity}}
-%% a total of $17,000$ samples from the parameter space
-\end{figure}
+%%\caption{\textbf{Parameter importance.} Random
+%%Forest~\cite{breiman2001random} method was applied to study parameter
+%%importance. (a)~With cluster index as the dependent variable,
+%%the analysis was performed on the set of model instances which yielded a
+%%similarity~$\similarity\ge6$.
+%%%% (b)~The sensitivity of the spread pattern to parameters was analyzed by
+%%%% repeating the same process, but with cluster index as the dependent
+%%%% variable.
+%%The results for the entire set (a) and separately for Class~A (b) and
+%%Class~B models (c) are shown. The parameters are ordered by their
+%%importance based on percentage increase in mean square error from permuting
+%%the variable--higher, the more important.
+%%\label{fig:sensitivity}}
+%%%% a total of $17,000$ samples from the parameter space
+%%\end{figure}
 %%
 
 The long distance pathway parameter~$\ald$ is by far the most important
@@ -1487,33 +1487,32 @@ other stuff
 \begin{enumerate}
     \item bias in sampling
     \item feedback not accounted for
-    \item new climex papers to be added (vaddi also)
     \item others have only considered smaller area
 \end{enumerate}
 
-Traditionally, crops such as tomato and eggplant have been grown in the
-winter during the dry season. However, over the past decade, due to rising
-demand and opportunities to export, there has been a thrust towards
-year-round production using protected cultivation methods and resilient
-varieties~\cite{ali2001}. FAO data on tomato production and trade shows a
-steady increase in production and internal trade. In comparison, the export
-of tomato to outside of the focus region has risen steeply in the recent
-years (after 2011), while the imports generally indicate a downward trend
-(See Figure~\ref{S:fig:trends} in supplement). Therefore, invasions from
-pests such as \tuta{} can have a huge negative impact on the socioeconomic
-fabric of this region.  
-Although there is a general consensus that vegetable and seedling trade is a
-primary driver of \tuta{} spread, previous modeling efforts have
-exclusively focused on ecological aspects. Several 
+Traditionally, crops such as tomato have been grown in the dry season,
+which is usually during winter in most parts of Southeast Asia. However,
+over the past decade, due to rising demand and opportunities to export,
+there has been a thrust towards year-round production using protected
+cultivation methods and resilient varieties~\cite{ali2001}. Tomato
+production and internal trade has steadily increased in this region (See
+Figure~\ref{S:fig:trends} in supplement). In comparison, the export of
+tomato to outside of the focus region has risen steeply in the recent years
+(after 2011), while the imports generally indicate a downward trend.
+Therefore, invasions from pests such as \tuta{} can have a huge negative
+impact on the socioeconomic fabric of this region.  Although there is a
+general consensus that vegetable and seedling trade is a primary driver of
+\tuta{} spread, previous modeling efforts have exclusively focused on
+ecological aspects. Several
 studies~\cite{desneux2010biological,tonnang2015identification} provide risk
 maps using CLIMEX and take additional factors into account.
-Guimapi~et~al.~\cite{guimapi2016modeling} used a
-cellular automata approach to capture the global spread of the pest by
-factoring in temporal variations and spatial distribution of vegetation,
-temperature, and tomato production. 
-A precursor to this work~\cite{venkatramanan2017towards} modeled the seasonal
-production and trade of tomato in Nepal to study the role of trade in the
-spread of \tuta{} in Nepal using gravity model and network dynamics. 
+Guimapi~et~al.~\cite{guimapi2016modeling} used a cellular automata approach
+to capture the global spread of the pest by factoring in temporal
+variations and spatial distribution of vegetation, temperature, and tomato
+production. A precursor to this work~\cite{venkatramanan2017towards}
+modeled the seasonal production and trade of tomato in Nepal to study the
+role of trade in the spread of \tuta{} in Nepal using gravity model and
+network dynamics.
 %% A novel ranking-based
 %% inference was used to establish that trade was indeed a driving factor in the
 %% rapid spread of the pest in this region.
@@ -1528,27 +1527,22 @@ spread of \tuta{} in Nepal using gravity model and network dynamics.
 
 %% In recent years, there has been a thrust towards integrated modeling
 %% approaches to understand invasive species dynamics. 
-Multi-pathway models are being increasingly used to study the role of invasive
-species dispersal. Douma~et~al.~\cite{douma2016pathway} survey the
+Multi-pathway models are being increasingly used to study the role of
+invasive species dispersal. Douma~et~al.~\cite{douma2016pathway} survey the
 literature categorizing various efforts into flow-based pathway models and
-agent-based models.
-Robinet~et~al.~\cite{robinet2009role} show that the distribution and spread
-pattern of the pinewood nematode in China is strongly correlated with
-density of human population and infrastructure such as railways and river
-ports. Carrasco~et~al.~\cite{carrasco2010unveiling}
-combine spatially explicit models with a phenology model to incorporate
-population dynamics of the pest (western corn rootworm). Two types of
-long-distance dispersals are considered -- domestic and international. The
-domestic mode is modeled as a flow network between cities using a gravity
-model approach.  
+agent-based models.  Robinet~et~al.~\cite{robinet2009role} show that the
+distribution and spread pattern of the pinewood nematode in China is
+strongly correlated with density of human population and infrastructure
+such as railways and river ports.
+Carrasco~et~al.~\cite{carrasco2010unveiling} combine spatially explicit
+models with a phenology model to incorporate population dynamics of the
+pest (western corn rootworm). Two types of long-distance dispersals are
+considered -- domestic and international. The domestic mode is modeled as a
+flow network between cities using a gravity model approach.
 Nopsa~et~al.~\cite{nopsa2015ecological} use a network science approach to
 studying the role of transport and storage infrastructure in the spread of
 pests and pathogens of wheat. Sutrave~et~al.~\cite{sutrave2012identifying}
 use a time-varying network model to study the spread of Soybean rust.
-However, in all these cases, there was more information available on the
-incidence of the pest or pathogen under study enabling rigorous validation
-of the developed models.
-
 Our model is in part motivated by the hybrid approaches used in the study
 of infectious diseases of humans and livestock.
 Bradhurst~et~al.~\cite{bradhurst2015hybrid} study the spread of foot and
@@ -1560,90 +1554,116 @@ patch network model where a compartmental model is used to simulate
 intra-locale spread and a gravity model based approach is used for
 inter-locale spread of flu in the neighborhoods of New~York.
 
-\paragraph{Key challenges.}
-We have used a multitude of datasets-- production, consumption, trade
-dynamics, climate, biology, etc.-- to capture, to a reasonable extent, the
-complexity of the invasion process.  For many countries, domestic
-production data had to be collected (or even inferred) from several
-publications and reports (Table~\ref{S:tab:countryData}). Therefore, data
-came from disparate sources, and were misaligned in time and spatial
-resolution. Production and trade data from FAOSTAT also had gaps in them.
-In particular, it was hard to model seasonal production and human assisted
-spread. Seasonal production is dependent not only on the host, climate, and
-geography, but also on people's preferences and market demand. For most
-countries, only qualitative information is available.
-%% Another example is the modeling of consumption.
-%% It is possible that there is lot of variation in consumption within a
-%% country~\cite{wijk2007} as well as across seasons. Even at the country
-%% level, data is available for only half of the countries. Also, we did not
-%% find any correlation between consumption and GDP or tomato production
-%% (correlation $< 0.01$). 
-To determine outflows and inflows for each locality,
-we had to identify major ports for imports and exports as well as estimate
-fraction of production which was used for processing. This data was
-available only for a few countries.
+noise in measurements, variability in patterns, 
 
-\paragraph{Limitations.}
-%% The fidelity of models such as the one presented here crucially depends on
-%% the availability of quality data as well as a good understanding of the
-%% processes involved. 
-Scarcity of data has forced us to greatly simplify or ignore some of the
-processes that might significantly influence the spread.  For example, our
-model uses monthly production as a surrogate for infectiousness of a cell.
-Complex phenology models can be used instead to model accurately the growth
-of the pest under specific conditions including the tritrophic interactions
-concerning the pest, host, and its indigenous predators (as in
-Carrasco~et~al.~\cite{carrasco2010unveiling}).  However, as cautioned by
-Robinet~et~al.~\cite{robinet2012suite}, this would add to the complexity of
-the model making it near impossible to verify and validate.
+and assess
+the The modeling framework developed in this paper can
+be used to study the spread of \tuta{} in other regions. However, it is
+possible that additional factors need to be accounted for. 
+It can also be applied to other pests. However, this would require first
+assessing the importance of each pathway based on evidence: diapause and flying
+capacity, spread by human mobility or trade, etc.  
+ 
 
-The farm--market-consumer interactions (local human-mediated spread) are
-well understood at a conceptual level. More or less the structure remains
-the same in all the countries of the focus region. It involves various
-actors such as farmers, wholesalers, retailers, wet markets, supermarkets,
-etc. Nevertheless, it is is a complex infrasturcture, and modeling it is a
-challenge in itself. 
-%% Rebaudo~et~al.~\cite{rebaudo2011}, for example, use a complex
-%% agent-based model to study just the interaction between farmers of two
-%% villages in the context of the potato moth in Ecuador. 
-Similarly, given data on actual flow of vegetables, the gravity model can
-be improved or replaced by more sophisticated approaches. Also, the
+\paragraph{Challenges and limitations.}
+Modeling emerging invasions is particularly challenging. Accounting for
+multiple pathways of spread inevitably increases model complexity. On the
+other hand, limited data on incidence and understanding of the underlying
+dynamics makes it nearly impossible to calibrate and validate the models.
+Besides, since our focus region spans multiple countries, identifying and
+collecting data for each country was a tedious process. For many countries,
+data had to be collected (or even inferred) from several publications and
+reports (Table~\ref{S:tab:countryData}). Further, these datasets were
+misaligned in time and spatial resolution. We have had to simplify or
+ignore some of the processes that might significantly influence the spread.
+For example, our model uses monthly production as a surrogate for
+infectiousness of a cell. Complex phenology models can be used instead (as
+in Carrasco~et~al.~\cite{carrasco2010unveiling}). While such a model for
+\tuta{} would be useful, this would add to the complexity of
+the model~\cite{robinet2012suite}.
+%%
+%% multi-pathway model incorporated a multitude of
+%% datasets-- production, consumption, trade dynamics, climate, biology, etc.
+%% On the other hand, 
+%% To capture the
+%% multi-pathway dynamics complexity of
+%% invasion dynamics demands the use of several datasets spanning mulitple
+%% domains.
+%% Hence, we have had to simplify or ignore some of
+%% the processes that might significantly influence the spread.
+%% amid data scarcity and
+%% heterogeneity. makes modeling has forced
+%% us to simplify or ignore some of the processes that might
+%% significantly influence the spread. 
+%%
+
+In particular, it is hard to model human assisted spread owing to lack of
+seasonal trade data. Production is dependent not only on the host, climate,
+and geography, but also on people's preferences and market demand. To
+determine outflows and inflows for each locality, we had to identify major
+ports for imports and exports as well as estimate fraction of production
+which was used for processing. This data was available only for a few
+countries.  The farm--market-consumer interactions (local human-mediated
+spread) involves various actors such as farmers, wholesalers, retailers,
+wet markets, supermarkets, etc. Modeling this is a challenge in itself. If
+data on actual flow of vegetables is provided, the gravity model can be
+improved or replaced by more sophisticated approaches. Also, the
 relationship between long-distance invasion risk and trade volume is hard
 to determine. While a direct relationship between volume and risk is
 plausible, whether the relation is linear (as assumed by our model) is not
 clear.
 
+%% Therefore, data came from disparate sources, and were misaligned in time
+%% and spatial resolution. Production and trade data from FAOSTAT also had
+%% gaps in them.  
+%% The fidelity of models such as the one presented here crucially depends on
+%% the availability of quality data as well as a good understanding of the
+%% processes involved. 
+%% Another example is the modeling of consumption.
+%% It is possible that there is lot of variation in consumption within a
+%% country~\cite{wijk2007} as well as across seasons. Even at the country
+%% level, data is available for only half of the countries. Also, we did not
+%% find any correlation between consumption and GDP or tomato production
+%% (correlation $< 0.01$).  to model accurately the growth
+%% of the pest under specific conditions including the tritrophic interactions
+%% concerning the pest, host, and its indigenous predators
+%% Rebaudo~et~al.~\cite{rebaudo2011}, for example, use a complex
+%% agent-based model to study just the interaction between farmers of two
+%% villages in the context of the potato moth in Ecuador. 
+
 It is important to account for heterogeneity in production, consumption,
 awareness, cultural factors, etc. both within and between countries. Some
 countries are technologically more advanced than others, which manifests as
 differences in yield, crop loss, trade infrastructure, pest awareness and
-preparation for invasion. It is possible that there is lot of variation in consumption
-within a country as well as across seasons. The relationship between trade
-volume and distance between localities could vary from one region to
-another.
+preparation for invasion~\cite{early2016global}. It is possible that there
+is lot of variation in consumption within a country as well as across
+seasons. The relationship between trade volume and distance between
+localities could vary from one region to another. Extending to other
+regions such as North America, China or Australia, might require accounting
+for seedling trade and greenhouse production.
 %% Even at the country level, data is available for only half of the
 %% countries. Also, we did not find any correlation between consumption and
 %% GDP or tomato production ($p< 0.01$).  Without adequate data, it is
 %% difficult to account for such heterogeneity.
 
-The modeling framework developed in this paper can be used to study the
-spread of \tuta{} in other regions. However, it is possible that additional
-factors need to be accounted for. Seedling trade and greenhouse production
-are two examples that apply to regions such as North America or Australia. 
+\paragraph{Conclusion.} We developed a generic networked modeling framework
+to understand invasive species spread accounting for self- and
+human-mediated pathways. Machine learning techniques were used to address
+data sparsity and model uncertainties. The model was applied to study the
+spread of \tuta{} in the region of Southeast Asia. Our results suggest that
+trade of host plants plays an important role in the spread of the pest.
+Monitoring and control of this pathway can significantly mitigate the
+spread. The methodology uses open-source datasets and can be applied to
+other invasive species and host crops. Besides invasive species spread,
+other potential applications for this work include studies of natural or
+human-initiated disasters, climate change and optimization of food flows.
+
 %% applying this generic modeling approach to other study regions such as
 %% North America or Australia would require taking additional
 %% factors into account. For example, seedling trade could be an important pathway. From a
 %% production perspective, it is becoming important to factor in protected
 %% cultivation methods, which have enabled farmers to extend the growing
 %% season.
-It can also be applied to other pests. However, this would require first
-assessing the importance of each pathway based on evidence: diapause and flying
-capacity, spread by human mobility or trade, etc.  Besides invasive species
-spread, other potential applications for this work include studies of
-natural or human-initiated disasters, climate
-change and optimization of food
-flows.
- 
 %% However, the developed framework is modular and extensible. Given
 %% high-resolution accurate datasets and a better knowledge of the processes,
 %% individual modules can be replaced with more sophisticated modeling

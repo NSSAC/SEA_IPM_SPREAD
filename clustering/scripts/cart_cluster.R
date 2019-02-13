@@ -2,8 +2,8 @@
 library(data.table)
 library(mvpart)
 library(optparse)
-#library(rattle)
-#library(RColorBrewer)
+library(rattle)
+library(RColorBrewer)
 library(party)
 library(partykit)
 
@@ -20,16 +20,18 @@ opt = parse_args(opt_parser);
 #************* Start of Main ************************
 dt <- fread(input=opt$cluster_file, header=TRUE)
 dt$cluster=as.factor(dt$cluster)
+dt$season=as.factor(dt$season)
 
-DV <- data.matrix(dt[, list(cluster)])
+#DV <- data.matrix(dt[, list(cluster)])
 df <- data.frame(dt)
-fit=rpart(DV~season+beta+kappa+seed+start_month+moore+latency_period+a_sd+a_local+a_long, method="anova", data=df, control=rpart.control(minsplit=50, minbucket=20))
+fit=rpart(cluster~season+beta+kappa+seed+start_month+moore+latency_period+a_sd+a_local+a_long, method="class", data=df, control=rpart.control(minsplit=50, minbucket=20))
+fit
 
-pr <- as.party(fit)
-pr
-#pdf(file=outfile, width=7, height=3)
-pdf(file=opt$out_file,width=18,height=8)
+# pr <- as.party(fit)
+# pr
+# pdf(file=outfile, width=7, height=3)
+pdf(file=opt$out_file,width=6,height=5)
 #fancyRpartPlot(fit,palettes="OrRd",node.fun=test_fun)
-#fancyRpartPlot(pr,palettes="OrRd")
-plot(pr,drop_terminal=TRUE,type="extended")
+fancyRpartPlot(fit,palettes="Pastel2",sub="",labels=c(1,2,3))
+#plot(pr,drop_terminal=TRUE,type="extended")
 dev.off()
