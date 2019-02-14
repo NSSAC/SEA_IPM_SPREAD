@@ -260,10 +260,7 @@ annual estimated intervention cost are \EURdig4 million and \EURdig167
 million per year~\cite{}, respectively. It is well accepted that trade
 played a critical role in \tuta{}'s rapid spread. On multiple occasions it
 has been discovered in packaging stations and its spread pattern is
-correlated with prime trade routes~\cite{karadjova2013tuta}. The Animal and
-Plant Health Inspection Service of the United States Department of
-Agriculture (USDA-APHIS) has instituted quarantine regulations for imports
-from regions where the pest is present~\cite{USDA2012}.
+correlated with prime trade routes~\cite{karadjova2013tuta}. 
 
 %% The wide-spread
 %% adoption  of green houses and tunnel farming have allowed it to overwinter
@@ -868,6 +865,8 @@ parameters, clusters were further analyzed using CART with model parameters
 as independent variables and the cluster index as the dependent variable.
 Note that model parameters played no role in clustering process.
 Figure~\ref{fig:clusterOutline} outlines the entire process.
+
+biases in spread pattern and number of clusters
 %%
 \begin{figure}[b]
     \centering
@@ -892,19 +891,25 @@ analysis. \label{fig:clusterOutline}}
 %%
 %% \paragraph{Assessing the role of each pathway in the spread of \tuta{} in
 %% Bangladesh.} 
-\paragraph{The multi-pathway spread in Bangladesh: Multiple possibilities.}
-As described in Methods, the goodness of fit of a model was evaluated by
-comparing the corresponding simulation output with ground truth using the
-similarity score in~\eqref{eqn:similarity}. The ensuing discussion will
-focus on instances with high similarity score ($\similarity\ge6$ and
-approximately 8000 models). The clustering analysis described in Methods
-(outlined in Figure~\ref{fig:clusterOutline}) yielded more than 500
-clusters, which were further analyzed using CART. The details are in
+\paragraph{Variability in the pattern of spread.}
+As described in Methods, the goodness of fit of a model configuration was
+evaluated by comparing the corresponding simulation output with ground
+truth from Bangladesh using the similarity score in~\eqref{eqn:similarity}.
+Variability in the spread patterns was studied by clustering the simulation
+outputs of the selected configurations (Figure~\ref{fig:clusterOutline})
+and analyzing the relationship between the resulting clusters and model
+parameters. The ensuing discussion will focus on instances with high
+similarity score ($\similarity\ge75\%$ and approximately 8000
+configurations).
+
+For a clustering of the configuration space into two groups, the CART
+analysis reveals two distinct spread patterns determined by the presence or absence of the
+long-distance spread component. We observed this in the case of both
+clustering algorithms. The details are in
 Section~\ref{S:sec:cluster} of the supplement. We observed that even though
 each of these models are a close match to the ground truth, two spread
 patterns can be very different from each other. In particular, we observed
-two distinct spread patterns determined by the presence or absence of the
-long-distance spread component. In the first class of models
+ In the first class of models
 (Figure~\ref{fig:bgdClassA}) which we refer to as Class~A, the pathway
 parameter~$\ald$ is negligible.  It is characterized by brisk spread
 between geographically adjacent cells.  In contrast, in Class~B the
@@ -956,12 +961,7 @@ location is infected much later in comparison. However, the eastward spread
 towards the location Jaintiapur is slower than what was observed
 (Figure~\ref{fig:bgdClassB1}). Even though Panchagarh is quite far from
 this location, pest presence was reported by February 2017, just nine
-months from the first report. It is possible that we have not accounted for
-long-distance flows that might explain this spread. A more plausible
-explanation is that a second invasion happened from India. In January 2017,
-\tuta{} was reported from Umiam~\cite{sankarganesh2017}, Meghalaya about
-100kms from Jaintiapur.  It also happens to be near an important trade
-route from India to Northeastern Bangladesh.
+months from the first report.  
 
 We also simulated the spread using the cellular automata model developed by
 Guimapi~\cite{guimapi2016modeling} for Bangladesh. The spread pattern is
@@ -1355,33 +1355,31 @@ localities were invaded. The latter case is shown in
 Figure~\ref{fig:phlBContour}.
 %%
 \paragraph{Interventions at the trade level.}
-Given the importance of the long-distance human-mediated pathway, we
-studied the effect of controlling this pathway in mitigating the spread.
-Monitoring localities by setting up pheromone traps in production areas and
-markets, and quarantining affected areas is one way to accomplish this.
-However, the feasibility and efficacy of implementing this or any other
-strategy in real-life is not clear. Also, since monitoring is resource intensive,
-developing strategies which involve few locations, yet provide near-optimal
-control is a goal for modelers. Nopsa~et~al.~\cite{nopsa2015ecological}
-considered this problem in the context of soybean rust in the US, modeling
-the spread as a propagation process over a network of counties. They
-developed efficient strategies to reduce the spread by identifying and
-monitoring only a subset of locations which are critical for the spread.
-Their strategies heavily rely on the history of infections, which is absent
-in our case.
-
-We evaluated a simple strategy of containing the spread from sources.
-Localities associated with high production areas and relatively less
-consumption were identified. There are at most four such localities per
-country. These localities have high annual outflows and as discussed
-earlier, pest establishment in these areas can potentially lead to rapid
-range expansion.  The outflow from the targeted localities was reduced to
-mimic control at the trade/market level. Figure~\ref{fig:intervene} shows
-the effectiveness of this spread for the case of Philippines. We observed a
-significant reduction in range expansion as well as intensity of spread.
-Besides, as seen in Figure~\ref{fig:phlBContourInt}, stifling these flows
-leads to a radial and more importantly, predictable spread pattern that
-resembles those of Class~A models, but with much less intensity.
+Given that monitoring and quarantining are both resource intensive and
+potentially disruptive, developing strategies that involve few locations,
+yet provide near-optimal control is a goal for modelers. 
+Market-level phytosanitary measures in terms of import restrictions have
+been undertaken by countries~\cite{USDA2012}. Here, we evaluated a simple
+strategy of containing the spread through the trade pathway. Localities
+associated with high annual outflows were identified. As discussed earlier,
+pest establishment in these areas can potentially lead to rapid range
+expansion. The outflow from the targeted localities was cut off to mimic
+control at the trade/market level. Note that cutting off outflow does not
+necessary imply restricting trade of host crops. It is possible that
+phytosanitary measures greatly reduce the chance of spread through trade.
+Firstly, we identified localities with high outflows (at most four in each
+country).  Figure~\ref{fig:spread} shows results for two countries. More
+results are present in Figure~\ref{S:fig:intervene} in the supplement.
+Consistently, across countries, we observed a significant reduction in
+range expansion as well as intensity of spread.  Besides, as seen in
+Figure~\ref{fig:thlBContourInt}, stifling these flows leads to a local and
+more importantly, predictable spread pattern that resembles those of
+Class~A models, but with much less intensity. 
+%%
+%% Given the importance of the long-distance human-mediated pathway, we
+%% studied the effect of controlling this pathway in mitigating the spread.
+%% Monitoring localities by setting up pheromone traps in production areas and
+%% markets, and quarantining affected areas is one way to accomplish this.
 %%
 \begin{figure}[ht]
 \begin{subfigure}[b]{.28\textwidth}
@@ -1474,9 +1472,6 @@ respect to origin of infection for all Class~B models.
 
 need to say take away points
 \begin{enumerate}
-    \item flying capability is important to consider given class A and
-    class B models
-    \item model uncertainty
     \item need sample flows for calibration. need to study heterogeneity
     \item need function for relation between flow and pest spread
     \item what is enough for modeling trade? at minimum what is
@@ -1490,13 +1485,26 @@ other stuff
     \item others have only considered smaller area
 \end{enumerate}
 
-Traditionally, crops such as tomato have been grown in the dry season,
-which is usually during winter in most parts of Southeast Asia. However,
-over the past decade, due to rising demand and opportunities to export,
-there has been a thrust towards year-round production using protected
-cultivation methods and resilient varieties~\cite{ali2001}. Tomato
-production and internal trade has steadily increased in this region (See
-Figure~\ref{S:fig:trends} in supplement). In comparison, the export of
+The multiple expl 
+
+    flying capability is important to consider given class A and
+    class B models
+
+    model uncertainty
+It is possible that we have not accounted for
+long-distance flows that might explain this spread. A more plausible
+explanation is that a second invasion happened from India. In January 2017,
+\tuta{} was reported from Umiam~\cite{sankarganesh2017}, Meghalaya about
+100kms from Jaintiapur.  It also happens to be near an important trade
+route from India to Northeastern Bangladesh.
+
+\paragraph{Impact.} Traditionally, crops such as tomato have been grown in
+the dry season, which is usually during winter in most parts of Southeast
+Asia. However, over the past decade, due to rising demand and opportunities
+to export, there has been a thrust towards year-round production using
+protected cultivation methods and resilient varieties~\cite{ali2001}.
+Tomato production and internal trade has steadily increased in this region
+(See Figure~\ref{S:fig:trends} in supplement). In comparison, the export of
 tomato to outside of the focus region has risen steeply in the recent years
 (after 2011), while the imports generally indicate a downward trend.
 Therefore, invasions from pests such as \tuta{} can have a huge negative
@@ -1527,43 +1535,60 @@ network dynamics.
 
 %% In recent years, there has been a thrust towards integrated modeling
 %% approaches to understand invasive species dynamics. 
-Multi-pathway models are being increasingly used to study the role of
-invasive species dispersal. Douma~et~al.~\cite{douma2016pathway} survey the
-literature categorizing various efforts into flow-based pathway models and
-agent-based models.  Robinet~et~al.~\cite{robinet2009role} show that the
-distribution and spread pattern of the pinewood nematode in China is
-strongly correlated with density of human population and infrastructure
-such as railways and river ports.
-Carrasco~et~al.~\cite{carrasco2010unveiling} combine spatially explicit
-models with a phenology model to incorporate population dynamics of the
-pest (western corn rootworm). Two types of long-distance dispersals are
-considered -- domestic and international. The domestic mode is modeled as a
-flow network between cities using a gravity model approach.
+%%
+\paragraph{Literature survey.} Multi-pathway models are being increasingly
+used to study the role of invasive species dispersal.
+Douma~et~al.~\cite{douma2016pathway} survey the literature categorizing
+various efforts into flow-based pathway models and agent-based models.
+Robinet~et~al.~\cite{robinet2009role} show that the distribution and spread
+pattern of the pinewood nematode in China is strongly correlated with
+density of human population and infrastructure such as railways and river
+ports.  Carrasco~et~al.~\cite{carrasco2010unveiling} combine spatially
+explicit models with a phenology model to incorporate population dynamics
+of the pest (western corn rootworm). Two types of long-distance dispersals
+are considered -- domestic and international. The domestic mode is modeled
+as a flow network between cities using a gravity model approach.
 Nopsa~et~al.~\cite{nopsa2015ecological} use a network science approach to
 studying the role of transport and storage infrastructure in the spread of
 pests and pathogens of wheat. Sutrave~et~al.~\cite{sutrave2012identifying}
-use a time-varying network model to study the spread of Soybean rust.
-Our model is in part motivated by the hybrid approaches used in the study
-of infectious diseases of humans and livestock.
+use a time-varying network model to study the spread of Soybean rust.  Our
+model is in part motivated by the hybrid approaches used in the study of
+infectious diseases of humans and livestock.
 Bradhurst~et~al.~\cite{bradhurst2015hybrid} study the spread of foot and
 mouth disease in livestock by using an aggregate population-level model to
 capture within-herd spread and an individual-based model for between herd
-spread. A similar approach is used by
-Yang~et~al.~\cite{yang2016} to forecast influenza outbreaks. They use a
-patch network model where a compartmental model is used to simulate 
-intra-locale spread and a gravity model based approach is used for
-inter-locale spread of flu in the neighborhoods of New~York.
+spread. A similar approach is used by Yang~et~al.~\cite{yang2016} to
+forecast influenza outbreaks. They use a patch network model where a
+compartmental model is used to simulate intra-locale spread and a gravity
+model based approach is used for inter-locale spread of flu in the
+neighborhoods of New~York.
 
-noise in measurements, variability in patterns, 
+%% The modeling framework developed in this paper can
+%% be used to study the spread of \tuta{} in other regions. However, it is
+%% possible that additional factors need to be accounted for. 
+%% It can also be applied to other pests. However, this would require first
+%% assessing the importance of each pathway based on evidence: diapause and flying
+%% capacity, spread by human mobility or trade, etc.  
 
-and assess
-the The modeling framework developed in this paper can
-be used to study the spread of \tuta{} in other regions. However, it is
-possible that additional factors need to be accounted for. 
-It can also be applied to other pests. However, this would require first
-assessing the importance of each pathway based on evidence: diapause and flying
-capacity, spread by human mobility or trade, etc.  
- 
+Our results suggest that intervening at the trade level is very effective
+in stiffling the spread. While, several IPM strategies have been suggested
+for managing \tuta{}, hardly any work has been done in designing effective
+interventions at the trade level. Designing phytosanitary measures
+targetted towards market and vehicles of transportation for preventing
+introductions (or reintroductions) is therefore a promising research
+direction. Some countries have already taken measures in this regard. The
+Animal and Plant Health Inspection Service of the United States Department
+of Agriculture (USDA-APHIS) has instituted quarantine regulations for
+imports from regions where the pest is present~\cite{USDA2012}. Identifying
+the optimal set of nodes in a network to reduce infectious disease spread
+is a widely studied topic~\cite{madar2004immunization}. There are very few
+works that apply such techniques to invasive species spread.
+Nopsa~et~al.~\cite{nopsa2015ecological} considered this problem in the
+context of soybean rust in the US, modeling the spread as a propagation
+process over a network of counties. They developed efficient strategies to
+reduce the spread by identifying and monitoring only a subset of locations
+which are critical for the spread.
+
 
 \paragraph{Challenges and limitations.}
 Modeling emerging invasions is particularly challenging. Accounting for

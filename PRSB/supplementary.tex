@@ -1153,7 +1153,7 @@ impact on the economy and livelihood of the people in this region.
 origin\label{fig:vnmBContourBox}}
 \end{subfigure}
 \caption{\textbf{Interventions.} This is a continuation of
-    Figure~\ref{M:fig:intervene} from the main document. The results of intervention for three
+    Figure~\ref{M:fig:spread} from the main document. The results of intervention for three
     other countries are shown. \label{fig:intervene}}
 \end{figure}
 
@@ -1184,6 +1184,11 @@ that $\ald$ has a significant influence on the spread pattern.
 %%
 \begin{figure}[ht]
 \centering
+\begin{subfigure}[b]{.8\textwidth}
+\includegraphics[width=\textwidth]{../clustering/results/agglomerative/hierarhcy_agglomerative.pdf}
+\caption{Hierarchy}
+\end{subfigure}
+%%
 \begin{subfigure}[b]{.32\textwidth}
 \includegraphics[width=\textwidth]{../clustering/results/agglomerative/cart_cAB_agg.pdf}
 \caption{$k=2$}
@@ -1229,7 +1234,11 @@ that $\ald$ has a significant influence on the spread pattern.
 \caption{$k=10$}
 \end{subfigure}
 %%
-\caption{CART analysis of spread pattern using agglomerative clustering.
+\caption{\textbf{Agglomerative clustering of simulation outputs.} The
+9-level hierarchy of the clusters is shown in (a). At each level, we
+applied CART to understand which parameter was significantly influencing
+the split. Here, \texttt{a\_long} corresponds to $\ald$,
+\texttt{latency\_period} is~$\ell$ and \texttt{moore} is $\mooreRange$.
 \label{fig:cartSpread}}
 \end{figure}
 

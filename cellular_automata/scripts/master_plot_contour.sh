@@ -1,9 +1,9 @@
 #!/bin/bash
 function bgd(){
 #new
-python ../scripts/plot_contour.py ../../clustering/work/results_BGD_6/res_precip1_b0_k1000_s0_sm5_m1_st0_ed3_a-400-0-50.csv BD -t 1 -n 12 -o ./BGD_model-B_m1_l3.pdf
+#python ../scripts/plot_contour.py ../sim_out_files/results_BD/res_precip1_b0_k1000_s0_sm5_m1_st0_ed3_a-400-0-50.csv BD -t .8 -n 12 -o ./BGD_model-B_m1_l3.pdf
 #old
-## python ../scripts/plot_contour.py ../work/res_precip1_b1_k1000_s0_sm5_m1_st0_ed1_a-25-0-25.csv BD -t .8 -n 12 -o tp.pdf
+python ../scripts/plot_contour.py ../sim_out_files/results_BD/res_precip1_b0_k500_s0_sm5_m1_st0_ed3_a-125-0-50.csv BD -t .9 -n 12 -o tp.pdf
 #python ../scripts/plot_contour.py ../results/results_BD/res_precip1_b0_k1000_s0_sm5_m1_st0_ed3_a-400-0-50.csv BD -t .8 -n 12 -o ../results/contour/BGD_model-B_m1_l3.pdf
 ## python ../scripts/plot_contour.py ../results/results_BD/res_precip1_b0_k500_s0_sm5_m1_st0_ed3_a-300-0-50.csv BD -t .8 -n 12 -o ../results/contour/BGD_model-B_m1_l3.pdf
 #python ../scripts/plot_contour.py ../results/sim_out/BGD/res_precip1_b0_k1000_s0_sm4_m3_st0_ed2_a-400-400-0.csv BD -t .8 -n 12 -o ../results/contour/BGD_model-A.pdf
@@ -116,7 +116,7 @@ time=$4
 #B m1 l1
 #B m1 l2
 #B m1 l3
-python ../scripts/plot_contour.py ../results/results_${country}/res_${season}_b0_k500_s${seed}_sm5_m1_st0_ed3_a-400-0-100.csv ${country} -t .5 -n $time -o ../results/contour/${country}_model-B_${season}_m1_l3.pdf
+python ../scripts/plot_contour.py ../sim_out_files/results_${country}/res_${season}_b0_k500_s${seed}_sm5_m1_st0_ed3_a-400-0-100.csv ${country} -t .5 -n $time -o ../results/contour/${country}_model-B_${season}_m1_l3.pdf
 #B m2 l1
 #B m2 l2
 #B m2 l3
@@ -131,12 +131,12 @@ function countries(){
 ## country BD precip1 0 24
 ## country BD precip1-out-50 0 24
 ## country BD precip1-out-100 0 24
-## country VN precip1 104 24
-## country VN precip1-out-50 104 24
-## country VN precip1-out-100 104 24
-country TH precip1 101 48
-country TH precip1-out-50 101 48
-country TH precip1-out-100 101 48
+country VN precip1 104 24
+country VN precip1-out-50 104 24
+country VN precip1-out-100 104 24
+## country TH precip1 101 48
+## country TH precip1-out-50 101 48
+## country TH precip1-out-100 101 48
 ## country PH precip1 103 48
 ## country PH precip1-out-50 103 48
 ## country PH precip1-out-100 103 48
