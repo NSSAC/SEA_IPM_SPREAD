@@ -67,6 +67,19 @@ awk -F, '{printf "%s",$1; for(i=2;i<13;i++) printf ",%s",$i; printf "\n"}' ../re
 Rscript ../scripts/random_forest_cluster.R -f for_rf.csv -o $rfFile
 }
 
+function kmeans(){ # CART and RF for kmeans
+for f in `find ../results/kmeans -iname cluster_kmeans_*.csv`
+do
+echo $f
+cartFile=`basename $f | sed -e 's/cluster_/cart_/' -e 's/csv$/pdf/'`
+Rscript ../scripts/cart_cluster.R -f $f -o $cartFile
+done
+exit
+
+awk -F, '{printf "%s",$1; for(i=2;i<13;i++) printf ",%s",$i; printf "\n"}' ../results/agglomerative/clusters_agglomerative.csv | sed -e 's/CLU10/cluster' > for_rf.csv
+Rscript ../scripts/random_forest_cluster.R -f for_rf.csv -o $rfFile
+}
+
 function createParFile(){ #IGNORE
 grep "$1" par_all.csv | awk -F, 'NR==1{print $2}' > $2.csv
 grep "$1" par_all.csv >> $2.csv

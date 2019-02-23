@@ -769,7 +769,7 @@ production information.
 and regions north of Manila. These are captured by our network
 (Figure~\ref{fig:phlFlow}).
 
-\subsection{International trade}
+\subsection{International trade} \label{sec:tomnet}
 Figure~\ref{fig:tomnet} shows the annual tomato trade for the study region. The
 network was constructed using data from FAOSTAT Trade matrix
 (Table~\ref{tab:data}).  The trade within the focus region is represented
@@ -794,7 +794,7 @@ and exporting from this region
 %%
 \includegraphics[width=.6\textwidth]{../international_trade/results/network_plots/sea_2013_tomato.pdf}
 \caption{\textbf{The trade of tomato in the focus region
-(2013).}(Figure~\ref{S:fig:tradeYears}).\label{fig:tomnet}}
+(2013).}\label{fig:tomnet}}
 \end{figure}
 
 \subsection{Transmission probability}\label{trans}
@@ -1033,36 +1033,6 @@ impact on the economy and livelihood of the people in this region.
 \caption{Evolution of tomato trade network over the years.}
 \label{fig:tradeYears}
 \end{figure}
-%%
-%%
-%% \begin{figure}[!ht]
-%% \centering
-%% \begin{subfigure}[b]{.24\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-A_m1_l1.pdf}
-%% \caption{$\mooreRange=1$, $\ell=1$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.24\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-A_m2_l1.pdf}
-%% \caption{$\mooreRange=2$, $\ell=1$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.24\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-A_m2_l2.pdf}
-%% \caption{$\mooreRange=2$, $\ell=2$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.24\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-A_m3_l3.pdf}
-%% \caption{$\mooreRange=3$, $\ell=3$}
-%% \end{subfigure}
-%% %%
-%% \caption{Model A: The projected spread based on selected models. We observe
-%% difference in rate of spread for different $(\mooreRange,\ell)$ values.
-%% However, the spread pattern itself is similar. The spread is more eastward
-%% than southward.}
-%% \end{figure}
-%%
 %% \begin{figure}[!ht]
 %% \centering
 %% \begin{subfigure}[b]{.24\textwidth}
@@ -1185,7 +1155,7 @@ that $\ald$ has a significant influence on the spread pattern.
 \begin{figure}[ht]
 \centering
 \begin{subfigure}[b]{.8\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/agglomerative/hierarhcy_agglomerative.pdf}
+\includegraphics[width=\textwidth]{../clustering/results/agglomerative/hierarchy_agglomerative.pdf}
 \caption{Hierarchy}
 \end{subfigure}
 %%
@@ -1239,7 +1209,64 @@ that $\ald$ has a significant influence on the spread pattern.
 applied CART to understand which parameter was significantly influencing
 the split. Here, \texttt{a\_long} corresponds to $\ald$,
 \texttt{latency\_period} is~$\ell$ and \texttt{moore} is $\mooreRange$.
-\label{fig:cartSpread}}
+\label{fig:cartAgglomerative}}
+\end{figure}
+
+%%
+\begin{figure}[ht]
+\centering
+%%
+\begin{subfigure}[b]{.47\textwidth}
+\includegraphics[width=\textwidth]{../clustering/results/kmeans/cart_kmeans_2.pdf}
+\caption{$k=2$}
+\end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%% \includegraphics[width=\textwidth]{../clustering/results/kmeans/cart_kmeans_3.pdf}
+%% \caption{$k=3$}
+%% \end{subfigure}
+%% %% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%% \includegraphics[width=\textwidth]{../clustering/results/kmeans/cart_kmeans_4.pdf}
+%% \caption{$k=4$}
+%% \end{subfigure}
+%% %%
+\begin{subfigure}[b]{.47\textwidth}
+\includegraphics[width=\textwidth]{../clustering/results/kmeans/cart_kmeans_5.pdf}
+\caption{$k=5$}
+\end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%% \includegraphics[width=\textwidth]{../clustering/results/kmeans/cart_kmeans_6.pdf}
+%% \caption{$k=6$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%% \includegraphics[width=\textwidth]{../clustering/results/kmeans/cart_kmeans_7.pdf}
+%% \caption{$k=7$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%% \includegraphics[width=\textwidth]{../clustering/results/kmeans/cart_kmeans_8.pdf}
+%% \caption{$k=8$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%% \includegraphics[width=\textwidth]{../clustering/results/kmeans/cart_kmeans_9.pdf}
+%% \caption{$k=9$}
+%% \end{subfigure}
+%%
+\begin{subfigure}[b]{.6\textwidth}
+\includegraphics[width=\textwidth]{../clustering/results/kmeans/cart_kmeans_10.pdf}
+\caption{$k=10$}
+\end{subfigure}
+%%
+\caption{\textbf{$k$-means clustering of simulation outputs.} For each $k$,
+the number of clusters, we applied CART to understand which parameter was
+significantly influencing the split. Here, \texttt{a\_long} corresponds to
+$\ald$, \texttt{latency\_period} is~$\ell$ and \texttt{moore} is
+$\mooreRange$.
+\label{fig:cartkmeans}}
 \end{figure}
 
 
@@ -1345,6 +1372,63 @@ Here the region of Chin in northeast Myanmar was seeded.
     \label{fig:baselineMyanmar}}
 \end{figure}
 
+\begin{figure}[ht]
+    \centering
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-A_m2_l1.pdf}
+    \caption{Class~A\label{fig:msaClassA}}
+\end{subfigure}\hspace{.5cm}
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-B_m1_l3.pdf}
+    \caption{Class~B\label{fig:msaClassB}}
+\end{subfigure}
+\caption{\textbf{Spread pattern in Mainland Southeast Asia without
+accounting for trade between countries.} The contour plots show the
+simulated spread starting from northern Myanmar for 120 time steps or 10
+years. Representative simulation outputs for Class~A and Class~B models are
+shown. With {Class~A}, spread is faster eastward than southward and the
+other way round in the case of Class~B.\label{fig:msaClassAB} }
+\end{figure}
+%% %%   
+\begin{figure}[htb]
+%% \begin{subfigure}[b]{.47\textwidth}
+%%     \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_B_moore.pdf}
+%%     \caption{Model~A\label{fig:spreadRateMooreA}}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.47\textwidth}
+%%     \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_B_moore.pdf}
+%%     \caption{Model~B\label{fig:spreadRateMooreB}}
+%% \end{subfigure}
+%% %%
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_A_box.pdf}
+    \caption{Class~A\label{fig:spreadRateA}}
+\end{subfigure}
+%%
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_B_box.pdf}
+    \caption{Class~B\label{fig:spreadRateB}}
+\end{subfigure}
+\caption{\textbf{Spread in Mainland Southeast Asia with respect to distance
+from origin.} The cells are binned based on their distance from the origin
+of infection (Northern Myanmar). Given time step~$t$ (60 or five years from
+time of start in this case), let $\Pr(v,\le t)$ be the probability that
+cell~$v$ is in state~$I$ by time~$t$. For each parameter instance, we
+computed the ``total infection'' for every bin at time~$t$ by
+aggregating~$\Pr(v,\le t)$ for each~$v$ in the bin. Configurations were
+grouped by model class and Moore range ($\mooreRange$). The average total
+infection for each group are plotted.  The red points referred to as
+``max'' correspond to the total number of cells in each bin, which is also
+the maximum possible accumulated probability for that bin. We observe that
+even though the models exhibit similar spread for Bangladesh, there is high
+variance in spread rate in both classes for spread in in the case of he
+spread rate when applied to the rest of the region. Also, the range of
+expansion is influenced by Moore range~$\mooreRange$.
+\label{fig:spreadRate}
+}
+\end{figure}
+%%
 \bibliographystyle{plain}
 \bibliography{refs}
 \end{document}
