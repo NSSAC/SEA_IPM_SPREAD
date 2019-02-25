@@ -6,6 +6,7 @@
 *.out
 *.pyc
 *.pkl
+*.syntex.gz
 .DS_Store
 cellular_automata/sim_out_files/*
 cellular_automata/results.db
