@@ -40,3 +40,170 @@ Vietnam & \cite{Vien2003,wijk2007,huong2013} & \cite[Table~16]{wijk2007}
 \end{tabular}
 \end{table}
 
+%% ~\cite{pelleg2000x,andrei_novikov_2018_1491324}, an extension of
+%% the classical K-means algorithm. It uses Bayesian information criterion to
+%% estimate the optimal number of clusters. 
+%% 
+%% Also, since horticultural products are less
+%% durable, owing to lack of good storage and transport
+%% infrastructure~\cite{ali2001}, typically, much of the major producing
+%% regions are close to cities~\cite{buckmaster2014going}. Only a cell
+%% belonging to a locality is affected by the human-mediated pathways. 
+
+%% Since local
+%% farm--market dynamics are hard to model~\cite{rebaudo2011}, we used a
+%% simple approach.
+%% For a cell in a locality (say~$L$), its neighbors are all cells that belong
+%% to the locality.  
+%% The objective is to cell's state is influenced by the infected cells in
+%% its locality through the marketing chain.  In general, it is hard to model
+%% the local dynamics as there are several actors in bringing the commodities
+%% from farm to market to consumers.  Further, these are country and commodity
+%% specific.  See for example Kethonga~et~al.~\cite{kethonga2004} for the
+%% typical structure of marketing chains and Rebaudo~et~al.
+%% for modeling human interactions in the context of invasive species spread.
+%% Here, we use a simple approach. 
+
+%% However, this information was accounted for in experiment
+%% design to identify possible starting locations or ``seeds'' for each
+%% country.  
+
+%% However,
+%% they were accounted for to determine possible routes of entries and in
+%% turn, to seed the simulations. However, there is one exception. We included
+%% Singapore as a locality of Malaysia while applying the gravity model due to
+%% high trade and mobility between the two countries.
+%% 
+%% case -- Malaysia to
+%% Singapore -- by including the latter as a locality of Malaysia and applying
+%% the gravity model. While most of the other flows were minor in comparison
+%% to domestic flows, major flows that were ignored were from Thailand and
+%% Vietnam to Malaysia.
+%% Since
+%% there is lot of interaction between the two countries, weMalaysia and Singapore
+%% was included Malaysian
+
+
+%% \paragraph{State transitions.} The rules for state transitions are shown in
+%% Figure~\ref{fig:SEI}. A susceptible ($S$) cell can be influenced by
+%% infectious (state~$I$) cells through the three different pathways. Each
+%% such cell infects the susceptible cell with some probability. If \tuta{} is
+%% succesfully introduced to a cell, it moves from state~$S$ to~$E$. The
+%% exposed state corresponds to the situation where \tuta{} has established,
+%% but it is not widespread in the area to influence other cells. It stays in
+%% state~$E$ for one time step before transitioning to state~$I$. This is a
+%% reasonable assumption considering that the conditions are favorable for the
+%% pest to complete a life cycle within one month. 
+%%
+%% \begin{figure}[ht]
+%%     \centering
+%%     \includegraphics[height=.16\textwidth]{figs/SEI.pdf}
+%%     \caption{Schematic of the SEI process.\label{fig:SEI}}
+%% \end{figure}
+%%
+%% 
+%% \paragraph{Susceptibility and infectiousness of a cell.} We have used
+%% monthly production to determine the susceptiblity of a cell in state~$S$
+%% and infectiousness of a cell in state~$I$. The suitability of a cell~$v$
+%% for pest establishment at time~$t$ is denoted by~$\suitable(v,t)$. This
+%% is~$1$ if production at~$t$ is non-zero and~$0$ otherwise.  For a cell in
+%% state~$I$, the level of infestation in an infected cell~$v$ at time~$t$ is
+%% denoted by~$\infest(v,t)$. It is modeled as a linear function of host
+%% presence at time~$t$, for which we use the weighted sum of production
+%% volume of tomato, eggplant, and potato in that cell
+%% at time~$t$. The weights correspond to relative oviposition preference of
+%% \tuta{} on the three hosts.
+%% 
+%%
+
+
+%% For each region, we obtained the product rate by
+%% normalizing quarterly production values with respect to maximum value among
+%% these. We used production rate instead of production values since there are
+%% several factors that determine a region's production: climate, vegetable
+%% preference, demand, etc.  Therefore, it may not be meaningful to compare
+%% production across regions.  
+%% We conducted a linear regression with the
+%% product rate as a dependent variable and precipitation and temperature and
+%% elevation as independent variables.  To control elevation, we classified
+%% the elevations into two groups, high and low, using $k$-means clustering
+%% (SPSS~24.0). Due to the small sample size, we excluded the samples in the
+%% high-elevation group and conducted a linear regression analysis for the
+%% group of low elevation~($< 235$ masl). 
+
+%% There is very little data
+%% available for validation. Most of the data is qualitative, just providing
+%% information on growing and harvesting months. The regression function was
+%% applied to locations of different countries where this information is
+%% available and visually compared.  More details of the methods, country
+%% specific data and challenges in this regard are covered in
+%% Section~\ref{S:sec:prod}. The infectiousness of cell~$v$ at
+%% time~$t$,~$\infest(v,t)$ is the production at~$t$, while its
+%% suitability,~$\epsilon(v,t)$ is~$0$ if~$\infest(v,t)=0$ and~$1$ otherwise.
+%% on data availability. The first method was used if only seasonal
+%% production is available for a region or country. In this case, we first
+%% estimated seasonal production in each cell and then disaggregated it
+%% to obtain monthly production. Here, due to unavailability of data for tomato and eggplant, we used SPAM's total
+%% vegetable production as surrogate. To disaggregate into monthly production,
+%% we studied the relationship between production, precipitation, and elevation.
+%% For lowland areas, %(elevation less than ???) 
+%% production is negatively
+%% correlated with precipitation ($r<-0.75$).
+
+%% \paragraph{Network structure.} The resulting network consists of~$8,010$
+%% cells and~$109$ localities.  
+%%
+%%
+%% \begin{table}[t]
+%%     \caption{Model parameters and variables, their ranges and references.\label{tab:data}}
+%%     \centering
+%% 	\small
+%%     \begin{tabular}{l p{4cm} p{3cm} p{5cm}}
+%%     %{cp{.25\textwidth}p{.25\textwidth}lr}
+%% 		\hline		
+%% 		Parameter & Description & Range/values & Source \\
+%% \hline		
+%% \hline
+%% $\mooreRange$ & Range of Moore neighborhood & 1,2,3 &
+%% \cite{guimapi2016modeling}\\
+%% $\ell$ & Latency period to transition from $E$ to $I$& 1,2,3 & \\
+%% \hline
+%% $\beta, \kappa$ & Gravity model parameters & 300--500,2 &
+%% \cite{venkatramanan2017towards}\\
+%% -- & Locality population threshold and radius & 250,000, 100kms &
+%% population of cities~\cite{citypop} and reports\\
+%% \hline
+%% $\suitable$ & Suitability threshold & 0\\
+%% $\infest$ & Infectivity of a cell based on amount of production & & Host
+%% production (SPAM), host preference~\cite{sylla2018}, precipitation and
+%% elevation \\
+%% \hline
+%% Scenarios & Seeding simulations: time and cells to infect & 4 cases:
+%% Bangladesh (B1 and B2), Malaysia (M1) and Philippines (P1) & \tuta{} incidence
+%% reports in Bangladesh, FAOSTAT for international trade and migration
+%% reports.\\
+%% Start month & & March, April, May & Based on incidence reports\\
+%% \hline
+%% $\asd$ & Short-distance spread scaling factor & 0--500\\
+%% $\afm$ & Local human-mediated dispersal scaling factor & 0--500\\
+%% $\ald$ & Long distance spread scaling factor & 0--500 \\
+%% \hline
+%% \end{tabular}
+%% \end{table}
+%%
+
+%% In the first part of this section, we present results from the analysis of
+%% the spread of \tuta{} in Bangladesh. We demonstrate how accounting for
+%% different pathways affects the rate as well as pattern of spread. In the
+%% second part, we focus on threat and possible spread in the rest of the
+%% study region. The last part focuses on monitoring and control.
+%%
+%%
+%% This section is organized as follows. We first describe the multi-pathway
+%% model--our methodological contribution.  This is followed by our results in
+%% the context of \tuta{} spread which are summarized as follows: (i)~We
+%% identified possible routes by which \tuta{} can invade each country in the
+%% region by analysis of current distribution of the pest and its.
+%%
+%% \paragraph{Assessing the role of each pathway in the spread of \tuta{} in
+%% Bangladesh.} 

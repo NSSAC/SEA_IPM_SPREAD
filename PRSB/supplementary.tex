@@ -67,6 +67,14 @@
 \newcommand{\afm}{\alpha_{\ell}}
 \newcommand{\ald}{\alpha_{\ell d}}
 \newcommand{\mooreRange}{r_\mathrm{M}}
+\newcommand{\consume}{\mathrm{Pop}}
+\newcommand{\locality}{\mathrm{L}}
+\newcommand{\export}{\mathrm{Export}}
+\newcommand{\import}{\mathrm{Import}}
+\newcommand{\process}{\mathrm{Proc}}
+\newcommand{\produce}{\mathrm{Prod}}
+\newcommand{\veg}{\mathrm{V}}
+\newcommand{\temp}{\mathrm{T}}
 \newcommand{\similarity}{\mathcal{S}}
 \newcommand{\kmax}{k_{\max}}
 \newcommand{\infest}{\rho}
@@ -634,16 +642,6 @@ region.
 %\end{figure}
 \subsection{Production, consumption, imports, exports and processing}
 \label{sec:locAttrib}
-%% For consumption, we used
-%% country-level production~\cite{consumption}, which was available for half
-%% of the countries. For Singapore, we estimated it as the difference between
-%% total inflow (production and imports) and total outflow (exports) based on
-%% FAO data. For Vietnam, Wijk~et~al.~\cite{wijk2007} provides this
-%% information. For Myanmar, Cambodia and Laos, we found no information. We
-%% used median consumption for the region. We also analyzed consumption with
-%% respect to per capita gross domestic product (GDP). However, we did not
-%% find any correlation between GDP and consumption both globally as well as
-%% restricted to the study region. 
 
 Monthly tomato production (consumption) at a locality was obtained by aggregating
 production (population) at all cells that belong to it. Population data was
@@ -669,7 +667,63 @@ by the processing industry even though there is evidence of processing
 industry in Malaysia and Indonesia. For each locality in Thailand, we
 scaled the monthly production by the ratio annual production of fresh
 tomatoes over total annual production (fresh and processed).
+
+For consumption, we used
+country-level production~\cite{consumption}, which was available for half
+of the countries. For Singapore, we estimated it as the difference between
+total inflow (production and imports) and total outflow (exports) based on
+FAO data. For Vietnam, Wijk~et~al.~\cite{wijk2007} provides this
+information. For Myanmar, Cambodia and Laos, we found no information. We
+used median consumption for the region. We also analyzed consumption with
+respect to per capita gross domestic product (GDP). However, we did not
+find any correlation between GDP and consumption both globally as well as
+restricted to the study region. 
 %UNCOMMENT
+
+\subsection{Network construction}
+\label{sec:netcon}
+Venkatramanan~et~al.~\cite{venkatramanan2017towards,venkatramanan2019modeling},
+this model
+consumption is modeled as a function of population and Gross Domestic
+Product (GDP). Here, we did not find any relation between GDP and
+consumption For each country, the domestic flow is estimated using a doubly
+constrained gravity model~\cite{kaluza2010complex}. For a city~$i$,
+let~$O_i$ and~$I_i$ denote total outflow and total inflow respectively, and
+$\locality(i)$ denotes all cells which are assigned to it.  The
+flow~$F_{ij}$ from city~$i$ to city~$j$ is given by
+%%
+\(
+   F_{ij}(t)=a_i(t)b_j(t)O_i(t)I_j(t)f(d_{ij}),
+\)
+%%
+where, $d_{ij}$ is the time to travel from~$i$ to~$j$, and $f(\cdot)$ is
+the \emph{distance deterrence function}:
+$d_{ij}^{-\beta}\exp(-d_{ij}/\kappa)$, where~$\beta$ and~$\kappa$ are
+tunable parameters. The
+coefficients~$a_i$ and~$b_j$ are computed through an iterative process such
+that the total outflow and total inflow at each node agree with the input
+values~\cite{kaluza2010complex}. Overall, we have~12 networks
+representing flows for each month. The outflows and inflows are calculated
+as follows:
+%%
+\begin{align}\label{eqn:flow}
+    O_i(t)&=\produce(i,t)+\import(i,t)-\export(i,t)-\process(i,t),\\
+    I_i(t)&=\consume(i)\,.
+\end{align}
+%%
+Here,~$\produce(i,t)$ is the monthly production and~$\consume(i)$ is the
+population of the locality as a surrogate to consumption. The latter is the
+sum total of population in every cell that belong to the locality.
+$\export$ and ~$\import$ are the monthly total export to and import from
+outside the country respectively. $\process(i,t)$ is the tomato produced
+for processing. Since for this purpose tomato is typically cultivated and
+consumed locally, we subtract this volume from the outflow.
+Country-specific details of how locality attributes were estimated is in
+Section~\ref{S:sec:locAttrib}.
+%% We did not incorporate international trade as the volume is negligible compared to
+%% domestic production with the exception of trade between Malaysia and Singapore. 
+%% More details in this regard are provided in Section~\ref{S:sec:locAttrib}.
+
 \subsection{Validation of domestic trade flows}
 \label{sec:tradeFlows}
 Since no market-to-market flow data is available for the region, we
