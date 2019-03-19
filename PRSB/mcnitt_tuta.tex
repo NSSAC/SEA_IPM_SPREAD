@@ -614,7 +614,13 @@ highest resolution for each country (at the level of province to just one
 value for the entire country) and a synthetic dataset called Spatial
 Production Allocation Model (SPAM)~\cite{spam}. For monthly production, we
 used linear regression to model the production rate as a function of
-precipitation, temperature, and elevation. 
+precipitation, temperature, and elevation. Seasonal tomato and eggplant
+production data for different regions of Philippines was used. For most of
+the other countries only qualitative information on seasonal of production
+is available (Table~\ref{S:tab:countryData}). The regression function was
+applied to locations of these countries where this information is
+available and visually compared available data. The details are in
+Section~\ref{S:sec:prod} of the supplement.
 
 To model locality-to-locality trade of host crops, we applied the approach
 of
@@ -651,14 +657,14 @@ account for uncertainty in reporting, we consider a time
 window~$U_\tau=[t_v-\tau,t_v+\tau]$ during comparison, where~$\tau$ is the
 uncertainty parameter. We set~$\tau=2$, i.e., error within $\pm2$ months is
 tolerated.  Supposing~$\reportingCells$ is the set of cells corresponding
-to ground truth,  and ~$p(v,t)$ is the empirical probability that cell~$v$
-is infected at time~$t$ in the model, then, the similarity~$\similarity$ is
+to ground truth,  and ~$p(C,v,t)$ is the empirical probability that cell~$v$
+is infected at time~$t$ for the input configuration~$C$, then, the similarity~$\similarity$ is
 given by,
 %%
 \begin{linenomath}
 \begin{align}\label{eqn:similarity}
-    \similarity=\sum_{v\in\reportingCells} \Big(\sum_{t\in U_\tau}p(v,t)
-    + \sum_{t\notin U_\tau}\big(1-p(v,t)\big) \Big)\,.
+    \similarity(C)=\sum_{v\in\reportingCells} \Big(\sum_{t\in U_\tau}p(C,v,t)
+    + \sum_{t\notin U_\tau}\big(1-p(C,v,t)\big) \Big)\,.
 \end{align}
 \end{linenomath}
 %%
@@ -675,7 +681,9 @@ and rejected subspaces for which similarity was low. Based on this, in the
 subsequent phases, we refined our search to improve the parameterization.
 More details of the CART analysis is presented in Section~\ref{S:sec:cart}.
 Simulations were performed on more than~$500,000$ parameter combinations
-using a high performance computing cluster.
+using a high performance computing cluster. Configurations with high
+similarity score $\similarity(C)\ge6$ ($\ge75\%$ of maximum value) were
+chosen for further analysis.
 
 %% In the second phase,
 %% we applied the select models from the previous phase to the rest of the
@@ -700,8 +708,8 @@ classification problem using CART with model parameters as the independent
 variables and cluster index as the dependent variable. The relationsips
 were inferred from the decision tree that results from the algorithm.
 To avoid any bias introduced by the clustering algorithm, we applied more
-than one method -- herarchical (agglomerative) clustering and $k$-means
-algorithm. In both cases, we used the Euclidean distance as the distance
+than one method -- hierarchical (agglomerative SPSS) clustering and $k$-means
+algorithm (Pyclustering). In both cases, we used the Euclidean distance as the distance
 measure to compare two simulation outputs. The analysis was repeated for
 different values of~$k$, the number of clusters. More details are provided
 in Section~\ref{S:sec:cluster} of the supplement.
@@ -713,58 +721,34 @@ in Section~\ref{S:sec:cluster} of the supplement.
 \end{figure}
 %%
 \section{Results}
-\paragraph{Seasonal production and consumption drive commodity flow.}
-Gathering qualitative data from multiple sources, we inferred that the
-cropping pattern in this region depends primarily on two factors:
-seasons--dry and wet, and elevation--highland (upland) and lowland. Also,
-barring few exceptions, the production of the considered host crops peaks
-in the winter and is lowest during the rainy season (monsoon).  To predict
-seasonal production, we used linear regression to model the production rate
-as a function of precipitation, temperature, and elevation. Regional tomato
-and eggplant production data is available for Philippines.  The regression
-results showed that precipitation was a statistically significant predictor
-($p <0.001$). For validation, the regression function was applied to
-locations of different countries where this information is available and
-visually compared. The details are in Section~\ref{S:sec:prod} of the
-supplement. Regional tomato and eggplant
-production data is available for Philippines.
-
-
-\paragraph{Variability in the pattern of spread.}
-As described in Methods, the goodness of fit of a model configuration was
-evaluated by comparing the corresponding simulation output with ground
-truth from Bangladesh using the similarity score in~\eqref{eqn:similarity}.
-Variability in the spread patterns was studied by clustering the simulation
-outputs of the selected configurations (Figure~\ref{fig:clusterOutline})
-and analyzing the relationship between the resulting clusters and model
-parameters. The ensuing discussion will focus on instances with high
-similarity score ($\similarity\ge75\%$ and approximately 8000
-configurations).
-
+\paragraph{Variability in spread pattern due to multiple pathways.}
+%% As described in Methods, the goodness of fit of a model configuration was
+%% evaluated by comparing the corresponding simulation output with ground
+%% truth from Bangladesh using the similarity score in~\eqref{eqn:similarity}.
+%% Variability in the spread patterns was studied by clustering the simulation
+%% outputs of the selected configurations (Figure~\ref{fig:clusterOutline})
+%% and analyzing the relationship between the resulting clusters and model
+%% parameters. 
+%% 
 %% Even though
 %% each of these models are a close match to the ground truth, two spread
 %% patterns can be very different from each other. 
-For a clustering of the configuration space into two groups, the CART
-analysis reveals two distinct spread patterns primarily determined by the
-presence or absence of the long-distance spread component ($\ald$). Our
-results remain consistent across the different clustering methods applied.
-To be specific, in the first class of models (Figure~\ref{fig:bgdClassA})
-which we refer to as Class~A, the pathway parameter~$\ald$ is negligible.
-It is characterized by brisk spread between geographically adjacent cells.
-In contrast, in Class~B the long-distance pathway~($\ald$) plays a
-significant role (Figure~\ref{fig:bgdClassB1}) and is characterized by
-relatively slow spread between geographically adjacent neighbors with jumps
-from one locality to another. See Figures~\ref{S:fig:cartAgglomerative}(b)
-and~\ref{S:fig:cartkmeans}(a) in the supplement. We have also considered
-the case of more than two clusters. This is analyzed in the following
-section.
+The clustering of the configurations selected during the parameterization
+phase (approximately 8000 of them) reveals two distinct spread patterns
+primarily determined by the pathway parameters.  The first class of models
+(Figure~\ref{fig:bgdClassA}), referred to as Class~A, are characterized by
+the absence of long-distance human-mediated spread ($\ald$ negligible) and
+brisk spread between geographically adjacent cells, driven by Moore
+range~$\mooreRange$, latency period~$\ell$ and short-distance scaling
+factor~$\asd$. In contrast, in Class~B models
+(Figure~\ref{fig:bgdClassB1}), the long-distance pathway~($\ald$) plays a
+significant role  and there is relatively slow spread between
+geographically adjacent neighbors. Both hierarchical clustering and
+$k$-means clustering (Figures~\ref{S:fig:cartAgglomerative}(b)
+and~\ref{S:fig:cartkmeans}(a)) are consistent in this regard.
 
-%% %% It is characterized by %%
-%% a combination of Moore range ($\mooreRange$), latency period ($\ell$) and
-%% %% pathway parameters~$\asd$ and~$\afm$ that lead to rapid spread between
-%% %% adjacent cells.  
 %%
-\begin{figure}[!ht]
+\begin{figure}[t]
     \centering
 \begin{subfigure}[b]{.4\textwidth}
     \includegraphics[width=\textwidth]{../cellular_automata/results/contour/BGD_model-A.pdf}
@@ -791,6 +775,7 @@ $>6.5$.}
 %% long-distance jumps. Here, the radial spread is much slower.}
 \end{figure}
 %%
+
 Class~A spread pattern does not capture the gap between the time of first
 report (Panchagarh) and the report in Gaibandha district
 (Figure~\ref{fig:bgdClassA}). Even though the distance between the two
@@ -802,19 +787,37 @@ location is infected much later in comparison. However, the eastward spread
 towards the location Jaintiapur is slower than what was observed
 (Figure~\ref{fig:bgdClassB1}). Even though Panchagarh is quite far from
 this location, pest presence was reported by February 2017, just nine
-months from the first report.  
+months from the first report.
 
-We also simulated the spread using the cellular automata model developed by
-Guimapi~\cite{guimapi2016modeling} for Bangladesh. The spread pattern is
-similar to Class~A as the model does not account for long-distance
-hops. However, the predicted rate of range expansion is much higher than
-our models (see Section~\ref{S:sec:guimapi} for model details and results).
+As a baseline, we also simulated the spread using the cellular automata
+model developed by Guimapi~\cite{guimapi2016modeling} for Bangladesh. The
+spread pattern is similar to Class~A as the model does not account for
+long-distance hops. However, the predicted rate of range expansion is much
+higher than our models (see Section~\ref{S:sec:guimapi} for model details
+and results).
+
+%% The rest of the section will focus more on Class~B
+%% 
+%% See
+%% Figures~\ref{S:fig:cartAgglomerative}(b)
+%% and~\ref{S:fig:cartkmeans}(a) in the supplement. We have also considered
+%% the case of more than two clusters. This is analyzed in the following
+%% section. Our
+%% results remain consistent across the different clustering methods applied.
+%% 
+%% %% It is characterized by %%
+%% a combination of Moore range ($\mooreRange$), latency period ($\ell$) and
+%% %% pathway parameters~$\asd$ and~$\afm$ that lead to rapid spread between
+%% %% adjacent cells.  
 
 \paragraph{Importance of model parameters.} 
-Calibration and sensitivity analysis of large-scale, high-resolution models
-is a challenging task. Methods based on machine learning surrogates are
-being increasingly used to accomplish this efficiently for complex
-agent-based models~\cite{lamperti2018agent}. We studied sensitivity of the
+how parameters affect similarity score?
+
+how parameters affect spread pattern?
+
+cluster size
+
+We studied sensitivity of the
 spread pattern to model parameters by applying Random Forest learning
 method. Since the clustering captures the variations in spread patterns,
 the algorithm was applied with model parameters as independent variables
@@ -918,254 +921,142 @@ for the rest of the region.
 %% \end{figure}
 %%
 \paragraph{Scenarios of pest introduction to countries in Southeast Asia.}
-To assess the risk of introduction to other countries, we applied both
-Class~A and Class~B model configurations to the rest of the region. This
-study did not account for trade between countries in the region as only
-locality to locality trade information. Then, we analyzed the international
-trade network (Section~\ref{S:sec:tomnet} of supplement) to introduction of
-the pest through the trade pathway.
+To identify routes of introduction to other countries in the region, we
+applied both Class~A and Class~B models. The starting point of the spread
+corresponds to Panchagarh district (Figure~\ref{fig:bgdClassA}).  We also
+analyzed the international tomato trade network (Section~\ref{S:sec:tomnet}
+of supplement) to assess the risk due to imports from \tuta{} infested
+countries outside this region. Both model classes strongly indicate that
+\tuta{} is already present in parts of Myanmar (curves corresponding to
+timestep 24 or two years from first report). Also, the pest is likely to
+enter Thailand from Myanmar, and subsequently move to Laos and Vietnam as
+it spreads eastwards and to China when it spreads northwards. From
+Thailand, spreading southward, it will enter Malaysia and subsequently
+enter Indonesia (Figure~\ref{fig:msaClassAB}).
 
-In the case of Class~A models, the eastward spread is faster than southward
-spread. This is mainly because the Moore neighborhood is smaller at the
-narrow region in the south of Myanmar and Thailand bordering Malaysia.
-However, in the case of Class~B, the spread is much faster in the same
-region aided by domestic trade flows from northern and central Thailand to
-the southern region. Both models indicate that the pest will enter Thailand
-from Myanmar, and subsequently move to Laos and Vietnam as it spreads
-eastwards and to China when it spreads northwards.
-From trade perspective, 
-Malaysia and Singapore are important hubs with tomato imports from \tuta{}
-infested regions. There is a possibility that \tuta{} is directly
-introduced to these regions.  However, in both cases, the import volume is
-very low. Also, the introduction risk depends on the preventive measure
-taken by the exporting countries. With respect to both trade and natural
-pathway, there is a low chance that the pest will be introduced into
-Philippines from neighboring countries.  This is because, it does not share
-its borders with any country in the region and also, there is no evidence
-of tomato trade with rest of the countries. However, human mobility is a
-possible pathway. The Middle East is the top destination for Filipino
-workers~\cite{rodriguez2011philippine}.  Therefore, there is a possibility
-of introduction through human mobility.
 %%
-\paragraph{Rate of spread.}
-We used both model classes to study the possible spread in Southeast Asia.
-We applied them to the region as a whole as well as each country
-separately. For the whole region, the starting point of the spread
-corresponds to Panchagarh district (Figure~\ref{fig:bgdClassA}). Both cases
-strongly indicate that \tuta{} is already present in parts of Myanmar
-(curves corresponding to timestep 24 or two years from first report).
-Class~A spread pattern predicts that within the next 4-5 years much of the
-northern part of Mainland Southeast Asia will be invaded. Class~B spread
-pattern predicts that in the same period \tuta{} will spread all over
-Malaysia and Singapore.  However, the rate of spread observed is slower
-than that observed in Bangladesh for both classes. Also, even though the
-models exhibited similar rate of spread for Bangladesh, we observed high
-variance in intensity of infestation as well range expansion for the rest
-of the region. The results are in Figure~\ref{S:fig:spreadRate}. The reason
-for slow spread is as follows.  Bangladesh has the highest tomato volume
-per country surface area ($\approx2.5$tonnes/km$^2$).  The next country is
-Vietnam ($\approx1.5$tonnes/km$^2$). Therefore, in the case of Bangladesh,
-not only is the extent of infestation in a cell~$\infest(\cdot)$ typically
-high, but also, since it is a densely populated country, most cells have
-vegetable production. Hence, the rate of spread is much higher for
-relatively lower values of pathway parameters and Moore range. Also, we
-observed a strong dependence on Moore range
+\begin{figure}[ht]
+    \centering
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-A_m2_l1.pdf}
+    \caption{Class~A\label{fig:msaClassA}}
+\end{subfigure}\hspace{.5cm}
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-B_m1_l3.pdf}
+    \caption{Class~B\label{fig:msaClassB}}
+\end{subfigure}
+\caption{\textbf{Spread pattern in Mainland Southeast Asia without
+accounting for trade between countries.} The contour plots show the
+simulated spread starting from northern Myanmar for 120 time steps or 10
+years. Representative simulation outputs for Class~A and Class~B models are
+shown. With {Class~A}, spread is faster eastward than southward and the
+other way round in the case of Class~B.\label{fig:msaClassAB} }
+\end{figure}
+%% %%   
+
+From trade perspective, Malaysia and Singapore are important hubs with
+tomato imports from \tuta{} infested regions. There is a possibility that
+\tuta{} is directly introduced to these regions.  However, in both cases,
+the import volume is very low. Also, the introduction risk depends on the
+preventive measure taken by the exporting countries. With respect to both
+trade and natural pathway, there is a low chance that the pest will be
+introduced into Philippines from neighboring countries.  This is because,
+it does not share its borders with any country in the region and also,
+there is no evidence of tomato trade with rest of the countries. However,
+human mobility is a possible pathway. The Middle East is the top
+destination for Filipino workers~\cite{rodriguez2011philippine}.
+Therefore, there is a possibility of introduction through human mobility.
+%%
+\paragraph{Spread is model and region dependent.} In the case of Class~A
+models, the eastward spread is faster than southward spread
+(Figure~\ref{fig:msaClassA}). This is mainly because the Moore neighborhood
+is smaller at the narrow region in the south of Myanmar and Thailand
+bordering Malaysia.  However, in the case of Class~B
+(Figure~\ref{fig:msaClassB}), the spread is much faster in the same region
+aided by domestic trade flows from northern and central Thailand to the
+southern region.  Class~A spread pattern predicts that within the next 4-5
+years much of the northern part of Mainland Southeast Asia will be invaded.
+Class~B spread pattern predicts that in the same period \tuta{} will spread
+all over Malaysia and Singapore.  However, the rate of spread observed is
+slower than that observed in Bangladesh for both classes. Also, even though
+the models exhibited similar rate of spread for Bangladesh, we observed
+high variance in intensity of infestation as well range expansion for the
+rest of the region. The results are in Figure~\ref{S:fig:spreadRate}. The
+reason for slow spread is as follows.  Bangladesh has the highest tomato
+volume per country surface area ($\approx2.5$tonnes/km$^2$).  The next
+country is Vietnam ($\approx1.5$tonnes/km$^2$). Therefore, in the case of
+Bangladesh, not only is the extent of infestation in a
+cell~$\infest(\cdot)$ typically high, but also, since it is a densely
+populated country, most cells have vegetable production. Hence, the rate of
+spread is much higher for relatively lower values of pathway parameters and
+Moore range. Also, we observed a strong dependence on Moore range
 (Figure~\ref{S:fig:spreadRateB}).  In countries with larger area, the
 production is scattered. Therefore, lower the Moore range, the slower the
 spread.
 
-\paragraph{Pattern of spread within a country.} For the
-country-specific studies, the starting location was decided based on
-our earlier analysis of possible entry points through different pathways.
-These scenarios are described in Table~\ref{S:tab:seeds} in the supplement.
-Here, we focus on long-distance dispersal, and therefore, restrict our
-discussion to Class~B models. We observed the following common spread
-pattern.  When the pest is introduced to a country, dispersal is slow until
-the invasion front reaches a locality close to a \emph{source}, one with
-significant outflows to other localities. Once it establishes at a source,
-the spread is very fast and within a year or two, it spreads to almost all
-major localities of the country. There is a possibility that \tuta{} can be
-introduced to a country several months before it becomes pervasive. 
+\paragraph{Seasonal production and consumption drive commodity flow.}
+Henceforth, we focus on long-distance dispersal, and therefore, restrict our
+discussion to Class~B models. Analyzing qualitative data from multiple sources
+, we inferred that the
+cropping pattern in this region depends primarily on two factors:
+seasons--dry and wet, and elevation--highland (upland) and lowland. Also,
+barring few exceptions, the production of the considered host crops peaks
+in the winter and is lowest during the rainy season (monsoon).  To predict
+seasonal production, we used linear regression to model the production rate
+as a function of precipitation, temperature, and elevation.   The regression
+results showed that precipitation was a statistically significant predictor
+($p<0.001$).  Regional tomato and eggplant
+production data is available for Philippines.
 
-We observed the following pattern across countries, which is critical to
-design effective and efficient monitoring strategies. Production areas
-which are very close to high-consumption localities (large urban areas) are
-particularly vulnerable to introduction. Since typically, local production
-does not satisfy demands of such localities, they have high
-inflows of host crops from other production areas and possibly from other
-countries. They are highly vulnerable to attacks, and therefore, production
-areas close by can be quickly affected. In fact, due to the absence of
-sufficient hosts for establishment, urban areas themselves need not
-be susceptible. But market interactions (local human-mediated dispersal)
-can possibly facilitate the introduction of the pest to nearby production
-areas where it can establish.
+few major production centers
 
-%% Nevertheless, we considered the scenario in which \tuta{}
-%% establishes in the region between Kuala Lumpur and Singapore. The
-%% simulations suggest that the pest will spread to most localities in
-%% Malaysia and Sumatra, Indonesia within an year.
-%% 
-%% Our
-%% results show that for all countries, once the pest is introduced, within
-%% 2-3 years the it will spread to almost all localities, and when it reaches
-%% a high production locality, it spreads to other regions within a year.
-%% Past invasion records support this trend.
-%% The pest became widespread in
-%% countries Mediterranean
-%% region, in Middleeastern countries, and in India in just 2-3 years.
+major consumption centers get vegetables from long distances as they cannot
+satisfy the demand
 
-%%   
+precipitation as a seasonal production predictor.
 
-%% We
-%% considered two hypothetical scenarios: (i)~\tuta{} is introduced to the
-%% Palawan region from Malaysian Borneo (natural pathway) and (ii)~it is introduced to the high
-%% production area of Northern Mindanao. While in the first case we did not
-%% observe spread beyond the Palawan region, in the second case, within two
-%% years, almost all localities were invaded. The latter case is shown in
-%% Figure~\ref{fig:phlBContour}.
-%% However, we recall that trade between some countries was ignored, and as a
-%% result our model might have missed some long-distance jumps.  For example,
-%% from Vietnam, there is a possibility that it can enter Phnom Penh, Cambodia
-%% through tomato imports during the rainy months~\cite{sokhen2004}. The
-%% southwards spread to Malaysia might be faster than predicted by Class~B
-%% spread due to exports from Thailand to Malaysia and Singapore.
-%%
-%% Class~A predicts that the entire Mainland Southeast Asia will be infested
-%% with four years.
-%% %% We considered three scenarios of introduction of the pest to the region.
-%% %% The first scenario corresponds to evolution of the spread from Bangladesh
-%% %% (B1). The other two are hypothetical scenarios based on the analysis in
-%% %% Section~\ref{sec:entry}. Scenario~M corresponds to \tuta{} introduced near
-%% %% a major port region of Malaysia. The third Scenario~P is its introduction
-%% %% to Philippines close to the captial city Manila assuming introduction
-%% %% due to migratory workers from \tuta{} affected regions.
-%% 
-%% From Figure~\ref{fig:totalSpread}, we observe that the range expansion is
-%% much faster with Class~A compared to Class~B. The main reason for the slow
-%% spread is due to not accounting for trade interactions between countries in
-%% the model. The spread is characterized by slow spread between countries and
-%% rapid expansion within. For example, the big jumps in range expansion
-%% between time steps 72 and 120 is mainly due to spread within Myanmar
-%% through long-distance jumps. The challenges in modeling international trade
-%% are covered in Methods (Trade flows). But when we consider the global
-%% spread pattern of \tuta{}, we observe reduction in rate of range expansion
-%% in certain regions.
-%% 
-%% Also, the predicted spread could be
-%% slower due boundary effects; we have not accounted for cells belonging to
-%% Northeastern parts of India that share border with Bangladesh and Myanmar
-%% and the Yunnan province of China.  On the other hand, when we focus on each
-%% country separately (Figure~\ref{fig:spreadWithin}, we observe that the
-%% spread within a country is much faster in the case of Class~B.  Results
-%% suggest that major production areas of a country will be invaded within 2-3
-%% years of introduction.
-%% 
-%% The spatio-temporal spread for Scenario~B1 is shown in
-%% Figure~\ref{fig:spreadBGD}. The start time corresponds to~24 time steps (or
-%% two years) from the first report. The results indicate that there is a high
-%% chance that \tuta{} will spread to Mainland Southeast Asia in four to six
-%% years. Because of long distance dispersal, we also observe a non-radial
-%% spread. Aided by domestic trade and exports from Thailand, there is
-%% possibility that the pest will be introduced to Peninsular Malaysia and
-%% subsequently to Singapore and Indonesia in this period even though this
-%% area is much farther from the current range of \tuta{}. Also, we see the
-%% possibility of the pest crossing the sea from Peninsular Malaysia to
-%% Malaysian Borneo within a year of introduction to this country. However,
-%% these are conservative estimates. First of all, the simulations do not
-%% account for possible new introductions. 
+district level is required
 
-%% The spread due to other two scenarios are shown in Figures~\ref{spreadMYS}
-%% and~\ref{spreadPHL} respectively. Note that in both of these scenarios we do not
-%% account for the spread from Bangladesh. This is crucially dependent on the
-%% time of introduction. However, it is critical to consider the synergistic
-%% effects of range expansion from multiple locations. The spread in
-%% Scenario~M follows a similar pattern as in Scenario~B3.
-%% \aacomment{Philippines pending}.
+few production areas and many consumption areas showing hub and spoke.
 
-%% \begin{figure}[ht]
-%%     \centering
-%%     \begin{subfigure}[b]{.32\textwidth}
-%%         \includegraphics[width=\textwidth,trim={3cm 3cm 8cm 3cm},clip]{figs/spread_BGD.png}
-%%     \caption{Scenario~B1\label{fig:spreadBGD}}
-%%     \end{subfigure}
-%%     \begin{subfigure}[b]{.32\textwidth}
-%%         \includegraphics[width=\textwidth,trim={4cm 2cm 8cm 12cm},clip]{figs/spread_MYS.png}
-%%     \caption{Scenario~M\label{fig:spreadMYS}}
-%%     \end{subfigure}
-%%     \begin{subfigure}[b]{.32\textwidth}
-%%         \includegraphics[width=\textwidth,trim={4cm 2cm 8cm 12cm},clip]{figs/spread_PHL.png}
-%%     \caption{Scenario~P\label{fig:spreadPHL}}
-%%     \end{subfigure}
-%%     \caption{Possible spread of \tuta{} in the focus region under three
-%%     scenarios. In each plot, the legends correspond to months. For the
-%%     purpose of plotting, for each cell, we compute the time~$t$ for which
-%%     the empirical probability of infection before~$t$ is at least $0.1$.
-%%     Scenario~B3 starts with Bangladesh and significant parts of Myanmar
-%%     infested accounting for spread from May 2016 to May 2018.
-%%     \aacomment{Philippines pending, legend will be made bigger}}
-%% \end{figure}
+
+\paragraph{Influence of domestic trade on spread pattern and rate.}
+For the country-specific studies, the starting location was decided based
+on our analysis of possible entry points through different pathways
+(Section~\ref{S:sec:seeds} in the supplement).  We observed the following
+common spread pattern.  When the invasive species is introduced to a
+country, dispersal is slow until the invasion front reaches a {production
+source}. Once it establishes at a source, the spread is very fast.
+Depending on the country, within~12 to~24 timesteps (or an year or two), it spreads to almost all major localities of the country
+(see Figure~\ref{fig:thlBContourInt} for example). Production areas which
+are very close to high-consumption localities (large urban areas) are
+particularly vulnerable. Since local production typically does not satisfy
+demands of such localities, they have high inflows from other production
+areas and possibly from other countries. As a result, these localities are
+the quickly infected. Once introduced to such localities, farmer--market
+interactions (local human-mediated dispersal) can facilitate the
+introduction of the pest to nearby production regions where it can
+establish and proliferate.
 
 %%
-%% Specific observations
-%% \begin{itemize}
-%%     \item identify important vegetable production areas
-%% \end{itemize}
-
-%%
-%% Among the countries listed in the FAOSTAT dataset, Indonesia is by far the
-%% largest producer ($\approx1$M tonnes) followed by Philippines and Malaysia
-%% ($\approx200$K tonnes each). However, alternate data sources (pers.
-%% comm.) indicate that Vietnam is a large producer ($\approx400$K)
-%% too.
-%%
-%% \paragraph{Predicted spread in Mainland Southeast Asia.}
-%% We applied both model classes to simulate the spread in the rest of the
-%% study region. Given that more than two years have passed since the time of
-%% first report in Bangladesh and unofficial reports of \tuta{} presence in
-%% Myanmar\footnote{The Wikipedia entry on \tuta{}
-%%     (\url{https://en.wikipedia.org/wiki/Tuta_absoluta}) indicates
-%% that it is present in the northern region of Myanmar since
-%% April~2017. No official confirmation is available yet.}, cells in northern Myanmar bordering India and Bangladesh were
-%% seeded (Methods). Representative simulation outputs are shown for Mainland
-%% Southeast Asia in Figure~\ref{fig:msaClassAB}. We note that in the case of
-%% Class~A models, the eastward spread is faster than southward spread. This
-%% is mainly because the Moore neighborhood is smaller at the narrow region in
-%% the south of Myanmar and Thailand bordering Malaysia. However, in
-%% the case of Class~B, the spread is much faster in the same region aided by domestic
-%% trade flows from northern and central Thailand to the southern region. Both models indicate that the pest will enter
-%% Thailand from Myanmar, and subsequently move to Laos and Vietnam as it
-%% spreads eastwards and to China when it spreads northwards.
-%% %%
-%% %Changed B to A
-%%
-
-%% To account for possible increase in production and trade, we boosted the
-%% pathway parameters by (i)~25\% and (ii)~50\%. The results in
-%% Figure~\ref{fig:spreadRate} show the increase in intensity of infection,
-%% but not an appreciable increase in range.
-
-%%
-\paragraph{Interventions at the trade level.}
 Given that monitoring and quarantining are both resource intensive and
 potentially disruptive, developing strategies that involve few locations,
-yet provide near-optimal control is a goal for modelers. 
-Market-level phytosanitary measures in terms of import restrictions have
-been undertaken by countries~\cite{USDA2012}. Here, we evaluated a simple
-strategy of containing the spread through the trade pathway. Localities
-associated with high annual outflows were identified. As discussed earlier,
-pest establishment in these areas can potentially lead to rapid range
-expansion. The outflow from the targeted localities was cut off to mimic
-control at the trade/market level. Note that cutting off outflow does not
-necessary imply restricting trade of host crops. It is possible that
-phytosanitary measures greatly reduce the chance of spread through trade.
-Firstly, we identified localities with high outflows (at most four in each
-country).  Figure~\ref{fig:spread} shows results for two countries. More
-results are present in Figure~\ref{S:fig:intervene} in the supplement.
-Consistently, across countries, we observed a significant reduction in
-range expansion as well as intensity of spread.  Besides, as seen in
-Figure~\ref{fig:thlBContourInt}, stifling these flows leads to a local and
-more importantly, predictable spread pattern that resembles those of
-Class~A models, but with much less intensity. 
+yet provide near-optimal control is a goal for modelers.  Market-level
+phytosanitary measures in terms of import restrictions have been undertaken
+by countries~\cite{USDA2012}. Here, we evaluated a simple strategy of
+containing the spread through the trade pathway. Localities associated with
+high annual outflows were identified (at most four in each country). As
+discussed earlier, pest establishment in these areas can potentially lead
+to rapid range expansion. The outflow from the targeted localities was cut
+off to mimic control at the trade/market level. In the strictest sense,
+this can be implemented by restricting trade of host crops. But, it is
+possible that phytosanitary measures have the same effect.
+Figure~\ref{fig:spread} shows results for two countries.  More results are
+present in Figure~\ref{S:fig:intervene} in the supplement.  Consistently,
+across countries, we observed a significant reduction in range expansion as
+well as intensity of spread.  Besides, as seen in
+Figure~\ref{fig:thlBContourInt}, stifling these flows localizes the spread
+that resembles those of Class~A models, but with much less intensity.
 %%
 %% Given the importance of the long-distance human-mediated pathway, we
 %% studied the effect of controlling this pathway in mitigating the spread.
@@ -1187,15 +1078,15 @@ Class~A models, but with much less intensity.
 \end{subfigure}
 \begin{subfigure}[b]{.28\textwidth}
 \includegraphics[width=\textwidth]{../cellular_automata/results/contour/VN_model-B_precip1_m1_l3.pdf}
-\caption{Vietnam without intervention\label{fig:vnmBContour}}
+\caption{Vietnam: without intervention\label{fig:vnmBContour}}
 \end{subfigure}
 \begin{subfigure}[b]{.28\textwidth}
 \includegraphics[width=\textwidth]{../cellular_automata/results/contour/VN_model-B_precip1-out-100_m1_l3.pdf}
-\caption{Vietnam with intervention\label{fig:vnmBContourInt}}
+\caption{Vietnam: with intervention\label{fig:vnmBContourInt}}
 \end{subfigure}
 \begin{subfigure}[b]{.43\textwidth}
 \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/VN_dist_prob_B_box.pdf}
-\caption{Vietnam range of expansion (all Class B models)\label{fig:vnmBContourBox}}
+\caption{Vietnam: range of expansion (all Class B models)\label{fig:vnmBContourBox}}
 \end{subfigure}
 \caption{\textbf{Rate and pattern of spread with and without intervention.}
 Representative spread dynamics of Class~B models ($\mooreRange=1, \ell=3$)
@@ -1266,41 +1157,38 @@ accumulated probability for that bin.
 
 %%
 \section{Discussion}
-need to say take away points
-\begin{enumerate}
-    \item the clustering paper citation \cite{cassandras2000clustering}
-    \item need sample flows for calibration. need to study heterogeneity
-    \item need function for relation between flow and pest spread
-    \item what is enough for modeling trade? at minimum what is
-    required?
-    \item SIS Epidemics in Multilayer-based Temporal Networks
-\end{enumerate}
-
-The variability in the spread pattern exposes gaps in data and
-understanding of the spread dynamics. We can attempt to analyze regions in
-Europe and Africa where \tuta{} has been present for more than a decade to
-better calibrate our models. However, one needs to be cautious while
-applying studies of one region to another. For example, in Europe and parts
-of Africa seedling trade and greenhouse cultivation play an important part
-in tomato production. Studies on self-mediated spread (flying capability)
-can help reduce variability. It is also possible that trade infrastructure
-is inaccurately represented. We may not have accounted for long-distance
-flows that might explain the spread. For example, in the case of Class~B
-models, one of the localities (Jaintiapur, which reports presence of pest)
-was never infected in the simulations. It is also possible that more than
-one introduction occurred.  In January 2017, \tuta{} was reported from
+The variability in the spread patterns that explain the incidence reports
+exposes the lack of understanding of the pathways of spread.
+Nevertheless, the analysis does strongly indicate the role of
+human-assisted spread of \tuta{}. The pest was reported in May~2016 in the
+nortwestern part of Bangladesh bordering India. The region is among the top
+three tomato producers in the country. By the beginning of the next
+production season, \tuta{} was found in almost every major urban region.
+Similar correlation between tomato trade and \tuta{} spread was observed in
+Nepal~\cite{venkatramanan2019modeling}. Studies on
+self-mediated spread (flying capability or by wind) can definitely help
+estimate more accurately the rate of self-mediated spread. It is also
+important to consider alternate scenarios of introduction. We recall that
+the far eastern part of Bangladesh (locality Jaintiapur in
+Figure~\ref{fig:bgdClassB1}) reported pest presence nine months after the
+first report. In a typical Class~B spread pattern, however, this region was
+not infected within that time frame mainly because of week trade flows to
+that region. However, in January 2017, \tuta{} was reported from
 Umiam~\cite{sankarganesh2017}, Meghalaya in India, about 100kms from
 Jaintiapur. It also happens to be near an important trade route from India
-to Northeastern Bangladesh.
+to Northeastern Bangladesh. Therefore, it is possible that multiple
+incursions took place. It is possible that analysis of other countries or
+regions can reduce this variability. But, caution needs to be exercised
+before applying analysis of one region to another as trade dynamics,
+production methods and as a result pathways can wary widely from one region
+to another.
 
-We recall the discussion about the slow spread rate of our models in
-Mainland Southeast Asia compared to the spread in Bangladesh. Another reason for the reduced spread rate could be due
-to ignoring some trade flows between countries (for Class~B models in
-particular). Because of this, we observe
-a slow spread at the country boundaries.  Historically, international trade
-has played a strong role in the spread of \tuta{} between countries in
-Europe and West Asia.  This seems to apply to even South Asia. The pest was
-first reported by India
+We recall the discussion on slow predicted rate of spread in Mainland
+Southeast Asia compared to the observed rate in Bangladesh. One reason for
+this could be the unaccounted trade flows between countries. International
+trade within this region is not documented well. Historically,
+international trade has played a strong role in the spread of \tuta{}
+between countries. For example, the pest was first reported by India
 in~2014~\cite{sridhar2014new,kalleshwaraswamy2015occurrence}. By
 early~2016, it was discovered in the Kathmandu area of
 Nepal~\cite{bajracharya2016first}, the northern part of Bangladesh in
@@ -1317,24 +1205,33 @@ despite being present in neighboring Central Asian countries since~2015.
 Hence, it is critical to address the data gaps concerning international
 trade.
 
-Our results provide insights into monitoring and intervening by accounting
-for trade. While, several IPM strategies have been suggested
-for managing \tuta{}, hardly any work has been done in designing effective
-interventions at the trade level. Designing phytosanitary measures
-targetted towards market and vehicles of transportation for preventing
-introductions (or reintroductions) is therefore a promising research
-direction. Some countries have already taken measures in this regard. The
-Animal and Plant Health Inspection Service of the United States Department
-of Agriculture (USDA-APHIS) has instituted quarantine regulations for
-imports from regions where the pest is present~\cite{USDA2012}. Identifying
-the optimal set of nodes in a network to reduce infectious disease spread
-is a widely studied topic~\cite{madar2004immunization}. There are very few
-works that apply such techniques to invasive species spread.
-Nopsa~et~al.~\cite{nopsa2015ecological} considered this problem in the
-context of soybean rust in the US, modeling the spread as a propagation
-process over a network of counties. They developed efficient strategies to
-reduce the spread by identifying and monitoring only a subset of locations
-which are critical for the spread.
+While, several IPM strategies have been suggested for managing \tuta{},
+hardly any work has been done in designing effective interventions at the
+trade level. Designing phytosanitary measures targetted towards market and
+vehicles of transportation for preventing introductions (or
+reintroductions) is therefore a promising research direction. Some
+countries have already taken measures in this regard. The Animal and Plant
+Health Inspection Service of the United States Department of Agriculture
+(USDA-APHIS) has instituted quarantine regulations for imports from regions
+where the pest is present~\cite{USDA2012}. Identifying the optimal set of
+nodes in a network to reduce infectious disease spread is a widely studied
+topic~\cite{madar2004immunization}. There are very few works that apply
+such techniques to invasive species spread~(Nopsa et
+al.~\cite{nopsa2015ecological} for example). As the world moves towards
+concentrated and specialized agricultural production, focusing on this
+aspect becomes increasingly important.
+
+need to say take away points
+\begin{enumerate}
+    \item modularity of the parameterization and analysis part needs to be
+    stressed
+    \item the clustering paper citation \cite{cassandras2000clustering}
+    \item need sample flows for calibration. need to study heterogeneity
+    \item need function for relation between flow and pest spread
+    \item what is enough for modeling trade? at minimum what is
+    required?
+    \item SIS Epidemics in Multilayer-based Temporal Networks
+\end{enumerate}
 
 \paragraph{Impact.} Traditionally, crops such as tomato have been grown in
 the dry season, which is usually during winter in most parts of Southeast
@@ -1346,20 +1243,7 @@ Tomato production and internal trade has steadily increased in this region
 tomato to outside of the focus region has risen steeply in the recent years
 (after 2011), while the imports generally indicate a downward trend.
 Therefore, invasions from pests such as \tuta{} can have a huge negative
-impact on the socioeconomic fabric of this region.  Although there is a
-general consensus that vegetable and seedling trade is a primary driver of
-\tuta{} spread, previous modeling efforts have exclusively focused on
-ecological aspects. Several
-studies~\cite{desneux2010biological,tonnang2015identification} provide risk
-maps using CLIMEX and take additional factors into account.
-Guimapi~et~al.~\cite{guimapi2016modeling} used a cellular automata approach
-to capture the global spread of the pest by factoring in temporal
-variations and spatial distribution of vegetation, temperature, and tomato
-production. A precursor to this work~\cite{venkatramanan2017towards}
-modeled the seasonal production and trade of tomato in Nepal to study the
-role of trade in the spread of \tuta{} in Nepal using gravity model and
-network dynamics.
-%% A novel ranking-based
+impact on the socioeconomic fabric of this region.  %% A novel ranking-based
 %% inference was used to establish that trade was indeed a driving factor in the
 %% rapid spread of the pest in this region.
 %% In general, modeling the multi-pathway dispersal of pests such as \tuta{}
@@ -1382,10 +1266,13 @@ Robinet~et~al.~\cite{robinet2009role} show that the distribution and spread
 pattern of the pinewood nematode in China is strongly correlated with
 density of human population and infrastructure such as railways and river
 ports.  Carrasco~et~al.~\cite{carrasco2010unveiling} combine spatially
-explicit models with a phenology model to incorporate population dynamics
-of the pest (western corn rootworm). Two types of long-distance dispersals
-are considered -- domestic and international. The domestic mode is modeled
-as a flow network between cities using a gravity model approach.
+explicit models of human-mediated spread with a phenology model to
+incorporate population dynamics of the pest (western corn rootworm).
+%%
+%% Two types of long-distance dispersals
+%% are considered -- domestic and international. The domestic mode is modeled
+%% as a flow network between cities using a gravity model approach.
+%%
 Nopsa~et~al.~\cite{nopsa2015ecological} use a network science approach to
 studying the role of transport and storage infrastructure in the spread of
 pests and pathogens of wheat. Sutrave~et~al.~\cite{sutrave2012identifying}
@@ -1396,10 +1283,26 @@ Bradhurst~et~al.~\cite{bradhurst2015hybrid} study the spread of foot and
 mouth disease in livestock by using an aggregate population-level model to
 capture within-herd spread and an individual-based model for between herd
 spread. A similar approach is used by Yang~et~al.~\cite{yang2016} to
-forecast influenza outbreaks. They use a patch network model where a
-compartmental model is used to simulate intra-locale spread and a gravity
-model based approach is used for inter-locale spread of flu in the
-neighborhoods of New~York.
+forecast influenza outbreaks. 
+%%
+%% They use a patch network model where a
+%% compartmental model is used to simulate intra-locale spread and a gravity
+%% model based approach is used for inter-locale spread of flu in the
+%% neighborhoods of New~York. 
+%%
+Although there is a general consensus that vegetable and seedling trade is
+a primary driver of \tuta{} spread, previous modeling efforts have
+exclusively focused on ecological aspects. Several
+studies~\cite{desneux2010biological,tonnang2015identification} provide risk
+maps using CLIMEX and take additional factors into account.
+Guimapi~et~al.~\cite{guimapi2016modeling} used a cellular automata approach
+to capture the global spread of the pest by factoring in temporal
+variations and spatial distribution of vegetation, temperature, and tomato
+production. A precursor to this work~\cite{venkatramanan2019modeling}
+modeled the seasonal production and trade of tomato in Nepal to study the
+role of trade in the spread of \tuta{} in Nepal using gravity model and
+network dynamics.
+
 
 %% The modeling framework developed in this paper can
 %% be used to study the spread of \tuta{} in other regions. However, it is
@@ -1409,22 +1312,35 @@ neighborhoods of New~York.
 %% capacity, spread by human mobility or trade, etc.  
 
 
-\paragraph{Challenges and limitations.}
-Modeling emerging invasions is particularly challenging. Accounting for
-multiple pathways of spread inevitably increases model complexity. On the
-other hand, limited data on incidence and understanding of the underlying
-dynamics makes it nearly impossible to calibrate and validate the models.
-Besides, since our focus region spans multiple countries, identifying and
-collecting data for each country was a tedious process. For many countries,
-data had to be collected (or even inferred) from several publications and
-reports (Table~\ref{S:tab:countryData}). Further, these datasets were
-misaligned in time and spatial resolution. We have had to simplify or
-ignore some of the processes that might significantly influence the spread.
-For example, our model uses monthly production as a surrogate for
-infectiousness of a cell. Complex phenology models can be used instead (as
-in Carrasco~et~al.~\cite{carrasco2010unveiling}). While such a model for
-\tuta{} would be useful, this would add to the complexity of
-the model~\cite{robinet2012suite}.
+
+Calibration and sensitivity analysis of large-scale, high-resolution models
+is a challenging task. Methods based on machine learning surrogates are
+being increasingly used to accomplish this efficiently for complex
+agent-based models~\cite{lamperti2018agent}. 
+%%
+\paragraph{Challenges and limitations.} Modeling emerging invasions is
+particularly challenging. Limited data on incidence and understanding of
+the underlying dynamics makes it nearly impossible to calibrate and
+validate the models.   We have had to simplify or ignore some of the
+processes that might significantly influence the spread.  For example, our
+model uses monthly production as a surrogate for infectiousness of a cell.
+Complex phenology models can be used instead (as in
+Carrasco~et~al.~\cite{carrasco2010unveiling}). While such a model for
+\tuta{} would be useful, this would add to the complexity of the
+model~\cite{robinet2012suite}.
+
+Since our focus region spans multiple countries, identifying and collecting
+data for each country was a tedious process. For many countries, data had
+to be collected (or even inferred) from several publications and reports
+(Table~\ref{S:tab:countryData}). Further, these datasets were misaligned in
+time and spatial resolution.  It is important to account for heterogeneity
+in production, consumption, awareness, cultural factors, etc. both within
+and between countries.  Some countries are technologically more advanced
+than others, which manifests as differences in yield, crop loss, trade
+infrastructure, pest awareness and preparation for
+invasion~\cite{early2016global}. More pathways might have to be accounted
+for as well (seedling trade, greenhouse cultivation, etc.).
+
 %%
 %% multi-pathway model incorporated a multitude of
 %% datasets-- production, consumption, trade dynamics, climate, biology, etc.
@@ -1475,16 +1391,6 @@ clear.
 %% agent-based model to study just the interaction between farmers of two
 %% villages in the context of the potato moth in Ecuador. 
 
-It is important to account for heterogeneity in production, consumption,
-awareness, cultural factors, etc. both within and between countries. Some
-countries are technologically more advanced than others, which manifests as
-differences in yield, crop loss, trade infrastructure, pest awareness and
-preparation for invasion~\cite{early2016global}. It is possible that there
-is lot of variation in consumption within a country as well as across
-seasons. The relationship between trade volume and distance between
-localities could vary from one region to another. Extending to other
-regions such as North America, China or Australia, might require accounting
-for seedling trade and greenhouse production.
 %% Even at the country level, data is available for only half of the
 %% countries. Also, we did not find any correlation between consumption and
 %% GDP or tomato production ($p< 0.01$).  Without adequate data, it is

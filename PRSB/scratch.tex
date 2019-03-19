@@ -1,3 +1,165 @@
+
+
+It is possible that there
+is lot of variation in consumption within a country as well as across
+seasons. The relationship between trade volume and distance between
+localities could vary from one region to another. Extending to other
+regions such as North America, China or Australia, might require accounting
+for seedling trade and greenhouse production.
+One way to increase our understanding
+is to analyze regions in Europe and Africa where \tuta{} has been present
+for more than a decade to better calibrate our models. However, one needs
+to be cautious while applying studies of one region to another. For
+example, in Europe and parts of Africa seedling trade and greenhouse
+cultivation play an important part in tomato production~\cite{}. 
+%% Nopsa~et~al.~\cite{nopsa2015ecological} considered this problem in the
+%% context of soybean rust in the US, modeling the spread as a propagation
+%% process over a network of counties. They developed efficient strategies to
+%% reduce the spread by identifying and monitoring only a subset of locations
+%% which are critical for the spread.
+%% Nevertheless, we considered the scenario in which \tuta{}
+%% establishes in the region between Kuala Lumpur and Singapore. The
+%% simulations suggest that the pest will spread to most localities in
+%% Malaysia and Sumatra, Indonesia within an year.
+%% 
+%% Our
+%% results show that for all countries, once the pest is introduced, within
+%% 2-3 years the it will spread to almost all localities, and when it reaches
+%% a high production locality, it spreads to other regions within a year.
+%% Past invasion records support this trend.
+%% The pest became widespread in
+%% countries Mediterranean
+%% region, in Middleeastern countries, and in India in just 2-3 years.
+
+%%   
+
+%% We
+%% considered two hypothetical scenarios: (i)~\tuta{} is introduced to the
+%% Palawan region from Malaysian Borneo (natural pathway) and (ii)~it is introduced to the high
+%% production area of Northern Mindanao. While in the first case we did not
+%% observe spread beyond the Palawan region, in the second case, within two
+%% years, almost all localities were invaded. The latter case is shown in
+%% Figure~\ref{fig:phlBContour}.
+%% However, we recall that trade between some countries was ignored, and as a
+%% result our model might have missed some long-distance jumps.  For example,
+%% from Vietnam, there is a possibility that it can enter Phnom Penh, Cambodia
+%% through tomato imports during the rainy months~\cite{sokhen2004}. The
+%% southwards spread to Malaysia might be faster than predicted by Class~B
+%% spread due to exports from Thailand to Malaysia and Singapore.
+%%
+%% Class~A predicts that the entire Mainland Southeast Asia will be infested
+%% with four years.
+%% %% We considered three scenarios of introduction of the pest to the region.
+%% %% The first scenario corresponds to evolution of the spread from Bangladesh
+%% %% (B1). The other two are hypothetical scenarios based on the analysis in
+%% %% Section~\ref{sec:entry}. Scenario~M corresponds to \tuta{} introduced near
+%% %% a major port region of Malaysia. The third Scenario~P is its introduction
+%% %% to Philippines close to the captial city Manila assuming introduction
+%% %% due to migratory workers from \tuta{} affected regions.
+%% 
+%% From Figure~\ref{fig:totalSpread}, we observe that the range expansion is
+%% much faster with Class~A compared to Class~B. The main reason for the slow
+%% spread is due to not accounting for trade interactions between countries in
+%% the model. The spread is characterized by slow spread between countries and
+%% rapid expansion within. For example, the big jumps in range expansion
+%% between time steps 72 and 120 is mainly due to spread within Myanmar
+%% through long-distance jumps. The challenges in modeling international trade
+%% are covered in Methods (Trade flows). But when we consider the global
+%% spread pattern of \tuta{}, we observe reduction in rate of range expansion
+%% in certain regions.
+%% 
+%% Also, the predicted spread could be
+%% slower due boundary effects; we have not accounted for cells belonging to
+%% Northeastern parts of India that share border with Bangladesh and Myanmar
+%% and the Yunnan province of China.  On the other hand, when we focus on each
+%% country separately (Figure~\ref{fig:spreadWithin}, we observe that the
+%% spread within a country is much faster in the case of Class~B.  Results
+%% suggest that major production areas of a country will be invaded within 2-3
+%% years of introduction.
+%% 
+%% The spatio-temporal spread for Scenario~B1 is shown in
+%% Figure~\ref{fig:spreadBGD}. The start time corresponds to~24 time steps (or
+%% two years) from the first report. The results indicate that there is a high
+%% chance that \tuta{} will spread to Mainland Southeast Asia in four to six
+%% years. Because of long distance dispersal, we also observe a non-radial
+%% spread. Aided by domestic trade and exports from Thailand, there is
+%% possibility that the pest will be introduced to Peninsular Malaysia and
+%% subsequently to Singapore and Indonesia in this period even though this
+%% area is much farther from the current range of \tuta{}. Also, we see the
+%% possibility of the pest crossing the sea from Peninsular Malaysia to
+%% Malaysian Borneo within a year of introduction to this country. However,
+%% these are conservative estimates. First of all, the simulations do not
+%% account for possible new introductions. 
+
+%% The spread due to other two scenarios are shown in Figures~\ref{spreadMYS}
+%% and~\ref{spreadPHL} respectively. Note that in both of these scenarios we do not
+%% account for the spread from Bangladesh. This is crucially dependent on the
+%% time of introduction. However, it is critical to consider the synergistic
+%% effects of range expansion from multiple locations. The spread in
+%% Scenario~M follows a similar pattern as in Scenario~B3.
+%% \aacomment{Philippines pending}.
+
+%% \begin{figure}[ht]
+%%     \centering
+%%     \begin{subfigure}[b]{.32\textwidth}
+%%         \includegraphics[width=\textwidth,trim={3cm 3cm 8cm 3cm},clip]{figs/spread_BGD.png}
+%%     \caption{Scenario~B1\label{fig:spreadBGD}}
+%%     \end{subfigure}
+%%     \begin{subfigure}[b]{.32\textwidth}
+%%         \includegraphics[width=\textwidth,trim={4cm 2cm 8cm 12cm},clip]{figs/spread_MYS.png}
+%%     \caption{Scenario~M\label{fig:spreadMYS}}
+%%     \end{subfigure}
+%%     \begin{subfigure}[b]{.32\textwidth}
+%%         \includegraphics[width=\textwidth,trim={4cm 2cm 8cm 12cm},clip]{figs/spread_PHL.png}
+%%     \caption{Scenario~P\label{fig:spreadPHL}}
+%%     \end{subfigure}
+%%     \caption{Possible spread of \tuta{} in the focus region under three
+%%     scenarios. In each plot, the legends correspond to months. For the
+%%     purpose of plotting, for each cell, we compute the time~$t$ for which
+%%     the empirical probability of infection before~$t$ is at least $0.1$.
+%%     Scenario~B3 starts with Bangladesh and significant parts of Myanmar
+%%     infested accounting for spread from May 2016 to May 2018.
+%%     \aacomment{Philippines pending, legend will be made bigger}}
+%% \end{figure}
+
+%%
+%% Specific observations
+%% \begin{itemize}
+%%     \item identify important vegetable production areas
+%% \end{itemize}
+
+%%
+%% Among the countries listed in the FAOSTAT dataset, Indonesia is by far the
+%% largest producer ($\approx1$M tonnes) followed by Philippines and Malaysia
+%% ($\approx200$K tonnes each). However, alternate data sources (pers.
+%% comm.) indicate that Vietnam is a large producer ($\approx400$K)
+%% too.
+%%
+%% \paragraph{Predicted spread in Mainland Southeast Asia.}
+%% We applied both model classes to simulate the spread in the rest of the
+%% study region. Given that more than two years have passed since the time of
+%% first report in Bangladesh and unofficial reports of \tuta{} presence in
+%% Myanmar\footnote{The Wikipedia entry on \tuta{}
+%%     (\url{https://en.wikipedia.org/wiki/Tuta_absoluta}) indicates
+%% that it is present in the northern region of Myanmar since
+%% April~2017. No official confirmation is available yet.}, cells in northern Myanmar bordering India and Bangladesh were
+%% seeded (Methods). Representative simulation outputs are shown for Mainland
+%% Southeast Asia in Figure~\ref{fig:msaClassAB}. We note that in the case of
+%% Class~A models, the eastward spread is faster than southward spread. This
+%% is mainly because the Moore neighborhood is smaller at the narrow region in
+%% the south of Myanmar and Thailand bordering Malaysia. However, in
+%% the case of Class~B, the spread is much faster in the same region aided by domestic
+%% trade flows from northern and central Thailand to the southern region. Both models indicate that the pest will enter
+%% Thailand from Myanmar, and subsequently move to Laos and Vietnam as it
+%% spreads eastwards and to China when it spreads northwards.
+%% %%
+%% %Changed B to A
+%%
+
+%% To account for possible increase in production and trade, we boosted the
+%% pathway parameters by (i)~25\% and (ii)~50\%. The results in
+%% Figure~\ref{fig:spreadRate} show the increase in intensity of infection,
+%% but not an appreciable increase in range.
 \begin{table}[!h]
 \caption{Data on different aspects of the model for different countries
 obtained from reports, peer-reviewed articles and experts' inputs.
