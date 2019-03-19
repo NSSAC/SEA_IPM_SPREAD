@@ -97,11 +97,6 @@ awk -F, '{printf "%s",$1; for(i=2;i<13;i++) printf ",%s",$i; printf "\n"}' ../re
 Rscript ../scripts/random_forest_cluster.R -f for_rf.csv -o $rfFile
 }
 
-function createParFile(){ #IGNORE
-grep "$1" par_all.csv | awk -F, 'NR==1{print $2}' > $2.csv
-grep "$1" par_all.csv >> $2.csv
-}
-
 if [[ $# == 0 ]]; then
    echo "Here are the options:"
    grep "^function" $BASH_SOURCE | sed -e 's/function/  /' -e 's/[(){]//g' -e '/IGNORE/d'
