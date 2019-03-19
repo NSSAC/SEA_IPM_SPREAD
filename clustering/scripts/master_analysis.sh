@@ -40,7 +40,30 @@ sed -e "s/CLU$k/cluster/" .temp_preprocessAgglomerative > cluster_agglomerative_
 done
 }
 
-function cartAndRF(){ # OLD: CART and RF analysis of clusters for kmeans
+function cartAgglomerative(){ # CART and RF for agglomerative from Hannah
+for f in `find ../results/agglomerative -iname c*_agg.csv`
+do
+echo $f
+cartFile=`basename $f | sed -e 's/^/cart_/' -e 's/csv$/pdf/'`
+Rscript ../scripts/cart_cluster.R -f $f -o $cartFile
+done
+## awk -F, '{printf "%s",$1; for(i=2;i<13;i++) printf ",%s",$i; printf "\n"}' ../results/agglomerative/clusters_agglomerative.csv | sed -e 's/CLU10/cluster' > for_rf.csv
+## Rscript ../scripts/random_forest_cluster.R -f for_rf.csv -o $rfFile
+}
+
+function rfAgglomerative(){ # CART and RF analysis of clusters for agglomerative
+for f in `find ../results/agglomerative/ -iname cluster_*csv`
+do
+echo $f
+rfFile=`basename $f | sed -e 's/cluster/rf/' -e 's/.csv/_original.csv/'`
+rfFileFormatted=`echo $rfFile | sed -e 's/_original//'`
+Rscript ../scripts/random_forest_cluster.R -f $f -o $rfFile
+formatVar $rfFile $rfFileFormatted
+plotFile=`echo $rfFile | sed -e 's/csv$/pdf/'`
+done
+}
+
+function cartAndRFkmeans(){ # CART and RF analysis of clusters for kmeans
 for f in `find ../results/clusters -iname cluster_*csv`
 do
 echo $f
@@ -61,17 +84,6 @@ done
 ## done
 }
 
-function cartAgglomerative(){ # CART and RF for agglomerative from Hannah
-for f in `find ../results/agglomerative -iname c*_agg.csv`
-do
-echo $f
-cartFile=`basename $f | sed -e 's/^/cart_/' -e 's/csv$/pdf/'`
-Rscript ../scripts/cart_cluster.R -f $f -o $cartFile
-done
-## awk -F, '{printf "%s",$1; for(i=2;i<13;i++) printf ",%s",$i; printf "\n"}' ../results/agglomerative/clusters_agglomerative.csv | sed -e 's/CLU10/cluster' > for_rf.csv
-## Rscript ../scripts/random_forest_cluster.R -f for_rf.csv -o $rfFile
-}
-
 function kmeans(){ # CART and RF for kmeans
 for f in `find ../results/kmeans -iname cluster_kmeans_*.csv`
 do
@@ -89,7 +101,6 @@ function createParFile(){ #IGNORE
 grep "$1" par_all.csv | awk -F, 'NR==1{print $2}' > $2.csv
 grep "$1" par_all.csv >> $2.csv
 }
-
 
 if [[ $# == 0 ]]; then
    echo "Here are the options:"
