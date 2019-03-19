@@ -59,7 +59,7 @@ set ytics font ",18" offset 1.5,0
 
 ##### plot
 set title font ",18" "" offset -3,.3
-set xlabel "cluster size" offset 0,0 font ",18"
+set xlabel "Num. of clusters" offset 0,0 font ",18"
 set ylabel "rank" offset -2,0 font ",18"
 
 
