@@ -1,3 +1,132 @@
+%%
+%% \begin{figure}[t]
+%% \centering
+%% \begin{subfigure}[b]{.32\textwidth}
+%%     \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_all.pdf}
+%%     \caption{All \label{fig:rfAll}}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%%     \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_A.pdf}
+%%     \caption{Class A\label{fig:rfA}}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%%     \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_B.pdf}
+%%     \caption{Class B\label{fig:rfB}}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%%     \includegraphics[width=1.1\textwidth]{../cellular_automata/results/rf/rf_importance_short_mse.pdf}
+%% \caption{Class A\label{fig:rfShort}}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.32\textwidth}
+%% \includegraphics[width=1.1\textwidth]{../cellular_automata/results/rf/rf_importance_long_mse.pdf}
+%% \caption{Class B\label{fig:rfLong}}
+%% \end{subfigure}
+%%\caption{\textbf{Parameter importance.} Random
+%%Forest~\cite{breiman2001random} method was applied to study parameter
+%%importance. (a)~With cluster index as the dependent variable,
+%%the analysis was performed on the set of model instances which yielded a
+%%similarity~$\similarity\ge6$.
+%%%% (b)~The sensitivity of the spread pattern to parameters was analyzed by
+%%%% repeating the same process, but with cluster index as the dependent
+%%%% variable.
+%%The results for the entire set (a) and separately for Class~A (b) and
+%%Class~B models (c) are shown. The parameters are ordered by their
+%%importance based on percentage increase in mean square error from permuting
+%%the variable--higher, the more important.
+%%\label{fig:sensitivity}}
+%%%% a total of $17,000$ samples from the parameter space
+%%\end{figure}
+%%
+%% Class~B models show more sensitivity to start time step of simulation than
+%% Class~B models. The main reason why it is not at all critical in the latter
+%% class is because the pest was reported just before the rainy season;
+%% subsequent months have lean trade flows, and as a result it does not affect
+%% the spread much. However, it does not seem to have much effect on the
+%% radial spread component as is the case with Class~A models. In both cases,
+%% the spread is very sensitive to the local human-mediated pathway
+%% parameter~$\afm$. In the case of Class~A models, this pathway leads to
+%% faster spread within localities. In Class~B models, higher the value, the
+%% greater the chance of long-distance spread as it quickly leads to infection
+%% of large portions of the localities, and therefore their total
+%% infectiousness. Later, we will discuss on how it influences the spread rate
+%% for the rest of the region.
+%% \begin{figure}[ht]
+%%     \centering
+%%     \begin{subfigure}[b]{.48\textwidth}
+%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 1cm},clip]{../cellular_automata/results/cart/m2_l2_tree.pdf}
+%%     \caption{$\mooreRange=2$, $\ell=2$ \label{fig:cart22}}
+%%     \end{subfigure}
+%%     \begin{subfigure}[b]{.48\textwidth}
+%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../cellular_automata/results/cart/m2_l3_tree.pdf}
+%%     \caption{$\mooreRange=2$, $\ell=3$ \label{fig:cart32}}
+%%     \end{subfigure}
+%%     %% \begin{subfigure}[b]{.48\textwidth}
+%%     %% \includegraphics[width=\textwidth]{figs/cart_box1.pdf}
+%%     %% \caption{\label{fig:cartBox1}}
+%%     %% \end{subfigure}
+%%     %% \begin{subfigure}[b]{.48\textwidth}
+%%     %% \includegraphics[width=\textwidth]{figs/cart_box2.pdf}
+%%     %% \caption{\label{fig:cartBox2}}
+%%     %% \end{subfigure}
+%%     \caption{CART analysis of the parameter space: The models with
+%%         similarity$\ge5.5$ were partitioned based on the Moore
+%%     range~$\mooreRange$ and latency period~$\ell$ tuple and analyzed. Two
+%%     of the nine cases are shown. The complete set is in
+%%     Figure~\ref{S:fig:cart}.}
+%% \end{figure}
+%%
+
+%% The rest of the section will focus more on Class~B
+%% 
+%% See
+%% Figures~\ref{S:fig:cartAgglomerative}(b)
+%% and~\ref{S:fig:cartkmeans}(a) in the supplement. We have also considered
+%% the case of more than two clusters. This is analyzed in the following
+%% section. Our
+%% results remain consistent across the different clustering methods applied.
+%% 
+%% %% It is characterized by %%
+%% a combination of Moore range ($\mooreRange$), latency period ($\ell$) and
+%% %% pathway parameters~$\asd$ and~$\afm$ that lead to rapid spread between
+%% %% adjacent cells.  
+%% As described in Methods, the goodness of fit of a model configuration was
+%% evaluated by comparing the corresponding simulation output with ground
+%% truth from Bangladesh using the similarity score in~\eqref{eqn:similarity}.
+%% Variability in the spread patterns was studied by clustering the simulation
+%% outputs of the selected configurations (Figure~\ref{fig:clusterOutline})
+%% and analyzing the relationship between the resulting clusters and model
+%% parameters. 
+%% 
+%% Even though
+%% each of these models are a close match to the ground truth, two spread
+%% patterns can be very different from each other. 
+
+%% The results from this study was that with seeding in Spain, Tuta would
+%% spread radially. This is due to taking into account only short distance
+%% spread, and the fact that no area was unsuitable year-round. They
+%% introduced parameters in stages, first considering only NDVI, and assuming
+%% that temperature and humidity reached the thresholds. In this scenario,
+%% Tuta spread to every region of Africa, excluding Madagascar, in 6 years.
+%% When including temperature as a parameter as well, Tuta spreads to all of
+%% Africa, excluding Madagascar, in 9 years. When taking into account NDVI,
+%% temperature, and humidity as described above, every region of Africa is
+%% invaded in 9 years (excluding Madagascar), except for regions in the Sahara
+%% desert, which is in the exposed state.
+
+
+%\aacomment{This part will be moved to results}
+%\aacomment{Need to describe each scenario: how the initial seeds were
+%decided, the basis for choosing them. I think it is a good idea to also
+%name them (Scenario A, B, C, etc.)}
+
+
+%% We used the CA model by Guimapi~et.~al.~\cite{guimapi2016modeling} as a
+%% baseline for our study. We will test three scenarios using this model in Southeast Asia. Scenario A seeds the region of Chin in northeast Myanmar. This region represents a possible pathway of \tuta{} should it spread radially through the border with Bangladesh. Scenario B seeds the region of Johor in Malaysia - including Singapore. This region contains major ports in Malaysia including Tanjung Pelepas \cite{khalid2005}, and Singapore is also a major trading hub for Bangladesh. Scenario C seeds the region of Putrajaya, which is the region which includes the largest port in Malaysia \cite{khalid2005}. Scenario D seeds the region of Penang, which is also a major port \cite{khalid2005}. Scenario E seeds Sarawak which is one of the Malaysia districts not in the mainland. This district contains another major port: Bintulu \cite{khalid2005}. Each scenario is simulated with Moore neighborhoods of 2 and 3, and follow the rules as in \cite{guimapi2016modeling}. Our grid resolution is 0.25x0.25 degrees. This corresponds to about 27.75 km at the equator. Thus one cell will be roughly 25x25 km as in above. We consider Moore neighborhoods of 2 and 3 to reflect 50 - 75 km range. For NDVI data, our resolution is small, so we choose the maximum NDVI for a grid cell.\\
+
 
 
 It is possible that there

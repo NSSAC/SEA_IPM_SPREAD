@@ -82,7 +82,7 @@ function rf(){
        set xtics font \",15\"; \
        set style data points; \
        set nokey;" \
-       -p "plot '< gsort -t, -k2,2 -n -r ../results/rf/rf_importance_all.csv' u 2:(-\$0):yticlabel(1) ls 1 pt 7"
+       -p "plot '< gsort -t, -k2,2 -n -r ../results/rf/rf_importance_all_mdi.csv' u 2:(-\$0):yticlabel(1) ls 1 pt 7"
 
 ../scripts/plot.sh -o rf_importance_short_mse \
    -c mathematica \
@@ -94,7 +94,7 @@ function rf(){
        set xtics font \",15\"; \
        set style data points; \
        set nokey;" \
-       -p "plot '< gsort -t, -k2,2 -n -r ../results/rf/rf_importance_short.csv' u 2:(-\$0):yticlabel(1) ls 2 pt 7"
+       -p "plot '< gsort -t, -k2,2 -n -r ../results/rf/rf_importance_short_mdi.csv' u 2:(-\$0):yticlabel(1) ls 2 pt 7"
 
 ../scripts/plot.sh -o rf_importance_long_mse \
    -c mathematica \
@@ -106,7 +106,7 @@ function rf(){
        set xtics font \",15\"; \
        set style data points; \
        set nokey;" \
-       -p "plot '< gsort -t, -k2,2 -n -r ../results/rf/rf_importance_long.csv' u 2:(-\$0):yticlabel(1) ls 3 pt 7"
+       -p "plot '< gsort -t, -k2,2 -n -r ../results/rf/rf_importance_long_mdi.csv' u 2:(-\$0):yticlabel(1) ls 3 pt 7"
 
 ../scripts/plot.sh -o rf_importance_all_purity \
    -c mathematica \

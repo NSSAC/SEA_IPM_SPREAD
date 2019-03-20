@@ -1325,6 +1325,26 @@ $\mooreRange$.
 
 
 %%
+\begin{figure}[t]
+\centering
+\begin{subfigure}[b]{\textwidth}
+    \includegraphics[width=0.47\textwidth]{../cellular_automata/results/rf/rf_importance_all_mdi.pdf}
+    \includegraphics[width=0.47\textwidth]{../cellular_automata/results/rf/rf_importance_all_mse.pdf}
+    \caption{Similarity score ($\similarity$) based evaluation. \label{fig:rfA}}
+\end{subfigure}
+\begin{subfigure}[b]{\textwidth}
+    \includegraphics[width=0.47\textwidth]{../clustering/results/agglomerative/rf_k_agglomerative_mse.pdf}
+    \includegraphics[width=0.47\textwidth]{../clustering/results/agglomerative/rf_k_agglomerative_mdg.pdf}
+    \caption{Agglomerative clustering\label{fig:rfA}}
+\end{subfigure}
+\begin{subfigure}[b]{\textwidth}
+    \includegraphics[width=0.47\textwidth]{../clustering/results/kmeans/rf_k_kmeans_mse.pdf}
+    \includegraphics[width=0.47\textwidth]{../clustering/results/kmeans/rf_k_kmeans_mdg.pdf}
+    \caption{$k$-means clustering\label{fig:rfA}}
+\end{subfigure}
+\caption{\textbf{Parameter importance.}}
+\end{figure}
+%%
 \section{Cellular automata model from Guimapi~et~al}
 \label{sec:guimapi}
 Guimapi~et~al.~\cite{guimapi2016modeling} use a cellular automata approach
@@ -1386,29 +1406,6 @@ country in the focus region is in the high or very high categories, and
 thus did not limit the spread.  Generally, the predicted range expansion is
 much faster compared to our models, particularly in the case where Moore
 range is~3.
-
-%% The results from this study was that with seeding in Spain, Tuta would
-%% spread radially. This is due to taking into account only short distance
-%% spread, and the fact that no area was unsuitable year-round. They
-%% introduced parameters in stages, first considering only NDVI, and assuming
-%% that temperature and humidity reached the thresholds. In this scenario,
-%% Tuta spread to every region of Africa, excluding Madagascar, in 6 years.
-%% When including temperature as a parameter as well, Tuta spreads to all of
-%% Africa, excluding Madagascar, in 9 years. When taking into account NDVI,
-%% temperature, and humidity as described above, every region of Africa is
-%% invaded in 9 years (excluding Madagascar), except for regions in the Sahara
-%% desert, which is in the exposed state.
-
-
-%\aacomment{This part will be moved to results}
-%\aacomment{Need to describe each scenario: how the initial seeds were
-%decided, the basis for choosing them. I think it is a good idea to also
-%name them (Scenario A, B, C, etc.)}
-
-
-%% We used the CA model by Guimapi~et.~al.~\cite{guimapi2016modeling} as a
-%% baseline for our study. We will test three scenarios using this model in Southeast Asia. Scenario A seeds the region of Chin in northeast Myanmar. This region represents a possible pathway of \tuta{} should it spread radially through the border with Bangladesh. Scenario B seeds the region of Johor in Malaysia - including Singapore. This region contains major ports in Malaysia including Tanjung Pelepas \cite{khalid2005}, and Singapore is also a major trading hub for Bangladesh. Scenario C seeds the region of Putrajaya, which is the region which includes the largest port in Malaysia \cite{khalid2005}. Scenario D seeds the region of Penang, which is also a major port \cite{khalid2005}. Scenario E seeds Sarawak which is one of the Malaysia districts not in the mainland. This district contains another major port: Bintulu \cite{khalid2005}. Each scenario is simulated with Moore neighborhoods of 2 and 3, and follow the rules as in \cite{guimapi2016modeling}. Our grid resolution is 0.25x0.25 degrees. This corresponds to about 27.75 km at the equator. Thus one cell will be roughly 25x25 km as in above. We consider Moore neighborhoods of 2 and 3 to reflect 50 - 75 km range. For NDVI data, our resolution is small, so we choose the maximum NDVI for a grid cell.\\
-
 
 \begin{figure}[ht]
     \begin{subfigure}[b]{.48\textwidth}

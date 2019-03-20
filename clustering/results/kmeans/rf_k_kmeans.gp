@@ -60,11 +60,11 @@ set ytics font ",18" offset 1.5,0
 ##### plot
 set title font ",18" "" offset -3,.3
 set xlabel "Num. of clusters" offset 0,0 font ",18"
-set ylabel "rank" offset -2,0 font ",18"
+set ylabel "Mean decrease in accuracy" offset -2,0 font ",18"
 
 
-unset title;        set key out Right spacing 2.3 t r;        set ytics textcolor 'black' offset 0,0;        set xtics font ",15";
+unset title;        set yrange [0:];        set key out Right spacing 2.3 t r;        set ytics offset 2,0;        set xtics offset 0,-.5;        set xlabel offset 0,.7;        set xtics font ",15";
 
-plot 'par_ald.csv' u 1:3 ls 1 t columnheader(1),             'par_l.csv' u 1:3 ls 2 t columnheader(1),             'par_moore.csv' u 1:3 ls 3 t columnheader(1),             'par_start.csv' u 1:3 ls 4 t columnheader(1),             'par_local.csv' u 1:3 ls 5 t columnheader(1),             'par_seed.csv' u 1:3 ls 6 t columnheader(1),             'par_season.csv' u 1:3 ls 1 dt 7 t columnheader(1),             'par_short.csv' u 1:3 ls 2 dt 7 t columnheader(1),             'par_beta.csv' u 1:3 ls 3 dt 7 t columnheader(1),             'par_kappa.csv' u 1:3 ls 4 dt 7 t columnheader(1)             
+plot             'par_start.csv' u 1:3 ls 1 t columnheader(1),             'par_ald.csv' u 1:3 ls 2 t columnheader(1),             'par_l.csv' u 1:3 ls 3 t columnheader(1),             'par_moore.csv' u 1:3 ls 4 t columnheader(1),             'par_local.csv' u 1:3 ls 5 dt 7 t columnheader(1),             'par_seed.csv' u 1:3 ls 6 dt 7 t columnheader(1),             'par_season.csv' u 1:3 ls 1 dt 7 t columnheader(1),             'par_short.csv' u 1:3 ls 2 dt 7 t columnheader(1),             'par_beta.csv' u 1:3 ls 3 dt 7 t columnheader(1),             'par_kappa.csv' u 1:3 ls 4 dt 7 t columnheader(1)             
 
 #set term x11 reset;

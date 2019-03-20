@@ -721,18 +721,7 @@ in Section~\ref{S:sec:cluster} of the supplement.
 \end{figure}
 %%
 \section{Results}
-\paragraph{Variability in spread pattern due to multiple pathways.}
-%% As described in Methods, the goodness of fit of a model configuration was
-%% evaluated by comparing the corresponding simulation output with ground
-%% truth from Bangladesh using the similarity score in~\eqref{eqn:similarity}.
-%% Variability in the spread patterns was studied by clustering the simulation
-%% outputs of the selected configurations (Figure~\ref{fig:clusterOutline})
-%% and analyzing the relationship between the resulting clusters and model
-%% parameters. 
-%% 
-%% Even though
-%% each of these models are a close match to the ground truth, two spread
-%% patterns can be very different from each other. 
+\paragraph{Variability in spread pattern.}
 The clustering of the configurations selected during the parameterization
 phase (approximately 8000 of them) reveals two distinct spread patterns
 primarily determined by the pathway parameters.  The first class of models
@@ -750,13 +739,19 @@ and~\ref{S:fig:cartkmeans}(a)) are consistent in this regard.
 %%
 \begin{figure}[t]
     \centering
-\begin{subfigure}[b]{.4\textwidth}
+\begin{subfigure}[b]{.3\textwidth}
     \includegraphics[width=\textwidth]{../cellular_automata/results/contour/BGD_model-A.pdf}
     \caption{Class~A ($\ald=0$) \label{fig:bgdClassA}}
 \end{subfigure}\hspace{.5cm}
-\begin{subfigure}[b]{.4\textwidth}
+\begin{subfigure}[b]{.3\textwidth}
     \includegraphics[width=\textwidth]{../cellular_automata/results/contour/BGD_model-B_m1_l3.pdf}
     \caption{Class~B ($\ald>0$) \label{fig:bgdClassB1}}
+\end{subfigure}
+\begin{subfigure}[b]{.32\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{../cellular_automata/results/rf/rf_importance_all_mdi.pdf}
+    \includegraphics[width=0.9\textwidth]{../clustering/results/agglomerative/rf_k_agglomerative_mse.pdf}
+    \caption{Parameter importance \label{fig:rfA}}
 \end{subfigure}
 \caption{\textbf{Spread in Bangladesh.}The contour plots show the simulated
 spread starting from the location of first report in Panchagarh district
@@ -787,28 +782,13 @@ location is infected much later in comparison. However, the eastward spread
 towards the location Jaintiapur is slower than what was observed
 (Figure~\ref{fig:bgdClassB1}). Even though Panchagarh is quite far from
 this location, pest presence was reported by February 2017, just nine
-months from the first report.
-
+months from the first report.  
 As a baseline, we also simulated the spread using the cellular automata
 model developed by Guimapi~\cite{guimapi2016modeling} for Bangladesh. The
 spread pattern is similar to Class~A as the model does not account for
 long-distance hops. However, the predicted rate of range expansion is much
 higher than our models (see Section~\ref{S:sec:guimapi} for model details
 and results).
-
-%% The rest of the section will focus more on Class~B
-%% 
-%% See
-%% Figures~\ref{S:fig:cartAgglomerative}(b)
-%% and~\ref{S:fig:cartkmeans}(a) in the supplement. We have also considered
-%% the case of more than two clusters. This is analyzed in the following
-%% section. Our
-%% results remain consistent across the different clustering methods applied.
-%% 
-%% %% It is characterized by %%
-%% a combination of Moore range ($\mooreRange$), latency period ($\ell$) and
-%% %% pathway parameters~$\asd$ and~$\afm$ that lead to rapid spread between
-%% %% adjacent cells.  
 
 \paragraph{Importance of model parameters.} 
 how parameters affect similarity score?
@@ -823,49 +803,6 @@ method. Since the clustering captures the variations in spread patterns,
 the algorithm was applied with model parameters as independent variables
 and cluster index as the dependent variable. The results are in
 Figure~\ref{fig:sensitivity}.
-%%
-%% \begin{figure}[t]
-%% \centering
-%% \begin{subfigure}[b]{.32\textwidth}
-%%     \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_all.pdf}
-%%     \caption{All \label{fig:rfAll}}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.32\textwidth}
-%%     \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_A.pdf}
-%%     \caption{Class A\label{fig:rfA}}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.32\textwidth}
-%%     \includegraphics[width=1.1\textwidth]{../clustering/results/rf_importance_cluster_mse_B.pdf}
-%%     \caption{Class B\label{fig:rfB}}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.32\textwidth}
-%%     \includegraphics[width=1.1\textwidth]{../cellular_automata/results/rf/rf_importance_short_mse.pdf}
-%% \caption{Class A\label{fig:rfShort}}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.32\textwidth}
-%% \includegraphics[width=1.1\textwidth]{../cellular_automata/results/rf/rf_importance_long_mse.pdf}
-%% \caption{Class B\label{fig:rfLong}}
-%% \end{subfigure}
-%%\caption{\textbf{Parameter importance.} Random
-%%Forest~\cite{breiman2001random} method was applied to study parameter
-%%importance. (a)~With cluster index as the dependent variable,
-%%the analysis was performed on the set of model instances which yielded a
-%%similarity~$\similarity\ge6$.
-%%%% (b)~The sensitivity of the spread pattern to parameters was analyzed by
-%%%% repeating the same process, but with cluster index as the dependent
-%%%% variable.
-%%The results for the entire set (a) and separately for Class~A (b) and
-%%Class~B models (c) are shown. The parameters are ordered by their
-%%importance based on percentage increase in mean square error from permuting
-%%the variable--higher, the more important.
-%%\label{fig:sensitivity}}
-%%%% a total of $17,000$ samples from the parameter space
-%%\end{figure}
-%%
 
 The long distance pathway parameter~$\ald$ is by far the most important
 parameter (Figure~\ref{fig:rfAll}); both spread rate and pattern critically
@@ -882,44 +819,6 @@ and~$\kappa$ do not influece the spread as~$\ald=0$. Seasonal production on
 the other hand is very important in Class~B models as it influences trade
 flows.
 
-Class~B models show more sensitivity to start time step of simulation than
-Class~B models. The main reason why it is not at all critical in the latter
-class is because the pest was reported just before the rainy season;
-subsequent months have lean trade flows, and as a result it does not affect
-the spread much. However, it does not seem to have much effect on the
-radial spread component as is the case with Class~A models. In both cases,
-the spread is very sensitive to the local human-mediated pathway
-parameter~$\afm$. In the case of Class~A models, this pathway leads to
-faster spread within localities. In Class~B models, higher the value, the
-greater the chance of long-distance spread as it quickly leads to infection
-of large portions of the localities, and therefore their total
-infectiousness. Later, we will discuss on how it influences the spread rate
-for the rest of the region.
-%% \begin{figure}[ht]
-%%     \centering
-%%     \begin{subfigure}[b]{.48\textwidth}
-%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 1cm},clip]{../cellular_automata/results/cart/m2_l2_tree.pdf}
-%%     \caption{$\mooreRange=2$, $\ell=2$ \label{fig:cart22}}
-%%     \end{subfigure}
-%%     \begin{subfigure}[b]{.48\textwidth}
-%% \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../cellular_automata/results/cart/m2_l3_tree.pdf}
-%%     \caption{$\mooreRange=2$, $\ell=3$ \label{fig:cart32}}
-%%     \end{subfigure}
-%%     %% \begin{subfigure}[b]{.48\textwidth}
-%%     %% \includegraphics[width=\textwidth]{figs/cart_box1.pdf}
-%%     %% \caption{\label{fig:cartBox1}}
-%%     %% \end{subfigure}
-%%     %% \begin{subfigure}[b]{.48\textwidth}
-%%     %% \includegraphics[width=\textwidth]{figs/cart_box2.pdf}
-%%     %% \caption{\label{fig:cartBox2}}
-%%     %% \end{subfigure}
-%%     \caption{CART analysis of the parameter space: The models with
-%%         similarity$\ge5.5$ were partitioned based on the Moore
-%%     range~$\mooreRange$ and latency period~$\ell$ tuple and analyzed. Two
-%%     of the nine cases are shown. The complete set is in
-%%     Figure~\ref{S:fig:cart}.}
-%% \end{figure}
-%%
 \paragraph{Scenarios of pest introduction to countries in Southeast Asia.}
 To identify routes of introduction to other countries in the region, we
 applied both Class~A and Class~B models. The starting point of the spread
@@ -967,7 +866,7 @@ human mobility is a possible pathway. The Middle East is the top
 destination for Filipino workers~\cite{rodriguez2011philippine}.
 Therefore, there is a possibility of introduction through human mobility.
 %%
-\paragraph{Spread is model and region dependent.} In the case of Class~A
+\paragraph{Predicted spread is model and region dependent.} In the case of Class~A
 models, the eastward spread is faster than southward spread
 (Figure~\ref{fig:msaClassA}). This is mainly because the Moore neighborhood
 is smaller at the narrow region in the south of Myanmar and Thailand

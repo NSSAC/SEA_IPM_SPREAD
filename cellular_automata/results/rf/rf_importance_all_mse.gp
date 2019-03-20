@@ -5,7 +5,7 @@ set term tikz standalone size 12.5cm,8.75cm font ",14" gparrows scale 2,2 textsc
 set datafile separator ','
 
 ##### output
-set output 'rf_k_agglomerative.tex'
+set output 'rf_importance_all_mse.tex'
 
 ##### bg: bg color, axes, grid, tics
 ##### http://www.colourlovers.com/palette/268142/Danger_Mouse
@@ -16,16 +16,15 @@ roBlue='#1F77B4';
 roRed='#D62728';
 # border
 set style line 21 lt 1 lc rgb '#808080' 
-set border 3 back ls 21 lw 5
+set border 1 back ls 21 lw 5
 # grid
 set style line 22 lt 2 lc rgb '#CCCCCC' lw 2
 set style line 23 lt 2 lc rgb '#DDDDDD' lw 1
-set grid xtics mxtics ytics mytics back ls 22, ls 23
+set grid ytics back ls 22
 # tics
-set tics textcolor rgb '#303030'
+set tics textcolor rgb '#666666'
 set tics nomirror out scale 1,.1
-set mxtics 2
-set mytics 2
+set ytics scale 0
 
 ##### load default linestyles
 set style increment user
@@ -47,24 +46,34 @@ do for[i=1:8] {set style line i lc rgb word(MATHEMATICA,i)}
 ####
 
 ##### data style
-set style data lines
+set style data linespoints;
+set style line 1 pt 5
+set style line 2 pt 7
+set style line 3 pt 13
+set style line 4 pt 17
+set style line 5 pt 4
+set style line 6 pt 6
+set style line 7 pt 12
+set style line 8 pt 16
+#
+set pointintervalbox 4.5
+do for [i=1:15] {set style line i ps 2.75 pi -1}
 
 # NOTE: offsets should be a function of font sizes
 ##### key
 set key t l Left spacing 2 width 5 opaque font ",18"
 
 ##### tics (note that tics are also set in theme)
-set xtics font ",18" offset 0,.2
+set xtics font ",18" offset 0,-1
 set ytics font ",18" offset 1.5,0
 
 ##### plot
-set title font ",18" "" offset -3,.3
-set xlabel "Num. of clusters" offset 0,0 font ",18"
-set ylabel "Mean decrease in accuracy" offset -2,0 font ",18"
+set title font ",18" "Influence on similarity score" offset -3,.3
+set xlabel "\\%IncMSE" offset 0,-2 font ",18"
+set ylabel "" offset -2,0 font ",18"
 
 
-unset title;        set yrange [0:];        set key out Right spacing 2.3 t r;        set ytics offset 2,0;        set xtics offset 0,-.5;        set xlabel offset 0,.7;        set xtics font ",15";
+set ytics textcolor 'black' offset .5,0;        set xtics font ",15";        set style data points;        set nokey;
 
-plot             'par_start.csv' u 1:3 ls 1 t columnheader(1),             'par_ald.csv' u 1:3 ls 2 t columnheader(1),             'par_l.csv' u 1:3 ls 3 t columnheader(1),             'par_moore.csv' u 1:3 ls 4 t columnheader(1),             'par_local.csv' u 1:3 ls 5 dt 7 t columnheader(1),             'par_seed.csv' u 1:3 ls 6 dt 7 t columnheader(1),             'par_season.csv' u 1:3 ls 1 dt 7 t columnheader(1),             'par_short.csv' u 1:3 ls 2 dt 7 t columnheader(1),             'par_beta.csv' u 1:3 ls 3 dt 7 t columnheader(1),             'par_kappa.csv' u 1:3 ls 4 dt 7 t columnheader(1)             
+plot '< gsort -t, -k2,2 -n -r ../rf/rf_importance_all_mdi.csv' u 2:(-$0):yticlabel(1) ls 2 pt 7
 
-#set term x11 reset;
