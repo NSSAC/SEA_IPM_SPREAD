@@ -538,8 +538,6 @@ EOF
 #######################################################################
 cat << EOF > ${outFileString}.gp
 ##### terminal
-clear
-# set loadpath '$GP_PATH'
 set term tikz standalone size $sizeString font ",14" gparrows scale 2,2 textscale 2
 set datafile separator ','
 
@@ -577,7 +575,6 @@ $auxString
 
 $plotString
 
-#set term x11 reset;
 EOF
 
 gnuplot ${outFileString}.gp #> /dev/null;

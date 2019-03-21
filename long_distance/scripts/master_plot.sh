@@ -43,6 +43,12 @@ mv ${outFile}.tex ../results/validation/
 done
 }
 
+function net_flows(){
+montlyFlowFile="../obj/locality_flows_precip1_b2_k500.csv"
+flowFile=`basename $montlyFlowFile | sed -e 's/locality/netout/'`
+gawk -F, -v OFS=',' '{a[$1]+=$3;a[$2]-=$3}END{for(i in a) print i,a[i]}' $montlyFlowFile | sort -t, -n -k2,2 -r > $flowFile
+}
+
 if [[ $# == 0 ]]; then
    echo "Here are the options:"
    grep "^function" $BASH_SOURCE | sed -e 's/function/  /' -e 's/[(){]//g' -e '/IGNORE/d'

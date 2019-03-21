@@ -584,7 +584,7 @@ respectively~\cite{guimapi2016modeling,martins2018assessing}. \\
 $\ell$ & Latency period to transition from $E$ to $I$ & $\{1,2,3\}$ months
 based on time for the pest to complete life cycle (\tuta{} biology in
 Methods). \\
-Monthly production & Disaggregation of annual production to monthly values
+season & Disaggregation of annual production to monthly values
 & \emph{Uniform} throughout the year or \emph{seasonal} based on regression
 analysis (Methods). \\
 $\beta$ & Gravity model distance function exponent & $\{0,1,2\}$ \\
@@ -721,14 +721,14 @@ in Section~\ref{S:sec:cluster} of the supplement.
 \end{figure}
 %%
 \section{Results}
-\paragraph{Variability in spread pattern.}
-The clustering of the configurations selected during the parameterization
-phase (approximately 8000 of them) reveals two distinct spread patterns
-primarily determined by the pathway parameters.  The first class of models
+\paragraph{Variability in spread pattern.} The clustering of the
+configurations selected during the parameterization phase (approximately
+8000 of them) reveals two distinct spread patterns primarily determined by
+the pathway parameters.  The first class of models
 (Figure~\ref{fig:bgdClassA}), referred to as Class~A, are characterized by
 the absence of long-distance human-mediated spread ($\ald$ negligible) and
-brisk spread between geographically adjacent cells, driven by Moore
-range~$\mooreRange$, latency period~$\ell$ and short-distance scaling
+brisk spread between geographically adjacent cells, driven by latency
+period~$\ell$ Moore range~$\mooreRange$, and short-distance scaling
 factor~$\asd$. In contrast, in Class~B models
 (Figure~\ref{fig:bgdClassB1}), the long-distance pathway~($\ald$) plays a
 significant role  and there is relatively slow spread between
@@ -751,9 +751,9 @@ and~\ref{S:fig:cartkmeans}(a)) are consistent in this regard.
     \centering
     \includegraphics[width=0.9\textwidth]{../cellular_automata/results/rf/rf_importance_all_mdi.pdf}
     \includegraphics[width=0.9\textwidth]{../clustering/results/agglomerative/rf_k_agglomerative_mse.pdf}
-    \caption{Parameter importance \label{fig:rfA}}
+    \caption{Parameter importance \label{fig:rf}}
 \end{subfigure}
-\caption{\textbf{Spread in Bangladesh.}The contour plots show the simulated
+\caption{\textbf{Spread in Bangladesh.} The contour plots show the simulated
 spread starting from the location of first report in Panchagarh district
 for 12 months. For the purpose of plotting, the time of infection for a
 cell is the minimum time step~$t$ such that the empirical probability that
@@ -763,11 +763,11 @@ colors of the monitored locations correspond to the month of report
 relative to the first report (Panchagarh). Two distinct spread patterns
 emerged from the cluster analysis. (a) and (b) show representative spreads
 observed for each class. The similarity ($\similarity$) in each case was
-$>6.5$.}
-%f (a)~\textbf{Class~A.} Spread pattern long-distance component playing a
-%% negligible role. We
-%% observe a steady radial spread.  (b)~\textbf{Class~B.} Spread pattern with
-%% long-distance jumps. Here, the radial spread is much slower.}
+$>6.5$. Importance of model parameters with respect to (i)~similarity
+score~$\similarity$ and (ii)~cluster membership based on random forest
+method. The latter plot shows how the results vary with increase in number
+of clusters for hierarchical clustering algorithm. More results are
+presented in Figure~\ref{S:fig:rf} in the supplement.}
 \end{figure}
 %%
 
@@ -782,56 +782,40 @@ location is infected much later in comparison. However, the eastward spread
 towards the location Jaintiapur is slower than what was observed
 (Figure~\ref{fig:bgdClassB1}). Even though Panchagarh is quite far from
 this location, pest presence was reported by February 2017, just nine
-months from the first report.  
-As a baseline, we also simulated the spread using the cellular automata
-model developed by Guimapi~\cite{guimapi2016modeling} for Bangladesh. The
-spread pattern is similar to Class~A as the model does not account for
-long-distance hops. However, the predicted rate of range expansion is much
-higher than our models (see Section~\ref{S:sec:guimapi} for model details
-and results).
+months from the first report.  As a baseline, we also simulated the spread
+using the cellular automata model developed by
+Guimapi~\cite{guimapi2016modeling} for Bangladesh. The spread pattern is
+similar to Class~A as the model does not account for long-distance hops.
+However, the predicted rate of range expansion is much higher than our
+models (see Section~\ref{S:sec:guimapi} for model details and results).
 
-\paragraph{Importance of model parameters.} 
-how parameters affect similarity score?
-
-how parameters affect spread pattern?
-
-cluster size
-
-We studied sensitivity of the
-spread pattern to model parameters by applying Random Forest learning
-method. Since the clustering captures the variations in spread patterns,
-the algorithm was applied with model parameters as independent variables
-and cluster index as the dependent variable. The results are in
-Figure~\ref{fig:sensitivity}.
-
-The long distance pathway parameter~$\ald$ is by far the most important
-parameter (Figure~\ref{fig:rfAll}); both spread rate and pattern critically
-depend on it. Moore range ($\mooreRange$) and latency period ($\ell$) are
-important as they affect the rate of radial spread. The start month ($t_s$)
-is also important due to two reasons. Firstly, the distance between two
-time shifted simulation outputs can be large. Secondly, outputs are
-sensitive to seasonal variations or temporality of the network. Focussing
-on Class~A models, the main drivers of the spread pattern are latency
-period and Moore range (Figure~\ref{fig:rfA}). Since the simulation
-duration represents more than one year of spread, seasonality (season) does
-not have much effect on the spread. The distance parameters~$\beta$
-and~$\kappa$ do not influece the spread as~$\ald=0$. Seasonal production on
-the other hand is very important in Class~B models as it influences trade
-flows.
+The relative importance of model parameters was assessed using random
+forest~\cite{breiman2001random} with regard to their influence on
+(i)~similarity score similarity score ($\similarity$) and (ii)~spread
+pattern, which in our case, is akin to cluster membership. In the case of
+spread pattern, the importance was derived for each~$k$ (number of
+clusters) and clustering algorithm. The results are presented in
+Figure~\ref{fig:rf}. We note that the long distance scaling factor ($\ald$)
+is among the top three important parameters. The start month ($t_s$) is
+also important due to two reasons. Firstly, the distance between two time
+shifted simulation outputs can be large. Secondly, outputs are sensitive to
+seasonal variations or temporality of the network.  Latency period ($\ell$)
+and Moore range ($\mooreRange$) together control the extent of radial
+spread in a time step. Typically, for Class~A models, $(\mooreRange$ is
+high and $\ell$ is low and the other way round in the case of Class~B
+models.
 
 \paragraph{Scenarios of pest introduction to countries in Southeast Asia.}
 To identify routes of introduction to other countries in the region, we
 applied both Class~A and Class~B models. The starting point of the spread
-corresponds to Panchagarh district (Figure~\ref{fig:bgdClassA}).  We also
-analyzed the international tomato trade network (Section~\ref{S:sec:tomnet}
-of supplement) to assess the risk due to imports from \tuta{} infested
-countries outside this region. Both model classes strongly indicate that
-\tuta{} is already present in parts of Myanmar (curves corresponding to
-timestep 24 or two years from first report). Also, the pest is likely to
-enter Thailand from Myanmar, and subsequently move to Laos and Vietnam as
-it spreads eastwards and to China when it spreads northwards. From
-Thailand, spreading southward, it will enter Malaysia and subsequently
-enter Indonesia (Figure~\ref{fig:msaClassAB}).
+corresponds to Panchagarh district (Figure~\ref{fig:bgdClassA}). Both model
+classes strongly indicate that \tuta{} is already present in parts of
+Myanmar (curves corresponding to timestep 24 or two years from first
+report). Also, the pest is likely to enter Thailand from Myanmar, and
+subsequently move to Laos and Vietnam as it spreads eastwards and to China
+when it spreads northwards. From Thailand, spreading southward, it will
+enter Malaysia and subsequently enter Indonesia
+(Figure~\ref{fig:msaClassAB}).
 
 %%
 \begin{figure}[ht]
@@ -853,7 +837,10 @@ other way round in the case of Class~B.\label{fig:msaClassAB} }
 \end{figure}
 %% %%   
 
-From trade perspective, Malaysia and Singapore are important hubs with
+We also analyzed the international tomato
+trade network (Section~\ref{S:sec:tomnet} of supplement) to assess the risk
+due to imports from \tuta{} infested countries outside this region.
+Malaysia and Singapore are important hubs with
 tomato imports from \tuta{} infested regions. There is a possibility that
 \tuta{} is directly introduced to these regions.  However, in both cases,
 the import volume is very low. Also, the introduction risk depends on the
@@ -1120,18 +1107,6 @@ al.~\cite{nopsa2015ecological} for example). As the world moves towards
 concentrated and specialized agricultural production, focusing on this
 aspect becomes increasingly important.
 
-need to say take away points
-\begin{enumerate}
-    \item modularity of the parameterization and analysis part needs to be
-    stressed
-    \item the clustering paper citation \cite{cassandras2000clustering}
-    \item need sample flows for calibration. need to study heterogeneity
-    \item need function for relation between flow and pest spread
-    \item what is enough for modeling trade? at minimum what is
-    required?
-    \item SIS Epidemics in Multilayer-based Temporal Networks
-\end{enumerate}
-
 \paragraph{Impact.} Traditionally, crops such as tomato have been grown in
 the dry season, which is usually during winter in most parts of Southeast
 Asia. However, over the past decade, due to rising demand and opportunities
@@ -1167,28 +1142,16 @@ density of human population and infrastructure such as railways and river
 ports.  Carrasco~et~al.~\cite{carrasco2010unveiling} combine spatially
 explicit models of human-mediated spread with a phenology model to
 incorporate population dynamics of the pest (western corn rootworm).
-%%
-%% Two types of long-distance dispersals
-%% are considered -- domestic and international. The domestic mode is modeled
-%% as a flow network between cities using a gravity model approach.
-%%
 Nopsa~et~al.~\cite{nopsa2015ecological} use a network science approach to
 studying the role of transport and storage infrastructure in the spread of
-pests and pathogens of wheat. Sutrave~et~al.~\cite{sutrave2012identifying}
-use a time-varying network model to study the spread of Soybean rust.  Our
-model is in part motivated by the hybrid approaches used in the study of
-infectious diseases of humans and livestock.
-Bradhurst~et~al.~\cite{bradhurst2015hybrid} study the spread of foot and
-mouth disease in livestock by using an aggregate population-level model to
-capture within-herd spread and an individual-based model for between herd
-spread. A similar approach is used by Yang~et~al.~\cite{yang2016} to
-forecast influenza outbreaks. 
-%%
-%% They use a patch network model where a
-%% compartmental model is used to simulate intra-locale spread and a gravity
-%% model based approach is used for inter-locale spread of flu in the
-%% neighborhoods of New~York. 
-%%
+pests and pathogens of wheat.  Our model is in part motivated by the hybrid
+approaches used in the study of infectious diseases of humans and
+livestock.  Bradhurst~et~al.~\cite{bradhurst2015hybrid} study the spread of
+foot and mouth disease in livestock by using an aggregate population-level
+model to capture within-herd spread and an individual-based model for
+between herd spread. A similar approach is used by
+Yang~et~al.~\cite{yang2016} to forecast influenza outbreaks.
+
 Although there is a general consensus that vegetable and seedling trade is
 a primary driver of \tuta{} spread, previous modeling efforts have
 exclusively focused on ecological aspects. Several
@@ -1202,20 +1165,26 @@ modeled the seasonal production and trade of tomato in Nepal to study the
 role of trade in the spread of \tuta{} in Nepal using gravity model and
 network dynamics.
 
+Emulators --based on Gaussian processes for
+example~\cite{fadikar2018calibrating} -- and machine learning
+surrogates~\cite{lamperti2018agent} are emerging as solutions to overcome
+computational challenges, parameterization and sensitivity analysis of
+complex agent-based models. The parameter importance study and
+parameterization was partly motivated by the work of
+Lamperti~et~al.~\cite{lamperti2018agent}. We are not aware of any previous
+work that analyzes the dynamics of simulation systems using unsupervised
+learning presented in this paper. However, clustering has been considered
+in the context of multi-resolution simulation models as an interfacing
+component between simulators with different
+resolutions~\cite{cassandras2000clustering}.
 
-%% The modeling framework developed in this paper can
-%% be used to study the spread of \tuta{} in other regions. However, it is
-%% possible that additional factors need to be accounted for. 
-%% It can also be applied to other pests. However, this would require first
-%% assessing the importance of each pathway based on evidence: diapause and flying
-%% capacity, spread by human mobility or trade, etc.  
+need to say take away points
+\begin{enumerate}
+    \item need function for relation between flow and pest spread
+    \item what is enough for modeling trade? at minimum what is
+    required?
+\end{enumerate}
 
-
-
-Calibration and sensitivity analysis of large-scale, high-resolution models
-is a challenging task. Methods based on machine learning surrogates are
-being increasingly used to accomplish this efficiently for complex
-agent-based models~\cite{lamperti2018agent}. 
 %%
 \paragraph{Challenges and limitations.} Modeling emerging invasions is
 particularly challenging. Limited data on incidence and understanding of
@@ -1302,7 +1271,7 @@ data sparsity and model uncertainties. The model was applied to study the
 spread of \tuta{} in the region of Southeast Asia. Our results suggest that
 trade of host plants plays an important role in the spread of the pest.
 Monitoring and control of this pathway can significantly mitigate the
-spread. The methodology uses open-source datasets and can be applied to
+spread. The methodology is modular and can be applied to
 other invasive species and host crops. Besides invasive species spread,
 other potential applications for this work include studies of natural or
 human-initiated disasters, climate change and optimization of food flows.

@@ -1,3 +1,52 @@
+%% Sutrave~et~al.~\cite{sutrave2012identifying}
+%% use a time-varying network model to study the spread of Soybean rust.  
+%%
+%% Two types of long-distance dispersals
+%% are considered -- domestic and international. The domestic mode is modeled
+%% as a flow network between cities using a gravity model approach.
+%%
+%%
+%% They use a patch network model where a
+%% compartmental model is used to simulate intra-locale spread and a gravity
+%% model based approach is used for inter-locale spread of flu in the
+%% neighborhoods of New~York. 
+%%
+%% The modeling framework developed in this paper can
+%% be used to study the spread of \tuta{} in other regions. However, it is
+%% possible that additional factors need to be accounted for. 
+%% It can also be applied to other pests. However, this would require first
+%% assessing the importance of each pathway based on evidence: diapause and flying
+%% capacity, spread by human mobility or trade, etc.  
+
+
+While latency
+period ($\ell$)  as an important parameter, 
+
+cluster size
+
+We studied sensitivity of the
+spread pattern to model parameters by applying Random Forest learning
+method. Since the clustering captures the variations in spread patterns,
+the algorithm was applied with model parameters as independent variables
+and cluster index as the dependent variable. The results are in
+Figure~\ref{fig:sensitivity}. In both cases, 
+
+The long distance pathway parameter~$\ald$ is by far the most important
+parameter (Figure~\ref{fig:rfAll}); both spread rate and pattern critically
+depend on it. Moore range ($\mooreRange$) and latency period ($\ell$) are
+important as they affect the rate of radial spread. Focussing
+on Class~A models, the main drivers of the spread pattern are latency
+period and Moore range (Figure~\ref{fig:rfA}). Since the simulation
+duration represents more than one year of spread, seasonality (season) does
+not have much effect on the spread. The distance parameters~$\beta$
+and~$\kappa$ do not influece the spread as~$\ald=0$. Seasonal production on
+the other hand is very important in Class~B models as it influences trade
+flows.
+
+%f (a)~\textbf{Class~A.} Spread pattern long-distance component playing a
+%% negligible role. We
+%% observe a steady radial spread.  (b)~\textbf{Class~B.} Spread pattern with
+%% long-distance jumps. Here, the radial spread is much slower.}
 %%
 %% \begin{figure}[t]
 %% \centering
