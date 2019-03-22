@@ -43,10 +43,55 @@ mv ${outFile}.tex ../results/validation/
 done
 }
 
-function net_flows(){
+function net_prod_flows(){
 montlyFlowFile="../obj/locality_flows_precip1_b2_k500.csv"
-flowFile=`basename $montlyFlowFile | sed -e 's/locality/netout/'`
-gawk -F, -v OFS=',' '{a[$1]+=$3;a[$2]-=$3}END{for(i in a) print i,a[i]}' $montlyFlowFile | sort -t, -n -k2,2 -r > $flowFile
+flowFile=`basename $montlyFlowFile | sed -e 's/locality/props/'`
+plotFile=`basename $flowFile | sed -e 's/.csv//' -e 's/props/prod_netout/'`
+# compute net outflow (nof), production (p)
+gawk -F, -v OFS=',' '{\
+    nof[$1]+=$3;nof[$2]-=$3;p[$1]+=$3;\
+    nofm[$1][$4]+=$3;nofm[$2][$4]-=$3}\
+    END{for(i in nofm){negm[i]=0;posm[i]=0;\
+    for(j in nofm[i])\
+    (nofm[i][j]<0)? negm[i]+=nofm[i][j]:posm[i]+=nofm[i][j];}\
+    for(i in nof) print i,nof[i],p[i],negm[i]/(posm[i]-negm[i]+.0),posm[i]/(posm[i]-negm[i]+.0)}' $montlyFlowFile | sort -t, -n -k2,2 -r > $flowFile
+
+../../cellular_automata/scripts/plot.sh -o $plotFile \
+   -c mathematica \
+   -m lines \
+   -x "Localities ordered by outflow" \
+   -y "Amount in KTonnes" \
+   -f "all:18" \
+   -a "set notitle; \
+       set key t r width 7; \
+       set ytics offset 2,0; \
+       set xtics offset 0,-.5; \
+       set xlabel offset 0,.4; \
+       set ylabel offset -.2,0; \
+       set format y \"%.s\"; \
+       set xtics font \",15\";" \
+   -p "plot \"$flowFile\" u 3 w boxes fs solid .5 ls 7 t \"Production\",\"$flowFile\" u 2 ls 4 lw 10 t \"Net outflow\";"
+
+mv $plotFile.* ../results/
+
+plotFile=`basename $flowFile | sed -e 's/.csv//' -e 's/props/monthly_in_out/'`
+../../cellular_automata/scripts/plot.sh -o $plotFile \
+   -c mathematica \
+   -m lines \
+   -x "Localities ordered by outflow" \
+   -y "Fraction of flows" \
+   -f "all:18" \
+   -a "set notitle; \
+       set key t r width 7; \
+       set ytics offset 2,0; \
+       set xtics offset 0,-.5; \
+       set xlabel offset 0,.4; \
+       set ylabel offset -.2,0; \
+       set xtics font \",15\";" \
+   -p "plot \"$flowFile\" u 4 w boxes fs solid .5 ls 1 t \"inflow\",\"$flowFile\" u 5 w boxes fs solid .5 ls 2 t \"outflow\";"
+
+mv $plotFile.* ../results/
+mv $flowFile ../results/
 }
 
 if [[ $# == 0 ]]; then
