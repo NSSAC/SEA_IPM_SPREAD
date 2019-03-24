@@ -1,0 +1,17 @@
+Olongapo,Philippines
+Quezon City,Philippines
+Pasay City,Philippines
+Iligan,Philippines
+Legazpi,Philippines
+Bacolod,Philippines
+Naga,Philippines
+Angeles,Philippines
+Batangas,Philippines
+Cagayan de Oro,Philippines
+Zamboanga,Philippines
+Baguio City,Philippines
+General Santos,Philippines
+Cebu,Philippines
+Iloilo,Philippines
+Davao,Philippines
+Manila,Philippines

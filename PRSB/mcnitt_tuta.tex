@@ -155,7 +155,7 @@
 \makeatother
 % Title on edge of suggested length
 \title{Assessing the Multi-pathway Threat from an Invasive Agricultural
-Pests} %: \emph{Tuta~absoluta} in Asia}
+Pest: \emph{Tuta~absoluta} in Asia}
 %% \title{A Multi-pathway Model to Assess the Threat of Invasive Agricultural
 %% Pests: Case Study of \emph{Tuta~absoluta} in Asia}
 \author[1]{Joseph~McNitt}
@@ -184,46 +184,52 @@ Pests} %: \emph{Tuta~absoluta} in Asia}
 \begin{abstract}
 Modern food systems facilitate rapid dispersal of pests and pathogens
 through multiple pathways. Complexity of the spread dynamics and data
-inadequacy make it hard to understand the phenomenon and better 
-prepare for emerging invasions. We present a generic multi-scale modeling
-framework to study the spatio-temporal spread of invasive species as a
-propagation process over a time-varying network accounting for biology,
-seasonal production, trade and demographic information. Model variability
-and parameter sensitivity are analyzed using novel machine learning
-techniques. We applied it to study the spread of a devastating pest of
-tomato, \emph{Tuta absoluta}, in South and Southeast Asia -- a region at the
-frontier of its current range. Analysis with respect to historical invasion
-records suggests that even with modest self-mediated spread capabilities,
-the pest can quickly expand its range through domestic city-to-city
-vegetable trade. There is a strong chance that within five to seven years
-\tuta{} will invade all major vegetable growing areas of Mainland Southeast
-Asia if no steps are taken to mitigate the spread.  Further, we showed that
-monitoring and effective interventions in major production areas could
-greatly reduce the speed of the spread.
+inadequacy make it challenging to model the phenomenon and prepare for
+emerging invasions. We present a generic multi-scale modeling framework to
+study the spatio-temporal spread of invasive species as a propagation
+process over a time-varying network accounting for biology, seasonal
+production, trade and demographic information. Machine learning techniques
+are used in a novel manner to capture model variability and analyze
+parameter sensitivity. We applied the framework to study the spread of a
+devastating pest of tomato, \emph{Tuta absoluta}, in South and Southeast
+Asia -- a region at the frontier of its current range. Analysis with
+respect to historical invasion records suggests that even with modest
+self-mediated spread capabilities, the pest can quickly expand its range
+through domestic city-to-city vegetable trade. There is a strong chance
+that within five to seven years \tuta{} will invade all major vegetable
+growing areas of Mainland Southeast Asia if no steps are taken to mitigate
+the spread.  Further, we showed that monitoring and effective interventions
+in major production areas could greatly reduce the speed of the spread.
 \end{abstract}
 %%
 \section{Introduction}
 Intensification of trade and human mobility has led to an increase in
 exotic species invasions~\cite{hulme2009trade}. Climate change and
-detrimental impact of intensive agriculture on natural resources are likely
-to further aggravate this
+detrimental impact of intensive agriculture on natural resources have
+further aggravated this
 problem~\cite{early2016global,garrett2013agricultural}. Models of invasive
 species spread play an important role in predicting the spatio-temporal
 spread under different scenarios of introduction. They can also help
 identify roles of different pathways, efficacy of control strategies and
 expose gaps in the understanding of the
 phenomenon~\cite{cunniffe2016modeling,epstein2008model}. However, impending
-invasions of agricultural pests present difficult challenges to overcome.
-Accounting for multiple drivers of dispersal invariably makes the model
-complex and demands multi-disciplinary research. At the same time, data
-inadequacy makes it nearly impossible to calibrate and validate these
-models. Few and often inaccurate incidence reports, lack of production,
-trade data, heterogeneity (multiple sources, different formats and
-resolution) are some examples. A natural goal for a modeler is to develop
-analytical tools that account for the complexity of spread dynamics, cope
-with scarcity and variety of data, and provide useful insights for
-designing effective policies to prevent and mitigate invasive species
-spread.
+invasions of agricultural pests present difficult challenges from a
+modeling perspective.  Accounting for multiple drivers of dispersal (natual
+and human-mediated) invariably makes the model complex.  At the same time,
+data inadequacy makes it nearly impossible to calibrate and validate these
+models. Despite these limitations, a natural goal for a modeler is to
+provide useful insights into the mechanism of spread, and thus help design
+effective policies for its prevention and mitigation.
+
+networked dynamical system are effective in studying large interacting ...
+
+computational epidemiology, etc.
+
+same concepts are being extended to study invasive species spread
+
+multi-pathway, multi-scale, temporality (climate affects pest and host)
+
+Unlike climex, causality
 
 talk about multi-scale. prevent overfitting
 Given the complexity of the model, few data points and limited
@@ -256,24 +262,16 @@ make sure intro has challenges
 
 model, data uncertainty, pathway models, talk about Douma et al.
 
-%%  which has invaded more than 60\% of
-%% tomato producing land over the last decade.
-
 Pest risk maps have evolved ... long-term establishment. 
  We developed a 
 
-%% The world is witnessing a rapid increase in trade and
-%% travel~\cite{ercsey2012complexity}. Due to this increased connectivity,
-%% both international and domestic, no region is spared of the threat from
-%% exotic species invasion~\cite{hulme2009trade}.   As a result, global food
-%% security, human health and social welfare will be adversely impacted.
-
-The South American Tomato leafminer, or \emph{Tuta absoluta}, a pest of the
-tomato crop, is a representative among the recent biological invasions that
-have significantly perturbed global food production. Indigenous to South
-America, \tuta{} was accidentally introduced to Spain in~2006, and since
-then it has rapidly spread throughout Europe, Africa, Western and Central
-Asia, the Indian subcontinent, and parts of Central
+We applied this framework to study the spread of the South American Tomato
+leafminer or \emph{Tuta absoluta}, a pest of the tomato crop and
+representative of recent biological invasions that have significantly
+perturbed global food production.  Indigenous to South America, \tuta{} was
+accidentally introduced to Spain in~2006, and since then it has rapidly
+spread throughout Europe, Africa, Western and Central Asia, the Indian
+subcontinent, and parts of Central
 America~\cite{desneux2010biological,biondi2017}. With tomato being a
 commercially important crop, this invasion has had significant global
 impact~\cite{campos2017western}. In the Netherlands and Turkey alone, the
@@ -281,42 +279,10 @@ annual estimated intervention cost are \EURdig4 million and \EURdig167
 million per year~\cite{}, respectively. It is well accepted that trade
 played a critical role in \tuta{}'s rapid spread. On multiple occasions it
 has been discovered in packaging stations and its spread pattern is
-correlated with prime trade routes~\cite{karadjova2013tuta}. 
-
-%% The wide-spread
-%% adoption  of green houses and tunnel farming have allowed it to overwinter
-%% as well as survive the wet season. 
-%% There is a great need to understand the
-%% dynamics of this pest in order to predict its future invasion pattern, and
-%% design effective prevention and mitigation policies.
-
-%% Due to extensive insecticide
-%% treatment in Europe, insecticidal resistance has been recently observed in
-%% populations~\cite{guedes2013tomato}. 
-%% Overall,
-%% lack of effective indigenous predators has made integrated pest management
-%% (IPM) a challenging task.
-%%~\cite{potting2013tuta,oztemiz2014tuta}
-
-%% Since tomato is among the top two traded vegetables in the
-%% world\footnote{\url{http://www.fao.org}}, 
-
-%% Faced with the challenging task of preparing for the invasion of pests and
-%% pathogens, and responding effectively to mitigate such incursions should
-%% they happen, decision makers are increasingly relying on  computational
-%% models of pest risk maps and spread to aid decision
-%% making~\cite{venette2010}.  While models that create pest risk maps (e.g.
-%% CLIMEX) are useful to identify locations which are suitable for long-term
-%% establishment, % and cause harmful impact spread models help specify the
-%% spatio-temporal dynamics of how the pest spreads.  The latter approach is
-%% particularly useful in planning for the possible threat from an invasive
-%% species~\cite{perrings2014merging,barbier2013implementing,paini2010threat,paini2010threat,paini2016global}
-%% through {\it in silico} experiments simulating hypothetical invasion
-%% scenarios. 
-%% Together, these tools can be used to address questions such as
-%% which locations to monitor, what control measures to take (areawide IPM
-%% practices, trade restrictions, etc.), what is the impact on the economy and
-%% health, and so on. 
+correlated with prime trade routes~\cite{karadjova2013tuta}. Our study
+region is South and Southeast Asia-- a region at the frontier of its
+current range -- comprising of 10 countries: members of the Association of
+Southeast Asian Nations (ASEAN) and Bangladesh.
 
 We describe a multi-pathway propagation model 
 to study the spread of \tuta{} in the region of South
@@ -634,11 +600,7 @@ produce in its surrounding regions and imports from countries outside the
 focus region at time~$t$, and (ii)~the total inflow depends on total
 consumption, processing demand, and exports from the city to countries
 outside the focus region. The details are in Section~\ref{S:sec:netcon}.
-Since no data is available on volume of trade between markets, to validate
-the modeled trade networks, we gathered qualitative information from
-reports and research articles which show evidence of tomato or vegetable
-flow between market pairs. The results of this analysis is in
-Section~\ref{S:sec:tradeFlows}.  Trade between countries of the focus
+Trade between countries of the focus
 region was not modeled as there is no adequate information on ports of
 entry or monthly flow volumes.
 
@@ -789,6 +751,7 @@ similar to Class~A as the model does not account for long-distance hops.
 However, the predicted rate of range expansion is much higher than our
 models (see Section~\ref{S:sec:guimapi} for model details and results).
 
+network structure becomes important
 The relative importance of model parameters was assessed using random
 forest~\cite{breiman2001random} with regard to their influence on
 (i)~similarity score similarity score ($\similarity$) and (ii)~spread
@@ -880,19 +843,13 @@ Moore range. Also, we observed a strong dependence on Moore range
 production is scattered. Therefore, lower the Moore range, the slower the
 spread.
 
-\paragraph{Seasonal production and consumption drive commodity flow.}
-Henceforth, we focus on long-distance dispersal, and therefore, restrict our
-discussion to Class~B models. Analyzing qualitative data from multiple sources
-, we inferred that the
-cropping pattern in this region depends primarily on two factors:
-seasons--dry and wet, and elevation--highland (upland) and lowland. Also,
-barring few exceptions, the production of the considered host crops peaks
-in the winter and is lowest during the rainy season (monsoon).  To predict
-seasonal production, we used linear regression to model the production rate
-as a function of precipitation, temperature, and elevation.   The regression
+\paragraph{Localities, production and trade.}
+The number
+To predict seasonal production, we used linear regression to model the
+production rate as a function of precipitation, temperature, and elevation
+using seasonal production data from different regions of Philippines. The
 results showed that precipitation was a statistically significant predictor
-($p<0.001$).  Regional tomato and eggplant
-production data is available for Philippines.
+($p<0.001$).
 
 few major production centers: only 20 with greater than 1K tonnes outflow.
 Major production centers have a represented locality, but, need not be the
@@ -903,13 +860,35 @@ satisfy the demand
 
 precipitation as a seasonal production predictor.
 
-district level is required
+net flows are consistent across months.
 
 few production areas and many consumption areas showing hub and spoke.
 
+Since no data is available on volume of trade between markets, to validate
+the modeled trade networks, we gathered qualitative information from
+reports and research articles which show evidence of tomato or vegetable
+flow between market pairs. The results of this analysis is in
+Section~\ref{S:sec:tradeFlows}.  
+%%
+\begin{figure}[ht]
+    \centering
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../long_distance/results/prod_netout_flows_precip1_b2_k500.pdf}
+    \caption{\label{fig:prod_netout}}
+\end{subfigure}\hspace{.5cm}
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../long_distance/results/monthly_in_out_flows_precip1_b2_k500.pdf}
+    \caption{\label{fig:monthly_in_out}}
+\end{subfigure}
+\caption{\textbf{Production, inflow and outflow at localities.} These are
+results for $\beta=2$ and $\kappa=500$ (i) \label{fig:tradeProps}}
+\end{figure}
+%% %%   
+
 
 \paragraph{Influence of domestic trade on spread pattern and rate.}
-For the country-specific studies, the starting location was decided based
+Here, we focus on long-distance dispersal, and therefore, restrict our
+discussion to Class~B models. For the country-specific studies, the starting location was decided based
 on our analysis of possible entry points through different pathways
 (Section~\ref{S:sec:seeds} in the supplement).  We observed the following
 common spread pattern.  When the invasive species is introduced to a

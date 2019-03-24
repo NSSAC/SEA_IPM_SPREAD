@@ -1,0 +1,703 @@
+San Carlos,Cadiz,187,128
+San Carlos,Pagadian,708,386
+San Carlos,Ozamis,725,381
+San Carlos,Tarlac,1373,918
+San Carlos,Cabanatuan,1408,946
+San Carlos,Olongapo,1376,941
+San Carlos,Dagupan,1441,1002
+San Carlos,San Pablo,1208,735
+San Carlos,Quezon City,1264,794
+San Carlos,Pasay City,1225,777
+San Carlos,Iligan,834,430
+San Carlos,Ormac,567,229
+San Carlos,Tacloban,636,288
+San Carlos,Butuan,896,452
+San Carlos,Tagum,1140,682
+San Carlos,Surigao,881,447
+San Carlos,Gingoog,796,371
+San Carlos,Legazpi,987,496
+San Carlos,Tuguegarao,1841,1267
+San Carlos,Vigan,1679,1189
+San Carlos,Bacolod,111,77
+San Carlos,Roxas,362,236
+San Carlos,Puerto Princesa,2473,1293
+San Carlos,Naga,1014,481
+San Carlos,Angeles,1327,870
+San Carlos,Batangas,1164,705
+San Carlos,Cotabato,1024,646
+San Carlos,Calbayog,842,459
+San Carlos,Cagayan de Oro,888,422
+San Carlos,Zamboanga,953,569
+San Carlos,Laoag,1779,1267
+San Carlos,Baguio City,1466,1031
+San Carlos,General Santos,1135,734
+San Carlos,Cebu,327,176
+San Carlos,Iloilo,330,207
+San Carlos,Davao,1160,748
+San Carlos,Manila,1250,786
+Cadiz,Pagadian,862,496
+Cadiz,Ozamis,879,490
+Cadiz,Tarlac,1266,831
+Cadiz,Cabanatuan,1300,859
+Cadiz,Olongapo,1269,854
+Cadiz,Dagupan,1333,915
+Cadiz,San Pablo,1100,648
+Cadiz,Quezon City,1157,707
+Cadiz,Pasay City,1118,690
+Cadiz,Iligan,989,539
+Cadiz,Ormac,542,237
+Cadiz,Tacloban,611,296
+Cadiz,Butuan,994,567
+Cadiz,Tagum,1218,784
+Cadiz,Surigao,856,455
+Cadiz,Gingoog,981,499
+Cadiz,Legazpi,962,504
+Cadiz,Tuguegarao,1733,1180
+Cadiz,Vigan,1572,1102
+Cadiz,Bacolod,99,63
+Cadiz,Roxas,255,149
+Cadiz,Puerto Princesa,2366,1206
+Cadiz,Naga,989,489
+Cadiz,Angeles,1220,783
+Cadiz,Batangas,1056,618
+Cadiz,Cotabato,1178,756
+Cadiz,Calbayog,817,467
+Cadiz,Cagayan de Oro,1073,550
+Cadiz,Zamboanga,1107,678
+Cadiz,Laoag,1672,1180
+Cadiz,Baguio City,1359,944
+Cadiz,General Santos,1289,844
+Cadiz,Cebu,421,157
+Cadiz,Iloilo,223,120
+Cadiz,Davao,1314,858
+Cadiz,Manila,1142,699
+Pagadian,Ozamis,115,87
+Pagadian,Tarlac,2042,1283
+Pagadian,Cabanatuan,2077,1310
+Pagadian,Olongapo,2046,1305
+Pagadian,Dagupan,2110,1366
+Pagadian,San Pablo,1877,1099
+Pagadian,Quezon City,1934,1158
+Pagadian,Pasay City,1895,1141
+Pagadian,Iligan,196,135
+Pagadian,Ormac,997,730
+Pagadian,Tacloban,1001,747
+Pagadian,Butuan,542,397
+Pagadian,Tagum,581,436
+Pagadian,Surigao,695,520
+Pagadian,Gingoog,447,318
+Pagadian,Legazpi,1509,846
+Pagadian,Tuguegarao,2510,1631
+Pagadian,Vigan,2348,1553
+Pagadian,Bacolod,767,432
+Pagadian,Roxas,1031,600
+Pagadian,Puerto Princesa,3142,1657
+Pagadian,Naga,1536,831
+Pagadian,Angeles,1997,1234
+Pagadian,Batangas,1833,1069
+Pagadian,Cotabato,348,277
+Pagadian,Calbayog,1203,910
+Pagadian,Cagayan de Oro,324,227
+Pagadian,Zamboanga,326,267
+Pagadian,Laoag,2449,1631
+Pagadian,Baguio City,2135,1395
+Pagadian,General Santos,460,365
+Pagadian,Cebu,851,440
+Pagadian,Iloilo,999,572
+Pagadian,Davao,484,380
+Pagadian,Manila,1919,1150
+Ozamis,Tarlac,2062,1280
+Ozamis,Cabanatuan,2096,1307
+Ozamis,Olongapo,2065,1302
+Ozamis,Dagupan,2129,1363
+Ozamis,San Pablo,1896,1096
+Ozamis,Quezon City,1953,1155
+Ozamis,Pasay City,1914,1138
+Ozamis,Iligan,145,66
+Ozamis,Ormac,946,661
+Ozamis,Tacloban,950,678
+Ozamis,Butuan,491,328
+Ozamis,Tagum,547,397
+Ozamis,Surigao,644,451
+Ozamis,Gingoog,396,249
+Ozamis,Legazpi,1481,1057
+Ozamis,Tuguegarao,2529,1628
+Ozamis,Vigan,2368,1551
+Ozamis,Bacolod,786,429
+Ozamis,Roxas,1051,597
+Ozamis,Puerto Princesa,3162,1654
+Ozamis,Naga,1555,828
+Ozamis,Angeles,2016,1231
+Ozamis,Batangas,1852,1066
+Ozamis,Cotabato,425,303
+Ozamis,Calbayog,1152,841
+Ozamis,Cagayan de Oro,273,158
+Ozamis,Zamboanga,442,354
+Ozamis,Laoag,2468,1628
+Ozamis,Baguio City,2155,1392
+Ozamis,General Santos,537,391
+Ozamis,Cebu,870,437
+Ozamis,Iloilo,1019,569
+Ozamis,Davao,485,346
+Ozamis,Manila,1938,1147
+Tarlac,Cabanatuan,123,88
+Tarlac,Olongapo,112,114
+Tarlac,Dagupan,135,88
+Tarlac,San Pablo,253,222
+Tarlac,Quezon City,126,128
+Tarlac,Pasay City,157,146
+Tarlac,Iligan,2098,1618
+Tarlac,Ormac,1418,1111
+Tarlac,Tacloban,1299,1015
+Tarlac,Butuan,1758,1357
+Tarlac,Tagum,1982,1573
+Tarlac,Surigao,1620,1244
+Tarlac,Gingoog,1851,1437
+Tarlac,Legazpi,788,630
+Tarlac,Tuguegarao,547,385
+Tarlac,Vigan,390,309
+Tarlac,Bacolod,1273,853
+Tarlac,Roxas,1057,716
+Tarlac,Puerto Princesa,1630,903
+Tarlac,Naga,661,544
+Tarlac,Angeles,73,56
+Tarlac,Batangas,218,217
+Tarlac,Cotabato,2235,1750
+Tarlac,Calbayog,1096,842
+Tarlac,Cagayan de Oro,1997,1535
+Tarlac,Zamboanga,2281,1468
+Tarlac,Laoag,490,387
+Tarlac,Baguio City,177,151
+Tarlac,General Santos,2244,1766
+Tarlac,Cebu,1396,959
+Tarlac,Iloilo,1155,794
+Tarlac,Davao,2102,1650
+Tarlac,Manila,138,132
+Cabanatuan,Olongapo,149,144
+Cabanatuan,Dagupan,163,133
+Cabanatuan,San Pablo,290,252
+Cabanatuan,Quezon City,163,158
+Cabanatuan,Pasay City,195,176
+Cabanatuan,Iligan,2135,1648
+Cabanatuan,Ormac,1455,1141
+Cabanatuan,Tacloban,1337,1045
+Cabanatuan,Butuan,1795,1387
+Cabanatuan,Tagum,2020,1603
+Cabanatuan,Surigao,1657,1274
+Cabanatuan,Gingoog,1889,1467
+Cabanatuan,Legazpi,826,660
+Cabanatuan,Tuguegarao,474,337
+Cabanatuan,Vigan,402,320
+Cabanatuan,Bacolod,1310,883
+Cabanatuan,Roxas,1094,746
+Cabanatuan,Puerto Princesa,1667,933
+Cabanatuan,Naga,698,574
+Cabanatuan,Angeles,111,86
+Cabanatuan,Batangas,255,247
+Cabanatuan,Cotabato,2273,1780
+Cabanatuan,Calbayog,1133,872
+Cabanatuan,Cagayan de Oro,2034,1564
+Cabanatuan,Zamboanga,2318,1498
+Cabanatuan,Laoag,502,398
+Cabanatuan,Baguio City,189,162
+Cabanatuan,General Santos,2281,1796
+Cabanatuan,Cebu,1433,989
+Cabanatuan,Iloilo,1192,824
+Cabanatuan,Davao,2139,1680
+Cabanatuan,Manila,175,162
+Olongapo,Dagupan,180,197
+Olongapo,San Pablo,256,243
+Olongapo,Quezon City,128,148
+Olongapo,Pasay City,160,166
+Olongapo,Iligan,2101,1638
+Olongapo,Ormac,1421,1131
+Olongapo,Tacloban,1302,1035
+Olongapo,Butuan,1760,1377
+Olongapo,Tagum,1985,1594
+Olongapo,Surigao,1623,1264
+Olongapo,Gingoog,1854,1457
+Olongapo,Legazpi,791,650
+Olongapo,Tuguegarao,579,462
+Olongapo,Vigan,418,384
+Olongapo,Bacolod,1275,873
+Olongapo,Roxas,1060,737
+Olongapo,Puerto Princesa,1632,923
+Olongapo,Naga,664,564
+Olongapo,Angeles,73,72
+Olongapo,Batangas,220,238
+Olongapo,Cotabato,2238,1770
+Olongapo,Calbayog,1098,862
+Olongapo,Cagayan de Oro,1999,1555
+Olongapo,Zamboanga,2283,1489
+Olongapo,Laoag,518,462
+Olongapo,Baguio City,205,226
+Olongapo,General Santos,2246,1786
+Olongapo,Cebu,1399,979
+Olongapo,Iloilo,1157,814
+Olongapo,Davao,2105,1670
+Olongapo,Manila,140,153
+Dagupan,San Pablo,322,306
+Dagupan,Quezon City,194,212
+Dagupan,Pasay City,226,229
+Dagupan,Iligan,2167,1701
+Dagupan,Ormac,1487,1195
+Dagupan,Tacloban,1368,1098
+Dagupan,Butuan,1826,1440
+Dagupan,Tagum,2051,1657
+Dagupan,Surigao,1689,1327
+Dagupan,Gingoog,1920,1521
+Dagupan,Legazpi,857,713
+Dagupan,Tuguegarao,547,388
+Dagupan,Vigan,297,210
+Dagupan,Bacolod,1341,937
+Dagupan,Roxas,1126,800
+Dagupan,Puerto Princesa,1698,987
+Dagupan,Naga,730,627
+Dagupan,Angeles,142,140
+Dagupan,Batangas,286,301
+Dagupan,Cotabato,2304,1834
+Dagupan,Calbayog,1164,925
+Dagupan,Cagayan de Oro,2065,1618
+Dagupan,Zamboanga,2349,1552
+Dagupan,Laoag,397,287
+Dagupan,Baguio City,118,74
+Dagupan,General Santos,2312,1850
+Dagupan,Cebu,1465,1043
+Dagupan,Iloilo,1223,878
+Dagupan,Davao,2171,1733
+Dagupan,Manila,206,216
+San Pablo,Quezon City,135,92
+San Pablo,Pasay City,96,75
+San Pablo,Iligan,1852,1371
+San Pablo,Ormac,1172,865
+San Pablo,Tacloban,1053,768
+San Pablo,Butuan,1511,1110
+San Pablo,Tagum,1736,1327
+San Pablo,Surigao,1374,997
+San Pablo,Gingoog,1605,1191
+San Pablo,Legazpi,542,383
+San Pablo,Tuguegarao,711,565
+San Pablo,Vigan,550,487
+San Pablo,Bacolod,1109,665
+San Pablo,Roxas,894,529
+San Pablo,Puerto Princesa,1479,733
+San Pablo,Naga,415,297
+San Pablo,Angeles,198,168
+San Pablo,Batangas,50,29
+San Pablo,Cotabato,1989,1504
+San Pablo,Calbayog,849,595
+San Pablo,Cagayan de Oro,1750,1288
+San Pablo,Zamboanga,2117,1281
+San Pablo,Laoag,650,565
+San Pablo,Baguio City,337,329
+San Pablo,General Santos,1997,1520
+San Pablo,Cebu,1150,713
+San Pablo,Iloilo,991,606
+San Pablo,Davao,1856,1403
+San Pablo,Manila,120,84
+Quezon City,Pasay City,45,19
+Quezon City,Iligan,1986,1491
+Quezon City,Ormac,1306,984
+Quezon City,Tacloban,1187,888
+Quezon City,Butuan,1646,1230
+Quezon City,Tagum,1870,1446
+Quezon City,Surigao,1508,1117
+Quezon City,Gingoog,1739,1310
+Quezon City,Legazpi,676,503
+Quezon City,Tuguegarao,590,476
+Quezon City,Vigan,429,398
+Quezon City,Bacolod,1161,726
+Quezon City,Roxas,945,590
+Quezon City,Puerto Princesa,1518,776
+Quezon City,Naga,549,417
+Quezon City,Angeles,77,78
+Quezon City,Batangas,106,90
+Quezon City,Cotabato,2123,1623
+Quezon City,Calbayog,983,715
+Quezon City,Cagayan de Oro,1885,1408
+Quezon City,Zamboanga,2169,1341
+Quezon City,Laoag,529,476
+Quezon City,Baguio City,216,240
+Quezon City,General Santos,2132,1639
+Quezon City,Cebu,1284,832
+Quezon City,Iloilo,1043,667
+Quezon City,Davao,1990,1523
+Quezon City,Manila,34,12
+Pasay City,Iligan,1958,1477
+Pasay City,Ormac,1278,970
+Pasay City,Tacloban,1160,874
+Pasay City,Butuan,1618,1216
+Pasay City,Tagum,1843,1432
+Pasay City,Surigao,1480,1103
+Pasay City,Gingoog,1712,1296
+Pasay City,Legazpi,649,489
+Pasay City,Tuguegarao,631,487
+Pasay City,Vigan,469,410
+Pasay City,Bacolod,1133,712
+Pasay City,Roxas,917,576
+Pasay City,Puerto Princesa,1490,762
+Pasay City,Naga,521,403
+Pasay City,Angeles,118,90
+Pasay City,Batangas,78,77
+Pasay City,Cotabato,2096,1609
+Pasay City,Calbayog,956,701
+Pasay City,Cagayan de Oro,1857,1394
+Pasay City,Zamboanga,2141,1328
+Pasay City,Laoag,569,487
+Pasay City,Baguio City,256,251
+Pasay City,General Santos,2104,1625
+Pasay City,Cebu,1256,818
+Pasay City,Iloilo,1015,653
+Pasay City,Davao,1962,1509
+Pasay City,Manila,32,8
+Iligan,Ormac,802,594
+Iligan,Tacloban,807,611
+Iligan,Butuan,348,261
+Iligan,Tagum,447,344
+Iligan,Surigao,501,385
+Iligan,Gingoog,252,182
+Iligan,Legazpi,1337,990
+Iligan,Tuguegarao,2563,1959
+Iligan,Vigan,2401,1881
+Iligan,Bacolod,892,478
+Iligan,Roxas,1157,646
+Iligan,Puerto Princesa,3268,1703
+Iligan,Naga,1459,1081
+Iligan,Angeles,2049,1562
+Iligan,Batangas,1883,1396
+Iligan,Cotabato,385,271
+Iligan,Calbayog,1009,774
+Iligan,Cagayan de Oro,129,92
+Iligan,Zamboanga,518,403
+Iligan,Laoag,2501,1959
+Iligan,Baguio City,2188,1723
+Iligan,General Santos,519,376
+Iligan,Cebu,976,486
+Iligan,Iloilo,1125,618
+Iligan,Davao,385,293
+Iligan,Manila,1972,1478
+Ormac,Tacloban,121,96
+Ormac,Butuan,460,333
+Ormac,Tagum,685,550
+Ormac,Surigao,323,220
+Ormac,Gingoog,554,413
+Ormac,Legazpi,655,484
+Ormac,Tuguegarao,1881,1452
+Ormac,Vigan,1719,1374
+Ormac,Bacolod,561,259
+Ormac,Roxas,717,345
+Ormac,Puerto Princesa,2620,1595
+Ormac,Naga,777,574
+Ormac,Angeles,1367,1055
+Ormac,Batangas,1201,889
+Ormac,Cotabato,938,726
+Ormac,Calbayog,327,268
+Ormac,Cagayan de Oro,700,511
+Ormac,Zamboanga,1316,997
+Ormac,Laoag,1819,1452
+Ormac,Baguio City,1506,1216
+Ormac,General Santos,946,742
+Ormac,Cebu,308,171
+Ormac,Iloilo,685,317
+Ormac,Davao,805,626
+Ormac,Manila,1290,971
+Tacloban,Butuan,463,350
+Tacloban,Tagum,687,567
+Tacloban,Surigao,325,237
+Tacloban,Gingoog,556,431
+Tacloban,Legazpi,537,387
+Tacloban,Tuguegarao,1763,1356
+Tacloban,Vigan,1601,1278
+Tacloban,Bacolod,628,318
+Tacloban,Roxas,784,404
+Tacloban,Puerto Princesa,2502,1499
+Tacloban,Naga,659,478
+Tacloban,Angeles,1249,959
+Tacloban,Batangas,1083,793
+Tacloban,Cotabato,940,743
+Tacloban,Calbayog,209,171
+Tacloban,Cagayan de Oro,702,528
+Tacloban,Zamboanga,1319,1015
+Tacloban,Laoag,1701,1356
+Tacloban,Baguio City,1388,1120
+Tacloban,General Santos,949,760
+Tacloban,Cebu,375,229
+Tacloban,Iloilo,752,375
+Tacloban,Davao,807,643
+Tacloban,Manila,1172,875
+Butuan,Tagum,252,231
+Butuan,Surigao,162,123
+Butuan,Gingoog,100,80
+Butuan,Legazpi,998,729
+Butuan,Tuguegarao,2224,1697
+Butuan,Vigan,2062,1620
+Butuan,Bacolod,1003,529
+Butuan,Roxas,1173,676
+Butuan,Puerto Princesa,2963,1840
+Butuan,Naga,1120,820
+Butuan,Angeles,1710,1300
+Butuan,Batangas,1544,1135
+Butuan,Cotabato,505,407
+Butuan,Calbayog,670,513
+Butuan,Cagayan de Oro,245,178
+Butuan,Zamboanga,862,664
+Butuan,Laoag,2162,1698
+Butuan,Baguio City,1849,1461
+Butuan,General Santos,513,423
+Butuan,Cebu,764,501
+Butuan,Iloilo,1141,647
+Butuan,Davao,372,307
+Butuan,Manila,1633,1216
+Tagum,Surigao,389,340
+Tagum,Gingoog,348,311
+Tagum,Legazpi,1225,945
+Tagum,Tuguegarao,2450,1914
+Tagum,Vigan,2289,1836
+Tagum,Bacolod,1244,806
+Tagum,Roxas,1400,892
+Tagum,Puerto Princesa,3190,2057
+Tagum,Naga,1347,1036
+Tagum,Angeles,1937,1517
+Tagum,Batangas,1771,1351
+Tagum,Cotabato,254,176
+Tagum,Calbayog,897,729
+Tagum,Cagayan de Oro,366,277
+Tagum,Zamboanga,902,703
+Tagum,Laoag,2389,1914
+Tagum,Baguio City,2076,1678
+Tagum,General Santos,262,193
+Tagum,Cebu,990,718
+Tagum,Iloilo,1368,864
+Tagum,Davao,120,76
+Tagum,Manila,1859,1433
+Surigao,Gingoog,255,204
+Surigao,Legazpi,860,616
+Surigao,Tuguegarao,2085,1584
+Surigao,Vigan,1923,1507
+Surigao,Bacolod,878,477
+Surigao,Roxas,1034,563
+Surigao,Puerto Princesa,2824,1727
+Surigao,Naga,981,706
+Surigao,Angeles,1572,1187
+Surigao,Batangas,1406,1022
+Surigao,Cotabato,639,516
+Surigao,Calbayog,531,400
+Surigao,Cagayan de Oro,401,301
+Surigao,Zamboanga,1018,788
+Surigao,Laoag,2024,1585
+Surigao,Baguio City,1710,1348
+Surigao,General Santos,648,533
+Surigao,Cebu,625,388
+Surigao,Iloilo,1002,534
+Surigao,Davao,506,416
+Surigao,Manila,1494,1103
+Gingoog,Legazpi,1090,809
+Gingoog,Tuguegarao,2315,1777
+Gingoog,Vigan,2154,1700
+Gingoog,Bacolod,904,449
+Gingoog,Roxas,1156,608
+Gingoog,Puerto Princesa,3054,1921
+Gingoog,Naga,1211,900
+Gingoog,Angeles,1802,1380
+Gingoog,Batangas,1636,1215
+Gingoog,Cotabato,440,347
+Gingoog,Calbayog,762,593
+Gingoog,Cagayan de Oro,151,99
+Gingoog,Zamboanga,768,585
+Gingoog,Laoag,2254,1778
+Gingoog,Baguio City,1941,1542
+Gingoog,General Santos,590,474
+Gingoog,Cebu,728,349
+Gingoog,Iloilo,1124,579
+Gingoog,Davao,418,326
+Gingoog,Manila,1724,1296
+Legazpi,Tuguegarao,1252,971
+Legazpi,Vigan,1091,893
+Legazpi,Bacolod,982,526
+Legazpi,Roxas,1138,612
+Legazpi,Puerto Princesa,1992,1114
+Legazpi,Naga,149,93
+Legazpi,Angeles,739,574
+Legazpi,Batangas,573,408
+Legazpi,Cotabato,1472,1123
+Legazpi,Calbayog,332,214
+Legazpi,Cagayan de Oro,1234,907
+Legazpi,Zamboanga,1755,1030
+Legazpi,Laoag,1191,971
+Legazpi,Baguio City,878,735
+Legazpi,General Santos,1481,1139
+Legazpi,Cebu,728,437
+Legazpi,Iloilo,1106,583
+Legazpi,Davao,1339,1022
+Legazpi,Manila,661,490
+Tuguegarao,Vigan,439,276
+Tuguegarao,Bacolod,1734,1200
+Tuguegarao,Roxas,1518,1064
+Tuguegarao,Puerto Princesa,2091,1250
+Tuguegarao,Naga,1122,891
+Tuguegarao,Angeles,534,403
+Tuguegarao,Batangas,678,565
+Tuguegarao,Cotabato,2696,2097
+Tuguegarao,Calbayog,1556,1189
+Tuguegarao,Cagayan de Oro,2458,1882
+Tuguegarao,Zamboanga,2742,1816
+Tuguegarao,Laoag,350,303
+Tuguegarao,Baguio City,464,317
+Tuguegarao,General Santos,2704,2113
+Tuguegarao,Cebu,1857,1306
+Tuguegarao,Iloilo,1616,1141
+Tuguegarao,Davao,2563,1997
+Tuguegarao,Manila,599,479
+Vigan,Bacolod,1573,1123
+Vigan,Roxas,1358,987
+Vigan,Puerto Princesa,1930,1173
+Vigan,Naga,962,814
+Vigan,Angeles,374,326
+Vigan,Batangas,518,488
+Vigan,Cotabato,2536,2020
+Vigan,Calbayog,1396,1112
+Vigan,Cagayan de Oro,2297,1805
+Vigan,Zamboanga,2581,1739
+Vigan,Laoag,111,82
+Vigan,Baguio City,284,194
+Vigan,General Santos,2544,2037
+Vigan,Cebu,1697,1230
+Vigan,Iloilo,1456,1064
+Vigan,Davao,2403,1920
+Vigan,Manila,439,403
+Bacolod,Roxas,268,169
+Bacolod,Puerto Princesa,2379,1226
+Bacolod,Naga,1009,511
+Bacolod,Angeles,1234,803
+Bacolod,Batangas,1070,638
+Bacolod,Cotabato,1083,694
+Bacolod,Calbayog,836,489
+Bacolod,Cagayan de Oro,997,500
+Bacolod,Zamboanga,1012,617
+Bacolod,Laoag,1686,1200
+Bacolod,Baguio City,1372,964
+Bacolod,General Santos,1195,782
+Bacolod,Cebu,441,179
+Bacolod,Iloilo,236,141
+Bacolod,Davao,1219,796
+Bacolod,Manila,1156,719
+Roxas,Puerto Princesa,2165,1089
+Roxas,Naga,1166,597
+Roxas,Angeles,1019,666
+Roxas,Batangas,856,502
+Roxas,Cotabato,1348,862
+Roxas,Calbayog,994,576
+Roxas,Cagayan de Oro,1250,658
+Roxas,Zamboanga,1278,785
+Roxas,Laoag,1471,1064
+Roxas,Baguio City,1158,827
+Roxas,General Santos,1460,950
+Roxas,Cebu,598,265
+Roxas,Iloilo,152,110
+Roxas,Davao,1485,964
+Roxas,Manila,942,582
+Puerto Princesa,Naga,1871,1024
+Puerto Princesa,Angeles,1591,847
+Puerto Princesa,Batangas,1435,704
+Puerto Princesa,Cotabato,3445,2230
+Puerto Princesa,Calbayog,2305,1322
+Puerto Princesa,Cagayan de Oro,3207,2014
+Puerto Princesa,Zamboanga,3354,1436
+Puerto Princesa,Laoag,2043,1245
+Puerto Princesa,Baguio City,1730,1009
+Puerto Princesa,General Santos,3453,2246
+Puerto Princesa,Cebu,2606,1439
+Puerto Princesa,Iloilo,2260,1167
+Puerto Princesa,Davao,3312,2130
+Puerto Princesa,Manila,1514,763
+Naga,Angeles,609,488
+Naga,Batangas,443,322
+Naga,Cotabato,1595,1212
+Naga,Calbayog,455,304
+Naga,Cagayan de Oro,1357,997
+Naga,Zamboanga,1783,1014
+Naga,Laoag,1061,885
+Naga,Baguio City,748,649
+Naga,General Santos,1604,1229
+Naga,Cebu,756,422
+Naga,Iloilo,1133,567
+Naga,Davao,1462,1112
+Naga,Manila,532,404
+Angeles,Batangas,171,168
+Angeles,Cotabato,2189,1700
+Angeles,Calbayog,1049,792
+Angeles,Cagayan de Oro,1951,1485
+Angeles,Zamboanga,2235,1419
+Angeles,Laoag,480,404
+Angeles,Baguio City,166,168
+Angeles,General Santos,2197,1717
+Angeles,Cebu,1350,910
+Angeles,Iloilo,1109,744
+Angeles,Davao,2056,1600
+Angeles,Manila,92,83
+Batangas,Cotabato,2023,1524
+Batangas,Calbayog,883,616
+Batangas,Cagayan de Oro,1785,1309
+Batangas,Zamboanga,2070,1252
+Batangas,Laoag,624,564
+Batangas,Baguio City,311,328
+Batangas,General Santos,2031,1541
+Batangas,Cebu,1184,734
+Batangas,Iloilo,944,578
+Batangas,Davao,1890,1424
+Batangas,Manila,95,83
+Cotabato,Calbayog,1151,906
+Cotabato,Cagayan de Oro,311,238
+Cotabato,Zamboanga,670,544
+Cotabato,Laoag,2643,2091
+Cotabato,Baguio City,2330,1854
+Cotabato,General Santos,201,162
+Cotabato,Cebu,1163,699
+Cotabato,Iloilo,1312,831
+Cotabato,Davao,140,103
+Cotabato,Manila,2114,1609
+Calbayog,Cagayan de Oro,905,691
+Calbayog,Zamboanga,1522,1178
+Calbayog,Laoag,1496,1183
+Calbayog,Baguio City,1183,947
+Calbayog,General Santos,1152,923
+Calbayog,Cebu,581,401
+Calbayog,Iloilo,958,547
+Calbayog,Davao,1010,806
+Calbayog,Manila,967,702
+Cagayan de Oro,Zamboanga,645,494
+Cagayan de Oro,Laoag,2400,1875
+Cagayan de Oro,Baguio City,2086,1639
+Cagayan de Oro,General Santos,461,361
+Cagayan de Oro,Cebu,821,400
+Cagayan de Oro,Iloilo,1217,630
+Cagayan de Oro,Davao,314,260
+Cagayan de Oro,Manila,1870,1394
+Zamboanga,Laoag,2690,1816
+Zamboanga,Baguio City,2377,1580
+Zamboanga,General Santos,779,633
+Zamboanga,Cebu,1092,625
+Zamboanga,Iloilo,1241,756
+Zamboanga,Davao,804,647
+Zamboanga,Manila,2160,1335
+Laoag,Baguio City,386,272
+Laoag,General Santos,2646,2114
+Laoag,Cebu,1798,1307
+Laoag,Iloilo,1557,1142
+Laoag,Davao,2504,1998
+Laoag,Manila,540,481
+Baguio City,General Santos,2337,1878
+Baguio City,Cebu,1489,1071
+Baguio City,Iloilo,1248,906
+Baguio City,Davao,2195,1762
+Baguio City,Manila,231,244
+General Santos,Cebu,1252,911
+General Santos,Iloilo,1427,920
+General Santos,Davao,193,148
+General Santos,Manila,2121,1626
+Cebu,Iloilo,564,236
+Cebu,Davao,1102,794
+Cebu,Manila,1266,819
+Iloilo,Davao,1449,935
+Iloilo,Manila,1037,659
+Davao,Manila,1983,1513

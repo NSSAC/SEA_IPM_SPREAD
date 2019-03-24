@@ -1,0 +1,5 @@
+Mawlamyine,Myanmar
+Bago,Myanmar
+Mandalay,Myanmar
+Naypyidaw,Myanmar
+Rangoon,Myanmar

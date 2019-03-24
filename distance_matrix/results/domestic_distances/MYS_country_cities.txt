@@ -1,0 +1,18 @@
+Shah Alam,Malaysia
+Butterworth,Malaysia
+Sungai Petani,Malaysia
+Alor Setar,Malaysia
+Seremban,Malaysia
+Kuala Terengganu,Malaysia
+Johor Bahru,Malaysia
+Kelang,Malaysia
+Ipoh,Malaysia
+Kota Baharu,Malaysia
+Malacca,Malaysia
+Kuantan,Malaysia
+Tawau,Malaysia
+Sandakan,Malaysia
+Kota Kinabalu,Malaysia
+George Town,Malaysia
+Kuching,Malaysia
+Kuala Lumpur,Malaysia

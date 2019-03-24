@@ -1,0 +1,16 @@
+===========================================================================
+Distance matrix: Computing intercity time/distance using Google API 
+===========================================================================
+For a description:
+> python scripts/distance_matrix.sh -h
+
+See scripts/master_distance_matrix.sh for sequence of steps.
+
+===========================================================================
+Updating distances (such as adding cities)
+===========================================================================
+- go to results/domestic_distances
+- add city to ${iso}_country_cities.txt
+- run:
+master_distance_matrix.sh domestic_distances
+for only the relevant country.
