@@ -444,7 +444,7 @@ Suppose cell~$v$ belongs to locality~$i$. Then, the probability of cell~$v$
 transitioning from~$S$ to~$E$ due to long-distance dispersal is given by:
 %%
 \begin{linenomath}
-\begin{align}\label{eqn:plocal}
+\begin{align}\label{eqn:pld}
     \pld(v,t)=\suitable(v,t)\bigg(1-
     \exp\Big(-\ald\sum_{j\ne i}\sum_{v'\in\locality(j)}F_{ji}\infest(v',t)\Big)\bigg),
 \end{align}
@@ -554,27 +554,18 @@ given by,
 \end{linenomath}
 %%
 $\similarity(C)$ attains a maximum value of one when simulation output is a
-perfect match (within the error tolerance limit).  The range or values of
-model parameters are in Table~\ref{tab:param}.  Parameter space exploration
-was conducted in multiple iterations.  First, we coarsely sampled the
-space. With model parameters as independent variables and the goodness of
-fit measure defined in~\eqref{eqn:similarity} as the dependent variable, we
-used Classification and Regression Trees (CART) approach to identify
+perfect match (within the error tolerance limit). Parameter space
+exploration was conducted in multiple iterations (The range or values of
+model parameters are in Table~\ref{tab:param}). First, we coarsely sampled
+the space. With model parameters as independent variables and the goodness
+of fit measure defined in~\eqref{eqn:similarity} as the dependent variable,
+we used Classification and Regression Trees (CART) approach to identify
 subspaces for which similarity score was high and rejected subspaces for
 which similarity was low. Based on this, in the subsequent phases, we
-refined our search to improve the parameterization.  More details of the
-CART analysis is presented in Section~\ref{S:sec:cart}.  Simulations were
+refined our search to improve the parameterization. Simulations were
 performed on more than~$500,000$ parameter combinations using a high
 performance computing cluster. Configurations with high similarity score
 ($\similarity(C)\ge0.75$) were chosen for further analysis.
-
-%% In the second phase,
-%% we applied the select models from the previous phase to the rest of the
-%% region to study how various conditions affect the nature and rate of
-%% spread: different pest introduction scenarios, seasonality of production
-%% and trade, and interventions or the lack thereof.
-%% 
-%% re
 
 \paragraph{Analysis of spread pattern.} The objective here is to analyze
 the variability in the simulation outcomes within the set of best fit
@@ -591,11 +582,11 @@ classification problem using CART with model parameters as the independent
 variables and cluster index as the dependent variable. The relationsips
 were inferred from the decision tree that results from the algorithm.
 To avoid any bias introduced by the clustering algorithm, we applied more
-than one method -- hierarchical (agglomerative SPSS) clustering and $k$-means
-algorithm (Pyclustering). In both cases, we used the Euclidean distance as the distance
-measure to compare two simulation outputs. The analysis was repeated for
-different values of~$k$, the number of clusters. More details are provided
-in Section~\ref{S:sec:cluster} of the supplement.
+than one method -- hierarchical agglomerative clustering (SPSS~24.0) and
+$k$-means algorithm (Pyclustering). In both cases, we used the Euclidean
+distance as the distance measure to compare two simulation outputs. The
+analysis was repeated for different values of~$k$, the number of clusters.
+More details are provided in Section~\ref{S:sec:cluster} of the supplement.
 %%
 \begin{figure}[htb]
     \centering
@@ -604,7 +595,7 @@ in Section~\ref{S:sec:cluster} of the supplement.
 \end{figure}
 %%
 \section{Results}
-\paragraph{Variability in spread pattern.} The clustering of the
+\paragraph{Variability in spread pattern.} The clustering analysis of the
 configurations selected during the parameterization phase (approximately
 8000 of them) reveals two distinct spread patterns primarily determined by
 the pathway parameters.  The first class of models
@@ -672,22 +663,21 @@ similar to Class~A as the model does not account for long-distance hops.
 However, the predicted rate of range expansion is much higher than our
 models (see Section~\ref{S:sec:guimapi} for model details and results).
 
-network structure becomes important
 The relative importance of model parameters was assessed using random
 forest~\cite{breiman2001random} with regard to their influence on
 (i)~similarity score similarity score ($\similarity$) and (ii)~spread
 pattern, which in our case, is akin to cluster membership. In the case of
 spread pattern, the importance was derived for each~$k$ (number of
-clusters) and clustering algorithm. The results are presented in
+clusters) and clustering algorithm. Some results are presented in
 Figure~\ref{fig:rf}. We note that the long distance scaling factor ($\ald$)
 is among the top three important parameters. The start month ($t_s$) is
 also important due to two reasons. Firstly, the distance between two time
 shifted simulation outputs can be large. Secondly, outputs are sensitive to
 seasonal variations or temporality of the network.  Latency period ($\ell$)
 and Moore range ($\mooreRange$) together control the extent of radial
-spread in a time step. Typically, for Class~A models, $(\mooreRange$ is
+spread in a time step. Typically, for Class~A models, $\mooreRange$ is
 high and $\ell$ is low and the other way round in the case of Class~B
-models.
+models. These results are further discussed later in the section.
 
 \paragraph{Scenarios of pest introduction to countries in Southeast Asia.}
 To identify routes of introduction to other countries in the region, we
@@ -735,7 +725,6 @@ it does not share its borders with any country in the region and also,
 there is no evidence of tomato trade with rest of the countries. However,
 human mobility is a possible pathway. The Middle East is the top
 destination for Filipino workers~\cite{rodriguez2011philippine}.
-Therefore, there is a possibility of introduction through human mobility.
 %%
 \paragraph{Predicted spread is model and region dependent.} In the case of Class~A
 models, the eastward spread is faster than southward spread
@@ -764,66 +753,24 @@ Moore range. Also, we observed a strong dependence on Moore range
 production is scattered. Therefore, lower the Moore range, the slower the
 spread.
 
-\paragraph{Localities, production and trade.}
-The number
-To predict seasonal production, we used linear regression to model the
-production rate as a function of precipitation, temperature, and elevation
-using seasonal production data from different regions of Philippines. The
-results showed that precipitation was a statistically significant predictor
-($p<0.001$).
-
-few major production centers: only 20 with greater than 1K tonnes outflow.
-Major production centers have a represented locality, but, need not be the
-actual city.
-
-major consumption centers get vegetables from long distances as they cannot
-satisfy the demand
-
-precipitation as a seasonal production predictor.
-
-net flows are consistent across months.
-
-few production areas and many consumption areas showing hub and spoke.
-
-Since no data is available on volume of trade between markets, to validate
-the modeled trade networks, we gathered qualitative information from
-reports and research articles which show evidence of tomato or vegetable
-flow between market pairs. The results of this analysis is in
-Section~\ref{S:sec:tradeFlows}.  
-%%
-\begin{figure}[ht]
-    \centering
-\begin{subfigure}[b]{.47\textwidth}
-    \includegraphics[width=\textwidth]{../long_distance/results/prod_netout_flows_precip1_b2_k500.pdf}
-    \caption{Net annual production and outflow\label{fig:prod_netout}}
-\end{subfigure}\hspace{.5cm}
-\begin{subfigure}[b]{.47\textwidth}
-    \includegraphics[width=\textwidth]{../long_distance/results/monthly_in_out_flows_precip1_b2_k500.pdf}
-    \caption{Effect of seasonality on monthly flows\label{fig:monthly_in_out}}
-\end{subfigure}
-\caption{\textbf{Production, inflow and outflow at localities.} These are
-results for $\beta=2$ and $\kappa=500$ (i) \label{fig:tradeProps}}
-\end{figure}
-%% %%   
-
-
 \paragraph{Influence of domestic trade on spread pattern and rate.}
 Here, we focus on long-distance dispersal, and therefore, restrict our
-discussion to Class~B models. For the country-specific studies, the starting location was decided based
-on our analysis of possible entry points through different pathways
-(Section~\ref{S:sec:seeds} in the supplement).  We observed the following
-common spread pattern.  When the invasive species is introduced to a
-country, dispersal is slow until the invasion front reaches a {production
-source}. Once it establishes at a source, the spread is very fast.
-Depending on the country, within~12 to~24 timesteps (or an year or two), it spreads to almost all major localities of the country
-(see Figure~\ref{fig:thlBContourInt} for example). Production areas which
-are very close to high-consumption localities (large urban areas) are
-particularly vulnerable. Since local production typically does not satisfy
-demands of such localities, they have high inflows from other production
-areas and possibly from other countries. As a result, these localities are
-the quickly infected. Once introduced to such localities, farmer--market
-interactions (local human-mediated dispersal) can facilitate the
-introduction of the pest to nearby production regions where it can
+discussion to Class~B models. For the country-specific studies, the
+starting location was decided based on our analysis of possible entry
+points through different pathways (Section~\ref{S:sec:seeds} in the
+supplement).  We observed the following common spread pattern.  When the
+invasive species is introduced to a country, dispersal is slow until the
+invasion front reaches a {production source}. Once it establishes at a
+source, the spread is very fast.  Depending on the country, within~12 to~24
+timesteps (or an year or two), it spreads to almost all major localities of
+the country (see Figure~\ref{fig:thlBContourInt} for example). Production
+areas which are very close to high-consumption localities (large urban
+areas) are particularly vulnerable. Since local production typically does
+not satisfy demands of such localities, they have high inflows from other
+production areas and possibly from other countries. As a result, these
+localities are the quickly infected. Once introduced to such localities,
+farmer--market interactions (local human-mediated dispersal) can facilitate
+the introduction of the pest to nearby production regions where it can
 establish and proliferate.
 
 %%
@@ -845,11 +792,6 @@ across countries, we observed a significant reduction in range expansion as
 well as intensity of spread.  Besides, as seen in
 Figure~\ref{fig:thlBContourInt}, stifling these flows localizes the spread
 that resembles those of Class~A models, but with much less intensity.
-%%
-%% Given the importance of the long-distance human-mediated pathway, we
-%% studied the effect of controlling this pathway in mitigating the spread.
-%% Monitoring localities by setting up pheromone traps in production areas and
-%% markets, and quarantining affected areas is one way to accomplish this.
 %%
 \begin{figure}[ht]
 \begin{subfigure}[b]{.28\textwidth}
@@ -894,59 +836,60 @@ the total number of cells in each bin, which is also the maximum possible
 accumulated probability for that bin.
 \label{fig:spread}}
 \end{figure}
-%%     \textbf{Interventions.} The effect of
-%% reducing outflows from major production regions is shown for Class~B
-%% models. These are representative results for Philippines. Plots for other
-%% countries are in Figure~\ref{S:fig:intervene}. In the simulations, a high
-%% production region (Northern Mindanao) was seeded. (a)~\textbf{Without
-%% intervention.} Simulations indicate that for the given initial conditions,
-%% there is a high chance that all major production areas of Philippines will
-%% be affected within 24 months.  The colors indicate the time interval at
-%% which there is at least a 50\% chance that a location will be infected.
-%% (b)~\textbf{With market level intervention.} The spread without the
-%% influence of long-distance flows from localities corresponding to high
-%% production areas (Northern Mindanao and Central Luzon). We observe a delay
-%% of more than two years in the introduction to the northern part due to this
-%% intervention.  (c)~\textbf{Spread with respect to origin of infection.}
-%% We compare the effect of reducing the long-distance flow the
-%% above-mentioned regions by 50\% and 100\%. The results shown correspond to
-%% all Class~B instances with Moore range~$\mooreRange=1$. \label{fig:intervene}}
-%% Under the assumption that appropriate control
-%% measures are taken, we reduce the incoming and outgoing edge weights
-%% by~$50\%$ of their original value. The resulting model was compared with
-%% the case where no action is taken (Section~\ref{sec:predict}).
-%% 
-%% Farm-level \aacomment{not sure about this}
-%% \begin{itemize}
-%%     \item suitability threshold is varied
-%%     \item Scenario 1 where for all cells it is done
-%%     \item Scenario 2 where for it is done in key tomato growing areas
-%%     \item Scenario 3 where it is done only near localities
-%% \end{itemize}
-%% 
-%% Market-level
-%% \begin{itemize}
-%%     \item Scenario 1: we identify localities which are hubs (lots of
-%%     outflow) and reduce their flow.
-%% \end{itemize}
-%% %%
-%% \begin{figure}[ht]
-%%     \centering
-%%     \begin{subfigure}[b]{.47\textwidth}
-%%         \includegraphics[width=\textwidth]{figs/spread_farm_level_interventions.png}
-%%     \caption{\label{fig:spreadFarmLevel}}
-%%     \end{subfigure}
-%%     \begin{subfigure}[b]{.47\textwidth}
-%%     \includegraphics[width=\textwidth]{figs/spread_market_level_interventions.png}
-%%     \caption{\label{fig:spreadMarketLevel}}
-%%     \end{subfigure}
-%%     \caption{Effect of interventions}
-%% \end{figure}
+
+\paragraph{Localities, production and trade.}
+We identified 102 localities representing urban and production centers.
+Among these, less than 20\% of the localities have net outflow of at least
+10~Kilo tonnes in the gravity model derived trade network, indicating that
+there are few major sources (Figure~\ref{fig:prod_netout}).  We also note
+that there are a few high sinks which have production comparable to some of
+the major sources. These are regions not only vulnerable to attacks, but
+also potentially sustain a huge negative impact due to loss in production.
+
+The number
+To predict seasonal production, we used linear regression to model the
+production rate as a function of precipitation, temperature, and elevation
+using seasonal production data from different regions of Philippines. The
+results showed that precipitation was a statistically significant predictor
+($p<0.001$).
+
+few major production centers: only 20 with greater than 1K tonnes outflow.
+Major production centers have a represented locality, but, need not be the
+actual city.
+
+major consumption centers get vegetables from long distances as they cannot
+satisfy the demand
+
+precipitation as a seasonal production predictor.
+
+net flows are consistent across months.
+
+few production areas and many consumption areas showing hub and spoke.
+
+Since no data is available on volume of trade between markets, to validate
+the modeled trade networks, we gathered qualitative information from
+reports and research articles which show evidence of tomato or vegetable
+flow between market pairs. The results of this analysis is in
+Section~\ref{S:sec:tradeFlows}.  
+%%
+\begin{figure}[ht]
+    \centering
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../long_distance/results/prod_netout_flows_precip1_b2_k500.pdf}
+    \caption{Net annual production and outflow\label{fig:prod_netout}}
+\end{subfigure}\hspace{.5cm}
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../long_distance/results/monthly_in_out_flows_precip1_b2_k500.pdf}
+    \caption{Effect of seasonality on monthly flows\label{fig:monthly_in_out}}
+\end{subfigure}
+\caption{\textbf{Production, inflow and outflow at localities.} These are
+results for $\beta=2$ and $\kappa=500$ (i) \label{fig:tradeProps}}
+\end{figure}
+%% %%   
+
 
 %%
 \section{Discussion}
-Alwang
-
 The variability in the spread patterns that explain the incidence reports
 exposes the lack of understanding of the pathways of spread.
 Nevertheless, the analysis does strongly indicate the role of
@@ -995,48 +938,40 @@ despite being present in neighboring Central Asian countries since~2015.
 Hence, it is critical to address the data gaps concerning international
 trade.
 
-Monitoring consumption areas
-
 While, several IPM strategies have been suggested for managing \tuta{},
 hardly any work has been done in designing effective interventions at the
 trade level. Designing phytosanitary measures targetted towards market and
 vehicles of transportation for preventing introductions (or
 reintroductions) is therefore a promising research direction. Some
-countries have already taken measures in this regard. The Animal and Plant
-Health Inspection Service of the United States Department of Agriculture
-(USDA-APHIS) has instituted quarantine regulations for imports from regions
-where the pest is present~\cite{USDA2012}. Identifying the optimal set of
-nodes in a network to reduce infectious disease spread is a widely studied
+countries have already taken measures in this regard. Our results also
+indicate that monitoring markets with inflows from many regions is
+important. In the United States for example, the Animal and Plant Health
+Inspection Service of the Department of Agriculture (USDA-APHIS) has
+instituted quarantine regulations for imports from regions where the pest
+is present~\cite{USDA2012}. Identifying the optimal set of nodes in a
+network to reduce infectious disease spread is a widely studied
 topic~\cite{madar2004immunization}. There are very few works that apply
-such techniques to invasive species spread~(Nopsa et
-al.~\cite{nopsa2015ecological} for example). As the world moves towards
-concentrated and specialized agricultural production, focusing on this
-aspect becomes increasingly important.
+such techniques to invasive species
+spread~(Nopsa~et~al.~\cite{nopsa2015ecological} for example). As the world
+moves towards concentrated and specialized agricultural production,
+focusing on this aspect becomes increasingly important.
 
 \paragraph{Impact.} Traditionally, crops such as tomato have been grown in
 the dry season, which is usually during winter in most parts of Southeast
 Asia. However, over the past decade, due to rising demand and opportunities
 to export, there has been a thrust towards year-round production using
 protected cultivation methods and resilient varieties~\cite{ali2001}.
-Tomato production and internal trade has steadily increased in this region
-(See Figure~\ref{S:fig:trends} in supplement). In comparison, the export of
-tomato to outside of the focus region has risen steeply in the recent years
-(after 2011), while the imports generally indicate a downward trend.
-Therefore, invasions from pests such as \tuta{} can have a huge negative
-impact on the socioeconomic fabric of this region.  %% A novel ranking-based
-%% inference was used to establish that trade was indeed a driving factor in the
-%% rapid spread of the pest in this region.
-%% In general, modeling the multi-pathway dispersal of pests such as \tuta{}
-%% is a challenging task due to inadequate understanding of the complex
-%% interconnected food system. To add to the
-%% problem, most countries ended up not being prepared for the infestation,
-%% either due to lack of awareness of the pest or the sheer speed of invasion.
-%% Absence of quality incidence records makes callibration and validation
-%% hard. Some of these problems were highlighted in the modeling
-%% effort by 
-
-%% In recent years, there has been a thrust towards integrated modeling
-%% approaches to understand invasive species dynamics. 
+Increase in urban population, short shelf life of vegetables and the
+advantages of short marketing chains have encouraged urban agriculture in
+developing countries~\cite{moustier2015urban}. Our results indicate that
+such urban and peri-urban agriculture is particularly vulnerable to invasive
+species attacks. Tomato production and internal trade has steadily
+increased in this region (See Figure~\ref{S:fig:trends} in supplement). In
+comparison, the export of tomato to outside of the focus region has risen
+steeply in the recent years (after 2011), while the imports generally
+indicate a downward trend.  Therefore, invasions from pests such as \tuta{}
+can have a huge negative impact on the socioeconomic fabric of this region.
+%%
 %%
 \paragraph{Literature survey.} Multi-pathway models are being increasingly
 used to study the role of invasive species dispersal.
@@ -1222,62 +1157,3 @@ results and commented on the manuscript.
 \bibliography{refs}
 %%
 \end{document}
-
-
-DOAS
-============================================================
-VN starting cells not true to radial spread
-
-
-Random Forest (RF), proposed by Breiman(2001), is a nonparametric ensemble learning method for classification and regression. This method overcomes decision trees’ problem of overfitting by constructing a multitude of decision trees. In order to allow chances to multiple strong predictors to split the trees, each tree uses only a subset of the predictors. In regression, RF predicts the response variable by averaging the predicted values from all trees. Overall, RF provides more advantages over other decision trees such as CART and Bagging, especially for accuracy and robustness.
-
-%% .  the start
-%% time step of simulation plays an important role (Figure~\ref{fig:rfShort})
-%% as the spread pattern is mostly radial.
-%% This is mainly because the spread pattern is radial in turn is
-%% dictated by scaling factors $\asd$ and $\afm$, and start month for the
-%% simulation. The gravity model parameters $\beta$ and $\kappa$ do not
-%% influence this model as there is no long-distance spread. We also note that
-%% the monthly production template (uniform or seasonal) does not affect the
-%% spread behavior. This is mainly because the values of short-distance
-%% scaling factors~$\asd$ or (and)~$\afm$ are relatively high to negate the
-%% effect of heterogeneity in monthly production.
-%% 
-%% For the remaining ranges of~$(\mooreRange,\ell)$, we observe a richer set of
-%% emergent behaviors. While for very high values of~$\ald$ and~$\afm$, we
-%% again see Class~A spread pattern, Class~B dominates and is strongly
-%% influenced by monthly production template, \jmcomment{and?} start month. While~$\beta$ is a
-%% significant factor in the spread, the outcome is not highly sensitive
-%% to~$\kappa$.
-
-
-%% Our analysis strongly indicates that both short distance spread and trade
-%% are important pathways in the spread dynamics. For the parameter set with
-%% the best fit, the similarity was close to~$6$, i.e., on an average,
-%% simulation output matched six out of eight locations.   This is in some sense
-%% expected due to long distance jumps facilitated by human-assisted spread.
-%% It also means that \tuta{} can achieve the same (or greater) range
-%% expansion with considerably less flying capacity and population growth.
-
-%% While our results highlight the role of human-mediated spread, it is
-%% possible that this pathway is more important for the spread than it
-%% appears.  First of all, vegetable production data for Bangladesh~\cite{spam}
-%% indicates that almost all cells have non-zero production of hosts of
-%% \tuta{}. Therefore, there is a contiguous landscape of suitable areas for
-%% the pest to spread naturally. But in general this may not be the case; the
-%% only way two locations can be connected is by trade or travel pathways. One
-%% obvious example is two land masses separated by sea.  
-
-%%
-%%\paragraph{Sensitivity analysis.} 
-%%We assessed the role of the model
-%%parameters (Table~\ref{tab:parameters}) by restricting our attention.
-%%\begin{itemize}
-%%    \item machine learning surrogates
-%%    \item CART something, default settings
-%%\item If we focus on all
-%%instances of parameters for which similarity is greater than~$12$ ($75\%$
-%%match),
-%%\end{itemize}
-%%
-%%

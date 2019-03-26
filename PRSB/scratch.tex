@@ -1,4 +1,107 @@
+  %% A novel ranking-based
+%% inference was used to establish that trade was indeed a driving factor in the
+%% rapid spread of the pest in this region.
+%% In general, modeling the multi-pathway dispersal of pests such as \tuta{}
+%% is a challenging task due to inadequate understanding of the complex
+%% interconnected food system. To add to the
+%% problem, most countries ended up not being prepared for the infestation,
+%% either due to lack of awareness of the pest or the sheer speed of invasion.
+%% Absence of quality incidence records makes callibration and validation
+%% hard. Some of these problems were highlighted in the modeling
+%% effort by 
 
+%% In recent years, there has been a thrust towards integrated modeling
+%% approaches to understand invasive species dynamics.%%     \textbf{Interventions.} The effect of
+%% reducing outflows from major production regions is shown for Class~B
+%% models. These are representative results for Philippines. Plots for other
+%% countries are in Figure~\ref{S:fig:intervene}. In the simulations, a high
+%% production region (Northern Mindanao) was seeded. (a)~\textbf{Without
+%% intervention.} Simulations indicate that for the given initial conditions,
+%% there is a high chance that all major production areas of Philippines will
+%% be affected within 24 months.  The colors indicate the time interval at
+%% which there is at least a 50\% chance that a location will be infected.
+%% (b)~\textbf{With market level intervention.} The spread without the
+%% influence of long-distance flows from localities corresponding to high
+%% production areas (Northern Mindanao and Central Luzon). We observe a delay
+%% of more than two years in the introduction to the northern part due to this
+%% intervention.  (c)~\textbf{Spread with respect to origin of infection.}
+%% We compare the effect of reducing the long-distance flow the
+%% above-mentioned regions by 50\% and 100\%. The results shown correspond to
+%% all Class~B instances with Moore range~$\mooreRange=1$. \label{fig:intervene}}
+%% Under the assumption that appropriate control
+%% measures are taken, we reduce the incoming and outgoing edge weights
+%% by~$50\%$ of their original value. The resulting model was compared with
+%% the case where no action is taken (Section~\ref{sec:predict}).
+%% 
+%% Farm-level \aacomment{not sure about this}
+%% \begin{itemize}
+%%     \item suitability threshold is varied
+%%     \item Scenario 1 where for all cells it is done
+%%     \item Scenario 2 where for it is done in key tomato growing areas
+%%     \item Scenario 3 where it is done only near localities
+%% \end{itemize}
+%% 
+%% Market-level
+%% \begin{itemize}
+%%     \item Scenario 1: we identify localities which are hubs (lots of
+%%     outflow) and reduce their flow.
+%% \end{itemize}
+%% %%
+%% \begin{figure}[ht]
+%%     \centering
+%%     \begin{subfigure}[b]{.47\textwidth}
+%%         \includegraphics[width=\textwidth]{figs/spread_farm_level_interventions.png}
+%%     \caption{\label{fig:spreadFarmLevel}}
+%%     \end{subfigure}
+%%     \begin{subfigure}[b]{.47\textwidth}
+%%     \includegraphics[width=\textwidth]{figs/spread_market_level_interventions.png}
+%%     \caption{\label{fig:spreadMarketLevel}}
+%%     \end{subfigure}
+%%     \caption{Effect of interventions}
+%% \end{figure}
+%% Given the importance of the long-distance human-mediated pathway, we
+%% studied the effect of controlling this pathway in mitigating the spread.
+%% Monitoring localities by setting up pheromone traps in production areas and
+%% markets, and quarantining affected areas is one way to accomplish this.
+%%
+%% According to Figure, the assumptions of linearity, normality,
+%% and homogeneity tended to be fairly met. For the assumption of independent
+%% observation, however, the product rates are not independent each other
+%% within region, so caution needs when interpreting the results.
+
+
+%% To predict seasonal production, we used regional quarterly tomato and
+%% eggplant production data that was available for Philippines~\cite{psa} (16
+%% regions), precipitation and elevation data at the cell level. For each
+%% region, we obtained the product rate by normalizing quarterly production
+%% values with respect to maximum value among these. We used production rate
+%% instead of production values since there are several factors that determine
+%% a region's production: climate, vegetable preference, demand, etc.
+%% Therefore, it may not be meaningful to compare production across regions.
+%% We conducted a linear regression with the product rate as a dependent
+%% variable and precipitation and elevation as independent variables
+%% (SPSS~24.0). Since the dependent variable was highly skewed, we used a
+%% log-transformation. To control elevation, we classified the elevations into
+%% two groups, high and low, using $k$-means clustering (SPSS~24.0). Due to
+%% the small sample size, we excluded the samples in the high-elevation group
+%% and conducted a linear regression analysis for the group of low
+%% elevation~($< 235$). The total 56 samples in the group showed negatively
+%% strong correlation between precipitation and logarithm of product rate
+%% ($r=-0.734$). 
+%% For most countries, only qualitative information on seasonal production is
+%% available making validation near impossible.  However, we observed that for
+%% the entire region seasonal production was strongly tied to rainfall; during
+%% the wet season, the amount of production is considerably less compared to
+%% the dry season.
+%% 
+%% The regression results showed that the precipitation was a statistically
+%% significant predictor ($p <0.001$, $R^2=0.54$) in Table 1. For assumptions
+%% of linear regression According to Figure 1, the assumptions of linearity,
+%% normality, and homogeneity tended to be fairly met. For the assumption of
+%% independent observation, however, the product rates are not independent
+%% each other within region, so caution needs when interpreting the results.
+ More details of the
+CART analysis is presented in Section~\ref{S:sec:cart}.  
 
 DOAS
 ============================================================
