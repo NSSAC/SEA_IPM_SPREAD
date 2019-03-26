@@ -1,3 +1,123 @@
+
+
+DOAS
+============================================================
+VN starting cells not true to radial spread
+
+
+Random Forest (RF), proposed by Breiman(2001), is a nonparametric ensemble learning method for classification and regression. This method overcomes decision trees’ problem of overfitting by constructing a multitude of decision trees. In order to allow chances to multiple strong predictors to split the trees, each tree uses only a subset of the predictors. In regression, RF predicts the response variable by averaging the predicted values from all trees. Overall, RF provides more advantages over other decision trees such as CART and Bagging, especially for accuracy and robustness.
+
+%% .  the start
+%% time step of simulation plays an important role (Figure~\ref{fig:rfShort})
+%% as the spread pattern is mostly radial.
+%% This is mainly because the spread pattern is radial in turn is
+%% dictated by scaling factors $\asd$ and $\afm$, and start month for the
+%% simulation. The gravity model parameters $\beta$ and $\kappa$ do not
+%% influence this model as there is no long-distance spread. We also note that
+%% the monthly production template (uniform or seasonal) does not affect the
+%% spread behavior. This is mainly because the values of short-distance
+%% scaling factors~$\asd$ or (and)~$\afm$ are relatively high to negate the
+%% effect of heterogeneity in monthly production.
+%% 
+%% For the remaining ranges of~$(\mooreRange,\ell)$, we observe a richer set of
+%% emergent behaviors. While for very high values of~$\ald$ and~$\afm$, we
+%% again see Class~A spread pattern, Class~B dominates and is strongly
+%% influenced by monthly production template, \jmcomment{and?} start month. While~$\beta$ is a
+%% significant factor in the spread, the outcome is not highly sensitive
+%% to~$\kappa$.
+
+
+%% Our analysis strongly indicates that both short distance spread and trade
+%% are important pathways in the spread dynamics. For the parameter set with
+%% the best fit, the similarity was close to~$6$, i.e., on an average,
+%% simulation output matched six out of eight locations.   This is in some sense
+%% expected due to long distance jumps facilitated by human-assisted spread.
+%% It also means that \tuta{} can achieve the same (or greater) range
+%% expansion with considerably less flying capacity and population growth.
+
+%% While our results highlight the role of human-mediated spread, it is
+%% possible that this pathway is more important for the spread than it
+%% appears.  First of all, vegetable production data for Bangladesh~\cite{spam}
+%% indicates that almost all cells have non-zero production of hosts of
+%% \tuta{}. Therefore, there is a contiguous landscape of suitable areas for
+%% the pest to spread naturally. But in general this may not be the case; the
+%% only way two locations can be connected is by trade or travel pathways. One
+%% obvious example is two land masses separated by sea.  
+
+%%
+%%\paragraph{Sensitivity analysis.} 
+%%We assessed the role of the model
+%%parameters (Table~\ref{tab:parameters}) by restricting our attention.
+%%\begin{itemize}
+%%    \item machine learning surrogates
+%%    \item CART something, default settings
+%%\item If we focus on all
+%%instances of parameters for which similarity is greater than~$12$ ($75\%$
+%%match),
+%%\end{itemize}
+%%
+%%
+
+%% In the second phase,
+%% we applied the select models from the previous phase to the rest of the
+%% region to study how various conditions affect the nature and rate of
+%% spread: different pest introduction scenarios, seasonality of production
+%% and trade, and interventions or the lack thereof.
+%% 
+%% re
+Therefore, the maximum possible value
+of~$\similarity$ is~$8$ (exact match with ground truth) and minimum is~$0$.
+
+%%
+%% Each cell~$v$ has the following time varying attributes: \aacomment{these
+%% are not necessary: NDVI~$\veg(v,t)$,
+%% temperature~$\temp(v,t)$,} monthly production of preferred host crops and
+%% consumption~$\consume(v,t)$, where~$t$ corresponds to a month.
+%% \aacomment{This should get into Tonnang discussion: Since NDVI
+%% data is available at a much finer resolution (see Table~\ref{tab:data}),
+%% for each cell, we assign the maximum of the NDVI data points that fall in
+%% this cell for that month.} For production, we consider the following
+%% vegetables: tomato, potato, eggplant in metric tonnes (see
+%% Section~\ref{sec:biology} on choice of host crops). Annual country-level
+%% production data (in volume) is spatially disaggregated using SPAM data
+%% on spatial distribution of vegetable production. \aacomment{needs
+%% explanation. statistical analysis should come here}. Further, for each cell,
+%% this production was distributed temporally-- one value for each month of
+%% the year. We observed that precipitation is a primary driver of production
+%% in the study area; during wet months, the amount of production is
+%% considerably less. \aacomment{statistical analysis should come here} (See Supplementary Information).
+%% \aacomment{pending: consumption, import/export}
+\tuta{} additionally restricts tomato plant growth by feeding
+on the growing tips. 
+
+
+ However, lack of information on trade interactions
+between countries makes it difficult to predict pest movement between
+countries.
+
+
+For the rest of the study region our models
+predict a faster southward spread to Thailand, Malaysia and Singapore than
+eastward spread in Mainland Southeast Asia due to higher trade activity in
+the former region. 
+
+In the Netherlands and Turkey alone, the
+annual estimated intervention cost are \EURdig4 million and \EURdig167
+million per year~\cite{}, respectively. 
+%% This problem is compounded in data-poor regions due to
+%% unavailability and inaccessibility of data on production and trade, making
+%% parameterization and validation nearly impossible. 
+%% For
+%% parameterization and sensitivity analysis of this complex model, we used a
+%% Classification and Regression Trees approach~\cite{lamperti2018agent}.
+
+
+%% Furthermore, no earlier work has studied the entire
+%% Southeast Asia region, particularly in the context of agricultural crops.
+
+Learning methods such as Classification and Regression Trees
+(CART)~\cite{breiman2017classification} and Random Forests were used for
+parameter space exploration and sensitivity analysis.  
 %% The wide-spread
 %% adoption  of green houses and tunnel farming have allowed it to overwinter
 %% as well as survive the wet season. 

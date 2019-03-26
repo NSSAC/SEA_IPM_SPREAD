@@ -3,7 +3,7 @@ set term tikz standalone size 12.5cm,8.75cm font ",14" gparrows scale 2,2 textsc
 set datafile separator ','
 
 ##### output
-set output 'monthly_in_out_flows_precip1_b2_k500.tex'
+set output 'monthly_in_out_flows_precip1_b0_k300.tex'
 
 ##### bg: bg color, axes, grid, tics
 ##### http://www.colourlovers.com/palette/268142/Danger_Mouse
@@ -63,5 +63,5 @@ set ylabel "\\parbox{7cm}{\\centering Normalized accumulated monthly flows}" off
 
 set notitle;        set key t r width 7;        set ytics offset 2,0;        set xtics offset 0,-.5;        set xlabel offset 0,.4;        set ylabel offset -4,0;        set xtics font ",15";
 
-plot "props_flows_precip1_b2_k500.csv" u 4 w boxes fs solid .5 ls 1 t "inflow","props_flows_precip1_b2_k500.csv" u 5 w boxes fs solid .5 ls 2 t "outflow";
+plot "props_flows_precip1_b0_k300.csv" u 4 w boxes fs solid .5 ls 1 t "inflow","props_flows_precip1_b0_k300.csv" u 5 w boxes fs solid .5 ls 2 t "outflow";
 

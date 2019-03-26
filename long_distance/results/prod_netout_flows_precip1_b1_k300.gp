@@ -3,7 +3,7 @@ set term tikz standalone size 12.5cm,8.75cm font ",14" gparrows scale 2,2 textsc
 set datafile separator ','
 
 ##### output
-set output 'monthly_in_out_flows_precip1_b2_k500.tex'
+set output 'prod_netout_flows_precip1_b1_k300.tex'
 
 ##### bg: bg color, axes, grid, tics
 ##### http://www.colourlovers.com/palette/268142/Danger_Mouse
@@ -58,10 +58,10 @@ set ytics font ",18" offset 1.5,0
 ##### plot
 set title font ",18" "" offset -3,.3
 set xlabel "Localities ordered by outflow" offset 0,0 font ",18"
-set ylabel "\\parbox{7cm}{\\centering Normalized accumulated monthly flows}" offset -2,0 font ",18"
+set ylabel "Amount in KTonnes" offset -2,0 font ",18"
 
 
-set notitle;        set key t r width 7;        set ytics offset 2,0;        set xtics offset 0,-.5;        set xlabel offset 0,.4;        set ylabel offset -4,0;        set xtics font ",15";
+set notitle;        set key t r width 7;        set ytics offset 2,0;        set xtics offset 0,-.5;        set xlabel offset 0,.4;        set ylabel offset -.2,0;        set format y "%.s";        set xtics font ",15";
 
-plot "props_flows_precip1_b2_k500.csv" u 4 w boxes fs solid .5 ls 1 t "inflow","props_flows_precip1_b2_k500.csv" u 5 w boxes fs solid .5 ls 2 t "outflow";
+plot "props_flows_precip1_b1_k300.csv" u 3 w boxes fs solid .5 ls 7 t "Production","props_flows_precip1_b1_k300.csv" u 2 ls 4 lw 10 t "Net outflow";
 
