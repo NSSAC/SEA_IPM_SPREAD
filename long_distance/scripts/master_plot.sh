@@ -97,10 +97,10 @@ mv $flowFile ../results/
 done
 }
 
-function distance_producer_consumer(){
-prodThresh=5000
+function distance_source_sink(){
+prodThresh=10000
 consThresh=10000
-outFile=prod_cons_distances_${prodThresh}_${consThresh}.csv
+outFile=source_sink_distances_${prodThresh}_${consThresh}.csv
 rm -f $outFile
 
 majorProd=`awk -F, -v prod=$prodThresh '{if ($2>prod) print $1}' ../results/props_flows_precip1_b2_k500.csv`
