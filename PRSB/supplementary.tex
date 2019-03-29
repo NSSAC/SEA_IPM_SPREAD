@@ -139,8 +139,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{authblk}
 %% \RequirePackage[l2tabu, orthodox]{nag}
-\title{Supplementary material: Assessing the Multi-pathway Threat from
-Invasive Agricultural Pests: Study of \emph{Tuta~absoluta} in Asia}
+\title{Supplementary material: Assessing the Multi-pathway Threat from an Invasive Agricultural
+Pest: \emph{Tuta~absoluta} in Asia}
 \author[1]{Joseph~McNitt}
 \author[2]{Young~Yun~Chungbaek}
 \author[2]{Henning~Mortveit}
@@ -161,6 +161,7 @@ Invasive Agricultural Pests: Study of \emph{Tuta~absoluta} in Asia}
 
 \begin{document}
 \maketitle
+
 \section{Data}
 \label{sec:data}
 Table~\ref{tab:data} lists all publicly available datasets incorporated in
@@ -271,21 +272,24 @@ Vietnam & \cite{Vien2003,wijk2007,huong2013} & \cite[Table~16]{wijk2007}
 
 \begin{table}[!h]
 \caption{Data of \tuta{} infestation for Bangladesh (source: Bangladesh
-Agricultural Research Institute). \label{tab:bgdData}}
+Agricultural Research Institute) and neighbouring region of India. \label{tab:bgdData}}
 \centering
 \rowcolors{1}{white}{gray!15} % For this to work, put \PassOptionsToPackage{table}{xcolor} before \documentclass
 \begin{tabular}{*{3}{c}}
 \toprule
 Location & Coordinates & Month of first detection of \tuta{} \\
 \midrule
-Chaklarhat, Panchagarh district & $26.19^\circ$ N, $88.43^\circ$ E & May 2016 \\
+Chaklarhat, Panchagarh district & $26.19^\circ$ N, $88.43^\circ$ E & May 2016 \cite{hossain2016first} \\
+Umiam~\cite{sankarganesh2017}, 
 BARI Research Field, Gazipur district & $23.99^\circ$ N, $90.42^\circ$ E & January 2017 \\
 RARS, Akbarput, Moulvibazar district & $24.25^\circ$ N, $91.45^\circ$ E & February 2017 \\
 Lalakhal, Jointiapur, Sylhet district & $25.07^\circ$ N, $92.09^\circ$ E & February 2017 \\
 Palashbari, Gaibandha district & $25.15 ^\circ$ N, $89.23 ^\circ$ E & March 2017 \\
 Battara, Bogra district & $24.48^\circ$ N, $89.25^\circ$ E & February 2017 \\
 Barura, Comilla district & $23.22^\circ$ N, $91.06^\circ$ E & March 2017 \\
-Patengali, Jessore district & $23.09 ^\circ$ N, $89.10 ^\circ$ E & March 2017 \\
+Patengali, Jessore district & $23.09 ^\circ$ N, $89.10 ^\circ$ E & March
+2017 \\ \hline
+Umiam, Meghalaya India &  & January 2017 \cite{sankarganesh2017} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -396,17 +400,18 @@ Patengali, Jessore district & $23.09 ^\circ$ N, $89.10 ^\circ$ E & March 2017 \\
 %%
 \section{Multi-pathway Model}
 \subsection{Locality construction}\label{sec:locality}
-In the model, \emph{localities} are centers of consumption or production.
+In the model, \emph{localities} are centres of consumption or production.
 From the perspective of consumption, we selected cities with population
 greater than a certain population threshold (as per~\cite{maxmind}) in the
 entire study region. The number and size of localities is controlled by
-population threshold and locality radius parameters. We considered a range of threshold values, and
-chose~$250,000$ as the threshold for the model with the main criterion for
-the choice being coverage of population and knowledge of major wholesale
-markets (Figure~\ref{fig:localityConstruction}. Then, we added major production centers if their population did
-not meet the threshold. The locality radius was chosen to be~$100$kms since
-local production in an urban area was within 50--60kms from the city center
-for several countries in this
+population threshold and locality radius parameters. We considered a range
+of threshold values, and chose~$250,000$ as the threshold for the model
+with the main criterion for the choice being coverage of population and
+knowledge of major wholesale markets
+(Figure~\ref{fig:localityConstruction}). Then, we added major production
+centres if their population did not meet the threshold. The locality radius
+was chosen to be~$100$km since local production in an urban area was
+within 50--60km from the city centre for several countries in this
 region~\cite{buntong2013,sokhen2004vegetable,wijk2007}. To obtain long
 distance trade flows, the travel times between pairs of cities were
 computed using Google API~\cite{googleapi}.
@@ -422,11 +427,11 @@ computed using Google API~\cite{googleapi}.
     \includegraphics[width=\textwidth]{../cellular_automata/results/cities/concentration_with_radius.pdf}
 \caption{}
 \end{subfigure}
-\caption{\textbf{Locality construction.} The number of localitites and the
+\caption{\textbf{Locality construction.} The number of localities and the
 locality area is controlled by population threshold and locality radius. We
-analyzed the effect of these parameters on the amount of production and
+analysed the effect of these parameters on the amount of production and
 population captured in the region. Setting a threshold of 250,000 and
-radius of 100kms, 80\% of the production and population is covered by
+radius of 100km, 80\% of the production and population is covered by
 localities. \label{fig:localityConstruction}}
 \end{figure}
 %%
@@ -452,7 +457,7 @@ localities. \label{fig:localityConstruction}}
 We estimated monthly production volume of tomato, eggplant and potato for
 each cell using production data available at the country/state/province
 level and the Spatial Production Allocation Model~\cite{spam}. The latter
-uses a generalized cross-entropy approach to allocate crop production in
+uses a generalised cross-entropy approach to allocate crop production in
 administrative units into individual pixels, through judicious
 interpretation of all accessible evidence such as production statistics,
 farming systems, satellite image, crop biophysical suitability, crop price,
@@ -604,54 +609,11 @@ region.
 %% \caption{Validation of Linearity, Normality, and Homogeneity}
 %
 %\end{figure}
-\subsection{Production, consumption, imports, exports and processing}
-\label{sec:locAttrib}
-
-Monthly tomato production (consumption) at a locality was obtained by aggregating
-production (population) at all cells that belong to it. Population data was
-obtained from Landscan (Table~\ref{tab:data}).
-For most countries, imports and exports are a small fraction of domestic
-production. The main
-exceptions were the significant tomato imports from India to Bangladesh and
-trade between Malaysia and Singapore. We identified major routes of trade
-from India to Bangladesh~\cite{EIIndia2015} and the total imports from
-India (FAOSTAT) was distributed uniformly between three cities close to the
-border with India along these routes. Finally, these imports were evenly
-distributed for the later half of the year since Bangladesh imports mostly
-during the rainy season. To capture the significant trade between Singapore
-and Malaysia, we included Singapore in the domestic flow network of
-Malaysia as there is high interaction between the two countries.  The
-resulting flow from the gravity model from Malaysia to Singapore was
-obtained by aggregating network flows across months and across edges with
-Singapore as destination. This flow was comparable to the annual imports
-from Malaysia to Singapore. With the exception for
-Thailand~\cite{mict2013}, Vietnam~\cite{wijk2007} and Cambodia (pers.
-comm.), there is no information on the amount of tomato production consumed
-by the processing industry even though there is evidence of processing
-industry in Malaysia and Indonesia. For each locality in Thailand, we
-scaled the monthly production by the ratio annual production of fresh
-tomatoes over total annual production (fresh and processed).
-
-For consumption, we used
-country-level production~\cite{consumption}, which was available for half
-of the countries. For Singapore, we estimated it as the difference between
-total inflow (production and imports) and total outflow (exports) based on
-FAO data. For Vietnam, Wijk~et~al.~\cite{wijk2007} provides this
-information. For Myanmar, Cambodia and Laos, we found no information. We
-used median consumption for the region. We also analyzed consumption with
-respect to per capita gross domestic product (GDP). However, we did not
-find any correlation between GDP and consumption both globally as well as
-restricted to the study region. 
-%UNCOMMENT
-
 \subsection{Network construction}
 \label{sec:netcon}
-Venkatramanan~et~al.~\cite{venkatramanan2017towards,venkatramanan2019modeling},
-this model
-consumption is modeled as a function of population and Gross Domestic
-Product (GDP). Here, we did not find any relation between GDP and
-consumption For each country, the domestic flow is estimated using a doubly
-constrained gravity model~\cite{kaluza2010complex}. For a city~$i$,
+For each country, the domestic flow was estimated using a doubly
+constrained gravity
+model~\cite{venkatramanan2019modeling,kaluza2010complex}. For a city~$i$,
 let~$O_i$ and~$I_i$ denote total outflow and total inflow respectively, and
 $\locality(i)$ denotes all cells which are assigned to it.  The
 flow~$F_{ij}$ from city~$i$ to city~$j$ is given by
@@ -663,12 +625,11 @@ flow~$F_{ij}$ from city~$i$ to city~$j$ is given by
 where, $d_{ij}$ is the time to travel from~$i$ to~$j$, and $f(\cdot)$ is
 the \emph{distance deterrence function}:
 $d_{ij}^{-\beta}\exp(-d_{ij}/\kappa)$, where~$\beta$ and~$\kappa$ are
-tunable parameters. The
-coefficients~$a_i$ and~$b_j$ are computed through an iterative process such
-that the total outflow and total inflow at each node agree with the input
-values~\cite{kaluza2010complex}. Overall, we have~12 networks
-representing flows for each month. The outflows and inflows are calculated
-as follows:
+tunable parameters. The coefficients~$a_i$ and~$b_j$ are computed through
+an iterative process such that the total outflow and total inflow at each
+node agree with the input values~\cite{kaluza2010complex}. Overall, we
+have~12 networks representing flows for each month. The outflows and
+inflows are calculated as follows:
 %%
 \begin{align}\label{eqn:flow}
     O_i(t)&=\produce(i,t)+\import(i,t)-\export(i,t)-\process(i,t),\\
@@ -682,24 +643,66 @@ $\export$ and ~$\import$ are the monthly total export to and import from
 outside the country respectively. $\process(i,t)$ is the tomato produced
 for processing. Since for this purpose tomato is typically cultivated and
 consumed locally, we subtract this volume from the outflow.
-Country-specific details of how locality attributes were estimated is in
-Section~\ref{S:sec:locAttrib}.
+Country specific details of how locality attributes were estimated is in
+Section~\ref{sec:locAttrib}.
 %% We did not incorporate international trade as the volume is negligible compared to
 %% domestic production with the exception of trade between Malaysia and Singapore. 
 %% More details in this regard are provided in Section~\ref{S:sec:locAttrib}.
+
+\subsection{Locality production, consumption, imports, exports and processing}
+\label{sec:locAttrib}
+Monthly tomato production (consumption) at a locality was obtained by
+aggregating production (population) at all cells that belong to it.
+Population data was obtained from Landscan (Table~\ref{tab:data}).  For
+most countries, imports and exports are a small fraction of domestic
+production. The main exceptions were the significant tomato imports from
+India to Bangladesh and trade between Malaysia and Singapore. We identified
+major routes of trade from India to Bangladesh~\cite{EIIndia2015} and the
+total imports from India (FAOSTAT) was distributed uniformly between three
+cities close to the border with India along these routes. Finally, these
+imports were evenly distributed for the later half of the year since
+Bangladesh imports mostly during the rainy season. To capture the
+significant trade between Singapore and Malaysia, we included Singapore in
+the domestic flow network of Malaysia as there is high interaction between
+the two countries.  The resulting flow from the gravity model from Malaysia
+to Singapore was obtained by aggregating network flows across months and
+across edges with Singapore as destination. This flow was comparable to the
+annual imports from Malaysia to Singapore. With the exception for
+Thailand~\cite{mict2013}, Vietnam~\cite{wijk2007} and Cambodia (pers.
+comm.), there is no information on the amount of tomato production consumed
+by the processing industry even though there is evidence of processing
+industry in Malaysia and Indonesia. For each locality in Thailand, we
+scaled the monthly production by the ratio annual production of fresh
+tomatoes over total annual production (fresh and processed).
+
+For consumption, we used country-level
+production~\cite{faostatConsumption}, which was available for half of the
+countries. For Singapore, we estimated it as the difference between total
+inflow (production and imports) and total outflow (exports) based on FAO
+data. For Vietnam, Wijk~et~al.~\cite{wijk2007} provides this information.
+For Myanmar, Cambodia and Laos, we found no information. We used median
+consumption for the region. We also analysed consumption with respect to
+per capita gross domestic product (GDP). However, we did not find any
+correlation between GDP and consumption both globally as well as restricted
+to the study region. In
+Venkatramanan~et~al.~\cite{venkatramanan2019modeling}, consumption was
+modelled as a function of population and Gross Domestic Product (GDP). In
+the study region, analysing FAO data on
+consumption~\cite{faostatConsumption} we did not find any relation between
+GDP and consumption.
 
 \subsection{Validation of domestic trade flows}
 \label{sec:tradeFlows}
 Since no market-to-market flow data is available for the region, we
 searched the literature for evidence of tomato trade between cities or
 regions for each country. Even this information is hardly
-available. The next step was to further generalize the search by
+available. The next step was to further generalise the search by
 considering the flow of vegetables. The results of our comparison of the
 networks obtained using gravity flow model with literature are shown
 Figure~\ref{fig:trade_flows}. Our general observations
 as follows: (i)~To obtain good representation of trade flow, at minimum,
 region/state level data of production is required; and (ii)~densely populated
-urban pockets are a good representation of consumption centers. Some country
+urban pockets are a good representation of consumption centres. Some country
 specific details follow.
 %%
 \begin{figure}[!ht]
@@ -742,7 +745,7 @@ Index & Citation \\\hline
 \caption{\textbf{Long-distance annual trade flows resulting from the gravity model.}
 We combined monthly flows and to avoid clutter, we have displayed only major
     flows ($>500$). Some of the edges
-    are labeled based on information from literature. The references
+    are labelled based on information from literature. The references
     corresponding to the labels are listed in (h). For Laos, Cambodia and
     Brunei, there are no flows as there is only one locality in each
     country. \label{fig:trade_flows}}
@@ -758,13 +761,13 @@ trade routes~\cite{EIIndia2015}.  Since, there is no data on volume, we
 distributed it evenly.
 %%
 \paragraph{Vietnam.}
-There are primarily two consumption centers: Ho Chi Minh City in the south
+There are primarily two consumption centres: Ho Chi Minh City in the south
 supplied by Central Highlands and the Mekong River Delta, and
-Hanoi-Haiphong urban centers in the north supplied by Red River Delta. For
+Hanoi-Haiphong urban centres in the north supplied by Red River Delta. For
 Ho Chi Minh City, Lam Dong is the main district that supplies
 vegetables~\cite{cadilhon2006}.  In our model (Figure~\ref{fig:vnmFlow}),
 this flow is represented by Buon Me Thuot--a city in Central Highlands--to
-Ho Chi Minh City. Buon Me Thuot is less than 100kms away from the Lam Dong
+Ho Chi Minh City. Buon Me Thuot is less than 100km away from the Lam Dong
 province thus covering the production in the area. In the north, much of
 the production surplus is assigned to the Haiphong locality, and therefore,
 it acts as a big source for almost all localities in the north. Our network
@@ -783,40 +786,12 @@ Cameron Highlands, major tomato producer to cities of Malaysia. This
 shortcoming is mainly due to unavailability of state/province level tomato
 production information.
 %%
-\paragraph{Philippines.} The major production centers are in Cagayan de Oro
+\paragraph{Philippines.} The major production centres are in Cagayan de Oro
 and regions north of Manila. These are captured by our network
 (Figure~\ref{fig:phlFlow}).
 
-\subsection{International trade} \label{sec:tomnet}
-Figure~\ref{fig:tomnet} shows the annual tomato trade for the study region. The
-network was constructed using data from FAOSTAT Trade matrix
-(Table~\ref{tab:data}).  The trade within the focus region is represented
-by green edges. Imports from \tuta{} affected countries categorized by
-region is represented by red edges, and the blue edges correspond to
-exports from the focus region to countries yet to report the presence of
-the pest. The edge thickness is a function of the trade volume. We note
-that with the exception of Philippines, there is considerable trade
-activity among countries in the focus region. However, the majority of
-trading happens between neighboring countries and except for a few flows,
-the volume is negligible compared to production within. Most significant
-flow is from Malaysia to Singapore ($\approx30,000$ tonnes), India to
-Bangladesh ($\approx20,000$ tonnes), and Thailand and Vietnam to Malaysia
-(between $1000$ to $2,000$ tonnes). Philippines does not report any fresh
-tomato trade with other countries.  We also analyzed how the network
-structure evolved across years. While we did not observe much variation in
-the network structure, there is some change in the countries importing to
-and exporting from this region
-%%
-\begin{figure}[t]
-\centering
-%%
-\includegraphics[width=.6\textwidth]{../international_trade/results/network_plots/sea_2013_tomato.pdf}
-\caption{\textbf{The trade of tomato in the focus region
-(2013).}\label{fig:tomnet}}
-\end{figure}
-
 \subsection{Transmission probability}\label{trans}
-At any given time~$t$, for a cell~$v$ and its neighbor~$v'$ corresponding
+At any given time~$t$, for a cell~$v$ and its neighbour~$v'$ corresponding
 to the considered pathway, let $\infest(v',t)$ be the strength of
 infestation at~$v'$. Let,~$\alpha$ be the transmission rate corresponding
 to the pathway. Then, the probability that the pest will be introduced
@@ -844,6 +819,7 @@ function form, with the probability of still being exposed after $t$ time
 steps as: $P(t) = e^{-\epsilon t}$, where $\epsilon$ relates to the
 "transfer rate". This function form was derived when considering
 traditional SIR models mathematically in \cite{hethcote1989periodicity}.
+
 \section{Parameterization and simulation}
 \label{sec:cart}
 For each parameter setting, we evaluated the model output by comparing it
@@ -856,7 +832,7 @@ Trees~(CART) to guide parameter space exploration. Initially, the parameter
 space was coarsely sampled. The parameter values are listed in
 Table~\ref{M:tab:param} in the main document. For each of these samples, simulations were run
 and the similarity scores computed. With the model parameters as independent
-variables and similarity score as the dependent variable, we analyzed the results
+variables and similarity score as the dependent variable, we analysed the results
 using CART (see Figure~\ref{fig:cart}). We chose parameter subspaces with
 high similarity score (5.5 or more) and rejected those with lower values.  For
 each chosen parameter subspace, the process was repeated.
@@ -900,7 +876,7 @@ each chosen parameter subspace, the process was repeated.
     \end{subfigure}
     \caption{CART analysis of the parameter space: The models with
         similarity score~$\ge5.5$ were partitioned based on the Moore
-    range~$\mooreRange$ and latency period~$\ell$ tuple and analyzed. For
+    range~$\mooreRange$ and latency period~$\ell$ tuple and analysed. For
  the case~$(\mooreRange=3$, $\ell=1)$, there were no instances with
  similarity score~$\ge5.5$ among the sampled instances. 
     \label{fig:cart}}
@@ -933,9 +909,9 @@ in Malaysia - including Singapore. This region contains major ports in
 Malaysia including Tanjung Pelepas \cite{khalid2005}, and Singapore is also
 a major trading hub for Bangladesh. We considered two scenarios of
 introduction for Philippines. The first is motivated by the fact that there
-is a large migrant Filipino worker population traveling to and from
+is a large migrant Filipino worker population travelling to and from
 infested countries. We seeded the port of Masinloc in this scenario as it
-processes many of these travelers. The second was the introduction to
+processes many of these travellers. The second was the introduction to
 Northern Mindanao region, one of the major tomato production areas in the
 country. We conducted country-specific experiments in the case of Thailand
 and Vietnam. The seed locations were determined by spread observed from
@@ -966,7 +942,7 @@ both Class~A and Class~B models.
         Bangladesh 1 & Parameterization phase: The cell corresponding to the location of first
         report was seeded. \\
         Bangladesh 2 & Parameterization phase: The cells corresponding to the location of first
-        report and its adjacent cells (Moore neighborhood~1) were seeded. \\
+        report and its adjacent cells (Moore neighbourhood~1) were seeded. \\
     	\hline
 	Bangladesh and Northeastern Myanmar & This seeding is the estimated
 	current range of \tuta{} in the study region. It is used to study
@@ -975,7 +951,7 @@ both Class~A and Class~B models.
     	Singapore and southern (mainland) Malaysia & This reflects possible introduction through trade, as Singapore is a major port.\\
     	\hline
     	Philippines 1 & This reflects the possibility of \tuta{} being
-        introduced through workers traveling to and from India, and other
+        introduced through workers travelling to and from India, and other
         countries, which have reported the pest. The port of Masinloc was
         seeded.\\
     	Philippines 2 & Northern Mindanao region\\
@@ -994,185 +970,32 @@ cluster with 232 nodes (16-core Sandy Bridge-EP E5-2670 2.60GHz (3.30GHz
 Turbo) Dual Processor (8 Cores per Processor) nodes with 32 GB of Memory
 and 500 GB Internal Hard Drive) in the Biocomplexity Institute of Virginia~Tech.
 
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=.7\textwidth]
-    {../international_trade/results/stat_plots/trends.pdf}
-    %{figs/trends.pdf}
-\caption{\textbf{General trends of overall production and trade in the
-region over a decade based on FAOSTAT 2013.} The total tomato production in
-the study region obtained by summing the production for all countries is
-plotted for each year between~2004 to~2013 (blue). We computed the total
-tomato import volume per year (green) from outside the study region using
-FAOSTAT Trade Matrix (Table~\ref{tab:data}). This was obtained by
-aggregating imports where the importing country belongs to the study region
-and the exporting country is outside the region. Similarly export volume
-per year to outside the study region (red) is shown. Finally, the amount of
-tomato traded within the study region was obtained by aggregating tomato
-trade between countries in the region for each year (orange). In order to
-compare these plots, each plot was normalized by dividing by the
-corresponding maximum value across all years.
-There is a steady
-increase in the production and amount of internal trade, with comparable
-rate of change for both quantities.  In comparison, the export of tomato to
-outside of the focus region (plot ``Exports'') has risen steeply in the
-recent years (after 2011), while the imports generally indicate a downward trend (plot
-``Imports''). Recent efforts to increase production and trade
-infrastructure in these countries support these 
-trends~\cite{huong2013,buntong2013,moustier2007}.
-Under these circumstances, \tuta{}'s invasion can have a high negative
-impact on the economy and livelihood of the people in this region.
-\label{fig:trends}} 
-%% The filled curves for the three trade plots depict
-%% the discrepancy in reporting. For every pair of countries,
-%% FAOSTAT Trade Matrix potentially provides two estimates of commodity flow, one by the
-%% source country (called ``Import Quantity'') and the other by the
-%% destination country (``Export Quantity'').
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-\begin{subfigure}[b]{.32\textwidth}
-    \includegraphics[width=\textwidth]{../international_trade/results/network_plots/sea_2011_tomato.pdf}
-    \caption{2011}
-\end{subfigure}
-    %%
-\begin{subfigure}[b]{.32\textwidth}
-    \includegraphics[width=\textwidth]{../international_trade/results/network_plots/sea_2012_tomato.pdf}
-    \caption{2012}
-\end{subfigure}
-    %%
-\begin{subfigure}[b]{.32\textwidth}
-    \includegraphics[width=\textwidth]{../international_trade/results/network_plots/sea_2013_tomato.pdf}
-    \caption{2013}
-\end{subfigure}
-    %%
-\caption{Evolution of tomato trade network over the years.}
-\label{fig:tradeYears}
-\end{figure}
-%% \begin{figure}[!ht]
-%% \centering
-%% \begin{subfigure}[b]{.24\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-B_m1_l2.pdf}
-%% \caption{$\mooreRange=1$, $\ell=2$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.24\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-B_m1_l3.pdf}
-%% \caption{$\mooreRange=1$, $\ell=3$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.24\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-B_m2_l3.pdf}
-%% \caption{$\mooreRange=2$, $\ell=3$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.24\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-B_m3_l3.pdf}
-%% \caption{$\mooreRange=3$, $\ell=3$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.24\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_50p_model-B_m1_l2.pdf}
-%% \caption{50\% increase, $\mooreRange=1$, $\ell=2$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.24\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_50p_model-B_m1_l3.pdf}
-%% \caption{50\% increase, $\mooreRange=1$, $\ell=3$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.24\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_50p_model-B_m2_l3.pdf}
-%% \caption{50\% increase, $\mooreRange=2$, $\ell=3$}
-%% \end{subfigure}
-%% %%
-%% \begin{subfigure}[b]{.24\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_50p_model-B_m3_l3.pdf}
-%% \caption{50\% increase, $\mooreRange=3$, $\ell=3$}
-%% \end{subfigure}
-%% %%
-%% \caption{Model B: The projected spread based on selected models. As in
-%% Model A, we observe difference in rate of spread for different
-%% $(\mooreRange,\ell)$ values.  However, again, the spread patterns are
-%% similar, but different form that of Model A instances; the spread is more
-%% southward than eastward.}
-%% \end{figure}
-%%
-\begin{figure}[!ht]
-\begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/BD_model-B_precip1_m1_l3.pdf}
-\caption{Bangladesh: without intervention\label{fig:bgdBContour}}
-\end{subfigure}
-\begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/TH_model-B_precip1_m1_l3.pdf}
-\caption{Thailand: without intervention\label{fig:thaBContour}}
-\end{subfigure}
-\begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/VN_model-B_precip1_m1_l3.pdf}
-\caption{Vietnam: without intervention\label{fig:vnmBContour}}
-\end{subfigure}
-%%
-\begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/BD_model-B_precip1-out-100_m1_l3.pdf}
-\caption{Bangladesh: with intervention (100\%)\label{fig:bgdBContourInt}}
-\end{subfigure}
-\begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/TH_model-B_precip1-out-100_m1_l3.pdf}
-\caption{Thailand: with intervention (100\%)\label{fig:thaBContourInt}}
-\end{subfigure}
-\begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/VN_model-B_precip1-out-100_m1_l3.pdf}
-\caption{Vietnam: with intervention\label{fig:vnmBContourInt}}
-\end{subfigure}
-%%
-\begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/BD_dist_prob_B_box.pdf}
-\caption{Bangladesh: spread intensity and distance with respect to origin\label{fig:bgdBContourBox}}
-\end{subfigure}
-\begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/TH_dist_prob_B_box.pdf}
-\caption{Thailand: spread intensity and distance with respect to origin\label{fig:thaBContourBox}}
-\end{subfigure}
-\begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/VN_dist_prob_B_box.pdf}
-\caption{Vietnam: spread intensity and distance with respect to
-origin\label{fig:vnmBContourBox}}
-\end{subfigure}
-\caption{\textbf{Interventions.} This is a continuation of
-    Figure~\ref{M:fig:spread} from the main document. The results of intervention for three
-    other countries are shown. \label{fig:intervene}}
-\end{figure}
-
-
 \section{Clustering analysis of the spread pattern}
 \label{sec:cluster}
-We recall that each simulation output has the following format: Suppose,
+We recall that each simulation output has the following format. Suppose,
 the simulations were run for $T$ time steps. For every~$v$,~$p(v,t)$ is the
 empirical probability  that cell $v$ is infected at time~$t$. Each
 simulation output can be viewed as a matrix of size~$n\times T$, where~$n$
-is the number of cells. To normalize each matrix, we introduced an extra
+is the number of cells. To normalise each matrix, we introduced an extra
 index~$T+1$ which carries the residual probability, i.e.,
-$p(v,T+1)=\sum_{t=1}^Tp(v,t)$. The simulation outputs for models with similarity $\similarity\ge6$ were
-thus processed and clustered using X-means
-algorithm~\cite{pelleg2000x,andrei_novikov_2018_1491324}. It is an
-extension of the K-means algorithm. It uses Bayesian Information Criterion
-(BIC) to decide the number of clusters required. 
+$p(v,T+1)=\sum_{t=1}^Tp(v,t)$. The simulation outputs for models with
+similarity $\similarity\ge6$ were thus processed and clustered using two
+algorithms: hierarchical
+agglomerative clustering (SPSS 24.0) and $k$-means algorithm (using
+Pyclustering~\cite{andrei_novikov_2018_1491324}). In each case, the number of
+clusters considered ranged from~$k=1$ to~$10$. 
 
-For the X-means algorithm, the initial centers were determined using
-K-means++ algorithm. Tolerance was set to $0.001$. The algorithm takes as
-input $\kmax$, the maximum number of clusters to be allocated. We
-considered~$\kmax=1,2,\ldots,10$ and a very large value of~$2000$. For the
-latter case, $545$ clusters were allocated. For each case, the output of
-the clustering algorithm was fed to CART algorithm to analyze the
-relationship between parameters and clusters. The results for $\kmax=2$
-and $\kmax=2000$ are in Figure~\ref{fig:cartSpread}. In each case, we note
-that $\ald$ has a significant influence on the spread pattern.
+To discover relationships between model parameters and cluster membership,
+by casting it as a classification problem. With configurations as features
+and cluster index as labels, we applied CART. The resulting decision tree
+was used to interpret the relationship between parameters and cluster
+membership. The results are in Figures~\ref{fig:cartAgglomerative}
+(hierarchical) and~\ref{fig:cartkmeans} ($k$-means).
+
 %%
-\begin{figure}[ht]
+\begin{figure}[pht]
 \centering
-\begin{subfigure}[b]{.8\textwidth}
+\begin{subfigure}[b]{.6\textwidth}
 \includegraphics[width=\textwidth]{../clustering/results/agglomerative/hierarchy_agglomerative.pdf}
 \caption{Hierarchy}
 \end{subfigure}
@@ -1231,7 +1054,7 @@ the split. Here, \texttt{a\_long} corresponds to $\ald$,
 \end{figure}
 
 %%
-\begin{figure}[ht]
+\begin{figure}[pht]
 \centering
 %%
 \begin{subfigure}[b]{.47\textwidth}
@@ -1286,8 +1109,119 @@ $\ald$, \texttt{latency\_period} is~$\ell$ and \texttt{moore} is
 $\mooreRange$.
 \label{fig:cartkmeans}}
 \end{figure}
+\section{More results}
+\subsection{International trade} \label{sec:tomnet}
+Figure~\ref{fig:tomnet} shows the annual tomato trade for the study region. The
+network was constructed using data from FAOSTAT Trade matrix
+(Table~\ref{tab:data}).  The trade within the focus region is represented
+by green edges. Imports from \tuta{} affected countries categorised by
+region is represented by red edges, and the blue edges correspond to
+exports from the focus region to countries yet to report the presence of
+the pest. The edge thickness is a function of the trade volume. We note
+that with the exception of Philippines, there is considerable trade
+activity among countries in the focus region. However, the majority of
+trading happens between neighbouring countries and except for a few flows,
+the volume is negligible compared to production within. Most significant
+flow is from Malaysia to Singapore ($\approx30,000$ tonnes), India to
+Bangladesh ($\approx20,000$ tonnes), and Thailand and Vietnam to Malaysia
+(between $1000$ to $2,000$ tonnes). Philippines does not report any fresh
+tomato trade with other countries.  We also analysed how the network
+structure evolved across years. While we did not observe much variation in
+the network structure, there is some change in the countries importing to
+and exporting from this region
+%%
+\begin{figure}[ht]
+\centering
+%%
+\begin{subfigure}[b]{.47\textwidth}
+\includegraphics[width=\textwidth]{../international_trade/results/network_plots/sea_2013_tomato.pdf}
+\caption{Tomato trade in the focus region (2013).\label{fig:tomnet}}
+\end{subfigure}
+%%
+\begin{subfigure}[b]{.47\textwidth}
+\includegraphics[width=\textwidth]{../international_trade/results/stat_plots/trends.pdf}
+\caption{General trends of overall production and trade in the region over
+a decade based on FAOSTAT 2013.  \label{fig:trends}}
+\end{subfigure}
+%%
+\begin{subfigure}[b]{\textwidth}
+\includegraphics[width=.32\textwidth]{../international_trade/results/network_plots/sea_2011_tomato.pdf}
+\includegraphics[width=.32\textwidth]{../international_trade/results/network_plots/sea_2012_tomato.pdf}
+\includegraphics[width=.32\textwidth]{../international_trade/results/network_plots/sea_2013_tomato.pdf}
+\caption{Evolution over years 2011, 2012, 2013. \label{fig:tradeYears}}
+\end{subfigure}
+
+\end{figure}
+
+The total tomato production in
+the study region obtained by summing the production for all countries is
+plotted for each year between~2004 to~2013 (blue). We computed the total
+tomato import volume per year (green) from outside the study region using
+FAOSTAT Trade Matrix (Table~\ref{tab:data}). This was obtained by
+aggregating imports where the importing country belongs to the study region
+and the exporting country is outside the region. Similarly export volume
+per year to outside the study region (red) is shown. Finally, the amount of
+tomato traded within the study region was obtained by aggregating tomato
+trade between countries in the region for each year (orange). In order to
+compare these plots, each plot was normalised by dividing by the
+corresponding maximum value across all years.
+There is a steady
+increase in the production and amount of internal trade, with comparable
+rate of change for both quantities.  In comparison, the export of tomato to
+outside of the focus region (plot ``Exports'') has risen steeply in the
+recent years (after 2011), while the imports generally indicate a downward trend (plot
+``Imports''). Recent efforts to increase production and trade
+infrastructure in these countries support these 
+trends~\cite{huong2013,buntong2013,moustier2007}.
+Under these circumstances, \tuta{}'s invasion can have a high negative
+impact on the economy and livelihood of the people in this region.
 
 
+\subsection{Localities, production and trade}
+\label{sec:locality_flows}
+We identified 102 localities representing urban and production centres. For
+the purpose of this discussion, a \emph{major source} (\emph{major sink})
+is a locality with net outflow (inflow) at least 10~Kilo tonnes. Among
+these, less than 20\% of the localities have net outflow of at least
+10~Kilo tonnes in the gravity model derived trade network, indicating that
+there are few major sources (Figure~\ref{fig:prod_netout}).  We also note
+that there are a few high sinks which have production comparable to some of
+the major sources.  These are regions not only vulnerable to attacks, but
+also potentially sustain a huge negative impact due to loss in production.
+
+To predict seasonal production, we used linear regression to model the
+production rate as a function of precipitation, temperature, and elevation
+using seasonal production data from different regions of Philippines. The
+results showed that precipitation was a statistically significant predictor
+($p<0.001$). More details are in Section~\ref{sec:prod} in the
+supplement. To study the effect of seasonality on monthly flows, we
+accumulated the net flow per month by directionality. For a locality~$i$,
+let~$F_i(m)$ denote the net flow in month~$m$ (positive means outflow, else
+negative). The accumulated outflow is $F_i^+=\sum_{m=1}^{12} I\big(F_i(m)>0\big)F_i(m)$,
+where~$I(\cdot)$ is the indicator function. Similarly, the accumulated
+inflow is defined. The results in Figure~\ref{fig:monthly_in_out} show that
+there are very few localities which switch from the role of source to sink
+and vice versa. As shown in
+Venkatramanan~et~al.~\cite{venkatramanan2019modeling}, in Nepal, this was
+not the case; the flows were switching direction between seasons leading to
+faster spread. Here, while the intensity of flows vary between seasons, we
+do not see such a switch in roles.
+
+%%
+\begin{figure}[ht]
+    \centering
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../long_distance/results/prod_netout_flows_precip1_b2_k500.pdf}
+    \caption{Net annual production and outflow\label{fig:prod_netout}}
+\end{subfigure}\hspace{.5cm}
+\begin{subfigure}[b]{.47\textwidth}
+    \includegraphics[width=\textwidth]{../long_distance/results/monthly_in_out_flows_precip1_b2_k500.pdf}
+    \caption{Effect of seasonality on monthly flows\label{fig:monthly_in_out}}
+\end{subfigure}
+\caption{\textbf{Production, inflow and outflow at localities.} These are
+results for $\beta=2$ and $\kappa=500$ (i) \label{fig:tradeProps}}
+\end{figure}
+%% %%   
 %%
 \begin{figure}[t]
 \centering
@@ -1309,7 +1243,7 @@ $\mooreRange$.
 \caption{\textbf{Parameter importance.}\label{fig:rf}}
 \end{figure}
 %%
-\section{Cellular automata model from Guimapi~et~al}
+\subsection{Cellular automata model from Guimapi~et~al}
 \label{sec:guimapi}
 Guimapi~et~al.~\cite{guimapi2016modeling} use a cellular automata approach
 to model the spread of \tuta{} through the study region of Africa, Spain, and Portugal. 
@@ -1319,23 +1253,23 @@ region.
 \paragraph{Methodology.}
 Each cell in the automata is of size $25\mathrm{km}\times25\mathrm{km}$ induced by a
 grid overlayed on the study region. Both square and hexagonal cell
-configurations are considered, but square cells (Moore neighborhood) were
+configurations are considered, but square cells (Moore neighbourhood) were
 chosen in order to cover a larger area per cell.
 Each cell can be in one of three states: S, E and I with very similar
 definitions as in our model.
-The spread is modeled as follows:
+The spread is modelled as follows:
 For an infected cell to spread to another, each cell within its moore
-neighborhood of respective distance is considered in each time step (one month). If this neighbor cell is
+neighbourhood of respective distance is considered in each time step (one month). If this neighbour cell is
 suitable, it will change states. The suitability of a cell for pest
 establishment depends on temperature, humidity, NDVI, and tomato production
 in that cell at the given time step.
 %\aacomment{Need to say what each time step corresponds to} 
-Two Moore neighborhoods were
+Two Moore neighbourhoods were
 considered, one with a range of 50 km and another with a range of 75 km.
 %\aacomment{I don't think they claim that theirs is a natural spread model.
 %Correct me if I am wrong.}
 
-Given a cell within the Moore neighborhood of an infected cell, its state
+Given a cell within the Moore neighbourhood of an infected cell, its state
 in the next time step depends on the following rules.
 \begin{itemize} 
 \item If NDVI $\ge$ NDVI threshold 1, then state becomes "Exposed".
@@ -1362,10 +1296,10 @@ country with high or very high yield, that cell would be classified at high
 or very high yield.
 \paragraph{Results.}
 We applied the seeding scenarios described in Table~\ref{tab:seeds}. Each
-scenario was simulated with Moore neighborhoods of~2 and~3.  The results
+scenario was simulated with Moore neighbourhoods of~2 and~3.  The results
 are shown in Figure~\ref{fig:baselineMyanmar}.  The model predicts a rapid
 radial spread in this region as vegetation and temperature are generally
-favorable throughout this region.  The tomato production yield in each
+favourable throughout this region.  The tomato production yield in each
 country in the focus region is in the high or very high categories, and
 thus did not limit the spread.  Generally, the predicted range expansion is
 much faster compared to our models, particularly in the case where Moore
@@ -1375,12 +1309,12 @@ range is~3.
     \begin{subfigure}[b]{.48\textwidth}
 \centering
 \includegraphics[width=\textwidth]{figs/plot_Myanmar2.pdf}
-\caption{Moore neighborhood of 2}
+\caption{Moore neighbourhood of 2}
 \end{subfigure}
 \begin{subfigure}[b]{.48\textwidth}
 \centering
 \includegraphics[width=\textwidth]{figs/plot_Myanmar3.pdf}
-\caption{Moore neighborhood of 3, baseline model}
+\caption{Moore neighbourhood of 3, baseline model}
 \end{subfigure}
 \caption{Guimapi~et~al.~\cite{guimapi2016modeling} model results: 
 Here the region of Chin in northeast Myanmar was seeded.
@@ -1427,6 +1361,50 @@ expansion is influenced by Moore range~$\mooreRange$.
 %%
 \bibliographystyle{plain}
 \bibliography{refs}
+\begin{figure}[!ht]
+\begin{subfigure}[b]{.28\textwidth}
+\includegraphics[width=\textwidth]{../cellular_automata/results/contour/BD_model-B_precip1_m1_l3.pdf}
+\caption{Bangladesh: without intervention\label{fig:bgdBContour}}
+\end{subfigure}
+\begin{subfigure}[b]{.28\textwidth}
+\includegraphics[width=\textwidth]{../cellular_automata/results/contour/TH_model-B_precip1_m1_l3.pdf}
+\caption{Thailand: without intervention\label{fig:thaBContour}}
+\end{subfigure}
+\begin{subfigure}[b]{.28\textwidth}
+\includegraphics[width=\textwidth]{../cellular_automata/results/contour/VN_model-B_precip1_m1_l3.pdf}
+\caption{Vietnam: without intervention\label{fig:vnmBContour}}
+\end{subfigure}
+%%
+\begin{subfigure}[b]{.28\textwidth}
+\includegraphics[width=\textwidth]{../cellular_automata/results/contour/BD_model-B_precip1-out-100_m1_l3.pdf}
+\caption{Bangladesh: with intervention (100\%)\label{fig:bgdBContourInt}}
+\end{subfigure}
+\begin{subfigure}[b]{.28\textwidth}
+\includegraphics[width=\textwidth]{../cellular_automata/results/contour/TH_model-B_precip1-out-100_m1_l3.pdf}
+\caption{Thailand: with intervention (100\%)\label{fig:thaBContourInt}}
+\end{subfigure}
+\begin{subfigure}[b]{.28\textwidth}
+\includegraphics[width=\textwidth]{../cellular_automata/results/contour/VN_model-B_precip1-out-100_m1_l3.pdf}
+\caption{Vietnam: with intervention\label{fig:vnmBContourInt}}
+\end{subfigure}
+%%
+\begin{subfigure}[b]{.32\textwidth}
+\includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/BD_dist_prob_B_box.pdf}
+\caption{Bangladesh: spread intensity and distance with respect to origin\label{fig:bgdBContourBox}}
+\end{subfigure}
+\begin{subfigure}[b]{.32\textwidth}
+\includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/TH_dist_prob_B_box.pdf}
+\caption{Thailand: spread intensity and distance with respect to origin\label{fig:thaBContourBox}}
+\end{subfigure}
+\begin{subfigure}[b]{.32\textwidth}
+\includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/VN_dist_prob_B_box.pdf}
+\caption{Vietnam: spread intensity and distance with respect to
+origin\label{fig:vnmBContourBox}}
+\end{subfigure}
+\caption{\textbf{Interventions.} This is a continuation of
+    Figure~\ref{M:fig:spread} from the main document. The results of intervention for three
+    other countries are shown. \label{fig:intervene}}
+\end{figure}
 \end{document}
 
 pending:

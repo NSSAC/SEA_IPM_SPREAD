@@ -1,3 +1,150 @@
+For the X-means algorithm, the initial centers were determined using
+K-means++ algorithm. Tolerance was set to $0.001$. The algorithm takes as
+input $\kmax$, the maximum number of clusters to be allocated. We
+considered~$\kmax=1,2,\ldots,10$ and a very large value of~$2000$. For the
+latter case, $545$ clusters were allocated. For each case, the output of
+the clustering algorithm was fed to CART algorithm to analyze the
+relationship between parameters and clusters. The results for $\kmax=2$
+and $\kmax=2000$ are in Figure~\ref{fig:cartSpread}. In each case, we note
+that $\ald$ has a significant influence on the spread pattern.
+ It is an
+extension of the K-means algorithm. It uses Bayesian Information Criterion
+(BIC) to decide the number of clusters required. 
+
+%% \begin{figure}[!ht]
+%% \centering
+%% \begin{subfigure}[b]{.24\textwidth}
+%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-B_m1_l2.pdf}
+%% \caption{$\mooreRange=1$, $\ell=2$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.24\textwidth}
+%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-B_m1_l3.pdf}
+%% \caption{$\mooreRange=1$, $\ell=3$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.24\textwidth}
+%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-B_m2_l3.pdf}
+%% \caption{$\mooreRange=2$, $\ell=3$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.24\textwidth}
+%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-B_m3_l3.pdf}
+%% \caption{$\mooreRange=3$, $\ell=3$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.24\textwidth}
+%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_50p_model-B_m1_l2.pdf}
+%% \caption{50\% increase, $\mooreRange=1$, $\ell=2$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.24\textwidth}
+%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_50p_model-B_m1_l3.pdf}
+%% \caption{50\% increase, $\mooreRange=1$, $\ell=3$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.24\textwidth}
+%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_50p_model-B_m2_l3.pdf}
+%% \caption{50\% increase, $\mooreRange=2$, $\ell=3$}
+%% \end{subfigure}
+%% %%
+%% \begin{subfigure}[b]{.24\textwidth}
+%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_50p_model-B_m3_l3.pdf}
+%% \caption{50\% increase, $\mooreRange=3$, $\ell=3$}
+%% \end{subfigure}
+%% %%
+%% \caption{Model B: The projected spread based on selected models. As in
+%% Model A, we observe difference in rate of spread for different
+%% $(\mooreRange,\ell)$ values.  However, again, the spread patterns are
+%% similar, but different form that of Model A instances; the spread is more
+%% southward than eastward.}
+%% \end{figure}
+%%
+%%More pathways might have to be accounted
+%%for as well (seedling trade, greenhouse cultivation, etc.).
+%% Production is dependent not only on the host, climate,
+%% and geography, but also on people's preferences and market demand. 
+%%
+%% multi-pathway model incorporated a multitude of
+%% datasets-- production, consumption, trade dynamics, climate, biology, etc.
+%% On the other hand, 
+%% To capture the
+%% multi-pathway dynamics complexity of
+%% invasion dynamics demands the use of several datasets spanning mulitple
+%% domains.
+%% Hence, we have had to simplify or ignore some of
+%% the processes that might significantly influence the spread.
+%% amid data scarcity and
+%% heterogeneity. makes modeling has forced
+%% us to simplify or ignore some of the processes that might
+%% significantly influence the spread. 
+%%
+
+
+
+%%~\cite{ali2001}
+%% \paragraph{Conclusion.} We developed a generic networked modeling framework
+%% to understand invasive species spread accounting for self- and
+%% human-mediated pathways. Machine learning techniques were used to address
+%% data sparsity and model uncertainties. The model was applied to study the
+%% spread of \tuta{} in the region of Southeast Asia. Our results suggest that
+%% trade of host plants plays an important role in the spread of the pest.
+%% Monitoring and control of this pathway can significantly mitigate the
+%% spread. The methodology is modular and can be applied to
+%% other invasive species and host crops. Besides invasive species spread,
+%% other potential applications for this work include studies of natural or
+%% human-initiated disasters, climate change and optimization of food flows.
+%% 
+%% applying this generic modeling approach to other study regions such as
+%% North America or Australia would require taking additional
+%% factors into account. For example, seedling trade could be an important pathway. From a
+%% production perspective, it is becoming important to factor in protected
+%% cultivation methods, which have enabled farmers to extend the growing
+%% season.
+%% However, the developed framework is modular and extensible. Given
+%% high-resolution accurate datasets and a better knowledge of the processes,
+%% individual modules can be replaced with more sophisticated modeling
+%% approaches.  
+
+%% Therefore, data came from disparate sources, and were misaligned in time
+%% and spatial resolution. Production and trade data from FAOSTAT also had
+%% gaps in them.  
+%% The fidelity of models such as the one presented here crucially depends on
+%% the availability of quality data as well as a good understanding of the
+%% processes involved. 
+%% Another example is the modeling of consumption.
+%% It is possible that there is lot of variation in consumption within a
+%% country~\cite{wijk2007} as well as across seasons. Even at the country
+%% level, data is available for only half of the countries. Also, we did not
+%% find any correlation between consumption and GDP or tomato production
+%% (correlation $< 0.01$).  to model accurately the growth
+%% of the pest under specific conditions including the tritrophic interactions
+%% concerning the pest, host, and its indigenous predators
+%% Rebaudo~et~al.~\cite{rebaudo2011}, for example, use a complex
+%% agent-based model to study just the interaction between farmers of two
+%% villages in the context of the potato moth in Ecuador. 
+
+%% Even at the country level, data is available for only half of the
+%% countries. Also, we did not find any correlation between consumption and
+%% GDP or tomato production ($p< 0.01$).  Without adequate data, it is
+%% difficult to account for such heterogeneity.
+  Bradhurst~et~al.~\cite{bradhurst2015hybrid} study the spread of
+foot and mouth disease in livestock by using an aggregate population-level
+model to capture within-herd spread and an individual-based model for
+between herd spread. A similar approach is used by
+Yang~et~al.~\cite{yang2016} to forecast influenza outbreaks.
+Robinet~et~al.~\cite{robinet2009role} show that the distribution and spread
+pattern of the pinewood nematode in China is strongly correlated with
+density of human population and infrastructure such as railways and river
+ports.  
+
+need to say take away points
+\begin{enumerate}
+    \item need function for relation between flow and pest spread
+    \item what is enough for modeling trade? at minimum what is
+    required?
+\end{enumerate}
+
   %% A novel ranking-based
 %% inference was used to establish that trade was indeed a driving factor in the
 %% rapid spread of the pest in this region.
