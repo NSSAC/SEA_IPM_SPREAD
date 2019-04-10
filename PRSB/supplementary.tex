@@ -150,13 +150,14 @@ Pest: \emph{Tuta~absoluta} in Asia}
 \author[4,5,6]{Thierry~Br\'{e}vault}
 \author[7]{Rangaswamy Muniappan}
 \author[2]{Abhijin~Adiga}
-\affil[1]{Department of Mathematics, Virginia Tech}
+\affil[1]{Epic Systems Corporation, United States}
 \affil[2]{Biocomplexity Institute \& Initiative, University of Virginia}
 \affil[3]{French National Institute for Agricultural Research}
 \affil[4]{BIOPASS, CIRAD-IRD-ISRA-UCAD, Dakar, Senegal}
 \affil[5]{CIRAD, UPR AIDA, F-34398 Montpellier, France}
 \affil[6]{Universit\'{e} de Montpellier, CIRAD, Montpellier, France}
-\affil[7]{Feed the Future Integrated Pest Management Innovation Lab}
+\affil[7]{Feed the Future Integrated Pest Management Innovation Lab,
+Virginia Tech}
 \date{}
 
 \begin{document}
@@ -986,9 +987,9 @@ Pyclustering~\cite{andrei_novikov_2018_1491324}). In each case, the number of
 clusters considered ranged from~$k=1$ to~$10$. 
 
 To discover relationships between model parameters and cluster membership,
-by casting it as a classification problem. With configurations as features
-and cluster index as labels, we applied CART. The resulting decision tree
-was used to interpret the relationship between parameters and cluster
+we cast it as a classification problem. With configurations as features and
+cluster index as labels, we applied CART. The resulting decision tree was
+used to interpret the relationship between parameters and cluster
 membership. The results are in Figures~\ref{fig:cartAgglomerative}
 (hierarchical) and~\ref{fig:cartkmeans} ($k$-means).
 
@@ -1153,7 +1154,8 @@ a decade based on FAOSTAT 2013.  \label{fig:trends}}
 
 \end{figure}
 
-The total tomato production in
+\paragraph{General trends.} Figure~\ref{fig:trends} shows the evolution of
+trade and production volume over time. The total tomato production in
 the study region obtained by summing the production for all countries is
 plotted for each year between~2004 to~2013 (blue). We computed the total
 tomato import volume per year (green) from outside the study region using
@@ -1193,19 +1195,20 @@ To predict seasonal production, we used linear regression to model the
 production rate as a function of precipitation, temperature, and elevation
 using seasonal production data from different regions of Philippines. The
 results showed that precipitation was a statistically significant predictor
-($p<0.001$). More details are in Section~\ref{sec:prod} in the
-supplement. To study the effect of seasonality on monthly flows, we
-accumulated the net flow per month by directionality. For a locality~$i$,
-let~$F_i(m)$ denote the net flow in month~$m$ (positive means outflow, else
-negative). The accumulated outflow is $F_i^+=\sum_{m=1}^{12} I\big(F_i(m)>0\big)F_i(m)$,
-where~$I(\cdot)$ is the indicator function. Similarly, the accumulated
-inflow is defined. The results in Figure~\ref{fig:monthly_in_out} show that
-there are very few localities which switch from the role of source to sink
-and vice versa. As shown in
-Venkatramanan~et~al.~\cite{venkatramanan2019modeling}, in Nepal, this was
-not the case; the flows were switching direction between seasons leading to
-faster spread. Here, while the intensity of flows vary between seasons, we
-do not see such a switch in roles.
+($p<0.001$). More details are in Section~\ref{sec:prod} in the supplement.
+To study the effect of seasonality on monthly flows, we accumulated the net
+flow per month by directionality. For a locality~$i$, let~$F_i(m)$ denote
+the net flow in month~$m$ (positive means outflow, else inflow). The
+accumulated outflow is $F_i^+=\sum_{m=1}^{12} I\big(F_i(m)>0\big)F_i(m)$,
+where~$I(\cdot)$ is the indicator function. Corresponding definition of
+accumulated inflow is $F_i^-=\sum_{m=1}^{12} I\big(F_i(m)<0\big)F_i(m)$.
+The results in Figure~\ref{fig:monthly_in_out} show that there are very few
+localities which switch from the role of source to sink and vice versa.
+This is unlike what is observed in Nepal by
+Venkatramanan~et~al.~\cite{venkatramanan2019modeling}. The flow between
+high altitude regions and low altitude regions switches direction according
+to season.  Here, while the intensity of flows vary between seasons, we do
+not see such a switch in roles.
 
 %%
 \begin{figure}[ht]

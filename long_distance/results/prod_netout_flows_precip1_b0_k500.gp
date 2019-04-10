@@ -63,5 +63,5 @@ set ylabel "Amount in KTonnes" offset -2,0 font ",18"
 
 set notitle;        set key t r width 7;        set ytics offset 2,0;        set xtics offset 0,-.5;        set xlabel offset 0,.4;        set ylabel offset -.2,0;        set format y "%.s";        set xtics font ",15";
 
-plot "props_flows_precip1_b0_k500.csv" u 3 w boxes fs solid .5 ls 7 t "Production","props_flows_precip1_b0_k500.csv" u 2 ls 4 lw 10 t "Net outflow";
+plot "../results/props_flows_precip1_b0_k500.csv" u 3 w boxes fs solid .5 ls 7 t "Production","../results/props_flows_precip1_b0_k500.csv" u 2 ls 4 lw 10 t "Net outflow";
 

@@ -10,6 +10,25 @@ python ../scripts/plot_contour.py ../sim_out_files/results_BD/res_precip1_b0_k50
 #python ../scripts/plot_contour.py ../results/sim_out/BGD/res_precip1_b0_k500_s0_sm5_m1_st0_ed3_a-300-0-50.csv BD -t 1 -n 12 -o ../results/contour/model_B_BGD_1.pdf
 }
 
+function bgd_movie(){
+#for timeSteps in `seq 1 12`
+#do
+#echo $timeSteps
+python ../scripts/spread_movie.py \
+    ../sim_out_files/results_BD/res_precip1_b0_k500_s0_sm5_m1_st0_ed3_a-125-0-50.csv BD \
+    -s 4 \
+    -t 0.95 \
+    -n 24 \
+    -p modelB_BGD
+
+python ../scripts/spread_movie.py \
+    ../sim_out_files/results_BD/res_precip1_b0_k1000_s0_sm4_m3_st0_ed2_a-400-400-0.csv BD \
+    -t 0.95 \
+    -n 24 \
+    -p modelA_BGD
+
+}
+
 function msa(){
 ## #B m1 l1
 ## #B m1 l2

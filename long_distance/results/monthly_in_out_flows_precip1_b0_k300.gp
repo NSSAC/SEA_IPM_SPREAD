@@ -63,5 +63,5 @@ set ylabel "\\parbox{7cm}{\\centering Normalized accumulated monthly flows}" off
 
 set notitle;        set key t r width 7;        set ytics offset 2,0;        set xtics offset 0,-.5;        set xlabel offset 0,.4;        set ylabel offset -4,0;        set xtics font ",15";
 
-plot "props_flows_precip1_b0_k300.csv" u 4 w boxes fs solid .5 ls 1 t "inflow","props_flows_precip1_b0_k300.csv" u 5 w boxes fs solid .5 ls 2 t "outflow";
+plot "../results/props_flows_precip1_b0_k300.csv" u 4 w boxes fs solid .5 ls 1 t "inflow","../results/props_flows_precip1_b0_k300.csv" u 5 w boxes fs solid .5 ls 2 t "outflow";
 

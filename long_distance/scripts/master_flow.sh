@@ -161,7 +161,7 @@ awk -F, -v OFS="," '{sum=0; for(i=3;i<=NF;i++) sum+=$i; print $1,$2,sum,$NF}' no
     | sort -t, -n -r -k3,3 > tot_node_attributes.csv
 }
 
-function annual_outflow(){ # for top outflows 
+function annual_outflow(){ # OLD (see net_prod_flows)for top outflows 
 rm -f ../obj/locality_outflows_b2_k500.csv
 awk -F, -v OFS="," 'NR>1{if ($1!=$2) outflow[$1]+=$3}END{for (l in outflow) print l,outflow[l]}' ../obj/locality_flows_precip1_b2_k500.csv | sort -t, -k2,2 -n -r > .tp.outflows
 IFS=$'\n'
@@ -172,6 +172,41 @@ country=`grep $city ../../cellular_automata/obj/cities/cities_250000.csv | awk -
 echo "$country,$l" >> ../obj/locality_outflows_b2_k500.csv
 done
 }
+
+function net_prod_flows(){ # flows in localities
+for monthlyFlowFile in `ls -1 ../obj/locality_flows_precip1_b*csv`
+do
+flowFile=`basename $monthlyFlowFile | sed -e 's/locality/props/'`
+# compute net outflow (nof), production (p)
+gawk -F, -v OFS=',' '{\
+    nof[$1]+=$3;nof[$2]-=$3;p[$1]+=$3;\
+    nofm[$1][$4]+=$3;nofm[$2][$4]-=$3}\
+    END{for(i in nofm){negm[i]=0;posm[i]=0;\
+    for(j in nofm[i])\
+    (nofm[i][j]<0)? negm[i]+=nofm[i][j]:posm[i]+=nofm[i][j];}\
+    for(i in nof) print i,nof[i],p[i],negm[i]/(posm[i]-negm[i]+.0),posm[i]/(posm[i]-negm[i]+.0)}' $monthlyFlowFile | sort -t, -n -k2,2 -r > $flowFile
+done
+}
+
+function distance_source_sink(){
+prodThresh=10000
+consThresh=10000
+outFile=source_sink_distances_${prodThresh}_${consThresh}.csv
+rm -f $outFile
+
+majorProd=`awk -F, -v prod=$prodThresh '{if ($2>prod) print $1}' ../results/props_flows_precip1_b2_k500.csv`
+majorCons=`awk -F, -v cons=$consThresh '{if ($2<-cons) print $1}' ../results/props_flows_precip1_b2_k500.csv`
+for p in $majorProd
+do
+for c in $majorCons
+do
+grep "$p,$c" ../../distance_matrix/results/time_distance_250000.csv >> .temp.distance_prod_cons
+grep "$c,$p" ../../distance_matrix/results/time_distance_250000.csv >> .temp.distance_prod_cons
+done
+done
+sort .temp.distance_prod_cons | uniq | sort -n -k4,4 -t, > $outFile
+}
+
 
 if [[ $# == 0 ]]; then
    echo "Here are the options:"
