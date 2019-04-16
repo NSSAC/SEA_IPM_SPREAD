@@ -16,8 +16,8 @@ function bgd_movie(){
 #echo $timeSteps
 python ../scripts/spread_movie.py \
     ../sim_out_files/results_BD/res_precip1_b0_k500_s0_sm5_m1_st0_ed3_a-125-0-50.csv BD \
-    -s 4 \
-    -t 0.95 \
+    -s 5 \
+    -t 1 \
     -n 24 \
     -p modelB_BGD
 

@@ -207,12 +207,13 @@ if __name__=="__main__":
 
       # plotting title and time
       timeText=plt.text(0,0,'Time=%d' %T,horizontalalignment='left',fontsize=18,transform=ax.transAxes)
-      timeText=plt.text(0,.06,'Month=%d' %((T+args.shift-1)%12+1),horizontalalignment='left',fontsize=18,transform=ax.transAxes)
+      monthText=plt.text(0,.06,'Month=%d' %((T+args.shift-1)%12+1),horizontalalignment='left',fontsize=18,transform=ax.transAxes)
 
       plt.savefig(args.output_prefix+"_%.2d.png" %T,bbox_inches='tight')
 
       # flushes time
       timeText.remove()
+      monthText.remove()
    
    # convert to movie
    ### below one  works with mplayer, not with default mac OS players

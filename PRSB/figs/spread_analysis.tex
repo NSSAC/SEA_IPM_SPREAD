@@ -37,12 +37,12 @@ node distance=3cm]
 %%
 \node[blk,right of=explore,shift={(1,0)}] (cluster) {\textbf{\large Cluster \\simulation outputs}};
 \draw[blkedge,->] (explore) -- (cluster);
-\node[alg,above of=cluster,shift={(-1,-.5)}] (xmeans) {clustering algorithm};
+\node[alg,above of=cluster,shift={(-1,-.5)}] (xmeans) {Clustering algorithm};
 \draw[datedge,->] (xmeans.south) -- +(0,-.3) -| ($(cluster.north)+(-.5,0)$);
 \node[measure,above of=cluster,shift={(1,-.5)}] (dist) {Distance measure};
 \draw[datedge,->] (dist.south) -- +(0,-.3) -| ($(cluster.north)+(.5,0)$);
 %%
-\node[blk,right of=cluster,shift={(1,0)}] (analyze) {\textbf{\large Analyze clusters}};
+\node[blk,right of=cluster,shift={(1,0)}] (analyze) {\textbf{\large Analyse clusters}};
 \draw[blkedge,->] (cluster) -- (analyze);
 \node[alg,above of=analyze,shift={(0,-.5)}] (cart) {CART};
 \draw[datedge,->] (cart) -- (analyze);
