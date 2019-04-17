@@ -1,0 +1,221 @@
+\PassOptionsToPackage{table}{xcolor}
+\documentclass[11pt]{article}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Common preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAGE
+\newcommand{\tuta}{\emph{T.~absoluta}}
+\newcommand{\infest}{\rho}
+\newcommand{\totinf}{\rho_{\mathrm{T}}}
+\newcommand{\suitable}{\epsilon}
+%% \usepackage{fullpage} % uncomment this when changing to jour/conf style
+% FONTS
+\usepackage{textcomp}
+\usepackage{lmodern} % enhanced version of computer modern
+\usepackage[T1]{fontenc} % for hyphenated characters and textsc in section title
+\usepackage{xr}
+\externaldocument[S:]{mcnitt_tuta_supplementary}
+\usepackage{microtype} % some compression
+\usepackage{times}
+\usepackage{setspace} % For double line spacing
+\doublespacing
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\usepackage[pagewise]{lineno}
+\linenumbers
+\usepackage{marvosym}
+%% \newcommand\wordcount{\immediate\write18{texcount -sub=section \jobname.tex  | grep ``Section'' | sed -e 's/+.*//' | sed -n \thesection p > 'count.txt'} (\input{count.txt}words)}
+% MATH
+\usepackage{amssymb}
+\usepackage{mathtools} % contains amsmath which comes with align
+\usepackage{amsthm} % newtheorem stuff
+\usepackage{bm} % for bold math (use $\boldsymbol{}$)
+% COLOR
+\usepackage[usenames,dvipsnames]{color}
+%%
+% REFERENCING
+% JM: Below is for affiliations
+\usepackage{authblk}
+% BIBLIOGRAPHY
+\usepackage[square,sort&compress,numbers]{natbib} %sorts bibs when they are collectively cited
+\usepackage[colorlinks=true,pdfborder={0 0 0},citecolor=RoyalBlue,linkcolor=black,urlcolor=Magenta]{hyperref}
+\usepackage{cleveref} %%% IMPORTANT: cleveref comes before \newtheorem commands
+   \crefname{figure}{Figure}{Figures}
+   \crefname{table}{Table}{Tables}
+   \crefname{theorem}{Theorem}{Theorems}
+   \crefname{lemma}{Lemma}{Lemmas}
+   \crefname{claim}{Claim}{Claims}
+   \crefname{section}{Section}{Sections}
+   \crefname{observation}{Observation}{Observations}
+   \crefname{note}{Note}{Notes}
+%%
+% TABLES
+\usepackage{multirow}
+%% \usepackage{ctable} % provides toprule, bottomrule, midrule
+\usepackage{array} % new implementation of tabular & array with lots of enhancements
+%%
+% FIGURES
+\usepackage{graphicx}
+\graphicspath{./figs}
+\usepackage{grffile} % to set right names of files
+%%
+% CAPTIONS
+\usepackage{caption}
+\usepackage{subcaption} % supersedes subfigure & subfloat. try using options
+%%
+% LISTS
+\usepackage{enumitem} %\begin{itemize}[leftmargin=*]
+%% inline
+\newlist{inline}{enumerate*}{1}
+\setlist[inline]{before=\unskip{: }, itemjoin={{; }}, itemjoin*={{; and }}, label={(\roman*)}}
+\usepackage{silence}
+\WarningFilter{ctable}{Transparency disabled:}
+\WarningFilter{xcolor}{Incompatible color}
+% ALGO
+\usepackage[ruled,linesnumbered]{algorithm2e}
+%% comments & todo
+\newcommand{\reportingCells}{\mathcal{C}_R}
+\newcommand{\similarity}{\mathcal{S}}
+\newcommand{\aacomment}[1]{({\color{magenta}AA: #1})}
+\newcommand{\mmcomment}[1]{({\color{green}MM: #1})}
+\newcommand{\tbcomment}[1]{({\color{blue}TB: #1})}
+\newcommand{\mrccomment}[1]{({\color{red}MRC: #1})}
+\newcommand{\jmcomment}[1]{({\color{cyan}JM: #1})}
+\usepackage[colorinlistoftodos]{todonotes}
+\newcommand{\TODO}[1]{\todo[inline,color=red!10,size=\small]{#1}}
+%% COMMANDS
+\newcommand{\comp}[1]{\overline{#1}}  %{\widetilde{#1}}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\bigo}{O}
+\DeclareMathOperator{\bigom}{\Omega}
+\DeclareMathOperator{\davg}{d_{avg}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmim}{arg\,min}
+% Note: \deg is already defined
+\newcommand{\expect}{\mathbb{E}}
+%
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+%
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\field}{\mathbb{F}}
+\newcommand{\integers}{\mathbb{Z}}
+\newcommand{\pshort}{p_s}
+\newcommand{\plocal}{p_{\ell}}
+\newcommand{\pld}{p_{\ell d}}
+\newcommand{\asd}{\alpha_s}
+\newcommand{\afm}{\alpha_{\ell}}
+\newcommand{\ald}{\alpha_{\ell d}}
+\newcommand{\produce}{\mathrm{Prod}}
+\newcommand{\veg}{\mathrm{V}}
+\newcommand{\temp}{\mathrm{T}}
+\newcommand{\consume}{\mathrm{Pop}}
+\newcommand{\locality}{{L}}
+\newcommand{\export}{\mathrm{Export}}
+\newcommand{\import}{\mathrm{Import}}
+\newcommand{\process}{\mathrm{Proc}}
+\newcommand{\moore}{\mathrm{M}}
+\newcommand{\mooreRange}{r_\mathrm{M}}
+%
+\newtheorem{theorem}{Theorem}[]{\bfseries}{\itshape} 
+\newtheorem{lemma}[theorem]{Lemma}{\bfseries}{\itshape}
+\newtheorem{claim}[theorem]{Claim}{\bfseries}{\itshape}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition} % {\bfseries}{\itshape}
+\newtheorem{observation}[theorem]{Observation} % {\bfseries}
+\newtheorem{condition}[theorem]{Condition} % {\bfseries}{\itshape}
+\newtheorem{note}[theorem]{Note} % {\bfseries}{\itshape}
+% ROMAN NUMERALS
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+%%
+% TWO VERSIONS
+%% \usepackage{etoolbox}
+%% \newtoggle{withappendix}
+%% \toggletrue{withappendix} % comment this if you want journal version
+%% Usage: iftoggle{withappendix}{}{}
+%%
+%% math operator
+%% \DeclareMathOperator{\sgn}{sgn}
+% CODEBOX
+%% \usepackage[framemethod=tikz]{mdframed}
+%% \newmdenv[linecolor=black!10,innerlinewidth=0pt, roundcorner=4pt,innerleftmargin=6pt,
+%% font=\ttfamily,innerrightmargin=6pt,innertopmargin=6pt,
+%% innerbottommargin=6pt,backgroundcolor=black!10]{codeblock}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% preamble ends
+%% from now on, draft specific
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \RequirePackage[l2tabu, orthodox]{nag}
+\makeatletter
+\renewcommand\AB@affilsepx{, \protect\Affilfont}
+\makeatother
+% Title on edge of suggested length
+\title{Data and code description:
+Assessing the Multi-pathway Threat from an Invasive Agricultural
+Pest: \emph{Tuta~absoluta} in Asia}
+%% \title{A Multi-pathway Model to Assess the Threat of Invasive Agricultural
+%% Pests: Case Study of \emph{Tuta~absoluta} in Asia}
+\author[1]{Joseph~McNitt}
+\author[2]{Young~Yun~Chungbaek}
+\author[2]{Henning~Mortveit}
+\author[2]{Madhav~Marathe}
+\author[3]{Mateus~R~Campos} %%ibeiro~de
+\author[3]{Nicolas~Desneux}
+\author[4,5,6]{Thierry~Br\'{e}vault}
+\author[7]{Rangaswamy Muniappan}
+\author[2]{Abhijin~Adiga}
+\affil[1]{Epic Systems Corporation, United States}
+\affil[2]{Biocomplexity Institute \& Initiative, University of Virginia}
+\affil[3]{French National Institute for Agricultural Research}
+\affil[4]{BIOPASS, CIRAD-IRD-ISRA-UCAD, Dakar, Senegal}
+\affil[5]{CIRAD, UPR AIDA, F-34398 Montpellier, France}
+\affil[6]{Universit\'{e} de Montpellier, CIRAD, Montpellier, France}
+\affil[7]{Feed the Future Integrated Pest Management Innovation Lab,
+Virginia Tech}
+\date{}
+\setcounter{Maxaffil}{0}
+\renewcommand\Affilfont{\itshape\small}
+
+\begin{document}
+\maketitle
+
+\begin{table}[th]
+\caption{Tables in the database file.}
+\centering
+\rowcolors{2}{white}{gray!15} % For this to work, put \PassOptionsToPackage{table}{xcolor} before \documentclass
+\begin{tabular}{p{.4\textwidth}p{.6\textwidth}}
+		\hline		
+		Table & Description \\
+\hline		
+FAOSTAT\_country\_population &  Country population \\
+FAOSTAT\_solanaceae\_production &  Country-level tomato, eggplant, and potato production \\
+FAOSTAT\_solanaceae\_trade\_matrix & Country-to-country trade of solanaceous crops.\\
+FAOSTAT\_tomato\_processed &  Country-level data of amount of tomato production \\
+FAO\_tomato\_consumption &  Country-level data of tomato consumption \\
+PHL\_admin & Philippines administrative divisions \\
+THA\_admin & Thailand administrative divisions \\
+VNM\_admin & Vietnam administrative divisions \\
+admins & Administrative regions and their ISO codes \\
+cities\_250000 & Cities with $\ge250,000$ population \\
+country\_tomato\_production\_area & Country-level tomato production area from FAOSTAT \\
+gdp & Country-level GDP from FAOSTAT \\
+grid & Grid cells and their attributes \\
+harvest\_area\_THA & Thailand tomato harvest area (fresh and processing) \\
+kandal\_genova\_2006 & Data from \cite{genova2006postharvest} \\
+localities & Locality attributes \\
+production\_BGD & Bangladesh tomato and eggplant production by region\\
+production\_PHL & Philippines tomato and eggplant production by region\\
+production\_VNM & Vietnam tomato production by region \\
+south\_east\_asia\_adc\_id\_p25xp25 & Grid cells and more attributes \\
+tomato\_consumption\_study\_region & Per capita tomato consumption \\
+vegetable\_production\_MYS & Vegetable production in Malaysia by region
+\end{tabular}
+\end{table}
+
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}
