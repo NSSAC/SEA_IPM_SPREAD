@@ -191,17 +191,17 @@ spatiotemporal spread of invasive species as a multi-scale propagation
 process over a time-varying network accounting for climate, biology,
 seasonal production, trade, and demographic information. Machine learning
 techniques are used in a novel manner to capture model variability and
-analyse parameter sensitivity. We applied the framework to understand the spread
-of a devastating pest of tomato, \emph{Tuta absoluta}, in South and
+analyse parameter sensitivity. We applied the framework to understand the
+spread of a devastating pest of tomato, \emph{Tuta absoluta}, in South and
 Southeast Asia, a region at the frontier of its current range. Analysis
 with respect to historical invasion records suggests that even with modest
 self-mediated spread capabilities, the pest can quickly expand its range
 through domestic city-to-city vegetable trade. Our models forecast that
 within five to seven years, \tuta{} will invade all major vegetable growing
-areas of Mainland Southeast Asia assuming unmitigated spread. Further, we
-show that monitoring high consumption areas, and targetted interventions
-in major production regions can help in early detection and reducing the
-speed of spread.
+areas of Mainland Southeast Asia assuming unmitigated spread. Monitoring
+high consumption areas can help in early detection, and targeted
+interventions at major production areas can effectively reduce the rate of
+spread.
 \end{abstract}
 %%
 \section{Introduction}
@@ -270,30 +270,33 @@ spread~\cite{desneux2010biological,tonnang2015identification,guimapi2016modeling
 
 Our contributions are multifold. We provide a generic data-driven approach
 to build complex multi-pathway models. We identified, analysed, and fused
-disparate datasets corresponding to climate (temperature, precipitation,
-elevation), biology (host preference, suitability, population growth),
-production, and agricultural commodity flow (domestic trade, imports,
-exports, vegetable processing, human population). We estimated the
-spatiotemporal distribution of host crops by integrating information from
-research articles, annual reports, and models. Trade flows were estimated
-using a gravity model approach.  Machine learning techniques such as
-clustering and decision-tree algorithms were used for parameterization, to
-capture model variability and study parameter sensitivity resulting from
-inadequate incidence reports and understanding of the pest dynamics.
+disparate datasets corresponding to biology, climate, production, and
+agricultural commodity flow. We estimated the spatiotemporal distribution
+of host crops by integrating information from research articles, annual
+reports, and models. Trade flows were estimated using a gravity model
+approach.  Machine learning techniques such as clustering and decision-tree
+algorithms were used for parameterization, to capture model variability and
+study parameter sensitivity. The analysis provides valuable insights into
+the dynamics of \tuta{} spread and its control, particularly from the
+perspective of human-mediated spread.
 
-From an application perspective, the analysis provides valuable insights
-into the dynamics of \tuta{} spread.  Our analysis with respect to
-historical invasion records indicates two possible explanations for the
-spread of \tuta{} in Bangladesh, one with trade as the dominant pathway and
-the other without. The former explanation suggests that even with slow
-self-mediated dispersal, the pest could have rapidly expanded its range
-aided by domestic tomato trade. Under the assumption that trade is an
-important pathway, country specific analysis shows that once introduced to
-a major production area, the pest will spread all over the country within
-two to three years. Since densely populated urban centres attract trade
-inflows, high production regions close to such areas are particularly
-vulnerable to attacks. We also show that quarantining a few key production
-areas can contain the spread.
+%% From an application perspective, the
+%% analysis provides valuable insights into the dynamics of \tuta{} spread and
+%% its control, particularly from the perspective of human-mediated spread.
+%% resulting from inadequate incidence reports and
+%% understanding of the pest dynamics. 
+%% Our analysis with respect to
+%% historical invasion records indicates two possible explanations for the
+%% spread of \tuta{} in Bangladesh, one with trade as the dominant pathway and
+%% the other without. The former explanation suggests that even with slow
+%% self-mediated dispersal, the pest could have rapidly expanded its range
+%% aided by domestic tomato trade. Under the assumption that trade is an
+%% important pathway, country specific analysis shows that once introduced to
+%% a major production area, the pest will spread all over the country within
+%% two to three years. Since densely populated urban centres attract trade
+%% inflows, high production regions close to such areas are particularly
+%% vulnerable to attacks. We also show that quarantining a few key production
+%% areas can contain the spread.
 
 %%
 \section{Methods}
@@ -337,30 +340,29 @@ these crops seems to be low.
 \paragraph{Multi-pathway spread model.} We developed a stochastic
 multi-scale propagation model to simulate the multi-pathway spread
 of~\tuta{}. Key concepts are illustrated in Figure~\ref{fig:concept}. The
-study region is divided into cells -- the smallest spatial units -- by overlaying a grid
-(0.25\textdegree~$\times$~0.25\textdegree). Each cell is in one of the
-three states: susceptible ($S$) denoting pest free state, exposed ($E$)
-denoting that the pest has been introduced but the population has not yet
-built up to influence other cells, and infectious ($I$) denoting that the
-pest has established and the cell can influence its neighbours. The cell
-states are updated in discrete time steps, where the interval between
-successive time steps corresponds
-to a month.  The probability that a cell~$v$ transitions from state~$S$
-to~$E$ is determined by (i)~suitability of the cell for \tuta{} to
-establish at that time step~$\suitable(v,t)$ and (ii)~influence of
-``neighbouring'' cells in state~$I$ depending on the pathway. An exposed
-cell transitions to state~$I$ after a latency period of~$\ell$ time steps.
-This is the time required for the population to build up to infect other
-cells.  Once the pest has established in a cell, the cell remains infected
-forever, a fair assumption considering that, historically, eradication of
-\tuta{} has not been successful\footnote{The only exception is United
-Kingdom where the pest was detected early and
-eradicated.}.  The
+study region is divided into cells -- the smallest spatial units -- by
+overlaying a grid (0.25\textdegree~$\times$~0.25\textdegree). Each cell is
+in one of the three states: susceptible ($S$) denoting pest free state,
+exposed ($E$) denoting that the pest has been introduced but the population
+has not yet built up to influence other cells, and infectious ($I$)
+denoting that the pest has established and the cell can influence its
+neighbours. The cell states are updated in discrete time steps, where the
+interval between successive time steps corresponds to a month.  The
+probability that a cell~$v$ transitions from state~$S$ to~$E$ is determined
+by (i)~suitability of the cell for \tuta{} to establish at that time
+step~$\suitable(v,t)$ and (ii)~influence of ``neighbouring'' cells in
+state~$I$ depending on the pathway. An exposed cell transitions to
+state~$I$ after a latency period of~$\ell$ time steps.  This is the time
+required for the population to build up to infect other cells.  Once the
+pest has established in a cell, the cell remains infected forever, a fair
+assumption considering that, historically, eradication of \tuta{} has not
+been successful (the only exception being United Kingdom). The
 infectiousness of a cell~$\infest(v,t)$ is modelled as a linear function of
 host presence at time~$t$, for which we use the weighted sum of production
 volume of tomato, eggplant, and potato in that cell at time~$t$. The
 weights correspond to relative carrying capacity of \tuta{} on the three
 hosts~\cite{sylla2018}.
+
 %%~(\url{https://gd.eppo.int/reporting/article-340})
 %%
 \begin{figure}[t]
@@ -374,8 +376,10 @@ hosts~\cite{sylla2018}.
     \includegraphics[width=1.05\textwidth]{figs/pipeline.pdf}
 \caption{\label{fig:pipeline}}
 \end{subfigure}
-\caption{\textbf{The multi-pathway model.} (a)~The network structure,
-pathways and dynamics are captured in the illustration.
+\caption{An illustration of the multi-pathway model (a) and the process of
+constructing the spatiotemporal network of cells.}
+%% (a)~The network structure,
+%% pathways and dynamics are captured in the illustration.
 %% , which is
 %% approximately~$27.8\mathrm{km}\times\mathrm{27.8km}$ at the equator. 
 %% These
@@ -383,13 +387,13 @@ pathways and dynamics are captured in the illustration.
 %% Guimapi~et.~al.~\cite{guimapi2016modeling} ($25\mathrm{km}\times25\mathrm{km}$). Details of locality construction are in Section~\ref{S:sec:locality}. 
 %% Long distance human-mediated dispersal is modeled
 %%las the spread between localities through. 
-Also shown are the states and factors
-that influence state transitions: infectiousness of a neighbouring cell, suitability
-of the cell for pest establishment, pathway parameters and latency period.
-\label{fig:modelConcept}
-(b)~\textbf{Pipeline.} The process of constructing the spatiotemporal
-network of cells is outlined. Key modules are highlighted along with 
-input data.}
+%% Also shown are the states and factors
+%% that influence state transitions: infectiousness of a neighbouring cell, suitability
+%% of the cell for pest establishment, pathway parameters and latency period.
+%% \label{fig:modelConcept}
+%% (b)~\textbf{Pipeline.} The process of constructing the spatiotemporal
+%% network of cells is outlined. Key modules are highlighted along with 
+%% input data.}
 \end{figure}
 %%
 
@@ -414,10 +418,9 @@ is the transmission rate for this pathway. The function form is explained
 in Section~\ref{S:trans}.
 
 For human-assisted spread we identified large urban areas in the region
-which we refer to as {\it localities} (Figure~\ref{fig:modelConcept}) and
+which we refer to as {\it localities} (Figure~\ref{fig:concept}) and
 considered interactions within and between localities. These areas have
-high trade flows due to consumption or production and house the necessary
-infrastructure: wholesale markets, traders, and distributors.  Each
+significant trade flows due to high consumption or production. Each
 \emph{locality} consists of all grid cells which are within a certain
 distance (determined by \emph{locality radius}) from its corresponding
 centre. Local human-mediated dispersal is modelled as the spread between
@@ -543,9 +546,9 @@ account for uncertainty in reporting, we consider a time
 window~$U_\tau=[t_v-\tau,t_v+\tau]$ during comparison, where~$\tau$ is the
 uncertainty parameter. We set~$\tau=2$, that is, error within $\pm2$ months is
 tolerated.  Supposing~$\reportingCells$ is the set of cells corresponding
-to ground truth,  and ~$p(C,v,t)$ is the empirical probability that cell~$v$
-is infected at time~$t$ for the input configuration~$C$, then the similarity~$\similarity$ is
-given by
+to ground truth,  and ~$p(C,v,t)$ is the empirical probability that
+cell~$v$ is infected at time~$t$ for the input configuration~$C$, then the
+similarity~$\similarity$ is given by
 %%
 \begin{linenomath}
 \begin{align}\label{eqn:similarity}
@@ -554,19 +557,29 @@ given by
 \end{align}
 \end{linenomath}
 %%
-Note that $\similarity(C)$ attains a maximum value of one when the simulation output is a
-perfect match (within the error tolerance limit). Parameter space
-exploration was conducted in multiple iterations (the ranges or values of
-model parameters are in Table~\ref{tab:param}). First, we coarsely sampled
-the space. Then, with model parameters as independent variables and the goodness
-of fit measure defined in~\eqref{eqn:similarity} as the dependent variable,
-we used a Classification and Regression Trees (CART) approach to identify
-subspaces for which the similarity score was high and rejected subspaces for
-which it was low. Based on this, in the subsequent phases, we
-refined our search to improve the parameterization. Simulations were
-performed for more than~$500,000$ parameter combinations using a high
-performance computing cluster. Configurations with similarity score
-$\similarity(C)\ge0.75$ were chosen for further analysis.
+Note that $\similarity(C)$ attains a maximum value of one when the
+simulation output is a perfect match (within the error tolerance limit).
+For parameter space exploration, we were motivated by a recent approach of
+using machine learning surrogates~\cite{lamperti2018agent}. In our
+iterative ``go with the winners'' process~\cite{aldous1994go} the subspace
+under consideration is sampled uniformly. Then, with model parameters as
+features and the similarity score as the dependent variable, we use
+Classification and Regression Trees (CART) approach to identify parts of
+the subspace for which the similarity score is high and reject the
+remaining. Simulations were performed for more than~$500,000$ parameter
+combinations using a high performance computing cluster. Configurations
+with similarity score $\similarity(C)\ge0.75$ were chosen for further
+analysis.
+
+
+%% Parameter space exploration was conducted in multiple iterations (the
+%% ranges or values of model parameters are in Table~\ref{tab:param}). First,
+%% we coarsely sampled the space. Then, with model parameters as independent
+%% variables and the goodness of fit measure defined in~\eqref{eqn:similarity}
+%% as the dependent variable, we used a Classification and Regression Trees
+%% (CART) approach to identify subspaces for which the similarity score was
+%% high and rejected subspaces for which it was low. Based on this, in the
+%% subsequent phases, we refined our search to improve the parameterization.
 
 \paragraph{Analysis of spread pattern.} The objective here is to analyse
 the variability in the simulation outcomes within the set of best fit
@@ -637,7 +650,7 @@ eight monitored locations and the localities applied in the model. The
 colours of the monitored locations correspond to the time of infection
 relative to the first report (Panchagarh). Two distinct spread patterns
 emerged from the cluster analysis. (a) and (b) show representative spreads
-observed for each class. The similarity in each case was $\similarity>.8$.
+observed for each class. The similarity in each case was $\similarity>0.8$.
 Importance of model parameters with respect to (i)~similarity
 score~$\similarity$ and (ii)~cluster membership based on random forest
 method. The latter plot shows how the results vary with an increase in the

@@ -169,7 +169,8 @@ Table~\ref{tab:data} lists all publicly available datasets incorporated in
 our model and analysis. Table~\ref{tab:countryData} provides country-specific data sources,
 literature and reports used in the model and for validation. They are further tagged
 based on the information they provide for different aspects of the model.
-Table~\ref{tab:bgdData} provides incidence reports from Bangladesh.
+Table~\ref{tab:bgdData} provides incidence reports from Bangladesh. Code is
+available in Github~\cite{spreadModelCode}.
 
 %%
 \rowcolors{2}{white}{gray!15} % For this to work, put \PassOptionsToPackage{table}{xcolor} before \documentclass
@@ -835,7 +836,7 @@ Table~\ref{M:tab:param} in the main document. For each of these samples, simulat
 and the similarity scores computed. With the model parameters as independent
 variables and similarity score as the dependent variable, we analysed the results
 using CART (see Figure~\ref{fig:cart}). We chose parameter subspaces with
-high similarity score (5.5 or more) and rejected those with lower values.  For
+high similarity score (0.7 or more) and rejected those with lower values.  For
 each chosen parameter subspace, the process was repeated.
 %%
 \begin{figure}[!ht]
@@ -876,17 +877,19 @@ each chosen parameter subspace, the process was repeated.
 \caption{$\mooreRange=3$, $\ell=3$}
     \end{subfigure}
     \caption{CART analysis of the parameter space: The models with
-        similarity score~$\ge5.5$ were partitioned based on the Moore
+        similarity score~$\ge0.7$ were partitioned based on the Moore
     range~$\mooreRange$ and latency period~$\ell$ tuple and analysed. For
  the case~$(\mooreRange=3$, $\ell=1)$, there were no instances with
- similarity score~$\ge5.5$ among the sampled instances. 
+ similarity score~$\ge0.7$ among the sampled instances. Minimum number of
+ observations at a node for splitting was set to 50. Minimum number of
+ observations at each leaf node was set to 20.
     \label{fig:cart}}
 \end{figure}
 
 We recall that the emergent outcome of the model can be classified into two
 classes: Class~A and Class~B. In Figure~\ref{fig:cart}, we show the results
 of CART analysis on the parameter sets which yielded a similarity score of
-$\ge5.5$. The chosen set is partitioned by Moore range~$\mooreRange$ and
+$\ge0.7$. The chosen set is partitioned by Moore range~$\mooreRange$ and
 latency period~$\ell$. For $(\mooreRange,\ell)$ values that permit rapid
 range expansion through short-distance spread over the contiguous
 landscape, including long-distance spread leads to faster spread than
@@ -980,7 +983,7 @@ simulation output can be viewed as a matrix of size~$n\times T$, where~$n$
 is the number of cells. To normalise each matrix, we introduced an extra
 index~$T+1$ which carries the residual probability, i.e.,
 $p(v,T+1)=\sum_{t=1}^Tp(v,t)$. The simulation outputs for models with
-similarity $\similarity\ge6$ were thus processed and clustered using two
+similarity $\similarity\ge0.75$ were thus processed and clustered using two
 algorithms: hierarchical
 agglomerative clustering (SPSS 24.0) and $k$-means algorithm (using
 Pyclustering~\cite{andrei_novikov_2018_1491324}). In each case, the number of

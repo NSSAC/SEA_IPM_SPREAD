@@ -1,6 +1,8 @@
-The files with prefix "master_" contain the usage of the code. For most
-python scripts, "<script> -h" provides a brief description of what the code
-does, its input and output.
+The files with prefix "master_" are the wrapper scripts that call other
+scripts in a certain order. For most python scripts, "<script> -h" provides
+a brief description of what the code does, its input and output. The setup
+assumes that there is a "work" folder inside the "code" folder where all
+the scripts are called from.
 
 master_cluster.sh: Preprocessing simulation output, clustering it and post
 processing the outcomes.
