@@ -399,6 +399,32 @@ Umiam, Meghalaya India &  & January 2017 \cite{sankarganesh2017} \\
 %% \caption{Trade networks for considered hosts of \tuta{} (year 2013).}
 %% \end{figure}
 %%
+\section{\tuta{} biology.}
+The tomato leafminer exhibits a short life cycle of about 24--38 days
+(temperature at $25\pm3^\circ$C), from egg to adult, as it is a
+multivoltine species with overlapping generations in the
+field. It causes serious damage to
+numerous solanaceous crops such as eggplants, potatoes, and especially
+tomato crops~\cite{sylla2018}. It penetrates into tomato leaves, stems, or
+fruits, wherein it feeds and develops by creating conspicuous mines as well
+as galleries. Considering the warm weather throughout the year,
+particularly in the dry season, the study region presents ideal conditions
+for rapid development and spread of \tuta{}. Pest risk
+analysis~\cite{tonnang2015identification} shows that the Ecoclimatic Index
+for this region is above~$50$ (highly suitable). Spatial distribution
+assessment survey of \tuta{} eggs has shown its high dispersive capacity in
+tomato producing areas~\cite{martins2018assessing}. The dispersion in a
+tomato cultivation starts mainly at the periphery and
+the pest is able to migrate between tomato farms to generate egg aggregation at the
+crop boundaries. The pest spread behaviour among seasonal crop resources
+is often non-random and directional~\cite{martins2018assessing}.
+Sylla~et~al.~\cite{sylla2018} analysed host preference of~\tuta{} in France
+and Senegal. While the highest preference is for tomato, it can survive
+well on eggplant and potato, which happen to be major vegetable crops in
+the study region. However, since \tuta{} primarily attacks leaves of
+eggplant and potato, the chance of the pest spreading through trade of
+these crops seems to be low.
+%%~\cite{guedes2012tomato}
 %%
 \section{Multi-pathway Model}
 \subsection{Locality construction}\label{sec:locality}
@@ -976,6 +1002,7 @@ and 500 GB Internal Hard Drive) in the Biocomplexity Institute of Virginia~Tech.
 
 \section{Clustering analysis of the spread pattern}
 \label{sec:cluster}
+The analysis process is illustrated in Figure~\ref{fig:clusterOutline}
 We recall that each simulation output has the following format. Suppose,
 the simulations were run for $T$ time steps. For every~$v$,~$p(v,t)$ is the
 empirical probability  that cell $v$ is infected at time~$t$. Each
@@ -988,6 +1015,12 @@ algorithms: hierarchical
 agglomerative clustering (SPSS 24.0) and $k$-means algorithm (using
 Pyclustering~\cite{andrei_novikov_2018_1491324}). In each case, the number of
 clusters considered ranged from~$k=1$ to~$10$. 
+%%
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=.8\textwidth]{figs/spread_analysis.pdf}
+    \caption{Outline of the process used for analysing the multi-pathway spread. \label{fig:clusterOutline}}
+\end{figure}
 
 To discover relationships between model parameters and cluster membership,
 we cast it as a classification problem. With configurations as features and

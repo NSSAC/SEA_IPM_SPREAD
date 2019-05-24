@@ -306,36 +306,11 @@ are described in Table~\ref{S:tab:data} of the supplement. Country specific
 data on seasonal production, consumption, processing, and trade was obtained
 from websites of agriculture ministries, research articles and technical
 reports (Table~\ref{S:tab:countryData} in the supplement). Almost all the
-datasets used are openly available. Some information was provided by local
-contacts in Bangladesh (for e.g., \tuta{} incidence reports in
-Table~\ref{S:tab:bgdData}), Vietnam, and Cambodia.
-%%
-\paragraph{\tuta{} biology.}
-The tomato leafminer exhibits a short life cycle of about 24--38 days
-(temperature at $25\pm3^\circ$C), from egg to adult, as it is a
-multivoltine species with overlapping generations in the
-field. It causes serious damage to
-numerous solanaceous crops such as eggplants, potatoes, and especially
-tomato crops~\cite{sylla2018}. It penetrates into tomato leaves, stems, or
-fruits, wherein it feeds and develops by creating conspicuous mines as well
-as galleries. Considering the warm weather throughout the year,
-particularly in the dry season, the study region presents ideal conditions
-for rapid development and spread of \tuta{}. Pest risk
-analysis~\cite{tonnang2015identification} shows that the Ecoclimatic Index
-for this region is above~$50$ (highly suitable). Spatial distribution
-assessment survey of \tuta{} eggs has shown its high dispersive capacity in
-tomato producing areas~\cite{martins2018assessing}. The dispersion in a
-tomato cultivation starts mainly at the periphery and
-the pest is able to migrate between tomato farms to generate egg aggregation at the
-crop boundaries. The pest spread behaviour among seasonal crop resources
-is often non-random and directional~\cite{martins2018assessing}.
-Sylla~et~al.~\cite{sylla2018} analysed host preference of~\tuta{} in France
-and Senegal. While the highest preference is for tomato, it can survive
-well on eggplant and potato, which happen to be major vegetable crops in
-the study region. However, since \tuta{} primarily attacks leaves of
-eggplant and potato, the chance of the pest spreading through trade of
-these crops seems to be low.
-%%~\cite{guedes2012tomato}
+datasets used are openly available. The details of \tuta{} biology can be
+found in the supplement. 
+%% Some information was provided by 
+%% contacts in Bangladesh (for e.g., \tuta{} incidence reports in
+%% Table~\ref{S:tab:bgdData}), Vietnam, and Cambodia.
 %%
 \paragraph{Multi-pathway spread model.} We developed a stochastic
 multi-scale propagation model to simulate the multi-pathway spread
@@ -528,7 +503,8 @@ total inflow depends on total consumption, processing demand, and exports
 from the city to countries outside the focus region. The details are in
 Section~\ref{S:sec:netcon}.  Trade between countries of the focus region
 was not modelled as there is no adequate information on ports of entry or
-monthly flow volumes.
+monthly flow volumes. But, it was accounted for while analyzing the
+possible routes of introduction.
 
 \paragraph{Parameterization and experiment design.}
 The goodness of fit of a parameter instance was determined by comparing the
@@ -583,7 +559,7 @@ analysis.
 the variability in the simulation outcomes within the set of best fit
 configurations. We leverage well-known machine learning techniques in a
 novel way to address this question. The methodology is 
-outlined in Figure~\ref{fig:clusterOutline}. First, we cluster
+outlined in Figure~\ref{S:fig:clusterOutline} in the supplement. First, we cluster
 the simulation outputs (time and cell indexed empirical probabilities) of
 selected configurations from the parameterization phase. This step captures
 the variability in outcomes; simulation outputs belonging to different
@@ -600,11 +576,6 @@ distance as the distance measure to compare two simulation outputs. The
 analysis is repeated for different values of~$k$, the number of clusters.
 More details are provided in Section~\ref{S:sec:cluster} of the supplement.
 %%
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=.8\textwidth]{figs/spread_analysis.pdf}
-    \caption{Outline of the process used for analysing the multi-pathway spread. \label{fig:clusterOutline}}
-\end{figure}
 %%
 \section{Results}
 \paragraph{Variability in spread pattern.} The clustering analysis of the
@@ -705,7 +676,7 @@ report). Also, the pest is likely to enter Thailand from Myanmar, and
 subsequently move to Laos, Cambodia, and Vietnam as it spreads eastwards, and
 to China when it spreads northwards. From Thailand, spreading southward, it
 will enter Malaysia and subsequently enter Indonesia
-(Figure~\ref{fig:msaClassAB}).
+(Figure~\ref{S:fig:msaClassAB}).
 
 
 We also analysed the international tomato trade network
