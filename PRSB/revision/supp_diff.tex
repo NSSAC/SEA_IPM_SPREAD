@@ -1,4 +1,7 @@
 %%\PassOptionsToPackage{table}{xcolor}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL ../submitted_version/mcnitt_tuta_supplementary.tex   Wed Aug 14 01:32:26 2019
+%DIF ADD mcnitt_tuta_supplementary.tex                        Wed Aug 28 21:42:46 2019
 \documentclass[10pt]{article}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -159,6 +162,69 @@ Pest: \emph{Tuta~absoluta} in Asia}
 \affil[7]{Feed the Future Integrated Pest Management Innovation Lab,
 Virginia Tech}
 \date{}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
 \maketitle
@@ -369,7 +435,7 @@ Umiam, Meghalaya India &  & January 2017 \cite{sankarganesh2017} \\
 %% \end{figure}
 %% 
 %%
- 
+
 %% \begin{figure}[ht]
 %%     \centering
 %% \begin{subfigure}[b]{.32\textwidth}
@@ -402,32 +468,71 @@ Umiam, Meghalaya India &  & January 2017 \cite{sankarganesh2017} \\
 \section{\tuta{} biology.}
 The tomato leafminer exhibits a short life cycle of about 24--38 days
 (temperature at $25\pm3^\circ$C), from egg to adult, as it is a
-multivoltine species with overlapping generations in the
-field. It causes serious damage to
-numerous solanaceous crops such as eggplants, potatoes, and especially
-tomato crops~\cite{sylla2018}. It penetrates into tomato leaves, stems, or
-fruits, wherein it feeds and develops by creating conspicuous mines as well
-as galleries. Considering the warm weather throughout the year,
-particularly in the dry season, the study region presents ideal conditions
-for rapid development and spread of \tuta{}. Pest risk
-analysis~\cite{tonnang2015identification} shows that the Ecoclimatic Index
-for this region is above~$50$ (highly suitable). Spatial distribution
+multivoltine species with overlapping generations in the field. It causes
+serious damage to numerous solanaceous crops such as eggplants, potatoes,
+and especially tomato crops~\DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\cite{sylla2018}}\hspace{0pt}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{sylla2019geographic}}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend . It penetrates into
+tomato leaves, stems, or fruits, wherein it feeds and develops by creating
+conspicuous mines as well as galleries. Considering the warm weather
+throughout the year, particularly in the dry season, the study region
+presents ideal conditions for rapid development and spread of \tuta{}. Pest
+risk analysis~\cite{tonnang2015identification} shows that the Ecoclimatic
+Index for this region is above~$50$ (highly suitable). Spatial distribution
 assessment survey of \tuta{} eggs has shown its high dispersive capacity in
 tomato producing areas~\cite{martins2018assessing}. The dispersion in a
-tomato cultivation starts mainly at the periphery and
-the pest is able to migrate between tomato farms to generate egg aggregation at the
-crop boundaries. The pest spread behaviour among seasonal crop resources
-is often non-random and directional~\cite{martins2018assessing}.
-Sylla~et~al.~\cite{sylla2018} analysed host preference of~\tuta{} in France
-and Senegal. While the highest preference is for tomato, it can survive
-well on eggplant and potato, which happen to be major vegetable crops in
-the study region. However, since \tuta{} primarily attacks leaves of
-eggplant and potato, the chance of the pest spreading through trade of
-these crops seems to be low.
-%%~\cite{guedes2012tomato}
+tomato cultivation starts mainly at the periphery and the pest is able to
+migrate between tomato farms to generate egg aggregation at the crop
+boundaries. The pest spread behaviour among seasonal crop resources is
+often non-random and directional~\cite{martins2018assessing}.
+Sylla~et~al.~\DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\cite{sylla2018} }\hspace{0pt}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{sylla2019geographic} }\hspace{0pt}%DIFAUXCMD
+}\DIFaddend analysed host preference of~\tuta{}
+in France and Senegal. While the highest preference is for tomato, it can
+survive well on eggplant and potato, which happen to be major vegetable
+crops in the study region. However, since \tuta{} primarily attacks leaves
+of eggplant and potato, the chance of the pest spreading through trade of
+these crops seems to be low.  
+\DIFaddbegin 
+
+\DIFaddend %%~\cite{guedes2012tomato}
 %%
 \section{Multi-pathway Model}
-\subsection{Locality construction}\label{sec:locality}
+\DIFaddbegin 
+
+\subsection{\DIFadd{Model structure, parameter ranges and assumptions}}
+\label{sec:modelAssumptions}
+\DIFadd{Sylla~et~al.~\mbox{%DIFAUXCMD
+\cite{sylla2018seasonal} }\hspace{0pt}%DIFAUXCMD
+show that relative area of host crops
+(particularly tomato and eggplant) is positively correlated with number of
+trapped moths/trap/day. The authors also show that higher the host density,
+the greater the proportion of infected plants.  They use data from open
+field experiments and generalized linear mixed model (GLMM) to establish
+these relationships. Hence, we model the infectiousness of a
+cell~$\infest(v,t)$ as a linear function of host density at time~$t$, for
+which we use the weighted sum of production volume of tomato, eggplant, and
+potato in that cell at time~$t$. The weights correspond to relative
+carrying capacity of \tuta{} on the three
+hosts.~\mbox{%DIFAUXCMD
+\cite{sylla2019geographic}}\hspace{0pt}%DIFAUXCMD
+.
+}
+
+%DIF > % $\mooreRange$ & Range of Moore neighbourhood & $\{1,2,3\}$ corresponding to
+%DIF > % spread per month of 
+%DIF > % approximately~$25$km,~$50$km and~$75$km
+%DIF > % respectively~\cite{guimapi2016modeling,martins2018assessing}. \\
+%DIF > % 
+%DIF > % $t_s$ & Time of initial infestation during parameterization & $\{3,4,5\}$ corresponding
+%DIF > % to March, April and May respectively based on first report in
+%DIF > % Bangladesh~\cite{hossain2016first}. \\
+
+\DIFaddend \subsection{Locality construction}\label{sec:locality}
 In the model, \emph{localities} are centres of consumption or production.
 From the perspective of consumption, we selected cities with population
 greater than a certain population threshold (as per~\cite{maxmind}) in the
@@ -447,12 +552,12 @@ computed using Google API~\cite{googleapi}.
 \begin{figure}[t]
 \centering
 \begin{subfigure}[b]{.47\textwidth}
-    \includegraphics[width=\textwidth]{../cellular_automata/results/cities/concentration_with_popthresh.pdf}
+    \includegraphics[width=\textwidth]{../../cellular_automata/results/cities/concentration_with_popthresh.pdf}
 \caption{}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.47\textwidth}
-    \includegraphics[width=\textwidth]{../cellular_automata/results/cities/concentration_with_radius.pdf}
+    \includegraphics[width=\textwidth]{../../cellular_automata/results/cities/concentration_with_radius.pdf}
 \caption{}
 \end{subfigure}
 \caption{\textbf{Locality construction.} The number of localities and the
@@ -577,47 +682,47 @@ in the different regions considered.
 \begin{figure}[!ht]
 \centering
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../production/results/prod_tomato_BGD.pdf}
+    \includegraphics[width=\textwidth]{../../production/results/prod_tomato_BGD.pdf}
 \caption{Bangladesh tomato production compared with growing season
     information~\cite{bbs2017}}
 \end{subfigure}
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../production/results/prod_potato_BGD.pdf}
+    \includegraphics[width=\textwidth]{../../production/results/prod_potato_BGD.pdf}
 \caption{Bangladesh potato production compared with growing season
     information~\cite{bbs2017}}
 \end{subfigure}
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../production/results/prod_eggplant_BGD.pdf}
+    \includegraphics[width=\textwidth]{../../production/results/prod_eggplant_BGD.pdf}
 \caption{Bangladesh eggplant production compared with growing season
     information~\cite{bbs2017}}
 \end{subfigure}
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../production/results/prod_tomato_IDN.pdf}
+    \includegraphics[width=\textwidth]{../../production/results/prod_tomato_IDN.pdf}
 \caption{Indonesia tomato production compared with growing season
     information~\cite{arsanti2015}}
 \end{subfigure}
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../production/results/prod_tomato_KHM.pdf}
+    \includegraphics[width=\textwidth]{../../production/results/prod_tomato_KHM.pdf}
 \caption{Cambodia tomato production compared with seasonal production
     information~\cite{genova2006postharvest}}
 \end{subfigure}
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../production/results/prod_tomato_LAO.pdf}
+    \includegraphics[width=\textwidth]{../../production/results/prod_tomato_LAO.pdf}
 \caption{Laos tomato production compared with growing season
     information~\cite{kethonga2004}}
 \end{subfigure}
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../production/results/prod_tomato_PHL_north.pdf}
+    \includegraphics[width=\textwidth]{../../production/results/prod_tomato_PHL_north.pdf}
 \caption{Philippines tomato production compared with growing season
     information~\cite{psa2017} (North)}
 \end{subfigure}
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../production/results/prod_tomato_PHL_central.pdf}
+    \includegraphics[width=\textwidth]{../../production/results/prod_tomato_PHL_central.pdf}
 \caption{Philippines tomato production compared with growing season
     information~\cite{psa2017} (Central and South)}
 \end{subfigure}
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../production/results/prod_tomato_PHL_exceptions.pdf}
+    \includegraphics[width=\textwidth]{../../production/results/prod_tomato_PHL_exceptions.pdf}
 \caption{Philippines tomato production compared with growing season
     information~\cite{psa2017}: Regions with mismatch.}
 \end{subfigure}
@@ -736,25 +841,25 @@ specific details follow.
 \begin{figure}[!ht]
 \centering
 \subcaptionbox{Bangladesh\label{fig:bgdFlow}}
-{\includegraphics[width=.33\textwidth]{../long_distance/results/validation/BGD_flows_precip1_b2_k500.pdf}}
+{\includegraphics[width=.33\textwidth]{../../long_distance/results/validation/BGD_flows_precip1_b2_k500.pdf}}
 %%
 \subcaptionbox{Myanmar\label{fig:mmrFlow}}
-{\includegraphics[width=.33\textwidth]{../long_distance/results/validation/MMR_flows_precip1_b2_k500.pdf}}
+{\includegraphics[width=.33\textwidth]{../../long_distance/results/validation/MMR_flows_precip1_b2_k500.pdf}}
 %%
 \subcaptionbox{Thailand\label{fig:thaFlow}}
-{\includegraphics[width=.33\textwidth]{../long_distance/results/validation/THA_flows_precip1_b2_k500.pdf}}
+{\includegraphics[width=.33\textwidth]{../../long_distance/results/validation/THA_flows_precip1_b2_k500.pdf}}
 %%
 \subcaptionbox{Vietnam\label{fig:vnmFlow}}
-{\includegraphics[width=.33\textwidth]{../long_distance/results/validation/VNM_flows_precip1_b2_k500.pdf}}
+{\includegraphics[width=.33\textwidth]{../../long_distance/results/validation/VNM_flows_precip1_b2_k500.pdf}}
 %%
 \subcaptionbox{Malaysia and Singapore\label{fig:mysFlow}}
-{\includegraphics[width=.33\textwidth]{../long_distance/results/validation/MYS_flows_precip1_b2_k500.pdf}}
+{\includegraphics[width=.33\textwidth]{../../long_distance/results/validation/MYS_flows_precip1_b2_k500.pdf}}
 %%
 \subcaptionbox{Indonesia\label{fig:idnFlow}}
-{\includegraphics[width=.33\textwidth]{../long_distance/results/validation/IDN_flows_precip1_b2_k500.pdf}}
+{\includegraphics[width=.33\textwidth]{../../long_distance/results/validation/IDN_flows_precip1_b2_k500.pdf}}
 %%
 \subcaptionbox{Philippines\label{fig:phlFlow}}
-{\includegraphics[width=.33\textwidth]{../long_distance/results/validation/PHL_flows_precip1_b2_k500.pdf}}
+{\includegraphics[width=.33\textwidth]{../../long_distance/results/validation/PHL_flows_precip1_b2_k500.pdf}}
 %%
 \subcaptionbox{References corresponding to trade flow
 evidence.}[.5\textwidth]{
@@ -828,7 +933,8 @@ function form is similar to that in~\cite{newman2002spread,meyers2007}, but with
 contact time between two nodes replaced with strength of infestation. Also,~$\alpha$ can be interpreted as the transmission probability
 per unit infestation. Since in our case production in the cell is used as a
 surrogate for~$\infest(v',t)$, it can be interpreted as the
-probability of infection per unit production. \\
+probability of infection per unit production \DIFaddbegin \DIFadd{(weighted by carrying
+capacity)}\DIFaddend . \\
 
 This form of the infection probability function has been seen before in
 epidemiological models
@@ -867,27 +973,33 @@ each chosen parameter subspace, the process was repeated.
 %%
 \begin{figure}[!ht]
     \begin{subfigure}[b]{.45\textwidth}
-\includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../cellular_automata/results/cart/m1_l1_tree.pdf}
+        \includegraphics[width=\textwidth,trim={1cm 1cm 1cm
+        0cm},clip]{../../cellular_automata/results/cart/m1_l1_tree.pdf}
 \caption{$\mooreRange=1$, $\ell=1$}
     \end{subfigure}
     \begin{subfigure}[b]{.45\textwidth}
-\includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../cellular_automata/results/cart/m1_l2_tree.pdf}
+        \includegraphics[width=\textwidth,trim={1cm 1cm 1cm
+        0cm},clip]{../../cellular_automata/results/cart/m1_l2_tree.pdf}
 \caption{$\mooreRange=1$, $\ell=2$}
     \end{subfigure}
     \begin{subfigure}[b]{.45\textwidth}
-\includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../cellular_automata/results/cart/m1_l3_tree.pdf}
+        \includegraphics[width=\textwidth,trim={1cm 1cm 1cm
+        0cm},clip]{../../cellular_automata/results/cart/m1_l3_tree.pdf}
 \caption{$\mooreRange=1$, $\ell=3$}
     \end{subfigure}
     \begin{subfigure}[b]{.45\textwidth}
-\includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../cellular_automata/results/cart/m2_l1_tree.pdf}
+        \includegraphics[width=\textwidth,trim={1cm 1cm 1cm
+        0cm},clip]{../../cellular_automata/results/cart/m2_l1_tree.pdf}
 \caption{$\mooreRange=2$, $\ell=1$}
     \end{subfigure}
     \begin{subfigure}[b]{.45\textwidth}
-\includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../cellular_automata/results/cart/m2_l2_tree.pdf}
+        \includegraphics[width=\textwidth,trim={1cm 1cm 1cm
+        0cm},clip]{../../cellular_automata/results/cart/m2_l2_tree.pdf}
 \caption{$\mooreRange=2$, $\ell=2$}
     \end{subfigure}
     \begin{subfigure}[b]{.45\textwidth}
-\includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../cellular_automata/results/cart/m2_l3_tree.pdf}
+        \includegraphics[width=\textwidth,trim={1cm 1cm 1cm
+        0cm},clip]{../../cellular_automata/results/cart/m2_l3_tree.pdf}
 \caption{$\mooreRange=2$, $\ell=3$}
     \end{subfigure}
 %%     \begin{subfigure}[b]{.45\textwidth}
@@ -895,11 +1007,13 @@ each chosen parameter subspace, the process was repeated.
 %% \caption{$\mooreRange=3$, $\ell=1$}
 %%     \end{subfigure}
     \begin{subfigure}[b]{.45\textwidth}
-\includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../cellular_automata/results/cart/m3_l2_tree.pdf}
+        \includegraphics[width=\textwidth,trim={1cm 1cm 1cm
+        0cm},clip]{../../cellular_automata/results/cart/m3_l2_tree.pdf}
 \caption{$\mooreRange=3$, $\ell=2$}
     \end{subfigure}
     \begin{subfigure}[b]{.45\textwidth}
-\includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0cm},clip]{../cellular_automata/results/cart/m3_l3_tree.pdf}
+        \includegraphics[width=\textwidth,trim={1cm 1cm 1cm
+        0cm},clip]{../../cellular_automata/results/cart/m3_l3_tree.pdf}
 \caption{$\mooreRange=3$, $\ell=3$}
     \end{subfigure}
     \caption{CART analysis of the parameter space: The models with
@@ -1016,11 +1130,22 @@ agglomerative clustering (SPSS 24.0) and $k$-means algorithm (using
 Pyclustering~\cite{andrei_novikov_2018_1491324}). In each case, the number of
 clusters considered ranged from~$k=1$ to~$10$. 
 %%
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=.8\textwidth]{figs/spread_analysis.pdf}
-    \caption{Outline of the process used for analysing the multi-pathway spread. \label{fig:clusterOutline}}
-\end{figure}
+\DIFdelbegin %DIFDELCMD < \begin{figure}[htb]
+%DIFDELCMD <     \centering
+%DIFDELCMD <     \includegraphics[width=.8\textwidth]{figs/spread_analysis.pdf}
+%DIFDELCMD <     %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Outline of the process used for analysing the multi-pathway spread. }%DIFDELCMD < \label{fig:clusterOutline}%%%
+}
+%DIFAUXCMD
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < %%%
+\DIFdelend %DIF > % \begin{figure}[htb]
+%DIF > %     \centering
+%DIF > %     \includegraphics[width=.8\textwidth]{figs/spread_analysis.pdf}
+%DIF > %     \caption{Outline of the process used for analysing the multi-pathway spread. \label{fig:clusterOutline}}
+%DIF > % \end{figure}
 
 To discover relationships between model parameters and cluster membership,
 we cast it as a classification problem. With configurations as features and
@@ -1033,52 +1158,52 @@ membership. The results are in Figures~\ref{fig:cartAgglomerative}
 \begin{figure}[pht]
 \centering
 \begin{subfigure}[b]{.6\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/agglomerative/hierarchy_agglomerative.pdf}
+    \includegraphics[width=\textwidth]{../../clustering/results/agglomerative/hierarchy_agglomerative.pdf}
 \caption{Hierarchy}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/agglomerative/cart_cAB_agg.pdf}
+    \includegraphics[width=\textwidth]{../../clustering/results/agglomerative/cart_cAB_agg.pdf}
 \caption{$k=2$}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/agglomerative/cart_cCD_agg.pdf}
+    \includegraphics[width=\textwidth]{../../clustering/results/agglomerative/cart_cCD_agg.pdf}
 \caption{$k=3$}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/agglomerative/cart_cEF_agg.pdf}
+    \includegraphics[width=\textwidth]{../../clustering/results/agglomerative/cart_cEF_agg.pdf}
 \caption{$k=4$}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/agglomerative/cart_cGH_agg.pdf}
+    \includegraphics[width=\textwidth]{../../clustering/results/agglomerative/cart_cGH_agg.pdf}
 \caption{$k=5$}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/agglomerative/cart_cIJ_agg.pdf}
+    \includegraphics[width=\textwidth]{../../clustering/results/agglomerative/cart_cIJ_agg.pdf}
 \caption{$k=6$}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/agglomerative/cart_cKL_agg.pdf}
+    \includegraphics[width=\textwidth]{../../clustering/results/agglomerative/cart_cKL_agg.pdf}
 \caption{$k=7$}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/agglomerative/cart_cMN_agg.pdf}
+    \includegraphics[width=\textwidth]{../../clustering/results/agglomerative/cart_cMN_agg.pdf}
 \caption{$k=8$}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/agglomerative/cart_cPQ_agg.pdf}
+    \includegraphics[width=\textwidth]{../../clustering/results/agglomerative/cart_cPQ_agg.pdf}
 \caption{$k=9$}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/agglomerative/cart_cRS_agg.pdf}
+    \includegraphics[width=\textwidth]{../../clustering/results/agglomerative/cart_cRS_agg.pdf}
 \caption{$k=10$}
 \end{subfigure}
 %%
@@ -1095,7 +1220,7 @@ the split. Here, \texttt{a\_long} corresponds to $\ald$,
 \centering
 %%
 \begin{subfigure}[b]{.47\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/kmeans/cart_kmeans_2.pdf}
+    \includegraphics[width=\textwidth]{../../clustering/results/kmeans/cart_kmeans_2.pdf}
 \caption{$k=2$}
 \end{subfigure}
 %% %%
@@ -1110,7 +1235,7 @@ the split. Here, \texttt{a\_long} corresponds to $\ald$,
 %% \end{subfigure}
 %% %%
 \begin{subfigure}[b]{.47\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/kmeans/cart_kmeans_5.pdf}
+    \includegraphics[width=\textwidth]{../../clustering/results/kmeans/cart_kmeans_5.pdf}
 \caption{$k=5$}
 \end{subfigure}
 %% %%
@@ -1135,7 +1260,7 @@ the split. Here, \texttt{a\_long} corresponds to $\ald$,
 %% \end{subfigure}
 %%
 \begin{subfigure}[b]{.6\textwidth}
-\includegraphics[width=\textwidth]{../clustering/results/kmeans/cart_kmeans_10.pdf}
+    \includegraphics[width=\textwidth]{../../clustering/results/kmeans/cart_kmeans_10.pdf}
 \caption{$k=10$}
 \end{subfigure}
 %%
@@ -1171,20 +1296,20 @@ and exporting from this region
 \centering
 %%
 \begin{subfigure}[b]{.47\textwidth}
-\includegraphics[width=\textwidth]{../international_trade/results/network_plots/sea_2013_tomato.pdf}
+    \includegraphics[width=\textwidth]{../../international_trade/results/network_plots/sea_2013_tomato.pdf}
 \caption{Tomato trade in the focus region (2013).\label{fig:tomnet}}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.47\textwidth}
-\includegraphics[width=\textwidth]{../international_trade/results/stat_plots/trends.pdf}
+    \includegraphics[width=\textwidth]{../../international_trade/results/stat_plots/trends.pdf}
 \caption{General trends of overall production and trade in the region over
 a decade based on FAOSTAT 2013.  \label{fig:trends}}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{\textwidth}
-\includegraphics[width=.32\textwidth]{../international_trade/results/network_plots/sea_2011_tomato.pdf}
-\includegraphics[width=.32\textwidth]{../international_trade/results/network_plots/sea_2012_tomato.pdf}
-\includegraphics[width=.32\textwidth]{../international_trade/results/network_plots/sea_2013_tomato.pdf}
+    \includegraphics[width=.32\textwidth]{../../international_trade/results/network_plots/sea_2011_tomato.pdf}
+    \includegraphics[width=.32\textwidth]{../../international_trade/results/network_plots/sea_2012_tomato.pdf}
+    \includegraphics[width=.32\textwidth]{../../international_trade/results/network_plots/sea_2013_tomato.pdf}
 \caption{Evolution over years 2011, 2012, 2013. \label{fig:tradeYears}}
 \end{subfigure}
 
@@ -1250,11 +1375,11 @@ not see such a switch in roles.
 \begin{figure}[ht]
     \centering
 \begin{subfigure}[b]{.47\textwidth}
-    \includegraphics[width=\textwidth]{../long_distance/results/prod_netout_flows_precip1_b2_k500.pdf}
+    \includegraphics[width=\textwidth]{../../long_distance/results/prod_netout_flows_precip1_b2_k500.pdf}
     \caption{Net annual production and outflow\label{fig:prod_netout}}
 \end{subfigure}\hspace{.5cm}
 \begin{subfigure}[b]{.47\textwidth}
-    \includegraphics[width=\textwidth]{../long_distance/results/monthly_in_out_flows_precip1_b2_k500.pdf}
+    \includegraphics[width=\textwidth]{../../long_distance/results/monthly_in_out_flows_precip1_b2_k500.pdf}
     \caption{Effect of seasonality on monthly flows\label{fig:monthly_in_out}}
 \end{subfigure}
 \caption{\textbf{Production, inflow and outflow at localities.} These are
@@ -1265,18 +1390,18 @@ results for $\beta=2$ and $\kappa=500$ (i) \label{fig:tradeProps}}
 \begin{figure}[p]
 \centering
 \begin{subfigure}[b]{\textwidth}
-    \includegraphics[width=0.47\textwidth]{../cellular_automata/results/rf/rf_importance_all_mdi.pdf}
-    \includegraphics[width=0.47\textwidth]{../cellular_automata/results/rf/rf_importance_all_mse.pdf}
+    \includegraphics[width=0.47\textwidth]{../../cellular_automata/results/rf/rf_importance_all_mdi.pdf}
+    \includegraphics[width=0.47\textwidth]{../../cellular_automata/results/rf/rf_importance_all_mse.pdf}
     \caption{Similarity score ($\similarity$) based evaluation. \label{fig:rfA}}
 \end{subfigure}
 \begin{subfigure}[b]{\textwidth}
-    \includegraphics[width=0.47\textwidth]{../clustering/results/agglomerative/rf_k_agglomerative_mse.pdf}
-    \includegraphics[width=0.47\textwidth]{../clustering/results/agglomerative/rf_k_agglomerative_mdg.pdf}
+    \includegraphics[width=0.47\textwidth]{../../clustering/results/agglomerative/rf_k_agglomerative_mse.pdf}
+    \includegraphics[width=0.47\textwidth]{../../clustering/results/agglomerative/rf_k_agglomerative_mdg.pdf}
     \caption{Agglomerative clustering\label{fig:aggRfA}}
 \end{subfigure}
 \begin{subfigure}[b]{\textwidth}
-    \includegraphics[width=0.47\textwidth]{../clustering/results/kmeans/rf_k_kmeans_mse.pdf}
-    \includegraphics[width=0.47\textwidth]{../clustering/results/kmeans/rf_k_kmeans_mdg.pdf}
+    \includegraphics[width=0.47\textwidth]{../../clustering/results/kmeans/rf_k_kmeans_mse.pdf}
+    \includegraphics[width=0.47\textwidth]{../../clustering/results/kmeans/rf_k_kmeans_mdg.pdf}
     \caption{$k$-means clustering\label{fig:kmeansRfA}}
 \end{subfigure}
 \caption{\textbf{Parameter importance.} Continued from Figure~\ref{M:fig:rf}\label{fig:rf}}
@@ -1361,24 +1486,64 @@ Here the region of Chin in northeast Myanmar was seeded.
 \end{figure}
 %%
 
-\subsection{Spread patterns and rate}
-\begin{figure}[ht]
-    \centering
-\begin{subfigure}[b]{.47\textwidth}
-    \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-A_m2_l1.pdf}
-    \caption{Class~A\label{fig:msaClassA}}
-\end{subfigure}\hspace{.5cm}
-\begin{subfigure}[b]{.47\textwidth}
-    \includegraphics[width=\textwidth]{../cellular_automata/results/contour/MSA_model-B_m1_l3.pdf}
-    \caption{Class~B\label{fig:msaClassB}}
-\end{subfigure}
-\caption{\textbf{Spread pattern in Mainland Southeast Asia without
-accounting for trade between countries.} The contour plots show the
+\DIFdelbegin \subsection{\DIFdel{Spread patterns and rate}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < \begin{figure}[ht]
+%DIFDELCMD <     \centering
+%DIFDELCMD < \begin{subfigure}[b]{.47\textwidth}
+%DIFDELCMD <     \includegraphics[width=\textwidth]{../../cellular_automata/results/contour/MSA_model-A_m2_l1.pdf}
+%DIFDELCMD <     %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Class~A}%DIFDELCMD < \label{fig:msaClassA}%%%
+}
+%DIFAUXCMD
+%DIFDELCMD < \end{subfigure}%%%
+\DIFdelFL{\hspace{.5cm}
+}%DIFDELCMD < \begin{subfigure}[b]{.47\textwidth}
+%DIFDELCMD <     \includegraphics[width=\textwidth]{../../cellular_automata/results/contour/MSA_model-B_m1_l3.pdf}
+%DIFDELCMD <     %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Class~B}%DIFDELCMD < \label{fig:msaClassB}%%%
+}
+%DIFAUXCMD
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\textbf{\DIFdelFL{Spread pattern in Mainland Southeast Asia without
+accounting for trade between countries.}} %DIFAUXCMD
+\DIFdelFL{The contour plots show the
 simulated spread starting from northern Myanmar for 120 time steps or 10
 years. Representative simulation outputs for Class~A and Class~B models are
-shown. With {Class~A}, spread is faster eastward than southward and the
-other way around in the case of Class~B.\label{fig:msaClassAB} }
-\end{figure}
+shown. With }%DIFDELCMD < {%%%
+\DIFdelFL{Class~A}%DIFDELCMD < }%%%
+\DIFdelFL{, spread is faster eastward than southward and the
+other way around in the case of Class~B.}%DIFDELCMD < \label{fig:msaClassAB} %%%
+}
+%DIFAUXCMD
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < %%%
+\DIFdelend %DIF > % \subsection{Spread patterns and rate}
+%DIF > % \begin{figure}[ht]
+%DIF > %     \centering
+%DIF > % \begin{subfigure}[b]{.47\textwidth}
+%DIF > %     \includegraphics[width=\textwidth]{../../cellular_automata/results/contour/MSA_model-A_m2_l1.pdf}
+%DIF > %     \caption{Class~A\label{fig:msaClassA}}
+%DIF > % \end{subfigure}\hspace{.5cm}
+%DIF > % \begin{subfigure}[b]{.47\textwidth}
+%DIF > %     \includegraphics[width=\textwidth]{../../cellular_automata/results/contour/MSA_model-B_m1_l3.pdf}
+%DIF > %     \caption{Class~B\label{fig:msaClassB}}
+%DIF > % \end{subfigure}
+%DIF > % \caption{\textbf{Spread pattern in Mainland Southeast Asia without
+%DIF > % accounting for trade between countries.} The contour plots show the
+%DIF > % simulated spread starting from northern Myanmar for 120 time steps or 10
+%DIF > % years. Representative simulation outputs for Class~A and Class~B models are
+%DIF > % shown. With {Class~A}, spread is faster eastward than southward and the
+%DIF > % other way around in the case of Class~B.\label{fig:msaClassAB} }
+%DIF > % \end{figure}
 %% %%   
 \begin{figure}[htb]
 %% \begin{subfigure}[b]{.47\textwidth}
@@ -1392,12 +1557,12 @@ other way around in the case of Class~B.\label{fig:msaClassAB} }
 %% \end{subfigure}
 %% %%
 \begin{subfigure}[b]{.47\textwidth}
-    \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_A_box.pdf}
+    \includegraphics[width=\textwidth]{../../cellular_automata/results/dist_inf_plots/dist_prob_A_box.pdf}
     \caption{Class~A\label{fig:spreadRateA}}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.47\textwidth}
-    \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/dist_prob_B_box.pdf}
+    \includegraphics[width=\textwidth]{../../cellular_automata/results/dist_inf_plots/dist_prob_B_box.pdf}
     \caption{Class~B\label{fig:spreadRateB}}
 \end{subfigure}
 \caption{\textbf{Spread in Mainland Southeast Asia with respect to distance
@@ -1421,41 +1586,41 @@ expansion is influenced by Moore range~$\mooreRange$.
 %%
 \begin{figure}[pt]
 \begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/BD_model-B_precip1_m1_l3.pdf}
+    \includegraphics[width=\textwidth]{../../cellular_automata/results/contour/BD_model-B_precip1_m1_l3.pdf}
 \caption{Bangladesh: without intervention\label{fig:bgdBContour}}
 \end{subfigure}
 \begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/TH_model-B_precip1_m1_l3.pdf}
+    \includegraphics[width=\textwidth]{../../cellular_automata/results/contour/TH_model-B_precip1_m1_l3.pdf}
 \caption{Thailand: without intervention\label{fig:thaBContour}}
 \end{subfigure}
 \begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/VN_model-B_precip1_m1_l3.pdf}
+    \includegraphics[width=\textwidth]{../../cellular_automata/results/contour/VN_model-B_precip1_m1_l3.pdf}
 \caption{Vietnam: without intervention\label{fig:vnmBContour}}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/BD_model-B_precip1-out-100_m1_l3.pdf}
+    \includegraphics[width=\textwidth]{../../cellular_automata/results/contour/BD_model-B_precip1-out-100_m1_l3.pdf}
 \caption{Bangladesh: with intervention (100\%)\label{fig:bgdBContourInt}}
 \end{subfigure}
 \begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/TH_model-B_precip1-out-100_m1_l3.pdf}
+    \includegraphics[width=\textwidth]{../../cellular_automata/results/contour/TH_model-B_precip1-out-100_m1_l3.pdf}
 \caption{Thailand: with intervention (100\%)\label{fig:thaBContourInt}}
 \end{subfigure}
 \begin{subfigure}[b]{.28\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/contour/VN_model-B_precip1-out-100_m1_l3.pdf}
+    \includegraphics[width=\textwidth]{../../cellular_automata/results/contour/VN_model-B_precip1-out-100_m1_l3.pdf}
 \caption{Vietnam: with intervention\label{fig:vnmBContourInt}}
 \end{subfigure}
 %%
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/BD_dist_prob_B_box.pdf}
+    \includegraphics[width=\textwidth]{../../cellular_automata/results/dist_inf_plots/BD_dist_prob_B_box.pdf}
 \caption{Bangladesh: spread intensity and distance with respect to origin\label{fig:bgdBContourBox}}
 \end{subfigure}
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/TH_dist_prob_B_box.pdf}
+    \includegraphics[width=\textwidth]{../../cellular_automata/results/dist_inf_plots/TH_dist_prob_B_box.pdf}
 \caption{Thailand: spread intensity and distance with respect to origin\label{fig:thaBContourBox}}
 \end{subfigure}
 \begin{subfigure}[b]{.32\textwidth}
-\includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/VN_dist_prob_B_box.pdf}
+    \includegraphics[width=\textwidth]{../../cellular_automata/results/dist_inf_plots/VN_dist_prob_B_box.pdf}
 \caption{Vietnam: spread intensity and distance with respect to
 origin\label{fig:vnmBContourBox}}
 \end{subfigure}
