@@ -1,7 +1,7 @@
 \PassOptionsToPackage{table}{xcolor}
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL ../submitted_version/mcnitt_tuta.tex   Wed Aug 14 01:25:58 2019
-%DIF ADD mcnitt_tuta.tex                        Wed Aug 28 21:35:47 2019
+%DIF DEL ../submitted_version/mcnitt_tuta.tex   Fri Aug 30 15:21:40 2019
+%DIF ADD mcnitt_tuta.tex                        Sat Aug 31 06:10:38 2019
 \documentclass[11pt]{article}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -513,7 +513,7 @@ The probability depends on the suitability of the cell~$\suitable(v,t)$,
 infestation level of each neighbouring cell in the Moore neighbourhood with
 range~$\mooreRange$,~$\infest(v',t)$, and the scaling factor,~$\asd$, which
 is the transmission rate for this pathway. The function form is explained
-in Section~\ref{S:trans}.
+in Section~\DIFdelbegin \DIFdel{\ref{S:trans}}\DIFdelend \DIFaddbegin \DIFadd{\ref{S:modelAssumptions}}\DIFaddend .
 
 For human-assisted spread we identified large urban areas in the region
 which we refer to as {\it localities} (Figure~\ref{fig:concept}) and
@@ -690,24 +690,42 @@ chosen for further analysis.
 \paragraph{Analysis of spread pattern.} The objective here is to analyse
 the variability in the simulation outcomes within the set of best fit
 configurations. We leverage well-known machine learning techniques in a
-novel way to address this question. The methodology is 
-outlined in Figure~\DIFdelbegin \DIFdel{\ref{S:fig:clusterOutline} in the supplement}\DIFdelend \DIFaddbegin \DIFadd{\ref{fig:clusterOutline}}\DIFaddend . First, we cluster
-the simulation outputs (time and cell indexed empirical probabilities) of
-selected configurations from the parameterization phase. This step captures
-the variability in outcomes; simulation outputs belonging to different
-clusters can be considered to be significantly different from one another.
-In the second step, we attempt to infer relationships between model
-parameters and cluster membership. To this end, our approach is to cast this as a
-classification problem using CART with model parameters as the features
-and cluster index as the label. The relationships
-are inferred from the decision tree that resulted from the algorithm.
-To avoid any bias introduced by the clustering algorithm, we also apply more
-than one method -- hierarchical agglomerative clustering and
-the $k$-means algorithm. In both cases, we use the Euclidean
-distance as the distance measure to compare two simulation outputs. The
-analysis is repeated for different values of~$k$, the number of clusters.
-More details are provided in Section~\ref{S:sec:cluster} of the supplement.
-%%
+novel way to address this question. The methodology is outlined in
+Figure~\DIFdelbegin \DIFdel{\ref{S:fig:clusterOutline} in the supplement}\DIFdelend \DIFaddbegin \DIFadd{\ref{fig:clusterOutline}}\DIFaddend . First, we cluster the simulation outputs
+(time and cell indexed empirical probabilities) of selected configurations
+from the parameterization phase. This step captures the variability in
+outcomes; simulation outputs belonging to different clusters can be
+considered to be significantly different from one another.  In the second
+step, we attempt to infer relationships between model parameters and
+cluster membership. To this end, our approach is to cast this as a
+classification problem using CART with model parameters as the features and
+cluster index as the label. The relationships are inferred from the
+decision tree that resulted from the algorithm.  To avoid any bias
+introduced by the clustering algorithm, we also apply more than one method
+-- hierarchical agglomerative clustering and the $k$-means algorithm. In
+both cases, we use the Euclidean distance as the distance measure to
+compare two simulation outputs. The analysis is repeated for different
+values of~$k$, the number of clusters.  More details are provided in
+Section~\ref{S:sec:cluster} of the supplement. 
+\DIFaddbegin 
+
+\DIFadd{To assess the relative importance of model parameters, we adopted the
+approach of~ Lamperti~et~al.~\mbox{%DIFAUXCMD
+\cite{lamperti2018agent}}\hspace{0pt}%DIFAUXCMD
+. We use the random
+forest algorithm~\mbox{%DIFAUXCMD
+\cite{breiman2001random} }\hspace{0pt}%DIFAUXCMD
+to assess the importance of
+parameters with regard to their influence on (i)~similarity score
+($\similarity$) and (ii)~spread pattern, which in our case, is akin to
+cluster membership. The setup is similar to the parameterization and
+cluster analysis case, with CART replaced by random forest algorithm. 
+Details are in the supplement (Section~\ref{S:sec:cluster}). To evaluate
+parameter importance with respect to the similarity score, we used
+}\emph{\DIFadd{mean increase in node purity}} \DIFadd{as the criterion (as it is a regression
+problem), and for cluster membership, we used }\emph{\DIFadd{decrease in accuracy}}
+\DIFadd{(classification problem).
+}\DIFaddend %%
 %%
 \section{Results}
 \paragraph{Variability in spread pattern.} The clustering analysis of the
@@ -782,10 +800,10 @@ similar to Class~A as the model does not account for long-distance hops.
 However, the predicted rate of range expansion is much higher than our
 models (see Section~\ref{S:sec:guimapi} for model details and results).
 
-The relative importance of model parameters was assessed using random
+\DIFdelbegin \DIFdel{The relative importance of model parameters was assessed using random
 forest algorithm with regard to their influence on (i)~similarity score
 ($\similarity$) and (ii)~spread pattern, which in our
-case, is akin to cluster membership. In the case of spread pattern, the
+case, is akin to cluster membership. }\DIFdelend In the case of spread pattern, the
 importance was derived for each~$k$ (number of clusters) and clustering
 algorithm. Some results are presented in Figure~\ref{fig:rf}. We note that
 the long-distance scaling factor ($\ald$) is among the top three important

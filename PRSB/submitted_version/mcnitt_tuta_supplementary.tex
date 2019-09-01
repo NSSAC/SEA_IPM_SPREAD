@@ -851,19 +851,20 @@ traditional SIR models mathematically in \cite{hethcote1989periodicity}.
 \section{Parameterization and simulation}
 \label{sec:cart}
 For each parameter setting, we evaluated the model output by comparing it
-with historical invasion data from Bangladesh using a similarity score
-as defined in the main document (equation~(\ref{M:eqn:similarity})). Simulations
-were run with 100 repetitions. From the output we computed the empirical
-probability that a cell is in state~$I$ at time~$t$, which in turn was used
-to compute similarity scores.  We applied Classification and Regression
-Trees~(CART) to guide parameter space exploration. Initially, the parameter
-space was coarsely sampled. The parameter values are listed in
-Table~\ref{M:tab:param} in the main document. For each of these samples, simulations were run
-and the similarity scores computed. With the model parameters as independent
-variables and similarity score as the dependent variable, we analysed the results
-using CART (see Figure~\ref{fig:cart}). We chose parameter subspaces with
-high similarity score (0.7 or more) and rejected those with lower values.  For
-each chosen parameter subspace, the process was repeated.
+with historical invasion data from Bangladesh using a similarity score as
+defined in the main document (equation~(\ref{M:eqn:similarity})).
+Simulations were run with 100 repetitions. From the output we computed the
+empirical probability that a cell is in state~$I$ at time~$t$, which in
+turn was used to compute similarity scores.  We applied Classification and
+Regression Trees~(CART) to guide parameter space exploration. Initially,
+the parameter space was coarsely sampled. The parameter values are listed
+in Table~\ref{M:tab:param} in the main document. For each of these samples,
+simulations were run and the similarity scores computed. With the model
+parameters as independent variables and similarity score as the dependent
+variable, we analysed the results using CART (see Figure~\ref{fig:cart}).
+We chose parameter subspaces with high similarity score (0.7 or more) and
+rejected those with lower values.  For each chosen parameter subspace, the
+process was repeated.
 %%
 \begin{figure}[!ht]
     \begin{subfigure}[b]{.45\textwidth}

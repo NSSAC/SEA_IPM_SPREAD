@@ -1,7 +1,7 @@
 %%\PassOptionsToPackage{table}{xcolor}
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL ../submitted_version/mcnitt_tuta_supplementary.tex   Wed Aug 14 01:32:26 2019
-%DIF ADD mcnitt_tuta_supplementary.tex                        Wed Aug 28 21:42:46 2019
+%DIF DEL ../submitted_version/mcnitt_tuta_supplementary.tex   Fri Aug 30 15:21:44 2019
+%DIF ADD mcnitt_tuta_supplementary.tex                        Sat Aug 31 06:10:45 2019
 \documentclass[10pt]{article}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -532,6 +532,69 @@ hosts.~\mbox{%DIFAUXCMD
 %DIF > % to March, April and May respectively based on first report in
 %DIF > % Bangladesh~\cite{hossain2016first}. \\
 
+\paragraph{\DIFadd{Transmission probability.}}
+\DIFadd{At any given time~$t$, for a cell~$v$ and its neighbour~$v'$ corresponding
+to the considered pathway, let $\infest(v',t)$ be the strength of
+infestation at~$v'$. Let,~$\alpha$ be the transmission rate corresponding
+to the pathway. Then, the probability that the pest will be introduced
+to~$v$ from~$v'$ is given by~$1-\exp\big(-\alpha\infest(v',t)\big)$. The
+function form is similar to that in~\mbox{%DIFAUXCMD
+\cite{newman2002spread,meyers2007}}\hspace{0pt}%DIFAUXCMD
+, but
+with contact time between two nodes replaced with strength of infestation.
+Also,~$\alpha$ can be interpreted as the transmission probability per unit
+infestation. Since in our case production in the cell is used as a
+surrogate for~$\infest(v',t)$, it can be interpreted as the probability of
+infection per unit production (weighted by carrying capacity). This form of
+the infection probability function has been seen before in epidemiological
+models
+\mbox{%DIFAUXCMD
+\cite{diekmann2000mathematical,hethcote1989periodicity,hethcote1994thousand}}\hspace{0pt}%DIFAUXCMD
+,
+both continuous and discrete time models. Diekmann~et~al.
+\mbox{%DIFAUXCMD
+\cite{diekmann2000mathematical} }\hspace{0pt}%DIFAUXCMD
+consider a continuous time SI model, and
+define the probability that an individual will not be infected with a
+function which relates to the form above, taking the exponent as an
+integral of the "force of infection".  %DIF > % In \cite{cantor2003sas}, we see
+more complexity, but we also see some %DIF > % derivation of this function form
+from the "proportional hazards model".  %DIF > % They similarly consider a
+continuous time model and an exponential %DIF > % probability function of
+remaining susceptible.  In \mbox{%DIFAUXCMD
+\cite{hethcote1994thousand}}\hspace{0pt}%DIFAUXCMD
+, we see a discrete
+time version of this function form, with the probability of still being
+exposed after $t$ time steps as: $P(t) = e^{-\epsilon t}$, where $\epsilon$
+relates to the "transfer rate". This function form was derived when
+considering traditional SIR models mathematically in
+\mbox{%DIFAUXCMD
+\cite{hethcote1989periodicity}}\hspace{0pt}%DIFAUXCMD
+.
+}
+
+\DIFadd{For long-distance dispersal we use the same function form
+(equation~\ref{M:eqn:pld} in the main paper), with the infectiousness of a
+cell replaced by infectiousness of a locality times the flow from that
+locality to the current cell's locality. In the literature, there is no
+clear consenus on the function form. For example,
+Stanaway~et~al.~\mbox{%DIFAUXCMD
+\cite{stanaway2011hierarchical} }\hspace{0pt}%DIFAUXCMD
+model the colonisation time as an
+exponential distribution with mean being the flow from source to target
+cell. Stansbury~et~al.~\mbox{%DIFAUXCMD
+\cite{stansbury2002modeling} }\hspace{0pt}%DIFAUXCMD
+calculate the
+probability of at least one establishment ($E$) using a binomial function:
+$E=1-(1-p_tp_c)^I$, where, $I$~is the number of successful entries in a
+year, $p_t$~is the proportion of contaminated ports, $p_c$~is the
+proportion of those ports that result in establishment.
+Caton~et~al.~\mbox{%DIFAUXCMD
+\cite{caton2006arrivals} }\hspace{0pt}%DIFAUXCMD
+apply Central Limit Theorem to model
+the number of insects arriving on contaminated flights by region.
+}
+
 \DIFaddend \subsection{Locality construction}\label{sec:locality}
 In the model, \emph{localities} are centres of consumption or production.
 From the perspective of consumption, we selected cities with population
@@ -923,38 +986,54 @@ production information.
 and regions north of Manila. These are captured by our network
 (Figure~\ref{fig:phlFlow}).
 
-\subsection{Transmission probability}\label{trans}
-At any given time~$t$, for a cell~$v$ and its neighbour~$v'$ corresponding
+\DIFdelbegin \subsection{\DIFdel{Transmission probability}}%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < \label{trans}
+%DIFDELCMD < %%%
+\DIFdel{At any given time~$t$, for a cell~$v$ and its neighbour~$v'$ corresponding
 to the considered pathway, let $\infest(v',t)$ be the strength of
 infestation at~$v'$. Let,~$\alpha$ be the transmission rate corresponding
 to the pathway. Then, the probability that the pest will be introduced
 to~$v$ from~$v'$ is given by~$1-\exp\big(-\alpha\infest(v',t)\big)$. The
-function form is similar to that in~\cite{newman2002spread,meyers2007}, but with
+function form is similar to that in~\mbox{%DIFAUXCMD
+\cite{newman2002spread,meyers2007}}\hspace{0pt}%DIFAUXCMD
+, but with
 contact time between two nodes replaced with strength of infestation. Also,~$\alpha$ can be interpreted as the transmission probability
 per unit infestation. Since in our case production in the cell is used as a
 surrogate for~$\infest(v',t)$, it can be interpreted as the
-probability of infection per unit production \DIFaddbegin \DIFadd{(weighted by carrying
-capacity)}\DIFaddend . \\
+probability of infection per unit production. }%DIFDELCMD < \\
+%DIFDELCMD < 
 
-This form of the infection probability function has been seen before in
+%DIFDELCMD < %%%
+\DIFdel{This form of the infection probability function has been seen before in
 epidemiological models
-\cite{diekmann2000mathematical,hethcote1989periodicity,hethcote1994thousand},
+\mbox{%DIFAUXCMD
+\cite{diekmann2000mathematical,hethcote1989periodicity,hethcote1994thousand}}\hspace{0pt}%DIFAUXCMD
+,
 both continuous and discrete time models. Diekmann~et~al.
+\mbox{%DIFAUXCMD
 \cite{diekmann2000mathematical} 
+}\hspace{0pt}%DIFAUXCMD
 consider a continuous time SI model, and define the probability that an
 individual will not be infected with a function which relates to the form
 above, taking the exponent as an integral of the "force of infection". 
-%% In \cite{cantor2003sas}, we see more complexity, but we also see some
-%% derivation of this function form from the "proportional hazards model".
-%% They similarly consider a continuous time model and an exponential
-%% probability function of remaining susceptible.
-In \cite{hethcote1994thousand}, we see a discrete time version of this
+%DIF < % In \cite{cantor2003sas}, we see more complexity, but we also see some
+%DIF < % derivation of this function form from the "proportional hazards model".
+%DIF < % They similarly consider a continuous time model and an exponential
+%DIF < % probability function of remaining susceptible.
+In \mbox{%DIFAUXCMD
+\cite{hethcote1994thousand}}\hspace{0pt}%DIFAUXCMD
+, we see a discrete time version of this
 function form, with the probability of still being exposed after $t$ time
 steps as: $P(t) = e^{-\epsilon t}$, where $\epsilon$ relates to the
 "transfer rate". This function form was derived when considering
-traditional SIR models mathematically in \cite{hethcote1989periodicity}.
+traditional SIR models mathematically in \mbox{%DIFAUXCMD
+\cite{hethcote1989periodicity}}\hspace{0pt}%DIFAUXCMD
+.
+}%DIFDELCMD < 
 
-\section{Parameterization and simulation}
+%DIFDELCMD < %%%
+\DIFdelend \section{Parameterization and simulation}
 \label{sec:cart}
 For each parameter setting, we evaluated the model output by comparing it
 with historical invasion data from Bangladesh using a similarity score
@@ -1116,8 +1195,9 @@ and 500 GB Internal Hard Drive) in the Biocomplexity Institute of Virginia~Tech.
 
 \section{Clustering analysis of the spread pattern}
 \label{sec:cluster}
-The analysis process is illustrated in Figure~\ref{fig:clusterOutline}
-We recall that each simulation output has the following format. Suppose,
+The analysis process is illustrated in Figure~\DIFdelbegin \DIFdel{\ref{fig:clusterOutline}
+}\DIFdelend \DIFaddbegin \DIFadd{\ref{M:fig:clusterOutline}
+}\DIFaddend We recall that each simulation output has the following format. Suppose,
 the simulations were run for $T$ time steps. For every~$v$,~$p(v,t)$ is the
 empirical probability  that cell $v$ is infected at time~$t$. Each
 simulation output can be viewed as a matrix of size~$n\times T$, where~$n$
