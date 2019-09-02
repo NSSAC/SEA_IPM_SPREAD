@@ -322,7 +322,7 @@ found in the supplement.
 multi-scale propagation model to simulate the multi-pathway spread
 of~\tuta{}. Key concepts are illustrated in Figure~\ref{fig:concept}. The
 model parameters and their values are summarised in Table~\ref{tab:param}.
-A discussion on choice of model structure and parameter ranges is presented
+A discussion on the choice of model structure and assumptions is presented
 in Section~\ref{S:sec:modelAssumptions} of the supplement. The study region
 is divided into cells -- the smallest spatial units -- by overlaying a grid
 (0.25\textdegree~$\times$~0.25\textdegree). Each cell is in one of the
@@ -403,7 +403,7 @@ The probability depends on the suitability of the cell~$\suitable(v,t)$,
 infestation level of each neighbouring cell in the Moore neighbourhood with
 range~$\mooreRange$,~$\infest(v',t)$, and the scaling factor,~$\asd$, which
 is the transmission rate for this pathway. The function form is explained
-in Section~\ref{S:modelAssumptions}.
+in Section~\ref{S:sec:modelAssumptions}.
 
 For human-assisted spread we identified large urban areas in the region
 which we refer to as {\it localities} (Figure~\ref{fig:concept}) and
@@ -466,7 +466,7 @@ respectively. \\
 %% $\suitable$ & Suitability threshold \\
 $\ell$ & Latency period to transition from $E$ to $I$ & $\{1,2,3\}$ months
 based on the time for the pest to complete life cycle (\tuta{} biology in
-Methods). \\
+Section~\ref{S:sec:biology}). \\
 season & Disaggregation of annual production to monthly values
 & \emph{Uniform} throughout the year or \emph{seasonal} based on regression
 analysis (Methods). \\
@@ -480,7 +480,7 @@ Section~\ref{S:sec:locality} in the supplement for locality construction
 and analysis) \\\hline
 $t_s$ & Time of initial infestation during parameterization & $\{3,4,5\}$ corresponding
 to March, April and May respectively based on first report in
-Bangladesh. \\
+Bangladesh (Table~\ref{S:tab:bgdData}). \\
 %% $\infest$ & Infectivity of a cell based on amount of production & \\
 $\asd,\afm,\ald$ & Pathway scaling factors & In the interval $[0,500]$.\\
 \hline
@@ -548,15 +548,21 @@ similarity~$\similarity$ is given by
 For parameter space exploration, we were motivated by a recent approach of
 using machine learning surrogates~\cite{lamperti2018agent}. In our
 iterative ``go with the winners'' process~\cite{aldous1994go} the subspace
-under consideration is sampled uniformly. Then, with model parameters as
-features and the similarity score as the dependent variable, we use
-Classification and Regression Trees (CART) approach to identify parts of
-the subspace for which the similarity score is high and reject the
-remaining. In the following iteration, these subspaces are sampled
-uniformly, and the process continues. Simulations were performed for more
-than~$500,000$ parameter combinations using a high performance computing
-cluster. Configurations with similarity score $\similarity(C)\ge0.75$ were
-chosen for further analysis.
+under consideration is sampled uniformly (the first part of
+Figure~\ref{fig:clusterOutline}). Then, with model parameters as features
+and the similarity score as the dependent variable, we use Classification
+and Regression Trees (CART) approach to identify parts of the subspace for
+which the similarity score is high and reject the remaining. In the
+following iteration, these subspaces are sampled uniformly, and the process
+continues. The approach is very similar to the \emph{reverse engineering
+approach} used to build an interpretable learner for a black box
+model~\cite[Fig. 10]{guidotti2019survey}. In the interpretable machine
+learning framework, the black box is a machine learning algorithm like a
+neural network or tree ensemble, while in our case, the black box is an
+agent-based model. Simulations were performed for more than~$500,000$
+parameter combinations using a high performance computing cluster.
+Configurations with similarity score $\similarity(C)\ge0.75$ were chosen
+for further analysis.
 
 
 %% Parameter space exploration was conducted in multiple iterations (the
@@ -591,8 +597,8 @@ Section~\ref{S:sec:cluster} of the supplement.
 
 To assess the relative importance of model parameters, we adopted the
 approach of~ Lamperti~et~al.~\cite{lamperti2018agent}. We use the random
-forest algorithm~\cite{breiman2001random} to assess the importance of
-parameters with regard to their influence on (i)~similarity score
+forest algorithm~\cite{breiman2001random} to assess the importance with
+respect to (i)~similarity score
 ($\similarity$) and (ii)~spread pattern, which in our case, is akin to
 cluster membership. The setup is similar to the parameterization and
 cluster analysis case, with CART replaced by random forest algorithm. 
@@ -940,7 +946,7 @@ in the context of multi-resolution simulation models as an interfacing
 component between simulators with different
 resolutions~\cite{cassandras2000clustering}. Our use of CART to explain the
 clustering is motivated by recent work in interpretable aritifical
-intelligence~\cite{guimapi2016modeling}, where deep learning models are
+intelligence~\cite{guidotti2019survey}, where deep learning models are
 interpreted using decision-tree proxy models. 
 
 %% We cast the problem of

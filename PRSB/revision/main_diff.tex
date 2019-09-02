@@ -1,7 +1,7 @@
 \PassOptionsToPackage{table}{xcolor}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL ../submitted_version/mcnitt_tuta.tex   Fri Aug 30 15:21:40 2019
-%DIF ADD mcnitt_tuta.tex                        Sat Aug 31 06:10:38 2019
+%DIF ADD mcnitt_tuta.tex                        Mon Sep  2 09:06:10 2019
 \documentclass[11pt]{article}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -426,7 +426,7 @@ found in the supplement.
 multi-scale propagation model to simulate the multi-pathway spread
 of~\tuta{}. Key concepts are illustrated in Figure~\ref{fig:concept}. The
 \DIFaddbegin \DIFadd{model parameters and their values are summarised in Table~\ref{tab:param}.
-A discussion on choice of model structure and parameter ranges is presented
+A discussion on the choice of model structure and assumptions is presented
 in Section~\ref{S:sec:modelAssumptions} of the supplement. The }\DIFaddend study region
 is divided into cells -- the smallest spatial units -- by overlaying a grid
 (0.25\textdegree~$\times$~0.25\textdegree). Each cell is in one of the
@@ -513,7 +513,7 @@ The probability depends on the suitability of the cell~$\suitable(v,t)$,
 infestation level of each neighbouring cell in the Moore neighbourhood with
 range~$\mooreRange$,~$\infest(v',t)$, and the scaling factor,~$\asd$, which
 is the transmission rate for this pathway. The function form is explained
-in Section~\DIFdelbegin \DIFdel{\ref{S:trans}}\DIFdelend \DIFaddbegin \DIFadd{\ref{S:modelAssumptions}}\DIFaddend .
+in Section~\DIFdelbegin \DIFdel{\ref{S:trans}}\DIFdelend \DIFaddbegin \DIFadd{\ref{S:sec:modelAssumptions}}\DIFaddend .
 
 For human-assisted spread we identified large urban areas in the region
 which we refer to as {\it localities} (Figure~\ref{fig:concept}) and
@@ -580,7 +580,7 @@ respectively\DIFdelbeginFL \DIFdelFL{~\mbox{%DIFAUXCMD
 %% $\suitable$ & Suitability threshold \\
 $\ell$ & Latency period to transition from $E$ to $I$ & $\{1,2,3\}$ months
 based on the time for the pest to complete life cycle (\tuta{} biology in
-Methods). \\
+\DIFdelbeginFL \DIFdelFL{Methods}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Section~\ref{S:sec:biology}}\DIFaddendFL ). \\
 season & Disaggregation of annual production to monthly values
 & \emph{Uniform} throughout the year or \emph{seasonal} based on regression
 analysis (Methods). \\
@@ -594,9 +594,9 @@ Section~\ref{S:sec:locality} in the supplement for locality construction
 and analysis) \\\hline
 $t_s$ & Time of initial infestation during parameterization & $\{3,4,5\}$ corresponding
 to March, April and May respectively based on first report in
-Bangladesh\DIFdelbeginFL \DIFdelFL{~\mbox{%DIFAUXCMD
+Bangladesh \DIFdelbeginFL \DIFdelFL{~\mbox{%DIFAUXCMD
 \cite{hossain2016first}}\hspace{0pt}%DIFAUXCMD
-}\DIFdelendFL . \\
+}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{(Table~\ref{S:tab:bgdData})}\DIFaddendFL . \\
 %% $\infest$ & Infectivity of a cell based on amount of production & \\
 $\asd,\afm,\ald$ & Pathway scaling factors & In the interval $[0,500]$.\\
 \hline
@@ -667,15 +667,23 @@ simulation output is a perfect match (within the error tolerance limit).
 For parameter space exploration, we were motivated by a recent approach of
 using machine learning surrogates~\cite{lamperti2018agent}. In our
 iterative ``go with the winners'' process~\cite{aldous1994go} the subspace
-under consideration is sampled uniformly. Then, with model parameters as
-features and the similarity score as the dependent variable, we use
-Classification and Regression Trees (CART) approach to identify parts of
-the subspace for which the similarity score is high and reject the
-remaining. \DIFaddbegin \DIFadd{In the following iteration, these subspaces are sampled
-uniformly, and the process continues. }\DIFaddend Simulations were performed for more
-than~$500,000$ parameter combinations using a high performance computing
-cluster. Configurations with similarity score $\similarity(C)\ge0.75$ were
-chosen for further analysis.
+under consideration is sampled uniformly \DIFaddbegin \DIFadd{(the first part of
+Figure~\ref{fig:clusterOutline})}\DIFaddend . Then, with model parameters as features
+and the similarity score as the dependent variable, we use Classification
+and Regression Trees (CART) approach to identify parts of the subspace for
+which the similarity score is high and reject the remaining. \DIFaddbegin \DIFadd{In the
+following iteration, these subspaces are sampled uniformly, and the process
+continues. The approach is very similar to the }\emph{\DIFadd{reverse engineering
+approach}} \DIFadd{used to build an interpretable learner for a black box
+model~\mbox{%DIFAUXCMD
+\cite[Fig. 10]{guidotti2019survey}}\hspace{0pt}%DIFAUXCMD
+. In the interpretable machine
+learning framework, the black box is a machine learning algorithm like a
+neural network or tree ensemble, while in our case, the black box is an
+agent-based model. }\DIFaddend Simulations were performed for more than~$500,000$
+parameter combinations using a high performance computing cluster.
+Configurations with similarity score $\similarity(C)\ge0.75$ were chosen
+for further analysis.
 
 
 %% Parameter space exploration was conducted in multiple iterations (the
@@ -715,8 +723,8 @@ approach of~ Lamperti~et~al.~\mbox{%DIFAUXCMD
 . We use the random
 forest algorithm~\mbox{%DIFAUXCMD
 \cite{breiman2001random} }\hspace{0pt}%DIFAUXCMD
-to assess the importance of
-parameters with regard to their influence on (i)~similarity score
+to assess the importance with
+respect to (i)~similarity score
 ($\similarity$) and (ii)~spread pattern, which in our case, is akin to
 cluster membership. The setup is similar to the parameterization and
 cluster analysis case, with CART replaced by random forest algorithm. 
@@ -1152,7 +1160,7 @@ regression for example) can be employed.
 }\DIFdelend \DIFaddbegin \DIFadd{Our use of CART to explain the
 clustering is motivated by recent work in interpretable aritifical
 intelligence~\mbox{%DIFAUXCMD
-\cite{guimapi2016modeling}}\hspace{0pt}%DIFAUXCMD
+\cite{guidotti2019survey}}\hspace{0pt}%DIFAUXCMD
 , where deep learning models are
 interpreted using decision-tree proxy models. 
 }\DIFaddend 

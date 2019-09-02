@@ -1,7 +1,7 @@
 %%\PassOptionsToPackage{table}{xcolor}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL ../submitted_version/mcnitt_tuta_supplementary.tex   Fri Aug 30 15:21:44 2019
-%DIF ADD mcnitt_tuta_supplementary.tex                        Sat Aug 31 06:10:45 2019
+%DIF ADD mcnitt_tuta_supplementary.tex                        Mon Sep  2 06:48:10 2019
 \documentclass[10pt]{article}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -84,7 +84,9 @@
 \usepackage{xr}
 \externaldocument[M:]{mcnitt_tuta}
 
-
+%DIF 84d84
+%DIF < 
+%DIF -------
 \newcommand{\aacomment}[1]{({\color{magenta}AA: #1})}
 \newcommand{\jmcomment}[1]{({\color{blue}JM: #1})}
 \usepackage[colorinlistoftodos]{todonotes}
@@ -466,7 +468,8 @@ Umiam, Meghalaya India &  & January 2017 \cite{sankarganesh2017} \\
 %% \end{figure}
 %%
 \section{\tuta{} biology.}
-The tomato leafminer exhibits a short life cycle of about 24--38 days
+\DIFaddbegin \label{sec:biology}
+\DIFaddend The tomato leafminer exhibits a short life cycle of about 24--38 days
 (temperature at $25\pm3^\circ$C), from egg to adult, as it is a
 multivoltine species with overlapping generations in the field. It causes
 serious damage to numerous solanaceous crops such as eggplants, potatoes,
@@ -580,9 +583,9 @@ locality to the current cell's locality. In the literature, there is no
 clear consenus on the function form. For example,
 Stanaway~et~al.~\mbox{%DIFAUXCMD
 \cite{stanaway2011hierarchical} }\hspace{0pt}%DIFAUXCMD
-model the colonisation time as an
-exponential distribution with mean being the flow from source to target
-cell. Stansbury~et~al.~\mbox{%DIFAUXCMD
+model the colonisation time
+as an exponential distribution with mean being the flow from source to
+target cell. Stansbury~et~al.~\mbox{%DIFAUXCMD
 \cite{stansbury2002modeling} }\hspace{0pt}%DIFAUXCMD
 calculate the
 probability of at least one establishment ($E$) using a binomial function:
@@ -593,6 +596,13 @@ Caton~et~al.~\mbox{%DIFAUXCMD
 \cite{caton2006arrivals} }\hspace{0pt}%DIFAUXCMD
 apply Central Limit Theorem to model
 the number of insects arriving on contaminated flights by region.
+}
+
+\DIFadd{Following Guimapi~et~al.~\mbox{%DIFAUXCMD
+\cite{guimapi2016modeling}}\hspace{0pt}%DIFAUXCMD
+, the Moore range
+$\mooreRange$ was varied between~$1$ and~$3$ corresponding to spread per
+month of approximately 25km, 50km and 75km respectively.
 }
 
 \DIFaddend \subsection{Locality construction}\label{sec:locality}
