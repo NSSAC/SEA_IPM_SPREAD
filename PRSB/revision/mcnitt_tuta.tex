@@ -308,22 +308,19 @@ its control, particularly from the perspective of human-mediated spread.
 \section{Methods}
 %%
 \paragraph{Data.} The global datasets used in the model and for analysis
-are described in Table~\ref{S:tab:data} of the supplement. Country specific
+are described in Table~S1 of the supplement. Country specific
 data on seasonal production, consumption, processing, and trade was obtained
 from websites of agriculture ministries, research articles and technical
-reports (Table~\ref{S:tab:countryData} in the supplement). Almost all the
+reports (Table~S2 in the supplement). Almost all the
 datasets used are openly available. The details of \tuta{} biology can be
 found in the supplement. 
-%% Some information was provided by 
-%% contacts in Bangladesh (for e.g., \tuta{} incidence reports in
-%% Table~\ref{S:tab:bgdData}), Vietnam, and Cambodia.
 %%
 \paragraph{Multi-pathway spread model.} We developed a stochastic
 multi-scale propagation model to simulate the multi-pathway spread
 of~\tuta{}. Key concepts are illustrated in Figure~\ref{fig:concept}. The
 model parameters and their values are summarised in Table~\ref{tab:param}.
 A discussion on the choice of model structure and assumptions is presented
-in Section~\ref{S:sec:modelAssumptions} of the supplement. The study region
+in Section~S3.1 of the supplement. The study region
 is divided into cells -- the smallest spatial units -- by overlaying a grid
 (0.25\textdegree~$\times$~0.25\textdegree). Each cell is in one of the
 three states: susceptible ($S$) denoting pest free state, exposed ($E$)
@@ -403,7 +400,7 @@ The probability depends on the suitability of the cell~$\suitable(v,t)$,
 infestation level of each neighbouring cell in the Moore neighbourhood with
 range~$\mooreRange$,~$\infest(v',t)$, and the scaling factor,~$\asd$, which
 is the transmission rate for this pathway. The function form is explained
-in Section~\ref{S:sec:modelAssumptions}.
+in Section~S3.1.
 
 For human-assisted spread we identified large urban areas in the region
 which we refer to as {\it localities} (Figure~\ref{fig:concept}) and
@@ -425,7 +422,7 @@ instead of the Moore neighbourhood
 \end{linenomath}
 %%
 where~$\afm$ is the scaling factor. The details of locality construction
-are provided in Section~\ref{S:sec:locality} of the supplement.
+are provided in Section~S3.2 of the supplement.
 
 Long-distance human-mediated dispersal corresponds to spread through trade
 between localities. For this purpose, we considered only tomato trade as
@@ -466,7 +463,7 @@ respectively. \\
 %% $\suitable$ & Suitability threshold \\
 $\ell$ & Latency period to transition from $E$ to $I$ & $\{1,2,3\}$ months
 based on the time for the pest to complete life cycle (\tuta{} biology in
-Section~\ref{S:sec:biology}). \\
+Section~S2). \\
 season & Disaggregation of annual production to monthly values
 & \emph{Uniform} throughout the year or \emph{seasonal} based on regression
 analysis (Methods). \\
@@ -474,13 +471,13 @@ $\beta$ & Gravity model distance function exponent & $\{0,1,2\}$ \\
 $\kappa$ & Gravity model distance function cut-off & Between $4$ to $16$ hours
 of travel time. \\
 seed & Location and time of initial infestation & Scenarios based on
-countries (see Table~\ref{S:tab:seeds})\\
+countries (see Table~S5)\\
 locality radius & Determines cells assigned to a locality & 100km (See
-Section~\ref{S:sec:locality} in the supplement for locality construction
+Section~S3.2 in the supplement for locality construction
 and analysis) \\\hline
 $t_s$ & Time of initial infestation during parameterization & $\{3,4,5\}$ corresponding
 to March, April and May respectively based on first report in
-Bangladesh (Table~\ref{S:tab:bgdData}). \\
+Bangladesh (Table~S3). \\
 %% $\infest$ & Infectivity of a cell based on amount of production & \\
 $\asd,\afm,\ald$ & Pathway scaling factors & In the interval $[0,500]$.\\
 \hline
@@ -500,10 +497,10 @@ used linear regression to model the production rate as a function of
 precipitation, temperature, and elevation. Seasonal tomato and eggplant
 production data for different regions of Philippines was used. For most of
 the other countries only qualitative information on seasonal production
-is available (Table~\ref{S:tab:countryData}). The regression function was
+is available (Table~S2). The regression function was
 applied to locations of these countries where this information is
 available and visually compared available data. The details are in
-Section~\ref{S:sec:prod} of the supplement.
+Section~S3.3 of the supplement.
 
 To model locality-to-locality trade, we applied the approach of
 Venkatramanan~et~al.~\cite{venkatramanan2019modeling}
@@ -513,7 +510,7 @@ city depends on the amount of produce in its surrounding regions and
 imports from countries outside the focus region at time~$t$, and (ii)~the
 total inflow depends on total consumption, processing demand, and exports
 from the city to countries outside the focus region. The details are in
-Section~\ref{S:sec:netcon}.  Trade between countries of the focus region
+Section~S3.4. Trade between countries of the focus region
 was not modelled as there is no adequate information on ports of entry or
 monthly flow volumes. But, it was accounted for while analyzing the
 possible routes of introduction.
@@ -521,7 +518,7 @@ possible routes of introduction.
 \paragraph{Parameterization and experiment design.}
 The goodness of fit of a parameter instance was determined by comparing the
 simulation output with \tuta{} incidence reports
-(Figure~\ref{fig:bgdClassA} and Table~\ref{S:tab:bgdData} for Bangladesh).
+(Figure~\ref{fig:bgdClassA} and Table~S3 for Bangladesh).
 The spread was simulated with infestation starting from the location of
 first report. For each cell~$v$ and model configuration~$C$, the empirical
 probability~$p(C,v,t)$ that it is in state~$I$ at time~$t$ was computed
@@ -593,7 +590,7 @@ introduced by the clustering algorithm, we also apply more than one method
 both cases, we use the Euclidean distance as the distance measure to
 compare two simulation outputs. The analysis is repeated for different
 values of~$k$, the number of clusters.  More details are provided in
-Section~\ref{S:sec:cluster} of the supplement. 
+Section~S5 of the supplement. 
 
 To assess the relative importance of model parameters, we adopted the
 approach of~ Lamperti~et~al.~\cite{lamperti2018agent}. We use the random
@@ -602,7 +599,7 @@ respect to (i)~similarity score
 ($\similarity$) and (ii)~spread pattern, which in our case, is akin to
 cluster membership. The setup is similar to the parameterization and
 cluster analysis case, with CART replaced by random forest algorithm. 
-Details are in the supplement (Section~\ref{S:sec:cluster}). To evaluate
+Details are in the supplement (Section~S5). To evaluate
 parameter importance with respect to the similarity score, we used
 \emph{mean increase in node purity} as the criterion (as it is a regression
 problem), and for cluster membership, we used \emph{decrease in accuracy}
@@ -622,8 +619,8 @@ factor~$\asd$. In contrast, for Class~B models
 (Figure~\ref{fig:bgdClassB1}), the long-distance pathway~($\ald$) plays a
 significant role  and there is relatively slow spread between
 geographically adjacent neighbours. Both hierarchical clustering and
-$k$-means clustering (Figures~\ref{S:fig:cartAgglomerative}(b)
-and~\ref{S:fig:cartkmeans}(a)) are consistent in this regard.
+$k$-means clustering (Figures~S5(b) and~S6(a)) are consistent in this
+regard.
 
 %%
 \begin{figure}[t]
@@ -656,7 +653,7 @@ $\similarity>0.8$.  Importance of model parameters with respect to
 (i)~similarity score~$\similarity$ and (ii)~cluster membership based on
 random forest method. The latter plot shows how the results vary with an
 increase in the number of clusters for hierarchical clustering algorithm.
-More results are presented in Figure~\ref{S:fig:rf} in the supplement.
+More results are presented in Figure~S9 in the supplement.
 Videos depicting the spatiotemporal spread for each class are provided of
 the supplement.
 }
@@ -679,7 +676,7 @@ using the cellular automata model developed by
 Guimapi~\cite{guimapi2016modeling} for Bangladesh. The spread pattern is
 similar to Class~A as the model does not account for long-distance hops.
 However, the predicted rate of range expansion is much higher than our
-models (see Section~\ref{S:sec:guimapi} for model details and results).
+models (see Section~S6.3 for model details and results).
 
 In the case of spread pattern, the
 importance was derived for each~$k$ (number of clusters) and clustering
@@ -693,8 +690,7 @@ temporality of the network.  Latency period ($\ell$) and Moore range
 step. Typically for Class~A models, $\mooreRange$ is high and $\ell$ is
 low and the other way round in the case of Class~B models. Analysis of
 trade flows and seasonality is presented in
-Section~\ref{S:sec:locality_flows}
-in the supplement.
+Section~S6.2 in the supplement.
 
 \paragraph{Scenarios of pest introduction to countries in Southeast Asia.}
 To identify routes of introduction to other countries in the region, we
@@ -710,7 +706,7 @@ will enter Malaysia and subsequently enter Indonesia
 
 
 We also analysed the international tomato trade network
-(Section~\ref{S:sec:tomnet} of supplement) to assess the risk due to
+(Section~6.1 of supplement) to assess the risk due to
 imports from \tuta{} infested countries outside this region.  Malaysia and
 Singapore are important hubs with tomato imports from \tuta{} infested
 regions. There is a possibility that \tuta{} is directly introduced to
@@ -738,7 +734,7 @@ spread observed is slower than that observed in Bangladesh for both
 classes. Also, even though the models exhibited a similar rate of spread
 for Bangladesh, we observed high variance in intensity of infestation as
 well as range expansion for the rest of the region. The results are in
-Figure~\ref{S:fig:spreadRate} in the supplement. The reason for slow spread
+Figure~S11 in the supplement. The reason for slow spread
 is as follows.  Bangladesh has the highest tomato volume per country
 surface area ($\approx2.5$tonnes/km$^2$).  The next country is Vietnam
 ($\approx1.5$tonnes/km$^2$). Therefore, in the case of Bangladesh, not only
@@ -746,7 +742,7 @@ is the extent of infestation in a cell~$\infest(\cdot)$ typically high, but
 also since it is a densely populated country, most cells have vegetable
 production. Hence, the rate of spread is much higher for relatively lower
 values of pathway parameters and Moore range. Also, we observed a strong
-dependence on Moore range (Figure~\ref{S:fig:spreadRateB}).  In
+dependence on Moore range (Figure~S11(b)).  In
 geographically larger countries, the production is scattered. Therefore,
 the lower the Moore range, the slower the spread.
 
@@ -754,7 +750,7 @@ the lower the Moore range, the slower the spread.
 Here, we focus on long-distance dispersal and therefore restrict our
 discussion to Class~B models. For the country-specific studies, the
 starting location was decided based on our analysis of possible entry
-points through different pathways (Section~\ref{S:sec:seeds} in the
+points through different pathways (Section~S4.1 in the
 supplement).  We observed the following common spread pattern.  When the
 invasive species is introduced to a country, dispersal is slow until the
 invasion front reaches a {production source}. Once it establishes at a
@@ -785,7 +781,7 @@ off to mimic control at the trade/market level. In the strictest sense,
 this can be implemented by restricting trade of host crops. But, it is
 possible that phytosanitary measures have the same effect.
 Figure~\ref{fig:spread} shows results for two countries.  More results are
-present in Figure~\ref{S:fig:intervene} in the supplement.  Consistently,
+present in Figure~S9 in the supplement.  Consistently,
 across countries, we observed a significant reduction in range expansion as
 well as intensity of spread.  Besides, as seen in
 Figure~\ref{fig:thlBContourInt}, stifling these flows localises the spread
@@ -834,7 +830,7 @@ years.  (a)~corresponds to representative simulation output for Class~A
 models and (b) corresponds to Class~B models. {\bf Domestic spread with and
 without intervention.} In~(c) and~(d), representative spread dynamics of
 Class~B models ($\mooreRange=1, \ell=3$) are shown for the country of
-Thailand. More plots are in Figure~\ref{S:fig:intervene}. In each case, a
+Thailand. More plots are in Figure~S12. In each case, a
 cell close to a high production region was seeded and simulation run for~48
 time steps. (c)~corresponds to unmitigated spread and (d)~corresponds to
 spread after cutting off flows from chosen localities. (e)~shows average
@@ -890,7 +886,7 @@ International trade within this region is not documented well.  It is
 critical to address the data gaps concerning international trade,
 particularly considering that production and trade between countries in
 this region have been increasing over the years (details are in
-Section~\ref{S:sec:tomnet} of supplement).
+Section~S6.1 of supplement).
 
 While several integrated pest management strategies have been suggested for
 managing \tuta{}, hardly any work has been done in designing effective
@@ -970,7 +966,7 @@ complexity of the model.
 Since our focus region spans multiple countries, identifying and collecting
 data for each country was a lengthy process. For many countries, data had
 to be collected (or even inferred) from several publications and reports
-(Table~\ref{S:tab:countryData}). Further, these datasets were misaligned in
+(Table~S2). Further, these datasets were misaligned in
 time and spatial resolution.  It is important to account for heterogeneity
 in production, consumption, awareness, cultural factors, etc. both within
 and between countries.  Some countries are technologically more advanced
