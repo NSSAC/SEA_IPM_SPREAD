@@ -20,6 +20,7 @@ pdftk \
     supp_diff.pdf \
     cat output for_submission/differences_between_orginal_revised.pdf
 
+# videos are in ../../cellular_automata/results/movies/
 
 
 ## zip mcnitt_tuta_revised_version.zip \

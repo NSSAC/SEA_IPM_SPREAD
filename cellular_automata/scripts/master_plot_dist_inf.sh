@@ -322,8 +322,8 @@ country_box BD 48
 country_box TH 48
 country_box VN 48
 country_box PH 48
-## country_box IN 48
-## country_box MA 48
+country_box IN 48
+country_box MA 48
 }
 
 function country_box(){ #IGNORE
@@ -371,9 +371,10 @@ done #season
 wc -l $outFile
 
 # AA: dirty stuff for boxplot
-awk -F, -v OFS=, '{if ($1>0 && $1<=1400) print}' ../obj/cell_count_distance_${country}.csv | sed -e '/^0/d' > .cell_count.csv
-cat .cell_count.csv .cell_count.csv .cell_count.csv .cell_count.csv \
-    | sort -t, -k1,1 -n > .cell_count_rep.csv
+awk -F, -v OFS=, '{if ($1>0 && $1<=1400) print $1,$2,NR-1}' ../obj/cell_count_distance_${country}.csv | sed -e '/^0/d' > .cell_count.csv
+
+## cat .cell_count.csv .cell_count.csv .cell_count.csv .cell_count.csv \
+##     | sort -t, -k1,1 -n > .cell_count_rep.csv
 
 ../scripts/plot.sh -o ${country}_dist_prob_B_box \
    -c mathematica \
@@ -385,13 +386,14 @@ cat .cell_count.csv .cell_count.csv .cell_count.csv .cell_count.csv \
        set xlabel offset 0,.7; \
        set style line 1 lw 7; \
        set style line 2 lw 7; \
+       set style line 4 lw 7; \
        set style data boxplot; \
        set style boxplot nooutliers; \
        set xtics offset 0,-.4;" \
    -p "plot \
    'model-B_s2_$t.csv' u (1.0):2:(.5):1 ls 1 fill solid .4 ti 'No interv.', \
    'model-B_s5_$t.csv' u (1.0):2:(.2):1 ls 2 fill solid .4 ti 'Interv.', \
-   '.cell_count_rep.csv' u (1.0):2:(.1):1 ls 4 fill solid .4 ti 'max'"
+   '.cell_count.csv' u 3:2 w points ls 4 ti 'max'"
 
 ##   'model-B_s4_$t.csv' u (1.0):2:(.3):1 ls 2 fill solid .4 ti 'Interv. 50\\%', \
 mv ${country}_dist_prob_*_box.pdf ../results/dist_inf_plots/

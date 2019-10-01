@@ -56,8 +56,8 @@
 %%
 % FIGURES
 \usepackage{graphicx}
-\graphicspath{./figs}
 \usepackage{grffile} % to set right names of files
+\graphicspath{{./}{./figs/}{../../cellular_automata/results/contour/}{../../cellular_automata/results/rf/}{../../clustering/results/agglomerative/}{../../cellular_automata/results/dist_inf_plots/}}
 %%
 % CAPTIONS
 \usepackage{caption}
@@ -247,7 +247,7 @@ significantly perturbed global food production. Indigenous to South
 America, \tuta{} was accidentally introduced to Spain in~2006, and since
 then has rapidly spread throughout Europe, Africa, Western and Central
 Asia, the Indian subcontinent, and parts of Central
-America~\cite{desneux2010biological,biondi2017}. It is well accepted that
+America~\cite{desneux2010biological,biondi2018ecology}. It is well accepted that
 trade played a critical role in \tuta{}'s rapid spread. On multiple
 occasions it has been discovered in packaging stations and its spread
 pattern is correlated with prime trade routes~\cite{karadjova2013tuta}. Our
@@ -341,46 +341,6 @@ a cell~$\infest(v,t)$ is modelled as a linear function of host density at
 time~$t$, for which we use the weighted sum of production volume of tomato,
 eggplant, and potato in that cell at time~$t$. The details are in the
 supplement.
-
-%%~(\url{https://gd.eppo.int/reporting/article-340})
-%%
-\begin{figure}[t]
-\centering
-\begin{subfigure}[b]{.4\textwidth}
-    \includegraphics[width=1.1\textwidth]{model_schematic.pdf}
-\caption{Multi-pathway model\label{fig:concept}}
-\end{subfigure}
-%%
-\begin{subfigure}[b]{.56\textwidth}
-    \includegraphics[width=1.05\textwidth]{pipeline.pdf}
-\caption{Model construction pipeline\label{fig:pipeline}}
-\end{subfigure}
-%%
-\begin{subfigure}[b]{.8\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{spread_analysis.pdf}
-    \caption{Outline of the process used for analysing the multi-pathway spread. \label{fig:clusterOutline}}
-\end{subfigure}
-%%
-\caption{Multi-pathway model concept, construction and analysis.}
-%% (a)~The network structure,
-%% pathways and dynamics are captured in the illustration.
-%% , which is
-%% approximately~$27.8\mathrm{km}\times\mathrm{27.8km}$ at the equator. 
-%% These
-%% dimensions are comparable to that used in the cellular automata model of
-%% Guimapi~et.~al.~\cite{guimapi2016modeling} ($25\mathrm{km}\times25\mathrm{km}$). Details of locality construction are in Section~\ref{S:sec:locality}. 
-%% Long distance human-mediated dispersal is modeled
-%%las the spread between localities through. 
-%% Also shown are the states and factors
-%% that influence state transitions: infectiousness of a neighbouring cell, suitability
-%% of the cell for pest establishment, pathway parameters and latency period.
-%% \label{fig:modelConcept}
-%% (b)~\textbf{Pipeline.} The process of constructing the spatiotemporal
-%% network of cells is outlined. Key modules are highlighted along with 
-%% input data.}
-\end{figure}
-%%
 
 There are three pathways by which a cell can become infected:
 short-distance dispersal, local human-mediated dispersal and long-distance
@@ -622,44 +582,6 @@ geographically adjacent neighbours. Both hierarchical clustering and
 $k$-means clustering (Figures~S5(b) and~S6(a)) are consistent in this
 regard.
 
-%%
-\begin{figure}[t]
-    \centering
-\begin{subfigure}[b]{.3\textwidth}
-    \includegraphics[width=\textwidth]{BGD_model-A.pdf}
-    \caption{Class~A \label{fig:bgdClassA}}  %%($\ald=0$)
-\end{subfigure}\hspace{.5cm}
-\begin{subfigure}[b]{.3\textwidth}
-    \includegraphics[width=\textwidth]{BGD_model-B_m1_l3.pdf}
-    \caption{Class~B \label{fig:bgdClassB1}} %%($\ald>0$)
-\end{subfigure}
-\begin{subfigure}[b]{.32\textwidth}
-    \centering
-    \includegraphics[width=0.9\textwidth]{rf_importance_all_mdi.pdf}
-    \includegraphics[width=0.9\textwidth]{rf_k_agglomerative_mse.pdf}
-    \caption{Parameter importance \label{fig:rf}}
-\end{subfigure}
-\caption{\textbf{Explaining observed spread pattern in Bangladesh.} The
-contour plots show the spread starting from the location of first report in
-Panchagarh district for a simulation time of 12 months.  Here, the time of
-infection for a cell is the minimum time step~$t$ such that the empirical
-probability that the cell is infected by time~$t$ is $\ge0.8$. Also
-highlighted are the eight monitored locations and the localities applied in
-the model. The colours of the monitored locations correspond to the time of
-infection relative to the first report (Panchagarh). Two distinct spread
-patterns emerged from the cluster analysis. (a) and (b) show representative
-spreads observed for each class. The similarity in each case was
-$\similarity>0.8$.  Importance of model parameters with respect to
-(i)~similarity score~$\similarity$ and (ii)~cluster membership based on
-random forest method. The latter plot shows how the results vary with an
-increase in the number of clusters for hierarchical clustering algorithm.
-More results are presented in Figure~S9 in the supplement.
-Videos depicting the spatiotemporal spread for each class are provided of
-the supplement.
-}
-\end{figure}
-%%
-
 The Class~A spread pattern does not capture the gap between the time of first
 report (Panchagarh) and the report in Gaibandha district
 (Figure~\ref{fig:bgdClassA}). Even though the distance between the two
@@ -786,64 +708,6 @@ across countries, we observed a significant reduction in range expansion as
 well as intensity of spread.  Besides, as seen in
 Figure~\ref{fig:thlBContourInt}, stifling these flows localises the spread
 that resembles those of Class~A models, but with much less intensity.
-%%
-\begin{figure}[ht]
-    \centering
-\begin{subfigure}[b]{.2\textwidth}
-    \includegraphics[width=\textwidth]{MSA_model-A_m2_l1.pdf}
-    \caption{\label{fig:msaClassA}} % C
-\end{subfigure}
-\begin{subfigure}[b]{.2\textwidth}
-    \includegraphics[width=\textwidth]{MSA_model-B_m1_l3.pdf}
-    \caption{\label{fig:msaClassB}} % C
-\end{subfigure}
-\begin{subfigure}[b]{.135\textwidth}
-    \includegraphics[width=\textwidth]{TH_model-B_precip1_m1_l3.pdf}
-\caption{\label{fig:thlBContour}} % Tha
-\end{subfigure}
-\begin{subfigure}[b]{.135\textwidth}
-    \includegraphics[width=\textwidth]{TH_model-B_precip1-out-100_m1_l3.pdf}
-\caption{\label{fig:thlBContourInt}} % Thailand with intervention
-\end{subfigure}
-\begin{subfigure}[b]{.3\textwidth}
-    \includegraphics[width=\textwidth]{TH_dist_prob_B_box.pdf}
-\caption{\label{fig:thlBContourBox}} % Thailand: range of expansion (all Class B models)
-\end{subfigure}
-%% \begin{subfigure}[b]{.28\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/VN_model-B_precip1_m1_l3.pdf}
-%% \caption{Vietnam: without intervention\label{fig:vnmBContour}}
-%% \end{subfigure}
-%% \begin{subfigure}[b]{.28\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/contour/VN_model-B_precip1-out-100_m1_l3.pdf}
-%% \caption{Vietnam: with intervention\label{fig:vnmBContourInt}}
-%% \end{subfigure}
-%% \begin{subfigure}[b]{.43\textwidth}
-%% \includegraphics[width=\textwidth]{../cellular_automata/results/dist_inf_plots/VN_dist_prob_B_box.pdf}
-%% \caption{Vietnam: range of expansion (all Class B models)\label{fig:vnmBContourBox}}
-%% \end{subfigure}
-\caption{\textbf{Predicting rate and pattern of spread.}
-The contour plots show the spatiotemporal spread. The colours indicate the
-time interval at which there is at least a 50\% chance that a location will
-be infected. {\bf Spread in Southeast Asia.} Figures~(a) and~(b) correspond
-to the spread starting from northern Myanmar for 120 time steps or 10
-years.  (a)~corresponds to representative simulation output for Class~A
-models and (b) corresponds to Class~B models. {\bf Domestic spread with and
-without intervention.} In~(c) and~(d), representative spread dynamics of
-Class~B models ($\mooreRange=1, \ell=3$) are shown for the country of
-Thailand. More plots are in Figure~S12. In each case, a
-cell close to a high production region was seeded and simulation run for~48
-time steps. (c)~corresponds to unmitigated spread and (d)~corresponds to
-spread after cutting off flows from chosen localities. (e)~shows average
-spread with respect to origin of infection for all Class~B models. The
-cells are binned based on their distance from the origin of infection.
-Given time step~$t$ (48), let $\Pr_{\le t}(v)$ be the probability that
-cell~$v$ is in state~$I$ by time~$t$. For each configuration, we computed
-the ``total infection'' for every bin at time~$t$ by aggregating~$\Pr_{\le
-t}(v)$ for each~$v$ in the bin. The red points referred to as ``max''
-correspond to the total number of cells in each bin, which is also the
-maximum possible accumulated probability for that bin.
-\label{fig:spread}}
-\end{figure}
 
 %%
 \section{Discussion}
@@ -1033,7 +897,313 @@ results. AA and JM wrote the paper with significant inputs from
 MRC and YYC. AA supervised the research. All authors discussed the
 results and commented on the manuscript.
 
-\bibliographystyle{abbrv}
-\bibliography{refs}
+\begin{thebibliography}{10}
+
+\bibitem{aldous1994go}
+D.~Aldous and U.~Vazirani.
+\newblock {``Go with the winners'' algorithms}.
+\newblock In {\em Proceedings 35th Annual Symposium on Foundations of Computer
+  Science}, pages 492--501. IEEE, 1994.
+
+\bibitem{banks2015role}
+N.~C. Banks, D.~R. Paini, K.~L. Bayliss, and M.~Hodda.
+\newblock The role of global trade and transport network topology in the
+  human-mediated dispersal of alien species.
+\newblock {\em Ecology letters}, 18(2):188--199, 2015.
+
+\bibitem{barrat2008dynamical}
+A.~Barrat, M.~Barthelemy, and A.~Vespignani.
+\newblock {\em Dynamical processes on complex networks}.
+\newblock Cambridge university press, 2008.
+
+\bibitem{biondi2018ecology}
+A.~Biondi, R.~Guedes, and F.~Wan.
+\newblock {Ecology, worldwide spread, and management of the invasive South
+  American tomato pinworm, \emph{Tuta absoluta}: Past, present, and future}.
+\newblock {\em Annual Review of Entomology}, (63):239--258, 2017.
+
+\bibitem{breiman2001random}
+L.~Breiman.
+\newblock Random forests.
+\newblock {\em Machine learning}, 45(1):5--32, 2001.
+
+\bibitem{carrasco2010unveiling}
+L.~Carrasco, J.~Mumford, A.~MacLeod, T.~Harwood, G.~Grabenweger, A.~Leach,
+  J.~Knight, and R.~Baker.
+\newblock {Unveiling human-assisted dispersal mechanisms in invasive alien
+  insects: integration of spatial stochastic simulation and phenology models}.
+\newblock {\em Ecological Modelling}, 221(17):2068--2075, 2010.
+
+\bibitem{cassandras2000clustering}
+C.~G. Cassandras, C.~G. Panayiotou, G.~Diehl, W.~Gong, Z.~Liu, and C.~Zou.
+\newblock Clustering methods for multiresolution simulation modeling.
+\newblock In {\em Enabling Technology for Simulation Science IV}, volume 4026,
+  pages 37--49. International Society for Optics and Photonics, 2000.
+
+\bibitem{cunniffe2015thirteen}
+N.~J. Cunniffe, B.~Koskella, C.~J.~E. Metcalf, S.~Parnell, T.~R. Gottwald, and
+  C.~A. Gilligan.
+\newblock {Thirteen challenges in modelling plant diseases}.
+\newblock {\em Epidemics}, 10:6--10, 2015.
+
+\bibitem{desneux2010biological}
+N.~Desneux, E.~Wajnberg, K.~A. Wyckhuys, G.~Burgio, S.~Arpaia, C.~A.
+  Narv{\'a}ez-Vasquez, J.~Gonz{\'a}lez-Cabrera, D.~C. Ruescas, E.~Tabone,
+  J.~Frandon, et~al.
+\newblock {Biological invasion of European tomato crops by {\emph{Tuta
+  absoluta}}, ecology, geographic expansion and prospects for biological
+  control}.
+\newblock {\em Journal of Pest Science}, 83(3):197--215, 2010.
+
+\bibitem{douma2016pathway}
+J.~Douma, M.~Pautasso, R.~Venette, C.~Robinet, L.~Hemerik, M.~Mourits,
+  J.~Schans, and W.~van~der Werf.
+\newblock {Pathway models for analysing and managing the introduction of alien
+  plant pests an overview and categorization}.
+\newblock {\em Ecological Modelling}, 339:58--67, 2016.
+
+\bibitem{early2016global}
+R.~Early, B.~A. Bradley, J.~S. Dukes, J.~J. Lawler, J.~D. Olden, D.~M.
+  Blumenthal, P.~Gonzalez, E.~D. Grosholz, I.~Iba{\~n}ez, L.~P. Miller, et~al.
+\newblock {Global threats from invasive alien species in the twenty-first
+  century and national response capacities}.
+\newblock {\em Nature Communications}, 7, 2016.
+
+\bibitem{epstein2008model}
+J.~M. Epstein.
+\newblock Why model?
+\newblock {\em Journal of Artificial Societies and Social Simulation},
+  11(4):12, 2008.
+
+\bibitem{fadikar2018calibrating}
+A.~Fadikar, D.~Higdon, J.~Chen, B.~Lewis, S.~Venkatramanan, and M.~Marathe.
+\newblock Calibrating a stochastic, agent-based model using quantile-based
+  emulation.
+\newblock {\em SIAM/ASA Journal on Uncertainty Quantification},
+  6(4):1685--1706, 2018.
+
+\bibitem{guidotti2019survey}
+R.~Guidotti, A.~Monreale, S.~Ruggieri, F.~Turini, F.~Giannotti, and
+  D.~Pedreschi.
+\newblock A survey of methods for explaining black box models.
+\newblock {\em ACM computing surveys (CSUR)}, 51(5):93, 2019.
+
+\bibitem{guimapi2016modeling}
+R.~Y. Guimapi, S.~A. Mohamed, G.~O. Okeyo, F.~T. Ndjomatchoua, S.~Ekesi, and
+  H.~E. Tonnang.
+\newblock {Modeling the risk of invasion and spread of {\emph{Tuta absoluta}}
+  in Africa}.
+\newblock {\em Ecological Complexity}, 28:77--93, 2016.
+
+\bibitem{hulme2009trade}
+P.~E. Hulme.
+\newblock {Trade, transport and trouble: managing invasive species pathways in
+  an era of globalization}.
+\newblock {\em Journal of Applied Ecology}, 46(1):10--18, 2009.
+
+\bibitem{karadjova2013tuta}
+O.~Karadjova, Z.~Ilieva, V.~Krumov, E.~Petrova, V.~Ventsislavov, et~al.
+\newblock {{\emph{Tuta absoluta}} (Meyrick) (Lepidoptera: Gelechiidae):
+  Potential for entry, establishment and spread in Bulgaria}.
+\newblock {\em Bulgarian Journal of Agricultural Science}, 19(3):563--571,
+  2013.
+
+\bibitem{kiss2006network}
+I.~Z. Kiss, D.~M. Green, and R.~R. Kao.
+\newblock The network of sheep movements within great britain: network
+  properties and their implications for infectious disease spread.
+\newblock {\em Journal of the Royal Society Interface}, 3(10):669--677, 2006.
+
+\bibitem{lamperti2018agent}
+F.~Lamperti, A.~Roventini, and A.~Sani.
+\newblock Agent-based model calibration using machine learning surrogates.
+\newblock {\em Journal of Economic Dynamics and Control}, 90:366--389, 2018.
+
+\bibitem{martinetti2019identifying}
+D.~Martinetti and S.~Soubeyrand.
+\newblock Identifying lookouts for epidemio-surveillance: application to the
+  emergence of \emph{{X}ylella fastidiosa} in {F}rance.
+\newblock {\em Phytopathology}, 109(2):265--276, 2019.
+
+\bibitem{moustier2015urban}
+P.~Moustier and H.~Renting.
+\newblock Urban agriculture and short chain food marketing in developing
+  countries.
+\newblock {\em Cities and Agriculture—Developing Resilient Urban Food
+  Systems; de Zeeuw, H., Drechsel, P., Eds}, pages 121--138, 2015.
+
+\bibitem{un_sustainable_development}
+U.~Nations.
+\newblock Sustainable development goals, Apr. 2019.
+
+\bibitem{nopsa2015ecological}
+J.~F.~H. Nopsa, G.~J. Daglish, D.~W. Hagstrum, J.~F. Leslie, T.~W. Phillips,
+  C.~Scoglio, S.~Thomas-Sharma, G.~H. Walter, and K.~A. Garrett.
+\newblock {Ecological networks in stored grain: Key postharvest nodes for
+  emerging pests, pathogens, and mycotoxins}.
+\newblock {\em BioScience}, page biv122, 2015.
+
+\bibitem{pautasso2010disease}
+M.~Pautasso, X.~Xu, M.~J. Jeger, T.~D. Harwood, M.~Moslonka-Lefebvre, and
+  L.~Pellis.
+\newblock Disease spread in small-size directed trade networks: the role of
+  hierarchical categories.
+\newblock {\em Journal of Applied Ecology}, 47(6):1300--1309, 2010.
+
+\bibitem{pearson2007species}
+R.~G. Pearson.
+\newblock Species’ distribution modeling for conservation educators and
+  practitioners.
+\newblock {\em Synthesis. American Museum of Natural History}, 50:54--89, 2007.
+
+\bibitem{strona2017network}
+G.~Strona, C.~J. Carstens, and P.~S. Beck.
+\newblock Network analysis reveals why \emph{{X}ylella fastidiosa} will persist
+  in {E}urope.
+\newblock {\em Scientific reports}, 7(1):71, 2017.
+
+\bibitem{tonnang2015identification}
+H.~E. Tonnang, S.~F. Mohamed, F.~Khamis, and S.~Ekesi.
+\newblock {Identification and risk assessment for worldwide invasion and spread
+  of {\emph{Tuta absoluta}} with a focus on Sub-Saharan Africa: implications
+  for phytosanitary measures and management}.
+\newblock {\em PloS one}, 10(8):e0135283, 2015.
+
+\bibitem{USDA2012}
+USDA.
+\newblock {New Pest Response Guidelines: Tomato Leafminer (\emph{Tuta
+  absoluta})}.
+\newblock {\em Animal and Plant Health Inspection Service, Plant Protection and
+  Quarantine}, 2012.
+
+\bibitem{venkatramanan2019modeling}
+S.~Venkatramanan, S.~Wu, B.~Shi, A.~Marathe, M.~Marathe, S.~Eubank, L.~Sah,
+  A.~Giri, L.~Colavito, K.~Nitin, et~al.
+\newblock Modeling commodity flow in the context of invasive species spread:
+  Study of \emph{{T}uta absoluta} in {Nepal}.
+\newblock {\em Crop Protection}, 2019.
+
+\bibitem{wildemeersch2019modelling}
+M.~Wildemeersch, O.~Franklin, R.~Seidl, J.~Rogelj, I.~Moorthy, and S.~Thurner.
+\newblock Modelling the multi-scaled nature of pest outbreaks.
+\newblock {\em Ecological Modelling}, 409:108745, 2019.
+
+\bibitem{spam}
+L.~You, U.~Wood-Sichra, S.~Fritz, Z.~Guo, L.~See, and J.~Koo.
+\newblock {Spatial Production Allocation Model (SPAM) 2005 v3.2.}
+\newblock \url{http://mapspam.info}, 2017.
+
+\end{thebibliography}
 %%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% All figures come here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+\begin{figure}[t]
+\centering
+\begin{subfigure}[b]{.4\textwidth}
+    \includegraphics[width=1.1\textwidth]{model_schematic.pdf}
+\caption{Multi-pathway model\label{fig:concept}}
+\end{subfigure}
+%%
+\begin{subfigure}[b]{.56\textwidth}
+    \includegraphics[width=1.05\textwidth]{pipeline.pdf}
+\caption{Model construction pipeline\label{fig:pipeline}}
+\end{subfigure}
+%%
+\begin{subfigure}[b]{.8\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{spread_analysis.pdf}
+    \caption{Outline of the process used for analysing the multi-pathway spread. \label{fig:clusterOutline}}
+\end{subfigure}
+\caption{Multi-pathway model concept, construction and analysis.}
+\end{figure}
+%%
+%%
+%%
+\begin{figure}[t]
+    \centering
+\begin{subfigure}[b]{.3\textwidth}
+    \includegraphics[width=\textwidth]{BGD_model-A.pdf}
+    \caption{Class~A \label{fig:bgdClassA}}  %%($\ald=0$)
+\end{subfigure}\hspace{.5cm}
+\begin{subfigure}[b]{.3\textwidth}
+    \includegraphics[width=\textwidth]{BGD_model-B_m1_l3.pdf}
+    \caption{Class~B \label{fig:bgdClassB1}} %%($\ald>0$)
+\end{subfigure}
+\begin{subfigure}[b]{.32\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{rf_importance_all_mdi.pdf}
+    \includegraphics[width=0.9\textwidth]{rf_k_agglomerative_mse.pdf}
+    \caption{Parameter importance \label{fig:rf}}
+\end{subfigure}
+\caption{\textbf{Explaining observed spread pattern in Bangladesh.} The
+contour plots show the spread starting from the location of first report in
+Panchagarh district for a simulation time of 12 months.  Here, the time of
+infection for a cell is the minimum time step~$t$ such that the empirical
+probability that the cell is infected by time~$t$ is $\ge0.8$. Also
+highlighted are the eight monitored locations and the localities applied in
+the model. The colours of the monitored locations correspond to the time of
+infection relative to the first report (Panchagarh). Two distinct spread
+patterns emerged from the cluster analysis. (a) and (b) show representative
+spreads observed for each class. The similarity in each case was
+$\similarity>0.8$.  Importance of model parameters with respect to
+(i)~similarity score~$\similarity$ and (ii)~cluster membership based on
+random forest method. The latter plot shows how the results vary with an
+increase in the number of clusters for hierarchical clustering algorithm.
+More results are presented in Figure~S9 in the supplement.
+Videos depicting the spatiotemporal spread for each class are provided of
+the supplement.
+}
+\end{figure}
+%%
+%%
+\begin{figure}[ht]
+    \centering
+\begin{subfigure}[b]{.2\textwidth}
+    \includegraphics[width=\textwidth]{MSA_model-A_m2_l1.pdf}
+    \caption{\label{fig:msaClassA}} % C
+\end{subfigure}
+\begin{subfigure}[b]{.2\textwidth}
+    \includegraphics[width=\textwidth]{MSA_model-B_m1_l3.pdf}
+    \caption{\label{fig:msaClassB}} % C
+\end{subfigure}
+\begin{subfigure}[b]{.135\textwidth}
+    \includegraphics[width=\textwidth]{TH_model-B_precip1_m1_l3.pdf}
+\caption{\label{fig:thlBContour}} % Tha
+\end{subfigure}
+\begin{subfigure}[b]{.135\textwidth}
+    \includegraphics[width=\textwidth]{TH_model-B_precip1-out-100_m1_l3.pdf}
+\caption{\label{fig:thlBContourInt}} % Thailand with intervention
+\end{subfigure}
+\begin{subfigure}[b]{.3\textwidth}
+    \includegraphics[width=\textwidth]{TH_dist_prob_B_box.pdf}
+\caption{\label{fig:thlBContourBox}} % Thailand: range of expansion (all Class B models)
+\end{subfigure}
+\caption{\textbf{Predicting rate and pattern of spread.}
+The contour plots show the spatiotemporal spread. The colours indicate the
+time interval at which there is at least a 50\% chance that a location will
+be infected. {\bf Spread in Southeast Asia.} Figures~(a) and~(b) correspond
+to the spread starting from northern Myanmar for 120 time steps or 10
+years.  (a)~corresponds to representative simulation output for Class~A
+models and (b) corresponds to Class~B models. {\bf Domestic spread with and
+without intervention.} In~(c) and~(d), representative spread dynamics of
+Class~B models ($\mooreRange=1, \ell=3$) are shown for the country of
+Thailand. More plots are in Figure~S12. In each case, a
+cell close to a high production region was seeded and simulation run for~48
+time steps. (c)~corresponds to unmitigated spread and (d)~corresponds to
+spread after cutting off flows from chosen localities. (e)~shows average
+spread with respect to origin of infection for all Class~B models. The
+cells are binned based on their distance from the origin of infection.
+Given time step~$t$ (48), let $\Pr_{\le t}(v)$ be the probability that
+cell~$v$ is in state~$I$ by time~$t$. For each configuration, we computed
+the ``total infection'' for every bin at time~$t$ by aggregating~$\Pr_{\le
+t}(v)$ for each~$v$ in the bin. The red points referred to as ``max''
+correspond to the total number of cells in each bin, which is also the
+maximum possible accumulated probability for that bin.
+\label{fig:spread}}
+\end{figure}
+%%
+
 \end{document}
